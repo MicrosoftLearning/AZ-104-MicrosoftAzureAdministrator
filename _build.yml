@@ -1,0 +1,36 @@
+name: '$(Date:yyyyMMdd)$(Rev:.rr)'
+jobs:
+  - job: build_markdown_content
+    displayName: 'Build Markdown Content'
+    workspace:
+      clean: all
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    container:
+      image: 'microsoftlearning/markdown-build:latest'
+    steps:
+      - task: Bash@3
+        displayName: 'Build Content'
+        inputs:
+          targetType: inline
+          script: |
+            cp /{attribution.md,template.docx,package.json,package.js} .
+            npm install
+            node package.js --version $(Build.BuildNumber)
+      - task: GitHubRelease@0
+        displayName: 'Create GitHub Release'
+        inputs:
+          gitHubConnection: 'github-microsoftlearning-organization'
+          repositoryName: '$(Build.Repository.Name)'
+          tagSource: manual
+          tag: 'v$(Build.BuildNumber)'
+          title: 'Version $(Build.BuildNumber)'
+          releaseNotesSource: input
+          releaseNotes: '# Version $(Build.BuildNumber) Release'
+          assets: '$(Build.SourcesDirectory)/out/*.zip'
+          assetUploadMode: replace
+      - task: PublishBuildArtifacts@1
+        displayName: 'Publish Output Files'
+        inputs:
+          pathtoPublish: '$(Build.SourcesDirectory)/out/'
+          artifactName: 'Lab Files'
