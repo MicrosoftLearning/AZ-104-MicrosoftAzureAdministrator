@@ -1,4 +1,3 @@
-title: 'INF99X: Sample Course'
 remote_theme: MicrosoftLearning/Jekyll-Theme
 exclude:
   - readme.md
