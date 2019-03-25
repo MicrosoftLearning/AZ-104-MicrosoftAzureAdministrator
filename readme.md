@@ -1,6 +1,6 @@
 # INF99X: Sample Course
 
-- **[Download Latest Student Handbook and AllFiles Content](releases/)**
+- **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 
 ## What are we doing?
