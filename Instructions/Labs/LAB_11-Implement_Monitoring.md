@@ -260,7 +260,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to wait for a few minutes and click **Refresh**.
 
-1. On the **All Alerts** blade, review each of the alerts.
+1. On the **All Alerts** blade, review generated alerts.
 
 #### Task 6: Review Azure Log Analytics functionality
 
@@ -284,7 +284,11 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **New Query 1** tab, on the **Tables** tab, review the list of **Virtual machines** tables.
 
-1. In the list of tables in the **Virtual machines** section, hover the mouse over the **Update** entry and click the **Preview data** icon.  
+1. In the list of tables in the **Virtual machines** section. 
+
+    >**Note**: The names of several tables correspond to the solutions you installed earlier in this lab.
+
+1. Hover the mouse over the **VMComputer** entry and click the **Preview data** icon.  
 
 1. If any data is available, in the **Update** pane, click **See in query editor**.
 
@@ -292,15 +296,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Examine output displayed in the query results.
 
-1. Click **Sample queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Missing security or critical updates**, and click **Run**.
-
-1. If any results are displayed, in the query pane, remove the line containing the following text:
-
-   ```
-   | summarize count() by Classification
-   ```
-
-1. Rerun the query and examine the details regarding missing security or critical updates.
+1. Click **Sample queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine free disk space**, and click **Run**.
 
 #### Clean up resources
 
