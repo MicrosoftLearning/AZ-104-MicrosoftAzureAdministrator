@@ -504,6 +504,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close the Cloud Shell pane.
 
+1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+
 #### Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
