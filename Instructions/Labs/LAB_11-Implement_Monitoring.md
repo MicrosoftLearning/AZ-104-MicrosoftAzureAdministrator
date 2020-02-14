@@ -96,7 +96,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
-    | Creat Azure Run As account | **Yes** |
+    | Create Azure Run As account | **Yes** |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
@@ -172,9 +172,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 #### Task 5: Review Azure Monitor functionality
 
-1. In the Azure portal, search for and select **Monitor** and, on the **Montor - Overview** blade, click **Metrics**.
+1. In the Azure portal, search for and select **Monitor** and, on the **Monitor - Overview** blade, click **Metrics**.
 
-1. In the chart pane on the right hand side of the blade, in the **SCOPE** drop-down list, click **+ Select a scope**.
+1. In the chart pane on the right side of the blade, in the **SCOPE** drop-down list, click **+ Select a scope**.
 
 1. On the **Select a scope** blade, on the **Browse** tab, navigate to the **az104-11-rg0** resource group, expand it, select the **az104-11-vm0** virtual machine within that resource group, and click **Apply**.
 
@@ -316,7 +316,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    Get-AzResourceGroup -Name 'az104-11*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

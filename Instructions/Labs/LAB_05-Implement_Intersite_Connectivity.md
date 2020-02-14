@@ -9,7 +9,7 @@ lab:
 
 ## Lab scenario
 
-Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the the topology of the Contoso's on-premises networks and verify its functionality. 
+Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of the Contoso's on-premises networks and verify its functionality. 
 
 ## Objectives
 
@@ -90,7 +90,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
     >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 2 minutes.
 
-    >**Note**: To verify the status of the deployments, you can examine the the properties of the resource groups you created in this task.
+    >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -238,7 +238,7 @@ In this task, you will test connectivity between virtual machines on the three v
    Get-AzResourceGroup -Name 'az104-05*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

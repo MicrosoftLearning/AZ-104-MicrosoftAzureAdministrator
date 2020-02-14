@@ -141,6 +141,8 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
+1. Click **Open** to open the downloaded RDP file and, when prompted, click **Connect**.
+
 1. Note that the connection attempt fails.
 
     >**Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
@@ -181,11 +183,19 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
+    >**Note**: Now verify that you can successfully to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
+
 1. On the **az104-04-vm0** blade, click **Connect**, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: Accept any warning prompts when connecting to the target virtual machines.
+1. Click **Open** to open the downloaded RDP file and, when prompted, click **Connect**.
 
-1. Verify that you can successfully connect to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. In the **Windows Security** window, click **More choices** and, if needed, click **Use a different account**. 
+
+1. Type the username **Student** and the password **Pa55w.rd1234**. 
+
+1. Click **OK** to connect. 
+
+1. You may receive a certificate warning during the sign-in process. If so, click **Yes**. 
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
@@ -228,7 +238,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
-1. In the Windows PowerShell console window, run the following to test internal name resolution of the **az104-04-vm1** DNS record set in the the newly created private DNS zone:
+1. In the Windows PowerShell console window, run the following to test internal name resolution of the **az104-04-vm1** DNS record set in the newly created private DNS zone:
 
    ```pwsh
    nslookup az104-04-vm1.contoso.org
@@ -281,7 +291,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. In the Azure portal, open the **PowerShell** session in **Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task):
+1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task):
 
    ```pwsh
    nslookup az104-04-vm0.contoso.org [Name server 1]
@@ -313,7 +323,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
    Get-AzResourceGroup -Name 'az104-04*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

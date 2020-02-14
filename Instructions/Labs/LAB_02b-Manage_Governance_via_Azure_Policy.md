@@ -1,19 +1,19 @@
 ---
 lab:
-    title: '01b - Manage Governance via Azure Policy'
-    module: 'Module 01 - Subscriptions and Governance'
+    title: '02b - Manage Governance via Azure Policy'
+    module: 'Module 02 - Governance and Compliance'
 ---
 
-# Lab 01b - Manage Governance via Azure Policy
+# Lab 02b - Manage Governance via Azure Policy
 # Student lab manual
 
 ## Lab scenario
 
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 
-- tagging resource groups that include only infrastructure resources (such as Cloud Shell storage acccounts)
+- tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
 
-- ensuring that only properly tagged infrastructure resoures can be added to infrastructure resource groups
+- ensuring that only properly tagged infrastructure resources can be added to infrastructure resource groups
 
 - remediating any non-compliant resources 
 
@@ -62,9 +62,11 @@ In this task, you will create and assign a tag to an Azure resource group via th
     | Name | **Role** |
     | Value | **Infra** |
 
-1. Navigate back to the storage account blade and note that tag is not automatically assigned to the storage account.
+1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
 #### Task 2: Enforce tagging via an Azure policy
+
+In this task, you will assign the built-in *Require tag and its value* policy to the resource group and evaluate the outcome. 
 
 1. In the Azure portal, search for and select **Policy**. 
 
@@ -112,13 +114,13 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. On the resource group blade, click **+ Add**.
 
-1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**. 
+1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**, and click **Create**. 
 
-1. On the **Basics** tab of the **Creat storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case leters and digits, starting with a letter |
+    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Note that the validation failed. Click the link **Validation failed. Click here to view details** to display the **Errors** blade and identify the reason for the failure. 
 
@@ -136,7 +138,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment. 
 
-1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values::
+1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -176,13 +178,13 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. On the resource group blade, click **+ Add**.
 
-1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**. 
+1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**, and click **Create**. 
 
-1. On the **Basics** tab of the **Creat storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case leters and digits, starting with a letter |
+    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Verify that this time the validation passed and click **Create**.
 

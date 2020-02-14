@@ -82,7 +82,7 @@ In this task, you will create a staging deployment slot.
 
 In this task, you will configure web app deployment settings. 
 
-1. On the staging deployment slot blade, in the **Deployment** section, click **Deploymnent Center**.
+1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center**.
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
 
@@ -129,7 +129,7 @@ In this task, you will deploy code to the staging deployment slot.
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
-1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_name]` and `[git_clone_url]` placeholders with the the value of the **Deployment Credentials** user name and **Git Clone Url**, respectively, which you identified in previous task):
+1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_name]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name and **Git Clone Url**, respectively, which you identified in previous task):
 
    ```
    git remote add [deployment_user_name] [git_clone_url]
@@ -152,7 +152,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 #### Task 5: Swap the staging slots
 
-In this task, you wil swap the staging slot with the production slot
+In this task, you will swap the staging slot with the production slot
 
 1. Navigate back to the blade displaying the production slot of the web app.
 
@@ -252,7 +252,7 @@ In this task, you will configure and test autoscaling of Azure web app.
    Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

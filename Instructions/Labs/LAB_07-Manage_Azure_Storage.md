@@ -134,7 +134,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. In the list of containers, click **az104-07-container** and then click **Upload**.
 
-1. Browse to **\\Allfiles\\Module_07\\LICENSE** on your lab computer, and click **Open**.
+1. Browse to **\\Allfiles\\Module_07\\LICENSE** on your lab computer and click **Open**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
 
@@ -166,9 +166,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step. 
 
-1. You should be presented with an XML-formatted mesage stating **ResourceNotFound**.
+1. You should be presented with an XML-formatted message stating **ResourceNotFound**.
 
-    > **Note**: This is expected, since the container you crated has the public access level set to **Private (no anonymous access)**.
+    > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the the **Generate SAS** tab.
 
@@ -313,7 +313,7 @@ In this task, you will configure network access for Azure Storage.
    Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

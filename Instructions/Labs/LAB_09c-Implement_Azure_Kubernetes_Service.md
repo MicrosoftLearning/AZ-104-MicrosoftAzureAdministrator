@@ -69,7 +69,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
 1. Click **Next: Monitoring >**, on the **Monitoring** tab of the **Create Kubernetes cluster** blade, set **Enable container monitoring** to **No**, click **Review + create** and then click **Create**. 
 
-    >**Note**: In production scenarios, you would want to enable montioring. Monitoring is disabled in this case since it is not covered in the lab. 
+    >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
 
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
 
@@ -140,7 +140,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     kubectl get service
     ```
 
-1. Re-run the command until the value in the **EXTERNAL-IP** column for the **nginx-deployment** entry changes from **\<pending\>** to a public IP address, then press the **Ctrl-C** key combination. Note the public IP address in the **EXTERNAL-IP** column for **nginx-deployment**.
+1. Re-run the command until the value in the **EXTERNAL-IP** column for the **nginx-deployment** entry changes from **\<pending\>** to a public IP address. Note the public IP address in the **EXTERNAL-IP** column for **nginx-deployment**.
 
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
 
@@ -227,7 +227,7 @@ In this task, you will scale horizontally the number of pods and then number of 
    az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

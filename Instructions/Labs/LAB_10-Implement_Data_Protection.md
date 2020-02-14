@@ -20,8 +20,8 @@ In this lab, you will:
 + Task 3: Implement Azure virtual machine-level backup
 + Task 4: Implement File and Folder backup
 + Task 5: Perform file recovery by using Azure Recovery Services agent
-+ Task 6: Perform file recovery by using Azure virtual machine snapshots
-+ Task 7: Review the Azure Recovery Services soft delete functionality
++ Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
++ Task 7: Review the Azure Recovery Services soft delete functionality (optional)
 
 ## Instructions
 
@@ -136,7 +136,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Wait for the backup to be enabled. This should take about 2 minutes. 
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtal machines** entry.
+1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click the **az104-10-vm0** entry.
 
@@ -164,7 +164,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
 
-1. On the **Backup Goal** blade, specify the folowing settings:
+1. On the **Backup Goal** blade, specify the following settings:
 
     | Settings | Value |
     | --- | --- |
@@ -241,7 +241,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent
+#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
@@ -271,7 +271,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Terminate the Remote Desktop session.
 
-#### Task 6: Perform file recovery by using Azure virtual machine snapshots
+#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 
 In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
 
@@ -309,7 +309,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
 
-    >**Note**: You have the option of running recovery shortly after backup starts besed on the application consistent snapshot.
+    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
 1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
 
@@ -440,7 +440,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
    Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

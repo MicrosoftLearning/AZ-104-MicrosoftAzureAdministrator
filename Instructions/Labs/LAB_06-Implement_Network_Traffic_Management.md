@@ -95,7 +95,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```
     >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 2 minutes.
 
-    >**Note**: To verify the status of the deployments, you can examine the the properties of the resource groups you created in this task.
+    >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -357,7 +357,9 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter.
 
-    > **Note**: This is expected, since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
+    > **Note**: This is expected, since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router. 
+
+    > **Note**: You can use **Network Watcher** to view topology of the network.
 
 #### Task 5: Implement Azure Load Balancer
 
@@ -398,7 +400,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Virtual machine | **az104-06-vm1** |
     | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
 
-1. Wait for the backend pool to be creted, click **Health probes**, and then click **+ Add**.
+1. Wait for the backend pool to be created, click **Health probes**, and then click **+ Add**.
 
 1. Add a health probe with the following settings (leave others with their default values):
 
@@ -519,7 +521,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
 
-1. On the **Backend targets** tab of the **Add a routing rule** blade, click click **Create new** next to the **HTTP setting** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
+1. On the **Backend targets** tab of the **Add a routing rule** blade, click **Create new** next to the **HTTP setting** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -528,8 +530,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend port | **80** |
     | Cookie-based affinity | **Disable** |
     | Connection draining | **Disable** |
-    | Request time-out (seconds) | **20**
-
+    | Request time-out (seconds) | **20** |
+f
 1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, clik **Add**.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
@@ -548,7 +550,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
 
-    > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machiens on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
+    > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
 
 #### Clean up resources
 
@@ -568,7 +570,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
    Get-AzResourceGroup -Name 'az104-06*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

@@ -25,7 +25,7 @@ In this lab, we will:
 
 #### Task 1: Create resource groups and deploy resources to resource groups
 
-In this task, you will use the Azure portal to create resorce groups and create a disk in the resource group.
+In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 

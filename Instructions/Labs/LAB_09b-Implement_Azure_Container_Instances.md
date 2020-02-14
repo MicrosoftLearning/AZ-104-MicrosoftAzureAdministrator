@@ -64,7 +64,7 @@ In this task, you will review the deployment of the container instance.
 
 1. On the **Overview** blade of the container instance, verify that **Status** is reported as **Running**. 
 
-1. Copy the value of the container instance **FQDN**, open an new browser tab, and navigate to the corresponding URL.
+1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
 
@@ -90,7 +90,7 @@ In this task, you will review the deployment of the container instance.
    Get-AzResourceGroup -Name 'az104-09b*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

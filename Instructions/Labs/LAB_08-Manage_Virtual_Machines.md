@@ -18,9 +18,9 @@ In this lab, you will:
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Task 2: Configure Azure virtual machines by using virtual machine extensions
 + Task 3: Scale compute and storage for Azure virtual machines
-+ Task 4: Deploy zone-reslient Azure virtual machine scale sets by using the Azure portal
++ Task 4: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 + Task 5: Configure Azure virtual machine scale sets by using virtual machine extensions
-+ Task 6: Scale compute and storage for Azure virtual machine scale sets
++ Task 6: Scale compute and storage for Azure virtual machine scale sets (optional)
 
 ## Instructions
 
@@ -106,7 +106,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Admin Password | **Pa55w.rd1234** |
     | Zone | **2** |
 
-    >**Note**: You need to modify parameteres corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface. You also need to specify a different availability zone if you want your deployment consisting of two virtual machines to be zone redundant.
+    >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface. You also need to specify a different availability zone if you want your deployment consisting of two virtual machines to be zone redundant.
 
 1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
@@ -172,7 +172,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
    Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
    ```
 
-    >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate depenency on Internet Explorer to complete execution of the cmdlet
+    >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5` to access the web site hosted on **az104-08-vm1**.
 
@@ -289,7 +289,7 @@ In this task you will scale compute for Azure virtual machines by changing their
    ```
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
-#### Task 4: Deploy zone-reslient Azure virtual machine scale sets by using the Azure portal
+#### Task 4: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
 
@@ -383,6 +383,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 1. On the **az10408vmss0lb** blade, note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
+
 
 #### Task 6: Scale compute and storage for Azure virtual machine scale sets
 
@@ -524,7 +525,7 @@ In this task, you will change the size of virtual machine scale set instances, c
    Get-AzResourceGroup -Name 'az104-08*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-    >**Note**: The command command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 

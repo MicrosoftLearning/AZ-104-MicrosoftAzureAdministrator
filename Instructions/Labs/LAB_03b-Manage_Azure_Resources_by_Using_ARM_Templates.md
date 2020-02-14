@@ -34,9 +34,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments and, on the overview blade of the deployment, click **Template**.
+1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments and then click **Template**.
 
-    >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the libary, and re-deploy it.
+    >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the library, and re-deploy it.
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
@@ -46,7 +46,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 #### Task 2: Create an Azure managed disk by using an ARM template
 
-1. In the Azure portal, search for and select **Template deployment**.
+1. In the Azure portal, search for and select **Template deployment (deploy using custom templates)**.
 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
@@ -77,7 +77,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    "osType": "[parameters('osType')]"
    ```
 
-    >**Note**: These parameters are removed since the are not applicable to the current deployment. In particular, souceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
+    >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
 1. In addition, remove the trailing comma from the following line:
 

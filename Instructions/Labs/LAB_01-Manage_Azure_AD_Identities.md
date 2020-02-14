@@ -1,10 +1,10 @@
 ---
 lab:
-    title: '02 - Manage Azure Active Directory Identities'
-    module: 'Module 02 - Identity'
+    title: '01 - Manage Azure Active Directory Identities'
+    module: 'Module 01 - Identity'
 ---
 
-# Lab 02 - Manage Azure Active Directory Identities
+# Lab 01 - Manage Azure Active Directory Identities
 
 # Student lab manual
 
@@ -45,8 +45,8 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02a-aaduser1** |
-    | Name | **az104-02a-aaduser1** |
+    | User name | **az104-01a-aaduser1** |
+    | Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
     | Initial password | **Pa55w.rd124** |
     | Usage location | **United States** |
@@ -59,7 +59,7 @@ In this task, you will create and configure Azure AD users.
 
 1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
 
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-02a-aaduser1**.
+1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
@@ -79,15 +79,15 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02a-aaduser2** |
-    | Name | **az104-02a-aaduser2** |
+    | User name | **az104-01a-aaduser2** |
+    | Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
     | Initial password | **Pa55w.rd124** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
 
-1. Sign out as the az104-02a-aaduser1 user from the Azure portal and close the InPrivate browser window.
+1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
 #### Task 2: Create Azure AD groups with assigned and dynamic membership
 
@@ -164,11 +164,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
 
-1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-02a-aaduser1** appears in the list of group members.
+1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
 
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-02a-aaduser2** appears in the list of group members.
+1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedate the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
 
 #### Task 3: Create an Azure Active Directory (AD) tenant
 
@@ -201,8 +201,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02b-aaduser1** |
-    | Name | **az104-02b-aaduser1** |
+    | User name | **az104-01b-aaduser1** |
+    | Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
     | Initial password | **Pa55w.rd124** |
     | Job title | **System Administrator** |
@@ -218,7 +218,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-02b-aaduser1** |
+    | Name | **az104-01b-aaduser1** |
     | Email address | paste the value you copied into Clipboard earlier in this task |
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
@@ -228,7 +228,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
 
-1. On the **az104-02b-aaduser1 - Profile** blade, click **Groups**.
+1. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
 
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
@@ -237,7 +237,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
 
-1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-02b-aaduser1** guest user account, on the **az104-02b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
+1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** guest user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
 1. Repeat the same sequence of steps to delete the remaining user accounts you created in this lab.
 
@@ -247,7 +247,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. In the Azure portal, display the blade of the Contoso Lab Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
-1. Navigate to the **Users - All users** blade, click the entry representing the **az104-02b-aaduser1** user account, on the **az104-02b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
+1. Navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
 1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Azure AD tenant, click **Delete directory**, on the **Delete directory 'Contoso Lab'** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
 
