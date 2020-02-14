@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '05 - Implement Intersite Connectivity'
     module: 'Module 05 - Intersite Connectivity'
