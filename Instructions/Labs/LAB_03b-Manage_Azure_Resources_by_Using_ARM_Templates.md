@@ -38,7 +38,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
     >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the library, and re-deploy it.
 
-1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
+1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.  (Can we just have the student review the template in the previous step and then remove this setp?  Full explanation will be on Pull Request page.)
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
@@ -50,7 +50,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous step.
+1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous step.  (Here, we have the student upload the downloaded template file, but upload the parameters file from the lab pack.  This could be confusing to some.  Full explanation will be on Pull Request page.)
 
 1. Within the editor pane, remove the following lines:
 
@@ -105,6 +105,8 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
     | Create Option | **empty** |
+    
+(Can we have the parameter file set the disk name properly from the start?  Students will miss this slight change.  Full explanation will be on Pull Request page.)
 
 1. Select the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
