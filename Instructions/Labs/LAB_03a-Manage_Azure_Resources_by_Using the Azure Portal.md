@@ -76,7 +76,7 @@ In this task, we will move the disk resource you created in the previous task to
 
 1. In the **Resource group** text box, type **az104-03a-rg2**, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **OK**.
 
-    >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
+    >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.  (This language needs to be cleaned up. Students should wait for the validation process to complete before moving on to the next lab.  This way, it allows for the move process to appear in the notification area.)
 
 #### Task 3: Implement resource locks
 
