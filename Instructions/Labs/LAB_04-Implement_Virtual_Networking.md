@@ -169,7 +169,7 @@ In this task, you will configure network security groups in order to allow for r
     | Setting | Value |
     | --- | --- |
     | Source | **Any** |
-    | Source port ranges | **/*** |
+    | Source port ranges | ***** |
     | Destination | **Any** |
     | Destination port ranges | **3389** |
     | Protocol | **TCP** |
