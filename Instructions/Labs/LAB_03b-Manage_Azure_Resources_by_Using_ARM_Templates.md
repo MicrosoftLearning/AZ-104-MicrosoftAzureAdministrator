@@ -38,19 +38,13 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
     >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the library, and re-deploy it.
 
-1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
-
-1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
-
-    >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
-
 #### Task 2: Create an Azure managed disk by using an ARM template
 
 1. In the Azure portal, search for and select **Template deployment (deploy using custom templates)**.
 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous step.
+1. On the **Edit template** blade, click **Load file** and upload the template file **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and save the changes.
 
 1. Within the editor pane, remove the following lines:
 
