@@ -169,7 +169,7 @@ In this task, you will configure network security groups in order to allow for r
     | Setting | Value |
     | --- | --- |
     | Source | **Any** |
-    | Source port ranges | **/*** |
+    | Source port ranges | ***** |
     | Destination | **Any** |
     | Destination port ranges | **3389** |
     | Protocol | **TCP** |
@@ -179,7 +179,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
 
-1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
+1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.  (There should be a note here that it may take a few minutes for the security rules to be applied to the Network Interface to allow for an RDP connection.)
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
