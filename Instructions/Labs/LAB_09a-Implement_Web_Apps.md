@@ -164,7 +164,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. Verify the default web page has been replaced with the **Hello World!** page. 
 
-# Task 6: Configure and test autoscaling of the Azure web app
+#### Task 6: Configure and test autoscaling of the Azure web app
 
 In this task, you will configure and test autoscaling of Azure web app. 
 
