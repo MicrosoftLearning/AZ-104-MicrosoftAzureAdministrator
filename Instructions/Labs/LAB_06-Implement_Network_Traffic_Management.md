@@ -93,7 +93,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -nameSuffix 3 `
       -AsJob
    ```
-    >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 2 minutes.
+    >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 5 minutes.
 
     >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
 
@@ -126,7 +126,7 @@ In this task, you will configure local peering between the virtual networks you 
     | Allow virtual network access from az104-06-vnet2 to az104-06-vnet01 | **Enabled** |
     | Allow forwarded traffic from az104-06-vnet2 to az104-06-vnet01 | **Enabled** |
     | Allow forwarded traffic from az104-06-vnet01 to az104-06-vnet2 | **Enabled** |
-    | Allow gateway transit | **Disabled** |
+    | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -149,7 +149,7 @@ In this task, you will configure local peering between the virtual networks you 
     | Allow virtual network access from az104-06-vnet3 to az104-06-vnet01 | **Enabled** |
     | Allow forwarded traffic from az104-06-vnet3 to az104-06-vnet01 | **Enabled** |
     | Allow forwarded traffic from az104-06-vnet01 to az104-06-vnet3 | **Enabled** |
-    | Allow gateway transit | **Disabled** |
+    | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
@@ -531,7 +531,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Cookie-based affinity | **Disable** |
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
-f
+
 1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, clik **Add**.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
