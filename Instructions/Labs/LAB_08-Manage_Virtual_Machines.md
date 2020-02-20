@@ -83,6 +83,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value | 
     | --- | --- |
+    | Enable basic plan for free | **No** |
     | Boot diagnostics | **Off** |
 
 1. Click **Next: Advanced >**, on the **Management** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
@@ -110,7 +111,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
-    >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 3 minutes.
+    >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
 
 #### Task 2: Configure Azure virtual machines by using virtual machine extensions
 
@@ -357,7 +358,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Boot diagnostics | **Off** |
     | System assigned managed identity | **Off** |
 
-    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 3 minutes.
+    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
 
 #### Task 5: Configure Azure virtual machine scale sets by using virtual machine extensions
