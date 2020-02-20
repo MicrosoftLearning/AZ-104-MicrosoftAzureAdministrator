@@ -121,7 +121,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Allow virtual network access from az104-05-vnet1 to az104-05-vnet0 | **Enabled** |
     | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet0 | **Disabled** |
     | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet1 | **Disabled** |
-    | Allow gateway transit | **Disabled** |
+    | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
@@ -140,7 +140,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Allow virtual network access from az104-05-vnet2 to az104-05-vnet0 | **Enabled** |
     | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet0 | **Disabled** |
     | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet2 | **Disabled** |
-    | Allow gateway transit | **Disabled** |
+    | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -161,7 +161,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Allow virtual network access from az104-05-vnet2 to az104-05-vnet1 | **Enabled** |
     | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet1 | **Disabled** |
     | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet2 | **Disabled** |
-    | Allow gateway transit | **Disabled** |
+    | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
