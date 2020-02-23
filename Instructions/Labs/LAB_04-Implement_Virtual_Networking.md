@@ -137,11 +137,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. In the Azure portal, navigate back to the **az104-04-rg1** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
-1. On the **az104-04-vm0** blade, click **Connect**, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
-
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
-
-1. Click **Open** to open the downloaded RDP file and, when prompted, click **Connect**.
+1. On the **az104-04-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
 1. Note that the connection attempt fails.
 
@@ -187,17 +183,13 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: Now verify that you can successfully to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
 
-1. On the **az104-04-vm0** blade, click **Connect**, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** blade, click **Connect**, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-1. Click **Open** to open the downloaded RDP file and, when prompted, click **Connect**.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
-1. In the **Windows Security** window, click **More choices** and, if needed, click **Use a different account**. 
+    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. Type the username **Student** and the password **Pa55w.rd1234**. 
-
-1. Click **OK** to connect. 
-
-1. You may receive a certificate warning during the sign-in process. If so, click **Yes**. 
+1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 

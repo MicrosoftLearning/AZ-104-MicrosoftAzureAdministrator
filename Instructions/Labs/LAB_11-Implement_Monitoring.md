@@ -236,9 +236,11 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-11-vm0**.
 
-1. On the **az104-11-vm0** blade, click **Connect**, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. On the **az104-11-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: Accept any warning prompts when connecting to the target virtual machines.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+
+    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
 1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
