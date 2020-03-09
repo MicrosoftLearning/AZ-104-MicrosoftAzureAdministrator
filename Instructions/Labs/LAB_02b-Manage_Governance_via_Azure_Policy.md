@@ -66,15 +66,15 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 #### Task 2: Enforce tagging via an Azure policy
 
-In this task, you will assign the built-in *Require tag and its value* policy to the resource group and evaluate the outcome. 
+In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
 1. In the Azure portal, search for and select **Policy**. 
 
 1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. 
 
-1. Click the entry representing the **Require tag and its value** built-in policy and review its definition.
+1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
 
-1. On the **Require tag and its value** built-in policy definition blade, click **Assign**.
+1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
