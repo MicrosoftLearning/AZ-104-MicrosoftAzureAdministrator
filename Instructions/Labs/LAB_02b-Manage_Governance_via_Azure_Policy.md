@@ -110,7 +110,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
-    >**Note**: It migth take between 5 and 15 minutes for the policy to take effect.
+    >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
@@ -176,7 +176,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
     >**Note**: To verify that the new policy assignment is in effect, you will create another Azure Storage account in the same resource group without explicitly adding the required tag. 
     
-    >**Note**: It migth take between 5 and 15 minutes for the policy to take effect.
+    >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
