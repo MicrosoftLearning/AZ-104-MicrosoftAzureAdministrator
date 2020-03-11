@@ -39,13 +39,13 @@ In this task, you will create a virtual network with multiple subnets by using t
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-04-vnet1** |
-    | Address space | **10.40.0.0/20** |
     | Subscription | the name of the Azure subscription you will be using in this lab |
     | Resource Group | the name of a new resource group **az104-04-rg1** |
-    | Location | the name of any Azure region available in the subscription you will use in this lab |
-    | Subnet Name | **subnet0** |
-    | Subnet Address range | **10.40.0.0/24** |
+    | Name | **az104-04-vnet1** |
+    | Region | the name of any Azure region available in the subscription you will use in this lab |
+    | IPv4 address space | **10.40.0.0/20** |
+    | Subnet name | **subnet0** |
+    | Subnet address range | **10.40.0.0/24** |
 
     >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
