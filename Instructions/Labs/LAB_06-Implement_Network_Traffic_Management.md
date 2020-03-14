@@ -538,9 +538,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: Wait for the Application Gateway instance to be created. This might take about 8 minutes.
 
-1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-06-rg5**.
+1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-06-appgw5**.
 
-1. On the **az104-06-rg5** Application Gateway blade, note the value of the **Frontend public IP address**.
+1. On the **az104-06-appgw5** Application Gateway blade, note the value of the **Frontend public IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
