@@ -296,28 +296,27 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add**.
 
-1. On the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:
 
     | Setting | Value | 
     | --- | --- |
+    | Subscription | the name of the Azure subscription you are using in this lab |    
+    | Resource group | the name of a new resource group **az104-08-rg02** |    
     | Virtual machine scale set name | **az10408vmss0** |
-    | Operating system disk image | **Windows Server 2016 Datacenter** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-08-rg02** |
-    | Location | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab | 
+    | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab | 
     | Availability zone | **Zones 1, 2, 3** |
+    | Image | **Windows Server 2016 Datacenter** |
+    | Azure Spot instance | **No** |
+    | Size | **Standard D2s_v3** |    
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
-    | Instance count | **2** |
-    | Size | **Standard D2s v3** |
-    | Autoscale | **Disabled** |
-    | Choose load balancing options | **Load balancer** |
-    | Public IP address name | **az10408vmss0-pip** |
-    | Domain name label | any unique DNS name |
+    | Already have a Windows Server license? | **No** |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
-1. Click the **Create new** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values):
+1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
+
+1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values):
 
     | Setting | Value | 
     | --- | --- |
@@ -326,9 +325,11 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Subnet name | **subnet0** |
     | Subnet range | **10.82.0.0/24** |
  
-    >**Note**: Once you create a new virtual network and return to the **Create a virtual machine scale set** blade, the **Virtual network** and **Subnet** values will be automatically set to **az104-08-rg02-vnet** and **subnet0**.
+    >**Note**: Once you create a new virtual network and return to the **Networking** tab of the **Create a virtual machine scale set** blade, the **Virtual network** value will be automatically set to **az104-08-rg02-vnet**.
 
-1. Back on the **Create a virtual machine scale set** blade, select the **Advanced** option next to the **NIC network security group** label and click **Create new**. 
+1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click **Edit** icon to the right of the network interface entry. 
+
+1. On the **Edit network interface** blade, in the **NIC network security group** section, click **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
 
 1. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
@@ -349,14 +350,39 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Priority | **1010** | 
     | Name | **custom-allow-http** |
 
-    >**Note**: Once you create a new virtual network and return to the **Create a virtual machine scale set** blade, the **NIC network security group** value will be automatically set to **az10408vmss0-nsg**.
+1. Click **Add** and, back on the **Create network security group** blade, click **OK**.
 
-1. Back on the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
+1. Back on the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
+
+1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Scaling >**:
+
+    | Load balancing options | **Azure load balancer** |
+    | Select a load balancer | **(new) az10408vmss0-lb** |
+    | Select a backend pool | **(new) bepool** |
+    
+1. On the **Scaling** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
     | Setting | Value | 
     | --- | --- |
+    | Initial instance count | **2** |
+    | Scaling policy | **Manual** |
+
+1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Health >**:
+
+    | Setting | Value | 
+    | --- | --- |
+    | Enable basic plan for free | **Off** |
     | Boot diagnostics | **Off** |
-    | System assigned managed identity | **Off** |
+    
+1. On the **Health** tab of the **Create a virtual machine scale set** blade, review the default settings without making any changes and click **Next : Advanced >**.
+
+1. On the **Advanced** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Review + create**.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Spreading algorithm | **Max spreading** |
+
+1. On the **Review + create** tab of the **Create a virtual machine scale set** blade, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
