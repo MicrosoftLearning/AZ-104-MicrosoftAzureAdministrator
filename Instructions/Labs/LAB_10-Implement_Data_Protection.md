@@ -385,12 +385,6 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
-
-    >**Note**: Wait until both backup items are removed. This should take no more than 3 minutes.
-
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Refresh**.
 
     >**Note**: The **Azure Virtual Machine** entry is still lists **1** backup item.
