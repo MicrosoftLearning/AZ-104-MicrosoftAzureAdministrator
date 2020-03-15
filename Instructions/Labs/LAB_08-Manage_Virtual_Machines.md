@@ -473,7 +473,7 @@ In this task, you will change the size of virtual machine scale set instances, c
    ```pwsh
    $rgName = 'az104-08-rg02'
 
-   $lbpipName = 'az10408vmss0-pip'
+   $lbpipName = 'az10408vmss0-ip'
 
    $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
    ```
