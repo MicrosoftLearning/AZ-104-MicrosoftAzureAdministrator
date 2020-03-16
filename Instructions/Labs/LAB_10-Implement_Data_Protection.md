@@ -419,7 +419,6 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
-
 #### Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
@@ -437,6 +436,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
    ```pwsh
    Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
    ```
+
+   >**Note**: Optionally, you might consider deleting the auto-generated resource group with the prefix **AzureBackupRG_** (there is no additional charge associated with its existence).
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
