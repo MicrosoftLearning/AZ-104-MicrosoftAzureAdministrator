@@ -327,7 +327,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
  
     >**Note**: Once you create a new virtual network and return to the **Networking** tab of the **Create a virtual machine scale set** blade, the **Virtual network** value will be automatically set to **az104-08-rg02-vnet**.
 
-1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click **Edit** icon to the right of the network interface entry. 
+1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Edit network interface** icon to the right of the network interface entry. 
 
 1. On the **Edit network interface** blade, in the **NIC network security group** section, click **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
 
@@ -356,6 +356,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Scaling >**:
 
+    | Use a load balancer | **Yes** |
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **(new) az10408vmss0-lb** |
     | Select a backend pool | **(new) bepool** |
@@ -371,7 +372,6 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
     | Setting | Value | 
     | --- | --- |
-    | Enable basic plan for free | **Off** |
     | Boot diagnostics | **Off** |
     
 1. On the **Health** tab of the **Create a virtual machine scale set** blade, review the default settings without making any changes and click **Next : Advanced >**.
