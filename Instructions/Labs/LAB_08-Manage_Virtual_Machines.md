@@ -356,6 +356,8 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Scaling >**:
 
+    | Setting | Value | 
+    | --- | --- |
     | Use a load balancer | **Yes** |
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **(new) az10408vmss0-lb** |
@@ -380,7 +382,9 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
     | Setting | Value | 
     | --- | --- |
-    | Spreading algorithm | **Max spreading** |
+    | Spreading algorithm | **Fixed spreading (not recommended with zones)** |
+
+    >**Note**: The **Max spreading** setting is currently not functional.
 
 1. On the **Review + create** tab of the **Create a virtual machine scale set** blade, ensure that the validation passed and click **Create**.
 
