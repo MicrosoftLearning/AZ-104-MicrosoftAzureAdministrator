@@ -83,7 +83,6 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value | 
     | --- | --- |
-    | Enable basic plan for free | **No** |
     | Boot diagnostics | **Off** |
 
 1. Click **Next: Advanced >**, on the **Management** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
