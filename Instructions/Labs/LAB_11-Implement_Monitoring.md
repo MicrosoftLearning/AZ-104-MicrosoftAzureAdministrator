@@ -156,6 +156,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0 - Logs** blade, ensure that the Log Analytics workspace you created earlier in this lab is selected in the **Choose a Log Analytics Workspace** drop-down list and click **Enable**.
 
+1. On the **az104-11-vm0 - Logs** blade, click **Enable**, select the Log Analytics workspace you created earlier in this lab from the **Choose a Log Analytics Workspace** drop-down list, and click **Enable** again.
+
     >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
 
 1. On the **az104-11-vm0 - Logs** blade, in the **Monitoring** section, click **Metrics**.
