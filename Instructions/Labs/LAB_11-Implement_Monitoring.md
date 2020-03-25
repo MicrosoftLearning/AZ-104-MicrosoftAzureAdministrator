@@ -274,7 +274,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Select a scope** blade, navigate to the **az104-11-rg0** resource group, expand it, select **a104-11-vm0**, and click **Apply**.
 
-1. Click **Sample queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine available memory**, and click **Run**.
+1. Click **Example queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine available memory**, and click **Run**.
 
 1. Review the resulting chart and remove the line containing the following text:
 
@@ -300,7 +300,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Examine output displayed in the query results.
 
-1. Click **Sample queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine free disk space**, and click **Run**.
+1. Click **Example queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine free disk space**, and click **Run**.
 
 #### Clean up resources
 
