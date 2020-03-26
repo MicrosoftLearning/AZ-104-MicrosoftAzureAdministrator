@@ -17,15 +17,15 @@
 
 - It will be recommended that for every delivery, trainers check GitHub for any changes that may have been made to support the latest Azure services, and get the latest files for their delivery.
 
-## What about changes to the student handbook?
-
-- We will review the student handbook on a quarterly basis and update through the normal MOC release channels as needed.
-
 ## How do I contribute?
 
 - Any MCT can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include content and lab code changes as needed.
 
 - You can submit bugs, changes, improvement and ideas.  Find a new Azure feature before we have?  Submit a new demo!
+
+## What about changes to the student handbook?
+
+- This repository is only for Issues with the course labs. Comments on the course content should be posted on the MCT Courseware Forum. 
 
 ## Notes
 
