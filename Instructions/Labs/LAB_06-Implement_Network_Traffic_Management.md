@@ -474,7 +474,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
-    | Instances | **1** |
+    | Scale units | **1** |
     | Availability zone | **1, 2, 3** |
     | HTTP/2 | **Disabled** |
     | Virtual network | **az104-06-vnet01** |
@@ -487,20 +487,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Frontend IP address type | **Public** |
     | Public IP address| the name of a new public ip address **az104-06-pip5** |
 
-1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **+ Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-appgw5-be1** |
     | Add backend pool without targets | **No** |
-    | Target type | **IP address or hostname** |
+    | Target type | **IP address or FQDN** |
     | Target | **10.62.0.4** |
-    | Target type | **IP address or hostname** |
+    | Target type | **IP address or FQDN** |
     | Target | **10.63.0.4** |
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
-1. Click **Add**, click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a rule**. 
+1. Click **Add**, click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**. 
 
 1. On the **Add a routing rule** blade, on the **Listener** tab, specify the following settings (leave others with their default values):
 
