@@ -195,7 +195,7 @@ In this task, you will test connectivity between virtual machines on the three v
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
 
    ```pwsh
-   Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
+   Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade. 
 
