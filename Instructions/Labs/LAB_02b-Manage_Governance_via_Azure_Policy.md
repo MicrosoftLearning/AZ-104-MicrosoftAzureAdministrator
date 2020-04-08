@@ -136,11 +136,13 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the Azure portal, search for and select **Policy**. 
 
-1. In the **Authoring** section, click **Assignments**. 
+1. In the **Overview** section, click over the policy assignment created on the previous task **Require Role tag with Infra value**. 
 
-1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment. 
+1. In the list of tasks on the top, select **Delete assignment** to delete the assignment. 
 
-1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
+1. In the Authoring section, click over **Assignments**.
+
+1.Click **Assign policy** on the top and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
     | --- | --- |
