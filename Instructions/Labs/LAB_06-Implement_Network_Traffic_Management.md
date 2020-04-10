@@ -45,7 +45,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```pwsh
    $location = '[Azure_region]'
 
-   $rgName = 'az104-06-rg01'
+   $rgName = 'az104-06-rg1'
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
@@ -170,7 +170,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg01** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -191,7 +191,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg01** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
