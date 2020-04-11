@@ -94,6 +94,12 @@ In this task, you will managing configuration of the Azure managed disk by using
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
+1. To verify the current SKU as **Standard_LRS**, run the following:
+
+   ```pwsh
+   (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
+   ```
+
 1. To change the disk performance SKU to **Premium_LRS**, from the PowerShell session within Cloud Shell, run the following:
 
    ```pwsh
