@@ -269,7 +269,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
    robocopy [recovery_volume]:\Windows\System32\drivers\etc C:\Windows\system32\drivers\etc hosts /r:1 /w:1
    ```
 
-1. Switch back to the **Recover Data Wizard** and, on the **Browse and Recover File, click **Unmount** and, when prompted to confirm, click **Yes**. 
+1. Switch back to the **Recover Data Wizard** and, on the **Browse and Recover Files**, click **Unmount** and, when prompted to confirm, click **Yes**. 
 
 1. Terminate the Remote Desktop session.
 
