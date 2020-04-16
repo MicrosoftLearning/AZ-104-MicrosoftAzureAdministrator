@@ -449,7 +449,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet01**.
 
-1. On the  **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Add**.
+1. On the  **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values):
 
@@ -476,7 +476,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Enable autoscaling | **No** |
     | Scale units | **1** |
     | Availability zone | **1, 2, 3** |
-    | HTTP/2 | **Disabled** |
+    | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet01** |
     | Subnet | **subnet-appgw** |
 
@@ -485,7 +485,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Frontend IP address type | **Public** |
-    | Public IP address| the name of a new public ip address **az104-06-pip5** |
+    | Firewall public IP address| the name of a new public ip address **az104-06-pip5** |
 
 1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
 
