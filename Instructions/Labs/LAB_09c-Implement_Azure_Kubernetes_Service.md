@@ -40,7 +40,6 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Kubernetes cluster name | **az104-9c-aks1** |
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Kubernetes version | accept the default |
-    | DNS name prefix | any valid, globally unique DNS host name |
     | Node size | accept the default |
     | Node count | **1** |
 
@@ -63,6 +62,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     | Setting | Value |
     | ---- | ---- |
+    | DNS name prefix | any valid, globally unique DNS host name |
     | HTTP application routing | **No** |
     | Load balancer | **Standard** |
     | Network configuration | **Advanced** |
