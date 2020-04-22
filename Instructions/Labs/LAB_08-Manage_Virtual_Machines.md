@@ -83,8 +83,11 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value | 
     | --- | --- |
-    | Boot diagnostics | **Off** |
+    | Boot diagnostics | **On** |
+    | Diagnostics storage account | the default value |
 
+    >**Note**: Identify the name of diagnostics storage account. You will use it in the next task. 
+    
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
 
 1. On the **Review + Create** blade, click **Create**.
@@ -116,13 +119,34 @@ In this task, you will deploy Azure virtual machines into different availability
 
 In this task, you will install Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension. 
 
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task. 
+
+1. On the storage account blade, click **Containers** and then click **+ Container**. 
+
+1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | **scripts** |
+    | Public access level | **Private (no anonymous access**) |
+    
+1. Back on the storage account blade displaying the list of containers, click **scripts**.
+
+1. On the **scripts** blade, click **Upload**.
+
+1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, navigate to the **\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**. 
+
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
 1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
 
 1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
 
-1. From the **Install extension** blade, upload the script **az104-08-install_IIS.ps1** from **\\Allfiles\\Labs\\08** and click **OK**.
+1. From the **Install extension** blade, click **Browse**. 
+
+1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**. 
+
+1. Back on the **Install extension** blade, click **OK**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
