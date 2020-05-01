@@ -22,6 +22,8 @@ In this lab, you will:
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
 
+## Estimated timing: 40 minutes
+
 ## Instructions
 
 ### Exercise 1
