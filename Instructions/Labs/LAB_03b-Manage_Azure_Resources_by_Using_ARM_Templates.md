@@ -18,6 +18,8 @@ In this lab, you will:
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
+## Estimated timing: 20 minutes
+
 ## Instructions
 
 ### Exercise 1
