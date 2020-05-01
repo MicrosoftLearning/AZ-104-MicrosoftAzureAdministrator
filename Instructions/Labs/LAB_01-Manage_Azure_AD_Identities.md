@@ -12,8 +12,6 @@ lab:
 
 In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
-## Estimated timing: 30 minutes
-
 ## Objectives
 
 In this lab, you will:
@@ -23,7 +21,7 @@ In this lab, you will:
 + Task 3: Create an Azure Active Directory (AD) tenant
 + Task 4: Manage Azure AD guest users 
 
-
+## Estimated timing: 30 minutes
 
 ## Instructions
 
