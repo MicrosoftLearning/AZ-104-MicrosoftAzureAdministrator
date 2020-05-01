@@ -19,6 +19,8 @@ In this lab, you will:
 + Task 2: Deploy pods into the Azure Kubernetes Service cluster
 + Task 3: Scale containerized workloads in the Azure Kubernetes service cluster
 
+## Estimated timing: 40 minutes
+
 ## Instructions
 
 ### Exercise 1
