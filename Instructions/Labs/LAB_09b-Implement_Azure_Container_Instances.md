@@ -18,6 +18,8 @@ In this lab, you will:
 + Task 1: Deploy a Docker image by using the Azure Container Instance
 + Task 2: Review the functionality of the Azure Container Instance
 
+## Estimated timing: 20 minutes
+
 ## Instructions
 
 ### Exercise 1
