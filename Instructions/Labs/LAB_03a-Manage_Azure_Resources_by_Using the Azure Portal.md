@@ -19,6 +19,8 @@ In this lab, we will:
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
 
+## Estimated timing: 20 minutes
+
 ## Instructions
 
 ### Exercise 1
