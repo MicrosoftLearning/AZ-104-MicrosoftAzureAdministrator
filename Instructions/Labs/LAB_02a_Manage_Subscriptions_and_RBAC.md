@@ -18,6 +18,8 @@ In order to improve management of Azure resources in Contoso, you have been task
     - creating support request tickets
     - viewing resource groups 
 
+## Estimated timing: 30 minutes
+
 ## Objectives
 
 In this lab, you will:
