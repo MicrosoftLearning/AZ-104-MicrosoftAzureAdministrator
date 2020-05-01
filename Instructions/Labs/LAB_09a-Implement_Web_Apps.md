@@ -22,6 +22,8 @@ In this lab, you will:
 + Task 5: Swap the staging slots
 + Task 6: Configure and test autoscaling of the Azure web app
   
+## Estimated timing: 30 minutes
+
 ## Instructions
 
 ### Exercise 1
