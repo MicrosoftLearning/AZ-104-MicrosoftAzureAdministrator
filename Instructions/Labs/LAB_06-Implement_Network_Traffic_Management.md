@@ -22,6 +22,8 @@ In this lab, you will:
 + Task 5: Implement Azure Load Balancer
 + Task 6: Implement Azure Application Gateway
 
+## Estimated timing: 60 minutes
+
 ## Instructions
 
 ### Exercise 1
