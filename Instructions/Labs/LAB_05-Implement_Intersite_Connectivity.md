@@ -19,6 +19,10 @@ In this lab, you will:
 + Task 2: Configure local and global virtual network peering
 + Task 3: Test intersite connectivity 
 
+## Estimated timing: 30 minutes
+
+### Instructions
+
 #### Task 1: Provision the lab environment
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region. 
