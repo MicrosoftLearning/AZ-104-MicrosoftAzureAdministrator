@@ -25,6 +25,8 @@ In this lab, we will:
 + Task 2: Enforce tagging via an Azure policy
 + Task 3: Apply tagging via an Azure policy
 
+## Estimated timing: 30 minutes
+
 ## Instructions
 
 ### Exercise 1
