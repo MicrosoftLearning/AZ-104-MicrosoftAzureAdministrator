@@ -18,8 +18,6 @@ In order to improve management of Azure resources in Contoso, you have been task
     - creating support request tickets
     - viewing resource groups 
 
-## Estimated timing: 30 minutes
-
 ## Objectives
 
 In this lab, you will:
@@ -27,6 +25,9 @@ In this lab, you will:
 + Task 1: Implement Management Groups
 + Task 2: Create custom RBAC roles 
 + Task 3: Assign RBAC roles
+
+
+## Estimated timing: 30 minutes
 
 ## Instructions
 
