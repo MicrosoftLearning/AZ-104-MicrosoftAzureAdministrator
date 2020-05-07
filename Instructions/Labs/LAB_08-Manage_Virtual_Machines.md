@@ -520,7 +520,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close Cloud Shell pane. 
 
-1. On the **az10408vmss0** blade, click **Storage**, click **+ Add data disk**, and attach a new managed disk with the following settings (leave others with their default values):
+1. On the **az10408vmss0** blade, click **Disks**, click **+ Add data disk**, and attach a new managed disk with the following settings (leave others with their default values):
 
     | Setting | Value | 
     | --- | --- |
