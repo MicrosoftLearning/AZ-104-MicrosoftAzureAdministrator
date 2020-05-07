@@ -315,7 +315,23 @@ In this task you will scale compute for Azure virtual machines by changing their
    ```
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
-#### Task 4: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+
+#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
+
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+
+1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
+
+   ```pwsh
+   Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
+   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
+   ```
+
+#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
 
@@ -416,7 +432,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
 
-#### Task 5: Configure Azure virtual machine scale sets by using virtual machine extensions
+#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 
 In this task, you will install Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension. 
 
@@ -441,7 +457,7 @@ In this task, you will install Windows Server Web Server role on the instances o
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
 
 
-#### Task 6: Scale compute and storage for Azure virtual machine scale sets
+#### Task 7: Scale compute and storage for Azure virtual machine scale sets
 
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
@@ -494,8 +510,6 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**.
 
