@@ -69,7 +69,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Load balancer | **Standard** |
     | Network configuration | **Advanced** |
 
-1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Enable container monitoring** to **Disabled**, click **Review + create** and then click **Create**. 
+1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create** and then click **Create**. 
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
 
