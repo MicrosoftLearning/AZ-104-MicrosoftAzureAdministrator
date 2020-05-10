@@ -286,6 +286,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Click **Example queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine available memory**, and click **Run**.
 
+1. Click **Example queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Track VM availability**, and click **Run**.
+
 1. Review the resulting chart and remove the line containing the following text:
 
    ```
