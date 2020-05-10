@@ -192,15 +192,15 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: This gives you the same view and options as those available from the **az104-11-vm0 - Metrics** blade.
 
+1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
+
 1. On the **Monitor - Metrics** blade, click **New alert rule**.
 
     >**Note**: Creating an alert rule from Metrics is not supported for metrics from the Guest (classic) metric namespace. This can be accomplished by using Azure Resource Manager templates, as described in the document [Send Guest OS metrics to the Azure Monitor metric store using a Resource Manager template for a Windows virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
 
-1. On the **Create rule** blade, in the **RESOURCE** section, click **Select**, on the **Select a resource** blade, navigate to the **az104-11-vm0** virtual machine entry, select the checkbox next to it, and click **Done**. 
+1. On the **Create alert rule** blade, in the **CONDITION** section, click the existing condition. 
 
-1. On the **Create rule** blade, in the **CONDITION** section, click **Add**. 
-
-1. On the **Configure signal logic** blade, in the list of signals, click **Percentage CPU**, in the **Alert logic** section, specify the following settings (leave others with their default values) and click **Done**:
+1. On the **Configure signal logic** blade, in the list of signals, in the **Alert logic** section, specify the following settings (leave others with their default values) and click **Done**:
 
     | Settings | Value |
     | --- | --- |
@@ -211,7 +211,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation granularity (Period) | **1 minute** |
     | Frequency of evaluation | **Every 1 Minute** |
 
-1. On the **Create rule** blade, in the **ACTION GROUPS (optional)** section, click **Create**.
+1. On the **Create rule** blade, in the **Action group** section, click **Select action group** and then click the **+ Create action group** button.
 
 1. On the **Add action group** blade, specify the following settings (leave others with their default values):
 
