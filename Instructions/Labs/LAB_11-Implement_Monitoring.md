@@ -310,8 +310,6 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to wait a few minutes before the update data becomes available.
 
-1. Examine output displayed in the query results.
-
 1. Click **Example queries** in the toolbar, in the **Get started with sample queries** pane, review each tab, locate **Virtual machine free disk space**, and click **Run**.
 
 #### Clean up resources
