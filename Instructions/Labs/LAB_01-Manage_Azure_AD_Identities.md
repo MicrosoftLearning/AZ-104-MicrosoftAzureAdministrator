@@ -55,7 +55,7 @@ In this task, you will create and configure Azure AD users.
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
 
-    >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this task.
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. In the list of users, click the newly created user account to display its blade.
 
@@ -67,7 +67,7 @@ In this task, you will create and configure Azure AD users.
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
-    >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
+    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
 
@@ -210,7 +210,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Job title | **System Administrator** |
     | Department | **IT** |
 
-    >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this task.
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
