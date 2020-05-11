@@ -209,7 +209,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. In the **Add a role assignment** section, click **Add**.
 
-1. On the **Add role administrator** blade, specify the following settings:
+1. On the **Add role assignment** blade, specify the following settings:
 
     | Setting | Value |
     | --- | --- |
