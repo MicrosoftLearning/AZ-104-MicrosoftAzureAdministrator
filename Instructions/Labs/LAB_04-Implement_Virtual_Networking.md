@@ -293,7 +293,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. In the Azure portal, open the **PowerShell** session in **Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name] placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the newly created DNS zone (replace the placeholder `[Name server 1]` including the [] brackets, with the name of **Name server 1** you noted earlier in this task and the `[domain name] placeholder with the name of the DNS domain you created earlier in this task):
 
    ```pwsh
    nslookup az104-04-vm0.[domain name] [Name server 1]
