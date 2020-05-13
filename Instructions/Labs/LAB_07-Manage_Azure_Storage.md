@@ -158,7 +158,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. On the **licenses/LICENSE** blade, review the available options. 
 
-    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Cool**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task). 
+    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task). 
 
 #### Task 4: Manage authentication and authorization for Azure Storage
 
