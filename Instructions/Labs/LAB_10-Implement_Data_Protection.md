@@ -321,7 +321,11 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: The script mounts the disks from the selected recovery point as local drives within the operating system from which the script is run.
 
-1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Run**.
+1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Save**.
+
+1. Start File Explorer, navigate to the **Downloads** folder, right-click the newly downloaded file, select **Properties** in the right-click menu, in the **Properties** dialog box, select the **Unblock** checkbox, and click **OK**.
+
+1. Back in the File Explorer window, double-click the newly downloaded file.
 
 1. When prompted to provide the password from the portal, copy the password from the **Password to run the script** text box on the **File Recovery** blade, paste it at the Command Prompt, and press **Enter**.
 
