@@ -121,8 +121,6 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the az104-02-aaduser1 user can see all resource groups.
-
 1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ New support request**. 
