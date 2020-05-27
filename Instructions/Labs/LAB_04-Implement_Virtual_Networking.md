@@ -228,7 +228,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
-1. On the **contoso.org** private DNS zone blade, in the **Settings** section, click **Overview**
+1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
 1. Verify that the DNS records for **az104-04-vm0** and **az104-04-vm1** appear in the list of record sets as **Auto registered**.
 
