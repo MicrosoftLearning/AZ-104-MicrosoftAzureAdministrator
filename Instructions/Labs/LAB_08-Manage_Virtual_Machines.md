@@ -412,12 +412,8 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Initial instance count | **2** |
     | Scaling policy | **Manual** |
 
-1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Health >**:
+1. On the **Management** tab of the **Create a virtual machine scale set** blade, ensure that the **Boot diagnostics** opton is enabled, select **Create new**, on the **Create storage account** blade, in the **Name** text box, type a unique, valid storage account name, click **OK**, and click **Next : Health >**:
 
-    | Setting | Value | 
-    | --- | --- |
-    | Boot diagnostics | **Off** |
-    
 1. On the **Health** tab of the **Create a virtual machine scale set** blade, review the default settings without making any changes and click **Next : Advanced >**.
 
 1. On the **Advanced** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Review + create**.
