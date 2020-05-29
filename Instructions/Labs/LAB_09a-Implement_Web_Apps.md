@@ -196,7 +196,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
     >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period. 
 
-1. Click **Add** and, back on the **az10408vmss0 - Scaling** blade, specify the following settings (leave others with their default values):
+1. Click **Add** and, back on the **app services plan - scale out** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- |--- |
