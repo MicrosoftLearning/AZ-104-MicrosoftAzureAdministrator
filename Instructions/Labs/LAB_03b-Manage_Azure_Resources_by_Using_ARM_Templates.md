@@ -105,8 +105,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Disk Name | **az104-03b-disk1** |
     | Location | accept the default value |
     | Sku | **Standard_LRS** |
-    | Disk Size Gb | **32** |
+    | Disk Size Gb | **32** (No quotes)|
     | Create Option | **empty** |
+    | Encryption Type | **platform** |
 
 1. Select the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
