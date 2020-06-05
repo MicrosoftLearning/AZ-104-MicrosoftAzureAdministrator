@@ -121,28 +121,29 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. From the Cloud Shell pane, run the following to clone the remote repository containing the code for the web app.
 
-   ```pwsh
-   git clone https://github.com/Azure-Samples/php-docs-hello-world
-   ```
+    ```pwsh
+    git clone https://github.com/Azure-Samples/php-docs-hello-world
+    ```
  
 1. From the Cloud Shell pane, run the following to set the current location to the newly created clone of the local repository containing the sample web app code.
 
-   ```
-   Set-Location -Path $HOME/php-docs-hello-world/
-   ```
+    ```
+    Set-Location -Path $HOME/php-docs-hello-world/
+    ```
 
 1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name and **Git Clone Url**, respectively, which you identified in previous task):
 
-   ```
-   git remote add [deployment_user_name] [git_clone_url]
-   ```
+    ```
+    git remote add [deployment_user_name] [git_clone_url]
+    ```
 
     >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name, but has to be unique
 
 1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
-   ```
-   git push [deployment_user_name] master
-   ```
+   
+    ```
+    git push [deployment_user_name] master
+    ```
 
 1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (**Pa55w0rd1234**).
 
@@ -212,17 +213,17 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
-   ```pwsh
-   $rgName = 'az104-09a-rg1'
+    ```pwsh
+    $rgName = 'az104-09a-rg1'
 
-   $webapp = Get-AzWebApp -ResourceGroupName $rgName
-   ```
+    $webapp = Get-AzWebApp -ResourceGroupName $rgName
+    ```
 
 1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
 
-   ```pwsh
-   while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
-   ```
+    ```pwsh
+    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
+    ```
 
 1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
 
@@ -244,15 +245,15 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-09a*'
-   ```
+    ```pwsh
+    Get-AzResourceGroup -Name 'az104-09a*'
+    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
-   ```
+    ```pwsh
+    Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
+    ```
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
