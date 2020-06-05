@@ -219,15 +219,15 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].name" --output tsv
-   ```
+   	```sh
+   	az group list --query "[?starts_with(name,'az104-09c')].name" --output tsv
+   	```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
+   	```sh
+   	az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   	```
 
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
