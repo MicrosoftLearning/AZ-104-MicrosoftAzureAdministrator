@@ -81,15 +81,15 @@ In this task, you will review the deployment of the container instance.
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-09b*'
-   ```
+   	```pwsh
+   	Get-AzResourceGroup -Name 'az104-09b*'
+   	```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
-   Get-AzResourceGroup -Name 'az104-09b*' | Remove-AzResourceGroup -Force -AsJob
-   ```
+   	```pwsh
+   	Get-AzResourceGroup -Name 'az104-09b*' | Remove-AzResourceGroup -Force -AsJob
+   	```
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
