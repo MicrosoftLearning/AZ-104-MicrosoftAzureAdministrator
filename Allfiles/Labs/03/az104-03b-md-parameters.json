@@ -12,10 +12,13 @@
             "value": "Standard_LRS"
         },
         "diskSizeGb": {
-            "value": "32"
+            "value": 32
         },
         "createOption": {
             "value": "empty"
+        },
+        "diskEncryptionSetType": {
+            "value": "EncryptionAtRestWithPlatformKey"
         }
     }
 }
