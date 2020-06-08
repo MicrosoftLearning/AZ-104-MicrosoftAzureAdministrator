@@ -107,6 +107,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
     | Create Option | **empty** |
+    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
 
 1. Select the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
