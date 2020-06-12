@@ -261,6 +261,8 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. On the **Custom deployment** blade, click **Edit template**.
 
+    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
+
 1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `                    "vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
@@ -269,8 +271,6 @@ In this task you will scale compute for Azure virtual machines by changing their
    ```
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
-
-    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
 1. On the **Edit template** blade, in the section displaying the content of the template, replace line **49** (`                    "dataDisks": [ ]` line) with the following code :
 
