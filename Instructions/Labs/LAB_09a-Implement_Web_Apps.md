@@ -104,8 +104,10 @@ In this task, you will configure web app deployment settings.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any unique name |
+    | User name | any unique name (must not contain `@` character) |
     | Password | any password that satisfies complexity requirements |
+    
+    >**Note:** The password must be at least eight characters long, with two of the following three elements: letters, numbers, and non-alphanumeric characters.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
