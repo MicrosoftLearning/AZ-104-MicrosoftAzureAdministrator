@@ -69,23 +69,19 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    ```
 
    ```json
-   },
-   "hyperVGeneration": {
-       "defaultValue": "V1",
-       "type": "String"
+"hyperVGeneration": {
+            "defaultValue": "V1",
+            "type": "String"
+        },
    ```
-
-   ```json
-   "osType": "[parameters('osType')]"
+   
+ ```json
+   "osType": "[parameters('osType')]",
    ```
 
     >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
-1. In addition, remove the trailing comma from the following line:
 
-   ```json
-   "diskSizeGB": "[parameters('diskSizeGb')]",
-   ```
 
     >**Note**: This is necessary to account for the syntax rules of JSON-based ARM templates.
 
