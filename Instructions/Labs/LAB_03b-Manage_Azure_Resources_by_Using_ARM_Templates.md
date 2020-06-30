@@ -54,6 +54,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous step.
 
+   >**Note**: The above downloaded template includes a networkAccessPolicy not included in the below steps. If you find this parameter please leverage the template available at **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** within the lab files.
+    
+
 1. Within the editor pane, remove the following lines:
 
    ```json
