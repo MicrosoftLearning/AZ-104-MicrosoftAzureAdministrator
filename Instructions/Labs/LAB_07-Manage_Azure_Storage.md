@@ -219,6 +219,8 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can access to container again.
 
+    > **Note**: It might take about 5 minutes for the change to take effect.
+    
 #### Task 5: Create and configure an Azure Files shares
 
 In this task, you will create and configure Azure Files shares.
