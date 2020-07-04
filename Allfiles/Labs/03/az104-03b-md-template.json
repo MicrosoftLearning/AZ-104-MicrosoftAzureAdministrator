@@ -29,6 +29,9 @@
         "hyperVGeneration": {
             "defaultValue": "V1",
             "type": "String"
+        },
+        "diskEncryptionSetType": {
+            "type": "String"
         }
     },
     "resources": [
