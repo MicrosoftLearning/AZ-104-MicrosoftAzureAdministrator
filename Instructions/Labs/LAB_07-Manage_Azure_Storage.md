@@ -168,7 +168,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step. 
 
-1. You should be presented with an XML-formatted message stating **ResourceNotFound**.
+1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
     > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
 
@@ -193,7 +193,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step. 
 
-    > **Note**: If you are using Microsoft Edge or Internet Explorer, you should be presented with the **The MIT License (MIT)** page. If you are using Chrome or Firefox, you should be able to view the content of the file by downloading it and opening it with Notepad.
+    > **Note**: If you are using Microsoft Edge or Internet Explorer, you should be presented with the **The MIT License (MIT)** page. If you are using Chrome, Microsoft Edge (Chromium) or Firefox, you should be able to view the content of the file by downloading it and opening it with Notepad.
 
     > **Note**: This is expected, since now your access is authorized based on the newly generated the SAS token. 
 
@@ -207,7 +207,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
-1. In the **Add a role assignment** section, click **Add**.
+1. In the **Add** section, click **Add a role assignment**.
 
 1. On the **Add role assignment** blade, specify the following settings:
 
