@@ -12,7 +12,7 @@
             "type": "String"
         },
         "diskSizeGb": {
-            "type": "String"
+            "type": "Int"
         },
         "sourceResourceId": {
             "type": "String"
@@ -28,6 +28,9 @@
         },
         "hyperVGeneration": {
             "defaultValue": "V1",
+            "type": "String"
+        },
+        "diskEncryptionSetType": {
             "type": "String"
         }
     },

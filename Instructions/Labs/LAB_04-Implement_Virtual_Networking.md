@@ -42,7 +42,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | the name of a new resource group **az104-04-rg1** |
+    | Resource Group | the name of a **new** resource group **az104-04-rg1** |
     | Name | **az104-04-vnet1** |
     | Region | the name of any Azure region available in the subscription you will use in this lab |
     | IPv4 address space | **10.40.0.0/20** |

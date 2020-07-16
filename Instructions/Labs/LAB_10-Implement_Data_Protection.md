@@ -120,7 +120,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
-1. On the **Backup policy**, review the **DefaultPolicy** settings, and, in the **Choose backup policy** drop-down list, select **Create New**.
+1. On the **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -132,7 +132,7 @@ In this task, you will implement Azure virtual-machine level backup.
     | Timezone | the name of your local time zone |
     | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
-1. Click **OK** to create the policy. This will automatically transition to the **Items to backup** step and open the **Select virtual machines** blade.
+1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
 
 1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and, back on the **Backup** blade, click **Enable backup**.
 

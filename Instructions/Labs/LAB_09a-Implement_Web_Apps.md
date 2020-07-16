@@ -104,8 +104,10 @@ In this task, you will configure web app deployment settings.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any unique name |
-    | Password | **P@55w0rd1234** |
+    | User name | any unique name (must not contain `@` character) |
+    | Password | any password that satisfies complexity requirements |
+    
+    >**Note:** The password must be at least eight characters long, with two of the following three elements: letters, numbers, and non-alphanumeric characters.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
@@ -144,7 +146,7 @@ In this task, you will deploy code to the staging deployment slot.
    git push [deployment_user_name] master
    ```
 
-1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (**P@55w0rd1234**).
+1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
 
 1. Close the Cloud Shell pane.
 

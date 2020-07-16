@@ -118,7 +118,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Group description | **Contoso IT cloud administrators** |
     | Membership type | **Dynamic User** |
 
-    >**Note**: If the **Membership type** drop-down list is grayed out, refresh the browser page.
+    >**Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
 
 1. Click **Add dynamic query**.
 
