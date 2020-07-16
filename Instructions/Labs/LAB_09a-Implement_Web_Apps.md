@@ -105,7 +105,7 @@ In this task, you will configure web app deployment settings.
     | Setting | Value |
     | --- | ---|
     | User name | any unique name |
-    | Password | **Pa55w0rd1234** |
+    | Password | **P@55w0rd1234** |
 
     >**Note:** You will need these credentials in the next task of this lab.
 

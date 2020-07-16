@@ -106,7 +106,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Resource group | **az104-08-rg01** |
     | Network Interface Name | **az104-08-vm1-nic1** |
+    | Public Ip Address Name | **az104-08-vm1-ip** |
     | Virtual Machine Name | **az104-08-vm1** |
+    | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
     | Zone | **2** |
@@ -159,6 +161,8 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 1. On the **Custom deployment** blade, click **Edit template**.
 
 1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `    "resources": [` line):
+
+ >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20. 
 
    ```json
         {
