@@ -212,11 +212,11 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2**
+1. On the **az104-08-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2** and click **Resize**
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Disks**, click **+ Add data disk**, and, in the **Name** drop down list, click **Create disk**.
+1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**. 
 
 1. Create a managed disk with the following settings (leave others with their default values):
 
@@ -228,7 +228,7 @@ In this task you will scale compute for Azure virtual machines by changing their
     | Size | **1024 GiB** |
 
 
-1. Back on the **az104-08-vm0 - Disks** blade, click **+ Add data disk**, and, in the **Name** drop down list, click **Create disk**.
+1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**. 
 
 1. Create a managed disk with the following settings (leave others with their default values):
 
@@ -296,7 +296,10 @@ In this task you will scale compute for Azure virtual machines by changing their
                     ]
    ```
 
+    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 49. 
+    
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
+
 
 1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
