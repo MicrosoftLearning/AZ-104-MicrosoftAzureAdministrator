@@ -88,7 +88,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
+1. Switch the **Azure Cloud Shell** to **Bash** (black background).
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
