@@ -234,7 +234,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. On the **az104-06-vm0** virtual machine blade, in the **Settings** section, click **Networking**.
 
-1. Click the **az104-06-nic0** link next to the **Network interface** label, and then, on the **az104-06-nic0** network interface blade, in the **Settings** section, in the **Settings** section, click **IP configurations**. 
+1. Click the **az104-06-nic0** link next to the **Network interface** label, and then, on the **az104-06-nic0** network interface blade, in the **Settings** section, click **IP configurations**. 
 
 1. Set **IP forwarding** to **Enabled** and save the change. 
 
