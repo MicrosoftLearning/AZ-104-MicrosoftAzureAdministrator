@@ -100,8 +100,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. In the **Manage** section, click **All products**.
 
+1. You will see license with name **Azure Active Directory Premium P2** 
 
-1. Refresh the browser window to verify that the activation was successful. 
+1. Verify that there is 2 Available licenses. We will be using this licenses in the next step 
 
 1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
