@@ -1,0 +1,10 @@
+[ {
+  "Name": "Identity",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_01-Manage_Azure_AD_Identities.md",
+      "Order": 1
+    }
+  ]
+} ]

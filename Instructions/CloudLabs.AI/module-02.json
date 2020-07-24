@@ -1,0 +1,14 @@
+[ {
+  "Name": "Governance and Compliance",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_02a_Manage_Subscriptions_and_RBAC.md",
+      "Order": 1
+    },
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_02b-Manage_Governance_via_Azure_Policy.md",
+      "Order": 2
+    }
+  ]
+} ]

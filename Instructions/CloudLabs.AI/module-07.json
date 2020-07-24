@@ -1,0 +1,10 @@
+[ {
+  "Name": "Azure Storage",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_07-Manage_Azure_Storage.md",
+      "Order": 1
+    }
+  ]
+} ]
