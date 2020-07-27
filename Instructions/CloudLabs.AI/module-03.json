@@ -3,19 +3,19 @@
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_03a-Manage_Azure_Resources_by_Using_the_Azure_Portal.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_03a-Manage_Azure_Resources_by_Using_the_Azure_Portal.md",
       "Order": 1
     },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.md",
       "Order": 2
     },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_03c-Manage_Azure_Resources_by_Using_Azure_PowerShell.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_03c-Manage_Azure_Resources_by_Using_Azure_PowerShell.md",
       "Order": 3
     },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/master/Instructions/CloudLabs.AI/LAB_03d-Manage_Azure_Resources_by_Using_Azure_CLI.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_03d-Manage_Azure_Resources_by_Using_Azure_CLI.md",
       "Order": 4
     }
   ]
