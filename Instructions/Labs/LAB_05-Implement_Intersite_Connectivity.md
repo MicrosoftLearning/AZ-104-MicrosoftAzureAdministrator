@@ -46,7 +46,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
-   >**Note**: You may run get-azlocation to find the regions available to insert in the command above: $location ='east us'
+   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
    
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
