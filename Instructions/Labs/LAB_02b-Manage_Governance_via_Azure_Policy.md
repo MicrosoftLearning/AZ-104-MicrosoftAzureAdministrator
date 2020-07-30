@@ -184,7 +184,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. On the resource group blade, click **+ Add**.
 
-1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**, and click **Create**. 
+1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
 
