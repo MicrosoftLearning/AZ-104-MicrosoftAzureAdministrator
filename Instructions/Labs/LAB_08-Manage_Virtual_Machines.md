@@ -505,13 +505,13 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource (az10480vmss0)** |
-    | Time aggregation | **Maximum** |
+    | Time aggregation | **Average** |
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Network In Total** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
     | Duration (in minutes) | **1** |
-    | Time grain statistic | **Maximum** |
+    | Time grain statistic | **Average** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
