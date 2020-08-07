@@ -441,23 +441,6 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 In this task, you will install Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension. 
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task. 
-
-1. On the storage account blade, click **Containers** and then click **+ Container**. 
-
-1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
-
-    | Setting | Value | 
-    | --- | --- |
-    | Name | **scripts** |
-    | Public access level | **Private (no anonymous access**) |
-    
-1. Back on the storage account blade displaying the list of containers, click **scripts**.
-
-1. On the **scripts** blade, click **Upload**.
-
-1. On the **Upload blob** blade, click the folder icon, in the **Open** dialog box, navigate to the **\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**. 
-
 1. In the Azure portal, navigate back to the **Virtual machine scale sets** blade and click **az10408vmss0**.
 
 1. On the **az10408vmss0** blade, click **Extensions**, and the click **+ Add**.
