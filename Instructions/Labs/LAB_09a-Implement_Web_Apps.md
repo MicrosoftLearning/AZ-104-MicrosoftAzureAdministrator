@@ -170,6 +170,9 @@ In this task, you will swap the staging slot with the production slot
 
 #### Task 6: Configure and test autoscaling of the Azure web app
 
+>**Note**: You will need to confirm that Microsoft.Insights is registered on your subscription for this lab. Please find the instructions on how-to register a Resource Provider here: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal
+    
+
 In this task, you will configure and test autoscaling of Azure web app. 
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
@@ -196,7 +199,9 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period. 
+    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
+    
+    
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -207,6 +212,8 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Instance limits Default | **1** |
 
 1. Click **Save**.
+
+    
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
