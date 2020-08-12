@@ -83,7 +83,9 @@ In this task, you will create and configure an Azure Storage account.
     | Account kind | **Storage (general purpose v1)** |
     | Replication | **Read-access geo-redundant storage (RA-GRS)** |
 
-1. Click **Next: Networking >**, on the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Advanced >**.
+1. Click **Next: Networking >**, on the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
+
+1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Advanced >**.
 
 1. On the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
 
