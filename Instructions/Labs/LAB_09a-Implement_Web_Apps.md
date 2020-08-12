@@ -170,7 +170,7 @@ In this task, you will swap the staging slot with the production slot
 
 #### Task 6: Configure and test autoscaling of the Azure web app
 
->**Note**: You will need to confirm that Microsoft.Insights is registered on your subscription for this lab. Please find the instructions on how-to register a Resource Provider here: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal
+>**Note**: You will need to confirm that Microsoft.Insights is registered on your subscription for this lab. For more information regarding this task, refer to https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal
     
 
 In this task, you will configure and test autoscaling of Azure web app. 
