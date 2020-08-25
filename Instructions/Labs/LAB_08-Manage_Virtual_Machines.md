@@ -605,6 +605,12 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
+1. Remove az104-08-configure_VMSS_disks.ps1 by running the following command:
+
+   ```pwsh
+   rm ~\az104-08-configure_VMSS_disks.ps1
+   ```
+
 1. List all resource groups created throughout the labs of this module by running the following command:
 
    ```pwsh
