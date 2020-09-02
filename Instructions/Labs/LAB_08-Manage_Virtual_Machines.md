@@ -85,8 +85,9 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value | 
     | --- | --- |
-    | Boot diagnostics | **On** |
-    | Diagnostics storage account | the default value |
+    | Boot diagnostics | **Enable with custom storage account** |
+    | Diagnostics storage account | **Create new** |
+    | Create storage account | Enter a globally unique name all in lower case > Click **OK**|
 
     >**Note**: Identify the name of diagnostics storage account. You will use it in the next task. 
     
