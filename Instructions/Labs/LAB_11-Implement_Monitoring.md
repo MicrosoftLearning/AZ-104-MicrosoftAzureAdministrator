@@ -89,7 +89,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-11-rg1** |
+    | Resource group | the name of a new resource group **az104-11-rg0** |
     | Log Analytics Workspace | any unique name |    
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
 
@@ -105,7 +105,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | --- | --- |
     | Name | any unique name |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-11-rg1** |
+    | Resource group | **az104-11-rg0** |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
     | Create Azure Run As account | **Yes** |
 
@@ -217,7 +217,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Action group name | **az104-11-ag1** |
     | Display name | **az104-11-ag1** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-11-rg1** |
+    | Resource group | **az104-11-rg0** |
 
 1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. 
 
