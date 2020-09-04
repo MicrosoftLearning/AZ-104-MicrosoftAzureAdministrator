@@ -208,29 +208,26 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation granularity (Period) | **1 minute** |
     | Frequency of evaluation | **Every 1 Minute** |
 
-1. On the **Create rule** blade, in the **Action group** section, click **Select action group** and then click the **+ Create action group** button.
+1. On the **Create alert rule** blade, in the **Action group** section, click **Select action group** and then click the **+ Create action group** button.
 
-1. On the **Add action group** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications > **:
 
     | Settings | Value |
     | --- | --- |
     | Action group name | **az104-11-ag1** |
-    | Short name | **az104-11-ag1** |
+    | Display name | **az104-11-ag1** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
 
-1. On the **Add action group** blade, in the **Actions** section, specify the following settings (leave others with their default values):
+1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. 
 
-    | Settings | Value |
-    | --- | --- |
-    | Action group name | **az104-11-ag1 email** |
-    | Action Type | **Email/SMS/Push/Voice** |
+1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, type your email address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade, in the **Name** text box, type **admin email** and select **Next: Actions  >**:
 
-1. In the **az104-11-ag1 email** action row, click **Edit details**
+1. On the **Basics** tab of the **Create action group** blade, review items available in the **Action type** drop-down list and select **Review + create**.
 
-1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, type your email address in the **Email** textbox, leave others with their default values, click **OK**, and back on the **Add action group** blade, click **OK** again.
+1. On the **Review + create** tab of the **Create action group** blade, select **Create**. 
 
-1. Back on the **Create rule** blade, specify the following settings (leave others with their default values):
+1. Back on the **Create alert rule** blade, in the **Alert rule details** section, specify the following settings (leave others with their default values):
 
     | Settings | Value |
     | --- | --- |
