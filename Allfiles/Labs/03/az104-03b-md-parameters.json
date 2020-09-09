@@ -23,4 +23,5 @@
         "networkAccessPolicy": {
             "value": "AllowAll"
     }
+ }
 }
