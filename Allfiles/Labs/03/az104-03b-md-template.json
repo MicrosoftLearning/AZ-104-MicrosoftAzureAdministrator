@@ -32,7 +32,10 @@
         },
         "diskEncryptionSetType": {
             "type": "String"
-        }
+        },
+        "NetworkAccessPolicy": {
+            "type": "String",
+            "defaultValue" : "AllowAll"
     },
     "resources": [
         {
