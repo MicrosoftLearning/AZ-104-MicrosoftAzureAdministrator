@@ -33,7 +33,7 @@
         "diskEncryptionSetType": {
             "type": "String"
         },
-        "NetworkAccessPolicy": {
+        "networkAccessPolicy": {
             "type": "String",
             "defaultValue" : "AllowAll"
     },
@@ -52,7 +52,8 @@
                     "createOption": "[parameters('createOption')]"
                 },
                 "diskSizeGB": "[parameters('diskSizeGb')]",
-                "osType": "[parameters('osType')]"
+                "osType": "[parameters('osType')]",
+                "networkAccessPolicy": "[parameters('networkAccessPolicy')]"
             }
         }
     ]
