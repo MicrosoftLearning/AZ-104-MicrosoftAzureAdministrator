@@ -36,6 +36,7 @@
         "networkAccessPolicy": {
             "type": "String",
             "defaultValue" : "AllowAll"
+        }
     },
     "resources": [
         {
