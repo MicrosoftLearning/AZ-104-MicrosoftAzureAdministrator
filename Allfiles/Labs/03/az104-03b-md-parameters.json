@@ -19,6 +19,9 @@
         },
         "diskEncryptionSetType": {
             "value": "EncryptionAtRestWithPlatformKey"
-        }
+        },
+        "networkAccessPolicy": {
+            "value": "AllowAll"
     }
+ }
 }
