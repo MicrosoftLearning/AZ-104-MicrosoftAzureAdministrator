@@ -110,7 +110,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
     | Network Access Policy | **AllowAll** |
 
-1. Select the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Select **Review + Create** and then select **Create**.
 
 1. Verify that the deployment completed successfully.
 
