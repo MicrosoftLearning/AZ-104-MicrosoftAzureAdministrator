@@ -75,6 +75,19 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    },
    ```
 
+   ```json
+   ,
+   "networkAccessPolicy": {
+       "type": "String"
+   }
+   ```
+
+   ```json
+   ,
+   "osType": "[parameters('osType')]",
+   "networkAccessPolicy": "[parameters('networkAccessPolicy')]"
+   ```
+
 1. Save the changes.
 
 1. Back on the **Custom deployment** blade, click **Edit parameters**. 
