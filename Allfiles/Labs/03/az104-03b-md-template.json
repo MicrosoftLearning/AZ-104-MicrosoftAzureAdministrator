@@ -34,14 +34,13 @@
             "type": "String"
         },
         "networkAccessPolicy": {
-            "type": "String",
-            "defaultValue" : "AllowAll"
+            "type": "String"
         }
     },
     "resources": [
         {
             "type": "Microsoft.Compute/disks",
-            "apiVersion": "2019-07-01",
+            "apiVersion": "2020-05-01",
             "name": "[parameters('diskName')]",
             "location": "[parameters('location')]",
             "tags": {},
