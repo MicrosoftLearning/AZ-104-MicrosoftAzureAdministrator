@@ -282,7 +282,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-06-rg2** |
     | Location | the name of the Azure region in which you created the virtual networks |
-    | Virtual network gateway route propagation | **Disabled** |
+    | Propagate gateway routes | **No** |
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
