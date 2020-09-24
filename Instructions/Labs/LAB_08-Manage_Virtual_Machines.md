@@ -155,7 +155,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
-1. On the **az104-08-vm1** blade, in the **Settings** section, click **Export template**.
+1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
 
 1. On the **az104-08-vm1 - Export template** blade, click **Deploy**. 
 
