@@ -53,7 +53,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
     | Public inbound ports | **None** |
-    | Already have a Windows Server license | **No** |
+    | Would you like to use an existing Windows Server license? | **No** |
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
