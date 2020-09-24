@@ -252,7 +252,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
 
-1. From the Command Prompt, run the following to copy the restore the **hosts** file to the original location:
+1. From the Command Prompt, run the following to trigger increased CPU utilization on the **az104-11-vm0** Azure VM:
 
    ```
    for /l %a in (0,0,1) do echo a
