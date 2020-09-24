@@ -52,7 +52,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
-1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Add**. 
+1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Add**, and then click **+ Add Kubernetes cluster**. 
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
