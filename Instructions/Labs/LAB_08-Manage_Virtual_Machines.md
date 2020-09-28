@@ -260,7 +260,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
-1. On the **az104-08-vm1** blade, in the **Settings** section, click **Export template**.
+1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
 
 1. On the **az104-08-vm1 - Export template** blade, click **Deploy**. 
 
@@ -473,9 +473,9 @@ In this task, you will install Windows Server Web Server role on the instances o
 
     >**Note**: Wait for the upgrade to complete before proceeding to the next step.
 
-1. In the Azure portal, search for and select **Load balancers** and, in the list of load balancers, click **az10408vmss0lb**.
+1. In the Azure portal, search for and select **Load balancers** and, in the list of load balancers, click **az10408vmss0-lb**.
 
-1. On the **az10408vmss0lb** blade, note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
+1. On the **az10408vmss0-lb** blade, note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
 
@@ -484,7 +484,9 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
-1. In the Azure Portal, on the **az10408vmss0** blade, click **Size**.
+1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
+
+1. In the **az10408vmss0** blade, click **Size**.
 
 1. In the list of available sizes, select **Standard DS1_v2** and click **Resize**.
 
@@ -568,7 +570,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Save the change, in the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
-    >**Note**: The disk attached in the previous step is a raw disks. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
+    >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
 1. In the **Settings** section of the **az10408vmss0** blade, click **Extensions**, click **CustomScriptExtension**, and then click **Uninstall**.
 
@@ -609,7 +611,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. Remove az104-08-configure_VMSS_disks.ps1 by running the following command:
 
    ```pwsh
-   rm ~\az104-08-configure_VMSS_disks.ps1
+   rm ~\az104-08*
    ```
 
 1. List all resource groups created throughout the labs of this module by running the following command:
