@@ -60,7 +60,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
 1. To create a new managed disk with the same characteristics as those you created in the previous labs of this module, from the Bash session within Cloud Shell, run the following:
 
    ```sh
-   DISKNAME='az104-03d-disk1'
+   $DISKNAME='az104-03d-disk1'
 
    az disk create \
    --resource-group $RGNAME \
