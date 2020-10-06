@@ -46,9 +46,9 @@ In this task, you will create a resource group and an Azure managed disk by usin
 1. To create a resource group in the same Azure region as the **az104-03c-rg1** resource group you created in the previous lab, from the Bash session within Cloud Shell, run the following:
 
    ```sh
-   LOCATION=$(az group show --name 'az104-03c-rg1' --query location --out tsv)
+   $LOCATION=$(az group show --name 'az104-03c-rg1' --query location --out tsv)
 
-   RGNAME='az104-03d-rg1'
+   $RGNAME='az104-03d-rg1'
 
    az group create --name $RGNAME --location $LOCATION
    ```
