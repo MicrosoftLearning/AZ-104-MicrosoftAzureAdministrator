@@ -434,7 +434,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
-    | Create implicit outbound rules | **Yes** |
+    | Use outbound rules to provide backend pool members access to the internet. | **Enabled** |
 
 1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
 
