@@ -537,7 +537,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, clik **Add**.
+1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, click **Add**.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
