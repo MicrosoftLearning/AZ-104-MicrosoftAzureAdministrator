@@ -42,7 +42,9 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Module_07\\az104-07-vm-template.json** and **\\Allfiles\\Module_07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine):
+1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
+quick reminder:
+*you can use the “(Get-AzLocation).Location” cmdlet to get the region list*
 
    ```pwsh
    $location = '[Azure_region]'
