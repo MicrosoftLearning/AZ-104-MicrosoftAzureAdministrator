@@ -53,7 +53,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
-1. From the Cloud Shell pane, run the following to deploy thef virtual machine by using the uploaded template and parameter files:
+1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
    ```pwsh
    New-AzResourceGroupDeployment `
