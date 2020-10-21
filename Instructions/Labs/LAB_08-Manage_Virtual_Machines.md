@@ -108,7 +108,6 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Resource group | **az104-08-rg01** |
     | Network Interface Name | **az104-08-vm1-nic1** |
-    | Public Ip Address Name | **az104-08-vm1-ip** |
     | Virtual Machine Name | **az104-08-vm1** |
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
