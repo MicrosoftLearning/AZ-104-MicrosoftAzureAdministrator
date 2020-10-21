@@ -218,7 +218,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Setting | Value |
     | --- | --- |
     | Role | **Storage Blob Data Owner** |
-    | Assign access to | **Azure AD user, group, or service principal** |
+    | Assign access to | **User, group, or service principal** |
     | Select | the name of your user account |
 
 1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can access to container again.
