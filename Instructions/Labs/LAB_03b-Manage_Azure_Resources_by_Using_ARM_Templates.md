@@ -38,7 +38,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments.
 
-1. At the left, click **Template**.
+1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
     >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, and **Deploy** it.
 
