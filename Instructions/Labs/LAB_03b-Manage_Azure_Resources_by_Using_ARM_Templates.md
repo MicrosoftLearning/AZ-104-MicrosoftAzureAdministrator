@@ -28,7 +28,7 @@ In this lab, you will:
 
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [**Azure portal**](https://portal.azure.com).
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
@@ -36,23 +36,27 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments and then click **View template**.
+1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments.
 
-    >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the library, and re-deploy it.
+1. At the left, click **Template**.
+
+    >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, and **Deploy** it.
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
     >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
+    
+1. Close all **File Explorer** windows.
 
 #### Task 2: Create an Azure managed disk by using an ARM template
 
-1. In the Azure portal, search for and select **Template deployment (Deploy a custom template)**.
+1. In the Azure portal, search for and select **Deploy a custom template**.
 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous step.
+1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
 
 1. Within the editor pane, remove the following lines:
 
@@ -81,11 +85,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
     >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
-1. Save the changes.
+1. **Save** the changes.
 
 1. Back on the **Custom deployment** blade, click **Edit parameters**. 
 
-1. On the **Edit parameters** blade, click **Load file** and upload the parameters file **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json** and save the changes.
+1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
 
 1. Back on the **Custom deployment** blade, specify the following settings:
 
