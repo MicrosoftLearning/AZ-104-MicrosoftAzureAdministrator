@@ -40,7 +40,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
-    >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, and **Deploy** it.
+    >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, or **Deploy** it again.
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
@@ -97,7 +97,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | --- |--- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of a new resource group **az104-03b-rg1** |
-    | Location | the name of any Azure region available in the subscription you are using in this lab |
+    | Region | the name of any Azure region available in the subscription you are using in this lab |
     | Disk Name | **az104-03b-disk1** |
     | Location | accept the default value |
     | Sku | **Standard_LRS** |
