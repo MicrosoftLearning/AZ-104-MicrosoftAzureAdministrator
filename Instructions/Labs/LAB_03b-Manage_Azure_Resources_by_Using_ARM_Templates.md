@@ -95,11 +95,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
     | Setting | Value |
     | --- |--- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of a new resource group **az104-03b-rg1** |
+    | Subscription | *the name of the Azure subscription you are using in this lab* |
+    | Resource Group | the name of a **new** resource group **az104-03b-rg1** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
     | Disk Name | **az104-03b-disk1** |
-    | Location | accept the default value |
+    | Location | *accept the default value* |
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
     | Create Option | **empty** |
