@@ -124,9 +124,8 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet1 (az104-05-rg1)** |
     | Name of the peering from az104-05-vnet1 to az104-05-vnet0 | **az104-05-vnet1_to_az104-05-vnet0** |
     | Allow virtual network access from az104-05-vnet0 to az104-05-vnet1 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet1 to az104-05-vnet0 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet0 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet1 | **Disabled** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
@@ -142,10 +141,8 @@ In this task, you will configure local and global peering between the virtual ne
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2 (az104-05-rg2)** |
     | Name of the peering from az104-05-vnet2 to az104-05-vnet0 | **az104-05-vnet2_to_az104-05-vnet0** |
-    | Allow virtual network access from az104-05-vnet0 to az104-05-vnet2 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet2 to az104-05-vnet0 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet0 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet2 | **Disabled** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
@@ -163,10 +160,8 @@ In this task, you will configure local and global peering between the virtual ne
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2 (az104-05-rg2)** |
     | Name of the peering from az104-05-vnet2 to az104-05-vnet1 | **az104-05-vnet2_to_az104-05-vnet1** |
-    | Allow virtual network access from az104-05-vnet1 to az104-05-vnet2 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet2 to az104-05-vnet1 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet1 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet2 | **Disabled** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Allow gateway transit | **(Uncheck Box)** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
