@@ -37,7 +37,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
-1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
+1. From the Cloud Shell pane, run the following to register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
    ```pwsh
    Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
