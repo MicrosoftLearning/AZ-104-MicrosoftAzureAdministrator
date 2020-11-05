@@ -42,7 +42,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Module_06\\az104-06-vms-template.json**, **\\Allfiles\\Labs\\06\\az104-06-vm-template.json**, and **\\Allfiles\\Labs\\06\\az104-06-vm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-template.json**, **\\Allfiles\\Labs\\06\\az104-06-vm-template.json**, and **\\Allfiles\\Labs\\06\\az104-06-vm-parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
