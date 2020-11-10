@@ -121,14 +121,18 @@ In this task, you will configure local peering between the virtual networks you 
 
     | Setting | Value |
     | --- | --- |
-    | Name of the peering from az104-06-vnet01 to remote virtual network | **az104-06-vnet01_to_az104-06-vnet2** |
+    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
+    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None (default)** |
+    | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet2 (az104-06-rg2)** |
-    | Name of the peering from az104-06-vnet2 to az104-06-vnet01 | **az104-06-vnet2_to_az104-06-vnet01** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-
+    | Virtual network | **az104-06-vnet2** |   
+    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Allow (default)** |
+    | Virtual network gateway | **None (default)** |
+    
     >**Note**: Wait for the operation to complete.
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet2 and the other from az104-06-vnet2 to az104-06-vnet01.
@@ -141,13 +145,17 @@ In this task, you will configure local peering between the virtual networks you 
 
     | Setting | Value |
     | --- | --- |
-    | Name of the peering from az104-06-vnet01 to remote virtual network | **az104-06-vnet01_to_az104-06-vnet3** |
+    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
+    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None (default)** |
+    | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet3 (az104-06-rg3)** |
-    | Name of the peering from az104-06-vnet3 to az104-06-vnet01 | **az104-06-vnet3_to_az104-06-vnet01** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network | **az104-06-vnet3** |
+    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Allow (default)** |
+    | Virtual network gateway | **None (default)** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
