@@ -112,9 +112,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
     ```sh
-    RESOURCE_GROUP='az104-09c-rg1'
+    $RESOURCE_GROUP='az104-09c-rg1'
 
-    AKS_CLUSTER='az104-9c-aks1'
+    $AKS_CLUSTER='az104-9c-aks1'
 
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER
     ``` 
