@@ -56,7 +56,8 @@ In this task, you will create and configure Azure AD users.
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
-
+    | Company name | **MyCompany** |
+    
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. In the list of users, click the newly created user account to display its blade.
