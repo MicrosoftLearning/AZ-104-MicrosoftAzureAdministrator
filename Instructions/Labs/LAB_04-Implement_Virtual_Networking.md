@@ -115,9 +115,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
 
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate** and then click **IP address - Configure required settings**. 
-
-1. On the **Choose public IP address blade**, click **+ Create new** and create a new public IP address with the following settings:
+1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
     | --- | --- |
