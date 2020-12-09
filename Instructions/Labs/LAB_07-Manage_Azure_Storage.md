@@ -272,7 +272,7 @@ In this task, you will create and configure Azure Files shares.
 
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Firewalls and virtual networks**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Networking** and then click **Firewalls and virtual networks**.
 
 1. Click the **Selected networks** option and review the configuration settings that become available once this option is enabled.
 
