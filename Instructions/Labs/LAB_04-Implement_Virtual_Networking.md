@@ -48,10 +48,13 @@ In this task, you will create a virtual network with multiple subnets by using t
     | IPv4 address space | **10.40.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet address range | **10.40.0.0/24** |
+    
+      
+1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
-1. On the **Virtual networks** blade, click **Refresh** and click **az104-04-vnet1**.
+1. Once the deployment completes browse for **Virtual Networks** in the portal search bar. Within **Virtual networks** blade, click on the newly created virtual network **az104-04-vnet1**.
 
 1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**. 
 
