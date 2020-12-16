@@ -116,7 +116,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Admin Password | **Pa55w.rd1234** |
     | Zone | **2** |
 
-    >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface. You also need to specify a different availability zone if you want your deployment consisting of two virtual machines to be zone redundant.
+    >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
 1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
