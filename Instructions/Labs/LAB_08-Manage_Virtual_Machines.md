@@ -80,8 +80,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Subnet | **subnet0** |
     | Public IP | **default** |
     | NIC network security group | **basic** |
-    | Accelerated networking | **Off** |
-	| Inbound Ports | **None** |
+    | Accelerated networking | **Off** 
+    | Inbound Ports | **None** |
     | Place this virtual machine behind an existing load balancing solution? | **No** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
@@ -91,7 +91,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | accept the default value |
     
-    >**Note**: If no default storage account populates select the storage account that exists within the dropdown list. Record the name of diagnostics storage account. You will use it in the next task. 
+    >**Note**: If necessary, select an existing storage account in the dropdown list. Record the name of the storage account. You will use it in the next task. 
     
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
 
