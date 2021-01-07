@@ -48,10 +48,9 @@ In this task, you will create an Azure web app.
     | Operating system | **Windows** |
     | Region | the name of an Azure region where you can provision Azure web apps |
     | App service plan | accept the default configuration |
+    
 
-1. Click **Next : Monitoring >**, on the **Monitoring** tab of the **Web App** blade, set the **Enable Application Insights** switch to **No**, click **Review + create**, and then click **Create**. 
-
-    >**Note**: Typically, you would want to enable **Application Insights**, however, its functionality is not used in this lab.
+1. Click **Next : Monitoring >**, on the **Monitoring** tab of the **Web App** blade, verify that the **Enable Application Insights** is set to **Yes**, click **Review + create**, and then click **Create**. 
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute. 
 
@@ -170,14 +169,7 @@ In this task, you will swap the staging slot with the production slot
 
 #### Task 6: Configure and test autoscaling of the Azure web app
     
-
 In this task, you will configure and test autoscaling of Azure web app. 
-
-1. First, you will need to confirm that Microsoft.Insights is registered on your subscription for this lab. You may run the following command to register this command:
-
-   ```pwsh
-   Register-AzResourceProvider -ProviderNamespace 'Microsoft.Insights'
-   ```
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
@@ -204,8 +196,6 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Cool down (minutes) | **5** |
 
     >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
-    
-    
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -216,8 +206,6 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Instance limits Default | **1** |
 
 1. Click **Save**.
-
-    
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
