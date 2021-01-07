@@ -167,9 +167,14 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
 
-1. From the **Cloud Shell** pane, run the following to scale the deployment by increasing of the number of pods to 2:
+1. From the **Cloud Shell** make sure you have **bash** selected for your session, and run the following to scale the deployment by increasing of the number of pods to 2:
 
     ```sh
+    
+    RESOURCE_GROUP='az104-09c-rg1'
+
+    AKS_CLUSTER='az104-9c-aks1'
+    
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
 
