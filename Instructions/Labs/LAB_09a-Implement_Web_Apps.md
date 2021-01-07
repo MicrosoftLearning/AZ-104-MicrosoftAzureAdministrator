@@ -169,11 +169,15 @@ In this task, you will swap the staging slot with the production slot
 1. Verify the default web page has been replaced with the **Hello World!** page. 
 
 #### Task 6: Configure and test autoscaling of the Azure web app
-
->**Note**: You will need to confirm that Microsoft.Insights is registered on your subscription for this lab. For more information regarding this task, refer to https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal
     
 
 In this task, you will configure and test autoscaling of Azure web app. 
+
+1. First, you will need to confirm that Microsoft.Insights is registered on your subscription for this lab. You may run the following command to register this command:
+
+   ```pwsh
+   Register-AzResourceProvider -ProviderNamespace 'Microsoft.Insights'
+   ```
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
