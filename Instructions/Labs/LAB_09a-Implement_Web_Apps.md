@@ -50,7 +50,7 @@ In this task, you will create an Azure web app.
     | App service plan | accept the default configuration |
     
 
-1. Click **Next : Monitoring >**, on the **Monitoring** tab of the **Web App** blade, verify that the **Enable Application Insights** is set to **Yes**, click **Review + create**, and then click **Create**. 
+1. Click **Review + create**, and then click **Create**. 
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute. 
 
