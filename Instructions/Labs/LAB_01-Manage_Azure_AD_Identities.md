@@ -97,7 +97,7 @@ In this task, you will create and configure Azure AD users.
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
-1. Back in the Azure portal where you are signed in with your user account, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
+1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
 
     >**Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
