@@ -46,7 +46,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region]'
 
    $rgName = 'az104-06-rg1'
@@ -55,7 +55,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a pair of virtual machines into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-template.json `
@@ -65,14 +65,14 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. From the Cloud Shell pane, run the following to create the second resource group that will be hosting the second virtual network and the third virtual machine
 
-   ```pwsh
+   ```powershell
    $rgName = 'az104-06-rg2'
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 1. From the Cloud Shell pane, run the following to create the second virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vm-template.json `
@@ -82,14 +82,14 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```
 1. From the Cloud Shell pane, run the following to create the third resource group that will be hosting the third virtual network and the fourth virtual machine:
 
-   ```pwsh
+   ```powershell
    $rgName = 'az104-06-rg3'
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 1. From the Cloud Shell pane, run the following to create the third virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vm-template.json `
@@ -252,7 +252,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. On the **Run Command Script** blade, type the following and click **Run** to install the Remote Access Windows Server role.
 
-   ```pwsh
+   ```powershell
    Install-WindowsFeature RemoteAccess -IncludeManagementTools
    ```
 
@@ -260,7 +260,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. On the **Run Command Script** blade, type the following and click **Run** to install the Routing role service.
 
-   ```pwsh
+   ```powershell
    Install-WindowsFeature -Name Routing -IncludeManagementTools -IncludeAllSubFeature
 
    Install-WindowsFeature -Name "RSAT-RemoteAccess-Powershell"
@@ -567,13 +567,13 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-06*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-06*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

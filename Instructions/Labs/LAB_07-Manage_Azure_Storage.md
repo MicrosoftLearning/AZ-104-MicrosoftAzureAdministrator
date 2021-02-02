@@ -46,7 +46,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
     >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region]'
 
    $rgName = 'az104-07-rg0'
@@ -55,7 +55,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-07-vm-template.json `
@@ -256,7 +256,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
-   ```pwsh
+   ```powershell
    New-Item -Type Directory -Path 'Z:\az104-07-folder'
 
    New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
@@ -294,7 +294,7 @@ In this task, you will configure network access for Azure Storage.
 
 1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
 
-   ```pwsh
+   ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
    ```
 1. Verify that the download attempt failed. 
@@ -311,13 +311,13 @@ In this task, you will configure network access for Azure Storage.
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-07*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

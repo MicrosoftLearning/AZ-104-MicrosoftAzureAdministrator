@@ -41,7 +41,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
 
-   ```pwsh
+   ```powershell
    df
    ```
 

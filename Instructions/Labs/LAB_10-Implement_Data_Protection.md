@@ -45,7 +45,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region]'
 
    $rgName = 'az104-10-rg0'
@@ -54,7 +54,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
    ```
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-10-vms-template.json `
@@ -433,13 +433,13 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-10*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

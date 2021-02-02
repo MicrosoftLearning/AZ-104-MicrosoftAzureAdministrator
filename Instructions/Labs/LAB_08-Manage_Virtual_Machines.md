@@ -201,7 +201,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **az104-08-vm0**:
 
-   ```pwsh
+   ```powershell
    Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
    ```
 
@@ -245,7 +245,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
-   ```pwsh
+   ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
 
    New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 2046GB -ResiliencySettingName Simple -ProvisioningType Fixed
@@ -310,7 +310,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
-   ```pwsh
+   ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
 
    New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 2046GB -ResiliencySettingName Simple -ProvisioningType Fixed
@@ -332,7 +332,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
-   ```pwsh
+   ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
 
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
@@ -541,7 +541,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**.
 
-   ```pwsh
+   ```powershell
    $rgName = 'az104-08-rg02'
 
    $lbpipName = 'az10408vmss0-ip'
@@ -551,7 +551,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
 
-   ```pwsh
+   ```powershell
    while ($true) { Invoke-WebRequest -Uri "http://$pip" }
    ```
 
@@ -587,7 +587,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to display the content of the script:
 
-   ```pwsh
+   ```powershell
    Set-Location -Path $HOME
 
    Get-Content -Path ./az104-08-configure_VMSS_disks.ps1
@@ -597,7 +597,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to excecute the script and configure disks of Azure virtual machine scale set:
 
-   ```pwsh
+   ```powershell
    ./az104-08-configure_VMSS_disks.ps1
    ```
 
@@ -613,19 +613,19 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Remove az104-08-configure_VMSS_disks.ps1 by running the following command:
 
-   ```pwsh
+   ```powershell
    rm ~\az104-08*
    ```
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-08*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-08*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

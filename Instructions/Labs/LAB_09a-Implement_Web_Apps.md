@@ -122,7 +122,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. From the Cloud Shell pane, run the following to clone the remote repository containing the code for the web app.
 
-   ```pwsh
+   ```powershell
    git clone https://github.com/Azure-Samples/php-docs-hello-world
    ```
  
@@ -213,7 +213,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
-   ```pwsh
+   ```powershell
    $rgName = 'az104-09a-rg1'
 
    $webapp = Get-AzWebApp -ResourceGroupName $rgName
@@ -221,7 +221,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
 
-   ```pwsh
+   ```powershell
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
 
@@ -245,13 +245,13 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-09a*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

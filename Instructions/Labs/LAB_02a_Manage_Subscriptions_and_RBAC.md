@@ -96,7 +96,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
-   ```pwsh
+   ```powershell
    New-AzRoleDefinition -InputFile $HOME/az104-02a-customRoleDefinition.json
    ```
 
@@ -157,7 +157,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** Azure Active Directory user account you copied earlier in this task):
 
-   ```pwsh
+   ```powershell
    $scope = (Get-AzRoleAssignment -RoleDefinitionName 'Support Request Contributor (Custom)').Scope
 
    Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
@@ -165,7 +165,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. From the Cloud Shell pane, run the following to remove the custom role definition:
 
-   ```pwsh
+   ```powershell
    Remove-AzRoleDefinition -Name 'Support Request Contributor (Custom)' -Force
    ```
 

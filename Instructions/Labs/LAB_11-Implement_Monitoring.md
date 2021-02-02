@@ -46,7 +46,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region]'
 
    $rgName = 'az104-11-rg0'
@@ -56,7 +56,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-11-vm-template.json `
@@ -70,7 +70,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
-   ```pwsh
+   ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
    
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
@@ -313,13 +313,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-11*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-11*' | Remove-AzResourceGroup -Force -AsJob
    ```
 

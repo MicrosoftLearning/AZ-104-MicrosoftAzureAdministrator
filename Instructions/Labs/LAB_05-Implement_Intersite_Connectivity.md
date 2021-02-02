@@ -39,7 +39,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region_1]` placeholder with the name of an Azure region where you intend to deploy these Azure virtual machines):
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region_1]'
 
    $rgName = 'az104-05-rg0'
@@ -50,7 +50,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-05-vnetvm-template.json `
@@ -60,14 +60,14 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 1. From the Cloud Shell pane, run the following to create the second resource group that will be hosting the second virtual network and the second virtual machine
 
-   ```pwsh
+   ```powershell
    $rgName = 'az104-05-rg1'
 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 1. From the Cloud Shell pane, run the following to create the second virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-05-vnetvm-template.json `
@@ -77,7 +77,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 1. From the Cloud Shell pane, run the following to create the third resource group that will be hosting the third virtual network and the third virtual machine (replace the `[Azure_region_2]` placeholder with the name of another Azure region where you can deploy Azure virtual machines, different from the Azure region you used for the other two deployments):
 
-   ```pwsh
+   ```powershell
    $location = '[Azure_region_2]'
 
    $rgName = 'az104-05-rg2'
@@ -86,7 +86,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 1. From the Cloud Shell pane, run the following to create the third virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   ```pwsh
+   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-05-vnetvm-template.json `
@@ -197,7 +197,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
-   ```pwsh
+   ```powershell
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
     >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall. 
@@ -206,7 +206,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
 
-   ```pwsh
+   ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade. 
@@ -225,7 +225,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
-   ```pwsh
+   ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
     >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall. 
@@ -240,13 +240,13 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. List all resource groups created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-05*'
    ```
 
 1. Delete all resource groups you created throughout the labs of this module by running the following command:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name 'az104-05*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
