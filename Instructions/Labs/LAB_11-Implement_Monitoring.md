@@ -256,7 +256,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. From the Command Prompt, run the following to trigger increased CPU utilization on the **az104-11-vm0** Azure VM:
 
-   ```
+   ```sh
    for /l %a in (0,0,1) do echo a
    ```
 
@@ -282,7 +282,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
-   ```
+   ```sh
    // Virtual Machine available memory
    // Chart the VM's available memory over the last hour.
    InsightsMetrics
