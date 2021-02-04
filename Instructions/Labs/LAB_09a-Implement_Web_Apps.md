@@ -82,7 +82,7 @@ In this task, you will create a staging deployment slot.
 
 In this task, you will configure web app deployment settings.
 
-1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center**.
+1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center (Classic)**.
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
 
