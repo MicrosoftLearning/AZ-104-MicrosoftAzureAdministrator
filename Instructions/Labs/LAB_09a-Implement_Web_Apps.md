@@ -85,25 +85,19 @@ In this task, you will configure web app deployment settings.
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center**.
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
-
-1. In the **Continuous Deployment (CI/CD)** section, select **Local Git**, and then click **Continue**.
-
-1. Select **App Service build service**, click **Continue**, and then click **Finish**.
+    
+1. In the **Serttings** tab, select "**Local Git**" in the **Source** field and click the **Save** button
 
 1. Copy the resulting **Git Clone Url** to Notepad.
 
     >**Note:** You will need the Git Clone Url value in the next task of this lab.
 
-1. Click **Deployment Credentials** toolbar icon to display **Deployment Credentials** pane.
-
-1. Click **User credentials**.
-
-1. Complete the required information, and then click **Save Credentials**.
+1. In the **Local Git/FTPS credentials** tab, under **User Scope**, complete the required information, and then click **Save**.
 
     | Setting | Value |
     | --- | ---|
     | User name | any unique name (must not contain `@` character) |
-    | Password | any password that satisfies complexity requirements |
+    | Password | any password that satisfies complexity requirements (*Pa55w.rd1234* for instance)|
 
     >**Note:** The password must be at least eight characters long, with two of the following three elements: letters, numbers, and non-alphanumeric characters.
 
