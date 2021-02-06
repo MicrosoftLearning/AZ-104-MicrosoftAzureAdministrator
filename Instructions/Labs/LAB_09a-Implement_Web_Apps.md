@@ -82,22 +82,22 @@ In this task, you will create a staging deployment slot.
 
 In this task, you will configure web app deployment settings.
 
-1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center**.
+1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
     
-1. In the **Serttings** tab, select "**Local Git**" in the **Source** field and click the **Save** button
+1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
 
-1. Copy the resulting **Git Clone Url** to Notepad.
+1. On the **Deployment Center** blade, copy the **Git Clone Url** entry to Notepad.
 
     >**Note:** You will need the Git Clone Url value in the next task of this lab.
 
-1. In the **Local Git/FTPS credentials** tab, under **User Scope**, complete the required information, and then click **Save**.
+1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any unique name (must not contain `@` character) |
-    | Password | any password that satisfies complexity requirements (*Pa55w.rd1234* for instance)|
+    | User name | any globally unique name (must not contain `@` character) |
+    | Password | any password that satisfies complexity requirements|
 
     >**Note:** The password must be at least eight characters long, with two of the following three elements: letters, numbers, and non-alphanumeric characters.
 
