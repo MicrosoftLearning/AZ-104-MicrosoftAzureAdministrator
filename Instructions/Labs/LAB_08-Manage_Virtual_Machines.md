@@ -128,7 +128,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
 
-1. On the storage account blade, click **Containers** and then click **+ Container**.
+1. On the storage account blade, in the **Blob service** section, click **Containers** and then click **+ Container**.
 
 1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
 
@@ -163,6 +163,8 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Custom deployment** blade, click **Edit template**.
 
+    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
+
 1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
 
  >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
@@ -193,8 +195,6 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
-    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
-
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
 1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
@@ -207,7 +207,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
-    >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5` to access the web site hosted on **az104-08-vm1**.
+    >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **az104-08-vm1**.
 
 #### Task 3: Scale compute and storage for Azure virtual machines
 
@@ -342,7 +342,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
 
-1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add**, click **+ Virtual machine**.
 
 1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:
 
@@ -448,7 +448,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
 
-1. On the storage account blade, click **Containers** and then click **+ Container**.
+1. On the storage account blade, in the **Blob service** section, click **Containers** and then click **+ Container**.
 
 1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
 
@@ -465,7 +465,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, navigate back to the **Virtual machine scale sets** blade and click **az10408vmss0**.
 
-1. On the **az10408vmss0** blade, click **Extensions**, and the click **+ Add**.
+1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
 
 1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
 
@@ -489,7 +489,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
 
-1. In the **az10408vmss0** blade, click **Size**.
+1. In the **az10408vmss0** blade, in the **Settings** section, click **Size**.
 
 1. In the list of available sizes, select **Standard DS1_v2** and click **Resize**.
 
@@ -499,7 +499,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Return to the **az10408vmss0 - Instances** blade, click the entry representing the second instance and, on the scale set instance blade, note its **Location** (it should be one of the other two zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 
-1. Return to the **az10408vmss0 - Instances** blade and click **Scaling**.
+1. Return to the **az10408vmss0 - Instances** blade and in the **Settings** section, click **Scaling**.
 
 1. On the **az10408vmss0 - Scaling** blade, select the **Custom autoscale** option and configure autoscale with the following settings (leave others with their default values):
 
@@ -563,7 +563,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close Cloud Shell pane.
 
-1. On the **az10408vmss0** blade, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values):
+1. On the **az10408vmss0** blade, in the **Settings** section, click click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
