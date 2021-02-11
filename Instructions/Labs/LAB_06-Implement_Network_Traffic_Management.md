@@ -122,14 +122,14 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-06-vnet2** |   
-    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
     
@@ -146,14 +146,14 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-06-vnet3** |
-    | Trafffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
 
