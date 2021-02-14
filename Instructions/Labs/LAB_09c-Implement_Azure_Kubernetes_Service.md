@@ -15,9 +15,10 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 In this lab, you will:
 
-+ Task 1: Deploy an Azure Kubernetes Service cluster
-+ Task 2: Deploy pods into the Azure Kubernetes Service cluster
-+ Task 3: Scale containerized workloads in the Azure Kubernetes service cluster
++ Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
++ Task 2: Deploy an Azure Kubernetes Service cluster
++ Task 3: Deploy pods into the Azure Kubernetes Service cluster
++ Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 ## Estimated timing: 40 minutes
 
