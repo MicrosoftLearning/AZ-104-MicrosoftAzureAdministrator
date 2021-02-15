@@ -232,7 +232,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Setting | Value |
     | --- | --- |
     | Name | **az104-01b-aaduser1** |
-    | Email address | any valid email address not matching any of user principal names in the current tenant or the copied User Principal Name from above |
+    | Email address | the User Principal Name you copied earlier in this task |
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
