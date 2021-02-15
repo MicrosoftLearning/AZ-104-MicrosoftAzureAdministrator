@@ -70,7 +70,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ New**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
@@ -83,7 +83,7 @@ In this task, you will create a recovery services vault.
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-1. Click **Review + Create** and then click **Create**.
+1. Click **Review + Create**, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
@@ -111,7 +111,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
 
-1. On the **Backup Goal** blade, specify the folowing settings:
+1. On the **Backup Goal** blade, specify the following settings:
 
     | Settings | Value |
     | --- | --- |
@@ -239,7 +239,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. When the backup is complete, click **Close**, and then close Microsoft Azure Backup.
 
-1. Switch to the web browser window displaying the Azure portal, navigate back to the Recovery Services vault blade and click **Backup items**. 
+1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**. 
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
@@ -251,7 +251,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
 
-1. Switch to the Microsoft Azure Backup window and click **Recover data**. This will start **Recover Data Wizard**.
+1. Open Microsoft Azure Backup and click **Recover data** in the **Actions** pane. This will start **Recover Data Wizard**.
 
 1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (az104-10-vm1.)** option is selected and click **Next**.
 
@@ -373,7 +373,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: Make sure to include the trailing period when typing the server name
 
-1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server.I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
+1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
 
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 

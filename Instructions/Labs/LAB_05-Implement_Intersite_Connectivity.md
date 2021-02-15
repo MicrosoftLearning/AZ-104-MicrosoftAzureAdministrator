@@ -114,7 +114,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Specify the following settings (leave others with their default values) and click **Add**:
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
@@ -135,7 +135,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
@@ -158,7 +158,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
