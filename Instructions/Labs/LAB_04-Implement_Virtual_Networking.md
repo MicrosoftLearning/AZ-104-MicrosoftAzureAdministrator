@@ -202,8 +202,7 @@ In this task, you will configure network security groups in order to allow for r
     | Source | **Any** |
     | Source port ranges | * |
     | Destination | **Any** |
-    | Destination port ranges | **3389** |
-    | Protocol | **TCP** |
+    | Service | **RDP** |
     | Action | **Allow** |
     | Priority | **300** |
     | Name | **AllowRDPInBound** |
