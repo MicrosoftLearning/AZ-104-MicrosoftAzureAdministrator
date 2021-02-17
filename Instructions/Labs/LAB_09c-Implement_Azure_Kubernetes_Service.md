@@ -15,9 +15,10 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 In this lab, you will:
 
-+ Task 1: Deploy an Azure Kubernetes Service cluster
-+ Task 2: Deploy pods into the Azure Kubernetes Service cluster
-+ Task 3: Scale containerized workloads in the Azure Kubernetes service cluster
++ Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
++ Task 2: Deploy an Azure Kubernetes Service cluster
++ Task 3: Deploy pods into the Azure Kubernetes Service cluster
++ Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 ## Estimated timing: 40 minutes
 
@@ -86,7 +87,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Network configuration | **kubenet** |
     | DNS name prefix | any valid, globally unique DNS host name |
 
-1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create** and then click **Create**.
+1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click Create.
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
 

@@ -33,13 +33,15 @@ In this task, you will create and configure Azure AD users.
 
 >**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant or perform the Task 2 after Task 3 in that new Azure AD tenant.
 
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
 1. On the Azure Active Directory blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and save the change.
+1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
@@ -185,6 +187,11 @@ In this task, you will create a new Azure AD tenant.
     | Setting | Value |
     | --- | --- |
     | Directory type | **Azure Active Directory** |
+    
+1. Click **Next : Configuration**
+
+    | Setting | Value |
+    | --- | --- |
     | Organization name | **Contoso Lab** |
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
     | Country/Region | **United States** |
@@ -212,6 +219,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Job title | **System Administrator** |
     | Department | **IT** |
 
+1. Click on the newly created profile.
+
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
@@ -223,7 +232,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Setting | Value |
     | --- | --- |
     | Name | **az104-01b-aaduser1** |
-    | Email address | any valid email address not matching any of user principal names in the current tenant or the copied User Principal Name from above |
+    | Email address | the User Principal Name you copied earlier in this task |
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |

@@ -49,7 +49,7 @@ In this task, you will create an Azure web app.
     | Region | the name of an Azure region where you can provision Azure web apps |
     | App service plan | accept the default configuration |
 
-1. Click **Review + create**, and then click **Create**.
+1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 

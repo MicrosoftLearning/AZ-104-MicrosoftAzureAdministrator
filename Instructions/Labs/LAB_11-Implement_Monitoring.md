@@ -210,7 +210,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation granularity (Period) | **1 minute** |
     | Frequency of evaluation | **Every 1 Minute** |
 
-1. On the **Create alert rule** blade, in the **Action group** section, click **Select action group** and then click the **+ Create action group** button.
+1. On the **Create alert rule** blade, in the **Action group** section, click **Add action groups** and then click the **+ Create action group** button.
 
 1. On the **Basics** tab of the **Create action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications >**:
 
