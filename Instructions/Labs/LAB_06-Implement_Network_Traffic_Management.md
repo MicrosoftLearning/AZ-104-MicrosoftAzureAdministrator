@@ -398,6 +398,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard** |
     | Public IP address | **Create new** |
     | Public IP address name | **az104-06-pip4** |
+    | Availability zone | **No Zone** |
     | Add a public IPv6 address | **No** |
     
 1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.
