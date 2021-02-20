@@ -108,6 +108,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Location | the value of the location parameter you noted in the previous task |
     | Sku | **Standard_LRS** |
     | Disk Size Gb | **32** |
+    | Source Image Version Id | **empty** |
     | Create Option | **empty** |
     | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
     | Network Access Policy | **AllowAll** |
