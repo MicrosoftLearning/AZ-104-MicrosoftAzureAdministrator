@@ -45,27 +45,27 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Resource Group | the name of a **new** resource group **az104-04-rg1** |
     | Name | **az104-04-vnet1** |
     | Region | the name of any Azure region available in the subscription you will use in this lab |
-    
+
 1. Click **Next : IP Addresses** and enter the following values
 
     | Setting | Value |
-    | --- | --- |    
+    | --- | --- |
     | IPv4 address space | **10.40.0.0/20** |
-    
+
 1. Click **+ Add subnet** enter the following values then click **Add**
 
     | Setting | Value |
-    | --- | --- | 
+    | --- | --- |
     | Subnet name | **subnet0** |
-    | Subnet address range | **10.40.0.0/24** | 
-      
+    | Subnet address range | **10.40.0.0/24** |
+
 1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
 1. Click on **Go to resource**
 
-1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**. 
+1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
 
 1. Create a subnet with the following settings (leave others with their default values):
 
@@ -75,7 +75,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Address range (CIDR block) | **10.40.1.0/24** |
     | Network security group | **None** |
     | Route table | **None** |
-    
+
 1. Click **Save**
 
 #### Task 2: Deploy virtual machines into the virtual network
@@ -84,11 +84,11 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\04\\az104-04-vms-template.json** and **\\Allfiles\\Labs\\04\\az104-04-vms-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     >**Note**: You might need to upload each file separately.
 
@@ -99,8 +99,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-04-vms-template.json `
-      -TemplateParameterFile $HOME/az104-04-vms-parameters.json
+      -TemplateFile $HOME/az104-04-vms-loop-template.json `
+      -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
 
     >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
@@ -121,7 +121,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
-1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**. 
+1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
@@ -138,9 +138,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Back on the **ipconfig1** blade, save the changes.
 
-1. Navigate back to the **az104-04-vnet1** blade 
+1. Navigate back to the **az104-04-vnet1** blade
 
-1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**. 
+1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
@@ -161,8 +161,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
-    >**Note**: You will need both IP addresses in the last task of this lab. 
-
+    >**Note**: You will need both IP addresses in the last task of this lab.
 
 #### Task 4: Configure network security groups
 
@@ -186,14 +185,14 @@ In this task, you will configure network security groups in order to allow for r
     | Resource Group | **az104-04-rg1** |
     | Name | **az104-04-nsg01** |
     | Region | the name of the Azure region where you deployed all other resources in this lab |
-    
-1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.    
+
+1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
 
     >**Note**: Wait for the deployment to complete. This should take about 2 minutes.
 
-1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade. 
+1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade.
 
-1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Inbound security rules**. 
+1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Inbound security rules**.
 
 1. Add an inbound rule with the following settings (leave others with their default values):
 
@@ -240,12 +239,12 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1** |
     | Name | **contoso.org** |
-    
-1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.    
+
+1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
-1. Click **Go to resource** to open the **contoso.org** DNS private zone blade. 
+1. Click **Go to resource** to open the **contoso.org** DNS private zone blade.
 
 1. On the **contoso.org** private DNS zone blade, in the **Settings** section, click **Virtual network links**
 
@@ -257,8 +256,8 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-04-vnet1** |
     | Enable auto registration | enabled |
-    
-1. Click **OK**.     
+
+1. Click **OK**.
 
     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
@@ -275,15 +274,16 @@ In this task, you will configure DNS name resolution within a virtual network by
    ```powershell
    nslookup az104-04-vm1.contoso.org
    ```
+
 1. Verify that the output of the command includes the private IP address of **az104-04-vm1** (**10.40.1.4**).
 
 #### Task 6: Configure Azure DNS for external name resolution
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
-1. In the web browser, open a new tab and navigate to https://www.godaddy.com/domains/domain-name-search.
+1. In the web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
 
-1. Use the domain name search to identify a domain name which is not in use. 
+1. Use the domain name search to identify a domain name which is not in use.
 
 1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Add**.
 
@@ -294,10 +294,10 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1** |
     | Name | the DNS domain name you identified earlier in this task |
-    
-1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.    
 
-    >**Note**: Wait for the DNS zone to be created. This should take about 2 minutes. 
+1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
+
+    >**Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
 
 1. Click **Go to resource** to open the blade of the newly created DNS zone.
 
@@ -313,7 +313,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | TTL | **1** |
     | TTL unit | **Hours** |
     | IP address | the public IP address of **az104-04-vm0** which you identified in the third exercise of this lab |
-    
+
 1. Click **OK**
 
 1. On the DNS zone blade, click **+ Record set**.
@@ -328,25 +328,27 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | TTL | **1** |
     | TTL unit | **Hours** |
     | IP address | the public IP address of **az104-04-vm1** which you identified in the third exercise of this lab |
-    
-1. Click **OK**    
+
+1. Click **OK**
 
 1. On the DNS zone blade, note the name of the **Name server 1** entry.
 
 1. In the Azure portal, open the **PowerShell** session in **Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name] placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
    nslookup az104-04-vm0.[domain name] [Name server 1]
    ```
+
 1. Verify that the output of the command includes the public IP address of **az104-04-vm0**.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm1** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name] placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm1** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
    nslookup az104-04-vm1.[domain name] [Name server 1]
    ```
+
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
 
 #### Clean up resources
@@ -373,9 +375,9 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 In this lab, you have:
 
-- Created and configured a virtual network
-- Deployed virtual machines into the virtual network
-- Configured private and public IP addresses of Azure VMs
-- Configured network security groups
-- Configured Azure DNS for internal name resolution
-- Configured Azure DNS for external name resolution
++ Created and configured a virtual network
++ Deployed virtual machines into the virtual network
++ Configured private and public IP addresses of Azure VMs
++ Configured network security groups
++ Configured Azure DNS for internal name resolution
++ Configured Azure DNS for external name resolution

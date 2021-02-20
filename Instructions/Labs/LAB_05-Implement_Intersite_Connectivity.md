@@ -9,7 +9,7 @@ lab:
 
 ## Lab scenario
 
-Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of the Contoso's on-premises networks and verify its functionality. 
+Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of the Contoso's on-premises networks and verify its functionality.
 
 ## Objectives
 
@@ -17,7 +17,7 @@ In this lab, you will:
 
 + Task 1: Provision the lab environment
 + Task 2: Configure local and global virtual network peering
-+ Task 3: Test intersite connectivity 
++ Task 3: Test intersite connectivity
 
 ## Estimated timing: 30 minutes
 
@@ -25,78 +25,47 @@ In this lab, you will:
 
 #### Task 1: Provision the lab environment
 
-In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region. 
+In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\05\\az104-05-vnetvm-template.json** and **\\Allfiles\\Labs\\05\\az104-05-vnetvm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json** and **\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region_1]` placeholder with the name of an Azure region where you intend to deploy these Azure virtual machines):
-
-   ```powershell
-   $location = '[Azure_region_1]'
-
-   $rgName = 'az104-05-rg0'
-
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
-   
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
+1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder with the names of two different Azure regions where you intend to deploy these Azure virtual machines):
 
    ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 0 `
-      -AsJob
-   ```
-1. From the Cloud Shell pane, run the following to create the second resource group that will be hosting the second virtual network and the second virtual machine
+   $location1 = '[Azure_region_1]'
 
-   ```powershell
+   $location2 = '[Azure_region_2]'
+
    $rgName = 'az104-05-rg1'
 
-   New-AzResourceGroup -Name $rgName -Location $location
+   New-AzResourceGroup -Name $rgName -Location $location1
    ```
-1. From the Cloud Shell pane, run the following to create the second virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
+
+   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
+
+1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 1 `
+      -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
+      -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
+      -location1 $location1 `
+      -location2 $location2 `
       -AsJob
    ```
-1. From the Cloud Shell pane, run the following to create the third resource group that will be hosting the third virtual network and the third virtual machine (replace the `[Azure_region_2]` placeholder with the name of another Azure region where you can deploy Azure virtual machines, different from the Azure region you used for the other two deployments):
 
-   ```powershell
-   $location = '[Azure_region_2]'
+    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
-   $rgName = 'az104-05-rg2'
-
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-1. From the Cloud Shell pane, run the following to create the third virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 2 `
-      -AsJob
-   ```
-    >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 2 minutes.
-
-    >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
+    >**Note**: To verify the status of the deployment, you can examine the properties of the resource group you created in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -106,7 +75,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. In the Azure portal, search for and select **Virtual networks**.
 
-1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region. 
+1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
@@ -122,7 +91,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |    
+    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
@@ -143,7 +112,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |    
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
@@ -151,7 +120,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    
+
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
 1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
@@ -166,7 +135,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Traffic to remote virtual network | **Allow (default)** |
     | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |    
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
@@ -174,10 +143,10 @@ In this task, you will configure local and global peering between the virtual ne
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |
-    
+
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
-#### Task 3: Test intersite connectivity 
+#### Task 3: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
@@ -200,7 +169,8 @@ In this task, you will test connectivity between virtual machines on the three v
    ```powershell
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
-    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall. 
+
+    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall.
 
 1. Examine the output of the command and verify that the connection was successful.
 
@@ -209,7 +179,8 @@ In this task, you will test connectivity between virtual machines on the three v
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
-1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade. 
+
+1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade.
 
 1. In the list of virtual machines, click **az104-05-vm1**.
 
@@ -228,7 +199,8 @@ In this task, you will test connectivity between virtual machines on the three v
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
-    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall. 
+
+    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall.
 
 1. Examine the output of the command and verify that the connection was successful.
 
@@ -256,6 +228,6 @@ In this task, you will test connectivity between virtual machines on the three v
 
 In this lab, you have:
 
-- Provisioned the lab environment
-- Configured local and global virtual network peering
-- Tested intersite connectivity 
++ Provisioned the lab environment
++ Configured local and global virtual network peering
++ Tested intersite connectivity
