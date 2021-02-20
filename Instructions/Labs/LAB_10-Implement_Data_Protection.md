@@ -109,7 +109,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
+1. On the **az104-10-rsv1** Recovery Services vault blade, click **Overview**, then click **+ Backup**.
 
 1. On the **Backup Goal** blade, specify the following settings:
 
