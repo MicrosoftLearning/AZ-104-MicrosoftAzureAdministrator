@@ -189,8 +189,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    | Allowed protocols | **HTTP** |
-
+    
 
 1. Click **Generate SAS token and URL**.
 
