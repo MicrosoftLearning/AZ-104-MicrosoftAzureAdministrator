@@ -15,9 +15,10 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 In this lab, you will:
 
-+ Task 1: Deploy an Azure Kubernetes Service cluster
-+ Task 2: Deploy pods into the Azure Kubernetes Service cluster
-+ Task 3: Scale containerized workloads in the Azure Kubernetes service cluster
++ Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
++ Task 2: Deploy an Azure Kubernetes Service cluster
++ Task 3: Deploy pods into the Azure Kubernetes Service cluster
++ Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 ## Estimated timing: 40 minutes
 
@@ -33,26 +34,25 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
+1. From the Cloud Shell pane, run the following to register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
-   ```pwsh
+   ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
-   
+
    Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
    ```
 
-1. Close the Cloud Shell pane.   
-
+1. Close the Cloud Shell pane.
 
 #### Task 2: Deploy an Azure Kubernetes Service cluster
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
-1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Add**. 
+1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Add**, and then click **+ Add Kubernetes cluster**.
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -72,7 +72,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | ---- | ---- |
     | Virtual nodes | **Disabled** |
     | VM scale sets | **Enabled** |
-	
+
 1. Click **Next: Authentication >** and, on the **Authentication** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -80,22 +80,18 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Service principal | accept the default |
     | Enable RBAC | **Yes** |
 
-
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Network configuration | **Advanced** |
+    | Network configuration | **kubenet** |
     | DNS name prefix | any valid, globally unique DNS host name |
-    | Load balancer | **Standard** |
-    | HTTP application routing | **No** |
 
-1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create** and then click **Create**. 
+1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click Create.
 
-    >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab. 
+    >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
 
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
-
 
 #### Task 3: Deploy pods into the Azure Kubernetes Service cluster
 
@@ -119,7 +115,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     AKS_CLUSTER='az104-9c-aks1'
 
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER
-    ``` 
+    ```
 
 1. From the **Cloud Shell** pane, run the following to verify connectivity to the AKS cluster:
 
@@ -127,7 +123,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     kubectl get nodes
     ```
 
-1. In the **Cloud Shell** pane, review the output and verify that the one node which the cluster consists of at this point is reporting the **Ready** status. 
+1. In the **Cloud Shell** pane, review the output and verify that the one node which the cluster consists of at this point is reporting the **Ready** status.
 
 1. From the **Cloud Shell** pane, run the following to deploy the **nginx** image from the Docker Hub:
 
@@ -169,9 +165,14 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
 
-1. From the **Cloud Shell** pane, run the following to scale the deployment by increasing of the number of pods to 2:
+1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
 
     ```sh
+
+    RESOURCE_GROUP='az104-09c-rg1'
+
+    AKS_CLUSTER='az104-9c-aks1'
+
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
 
@@ -201,13 +202,13 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to scale the deployment:
 
-    ```
+    ```sh
     kubectl scale --replicas=10 deployment/nginx-deployment
     ```
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
 
-    ```
+    ```sh
     kubectl get pods
     ```
 
@@ -215,7 +216,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to review the pods distribution across cluster nodes:
 
-    ```
+    ```sh
     kubectl get pod -o=custom-columns=NODE:.spec.nodeName,POD:.metadata.name
     ```
 
@@ -223,12 +224,11 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to delete the deployment:
 
-    ```
+    ```sh
     kubectl delete deployment nginx-deployment
     ```
 
 1. Close the **Cloud Shell** pane.
-
 
 #### Clean up resources
 
@@ -254,6 +254,6 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 In this lab, you have:
 
-- Deployed an Azure Kubernetes Service cluster
-- Deployed pods into the Azure Kubernetes Service cluster
-- Scaled containerized workloads in the Azure Kubernetes service cluster
++ Deployed an Azure Kubernetes Service cluster
++ Deployed pods into the Azure Kubernetes Service cluster
++ Scaled containerized workloads in the Azure Kubernetes service cluster

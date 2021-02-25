@@ -9,6 +9,18 @@
           "description": "Virtual machine size"
         }
       },
+      "location1": {
+          "type": "string",
+          "metadata": {
+              "description": "First Azure Region" 
+          }
+      },
+      "location2": {
+          "type": "string",
+          "metadata": {
+              "description": "Second Azure Region" 
+          }
+      },
       "adminUsername": {
         "type": "string",
         "metadata": {
@@ -23,30 +35,32 @@
       }
     },
   "variables": {
-    "vmName": "az104-07-vm0",
-    "nicName": "az104-07-nic0",
-    "virtualNetworkName": "az104-07-vnet0",
-    "publicIPAddressName": "az104-07-pip0",
-    "nsgName": "az104-07-nsg0",
-    "vnetIpPrefix": "10.70.0.0/22", 
-    "subnetIpPrefix": "10.70.0.0/24", 
+    "locationNames": "[createArray(parameters('location1'),parameters('location1'),parameters('location2'))]",       
+    "vmName": "az104-05-vm",
+    "nicName": "az104-05-nic",
     "subnetName": "subnet0",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
+    "VnetName": "az104-05-vnet",
+    "pipName": "az104-05-pip",
+    "nsgName": "az104-05-nsg",
     "computeApiVersion": "2018-06-01",
     "networkApiVersion": "2018-08-01"
   },
     "resources": [
         {
-            "name": "[variables('vmName')]",
+            "name": "[concat(variables('vmName'),copyIndex())]",
+            "copy": {
+                "name": "VMcopy",
+                "count": "[length(variables('locationNames'))]"
+            },
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "[variables('computeApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('locationNames')[copyIndex()]]",
             "dependsOn": [
-                "[variables('nicName')]"
+                "[concat(variables('nicName'),copyIndex())]"
             ],
             "properties": {
                 "osProfile": {
-                    "computerName": "[variables('vmName')]",
+                    "computerName": "[concat(variables('vmName'),copyIndex())]",
                     "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
@@ -74,7 +88,7 @@
                             "properties": {
                                 "primary": true
                             },
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces',concat(variables('nicName'),copyIndex()))]"
                         }
                     ]
                 }
@@ -82,36 +96,44 @@
         },
         {
             "type": "Microsoft.Network/virtualNetworks",
-            "name": "[variables('virtualNetworkName')]",
+            "name": "[concat(variables('VnetName'),copyIndex())]",
+            "copy": {
+                "name": "VNetCopy",
+                "count": "[length(variables('locationNames'))]"
+            },
             "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('locationNames')[copyIndex()]]",
             "comments": "Virtual Network",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "[variables('vnetIpPrefix')]"
+                        "[concat('10.5',copyIndex(),'.0.0/22')]"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "[variables('subnetName')]",
                         "properties": {
-                            "addressPrefix": "[variables('subnetIpPrefix')]"
+                            "addressPrefix": "[concat('10.5',copyIndex(),'.0.0/24')]"
                         }
                     }
                 ]
             }
         },
         {
-            "name": "[variables('nicName')]",
+            "name": "[concat(variables('nicName'),copyIndex())]",
+            "copy": {
+                "name": "nicCopy",
+                "count": "[length(variables('locationNames'))]"
+            },
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('locationNames')[copyIndex()]]",
             "comments": "Primary NIC",
             "dependsOn": [
-                "[variables('publicIpAddressName')]",
-                "[variables('nsgName')]",
-                "[variables('virtualNetworkName')]"
+                "[concat(variables('pipName'),copyIndex())]",
+                "[concat(variables('nsgName'),copyIndex())]",
+                "[concat(variables('VnetName'),copyIndex())]"
             ],
             "properties": {
                 "ipConfigurations": [
@@ -119,35 +141,43 @@
                         "name": "ipconfig1",
                         "properties": {
                             "subnet": {
-                                "id": "[variables('subnetRef')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', concat(variables('VnetName'),copyIndex()), variables('subnetName'))]"
                             },
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIpAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
+                                "id": "[resourceId('Microsoft.Network/publicIpAddresses', concat(variables('pipName'),copyIndex()))]"
                             }
                         }
                     }
                 ],
                 "networkSecurityGroup": {
-                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(variables('nsgName'),copyIndex()))]"
                 }
             }
         },
         {
-            "name": "[variables('publicIpAddressName')]",
+            "name": "[concat(variables('pipName'),copyIndex())]",
+            "copy": {
+                "name": "pipCopy",
+                "count": "[length(variables('locationNames'))]"
+            },
             "type": "Microsoft.Network/publicIpAddresses",
             "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('locationNames')[copyIndex()]]",
             "comments": "Public IP for Primary NIC",
             "properties": {
                 "publicIpAllocationMethod": "Dynamic"
             }
         },
         {
-            "name": "[variables('nsgName')]",
+            "name": "[concat(variables('nsgName'),copyIndex())]",
+            "copy": {
+                "name": "nsgCopy",
+                "count": "[length(variables('locationNames'))]"
+            },
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "location": "[variables('locationNames')[copyIndex()]]",
             "comments": "Network Security Group (NSG) for Primary NIC",
             "properties": {
                 "securityRules": [
