@@ -41,7 +41,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
 
-   ```pwsh
+   ```powershell
    df
    ```
 
@@ -54,6 +54,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
 
 1. On the storage account blade, click the link representing the name of the resource group containing the storage account.
+
+    **Note**: note what resource group the storage account is in, you'll need it later in the lab.
 
 1. On the resource group blade, click **Tags**.
 
@@ -118,7 +120,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the resource group blade, click **+ Add**.
 
-1. On the **New** blade, search for and select **Storage account - blob, file, table, queue**, and click **Create**. 
+1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
 
@@ -207,6 +209,10 @@ In this task, we will use a different policy definition to remediate any non-com
 1. In the **Authoring** section, click **Assignments**, click the ellipsis icon to the right of the assignment you created in the previous task and click **Delete assignment**. 
 
 1. In the portal, search for and select **Storage accounts**.
+
+1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Save**. 
+
+1. In the portal, again search for and select **Storage accounts** or use the menu at the top to select **Storage accounts**
 
 1. In the list of storage accounts, select the storage account you created in the last task of this lab, click **Delete**, when prompted for the confirmation, in the **Confirm delete** type **yes** and click **Delete**. 
 

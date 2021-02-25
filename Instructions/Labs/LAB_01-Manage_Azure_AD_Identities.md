@@ -31,13 +31,17 @@ In this lab, you will:
 
 In this task, you will create and configure Azure AD users.
 
+>**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant or perform the Task 2 after Task 3 in that new Azure AD tenant.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
 1. On the Azure Active Directory blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and save the change.
+1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
@@ -95,7 +99,7 @@ In this task, you will create and configure Azure AD users.
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
-1. Back in the Azure portal where you are signed in with your user account, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
+1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
 
     >**Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
@@ -168,9 +172,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
 
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
-
     >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+
+1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
 #### Task 3: Create an Azure Active Directory (AD) tenant
 
@@ -183,6 +187,11 @@ In this task, you will create a new Azure AD tenant.
     | Setting | Value |
     | --- | --- |
     | Directory type | **Azure Active Directory** |
+    
+1. Click **Next : Configuration**
+
+    | Setting | Value |
+    | --- | --- |
     | Organization name | **Contoso Lab** |
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
     | Country/Region | **United States** |
@@ -210,6 +219,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Job title | **System Administrator** |
     | Department | **IT** |
 
+1. Click on the newly created profile.
+
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
@@ -221,7 +232,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Setting | Value |
     | --- | --- |
     | Name | **az104-01b-aaduser1** |
-    | Email address | paste the value you copied into Clipboard earlier in this task |
+    | Email address | the User Principal Name you copied earlier in this task |
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
@@ -239,7 +250,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
 
-1. Navigate to the **Azure Active Directory Premium P2 - Licensed users** blade, select the user accounts to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **OK**.
+1. In the **Azure Portal** search for **Azure Active Directory** in the search bar. Within **Azure Activity Directory** under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Azure Active Directory Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **OK**.
 
 1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** guest user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
@@ -256,6 +267,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. Sign out from the Azure portal and sign in back. 
 
 1. Navigate back to the **Delete directory 'Contoso Lab'** blade and click **Delete**.
+
+> **Note**: You will have to wait for license expiration before you can delete the tenant. This does not incur any additional cost.
 
 #### Review
 

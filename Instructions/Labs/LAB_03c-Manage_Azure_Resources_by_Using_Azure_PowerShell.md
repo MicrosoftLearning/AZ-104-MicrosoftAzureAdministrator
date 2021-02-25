@@ -45,7 +45,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
 
 1. To create a resource group in the same Azure region as the **az104-03b-rg1** resource group you created in the previous lab, from the PowerShell session within Cloud Shell, run the following:
 
-   ```pwsh
+   ```powershell
    $location = (Get-AzResourceGroup -Name az104-03b-rg1).Location
 
    $rgName = 'az104-03c-rg1'
@@ -54,12 +54,12 @@ In this task, you will create a resource group and an Azure managed disk by usin
    ```
 1. To retrieve properties of the newly created resource group, run the following:
 
-   ```pwsh
+   ```powershell
    Get-AzResourceGroup -Name $rgName
    ```
 1. To create a new managed disk with the same characteristics as those you created in the previous labs of this module, run the following:
 
-   ```pwsh
+   ```powershell
    $diskConfig = New-AzDiskConfig `
     -Location $location `
     -CreateOption Empty `
@@ -76,7 +76,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
 
 1. To retrieve properties of the newly created disk, run the following:
 
-   ```pwsh
+   ```powershell
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
@@ -86,31 +86,31 @@ In this task, you will managing configuration of the Azure managed disk by using
 
 1. To increase the size of the Azure managed disk to **64 GB**, from the PowerShell session within Cloud Shell, run the following:
 
-   ```pwsh
+   ```powershell
    New-AzDiskUpdateConfig -DiskSizeGB 64 | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
 1. To verify that the change took effect, run the following:
 
-   ```pwsh
+   ```powershell
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
 1. To verify the current SKU as **Standard_LRS**, run the following:
 
-   ```pwsh
+   ```powershell
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
 
 1. To change the disk performance SKU to **Premium_LRS**, from the PowerShell session within Cloud Shell, run the following:
 
-   ```pwsh
+   ```powershell
    New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
 1. To verify that the change took effect, run the following:
 
-   ```pwsh
+   ```powershell
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
 

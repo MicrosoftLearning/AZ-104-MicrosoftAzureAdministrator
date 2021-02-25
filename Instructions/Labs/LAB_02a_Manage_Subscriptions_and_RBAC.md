@@ -7,6 +7,10 @@ lab:
 # Lab 02a - Manage Subscriptions and RBAC
 # Student lab manual
 
+## Lab requirements:
+
+This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
+
 ## Lab scenario
 
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
@@ -92,7 +96,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
-   ```pwsh
+   ```powershell
    New-AzRoleDefinition -InputFile $HOME/az104-02a-customRoleDefinition.json
    ```
 
@@ -153,7 +157,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** Azure Active Directory user account you copied earlier in this task):
 
-   ```pwsh
+   ```powershell
    $scope = (Get-AzRoleAssignment -RoleDefinitionName 'Support Request Contributor (Custom)').Scope
 
    Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
@@ -161,7 +165,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. From the Cloud Shell pane, run the following to remove the custom role definition:
 
-   ```pwsh
+   ```powershell
    Remove-AzRoleDefinition -Name 'Support Request Contributor (Custom)' -Force
    ```
 
@@ -172,6 +176,8 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 1. Right-click the **ellipsis** icon to the right of the entry representing your Azure subscription and click **Move**.
 
 1. On the **Move** blade, select the management group which the subscription was originally part of and click **Save**. 
+
+  >**Note**: This is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
 
 1. Navigate back to the **Management groups** blade, right click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
 

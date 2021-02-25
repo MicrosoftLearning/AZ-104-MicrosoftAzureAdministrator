@@ -32,12 +32,15 @@
         },
         "diskEncryptionSetType": {
             "type": "String"
+        },
+        "networkAccessPolicy": {
+            "type": "String"
         }
     },
     "resources": [
         {
             "type": "Microsoft.Compute/disks",
-            "apiVersion": "2019-07-01",
+            "apiVersion": "2020-05-01",
             "name": "[parameters('diskName')]",
             "location": "[parameters('location')]",
             "tags": {},
@@ -49,7 +52,8 @@
                     "createOption": "[parameters('createOption')]"
                 },
                 "diskSizeGB": "[parameters('diskSizeGb')]",
-                "osType": "[parameters('osType')]"
+                "osType": "[parameters('osType')]",
+                "networkAccessPolicy": "[parameters('networkAccessPolicy')]"
             }
         }
     ]
