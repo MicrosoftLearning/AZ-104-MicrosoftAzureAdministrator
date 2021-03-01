@@ -34,63 +34,36 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**.  
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\05\\az104-05-vnetvm-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\05\\az104-05-vnetvm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to use existing first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region_1]` placeholder with the name of an Azure region where you intend to deploy these Azure virtual machines):
+1. From the Cloud Shell pane, run the following to use existing first resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder with the names of two different Azure regions where you intend to deploy these Azure virtual machines):
 
    ```pwsh
    $location = '[Azure_region_1]'
 
+   $location2 = '[Azure_region_2]'
+
    $rgName = 'az104-05-rg0-[deployId]'
 
    ```
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
+
+   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**   
+   
+1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
    ```pwsh
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 0 `
+      -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
+      -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
+      -location1 $location1 `
+      -location2 $location2 `
       -AsJob
    ```
-1. From the Cloud Shell pane, run the following to use existing second resource group that will be hosting the second virtual network and the second virtual machine
 
-   ```pwsh
-   $rgName = 'az104-05-rg1-[deployId]'
+    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
-   ```
-1. From the Cloud Shell pane, run the following to create the second virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 1 `
-      -AsJob
-   ```
-1. From the Cloud Shell pane, run the following to use existing third resource group that will be hosting the third virtual network and the third virtual machine (replace the `[Azure_region_2]` placeholder with the name of another Azure region where you can deploy Azure virtual machines, different from the Azure region you used for the other two deployments):
-
-   ```pwsh
-   $location = '[Azure_region_2]'
-
-   $rgName = 'az104-05-rg2-[deployId]'
-
-   ```
-1. From the Cloud Shell pane, run the following to create the third virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json `
-      -nameSuffix 2 `
-      -AsJob
-   ```
-    >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 2 minutes.
-
-    >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
+    >**Note**: To verify the status of the deployments, you can examine the properties of the resource group you are using in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -108,39 +81,43 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | Name of the peering from az104-05-vnet0 to remote virtual network | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Virtual network deployment model | **Resource manager** |
+    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
+    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
+    | Virtual network deployment model | **Resource manager** |	
+    | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1 (az104-05-rg1-[deployId])** |
-    | Name of the peering from az104-05-vnet1 to az104-05-vnet0 | **az104-05-vnet1_to_az104-05-vnet0** |
-    | Allow virtual network access from az104-05-vnet0 to az104-05-vnet1 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet1 to az104-05-vnet0 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet0 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet1 | **Disabled** |
-    | Allow gateway transit | **(Uncheck Box)** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |	
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | Name of the peering from az104-05-vnet0 to remote virtual network | **az104-05-vnet0_to_az104-05-vnet2** |
+    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
+    | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2 (az104-05-rg2-[deployId])** |
-    | Name of the peering from az104-05-vnet2 to az104-05-vnet0 | **az104-05-vnet2_to_az104-05-vnet0** |
-    | Allow virtual network access from az104-05-vnet0 to az104-05-vnet2 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet2 to az104-05-vnet0 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet0 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet0 to az104-05-vnet2 | **Disabled** |
-    | Allow gateway transit | **(Uncheck Box)** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |	
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -148,20 +125,22 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
-    | Name of the peering from az104-05-vnet1 to remote virtual network | **az104-05-vnet1_to_az104-05-vnet2** |
+    | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
+    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
+    | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2 (az104-05-rg2-[deployId])** |
-    | Name of the peering from az104-05-vnet2 to az104-05-vnet1 | **az104-05-vnet2_to_az104-05-vnet1** |
-    | Allow virtual network access from az104-05-vnet1 to az104-05-vnet2 | **Enabled** |
-    | Allow virtual network access from az104-05-vnet2 to az104-05-vnet1 | **Enabled** |
-    | Allow forwarded traffic from az104-05-vnet2 to az104-05-vnet1 | **Disabled** |
-    | Allow forwarded traffic from az104-05-vnet1 to az104-05-vnet2 | **Disabled** |
-    | Allow gateway transit | **(Uncheck Box)** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |	
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
