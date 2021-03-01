@@ -93,7 +93,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network deployment model | **Resource manager** |	
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet1 (az104-05-rg1-[deployId])** |
+    | Virtual network | **az104-05-vnet1** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |	
@@ -114,7 +114,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2 (az104-05-rg2-[deployId])** |
+    | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |	
@@ -137,7 +137,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2 (az104-05-rg2-[deployId])** |
+    | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None** |	
