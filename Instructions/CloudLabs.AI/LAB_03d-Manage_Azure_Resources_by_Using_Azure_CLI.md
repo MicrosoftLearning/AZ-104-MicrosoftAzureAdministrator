@@ -1,9 +1,3 @@
----
-lab:
-    title: '03d - Manage Azure resources by Using Azure CLI'
-    module: 'Module 03 - Azure Administration'
----
-
 # Lab 03d - Manage Azure resources by Using Azure CLI
 
 ## Lab scenario
