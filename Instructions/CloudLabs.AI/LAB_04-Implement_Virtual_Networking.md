@@ -36,6 +36,8 @@ In this task, you will create a virtual network with multiple subnets by using t
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
     | Resource Group | select **existing** resource group **az104-04-rg1-[deployId]** |
+    | Name | **az104-04-vnet1** |
+    | Region | the name of any Azure region available in the subscription you will use in this lab |    
 
 1. Click **Next : IP Addresses** and enter the following values
 
