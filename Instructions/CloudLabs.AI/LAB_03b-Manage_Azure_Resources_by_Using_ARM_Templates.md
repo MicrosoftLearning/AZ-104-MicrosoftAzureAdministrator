@@ -1,9 +1,3 @@
----
-lab:
-    title: '03b - Manage Azure resources by Using ARM Templates'
-    module: 'Module 03 - Azure Administration'
----
-
 # Lab 03b - Manage Azure resources by Using ARM Templates
 
 ## Lab scenario
