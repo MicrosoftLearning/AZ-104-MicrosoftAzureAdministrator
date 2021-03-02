@@ -1,9 +1,3 @@
----
-lab:
-    title: '06 - Implement Traffic Management'
-    module: 'Module 06 - Network Traffic Management'
----
-
 # Lab 06 - Implement Traffic Management
 
 ## Lab scenario
@@ -41,9 +35,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**.  
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-template.json**, **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vm-template.json**, and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json**, and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to use existing first resource group that will be hosting the first virtual network and the pair of virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to use existing resource group that will be hosting the lab environment (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
    ```pwsh
    $location = '[Azure_region]'
@@ -51,51 +45,19 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    $rgName = 'az104-06-rg1'
 
    ```
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a pair of virtual machines into it by using the template and parameter files you uploaded:
+1. From the Cloud Shell pane, run the following to create the three virtual networks and four virtual machines into them by using the template and parameter files you uploaded:
 
    ```pwsh
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-06-vms-template.json `
-      -TemplateParameterFile $HOME/az104-06-vm-parameters.json `
+      -TemplateFile $HOME/vms-loop-template.json `
+      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json `
       -AsJob
    ```
 
-1. From the Cloud Shell pane, run the following to use existing second resource group that will be hosting the second virtual network and the third virtual machine
-
-   ```pwsh
-   $rgName = 'az104-06-rg2'
-
-   ```
-1. From the Cloud Shell pane, run the following to create the second virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-06-vm-template.json `
-      -TemplateParameterFile $HOME/az104-06-vm-parameters.json `
-      -nameSuffix 2 `
-      -AsJob
-   ```
-1. From the Cloud Shell pane, run the following to use existing third resource group that will be hosting the third virtual network and the fourth virtual machine:
-
-   ```pwsh
-   $rgName = 'az104-06-rg3'
-
-   ```
-1. From the Cloud Shell pane, run the following to create the third virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```pwsh
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-06-vm-template.json `
-      -TemplateParameterFile $HOME/az104-06-vm-parameters.json `
-      -nameSuffix 3 `
-      -AsJob
-   ```
     >**Note**: Wait for the deployments to complete before proceeding to the next task. This should take about 5 minutes.
 
-    >**Note**: To verify the status of the deployments, you can examine the properties of the resource groups you created in this task.
+    >**Note**: To verify the status of the deployment, you can examine the properties of the resource group you created in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -113,20 +75,21 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click Add:
 
     | Setting | Value |
     | --- | --- |
-    | Name of the peering from az104-06-vnet01 to remote virtual network | **az104-06-vnet01_to_az104-06-vnet2** |
+    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None (default)** |
+    | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet2 (az104-06-rg2)** |
-    | Name of the peering from az104-06-vnet2 to az104-06-vnet01 | **az104-06-vnet2_to_az104-06-vnet01** |
-    | Allow virtual network access from az104-06-vnet01 to az104-06-vnet2 | **Enabled** |
-    | Allow virtual network access from az104-06-vnet2 to az104-06-vnet01 | **Enabled** |
-    | Allow forwarded traffic from az104-06-vnet2 to az104-06-vnet01 | **Disabled** |
-    | Allow forwarded traffic from az104-06-vnet01 to az104-06-vnet2 | **Enabled** |
-    | Allow gateway transit | **(Uncheck Box)** |
+    | Virtual network | **az104-06-vnet2** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Allow (default)** |
+    | Virtual network gateway | **None (default)** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -136,20 +99,21 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values):
+1. Add a peering with the following settings (leave others with their default values) and click Add:
 
     | Setting | Value |
     | --- | --- |
-    | Name of the peering from az104-06-vnet01 to remote virtual network | **az104-06-vnet01_to_az104-06-vnet3** |
+    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None (default)** |
+    | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet3 (az104-06-rg3)** |
-    | Name of the peering from az104-06-vnet3 to az104-06-vnet01 | **az104-06-vnet3_to_az104-06-vnet01** |
-    | Allow virtual network access from az104-06-vnet01 to az104-06-vnet3 | **Enabled** |
-    | Allow virtual network access from az104-06-vnet3 to az104-06-vnet01 | **Enabled** |
-    | Allow forwarded traffic from az104-06-vnet3 to az104-06-vnet01 | **Disabled** |
-    | Allow forwarded traffic from az104-06-vnet01 to az104-06-vnet3 | **Enabled** |
-    | Allow gateway transit | **(Uncheck Box)** |
+    | Virtual network | **az104-06-vnet3** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Allow (default)** |
+    | Virtual network gateway | **None (default)** |	
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
@@ -210,7 +174,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg2** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -274,17 +238,19 @@ In this task, you will configure and test routing between the two spoke virtual 
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-rt23** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg2** |
+    | Resource group | **az104-06-rg1** |
     | Location | the name of the Azure region in which you created the virtual networks |
-    | Virtual network gateway route propagation | **Disabled** |
+    | Name | **az104-06-rt23** |
+    | Propagate gateway routes | **No** |
+	
+1. Click **Review and Create**. Let validation occur, and click **Create** to submit your deployment.	
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
 1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt23**.
 
-1. On the **az104-06-rt23** route table blade, click **Routes** and then click **+ Add**.
+1. On the **az104-06-rt23** route table blade, in the **Settings** section, click **Routes** and then click **+ Add**.
 
 1. Add a new route with the following settings (leave others with their default values):
 
@@ -294,8 +260,10 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Address prefix | **10.63.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
+	
+1. Click **OK**	
 
-1. Back on the **az104-06-rt23** route table blade, click **Subnets** and then click **+ Associate**.
+1. Back on the **az104-06-rt23** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
 1. Associate the route table **az104-06-rt23** with the following subnet:
 
@@ -304,25 +272,29 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Virtual network | **az104-06-vnet2** |
     | Subnet | **subnet0** |
 
+1. Click **OK**
+
 1. Navigate back to **Route tables** blade and click **+ Add**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-rt32** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg3** |
-    | Location | the name of the Azure region in which you created the virtual networks |
-    | Virtual network gateway route propagation | **Disabled** |
+    | Resource group | **az104-06-rg1** |
+    | Region | the name of the Azure region in which you created the virtual networks |
+    | Name | **az104-06-rt32** |
+    | Propagate gateway routes | **No** |
+	
+1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.	
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
 1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt32**.
 
-1. On the **az104-06-rt32** route table blade, click **Routes** and then click **+ Add**.
+1. On the **az104-06-rt32** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
-1. Add a new route with the following settings (leave others with their default values):
+1. Add a new route with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -331,7 +303,9 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Back on the **az104-06-rt32** route table blade, click **Subnets** and then click **+ Associate**.
+1. Click **OK**
+
+1. Back on the **az104-06-rt32** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
 1. Associate the route table **az104-06-rt32** with the following subnet:
 
@@ -340,6 +314,8 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Virtual network | **az104-06-vnet3** |
     | Subnet | **subnet0** |
 
+1.Click **OK**
+
 1. In the Azure portal, navigate back to the **Network Watcher - Connection troubleshoot** blade.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
@@ -347,7 +323,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg2** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -380,14 +356,16 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard** |
     | Public IP address | **Create new** |
     | Public IP address name | **az104-06-pip4** |
-    | Availability zone | **Zone-redundant** |
+    | Availability zone | **No Zone** |
     | Add a public IPv6 address | **No** |
+	
+1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.	
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes. 
 
 1. On the deployment blade, click **Go to resource**.
 
-1. On the **az104-06-lb4** load balancer blade, click **Backend pools** and click **+ Add**.
+1. On the **az104-06-lb4** load balancer blade, in the **Settings** section, click **Backend pools**, and click **+ Add**.
 
 1. Add a backend pool with the following settings (leave others with their default values):
 
@@ -400,8 +378,10 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
     | Virtual machine | **az104-06-vm1** |
     | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
+	
+1. Click **Add**	
 
-1. Wait for the backend pool to be created, click **Health probes**, and then click **+ Add**.
+1. Wait for the backend pool to be created, in the **Settings** section, click **Health probes**, and then click **+ Add**.
 
 1. Add a health probe with the following settings (leave others with their default values):
 
@@ -413,7 +393,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Interval | **5** |
     | Unhealthy threshold | **2** |
 
-1. Wait for the health probe to be created, click **Load balancing rules**, and then click **+ Add**.
+1. Click **OK**
+
+1. Wait for the health probe to be created, click **Load balancing rules**, in the **Settings** section, and then click **+ Add**.
 
 1. Add a load balancing rule with the following settings (leave others with their default values):
 
@@ -430,7 +412,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
-    | Create implicit outbound rules | **Yes** |
+
+1. Click **OK**
 
 1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
 
@@ -457,9 +440,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Name | **subnet-appgw** |
-    | Address range (CIDR block) | **10.60.3.224/27** |
-    | Network security group | **None** |
-    | Route table | **None** |
+    | Subnet address range | **10.60.3.224/27** |
+
+1. Click **Save**
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -475,13 +458,11 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
-    | Scale units | **1** |
-    | Availability zone | **1, 2, 3** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet01** |
     | Subnet | **subnet-appgw** |
 
-1. Click **Next: Frontends >** and, on the **Frontends** tab of the **Create an application gateway** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Frontends >** and, on the **Frontends** tab of the **Create an application gateway** blade, click **Add new**, and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -503,7 +484,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Click **Add**, click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**. 
 
-1. On the **Add a routing rule** blade, on the **Listener** tab, specify the following settings (leave others with their default values):
+1. On the **Add a routing rule** blade, on the **Listener** tab, specify the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -522,18 +503,18 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
 
-1. On the **Backend targets** tab of the **Add a routing rule** blade, click **Add new** next to the **HTTP setting** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
+1. Click **Add new** under to the **HTTP setting** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | HTTP setting name | **az104-06-appgw5-http1** |
+    | HTTP setting | **az104-06-appgw5-http1** |
     | Backend protocol | **HTTP** |
     | Backend port | **80** |
     | Cookie-based affinity | **Disable** |
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, clik **Add**.
+1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, click **Add**.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 

@@ -1,9 +1,3 @@
----
-lab:
-    title: '07 - Manage Azure storage'
-    module: 'Module 07 - Azure Storage'
----
-
 # Lab 07 - Manage Azure Storage
 
 ## Lab scenario
@@ -67,7 +61,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 In this task, you will create and configure an Azure Storage account. 
 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Add**. 
+1. In the Azure portal, search for and select **Storage accounts**, and then click **+ New**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
@@ -182,7 +176,6 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    | Allowed protocols | **HTTP** |
     | Signing key | **Key 1** |
 
 1. Click **Generate SAS token and URL**.
@@ -212,7 +205,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Setting | Value |
     | --- | --- |
     | Role | **Storage Blob Data Owner** |
-    | Assign access to | **Azure AD user, group, or service principal** |
+    | Assign access to | **User, group, or service principal** |
     | Select | the name of your user account |
 
 1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can access to container again.
@@ -266,7 +259,7 @@ In this task, you will create and configure Azure Files shares.
 
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Firewalls and virtual networks**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Networking** and then click **Firewalls and virtual networks**.
 
 1. Click the **Selected networks** option and review the configuration settings that become available once this option is enabled.
 

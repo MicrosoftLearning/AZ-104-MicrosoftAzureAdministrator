@@ -1,9 +1,3 @@
----
-lab:
-    title: '03a - Manage Azure resources by Using the Azure Portal'
-    module: 'Module 03 - Azure Administration'
----
-
 # Lab 03a - Manage Azure resources by Using the Azure Portal
 
 ## Lab scenario
