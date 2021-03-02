@@ -33,7 +33,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click **+ Add** and create a resource group with the following settings:
+1. On the **Resource groups** blade, click **+ New** and create a resource group with the following settings:
 
     |Setting|Value|
     |---|---|
