@@ -1,10 +1,8 @@
----
-lab:
-    title: '02a - Manage Subscriptions and RBAC'
-    module: 'Module 02 - Governance and Compliance'
----
-
 # Lab 02a - Manage Subscriptions and RBAC
+
+## Lab requirements:
+
+This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
 
 ## Lab scenario
 
@@ -91,7 +89,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
-   ```pwsh
+   ```powershell
    New-AzRoleDefinition -InputFile $HOME/az104-02a-customRoleDefinition.json
    ```
 
