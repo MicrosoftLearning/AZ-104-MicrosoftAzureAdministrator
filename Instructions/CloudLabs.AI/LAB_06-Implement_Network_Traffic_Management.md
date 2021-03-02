@@ -1,9 +1,3 @@
----
-lab:
-    title: '06 - Implement Traffic Management'
-    module: 'Module 06 - Network Traffic Management'
----
-
 # Lab 06 - Implement Traffic Management
 
 ## Lab scenario
