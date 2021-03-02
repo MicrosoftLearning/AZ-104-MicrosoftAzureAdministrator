@@ -1,9 +1,3 @@
----
-lab:
-    title: '07 - Manage Azure storage'
-    module: 'Module 07 - Azure Storage'
----
-
 # Lab 07 - Manage Azure Storage
 
 ## Lab scenario
