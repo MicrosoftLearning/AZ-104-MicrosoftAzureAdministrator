@@ -31,24 +31,12 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Resource groups**. 
-
-1. On the **Resource groups** blade, click **+ Add** and create a resource group with the following settings:
-
-    |Setting|Value|
-    |---|---|
-    |Subscription| the name of the Azure subscription you will use in this lab |
-    |Resource Group| **az104-03a-rg1**|
-    |Region| the name of any Azure region available in the subscription you will use in this lab |
-
-1. Click **Review + Create** and then click **Create**.
-
 1. In the Azure portal, search for and select **Disks**, click **+ Add**, and specify the following settings:
 
     |Setting|Value|
     |---|---|
     |Subscription| the name of the Azure subscription where you created the resource group |
-    |Resource Group| **az104-03a-rg1** |
+    |Resource Group| Click "Create new" and create a new Resource Group with name **az104-03a-rg1** |
     |Disk name| **az104-03a-disk1** |
     |Region| the name of the Azure region where you created the resource group |
     |Availability zone| **None** |
