@@ -33,7 +33,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 1. From the Cloud Shell pane, run the following to use existing first resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder with the names of two different Azure regions where you intend to deploy these Azure virtual machines):
 
    ```pwsh
-   $location = '[Azure_region_1]'
+   $location1 = '[Azure_region_1]'
 
    $location2 = '[Azure_region_2]'
 
