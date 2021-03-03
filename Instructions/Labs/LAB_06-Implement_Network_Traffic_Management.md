@@ -128,72 +128,7 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-#### Task 3: Test transitivity of virtual network peering
 
-In this task, you will test transitivity of virtual network peering by using Network Watcher.
-
-1. In the Azure portal, search for and select **Network Watcher**.
-
-1. On the **Network Watcher** blade, expand the listing of Azure regions and verify that the service is enabled in the Azure into which you deployed resources in the first task of this lab.
-
-1. On the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
-
-1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az104-06-vm0** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.62.0.4** |
-    | Protocol | **TCP** |
-    | Destination Port | **3389** |
-
-    > **Note**: **10.62.0.4** represents the private IP address of **az104-06-vm2**
-
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
-
-    > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
-
-    > **Note**: The initial check can take about 2 minutes because it requires installation of the Network Watcher Agent virtual machine extension on **az104-06-vm0**.
-
-1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az104-06-vm0** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.63.0.4** |
-    | Protocol | **TCP** |
-    | Destination Port | **3389** |
-
-    > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
-
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
-
-    > **Note**: This is expected, since the hub virtual network is peered directly with the second spoke virtual network.
-
-1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
-    | Source type | **Virtual machine** |
-    | Virtual machine | **az104-06-vm2** |
-    | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.63.0.4** |
-    | Protocol | **TCP** |
-    | Destination Port | **3389** |
-
-1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
-
-    > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
 
 #### Task 4: Configure routing in the hub and spoke topology
 
