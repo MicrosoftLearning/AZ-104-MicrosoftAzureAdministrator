@@ -90,6 +90,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | accept the default value |
+    | Patch orchestration options | **Manual updates** |  
 
     >**Note**: If necessary, select an existing storage account in the dropdown list. Record the name of the storage account. You will use it in the next task.
 
@@ -114,6 +115,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
+    | Enable Hotpatching | **false** |
     | Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
