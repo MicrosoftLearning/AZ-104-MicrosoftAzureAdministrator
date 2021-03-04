@@ -1,9 +1,9 @@
 [ {
-  "Name": "Governance3",
+  "Name": "Intersite Connectivity",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_09c-Implement_Azure_Kubernetes_Service.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_05-Implement_Intersite_Connectivity.md",
       "Order": 1
     }
   ]

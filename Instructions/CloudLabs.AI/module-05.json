@@ -1,9 +1,9 @@
 [ {
-  "Name": "Intersite Connectivity",
+  "Name": "Azure Storage",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_05-Implement_Intersite_Connectivity.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_07-Manage_Azure_Storage.md",
       "Order": 1
     }
   ]

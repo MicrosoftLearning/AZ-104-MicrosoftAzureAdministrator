@@ -1,9 +1,9 @@
 [ {
-  "Name": "Virtual Machines",
+  "Name": "Data Protection",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_08-Manage_Virtual_Machines.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_10-Implement_Data_Protection.md",
       "Order": 1
     }
   ]
