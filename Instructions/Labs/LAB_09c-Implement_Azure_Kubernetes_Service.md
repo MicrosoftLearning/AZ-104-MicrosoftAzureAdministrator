@@ -64,21 +64,21 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Kubernetes version | accept the default |
     | Node size | accept the default |
-    | Node count | **1** |
+    | Node count | **3** |
 
 1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Virtual nodes | **Disabled** |
-    | VM scale sets | **Enabled** |
+    | Enable virtual nodes | **Disabled** (default) |
+    | Enable virtual machine scale sets | **Enabled** (default) |
 
 1. Click **Next: Authentication >** and, on the **Authentication** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Service principal | accept the default |
-    | Enable RBAC | **Yes** |
+    | Authentication method | **Service principal** (accept the defaults) | 
+    | Role-based access control (RBAC) | **Enabled** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
