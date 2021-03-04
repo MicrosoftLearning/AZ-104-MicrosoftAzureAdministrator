@@ -30,7 +30,7 @@ In this task, you will use the Azure portal to create a disk in the resource gro
 
     |Setting|Value|
     |---|---|
-    |Resource Group| **az104-03a-rg1-[deployId]**|
+    |Resource Group| **az104-03a-rg1-[deployId]** where **deployId** is the deployment id and please find it in **Environment details** tab |
 
 
 1. In the Azure portal, search for and select **Disks**, click **+ Add**, and specify the following settings:
