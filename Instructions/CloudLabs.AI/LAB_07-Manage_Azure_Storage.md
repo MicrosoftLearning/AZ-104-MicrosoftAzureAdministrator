@@ -1,4 +1,4 @@
-# Lab 07 - Manage Azure Storage
+# Lab 05 - Manage Azure Storage
 
 ## Lab scenario
 
