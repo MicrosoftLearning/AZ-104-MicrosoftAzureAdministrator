@@ -1,4 +1,4 @@
-# Lab 05 - Implement Intersite Connectivity
+# Lab 01 - Implement Intersite Connectivity
 
 ## Lab scenario
 
