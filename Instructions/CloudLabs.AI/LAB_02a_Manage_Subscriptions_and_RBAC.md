@@ -1,4 +1,4 @@
-# Lab 02a - Manage Subscriptions and RBAC
+# Lab 01a - Manage Subscriptions and RBAC
 
 ## Lab requirements:
 
