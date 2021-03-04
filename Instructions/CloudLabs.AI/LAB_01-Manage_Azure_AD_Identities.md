@@ -1,4 +1,4 @@
-# Lab 10 - Manage Azure Active Directory Identities
+# Lab 01 - Manage Azure Active Directory Identities
 
 
 ## Lab scenario
