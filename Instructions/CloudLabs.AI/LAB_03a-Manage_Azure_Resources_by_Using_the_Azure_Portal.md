@@ -1,4 +1,4 @@
-# Lab 03a - Manage Azure resources by Using the Azure Portal
+# Lab 01a - Manage Azure resources by Using the Azure Portal
 
 ## Lab scenario
 
