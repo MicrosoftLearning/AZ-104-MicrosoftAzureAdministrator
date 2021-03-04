@@ -87,6 +87,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files you uploaded:
 
+   >**Note**: deployId is the deployment id of your lab and if need to know it, please find it in environment details tab.
+
    ```pwsh
    $rgName = 'az104-04-rg1-[deployId]'
 
