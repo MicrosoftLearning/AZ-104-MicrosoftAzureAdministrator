@@ -1,4 +1,4 @@
-# Lab 03d - Manage Azure resources by Using Azure CLI
+# Lab 01d - Manage Azure resources by Using Azure CLI
 
 ## Lab scenario
 
