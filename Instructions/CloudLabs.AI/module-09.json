@@ -1,9 +1,9 @@
 [ {
-  "Name": "Serverless Computing",
+  "Name": "Monitoring",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_09a-Implement_Web_Apps.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_11-Implement_Monitoring.md",
       "Order": 1
     }
   ]
