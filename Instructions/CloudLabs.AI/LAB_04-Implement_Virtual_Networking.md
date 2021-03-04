@@ -1,4 +1,4 @@
-# Lab 04 - Implement Virtual Networking
+# Lab 01 - Implement Virtual Networking
 
 
 ## Lab scenario
