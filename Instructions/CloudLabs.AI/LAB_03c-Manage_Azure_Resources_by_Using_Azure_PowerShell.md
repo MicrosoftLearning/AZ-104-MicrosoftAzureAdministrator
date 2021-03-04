@@ -38,6 +38,8 @@ In this task, you will use existing resource group and an Azure managed disk by 
 
 1. To use existing resource group in the same Azure region as the **az104-03b-rg1-[deployId]** resource group you created in the previous lab, from the PowerShell session within Cloud Shell, run the following:
 
+   >**Note**: deployId is the deployment id of your lab and if need to know it, please find it in environment details tab.
+
    ```pwsh
    $location = (Get-AzResourceGroup -Name az104-03b-rg1-[deployId]).Location
 
