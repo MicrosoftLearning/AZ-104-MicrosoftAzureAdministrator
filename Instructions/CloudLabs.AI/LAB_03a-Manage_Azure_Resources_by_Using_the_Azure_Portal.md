@@ -48,6 +48,7 @@ In this task, you will use the Azure portal to create a disk in the resource gro
 
 1. Change the disk type and size to **Standard HDD** and **32 GiB**, respectively.
 
+1. Click **Review + Create** and then click **Create**.
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
 
@@ -57,15 +58,15 @@ In this task, we will move the disk resource you created in the previous task to
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-[deployId]** resource group you created in the previous task.
+1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-[deployId]** resource group.
 
 1. From the **Overview** blade of the resource group, in the list of resource group resources, select the entry representing the newly created disk, click **Move** in the toolbar, and, in the drop-down list, select **Move to another resource group**.
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. On the **Move resources** blade, click **Create a new group**.
+1. On the **Move resources** blade, select **az104-03a-rg2-[deployId]**.
 
-1. In the **Resource group** text box, type **az104-03a-rg2-[deployId]**, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **OK**.
+1. Select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **OK**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
@@ -86,6 +87,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
 
+1. Click **Review + Create** and then click **Create**.
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
@@ -108,7 +110,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Navigate back to the list of resources of the **az104-03a-rg3-[deployId]** resource group and click the entry representing the **az104-03a-disk2** resource. 
 
-1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Configuration**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and save the change. Verify that the change was successful.
+1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Size + performance**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and save the change. Verify that the change was successful.
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
 
