@@ -38,7 +38,7 @@ In this task, you will use existing resource group and an Azure managed disk by 
 
 1. To use existing resource group in the same Azure region as the **az104-03c-rg1-[deployId]** resource group you created in the previous lab, from the Bash session within Cloud Shell, run the following:
 
-   >**Note**: deployId is the deployment id of your lab and if need to know it, please find it in environment details tab.
+   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
 
    ```sh
    LOCATION=$(az group show --name 'az104-03c-rg1-[deployId]' --query location --out tsv)
