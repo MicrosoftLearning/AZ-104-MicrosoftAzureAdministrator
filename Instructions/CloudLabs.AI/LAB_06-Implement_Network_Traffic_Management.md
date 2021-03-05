@@ -460,6 +460,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
+    | Availability zone | Select all zones - zone 1, zone 2 and zone 3 |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet01** |
     | Subnet | **subnet-appgw** |
