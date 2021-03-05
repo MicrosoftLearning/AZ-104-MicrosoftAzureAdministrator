@@ -37,6 +37,8 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. From the Cloud Shell pane, run the following to view the existing resource group:
 
+   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+
    ```pwsh
    Get-AzResourceGroup
 
