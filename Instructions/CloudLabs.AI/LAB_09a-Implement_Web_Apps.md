@@ -200,6 +200,8 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
+   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+
    ```powershell
    $rgName = 'az104-09a-rg1-[deployId]'
 
