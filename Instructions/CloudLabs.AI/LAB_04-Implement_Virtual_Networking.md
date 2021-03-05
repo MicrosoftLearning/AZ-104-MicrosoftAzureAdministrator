@@ -152,9 +152,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Back on the **ipconfig1** blade, save the changes.
 
-1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-[deployId]** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
 
-1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-[deployId]** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
     >**Note**: You will need both IP addresses in the last task of this lab.
 
