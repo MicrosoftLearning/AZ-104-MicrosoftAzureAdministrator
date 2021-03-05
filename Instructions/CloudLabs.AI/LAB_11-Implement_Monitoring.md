@@ -88,7 +88,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
-1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ New**.
 
 1. On the **Add Automation Account** blade, specify the following settings, and click **Create**:
 
