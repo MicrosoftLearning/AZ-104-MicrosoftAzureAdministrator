@@ -158,7 +158,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 In this task, you will configure authentication and authorization for Azure Storage.
 
-1. On the **licenses/LICENSE** blade, on the **Overview** tab, click **Copy to clipboard** button next to the **URL** entry.
+1. Inside the container click **licenses** then **LICENSE** and On the **licenses/LICENSE** blade, on the **Overview** tab, click **Copy to clipboard** button next to the **URL** entry.
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step. 
 
