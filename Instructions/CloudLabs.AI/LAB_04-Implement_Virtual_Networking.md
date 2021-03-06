@@ -28,7 +28,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Sign in to the https://portal.azure.com.
 
-1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ New**.
 
 1. Create a virtual network with the following settings (leave others with their default values):
 
