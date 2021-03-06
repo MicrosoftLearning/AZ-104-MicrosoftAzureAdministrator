@@ -70,7 +70,7 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value | 
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **new** resource group **az104-07-rg1-[deployId]** |
+    | Resource group | select the existing resource group **az104-07-rg1-[deployId]** |
     | Storage account name | **strgaz104t07[deployId]** - replace deployid with the Deployment ID |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
