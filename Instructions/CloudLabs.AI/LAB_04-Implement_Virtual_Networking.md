@@ -225,7 +225,7 @@ In this task, you will configure network security groups in order to allow for r
 
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
-1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ New**.
 
 1. Create a private DNS zone with the following settings (leave others with their default values):
 
