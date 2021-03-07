@@ -202,7 +202,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. In the **Add** section, click **Add a role assignment**.
 
-   >**Note**: incase **Add a role assignment** is disabled, please sign out of the your user account twice and then check it is enabled.
+   >**Note**: incase **Add a role assignment** is disabled, please sign-out and sign-in of the your user account twice and then check it is enabled.
 
 1. On the **Add role assignment** blade, specify the following settings:
 
