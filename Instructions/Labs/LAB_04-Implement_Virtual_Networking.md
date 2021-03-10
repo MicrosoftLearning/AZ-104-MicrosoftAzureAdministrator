@@ -214,7 +214,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
-    >**Note**: Now verify that you can successfully connect to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
+    >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
 
 1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
 
