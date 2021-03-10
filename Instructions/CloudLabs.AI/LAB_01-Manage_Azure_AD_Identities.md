@@ -179,7 +179,7 @@ In this task, you will create a new Azure AD tenant.
 
     | Setting | Value |
     | --- | --- |
-    | Directory type | **Azure Active Directory** |
+    | Tenant type | **Azure Active Directory** |
     
 1. Click **Next : Configuration**
 
