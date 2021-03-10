@@ -214,7 +214,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**.
 
-1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, please enter the **Username** provided for this lab in the **Email** textbox and you can find it from the **environment details** tab, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade, in the **Name** text box, type **admin email** and select **Next: Actions  >**:
+1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, please enter the **Username** provided for this lab in the **Email** textbox and you can find it from the **Environment Details** tab, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade, in the **Name** text box, type **admin email** and select **Next: Actions  >**:
 
 1. On the **Actions** tab of the **Create action group** blade, review items available in the **Action type** drop-down list without making any changes and select **Review + create**.
 
