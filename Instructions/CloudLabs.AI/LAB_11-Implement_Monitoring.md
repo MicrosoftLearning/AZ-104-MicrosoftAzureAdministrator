@@ -1,4 +1,4 @@
-# Lab 09 - Implement Monitoring
+# Lab 11 - Implement Monitoring
 
 ## Lab scenario
 
