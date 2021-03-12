@@ -44,13 +44,13 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
-    | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
-    | Usage location | **United States** |
-    | Job title | **Cloud Administrator** |
-    | Department | **IT** |
+    | User name |  **az104-01a-aaduser1** |
+    | Name |  **az104-01a-aaduser1** |
+    | Let me create the password  | **enabled** |
+    | Initial password |  **Pa55w.rd124** |
+    | Usage location |  **United States** |
+    | Job title |  **Cloud Administrator** |
+    | Department |  **IT** |
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
@@ -78,12 +78,12 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
-    | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
-    | Usage location | **United States** |
-    | Job title | **System Administrator** |
+    | User name |  **az104-01a-aaduser2** |
+    | Name |  **az104-01a-aaduser2** |
+    | Let me create the password  | **enabled** |
+    | Initial password |  **Pa55w.rd124** |
+    | Usage location |  **United States** |
+    | Job title |  **System Administrator** |
     | Department | **IT** |
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
@@ -133,10 +133,10 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     | Setting | Value |
     | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT System Administrators** |
-    | Group description | **Contoso IT system administrators** |
-    | Membership type | **Dynamic User** |
+    | Group type |  **Security** |
+    | Group name |  **IT System Administrators** |
+    | Group description |  **Contoso IT system administrators** |
+    | Membership type |  **Dynamic User** |
 
 1. Click **Add dynamic query**.
 
@@ -144,9 +144,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     | Setting | Value |
     | --- | --- |
-    | Property | **jobTitle** |
-    | Operator | **Equals** |
-    | Value | **System Administrator** |
+    | Property |  **jobTitle** |
+    | Operator |  **Equals** |
+    | Value |  **System Administrator** |
 
 1. Save the rule and, back on the **New Group** blade, click **Create**. 
 
@@ -154,10 +154,10 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     | Setting | Value |
     | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT Lab Administrators** |
-    | Group description | **Contoso IT Lab administrators** |
-    | Membership type | **Assigned** |
+    | Group type |  **Security** |
+    | Group name |  **IT Lab Administrators** |
+    | Group description |  **Contoso IT Lab administrators** |
+    | Membership type |  **Assigned** |
 
 1. Click **No members selected**.
 
@@ -179,15 +179,15 @@ In this task, you will create a new Azure AD tenant.
 
     | Setting | Value |
     | --- | --- |
-    | Tenant type | **Azure Active Directory** |
+    | Tenant type |  **Azure Active Directory** |
     
 1. Click **Next : Configuration**
 
     | Setting | Value |
     | --- | --- |
-    | Organization name | **Contoso Lab** |
-    | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
-    | Country/Region | **United States** |
+    | Organization name |  **Contoso Lab** |
+    | Initial domain name |  **any valid DNS name consisting of lower case letters and digits and starting with a letter** | 
+    | Country/Region |  **United States** |
 
    > **Note**: The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
@@ -224,11 +224,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-01b-aaduser1** |
-    | Email address | the User Principal Name you copied earlier in this task |
-    | Usage location | **United States** |
-    | Job title | **Lab Administrator** |
-    | Department | **IT** |
+    | Name |  **az104-01b-aaduser1** |
+    | Email address |  **the User Principal Name you copied earlier in this task** |
+    | Usage location |  **United States** |
+    | Job title |  **Lab Administrator** |
+    | Department |  **IT** |
 
 1. Click **Invite**. 
 
