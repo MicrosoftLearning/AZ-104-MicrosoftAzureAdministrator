@@ -1,9 +1,9 @@
 [ {
-  "Name": "Virtual Machines",
+  "Name": "Network Traffic Management",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_08-Manage_Virtual_Machines.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_06-Implement_Network_Traffic_Management.md",
       "Order": 1
     }
   ]
