@@ -1,4 +1,4 @@
-# Lab 08 - Backup virtual machines
+# Lab 10 - Backup virtual machines
 
 ## Lab scenario
 
