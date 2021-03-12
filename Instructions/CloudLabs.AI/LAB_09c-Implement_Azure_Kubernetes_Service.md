@@ -1,4 +1,4 @@
-# Lab 07c - Implement Azure Kubernetes Service
+# Lab 09c - Implement Azure Kubernetes Service
 # Student lab manual
 
 ## Lab scenario
