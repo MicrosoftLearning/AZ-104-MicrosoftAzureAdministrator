@@ -1,4 +1,4 @@
-# Lab 06 - Manage Virtual Machines
+# Lab 08 - Manage Virtual Machines
 
 ## Lab scenario
 
