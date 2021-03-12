@@ -1,14 +1,10 @@
 [ {
-  "Name": "Governance and Compliance",
+  "Name": "Monitoring",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_02a_Manage_Subscriptions_and_RBAC.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_11-Implement_Monitoring.md",
       "Order": 1
-    },
-    {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_02b-Manage_Governance_via_Azure_Policy.md",
-      "Order": 2
-    },
+    }
   ]
 } ]
