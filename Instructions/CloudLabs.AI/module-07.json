@@ -1,18 +1,10 @@
 [ {
-  "Name": "Serverless Computing",
+  "Name": "Manage Azure storage",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_09a-Implement_Web_Apps.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_07-Manage_Azure_Storage.md",
       "Order": 1
-    },
-    {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_09b-Implement_Azure_Container_Instances.md",
-      "Order": 2
-    },
-    {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_09c-Implement_Azure_Kubernetes_Service.md",
-      "Order": 3
     }
   ]
 } ]
