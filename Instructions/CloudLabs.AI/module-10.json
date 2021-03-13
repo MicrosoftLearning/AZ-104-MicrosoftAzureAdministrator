@@ -2,9 +2,13 @@
   "Name": "Implement Data Protection",
   "Language": "English",
   "Files": [
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LabIntro.md",
+        "Order": 1
+     },
     {
       "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_10-Implement_Data_Protection.md",
-      "Order": 1
+      "Order": 2
     }
   ]
 } ]
