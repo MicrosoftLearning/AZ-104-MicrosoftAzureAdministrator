@@ -75,7 +75,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
      | Accelerated networking | **Off**
-    | Place this virtual machine behind an existing load balancing solution? | **No** |
+    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
