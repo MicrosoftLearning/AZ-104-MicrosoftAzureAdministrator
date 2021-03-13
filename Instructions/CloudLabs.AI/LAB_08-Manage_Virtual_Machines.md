@@ -107,8 +107,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
+    | Enable Hotpatching | **False** |
     | Zone | **2** |
-
+ 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
 1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
