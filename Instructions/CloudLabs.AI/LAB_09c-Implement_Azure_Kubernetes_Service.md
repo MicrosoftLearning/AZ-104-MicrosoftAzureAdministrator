@@ -31,7 +31,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting |                        Value |
     | ---- | ---- |
     | Subscription |                  **the name of the Azure subscription you are using in this lab** |
-    | Resource group |                select the existing resource group **az104-09c-rg1-[deployId]**  |
+    | Resource group |                select the existing resource group **az104-09c-rg1-[DeploymentID]**  |
     | Kubernetes cluster name |       **az104-9c-aks1** |
     | Region |                        **the name of a region where you can provision a Kubernetes cluster |
     | Kubernetes version |            **accept the default** |
@@ -81,10 +81,10 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
-   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+   >**Note**: DeploymentID is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [DeploymentID] with deployment-id
 
     ```sh
-    RESOURCE_GROUP='az104-09c-rg1-[deployId]'
+    RESOURCE_GROUP='az104-09c-rg1-[DeploymentID]'
 
     AKS_CLUSTER='az104-9c-aks1'
 
@@ -141,11 +141,11 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
 
-    >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+    >**Note**: DeploymentID is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [DeploymentID] with deployment-id
 
     ```sh
 
-    RESOURCE_GROUP='az104-09c-rg1-[deployId]'
+    RESOURCE_GROUP='az104-09c-rg1-[DeploymentID]'
 
     AKS_CLUSTER='az104-9c-aks1'
 
