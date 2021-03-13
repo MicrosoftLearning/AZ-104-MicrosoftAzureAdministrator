@@ -122,6 +122,8 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Storage account name |     **any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter** |
 
+1. Click on **create**.
+
 1. Note that the validation failed. Click the link **Validation failed. Click here to view details** to display the **Errors** blade and identify the reason for the failure.
 
     >**Note**: The error message states that the resource deployment was disallowed by the policy. If you don't get the expected result just signout and signin and try to create storage acount again
