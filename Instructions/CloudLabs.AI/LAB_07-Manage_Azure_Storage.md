@@ -222,7 +222,7 @@ In this task, you will create and configure Azure Files shares.
 
    > **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **File service** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the second task of this lab and, in the **File service** section, click **File shares**.
 
 1. Click **+ File share** and create a file share with the following settings:
 
