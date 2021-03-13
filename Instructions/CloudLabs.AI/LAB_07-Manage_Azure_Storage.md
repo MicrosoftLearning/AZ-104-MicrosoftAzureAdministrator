@@ -68,7 +68,7 @@ In this task, you will create and configure an Azure Storage account.
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value | 
-    | --- | --- |
+    | ------- | ----- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | select the existing resource group **az104-07-rg1-[DeploymentId]** |
     | Storage account name | **strgaz104t07[DeploymentId]** - replace DeploymentId with the Deployment ID |
