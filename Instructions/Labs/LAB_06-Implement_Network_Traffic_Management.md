@@ -98,6 +98,22 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
+1. In the list of virtual networks, select **az104-06-vnet2**.
+
+1. On the **az104-06-vnet2** blade, select **Properties**. 
+
+1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID** property.
+
+1. Navigate back to the list of virtual networks and select **az104-06-vnet3**.
+
+1. On the **az104-06-vnet3** blade, select **Properties**. 
+
+1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID** property.
+
+    >**Note**: You will need the values of the ResourceID property for both virtual networks later in this task.
+
+    >**Note**: This is a workaround that addresses the issue with the Azure portal occasionally not displaying the newly provisioned virtual network when creating virtual network peerings.
+
 1. In the list of virtual networks, click **az104-06-vnet01**.
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
@@ -112,8 +128,8 @@ In this task, you will configure local peering between the virtual networks you 
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet2** |
+    | I know my resource ID | enabled |
+    | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
@@ -136,8 +152,8 @@ In this task, you will configure local peering between the virtual networks you 
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet3** |
+    | I know my resource ID | enabled |
+    | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
