@@ -54,19 +54,37 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 
-1. From the Cloud Shell pane, run the following to create the three virtual networks and four virtual machines into them by using the template and parameter files you uploaded:
+1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-loop-template.json `
-      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json `
-      -AsJob
+      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
    ```
 
-    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 5 minutes.
+    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
-    >**Note**: To verify the status of the deployment, you can examine the properties of the resource group you created in this task.
+1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
+
+   ```powershell
+   $rgName = 'az104-06-rg1'
+   $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
+   $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
+
+   foreach ($vmName in $vmNames) {
+     Set-AzVMExtension `
+     -ResourceGroupName $rgName `
+     -Location $location `
+     -VMName $vmName `
+     -Name 'networkWatcherAgent' `
+     -Publisher 'Microsoft.Azure.NetworkWatcher' `
+     -Type 'NetworkWatcherAgentWindows' `
+     -TypeHandlerVersion '1.4'
+   }
+   ```
+
+    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
 1. Close the Cloud Shell pane.
 
@@ -156,8 +174,6 @@ In this task, you will test transitivity of virtual network peering by using Net
 1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
-
-    > **Note**: The initial check can take about 2 minutes because it requires installation of the Network Watcher Agent virtual machine extension on **az104-06-vm0**.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
