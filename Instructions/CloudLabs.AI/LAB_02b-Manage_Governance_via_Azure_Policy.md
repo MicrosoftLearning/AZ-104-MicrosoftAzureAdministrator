@@ -55,12 +55,12 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Create a tag with the following settings and save your change:
 
-    | Setting | Value |
+    | Setting |   Value |
     | --- | --- |
-    | Name | **Role** |
-    | Value | **Infra** |
+    | Name |    **Role** |
+    | Value |   **Infra** |
 
-1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
+1. Apply the tag and navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
 #### Task 2: Enforce tagging via an Azure policy
 
@@ -118,13 +118,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
 
-    | Setting | Value |
+    | Setting |      Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
+    | Storage account name |     **any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter** |
 
-1. Note that the validation failed. Click the link **Validation failed. Click here to view details** to display the **Errors** blade and identify the reason for the failure. 
+1. Note that the validation failed. Click the link **Validation failed. Click here to view details** to display the **Errors** blade and identify the reason for the failure.
 
-    >**Note**: The error message states that the resource deployment was disallowed by the policy. 
+    >**Note**: The error message states that the resource deployment was disallowed by the policy. If you don't get the expected result just signout and signin and try to create storage acount again
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
