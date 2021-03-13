@@ -92,9 +92,9 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click the entry representing the **az104-03a-rg3-[deployId]** resource group.
+1. In the list of resource groups, click the entry representing the **az104-03a-rg3-[DeploymentID]** resource group.
 
-1. On the **az104-03a-rg3-[deployId]** resource group blade, click **Locks** and add a lock with the following settings:
+1. On the **az104-03a-rg3-[DeploymentID]** resource group blade, click **Locks** and add a lock with the following settings:
 
     |Setting|     Value|
     |---|---|
@@ -109,7 +109,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: As the error message states, this is expected due to the delete lock applied on the resource group level.
 
-1. Navigate back to the list of resources of the **az104-03a-rg3-[deployId]** resource group and click the entry representing the **az104-03a-disk2** resource. 
+1. Navigate back to the list of resources of the **az104-03a-rg3-[DeploymentID]** resource group and click the entry representing the **az104-03a-disk2** resource. 
 
 1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Size + performance**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and save the change. Verify that the change was successful.
 
