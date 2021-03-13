@@ -114,7 +114,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the list of resource groups, click **az104-03b-rg1-[DeploymentID]**.
 
-1. On the **az104-03b-rg1-[deployId]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03b-rg1-[DeploymentID]** resource group blade, in the **Settings** section, click **Deployments**.
 
 1. From the **az104-03b-rg1-[DeploymentID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
