@@ -68,6 +68,7 @@ In this task, you will create and configure an Azure Storage account.
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting              | Value                                                         | 
+    | -------------------- | ------------------------------------------------------------------ |
     | -------------------- | ------------------------------------------------------------- |
     | Subscription         | the name of the Azure subscription you are using in this lab  |
     | -------------------- | ------------------------------------------------------------- |
