@@ -40,7 +40,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
    ```powershell
 
-   $rgName = 'az104-10-rg0-[deployId]'
+   $rgName = 'az104-10-rg0-[DeploymentID]'
 
    ```
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
@@ -68,7 +68,7 @@ In this task, you will create a recovery services vault.
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-10-rg1-[deployId]** |
+    | Resource group | select the existing resource group **az104-10-rg1-[DeploymentID]** |
     | Name | **az104-10-rsv1** |
     | Region | the name of a region where you deployed the two virtual machines in the previous task |
 
