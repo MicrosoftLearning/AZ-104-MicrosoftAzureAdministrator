@@ -102,7 +102,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Verify that there is 2 Available licenses. We will be using this licenses in the next step 
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, click on **+Assign** then click on Users and Groups and assign the license Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, click on **+Assign** then click on **Users and Groups** and assign the license Azure AD Premium P2 to your user account and the two newly created user accounts.
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
