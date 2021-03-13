@@ -70,7 +70,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. 
 
-1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
+1.  Search and then click on the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
