@@ -37,12 +37,12 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. From the Cloud Shell pane, run the following to view the existing resource group:
 
-   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+   >**Note**: DeploymentId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [DeploymentId] with deployment-id
 
    ```pwsh
    Get-AzResourceGroup
 
-   $rgName = 'az104-07-rg0-[deployId]'
+   $rgName = 'az104-07-rg0-[DeploymentId]'
 
    ```
 1. From the Cloud Shell pane, run the following to deploy thef virtual machine by using the uploaded template and parameter files:
@@ -70,8 +70,8 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value | 
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-07-rg1-[deployId]** |
-    | Storage account name | **strgaz104t07[deployId]** - replace deployid with the Deployment ID |
+    | Resource group | select the existing resource group **az104-07-rg1-[DeploymentId]** |
+    | Storage account name | **strgaz104t07[DeploymentId]** - replace DeploymentId with the Deployment ID |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
     | Account kind | **Storage (general purpose v1)** |
