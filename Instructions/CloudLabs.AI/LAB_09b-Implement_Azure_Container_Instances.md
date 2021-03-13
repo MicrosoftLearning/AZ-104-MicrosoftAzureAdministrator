@@ -31,7 +31,7 @@ In this task, you will create a new container instance for the web application.
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-09b-rg1-[deployId]** |
+    | Resource group | select the existing resource group **az104-09b-rg1-[DeploymentId]** |
     | Container name | **az104-9b-c1** |
     | Region | the name of a region where you can provision Azure container instances |
     | Image Source | **Quickstart images** |
