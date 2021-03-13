@@ -9,6 +9,6 @@
 
 1. If lab validation are not being shown click on ... dot which are given in right side and click on **Lab Validations**
 
-   ![](Images/intro1.png)
+   ![](Images/intro3.png)
 
 1. If you get **PowerShell Window** open, please dropdown the window and start the lab.
