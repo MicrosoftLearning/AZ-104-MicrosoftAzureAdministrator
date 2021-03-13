@@ -2,9 +2,13 @@
   "Name": "Intersite Connectivity",
   "Language": "English",
   "Files": [
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LabIntro.md",
+        "Order": 1
+     },
     {
       "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/CloudLabs.AI/LAB_05-Implement_Intersite_Connectivity.md",
-      "Order": 1
+      "Order": 2
     }
   ]
 } ]
