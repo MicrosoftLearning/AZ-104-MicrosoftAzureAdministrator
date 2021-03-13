@@ -102,7 +102,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Verify that there is 2 Available licenses. We will be using this licenses in the next step 
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, click on **+Assign** then click on Users and Groups and assign the license Azure AD Premium P2 to your user account and the two newly created user accounts.
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
@@ -119,10 +119,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Click **Add dynamic query**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, click on **Add expression** to create a new rule with the following settings:
 
     | Setting | Value |
     | --- | --- |
+    |And/OR | **And** |
     | Property | **jobTitle** |
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
@@ -140,10 +141,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Click **Add dynamic query**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, click on **Add expression** to create a new rule with the following settings:
 
     | Setting | Value |
     | --- | --- |
+    | And/OR | **And** |
     | Property |  **jobTitle** |
     | Operator |  **Equals** |
     | Value |  **System Administrator** |
@@ -207,7 +209,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | --- | --- |
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
-    | Let me create the password | enabled |
+    | Let me create the password | **enabled** |
     | Initial password | **Pa55w.rd124** |
     | Job title | **System Administrator** |
     | Department | **IT** |
