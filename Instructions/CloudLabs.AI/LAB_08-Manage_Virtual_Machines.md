@@ -46,14 +46,14 @@ In this task, you will deploy Azure virtual machines into different availability
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
     | Public inbound ports | **None** |
-    | Would you like to use an existing Windows Server license? | **No** |
+    | Would you like to use an existing Windows Server license? | **Unchecked** |
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | OS disk type | **Premium SSD** |
-    | Enable Ultra Disk compatibility | **No** |
+    | Enable Ultra Disk compatibility | **Unchecked** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
