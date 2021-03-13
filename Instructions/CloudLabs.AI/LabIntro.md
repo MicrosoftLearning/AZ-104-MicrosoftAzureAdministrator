@@ -11,6 +11,4 @@
 
    ![](Images/intro1.png)
 
-1. If you get pop-up of **Shutdowm Event Tracker** click on **cancel** button.
-
-   ![](Images/intro2.png)
+1. If you get **PowerShell Window** open, please dropdown the window and start the lab.
