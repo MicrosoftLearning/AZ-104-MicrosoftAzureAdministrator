@@ -60,10 +60,10 @@ In this task, you will create a staging deployment slot.
 
 1. Click **+ Add slot**, and add a new slot with the following settings:
 
-    | Setting | Value |
+    | Setting |                Value |
     | --- | ---|
-    | Name | **staging** |
-    | Clone settings from | **Do not clone settings**|
+    | Name |                   **staging** |
+    | Clone settings from |    **Do not clone settings**|
 
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
