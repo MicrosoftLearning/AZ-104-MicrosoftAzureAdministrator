@@ -33,18 +33,18 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, select **Show advanced settings** and then select **Use existing** and choose existing resource group **az104-06-rg1-[deployId]**. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**.  
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, select **Show advanced settings** and then select **Use existing** and choose existing resource group **az104-06-rg1-[DeploymentID]**. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**.  
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json**, and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to use existing resource group that will be hosting the lab environment (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
-   >**Note**: deployId is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [deployId] with deployment-id
+   >**Note**: DeploymentID is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [DeploymentID] with deployment-id
 
    ```pwsh
    $location = '[Azure_region]'
 
-   $rgName = 'az104-06-rg1-[deployId]'
+   $rgName = 'az104-06-rg1-[DeploymentID]'
 
    ```
 1. From the Cloud Shell pane, run the following to create the three virtual networks and four virtual machines into them by using the template and parameter files you uploaded:
@@ -136,7 +136,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -157,7 +157,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -176,7 +176,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -241,7 +241,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Location | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt23** |
     | Propagate gateway routes | **No** |
@@ -283,7 +283,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Region | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt32** |
     | Propagate gateway routes | **No** |
@@ -325,7 +325,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[deployId]** |
+    | Resource group | **az104-06-rg1-[DeploymentID]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -351,7 +351,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-06-rg1-[deployId]** |
+    | Resource group | select the existing resource group **az104-06-rg1-[DeploymentID]** |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
     | Type | **Public** |
@@ -455,7 +455,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-06-rg1-[deployId]** |
+    | Resource group | select the existing resource group **az104-06-rg1-[DeploymentID]** |
     | Application gateway name | **az104-06-appgw5** |
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
