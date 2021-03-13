@@ -69,7 +69,6 @@ In this task, you will create and configure an Azure Storage account.
 
     | Setting | Value |
     | --- | --- |
-    --------------- ----------------------------------------------------------------
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-07-rg1-[DeploymentId]** |
     | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
