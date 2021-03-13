@@ -28,20 +28,16 @@ In this task, you will create a new container instance for the web application.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
-    | ---- | ---- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-09b-rg1-[DeploymentId]** |
-    | Container name | **az104-9b-c1** |
-    | Region | the name of a region where you can provision Azure container instances |
-    | Image Source | **Quickstart images** |
-    | Image | **microsoft/aci-helloworld (Linux)** |
+* Subscription:  the name of the Azure subscription you are using in this lab<br/>
+* Resource group:  select the existing resource group **az104-09b-rg1-[DeploymentId]**<br/>
+* Container name:  **az104-9b-c1**<br/>
+* Region:  the name of a region where you can provision Azure container instances<br/>
+* Image Source:  **Quickstart images**<br/>
+* Image:  **microsoft/aci-helloworld (Linux)**<br/>
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
-    | --- | --- |
-    | DNS name label | any valid, globally unique DNS host name |
+* DNS name label: **any valid, globally unique DNS host name**<br/>
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
