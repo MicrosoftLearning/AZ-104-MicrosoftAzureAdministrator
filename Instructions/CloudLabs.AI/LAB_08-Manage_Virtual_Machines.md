@@ -209,13 +209,13 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2** and click **Resize**
+2. On the **az104-08-vm0** virtual machine blade, click **Size** and set the virtual machine size to **Standard DS1_v2** and click **Resize**
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
+3. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values):
+4. Create a managed disk with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -223,9 +223,9 @@ In this task you will scale compute for Azure virtual machines by changing their
     | Storage type | **Premium SSD** |
     | Size (GiB| **1024** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
+5. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values):
+6. Create a managed disk with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -233,11 +233,11 @@ In this task you will scale compute for Azure virtual machines by changing their
     | Storage type | **Premium SSD** |
     | Size (GiB)| **1024 GiB** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
+7. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
 
-1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+8. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
+9. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
    ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
@@ -251,17 +251,17 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
+10. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
-1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
+11. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
 
-1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
+12. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
 
-1. On the **Custom deployment** blade, click **Edit template**.
+13. On the **Custom deployment** blade, click **Edit template**.
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
+14. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
                     "vmSize": "Standard_DS1_v2"
@@ -270,7 +270,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line **50** (`"dataDisks": [ ]` line) with the following code :
+15. On the **Edit template** blade, in the section displaying the content of the template, replace line **50** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
                     "dataDisks": [
@@ -296,13 +296,13 @@ In this task you will scale compute for Azure virtual machines by changing their
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
-1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+16. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
 
-1. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
+17. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
+18. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
    ```powershell
    New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true)
