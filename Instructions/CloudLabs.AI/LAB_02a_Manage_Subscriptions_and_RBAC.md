@@ -47,6 +47,8 @@ In this task, you will create and configure management groups.
     | Management group ID | **az104-02-mg1**|
     | Management group display name | **az104-02-mg1**|
 
+1. **Save** the management group.
+
 1. In the list of management groups, click the entry representing the newly created management group and then display its **details**.
 
 1. From the **az104-02-mg1** blade and click on the ... the icon at the end of your subscription, and click on “Move“.
@@ -107,10 +109,10 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02-aaduser1**|
-    | Name | **az104-02-aaduser1**|
-    | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
+    | User name |   **az104-02-aaduser1**|
+    | Name |    **az104-02-aaduser1**|
+    | Let me create the password   | **enabled** |
+    | Initial password |   **Pa55w.rd124** |
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
