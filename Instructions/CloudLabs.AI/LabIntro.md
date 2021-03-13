@@ -9,8 +9,8 @@
 
 1. If lab validation are not being shown click on ... dot which are given in right side and click on **Lab Validations**
 
-   ![](Images/lab5/intro1.png)
+   ![](Images/intro1.png)
 
 1. If you get pop-up of **Shutdowm Event Tracker** click on **cancel** button.
 
-   ![](Images/lab5/intro2.png)
+   ![](Images/intro2.png)
