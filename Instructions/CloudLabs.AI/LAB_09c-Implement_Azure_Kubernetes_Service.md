@@ -28,36 +28,36 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
+    | Setting |                        Value |
     | ---- | ---- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-09c-rg1-[deployId]**  |
-    | Kubernetes cluster name | **az104-9c-aks1** |
-    | Region | the name of a region where you can provision a Kubernetes cluster |
-    | Kubernetes version | accept the default |
-    | Node size | accept the default |
-    | Node count | **1** |
+    | Subscription |                  **the name of the Azure subscription you are using in this lab** |
+    | Resource group |                select the existing resource group **az104-09c-rg1-[deployId]**  |
+    | Kubernetes cluster name |       **az104-9c-aks1** |
+    | Region |                        **the name of a region where you can provision a Kubernetes cluster |
+    | Kubernetes version |            **accept the default** |
+    | Node size |                     **accept the default |
+    | Node count |                    **1** |
 
 1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
+    | Setting |              Value |
     | ---- | ---- |
-    | Virtual nodes | **Disabled** |
-    | VM scale sets | **Enabled** |
+    | Virtual nodes |       **Disabled** |
+    | VM scale sets |       **Enabled** |
 
 1. Click **Next: Authentication >** and, on the **Authentication** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
+    | Setting |                     Value |
     | ---- | ---- |
-    | Service principal | accept the default |
-    | Enable RBAC | **Yes** |
+    | Service principal |         **accept the default** |
+    | Enable RBAC |               **Yes** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
-    | Setting | Value |
+    | Setting |                        Value |
     | ---- | ---- |
-    | Network configuration | **kubenet** |
-    | DNS name prefix | any valid, globally unique DNS host name |
+    | Network configuration |         **kubenet** |
+    | DNS name prefix |               **any valid, globally unique DNS host name** |
 
 1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click Create.
 
