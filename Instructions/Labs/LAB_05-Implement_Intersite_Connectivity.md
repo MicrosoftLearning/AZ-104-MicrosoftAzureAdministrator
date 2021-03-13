@@ -59,13 +59,10 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
       -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
       -location1 $location1 `
-      -location2 $location2 `
-      -AsJob
+      -location2 $location2
    ```
 
-    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
-
-    >**Note**: To verify the status of the deployment, you can examine the properties of the resource group you created in this task.
+    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
 
