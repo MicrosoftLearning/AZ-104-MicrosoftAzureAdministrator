@@ -25,11 +25,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03a-rg1-[deployId]**.
+1. In the list of resource groups, click **az104-03a-rg1-[DeploymentID]**.
 
-1. On the **az104-03a-rg1-[deployId]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03a-rg1-[DeploymentID]** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-[deployId] - Deployments** blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-[DeploymentID] - Deployments** blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
@@ -91,18 +91,18 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Back on the **Custom deployment** blade, specify the following settings:
 
-    | Setting | Value |
+    | Setting |                       Value |
     | --- |--- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | select the existing resource group **az104-03b-rg1-[deployId]** |
-    | Location | the name of any Azure region available in the subscription you are using in this lab |
-    | Disk Name | **az104-03b-disk1** |
-    | Location | the value of the location parameter you noted in the previous task |
-    | Sku | **Standard_LRS** |
-    | Disk Size Gb | **32** |
-    | Create Option | **empty** |
-    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
-    | Network Access Policy | **AllowAll** |	
+    | Subscription |                **the name of the Azure subscription you are using in this lab** |
+    | Resource Group |              select the existing resource group **az104-03b-rg1-[DeploymentID]** |
+    | Location |                    **the name of any Azure region available in the subscription you are using in this lab** |
+    | Disk Name |                   **az104-03b-disk1** |
+    | Location |                    **the value of the location parameter you noted in the previous task** |
+    | Sku |                         **Standard_LRS** |
+    | Disk Size Gb |                **32** |
+    | Create Option |               **empty** |
+    | Disk Encryption Set Type |    **EncryptionAtRestWithPlatformKey** |
+    | Network Access Policy |       **AllowAll** |	
 
 1. Select **Review + Create** and then select **Create**.
 
@@ -112,11 +112,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1-[deployId]**.
+1. In the list of resource groups, click **az104-03b-rg1-[DeploymentID]**.
 
 1. On the **az104-03b-rg1-[deployId]** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **az104-03b-rg1-[deployId] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **az104-03b-rg1-[DeploymentID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
 #### Review
 
