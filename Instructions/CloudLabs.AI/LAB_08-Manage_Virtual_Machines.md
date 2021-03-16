@@ -157,7 +157,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Custom deployment** blade, click **Edit template**.
 
-    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
+    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. This is expected igonore the error message and click on Purchase - it will work.
 
 1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
 
