@@ -573,7 +573,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: Wait for uninstallation to complete.
    
-1. In the LabVM open file explorer and navigate to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and open az104-08-configure_VMSS_disks.ps1 file in text editor.
+1. In file explorer in your virtual machine and navigate to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and open az104-08-configure_VMSS_disks.ps1 file in text editor.
 
 1. Update the rgname to **az104-08-rg02-DeploymentID** (ex: $rgname= "az104-08-rg02-331819") , you can get DeploymentID from environment details tab. Once changes are done save the file.
 
