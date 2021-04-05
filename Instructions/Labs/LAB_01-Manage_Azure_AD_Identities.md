@@ -196,7 +196,7 @@ In this task, you will create a new Azure AD tenant.
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
     | Country/Region | **United States** |
 
-   > **Note**: The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
 1. Click **Review + create** and then click **Create**.
 
