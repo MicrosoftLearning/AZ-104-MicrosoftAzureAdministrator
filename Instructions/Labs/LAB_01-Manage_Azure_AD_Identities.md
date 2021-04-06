@@ -200,7 +200,7 @@ In this task, you will create a new Azure AD tenant.
 
 1. Click **Review + create** and then click **Create**.
 
-1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new directory: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 #### Task 4: Manage Azure AD guest users.
 
