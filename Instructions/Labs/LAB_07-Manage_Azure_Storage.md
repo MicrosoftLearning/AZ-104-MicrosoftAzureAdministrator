@@ -140,7 +140,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. In the list of containers, click **az104-07-container** and then click **Upload**.
 
-1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**, then click **Upload**.
+1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
 
@@ -206,6 +206,8 @@ In this task, you will configure authentication and authorization for Azure Stor
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
 
 1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
+
+    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
 
     > **Note**: At this point, you no longer have access to the container.
 

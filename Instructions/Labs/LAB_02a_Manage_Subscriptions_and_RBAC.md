@@ -56,7 +56,7 @@ In this task, you will create and configure management groups.
 
 1. In the list of management groups, click the entry representing the newly created management group and then display its **details**.
 
-1. From the **az104-02-mg1** blade, click **+ Add subscription** and add the subscription you are using in this lab to the management group.
+1. From the **Subscriptions** blade, click **+ Add subscription** and add the subscription you are using in this lab to the management group.
 
     >**Note**: Copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
@@ -173,7 +173,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, navigate to the **az104-02-mg1** management group and display its **details**.
 
-1. Right-click the **ellipsis** icon to the right of the entry representing your Azure subscription and click **Move**.
+1. In the **Subscriptions** blade, right-click the **ellipsis** icon to the right of the entry representing your Azure subscription and click **Move**.
 
 1. On the **Move** blade, select the management group which the subscription was originally part of and click **Save**. 
 
