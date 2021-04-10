@@ -128,9 +128,9 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-1. After deployment submitted, you will see **Deployment failed** in the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** to see the reason of failure. 
+1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
-    >**Note**: The error message states that the resource deployment was disallowed by the policy. 
+    >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
