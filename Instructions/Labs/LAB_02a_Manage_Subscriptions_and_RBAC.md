@@ -45,20 +45,22 @@ In this task, you will create and configure management groups.
 
 1. Search for and select **Management groups** and then, on the **Management groups** blade, click **+ Add management group**.
 
-    >**Note**: If you have not previously created Management Groups, select **Start using Management Groups**
+    >**Note**: If you have not previously created Management Groups, select **Start using management groups**
 
 1. Create a management group with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Management group ID | **az104-02-mg1**|
-    | Management group display name | **az104-02-mg1**|
+    | Management group ID | **az104-02-mg1** |
+    | Management group display name | **az104-02-mg1** |
 
-1. In the list of management groups, click the entry representing the newly created management group and then display its **details**.
+1. In the list of management groups, click the entry representing the newly created management group.
 
-1. From the **Subscriptions** blade, click **+ Add subscription** and add the subscription you are using in this lab to the management group.
+1. On the **az104-02-mg1** blade, click **Subscriptions**. 
 
-    >**Note**: Copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, seletc the subscription you are using in this lab and click **Save**.
+
+    >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
 #### Task 2: Create custom RBAC roles
 
