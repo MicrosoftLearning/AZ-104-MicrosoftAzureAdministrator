@@ -355,7 +355,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Virtual network | **az104-06-vnet3** |
     | Subnet | **subnet0** |
 
-1.Click **OK**
+1. Click **OK**
 
 1. In the Azure portal, navigate back to the **Network Watcher - Connection troubleshoot** blade.
 
@@ -433,7 +433,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Interval | **5** |
     | Unhealthy threshold | **2** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Wait for the health probe to be created, in the **Settings** section, click **Load balancing rules**, and then click **+ Add**.
 
@@ -453,7 +453,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
 
