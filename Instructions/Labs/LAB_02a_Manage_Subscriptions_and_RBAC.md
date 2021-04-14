@@ -43,7 +43,7 @@ In this task, you will create and configure management groups.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Management groups** and then, on the **Management groups** blade, click **+ Add management group**.
+1. Search for and select **Management groups** and then, on the **Management groups** blade, click **+ Add**.
 
     >**Note**: If you have not previously created Management Groups, select **Start using management groups**
 
