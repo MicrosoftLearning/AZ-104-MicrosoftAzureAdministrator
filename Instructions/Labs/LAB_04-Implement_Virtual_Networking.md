@@ -127,14 +127,14 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
-
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
+
+1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
 
 1. Back on the **ipconfig1** blade, save the changes.
 
@@ -146,14 +146,14 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4**.
-
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-04-pip1** |
     | SKU | **Standard** |
+
+1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4**.
 
 1. Back on the **ipconfig1** blade, save the changes.
 
