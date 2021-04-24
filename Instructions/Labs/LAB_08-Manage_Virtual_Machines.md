@@ -195,7 +195,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
    >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
 
-1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
