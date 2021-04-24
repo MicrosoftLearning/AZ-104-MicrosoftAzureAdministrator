@@ -120,7 +120,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
-1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
 
     >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
 
@@ -195,7 +195,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
    >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
 
-1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
