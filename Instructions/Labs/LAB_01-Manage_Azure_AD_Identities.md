@@ -268,7 +268,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate back to the **Delete tenant 'Contoso Lab'** blade and click **Delete**.
 
-> **Note**: You will have to wait for license expiration before you can delete the tenant. This does not incur any additional cost.
+> **Note**: You will have to wait for the trial license expiration before you can delete the tenant. This does not incur any additional cost.
 
 #### Review
 
