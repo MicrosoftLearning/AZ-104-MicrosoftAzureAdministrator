@@ -153,13 +153,13 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     | Setting | Value |
     | --- | --- |
+    | Signing key | **Key 1** |
     | Permissions | **Read** |
     | Start date | yesterday's date |
     | Start time | current time |
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    | Signing key | **Key 1** |
 
 1. Click **Generate SAS token and URL**.
 
