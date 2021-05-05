@@ -54,19 +54,37 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 
-1. From the Cloud Shell pane, run the following to create the three virtual networks and four virtual machines into them by using the template and parameter files you uploaded:
+1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-loop-template.json `
-      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json `
-      -AsJob
+      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
    ```
 
-    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 5 minutes.
+    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
-    >**Note**: To verify the status of the deployment, you can examine the properties of the resource group you created in this task.
+1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
+
+   ```powershell
+   $rgName = 'az104-06-rg1'
+   $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
+   $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
+
+   foreach ($vmName in $vmNames) {
+     Set-AzVMExtension `
+     -ResourceGroupName $rgName `
+     -Location $location `
+     -VMName $vmName `
+     -Name 'networkWatcherAgent' `
+     -Publisher 'Microsoft.Azure.NetworkWatcher' `
+     -Type 'NetworkWatcherAgentWindows' `
+     -TypeHandlerVersion '1.4'
+   }
+   ```
+
+    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
 1. Close the Cloud Shell pane.
 
@@ -79,6 +97,22 @@ In this task, you will configure local peering between the virtual networks you 
 1. Review the virtual networks you created in the previous task.
 
     >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
+
+1. In the list of virtual networks, select **az104-06-vnet2**.
+
+1. On the **az104-06-vnet2** blade, select **Properties**. 
+
+1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID** property.
+
+1. Navigate back to the list of virtual networks and select **az104-06-vnet3**.
+
+1. On the **az104-06-vnet3** blade, select **Properties**. 
+
+1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID** property.
+
+    >**Note**: You will need the values of the ResourceID property for both virtual networks later in this task.
+
+    >**Note**: This is a workaround that addresses the issue with the Azure portal occasionally not displaying the newly provisioned virtual network when creating virtual network peerings.
 
 1. In the list of virtual networks, click **az104-06-vnet01**.
 
@@ -94,8 +128,8 @@ In this task, you will configure local peering between the virtual networks you 
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet2** |
+    | I know my resource ID | enabled |
+    | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
@@ -118,8 +152,8 @@ In this task, you will configure local peering between the virtual networks you 
     | Virtual network gateway | **None (default)** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-06-vnet3** |
+    | I know my resource ID | enabled |
+    | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
@@ -156,8 +190,6 @@ In this task, you will test transitivity of virtual network peering by using Net
 1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
-
-    > **Note**: The initial check can take about 2 minutes because it requires installation of the Network Watcher Agent virtual machine extension on **az104-06-vm0**.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -323,7 +355,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Virtual network | **az104-06-vnet3** |
     | Subnet | **subnet0** |
 
-1.Click **OK**
+1. Click **OK**
 
 1. In the Azure portal, navigate back to the **Network Watcher - Connection troubleshoot** blade.
 
@@ -401,7 +433,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Interval | **5** |
     | Unhealthy threshold | **2** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Wait for the health probe to be created, in the **Settings** section, click **Load balancing rules**, and then click **+ Add**.
 
@@ -421,7 +453,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
 
