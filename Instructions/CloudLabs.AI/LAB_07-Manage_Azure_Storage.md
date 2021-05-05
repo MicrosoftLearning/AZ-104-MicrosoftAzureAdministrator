@@ -74,38 +74,19 @@ In this task, you will create and configure an Azure Storage account.
     | Storage account name | **strgaz104t07[DeploymentId]** |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
-    | Account kind | **Storage (general purpose v1)** |
-    | Replication | **Read-access geo-redundant storage (RA-GRS)** |
+    | Redundancy | **Geo-redundant storage (GRS)** |
 
-1. Click **Next: Networking >**, on the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click next on Data Protection blade and then click **Next: Advanced >**.
+1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
+1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
+
+1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
-1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade. 
+1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Azure Storage account blade, in the **Settings** section, click **Configuration**.
-
-1. Click **Upgrade** to change the Storage account kind from **Storage (general purpose v1)** to **StorageV2 (general purpose v2)**. 
-
-1. On the **Upgrade storage account** blade, review the warning stating that the upgrade is permanent and will result in billing charges, in the **Confirm upgrade** text box, type the name of the storage account, and click **Upgrade**. 
-
-    > **Note**: You have the option to set the account kind to **StorageV2 (general purpose v2)** at the provisioning time. The previous two steps were meant to illustrate that you also have the option to upgrade existing general purpose v1 accounts.
-
-    > **Note**: **StorageV2 (general purpose v2)** offers a number of features, such as, for example, access tiering, not available in with general purpose v1 accounts.
-
-    > **Note**: Review the other configuration options, including **Access tier (default)**, currently set to **Hot**, which you can change, the **Performance**, currently set to **Standard**, which can be set only during account provisioning, and the **Identity-based Directory Service for Azure File Authentication**, which requires Azure Active Directory Domain Services.
-
-1. On the Storage account blade, in the **Settings** section, click **Geo-replication** and note the secondary location. Click the **View all** link under the **Storage endpoints** label and review the **Storage account endpoints** blade.  
-
-    > **Note**: As expected, the **Storage account endpoints** blade contains both primary and secondary endpoints.
-
-1. Switch to the Configuration blade of the Storage account and, in the **Replication** drop-down list, select **Geo-redundant storage (GRS)** and save the change.
-
-1. Switch back to the **Geo-replication** blade and note that the secondary location is still specified. Click the **View all** link under the **Storage endpoints** label and review the **Storage account endpoints** blade.  
-
-    > **Note**: As expected, the **Storage account endpoints** blade contains only primary endpoints.
+1. On the Storage account blade, in the **Settings** section, click **Geo-replication** and note the secondary location. 
 
 1. Display again the **Configuration** blade of the Storage account, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
 
