@@ -1,4 +1,4 @@
-# AZ-104: Microsoft Azure Administrator
+# AZ-104: Microsoft Azure Administrator -test02
 
 > **There is a [Lab Recordings and Demos](https://github.com/MicrosoftLearning/Lab-Demo-Recordings) repo with links to videos of labs used in Microsoft Official Curriculum. The intent is to provide Microsoft Certified Trainers an easy way to access a non-audio version recording of hands-on labs used in the portfolio.**
 
