@@ -173,13 +173,15 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, navigate back to the **Users - All users** blade of the **Azure Active Directory**, and delete the **az104-02-aaduser1** user account.
 
-1. In the Azure portal, navigate back to the **az104-02-mg1** management group blade and click **Subsciptions**.
+1. In the Azure portal, navigate back to the **Management groups** blade. 
 
-1. On the **Subscriptions** blade, click the **ellipsis** icon to the right of the entry representing your Azure subscription and click **Move**.
+1. On the **Management groups** blade, in the **Child subscriptions** column, in the row representing the name of the management group to which you want to move the Azure subscription you used in this lab, select the link represeting its current number of subscriptions.
 
-1. On the **Move** blade, select the management group which the subscription was originally part of and click **Save**. 
+   >**Note**: It is likely that the target management group is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
+   
+1. On the **Subscriptions** blade of the target management group, select **+ Add**.
 
-  >**Note**: This is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
+1. On the **Add subscription** blade, in the **Subscriptions** drop-down list, select the name of the Azure subscription you used in this lab and click **Save**.
 
 1. Navigate back to the **Management groups** blade, right click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
 
