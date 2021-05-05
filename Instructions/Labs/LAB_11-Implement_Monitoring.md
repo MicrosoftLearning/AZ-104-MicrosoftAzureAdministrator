@@ -300,7 +300,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. Hover the mouse over the **VMComputer** entry and click the **Preview data** icon.
 
-1. If any data is available, in the **Update** pane, click **See in query editor**.
+1. If any data is available, in the **Update** pane, click **Use in editor**.
 
     >**Note**: You might need to wait a few minutes before the update data becomes available.
 
