@@ -71,7 +71,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Add**.
+1. In the Azure portal, search for and select **Storage accounts**, and then click **+ New**.
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
@@ -94,13 +94,13 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Storage account blade, in the **Settings** section, click **Geo-replication** and note the secondary location. 
+1. On the Storage account blade, in the **Data management** section, click **Geo-replication** and note the secondary location. 
 
-1. Display again the **Configuration** blade of the Storage account, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
+1. On the Storage account blade, in the **Settings** section, select **Configuration**, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
 
 1. Switch back to the **Geo-replication** blade and note that, at this point, the Storage account has only the primary location.
 
-1. Display again the **Configuration** blade of the Storage account and set **Access tier (default)** to **Cool**.
+1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data which is not accessed frequently.
 
@@ -108,7 +108,7 @@ In this task, you will create and configure an Azure Storage account.
 
 In this task, you will create a blob container and upload a blob into it.
 
-1. On the Storage account blade, in the **Blob service** section, click **Containers**.
+1. On the Storage account blade, in the **Data storage** section, click **Containers**.
 
 1. Click **+ Container** and create a container with the following settings:
 
@@ -212,7 +212,7 @@ In this task, you will create and configure Azure Files shares.
 
 > **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **File service** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
 1. Click **+ File share** and create a file share with the following settings:
 
