@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+            "value": "Student"
+        },
+        "adminPassword": {
+            "value": "Pa55w.rd1234"
+        },
+        "vmNamePrefix": {
+            "value": "az104-10-vm"
+        },
+        "nicNamePrefix": {
+            "value": "az104-10-nic"
+        },
+        "imagePublisher": {
+            "value": "MicrosoftWindowsServer"
+        },
+        "imageOffer": {
+            "value": "WindowsServer"
+        },
+        "imageSKU": {
+            "value": "2019-Datacenter"
+        },
+        "vmSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "virtualNetworkName": {
+            "value": "az104-10-vnet"
+        },
+        "addressPrefix": {
+            "value": "10.0.0.0/24"
+        },
+        "virtualNetworkResourceGroup": {
+            "value": "az104-10-rg0"
+        },
+        "subnet0Name": {
+            "value": "subnet0"
+        },
+        "subnet0Prefix": {
+            "value": "10.0.0.0/26"
+        }
+    }
+}
