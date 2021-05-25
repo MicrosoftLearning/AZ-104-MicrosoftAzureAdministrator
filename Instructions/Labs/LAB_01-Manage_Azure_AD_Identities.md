@@ -182,7 +182,10 @@ In this task, you will create a new Azure AD tenant.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
-1. Click **+ Create a tenant** and specify the following setting:
+1. Click **Switch Tenant** and specify the following setting:
+
+
+1. Click the **+ Create** button and specify the following setting:
 
     | Setting | Value |
     | --- | --- |
