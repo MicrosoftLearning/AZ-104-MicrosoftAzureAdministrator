@@ -49,7 +49,7 @@ In this task, you will create and configure management groups.
 
     1. In the Azure portal, search for and select **Azure Active Directory**.
     
-    1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Management** section, select **Properties**.
+    1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
     1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
     
