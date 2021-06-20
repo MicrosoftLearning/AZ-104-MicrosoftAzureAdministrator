@@ -269,9 +269,10 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
-1. In the Windows PowerShell console window, run the following to test internal name resolution of the **az104-04-vm1** DNS record set in the newly created private DNS zone:
+1. In the Windows PowerShell console window, run the following to test internal name resolution in the newly created private DNS zone:
 
    ```powershell
+   nslookup az104-04-vm0.contoso.org
    nslookup az104-04-vm1.contoso.org
    ```
 
