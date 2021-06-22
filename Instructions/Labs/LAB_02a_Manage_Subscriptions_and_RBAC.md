@@ -187,7 +187,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
-1. On the **Management groups** blade, select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
+1. On the **Management groups** blade, select the **ellipsis** icon next to your **subscription** under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
 
    >**Note**: It is likely that the target management group is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
    
