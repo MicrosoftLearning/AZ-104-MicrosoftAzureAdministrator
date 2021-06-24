@@ -188,7 +188,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
 
-    > **Note**: At this point, you no longer have access to the container.
+    > **Note**: At this point, you do not have permissions to change the Authentication method.
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
@@ -202,7 +202,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Assign access to | **User, group, or service principal** |
     | Select | the name of your user account |
 
-1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can access to container again.
+1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
