@@ -33,6 +33,11 @@ In this lab, you will:
 
 ## Estimated timing: 30 minutes
 
+## Architecture diagram
+
+![image](../media/lab02a.png)
+
+
 ## Instructions
 
 ### Exercise 1
