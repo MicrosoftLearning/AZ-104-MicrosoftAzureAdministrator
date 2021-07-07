@@ -21,6 +21,10 @@ In this lab, you will:
 
 ## Estimated timing: 20 minutes
 
+## Architecture diagram
+
+![image](../media/lab03c.png)
+
 ## Instructions
 
 ### Exercise 1
