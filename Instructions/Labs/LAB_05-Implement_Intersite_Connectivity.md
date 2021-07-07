@@ -21,6 +21,10 @@ In this lab, you will:
 
 ## Estimated timing: 30 minutes
 
+## Architecture diagram
+
+![image](../media/lab05.png)
+
 ### Instructions
 
 #### Task 1: Provision the lab environment
