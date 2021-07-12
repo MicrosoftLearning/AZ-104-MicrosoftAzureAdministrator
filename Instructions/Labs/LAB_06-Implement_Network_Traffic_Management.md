@@ -26,6 +26,11 @@ In this lab, you will:
 
 ## Estimated timing: 60 minutes
 
+## Architecture diagram
+
+![image](../media/lab06.png)
+
+
 ## Instructions
 
 ### Exercise 1
