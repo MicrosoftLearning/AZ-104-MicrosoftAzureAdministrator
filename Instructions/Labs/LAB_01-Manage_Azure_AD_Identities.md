@@ -23,6 +23,9 @@ In this lab, you will:
 
 ## Estimated timing: 30 minutes
 
+## Architecture diagram
+![image](../media/lab01.png)
+
 ## Instructions
 
 ### Exercise 1
@@ -196,11 +199,11 @@ In this task, you will create a new Azure AD tenant.
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
     | Country/Region | **United States** |
 
-   > **Note**: The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
 1. Click **Review + create** and then click **Create**.
 
-1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new directory: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 #### Task 4: Manage Azure AD guest users.
 
@@ -250,7 +253,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
 
-1. In the **Azure Portal** search for **Azure Active Directory** in the search bar. Within **Azure Activity Directory** under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Azure Active Directory Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **OK**.
+1. In the **Azure Portal** search for **Azure Active Directory** in the search bar. Within **Azure Active Directory** under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Azure Active Directory Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **OK**.
 
 1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** guest user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
@@ -262,13 +265,13 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
-1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Azure AD tenant, click **Delete tenant**, on the **Delete directory 'Contoso Lab'** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
+1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Azure AD tenant, click **Delete tenant**, on the **Delete tenant 'Contoso Lab'** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
 
 1. Sign out from the Azure portal and sign in back. 
 
-1. Navigate back to the **Delete directory 'Contoso Lab'** blade and click **Delete**.
+1. Navigate back to the **Delete tenant 'Contoso Lab'** blade and click **Delete**.
 
-> **Note**: You will have to wait for license expiration before you can delete the tenant. This does not incur any additional cost.
+> **Note**: You will have to wait for the trial license expiration before you can delete the tenant. This does not incur any additional cost.
 
 #### Review
 

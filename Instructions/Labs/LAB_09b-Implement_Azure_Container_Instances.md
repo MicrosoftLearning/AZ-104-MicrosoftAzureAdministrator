@@ -20,6 +20,10 @@ In this lab, you will:
 
 ## Estimated timing: 20 minutes
 
+## Architecture diagram
+
+![image](../media/lab09b.png)
+
 ## Instructions
 
 ### Exercise 1
@@ -41,7 +45,7 @@ In this task, you will create a new container instance for the web application.
     | Container name | **az104-9b-c1** |
     | Region | the name of a region where you can provision Azure container instances |
     | Image Source | **Quickstart images** |
-    | Image | **microsoft/aci-helloworld (Linux)** |
+    | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 

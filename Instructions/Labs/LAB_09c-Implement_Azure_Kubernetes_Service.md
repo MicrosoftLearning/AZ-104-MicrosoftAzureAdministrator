@@ -22,6 +22,10 @@ In this lab, you will:
 
 ## Estimated timing: 40 minutes
 
+## Architecture diagram
+
+![image](../media/lab09c.png)
+
 ## Instructions
 
 ### Exercise 1
@@ -70,15 +74,15 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     | Setting | Value |
     | ---- | ---- |
-    | Virtual nodes | **Disabled** |
-    | VM scale sets | **Enabled** |
+    | Enable virtual nodes | **Disabled** (default) |
+    | Enable virtual machine scale sets | **Enabled** (default) |
 
 1. Click **Next: Authentication >** and, on the **Authentication** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Service principal | accept the default |
-    | Enable RBAC | **Yes** |
+    | Authentication method | **System-assigned managed identity** (default) | 
+    | Role-based access control (RBAC) | **Enabled** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 

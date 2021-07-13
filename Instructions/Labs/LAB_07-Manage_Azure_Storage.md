@@ -24,6 +24,11 @@ In this lab, you will:
 
 ## Estimated timing: 40 minutes
 
+## Architecture diagram
+
+![image](../media/lab07.png)
+
+
 ## Instructions
 
 ### Exercise 1
@@ -40,7 +45,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Module_07\\az104-07-vm-template.json** and **\\Allfiles\\Module_07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** and **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
 
@@ -82,46 +87,25 @@ In this task, you will create and configure an Azure Storage account.
     | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
-    | Account kind | **Storage (general purpose v1)** |
-    | Replication | **Read-access geo-redundant storage (RA-GRS)** |
+    | Redundancy | **Geo-redundant storage (GRS)** |
 
-1. Click **Next: Networking >**, on the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
+1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Advanced >**.
+1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
 
-1. On the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
+1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Azure Storage account blade, in the **Settings** section, click **Configuration**.
+1. On the Storage account blade, in the **Data management** section, click **Geo-replication** and note the secondary location. 
 
-1. Click **Upgrade** to change the Storage account kind from **Storage (general purpose v1)** to **StorageV2 (general purpose v2)**.
-
-1. On the **Upgrade storage account** blade, review the warning stating that the upgrade is permanent and will result in billing charges, in the **Confirm upgrade** text box, type the name of the storage account, and click **Upgrade**.
-
-    > **Note**: You have the option to set the account kind to **StorageV2 (general purpose v2)** at the provisioning time. The previous two steps were meant to illustrate that you also have the option to upgrade existing general purpose v1 accounts.
-
-    > **Note**: **StorageV2 (general purpose v2)** offers a number of features, such as, for example, access tiering, not available in with general purpose v1 accounts.
-
-    > **Note**: Review the other configuration options, including **Access tier (default)**, currently set to **Hot**, which you can change, the **Performance**, currently set to **Standard**, which can be set only during account provisioning, and the **Identity-based Directory Service for Azure File Authentication**, which requires Azure Active Directory Domain Services.
-
-1. On the Storage account blade, in the **Settings** section, click **Geo-replication** and note the secondary location. Click the **View all** link under the **Storage endpoints** label and review the **Storage account endpoints** blade.  
-
-    > **Note**: As expected, the **Storage account endpoints** blade contains both primary and secondary endpoints.
-
-1. Switch to the Configuration blade of the Storage account and, in the **Replication** drop-down list, select **Geo-redundant storage (GRS)** and save the change.
-
-1. Switch back to the **Geo-replication** blade and note that the secondary location is still specified. Click the **View all** link under the **Storage endpoints** label and review the **Storage account endpoints** blade.  
-
-    > **Note**: As expected, the **Storage account endpoints** blade contains only primary endpoints.
-
-1. Display again the **Configuration** blade of the Storage account, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
+1. On the Storage account blade, in the **Settings** section, select **Configuration**, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
 
 1. Switch back to the **Geo-replication** blade and note that, at this point, the Storage account has only the primary location.
 
-1. Display again the **Configuration** blade of the Storage account and set **Access tier (default)** to **Cool**.
+1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data which is not accessed frequently.
 
@@ -129,7 +113,7 @@ In this task, you will create and configure an Azure Storage account.
 
 In this task, you will create a blob container and upload a blob into it.
 
-1. On the Storage account blade, in the **Blob service** section, click **Containers**.
+1. On the Storage account blade, in the **Data storage** section, click **Containers**.
 
 1. Click **+ Container** and create a container with the following settings:
 
@@ -140,7 +124,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. In the list of containers, click **az104-07-container** and then click **Upload**.
 
-1. Browse to **\\Allfiles\\Module_07\\LICENSE** on your lab computer and click **Open**, then click **Upload**.
+1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
 
@@ -207,7 +191,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
 
-    > **Note**: At this point, you no longer have access to the container.
+    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
+
+    > **Note**: At this point, you do not have permissions to change the Authentication method.
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
@@ -221,7 +207,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Assign access to | **User, group, or service principal** |
     | Select | the name of your user account |
 
-1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can access to container again.
+1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
@@ -229,9 +215,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 In this task, you will create and configure Azure Files shares.
 
-    > **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
+> **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **File service** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
 1. Click **+ File share** and create a file share with the following settings:
 
@@ -272,7 +258,7 @@ In this task, you will create and configure Azure Files shares.
 
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Settings** section, click **Networking** and then click **Firewalls and virtual networks**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks**.
 
 1. Click the **Selected networks** option and review the configuration settings that become available once this option is enabled.
 
@@ -286,7 +272,7 @@ In this task, you will configure network access for Azure Storage.
 
     > **Note**: This is expected, since you are connecting from your client IP address.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and open Azure Cloud Shell pane.
+1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 

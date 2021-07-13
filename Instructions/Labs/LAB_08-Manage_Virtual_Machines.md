@@ -25,6 +25,11 @@ In this lab, you will:
 
 ## Estimated timing: 50 minutes
 
+## Architecture diagram
+
+![image](../media/lab08.png)
+
+
 ## Instructions
 
 ### Exercise 1
@@ -90,6 +95,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | accept the default value |
+    | Patch orchestration options | **Manual updates** |  
 
     >**Note**: If necessary, select an existing storage account in the dropdown list. Record the name of the storage account. You will use it in the next task.
 
@@ -114,11 +120,12 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
+    | Enable Hotpatching | **false** |
     | Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
-1. Enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
 
     >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
 
@@ -128,7 +135,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
 
-1. On the storage account blade, in the **Blob service** section, click **Containers** and then click **+ Container**.
+1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
 1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
 
@@ -167,7 +174,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
 
- >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
+   >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
    ```json
         {
@@ -191,9 +198,9 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
    ```
 
- >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
+   >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
 
-1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
@@ -267,7 +274,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
+1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **35** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
                     "vmSize": "Standard_DS1_v2"
@@ -276,7 +283,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line **50** (`"dataDisks": [ ]` line) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line **55** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
                     "dataDisks": [
@@ -302,9 +309,9 @@ In this task you will scale compute for Azure virtual machines by changing their
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
-1. Click **Save** and, back on the **Custom template** blade, enable the checkbox **I agree to the terms and conditions stated above** and click **Purchase**.
+1. Click Save and, back on the Custom template blade, click Review + Create and, on the Review + Create blade, click Create.
 
-    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
+    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
 
 1. Back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
@@ -342,7 +349,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
 
-1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add**, click **+ Virtual machine**.
+1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add** (or **+ Create**).
 
 1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:
 
@@ -448,7 +455,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
 
-1. On the storage account blade, in the **Blob service** section, click **Containers** and then click **+ Container**.
+1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
 1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
 
@@ -571,7 +578,7 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Storage type | **Standard HDD** |
     | Size (GiB) | **32** |
 
-1. Save the change, in the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. Save the change, in the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
@@ -603,7 +610,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close the Cloud Shell pane.
 
-1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
 #### Clean up resources
 
