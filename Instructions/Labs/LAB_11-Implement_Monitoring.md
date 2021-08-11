@@ -84,7 +84,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
 1. In the Azure portal, search for and select **Log Analytics workspaces** and, on the **Log Analytics workspaces** blade, click **+ Add**.
 
-1. On the **Basics** tab of the **Create Log Analytics workspace** blade, the following settings, click **Review + Create** and then click **Create**:
+1. On the **Basics** tab of the **Create Log Analytics workspace** blade, enter the following settings, click **Review + Create** and then click **Create**:
 
     | Settings | Value |
     | --- | --- |
@@ -298,7 +298,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: The names of several tables correspond to the solutions you installed earlier in this lab.
 
-1. Hover the mouse over the **VMComputer** entry and click the **Preview data** icon.
+1. Hover the mouse over the **VMComputer** entry and click the **See Preview data** icon.
 
 1. If any data is available, in the **Update** pane, click **Use in editor**.
 

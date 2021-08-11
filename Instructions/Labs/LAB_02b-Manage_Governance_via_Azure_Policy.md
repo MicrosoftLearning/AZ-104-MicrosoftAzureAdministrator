@@ -122,9 +122,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
-1. On the resource group blade, click **+ Add** and then **+ Marketplace**.
-
-1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
+1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create** and then click **Create**:
 
@@ -176,7 +174,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the resource group if missing** |
+    | Policy to remediate | **Inherit a tag from the subscription if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
@@ -188,9 +186,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
-1. On the resource group blade, click **+ Add** and **+ Marketplace**.
-
-1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
+1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review + create**:
 
