@@ -42,7 +42,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Add**.
 
-1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Azure Spot Instance. Unchecked by default -->
+1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Azure Spot Instance and Windows Server licenses. Unchecked by default -->
 
     | Setting | Value |
     | --- | --- |
@@ -57,7 +57,6 @@ In this task, you will deploy Azure virtual machines into different availability
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
     | Public inbound ports | **None** |
-    | Would you like to use an existing Windows Server license? | **No** |
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Enable Ultra Disk Compatibility. Unchecked by default -->
 
