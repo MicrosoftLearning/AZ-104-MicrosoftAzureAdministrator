@@ -42,7 +42,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Add**.
 
-1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Azure Spot Instance. Unchecked by default -->
 
     | Setting | Value |
     | --- | --- |
@@ -53,19 +53,17 @@ In this task, you will deploy Azure virtual machines into different availability
     | Availability options | **Availability zone** |
     | Availability zone | **1** |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
-    | Azure Spot instance | **No** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **No** |
 
-1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Enable Ultra Disk Compatibility. Unchecked by default -->
 
     | Setting | Value |
     | --- | --- |
     | OS disk type | **Premium SSD** |
-    | Enable Ultra Disk compatibility | **No** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
@@ -78,7 +76,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
 
-1. Click **OK** and, back on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **OK** and, back on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):<!-- removing instruction for Place this virtual machine behind an existing load balancing solution. Unchecked by default -->
 
     | Setting | Value |
     | --- | --- |
@@ -87,7 +85,6 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
      | Accelerated networking | **Off**
-    | Place this virtual machine behind an existing load balancing solution? | **No** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -351,7 +348,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Add** (or **+ Create**).
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:<!-- Removing instructions for Azure Spot instance, uncheck by default.  Also removing instructions for Windows Server license due to change in UI --> 
 
     | Setting | Value |
     | --- | --- |
@@ -359,13 +356,12 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Resource group | the name of a new resource group **az104-08-rg02** |
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
-    | Availability zone | **Zones 1, 2, 3** |
+    | Availability zone | select all 3 Availability Zone boxes |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
     | Azure Spot instance | **No** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Pa55w.rd1234** |
-    | Already have a Windows Server license? | **No** |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
