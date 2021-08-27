@@ -77,9 +77,6 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    "sourceUri": {
        "type": "String"
    },
-   "sourceImageVersionId": {
-       "type": "String"
-   },
    "osType": {
        "type": "String"
    },
