@@ -232,7 +232,6 @@ In this task, you will create and configure Azure Files shares.
     | Setting | Value |
     | --- | --- |
     | Name | **az104-07-share** |
-    | Quota | **1024** |
 
 1. Click the newly created file share and click **Connect**.
 
