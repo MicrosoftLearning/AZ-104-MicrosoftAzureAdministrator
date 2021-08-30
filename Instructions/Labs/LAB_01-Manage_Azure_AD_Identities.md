@@ -62,9 +62,9 @@ In this task, you will create and configure Azure AD users.
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
 
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and **Initial password** to the notepad. You will need it later in this task.
 
-1. In the list of users, click the newly created user account to display its blade.
+1. In the list of users, click the newly created user account **az104-01a-aaduser1** to display its blade.
 
 1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
 
@@ -102,7 +102,7 @@ In this task, you will create and configure Azure AD users.
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
-1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
+1. Back in the Azure portal Azure portal, navigate back to the Azure AD tenant blade where you are signed in with your **user account**, navigate to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
 
     >**Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
@@ -112,7 +112,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Refresh the browser window to verify that the activation was successful. 
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, click on +Assign then click on + add Users and Groups and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
