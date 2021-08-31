@@ -1,4 +1,5 @@
 # Lab 09a - Implement Web Apps
+# Student lab manual
 
 ## Lab scenario
 
@@ -27,14 +28,14 @@ In this task, you will create an Azure web app.
 
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ New**.
+1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Add**.
 
 1. On the **Basics** tab of the **Web App** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-09a-rg1-[DeploymentID]** |
+    | Resource group | the name of a new resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 7.3** |
@@ -60,10 +61,10 @@ In this task, you will create a staging deployment slot.
 
 1. Click **+ Add slot**, and add a new slot with the following settings:
 
-    | Setting |                Value |
+    | Setting | Value |
     | --- | ---|
-    | Name |                   **staging** |
-    | Clone settings from |    **Do not clone settings**|
+    | Name | **staging** |
+    | Clone settings from | **Do not clone settings**|
 
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
@@ -102,9 +103,17 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    
+    ![image](../media/cloudhell01.png)
+    
+    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+
+    ![image](../media/cloudhell02.png)
+
+1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 1. From the Cloud Shell pane, run the following to clone the remote repository containing the code for the web app.
 
@@ -200,10 +209,8 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
-   >**Note**: DeploymentID is the deployment-id of your lab and if need to know it, please find it in environment details tab. Please replace [DeploymentID] with deployment-id
-
    ```powershell
-   $rgName = 'az104-09a-rg1-[DeploymentID]'
+   $rgName = 'az104-09a-rg1'
 
    $webapp = Get-AzWebApp -ResourceGroupName $rgName
    ```
@@ -225,6 +232,26 @@ In this task, you will configure and test autoscaling of Azure web app.
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
 1. Close the Cloud Shell pane.
+
+#### Clean up resources
+
+   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+
+1. List all resource groups created throughout the labs of this module by running the following command:
+
+   ```powershell
+   Get-AzResourceGroup -Name 'az104-09a*'
+   ```
+
+1. Delete all resource groups you created throughout the labs of this module by running the following command:
+
+   ```powershell
+   Get-AzResourceGroup -Name 'az104-09a*' | Remove-AzResourceGroup -Force -AsJob
+   ```
+
+    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 
