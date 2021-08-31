@@ -1,5 +1,6 @@
 # Lab 01 - Manage Azure Active Directory Identities
 
+# Student lab manual
 
 ## Lab scenario
 
@@ -26,7 +27,7 @@ In this task, you will create and configure Azure AD users.
 
 >**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant or perform the Task 2 after Task 3 in that new Azure AD tenant.
 
-1. Sign in to the https://portal.azure.com.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
@@ -44,13 +45,13 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name |  **az104-01a-aaduser1** |
-    | Name |  **az104-01a-aaduser1** |
-    | Let me create the password  | **enabled** |
-    | Initial password |  **Pa55w.rd124** |
-    | Usage location |  **United States** |
-    | Job title |  **Cloud Administrator** |
-    | Department |  **IT** |
+    | User name | **az104-01a-aaduser1** |
+    | Name | **az104-01a-aaduser1** |
+    | Let me create the password | enabled |
+    | Initial password | **Pa55w.rd124** |
+    | Usage location | **United States** |
+    | Job title | **Cloud Administrator** |
+    | Department | **IT** |
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
@@ -62,7 +63,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
-1. Open an **InPrivate** browser window and sign in to the https://portal.azure.com using the newly created user account. When prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
@@ -78,12 +79,12 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name |  **az104-01a-aaduser2** |
-    | Name |  **az104-01a-aaduser2** |
-    | Let me create the password  | **enabled** |
-    | Initial password |  **Pa55w.rd124** |
-    | Usage location |  **United States** |
-    | Job title |  **System Administrator** |
+    | User name | **az104-01a-aaduser2** |
+    | Name | **az104-01a-aaduser2** |
+    | Let me create the password | enabled |
+    | Initial password | **Pa55w.rd124** |
+    | Usage location | **United States** |
+    | Job title | **System Administrator** |
     | Department | **IT** |
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
@@ -98,11 +99,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. In the **Manage** section, click **All products**.
 
-1. You will see license with name **Azure Active Directory Premium P2** 
+1. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
 
-1. Verify that there is enough no. of licenses available. We will be using this licenses in the next step 
+1. Refresh the browser window to verify that the activation was successful. 
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, click on **+Assign** then click on **Users and Groups** and assign the license Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
@@ -119,11 +120,10 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Click **Add dynamic query**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, click on **Add expression** to create a new rule with the following settings:
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    |And/OR | **And** |
     | Property | **jobTitle** |
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
@@ -134,21 +134,20 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     | Setting | Value |
     | --- | --- |
-    | Group type |  **Security** |
-    | Group name |  **IT System Administrators** |
-    | Group description |  **Contoso IT system administrators** |
-    | Membership type |  **Dynamic User** |
+    | Group type | **Security** |
+    | Group name | **IT System Administrators** |
+    | Group description | **Contoso IT system administrators** |
+    | Membership type | **Dynamic User** |
 
 1. Click **Add dynamic query**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, click on **Add expression** to create a new rule with the following settings:
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | And/OR | **And** |
-    | Property |  **jobTitle** |
-    | Operator |  **Equals** |
-    | Value |  **System Administrator** |
+    | Property | **jobTitle** |
+    | Operator | **Equals** |
+    | Value | **System Administrator** |
 
 1. Save the rule and, back on the **New Group** blade, click **Create**. 
 
@@ -156,10 +155,10 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     | Setting | Value |
     | --- | --- |
-    | Group type |  **Security** |
-    | Group name |  **IT Lab Administrators** |
-    | Group description |  **Contoso IT Lab administrators** |
-    | Membership type |  **Assigned** |
+    | Group type | **Security** |
+    | Group name | **IT Lab Administrators** |
+    | Group description | **Contoso IT Lab administrators** |
+    | Membership type | **Assigned** |
 
 1. Click **No members selected**.
 
@@ -177,25 +176,25 @@ In this task, you will create a new Azure AD tenant.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
-1. Click **+ Create a tenant** and specify the following setting:
+1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
 
     | Setting | Value |
     | --- | --- |
-    | Tenant type |  **Azure Active Directory** |
+    | Directory type | **Azure Active Directory** |
     
 1. Click **Next : Configuration**
 
     | Setting | Value |
     | --- | --- |
-    | Organization name |  **Contoso Lab** |
-    | Initial domain name |  **any valid DNS name consisting of lower case letters and digits and starting with a letter** | 
-    | Country/Region |  **United States** |
+    | Organization name | **Contoso Lab** |
+    | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
+    | Country/Region | **United States** |
 
-   > **Note**: The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
 1. Click **Review + create** and then click **Create**.
 
-1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new directory: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 #### Task 4: Manage Azure AD guest users.
 
@@ -209,7 +208,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | --- | --- |
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
-    | Let me create the password | **enabled** |
+    | Let me create the password | enabled |
     | Initial password | **Pa55w.rd124** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -226,11 +225,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name |  **az104-01b-aaduser1** |
-    | Email address |  **the User Principal Name you copied earlier in this task** |
-    | Usage location |  **United States** |
-    | Job title |  **Lab Administrator** |
-    | Department |  **IT** |
+    | Name | **az104-01b-aaduser1** |
+    | Email address | the User Principal Name you copied earlier in this task |
+    | Usage location | **United States** |
+    | Job title | **Lab Administrator** |
+    | Department | **IT** |
 
 1. Click **Invite**. 
 
@@ -240,6 +239,30 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
+
+#### Clean up resources
+
+   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
+
+1. In the **Azure Portal** search for **Azure Active Directory** in the search bar. Within **Azure Active Directory** under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Azure Active Directory Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **OK**.
+
+1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** guest user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
+
+1. Repeat the same sequence of steps to delete the remaining user accounts you created in this lab.
+
+1. Navigate to the **Groups - All groups** blade, select the groups you created in this lab, click **Delete**, and, when prompted to confirm, click **OK**.
+
+1. In the Azure portal, display the blade of the Contoso Lab Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+
+1. Navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
+
+1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Azure AD tenant, click **Manage tenant** and then on the next screen, click **Delete tenant**, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
+
+1. Sign out from the Azure portal and sign in back. 
+
+1. Navigate back to the **Delete tenant 'Contoso Lab'** blade and click **Delete**.
+
+> **Note**: You will have to wait for the trial license expiration before you can delete the tenant. This does not incur any additional cost.
 
 #### Review
 
