@@ -1,4 +1,5 @@
 # Lab 03b - Manage Azure resources by Using ARM Templates
+# Student lab manual
 
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
@@ -21,19 +22,19 @@ In this lab, you will:
 
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. Sign in to the https://portal.azure.com.
+1. Sign in to the [**Azure portal**](https://portal.azure.com).
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03a-rg1-[DeploymentID]**.
+1. In the list of resource groups, click **az104-03a-rg1**.
 
-1. On the **az104-03a-rg1-[DeploymentID]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-[DeploymentID] - Deployments** blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
-    >**Note**: Review the content of the template and note that you have the option to download it to the local computer, add it to the library, and re-deploy it.
+    >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, or **Deploy** it again.
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
@@ -43,15 +44,19 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
-    >**Note**: These files are also available as **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
+    >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
+    
+1. Close all **File Explorer** windows.
 
 #### Task 2: Create an Azure managed disk by using an ARM template
 
-1. In the Azure portal, search for and select **Template deployment (Deploy a custom template)**.
+1. In the Azure portal, search for and select **Deploy a custom template**.
+
+1. Click **Template deployment (deploy using custom templates)** found under the **Marketplace** group.
 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the template file you downloaded in the previous task.
+1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
 
 1. Within the editor pane, remove the following lines:
 
@@ -62,9 +67,6 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    "sourceUri": {
        "type": "String"
    },
-   "sourceImageVersionId": {
-       "type": "String"
-   },   
    "osType": {
        "type": "String"
    },
@@ -74,7 +76,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    "hyperVGeneration": {
        "defaultValue": "V1",
        "type": "String"
-   },	   
+   },      
    ```
 
    ```json
@@ -83,26 +85,26 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
     >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
-1. Save the changes.
+1. **Save** the changes.
 
 1. Back on the **Custom deployment** blade, click **Edit parameters**. 
 
-1. On the **Edit parameters** blade, click **Load file** and upload the parameters file **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json** and save the changes.
+1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
 
 1. Back on the **Custom deployment** blade, specify the following settings:
 
-    | Setting |                       Value |
+    | Setting | Value |
     | --- |--- |
-    | Subscription |                **the name of the Azure subscription you are using in this lab** |
-    | Resource Group |              select the existing resource group **az104-03b-rg1-[DeploymentID]** |
-    | Location |                    **the name of any Azure region available in the subscription you are using in this lab** |
-    | Disk Name |                   **az104-03b-disk1** |
-    | Location |                    **the value of the location parameter you noted in the previous task** |
-    | Sku |                         **Standard_LRS** |
-    | Disk Size Gb |                **32** |
-    | Create Option |               **empty** |
-    | Disk Encryption Set Type |    **EncryptionAtRestWithPlatformKey** |
-    | Network Access Policy |       **AllowAll** |	
+    | Subscription | *the name of the Azure subscription you are using in this lab* |
+    | Resource Group | the name of a **new** resource group **az104-03b-rg1** |
+    | Region | the name of any Azure region available in the subscription you are using in this lab |
+    | Disk Name | **az104-03b-disk1** |
+    | Location | the value of the location parameter you noted in the previous task |
+    | Sku | **Standard_LRS** |
+    | Disk Size Gb | **32** |
+    | Create Option | **empty** |
+    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
+    | Network Access Policy | **AllowAll** |
 
 1. Select **Review + Create** and then select **Create**.
 
@@ -112,11 +114,15 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1-[DeploymentID]**.
+1. In the list of resource groups, click **az104-03b-rg1**.
 
-1. On the **az104-03b-rg1-[DeploymentID]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03b-rg1** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **az104-03b-rg1-[DeploymentID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **az104-03b-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+
+#### Clean up resources
+
+   >**Note**: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
 
 #### Review
 
