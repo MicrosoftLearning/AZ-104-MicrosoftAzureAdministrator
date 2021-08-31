@@ -29,9 +29,17 @@ In this lab, we will:
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
-1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    
+    ![image](../media/cloudhell01.png)
+    
+    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+
+    ![image](../media/cloudhell02.png)
+
+1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
 
@@ -55,12 +63,12 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Create a tag with the following settings and save your change:
 
-    | Setting |      Value |
+    | Setting | Value |
     | --- | --- |
-    | Name |        **Role** |
-    | Value |       **Infra** |
+    | Name | **Role** |
+    | Value | **Infra** |
 
-1. Apply the tag and navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
+1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
 #### Task 2: Enforce tagging via an Azure policy
 
@@ -70,35 +78,35 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. 
 
-1.  Search and then click on the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
+1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
-    | Setting |          Value |
+    | Setting | Value |
     | --- | --- |
-    | Subscription |     **the name of the Azure subscription you are using in this lab** |
-    | Resource Group |   **the name of the resource group containing the Cloud Shell account you identified in the previous task** |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
 
     >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
-    | Setting |               Value |
+    | Setting | Value |
     | --- | --- |
-    | Assignment name |      **Require Role tag with Infra value**|
-    | Description |          **Require Role tag with Infra value for all resources in the Cloud Shell resource group**|
-    | Policy enforcement |   **Enabled** |
+    | Assignment name | **Require Role tag with Infra value**|
+    | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group**|
+    | Policy enforcement | Enabled |
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
 1. Click **Next** and set **Parameters** to the following values:
 
-    | Setting |       Value |
+    | Setting | Value |
     | --- | --- |
-    | Tag Name |     **Role** |
-    | Tag Value |    **Infra** |
+    | Tag Name | **Role** |
+    | Tag Value | **Infra** |
 
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -112,21 +120,17 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
-1. On the resource group blade, click **+ Add**.
+1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
-1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create** and then click **Create**:
 
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
-
-    | Setting |                   Value |
+    | Setting | Value |
     | --- | --- |
-    | Storage account name |     **any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter** |
+    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-1. Click on **create**.
+1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
-1. Note that the validation failed. Click the link **Validation failed. Click here to view details** to display the **Errors** blade and identify the reason for the failure.
-
-    >**Note**: The error message states that the resource deployment was disallowed by the policy. If you don't get the expected result just signout and signin and try to create storage acount again
+    >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
@@ -142,33 +146,33 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
-    | Setting |               Value |
+    | Setting | Value |
     | --- | --- |
-    | Subscription |         **the name of the Azure subscription you are using in this lab** |
-    | Resource Group |       **the name of the resource group containing the Cloud Shell account you identified in the first task** |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
-    | Setting |              Value |
+    | Setting | Value |
     | --- | --- |
-    | Assignment name |      **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Description |          **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Policy enforcement |   **Enabled** |
+    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
+    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
+    | Policy enforcement | Enabled |
 
 1. Click **Next** and set **Parameters** to the following values:
 
-    | Setting |      Value |
+    | Setting | Value |
     | --- | --- |
-    | Tag Name |    **Role** |
+    | Tag Name | **Role** |
 
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults):
 
-    | Setting |                      Value |
+    | Setting | Value |
     | --- | --- |
-    | Create a remediation task |    **enabled** |
-    | Policy to remediate |          **Inherit a tag from the resource group if missing** |
+    | Create a remediation task | enabled |
+    | Policy to remediate | **Inherit a tag from the subscription if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
@@ -180,15 +184,13 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
-1. On the resource group blade, click **+ Add**.
+1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
-1. On the **New** blade, search for and select **Storage account**, and click **Create**. 
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review + create**:
 
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their defaults) and click **Review + create**:
-
-    | Setting |                  Value |
+    | Setting | Value |
     | --- | --- |
-    | Storage account name |     **any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter** |
+    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Verify that this time the validation passed and click **Create**.
 
