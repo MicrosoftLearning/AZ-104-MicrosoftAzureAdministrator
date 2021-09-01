@@ -396,10 +396,16 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Region| name of the Azure region into which you deployed all other resources in this lab |
     | Type | **Public** |
     | SKU | **Standard** |
+    
+1. Click Next: **Frontend IP configuration** >, on the Frountend IP configuration tab click **+ Add a frountend ip** , under **Add frontend IP address** window add following settings
+ 
+    | Frountend IP name | **az104-06-pip4** |
+    | IP version | **IPv4** |
+    | IP type | **IP address** |
+    
     | Public IP address | **Create new** |
-    | Public IP address name | **az104-06-pip4** |
+    | name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
-    | Add a public IPv6 address | **No** |
 
 1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.
 
