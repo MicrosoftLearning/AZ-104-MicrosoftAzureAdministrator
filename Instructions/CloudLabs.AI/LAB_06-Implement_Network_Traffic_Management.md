@@ -49,11 +49,10 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
    ```powershell
-   $location = '[Azure_region]'
-
-   $rgName = 'az104-06-rg1'
-
-   New-AzResourceGroup -Name $rgName -Location $location
+   Get-AzResourceGroup
+   
+   $rgName = 'az104-06-rg1-[DeploymentId]'
+   
    ```
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
@@ -63,6 +62,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
+      
    ```
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
@@ -70,7 +70,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
 
    ```powershell
-   $rgName = 'az104-06-rg1'
+   $rgName = 'az104-06-rg1-[DeploymentId]'
    $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
    $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
 
@@ -179,7 +179,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -198,7 +198,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -217,7 +217,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -282,7 +282,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Location | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt23** |
     | Propagate gateway routes | **No** |
@@ -324,7 +324,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Region | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt32** |
     | Propagate gateway routes | **No** |
@@ -366,7 +366,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-06-rg1-[DeploymentId]** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -391,7 +391,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg4** |
+    | Resource group | az104-06-rg1-[DeploymentId] |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
     | Type | **Public** |
@@ -399,21 +399,19 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     
 1. Click Next: **Frontend IP configuration** >, on the Frountend IP configuration tab click **+ Add a frountend ip** , under **Add frontend IP address** window add following settings
  
+    | Setting | Value |
+    | --- | --- |
     | Frountend IP name | **az104-06-pip4** |
     | IP version | **IPv4** |
     | IP type | **IP address** |
-    
     | Public IP address | **Create new** |
+    
+    | Setting | Value |
+    | --- | --- |
     | name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
 
-1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.
-
-    > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
-
-1. On the deployment blade, click **Go to resource**.
-
-1. On the **az104-06-lb4** load balancer blade, in the **Settings** section, click **Backend pools**, and click **+ Add**.
+1. Click Next: **Backend pools**, and click **+ Add**.
 
 1. Add a backend pool with the following settings (leave others with their default values):
 
@@ -426,20 +424,6 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
     | Virtual machine | **az104-06-vm1** |
     | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
-
-1. Click **Add**
-
-1. Wait for the backend pool to be created, in the **Settings** section, click **Health probes**, and then click **+ Add**.
-
-1. Add a health probe with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Name | **az104-06-lb4-hp1** |
-    | Protocol | **TCP** |
-    | Port | **80** |
-    | Interval | **5** |
-    | Unhealthy threshold | **2** |
 
 1. Click **Add**
 
@@ -456,13 +440,28 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Port | **80** |
     | Backend port | **80** |
     | Backend pool | **az104-06-lb4-be1** |
-    | Health probe | **az104-06-lb4-hp1** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
+    
+1. click **create new** under **Health probes**, on the **Add load balancing rules** blade.
 
-1. Click **Add**
+    Add a health probe with the following settings:
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-lb4-hp1** |
+    | Protocol | **TCP** |
+    | Port | **80** |
+    | Interval | **5** |
+    | Unhealthy threshold | **2** |
+
+1. Click **OK** and back on the **Add load balancing rules** blade, click **Add**.
+
+1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
+
+    > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
 1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
 
@@ -502,7 +501,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg5** |
+    | Resource group | az104-06-rg1-[DeploymentId] |
     | Application gateway name | **az104-06-appgw5** |
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
