@@ -70,7 +70,6 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
 
    ```powershell
-   $rgName = 'az104-06-rg1-[DeploymentId]'
    $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
    $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
 
@@ -427,9 +426,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Click **Add**
 
-1. Wait for the health probe to be created, in the **Settings** section, click **Load balancing rules**, and then click **+ Add**.
-
-1. Add a load balancing rule with the following settings (leave others with their default values):
+1. Click **Next: Inbound rules >**, Add a load balancing rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -444,8 +441,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
+    | Healh probe | **Create new** |
     
-1. click **create new** under **Health probes**, on the **Add load balancing rules** blade.
+1. click **create new** under **Health probe**, on the **Add load balancing rules** blade.
 
     Add a health probe with the following settings:
 
@@ -463,7 +461,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource** and click **Overview**, and note the value of the **Public IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
@@ -515,7 +513,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Frontend IP address type | **Public** |
-    | Public IP address| the name of a new public ip address **az104-06-pip5** |
+    | Public IP address name| **az104-06-pip5** |
 
 1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
 
