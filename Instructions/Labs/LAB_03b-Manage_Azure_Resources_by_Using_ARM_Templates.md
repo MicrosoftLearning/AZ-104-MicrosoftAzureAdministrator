@@ -62,8 +62,6 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Deploy a custom template**.
 
-1. Click **Template deployment (deploy using custom templates)** found under the **Marketplace** group.
-
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
 1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
