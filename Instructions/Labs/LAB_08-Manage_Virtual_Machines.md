@@ -40,7 +40,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Sign in to the [Azure portal](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -52,7 +52,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
     | Availability zone | **1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Image | **Windows Server 2019 Datacenter - Gen1/Gen2** |
     | Azure Spot instance | **No** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
