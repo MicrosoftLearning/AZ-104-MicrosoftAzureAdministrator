@@ -38,7 +38,7 @@ In this task, you will create an Azure web app.
 
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Add**.
+1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Web App** blade, specify the following settings (leave others with their default values):
 
@@ -65,7 +65,7 @@ In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Add a Deployment slot**.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
