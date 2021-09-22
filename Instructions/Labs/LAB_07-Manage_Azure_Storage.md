@@ -76,7 +76,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ New**.
+1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
