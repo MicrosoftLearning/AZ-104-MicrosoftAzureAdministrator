@@ -71,7 +71,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ New**.
+1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
@@ -79,7 +79,7 @@ In this task, you will create a recovery services vault.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-10-rg1** |
-    | Name | **az104-10-rsv1** |
+    | Vault Name | **az104-10-rsv1** |
     | Region | the name of a region where you deployed the two virtual machines in the previous task |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
