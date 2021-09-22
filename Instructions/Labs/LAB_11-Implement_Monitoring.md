@@ -82,7 +82,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
-1. In the Azure portal, search for and select **Log Analytics workspaces** and, on the **Log Analytics workspaces** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Log Analytics workspaces** and, on the **Log Analytics workspaces** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create Log Analytics workspace** blade, enter the following settings, click **Review + Create** and then click **Create**:
 
@@ -97,7 +97,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
-1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Create**.
 
 1. On the **Add Automation Account** blade, specify the following settings, and click **Create**:
 
