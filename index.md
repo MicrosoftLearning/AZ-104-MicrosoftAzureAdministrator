@@ -1,5 +1,4 @@
----
-title: Online Hosted Instructions
+---yrhfgjftdfghkructions
 permalink: index.html
 layout: home
 ---
