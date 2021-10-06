@@ -1,5 +1,3 @@
-Patty's 2nd edit in GH
-
 ---
 lab:
     title: '02a - Manage Subscriptions and RBAC'
