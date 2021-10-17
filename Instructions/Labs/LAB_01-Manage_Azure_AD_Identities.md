@@ -137,7 +137,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
 
-1. Save the rule and, back on the **New Group** blade, click **Create**. 
+1. Save the rule by clicking **+Add expression** and **Save**. B back on the **New Group** blade, click **Create**. 
 
 1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
 
@@ -158,7 +158,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **System Administrator** |
 
-1. Save the rule and, back on the **New Group** blade, click **Create**. 
+1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
 
 1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button, and create a new group with the following settings:
 
@@ -168,7 +168,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Group name | **IT Lab Administrators** |
     | Group description | **Contoso IT Lab administrators** |
     | Membership type | **Assigned** |
-
+    
 1. Click **No members selected**.
 
 1. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
