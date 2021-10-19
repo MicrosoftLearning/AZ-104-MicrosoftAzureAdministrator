@@ -44,16 +44,15 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** and **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
+1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine) and 
 
-    >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`
+    >**Note**: Replace the DID with the unique deployment id, which can be found under the envrionment details tab. To list the names of Azure regions, run `(Get-AzLocation).Location`. 
 
    ```powershell
    $location = '[Azure_region]'
 
-   $rgName = 'az104-07-rg0'
-
-   New-AzResourceGroup -Name $rgName -Location $location
+   $rgName = 'az104-07-rg0-DID'
+   
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
@@ -73,14 +72,14 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ New**.
+1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **new** resource group **az104-07-rg1** |
+    | Resource group | the name of a **new** resource group **az104-07-rg1-DID** |
     | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
@@ -221,6 +220,7 @@ In this task, you will create and configure Azure Files shares.
     | Setting | Value |
     | --- | --- |
     | Name | **az104-07-share** |
+    | Tier | **transaction optimized** |
 
 1. Click the newly created file share and click **Connect**.
 
@@ -284,26 +284,6 @@ In this task, you will configure network access for Azure Storage.
     > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
 
 1. Close the Cloud Shell pane.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-07*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 
