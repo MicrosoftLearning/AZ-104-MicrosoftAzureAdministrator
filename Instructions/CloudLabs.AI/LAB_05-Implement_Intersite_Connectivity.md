@@ -52,6 +52,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 
    >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
+   
    >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
