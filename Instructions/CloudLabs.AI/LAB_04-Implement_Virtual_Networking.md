@@ -117,9 +117,9 @@ In this task, you will configure static assignment of public and private IP addr
 
    >**Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
-1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1**.
+1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-[Deployment-ID]**.
 
-1. On the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vnet1**.
+1. On the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
@@ -159,9 +159,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Back on the **ipconfig1** blade, save the changes.
 
-1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
 
-1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
     >**Note**: You will need both IP addresses in the last task of this lab.
 
@@ -169,7 +169,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
-1. In the Azure portal, navigate back to the **az104-04-rg1** resource group blade, and in the list of its resources, click **az104-04-vm0**.
+1. In the Azure portal, navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
 1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
 
@@ -177,14 +177,14 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
 
-1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
 1. Create a network security group with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1** |
+    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
     | Name | **az104-04-nsg01** |
     | Region | the name of the Azure region where you deployed all other resources in this lab |
 
@@ -207,6 +207,8 @@ In this task, you will configure network security groups in order to allow for r
     | Action | **Allow** |
     | Priority | **300** |
     | Name | **AllowRDPInBound** |
+
+1. Click **Add**
 
 1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
 
@@ -232,14 +234,14 @@ In this task, you will configure network security groups in order to allow for r
 
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
-1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Create**.
 
 1. Create a private DNS zone with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1** |
+    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
     | Name | **contoso.org** |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
@@ -288,14 +290,14 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Use the domain name search to identify a domain name which is not in use.
 
-1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Add**.
+1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Create**.
 
 1. Create a DNS zone with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1** |
+    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
     | Name | the DNS domain name you identified earlier in this task |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
@@ -353,26 +355,6 @@ In this task, you will configure external DNS name resolution by using Azure pub
    ```
 
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-04*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-04*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 
