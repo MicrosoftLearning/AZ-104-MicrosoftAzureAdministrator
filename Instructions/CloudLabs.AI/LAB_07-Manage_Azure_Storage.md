@@ -80,10 +80,12 @@ In this task, you will create and configure an Azure Storage account.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a **new** resource group **az104-07-rg1-DID** |
-    | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
+    | Storage account name | strgaz104t07DID |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
+
+    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the envrionment details tab.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
