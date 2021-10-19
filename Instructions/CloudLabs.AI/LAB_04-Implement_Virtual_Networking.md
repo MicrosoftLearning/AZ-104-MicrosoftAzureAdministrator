@@ -97,7 +97,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files you uploaded:
 
    ```powershell
-   $rgName = 'az104-04-rg1'
+   $rgName = 'az104-04-rg1-[deployment-id]'
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
