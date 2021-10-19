@@ -10,7 +10,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 In this lab, you will:
 
 + Task 1: Start a Bash session in Azure Cloud Shell
-+ Task 2: Create a resource group and an Azure managed disk by using Azure CLI
++ Task 2: Use the existed resource group and an Azure managed disk by using Azure CLI
 + Task 3: Configure the managed disk by using Azure CLI
 
 ## Estimated timing: 20 minutes
@@ -33,7 +33,7 @@ In this task, you will open a Bash session in Cloud Shell.
 
 1. Ensure **Bash** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-#### Task 2: Create a resource group and an Azure managed disk by using Azure CLI
+#### Task 2: Use the existed resource group and an Azure managed disk by using Azure CLI
 
 In this task, you will create a resource group and an Azure managed disk by using Azure CLI session within Cloud Shell.
 
