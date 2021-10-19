@@ -51,7 +51,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
 
-   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
+   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**.
+   
    
    >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
 
