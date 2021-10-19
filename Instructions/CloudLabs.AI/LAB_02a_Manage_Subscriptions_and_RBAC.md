@@ -49,7 +49,7 @@ In this task, you will create and configure management groups.
     
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
-1. On the **Management groups** blade, click **+ Add**.
+1. On the **Management groups** blade, click **+ Add** or **+ Create**.
 
     >**Note**: If you have not previously created Management Groups, select **Start using management groups**
 
@@ -72,7 +72,7 @@ In this task, you will create and configure management groups.
 
 In this task, you will create a definition of a custom RBAC role.
 
-1. From the lab computer, open the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** in Notepad and review its content:
+1. From the lab computer, open the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\02\az104-02a-customRoleDefinition.json** in Notepad and review its content:
 
    ```json
    {
@@ -108,7 +108,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\02\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
@@ -156,46 +156,6 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     >**Note**: If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. 
-
-   >**Note**: Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
-
-1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**.
-
-1. On the **Users - All users** blade, click **az104-02-aaduser1**.
-
-1. On the **az104-02-aaduser1 - Profile** blade, copy the value of **Object ID** attribute.
-
-1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
-
-1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** Azure Active Directory user account you copied earlier in this task):
-
-   ```powershell
-   $scope = (Get-AzRoleAssignment -RoleDefinitionName 'Support Request Contributor (Custom)').Scope
-
-   Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
-   ```
-
-1. From the Cloud Shell pane, run the following to remove the custom role definition:
-
-   ```powershell
-   Remove-AzRoleDefinition -Name 'Support Request Contributor (Custom)' -Force
-   ```
-
-1. In the Azure portal, navigate back to the **Users - All users** blade of the **Azure Active Directory**, and delete the **az104-02-aaduser1** user account.
-
-1. In the Azure portal, navigate back to the **Management groups** blade. 
-
-1. On the **Management groups** blade, select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
-
-   >**Note**: It is likely that the target management group is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
-   
-1. Select **Refresh** to verify that the subscription has successfully moved to the **Tenant Root management group**.
-
-1. Navigate back to the **Management groups** blade, right click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
 
 #### Review
 
