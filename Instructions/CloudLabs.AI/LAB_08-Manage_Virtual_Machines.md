@@ -546,7 +546,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**.
 
    ```powershell
-   $rgName = 'az104-08-rg02'
+   $rgName = 'az104-08-rg02-[Deployment-Id]'
 
    $lbpipName = 'az10408vmss0-ip'
 
