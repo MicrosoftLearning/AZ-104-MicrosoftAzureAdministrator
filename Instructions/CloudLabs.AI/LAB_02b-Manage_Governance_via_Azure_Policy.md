@@ -178,7 +178,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
     >**Note**: To verify that the new policy assignment is in effect, you will create another Azure Storage account in the same resource group without explicitly adding the required tag. 
     
-    >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
+    >**Note**: It might take between 5 and 30 minutes for the policy to take effect.
     
     >**Note**: logout and login back to azure portal to take effect quickly.
 
