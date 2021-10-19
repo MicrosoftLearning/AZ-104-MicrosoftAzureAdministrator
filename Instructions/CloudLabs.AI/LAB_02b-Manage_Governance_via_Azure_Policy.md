@@ -29,6 +29,8 @@ In this lab, we will:
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
+1. In the Azure portal, open **Cloud Shell** pane by clicking on the toolbar icon directly to the right of the search textbox.
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
@@ -122,17 +124,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create** and then click **Create**:
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
-
-    >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
-
-    >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
+1. Once you click on **Review + create**, you should see the **Validation failed. Required information is missing or not valid.** message. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**. Close this resource create operation.
 
 #### Task 3: Apply tagging via an Azure policy
 
@@ -172,7 +170,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the subscription if missing** |
+    | Policy to remediate | **Inherit a tag from the resource group if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
@@ -181,6 +179,8 @@ In this task, we will use a different policy definition to remediate any non-com
     >**Note**: To verify that the new policy assignment is in effect, you will create another Azure Storage account in the same resource group without explicitly adding the required tag. 
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
+    
+    >**Note**: logout and login back to azure portal to take effect quickly.
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
@@ -195,24 +195,6 @@ In this task, we will use a different policy definition to remediate any non-com
 1. Verify that this time the validation passed and click **Create**.
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. 
-
-   >**Note**: Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
-
-1. In the portal, search for and select **Policy**.
-
-1. In the **Authoring** section, click **Assignments**, click the ellipsis icon to the right of the assignment you created in the previous task and click **Delete assignment**. 
-
-1. In the portal, search for and select **Storage accounts**.
-
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Save**. 
-
-1. In the portal, again search for and select **Storage accounts** or use the menu at the top to select **Storage accounts**
-
-1. In the list of storage accounts, select the storage account you created in the last task of this lab, click **Delete**, when prompted for the confirmation, in the **Confirm delete** type **yes** and click **Delete**. 
 
 #### Review
 
