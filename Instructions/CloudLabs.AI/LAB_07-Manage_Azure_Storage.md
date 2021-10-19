@@ -85,7 +85,7 @@ In this task, you will create and configure an Azure Storage account.
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the envrionment details tab.
+    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
