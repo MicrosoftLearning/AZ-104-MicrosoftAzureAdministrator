@@ -43,27 +43,23 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines for example **eastus** and also replace deployment id value from the environment details tab):
 
    ```powershell
    $location = '[Azure_region]'
 
-   $rgName = 'az104-10-rg0'
+   $rgName = 'az104-10-rg0-{DeplymentID}'
 
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-10-vms-edge-template.json `
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
+
+    >**Note**: you can find list of locations using following command **az account list-locations -o table**.
 
 1. Minimize Cloud Shell (but do not close it).
 
@@ -73,14 +69,14 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ New**.
+1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-10-rg1** |
+    | Resource group | the name of a new resource group **az104-10-rg1-{Deployment ID}** |
     | Name | **az104-10-rsv1** |
     | Region | the name of a region where you deployed the two virtual machines in the previous task |
 
