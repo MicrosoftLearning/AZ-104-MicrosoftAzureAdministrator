@@ -44,7 +44,7 @@ In this task, you will use the Azure portal to use the existed resource groups a
 
 #### Task 2: Move resources between resource groups 
 
-In this task, we will move the disk resource you created in the previous task to a resource group. 
+In this task, we will move the disk resource you used in the previous task to a resource group. 
 
 1. Search for and select **Resource groups**. 
 
@@ -54,7 +54,7 @@ In this task, we will move the disk resource you created in the previous task to
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Below the **Resource group** text box, select the **az104-03a-rg2-[Deployment-ID]** existed Resource group in the text box. On the**Resource to move** tab, Wait untill Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
+1. Below the **Resource group** text box, select the **az104-03a-rg2-[Deployment-ID]** existed Resource group in the text box. On the **Resource to move** tab, Wait untill Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
