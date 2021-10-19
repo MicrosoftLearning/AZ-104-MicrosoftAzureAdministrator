@@ -9,7 +9,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 In this lab, we will:
 
-+ Task 1: Create resource groups and deploy resources to resource groups
++ Task 1: Use the existed resource groups and deploy resources to resource groups
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
 
@@ -19,9 +19,9 @@ In this lab, we will:
 
 ### Exercise 1
 
-#### Task 1: Create resource groups and deploy resources to resource groups
+#### Task 1: Use the existed resource groups and deploy resources to resource groups
 
-In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
+In this task, you will use the Azure portal to use the existed resource groups and create a disk in the resource group.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -48,7 +48,7 @@ In this task, we will move the disk resource you created in the previous task to
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-[Deployment-ID]** resource group you created in the previous task.
+1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-[Deployment-ID]** resource group you used in the previous task.
 
 1. From the **Overview** blade of the resource group, in the list of resource group resources, select the entry representing the newly created disk, click **Move** in the toolbar, and, in the drop-down list, select **Move to another resource group**.
 
@@ -101,12 +101,6 @@ In this task, you will apply a resource lock to an Azure resource group containi
 1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Size + performance**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and click **Resize** to apply the change. Verify that the change was successful.
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
-
-#### Clean up resources
-
-   >**Note**: Do not delete resources you deployed in this lab. You will be using them in the next lab of this module. Remove only the resource lock you created in this lab.
-
-1. Navigate to the **az104-03a-rg3-[Deployment-ID]** resource group blade, display its **Locks** blade, and remove the lock **az104-03a-delete-lock** by clicking the **Delete** link on the right-hand side of the **Delete** lock entry.
 
 #### Review
 
