@@ -178,8 +178,16 @@ In this task, you will scale horizontally the number of pods and then number of 
     ```
 
     > **Note**: Review the output of the command and verify that the number of pods increased to 2.
+    
+1. Minimize the cloudshell and select **az104-9c-aks1** Kubernetes service.
 
-1. From the **Cloud Shell** pane, run the following to scale out the cluster by increasing the number of nodes to 2:
+1. Under **Settings**, select **Node Pools**. And select the **agentpool**.
+
+1. On the **agentpool | Overview** page select **Scale node pool**.
+
+1. On the scale method select **Manual** and **Apply**.
+
+1. Now reopen the minimized Cloudshell and from the **Cloud Shell** pane, run the following to scale out the cluster by increasing the number of nodes to 2:
 
     ```sh
     az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
@@ -224,26 +232,6 @@ In this task, you will scale horizontally the number of pods and then number of 
     ```
 
 1. Close the **Cloud Shell** pane.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].name" --output tsv
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az104-09c')].[name]" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 
