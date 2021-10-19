@@ -26,11 +26,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03a-rg1**.
+1. In the list of resource groups, click **az104-03a-rg1-[Deployment-ID]**.
 
-1. On the **az104-03a-rg1** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03a-rg1-[Deployment-ID]** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1 - Deployments** blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-[Deployment-ID] - Deployments** blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
@@ -96,7 +96,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | the name of a **new** resource group **az104-03b-rg1** |
+    | Resource Group | select the existed resource group **az104-03b-rg1-[Deployment-ID]** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
     | Disk Name | **az104-03b-disk1** |
     | Location | the value of the location parameter you noted in the previous task |
@@ -114,15 +114,11 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1**.
+1. In the list of resource groups, click **az104-03b-rg1-[Deployment-ID]**.
 
-1. On the **az104-03b-rg1** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03b-rg1-[Deployment-ID]** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **az104-03b-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
-
-#### Clean up resources
-
-   >**Note**: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
+1. From the **az104-03b-rg1-[Deployment-ID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
 #### Review
 
