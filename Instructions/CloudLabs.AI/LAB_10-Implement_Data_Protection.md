@@ -29,6 +29,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
+1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-{DeplymentID}** resource group, on the overview page of **az104-10-rg0-{DeplymentID}** copy the location and paste it in a notepad you will needed it in next steps
+
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
@@ -45,7 +47,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines for example **eastus** and also replace deployment id value from the environment details tab):
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location you copied in previous steps and also replace deployment id value from the environment details tab):
 
    ```powershell
    $location = '[Azure_region]'
@@ -58,8 +60,6 @@ In this task, you will deploy two virtual machines that will be used to test dif
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
-
-    >**Note**: you can find list of locations using following command **az account list-locations -o table**.
 
 1. Minimize Cloud Shell (but do not close it).
 
@@ -78,7 +78,7 @@ In this task, you will create a recovery services vault.
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-10-rg1-{Deployment ID}** |
     | Name | **az104-10-rsv1** |
-    | Region | the name of a region where you deployed the two virtual machines in the previous task |
+    | Region | the name of a region which you copied in previous steps |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -106,7 +106,7 @@ In this task, you will create a recovery services vault.
 
 In this task, you will implement Azure virtual-machine level backup.
 
-   >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed.
+   >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to respected resource group in azure portal and on the overview page of the resource group click on **Deployments**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, click **Overview**, then click **+ Backup**.
 
@@ -161,7 +161,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. From Start menu open **Windows PowerShell** under Windows PowerShell folder and run the following to install Microsoft Edge Browser.
+1. If Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to next step. From Start menu open **Windows PowerShell** under Windows PowerShell folder and run the following to install Microsoft Edge Browser.
 
     ```powershell
     md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
@@ -194,9 +194,9 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
 
-1. When prompted, click **Run** to start installation of **MARSAgentInstaller.exe** with the default settings.
+1. When the download completed, click on it to start installation of **MARSAgentInstaller.exe** with the default settings.
 
-    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option.
+    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Install.
 
 1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, click **Proceed to Registration**. This will start **Register Server Wizard**.
 
@@ -276,7 +276,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. On the **Browse And Recover Files** page, note the drive letter of the recovery volume and review the tip regarding the use of robocopy.
 
-1. Click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Click **Start**, search and open **Command Prompt**.
 
 1. From the Command Prompt, run the following to copy the restore the **hosts** file to the original location (replace `[recovery_volume]` with the drive letter of the recovery volume you identified earlier):
 
@@ -306,7 +306,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
    >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0**, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session to the **az104-10-vm0**, Click **Start**, search and open **Command Prompt**.
 
 1. From the Command Prompt, run the following to delete the **hosts** file:
 
@@ -372,7 +372,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
 
-1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link.
+1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link under computer name.
 
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
@@ -438,27 +438,6 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-10*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-   >**Note**: Optionally, you might consider deleting the auto-generated resource group with the prefix **AzureBackupRG_** (there is no additional charge associated with its existence).
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
 #### Review
 
