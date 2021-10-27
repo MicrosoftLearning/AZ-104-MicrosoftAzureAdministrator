@@ -141,7 +141,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click the **az104-10-vm0** entry.
+1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
@@ -200,7 +200,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Encryption Setting** page of the **Register Server Wizard**, click **Generate Passphrase**.
 
-1. On the **Encryption Setting** page of the **Register Server Wizard**, click the **Browse** button next to the **Enter a location to save the passphrase** drop-down list.
+1. On the **Encryption Setting** page of the **Register Server Wizard**, click the **Browse** button next to the **Enter a location to save the passphrase**.
 
 1. In the **Browse For Folder** dialog box, select the **Documents** folder and click **OK**.
 
@@ -323,8 +323,6 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     >**Note**: The script mounts the disks from the selected recovery point as local drives within the operating system from which the script is run.
 
 1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Save**.
-
-1. Start File Explorer, navigate to the **Downloads** folder, right-click the newly downloaded file, select **Properties** in the right-click menu, in the **Properties** dialog box, select the **Unblock** checkbox, and click **OK**.
 
 1. Back in the File Explorer window, double-click the newly downloaded file.
 
