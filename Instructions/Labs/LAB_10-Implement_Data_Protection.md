@@ -43,13 +43,15 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines). Type each command line separately and execute them separately:
 
    ```powershell
    $location = '[Azure_region]'
-
+    ```
+   ```powershell
    $rgName = 'az104-10-rg0'
-
+    ```
+   ```powershell
    New-AzResourceGroup -Name $rgName -Location $location
    ```
 
