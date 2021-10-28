@@ -86,7 +86,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
 
 #### Task 3: Configure the managed disk by using Azure PowerShell
 
-In this task, you will managing configuration of the Azure managed disk by using Azure PowerShell session within Cloud Shell. 
+In this task, you will be managing the configuration of the Azure managed disk by using Azure PowerShell session within Cloud Shell. 
 
 1. To increase the size of the Azure managed disk to **64 GB**, from the PowerShell session within Cloud Shell, run the following:
 
