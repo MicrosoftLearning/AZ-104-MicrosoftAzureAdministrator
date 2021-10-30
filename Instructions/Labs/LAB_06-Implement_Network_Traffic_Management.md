@@ -461,7 +461,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Click **Add**
 
-1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, in the **Settings** section, click **Frontend IP configuration**, and note the value of the **Public IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
