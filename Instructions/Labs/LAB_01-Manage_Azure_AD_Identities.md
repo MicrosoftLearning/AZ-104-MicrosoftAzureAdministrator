@@ -137,7 +137,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
 
-1. Save the rule by clicking **+Add expression** and **Save**. B back on the **New Group** blade, click **Create**. 
+1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
 
 1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
 
