@@ -174,7 +174,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the subscription if missing** |
+    | Policy to remediate | **Inherit a tag from the resource group if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
@@ -198,7 +198,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-#### Clean up resources
+#### Task 4: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. 
 
@@ -210,7 +210,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the portal, search for and select **Storage accounts**.
 
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Save**. 
+1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Apply**. 
 
 1. In the portal, again search for and select **Storage accounts** or use the menu at the top to select **Storage accounts**
 
