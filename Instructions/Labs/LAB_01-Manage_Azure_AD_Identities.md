@@ -34,7 +34,7 @@ In this lab, you will:
 
 In this task, you will create and configure Azure AD users.
 
->**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant and perform the Task 2 after Task 3 in that new Azure AD tenant.
+>**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant or perform the Task 2 after Task 3 in that new Azure AD tenant.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -249,7 +249,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
 
-#### Clean up resources
+#### Task 5: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
 
