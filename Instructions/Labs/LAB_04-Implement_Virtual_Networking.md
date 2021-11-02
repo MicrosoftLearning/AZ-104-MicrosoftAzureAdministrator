@@ -290,7 +290,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Use the domain name search to identify a domain name which is not in use.
 
-1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Add**.
+1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Create**.
 
 1. Create a DNS zone with the following settings (leave others with their default values):
 
