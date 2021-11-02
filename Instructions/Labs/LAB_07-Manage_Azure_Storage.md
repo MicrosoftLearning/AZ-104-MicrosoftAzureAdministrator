@@ -205,9 +205,9 @@ In this task, you will configure authentication and authorization for Azure Stor
     | --- | --- |
     | Role | **Storage Blob Data Owner** |
     | Assign access to | **User, group, or service principal** |
-    | Select | the name of your user account |
+    | Members | the name of your user account |
 
-1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
+1. Click 'Review+Assign' and then 'Review+ assign', and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
