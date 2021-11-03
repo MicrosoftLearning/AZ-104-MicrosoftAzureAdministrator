@@ -63,7 +63,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. On the resource group blade, click **Tags**.
 
-1. Create a tag with the following settings and save your change:
+1. Create a tag with the following settings and Apply your change:
 
     | Setting | Value |
     | --- | --- |
