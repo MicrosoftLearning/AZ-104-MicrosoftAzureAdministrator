@@ -238,7 +238,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values):
+1. Create a managed disk with the following settings (leave others with their default values) and Save changes:
 
     | Setting | Value |
     | --- | --- |
@@ -360,7 +360,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Azure Spot instance | **No** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
@@ -474,7 +474,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
+1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
 
 1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **OK**.
 
