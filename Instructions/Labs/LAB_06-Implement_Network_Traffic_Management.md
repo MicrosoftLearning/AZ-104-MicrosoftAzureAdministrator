@@ -51,17 +51,18 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
-    ```powershell (execute one command at a time)
+    ```powershell 
     $location = '[Azure_region]'
     ```
-
-    ```powershell (execute one command at a time)
+    Now the resource group name:
+    ```powershell
     $rgName = 'az104-06-rg1'
     ```
-
-    ```powershell (execute one command at a time)
+    And finally create the resource group in your desired location:
+    ```powershell
     New-AzResourceGroup -Name $rgName -Location $location
     ```
+
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
