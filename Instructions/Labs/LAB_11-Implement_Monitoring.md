@@ -16,11 +16,12 @@ You need to evaluate Azure functionality that would provide insight into perform
 In this lab, you will:
 
 + Task 1: Provision the lab environment
-+ Task 2: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
-+ Task 3: Review default monitoring settings of Azure virtual machines
-+ Task 4: Configure Azure virtual machine diagnostic settings
-+ Task 5: Review Azure Monitor functionality
-+ Task 6: Review Azure Log Analytics functionality
++ Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
++ Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
++ Task 4: Review default monitoring settings of Azure virtual machines
++ Task 5: Configure Azure virtual machine diagnostic settings
++ Task 6: Review Azure Monitor functionality
++ Task 7: Review Azure Log Analytics functionality
 
 ## Estimated timing: 45 minutes
 
