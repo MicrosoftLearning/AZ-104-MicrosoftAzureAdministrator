@@ -1,4 +1,5 @@
 # Lab 09b - Implement Azure Container Instances
+
 # Student lab manual
 
 ## Lab scenario
