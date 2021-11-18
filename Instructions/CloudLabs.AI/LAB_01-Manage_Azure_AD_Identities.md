@@ -1,4 +1,4 @@
-# Lab 01 - Manage Azure Active Directory Identities
+## Lab 01 - Manage Azure Active Directory Identities
 
 # Student lab manual
 
