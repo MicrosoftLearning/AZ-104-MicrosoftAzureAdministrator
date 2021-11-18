@@ -51,7 +51,7 @@ In this task, you will create and configure management groups.
 
 1. On the **Management groups** blade, click **+ Add** or **+ Create**.
 
-    >**Note**: If you have not previously created Management Groups, select **Start using management groups**
+    >**Note**: If you have not previously created Management Groups, select **Create management group**
 
 1. Create a management group with the following settings:
 
