@@ -122,7 +122,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. In the list of containers, click **az104-07-container** and then click **Upload**.
 
-1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07** on your lab computer and click **Open**.
+1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
 
