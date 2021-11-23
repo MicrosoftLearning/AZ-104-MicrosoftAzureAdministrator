@@ -244,7 +244,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Resource Group | **az104-04-rg1** |
     | Name | **contoso.org** |
 
-1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
+1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
