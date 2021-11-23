@@ -107,13 +107,12 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
-    | Create Azure Run As account | **Yes** |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
-1. On the **Create an Automation Account** blade, click **Refresh** and then click the entry representing your newly created Automation account.
+1. Click **Go to resource**.
 
 1. On the Automation account blade, in the **Configuration Management** section, click **Inventory**.
 
