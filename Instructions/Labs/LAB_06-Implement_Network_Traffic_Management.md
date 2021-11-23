@@ -127,7 +127,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values) and click Add:
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value |
     | --- | --- |
@@ -151,7 +151,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values) and click Add:
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value |
     | --- | --- |
@@ -298,11 +298,11 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt23**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt23** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
-1. Add a new route with the following settings (leave others with their default values):
+1. Add a new route with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -340,7 +340,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt32**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt32** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
@@ -393,22 +393,28 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values):
+1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg1** |
+    | Resource group | **az104-06-rg1** |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
-    | Type | **Public** |
     | SKU | **Standard** |
+    | Type | **Public** |
+    
+1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following setting before clicking **Add**.   
+     
+    | Setting | Value |
+    | --- | --- |
+    | Name | any unique name |
     | Public IP address | **Create new** |
     | Public IP address name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
     | Add a public IPv6 address | **No** |
 
-1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.
+1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
@@ -503,7 +509,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg1** |
+    | Resource group | **az104-06-rg1** |
     | Application gateway name | **az104-06-appgw5** |
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
