@@ -339,7 +339,6 @@ In this task you will scale compute for Azure virtual machines by changing their
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
 
-   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
 #### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
@@ -592,6 +591,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. From the Cloud Shell pane, run the following to display the content of the script:
 
    ```powershell
+   $rgName = 'az104-08-rg02-[Deployment-Id]'
+   
    Set-Location -Path $HOME
 
    Get-Content -Path ./az104-08-configure_VMSS_disks.ps1
