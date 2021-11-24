@@ -143,7 +143,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
+1. On the **New resource** blade, click **Custom Script Extension** and then click **New**.
 
 1. From the **Install extension** blade, click **Browse**.
 
