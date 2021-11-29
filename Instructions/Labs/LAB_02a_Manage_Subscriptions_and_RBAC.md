@@ -83,7 +83,7 @@ In this task, you will create and configure management groups.
 
 In this task, you will create a definition of a custom RBAC role.
 
-1. From the lab computer, open the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** in Notepad and review its content:
+1. From the lab computer, open the file **F:\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** in Notepad and review its content:
 
    ```json
    {
