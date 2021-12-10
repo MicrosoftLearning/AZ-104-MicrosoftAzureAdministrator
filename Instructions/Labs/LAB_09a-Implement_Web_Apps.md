@@ -65,7 +65,7 @@ In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Add a Deployment slot**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**, and click **Add a Deployment slot**.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
