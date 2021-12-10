@@ -40,7 +40,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Sign in to the [Azure portal](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create**, click **+ Virtual machine**.
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -113,11 +113,11 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Resource group | **az104-08-rg01** |
     | Network Interface Name | **az104-08-vm1-nic1** |
     | Public IP Address Name | **az104-08-vm1-ip** |
     | Virtual Machine Name | **az104-08-vm1** |
     | Virtual Machine Computer Name | **az104-08-vm1** |
+    | Virtual Machine RG | **az104-08-rg01** |    
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
     | Enable Hotpatching | **false** |
@@ -152,11 +152,11 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
+1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
+1. On the **Install an Extension** blade, click **Custom Script Extension** and then click **Next**.
 
-1. From the **Install extension** blade, click **Browse**.
+1. From the **Configure Custom Script Extension Extension** blade, click **Browse**.
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
@@ -309,7 +309,7 @@ In this task you will scale compute for Azure virtual machines by changing their
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
-1. Click Save and, back on the Custom template blade, click Review + Create and, on the Review + Create blade, click Create.
+1. Click **Save** and, back on the **Custom deployment** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**.
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
 
@@ -476,7 +476,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
 
-1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **OK**.
+1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **Create**.
 
     >**Note**: Wait for the installation of the extension to complete before proceeding to the next step.
 
