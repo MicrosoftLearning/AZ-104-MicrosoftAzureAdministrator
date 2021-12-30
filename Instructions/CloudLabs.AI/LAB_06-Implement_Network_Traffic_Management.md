@@ -290,7 +290,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt23**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt23** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
@@ -332,7 +332,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt32**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt32** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
