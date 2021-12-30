@@ -118,7 +118,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
-1. On the **Add Automation Account** blade, click **Refresh** and then click the entry representing your newly created Automation account.
+1. Click **Go to resource**.
 
 1. On the Automation account blade, in the **Configuration Management** section, click **Inventory**.
 
