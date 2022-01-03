@@ -37,7 +37,7 @@ In this task, you will open a Bash session in Cloud Shell.
 
 In this task, you will create a resource group and an Azure managed disk by using Azure CLI session within Cloud Shell.
 
-1. From the Bash session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page::
+1. From the Bash session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
 
    ```sh
    LOCATION=$(az group show --name 'az104-03c-rg1-DeploymentID' --query location --out tsv)
