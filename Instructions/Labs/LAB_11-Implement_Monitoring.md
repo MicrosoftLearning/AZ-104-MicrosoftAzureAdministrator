@@ -57,6 +57,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
+   * Powershell commands:
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -64,20 +65,30 @@ In this task, you will deploy a virtual machine that will be used to test monito
       -TemplateParameterFile $HOME/az104-11-vm-parameters.json `
       -AsJob
    ```
-
+   * Azure CLI commands:
+    ```bash
+    az deployment group create --resource-group $rgName \
+    --template-file $HOME/az104-11-vm-template.json \
+    --parameters $HOME/az104-11-vm-parameters.json
+    ```
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
 
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-
+   * Powershell commands:
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
 
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
+   * Azure CLI commands:
+    ```bash
+    az provider register --namespace Microsoft.Insights
+    az provider register --namespace Microsoft.AlertsManagement
+    ```
 
-1. Minimize Cloud Shell pane (but do not close it).
+2. Minimize Cloud Shell pane (but do not close it).
 
 #### Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
