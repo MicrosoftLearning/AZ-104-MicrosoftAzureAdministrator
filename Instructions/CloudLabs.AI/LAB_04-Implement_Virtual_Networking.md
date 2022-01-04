@@ -94,7 +94,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     >**Note**: You might need to upload each file separately.
 
-1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files you uploaded: Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
+1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
 
    ```powershell
    $rgName = 'az104-04-rg1-[deployment-id]'
