@@ -29,7 +29,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Sign in to the [Azure portal](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Add**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create then select +Virtual Machine**.
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -143,7 +143,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **New**.
+1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
 
 1. From the **Install extension** blade, click **Browse**.
 
@@ -585,6 +585,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+
+Open File Explorer and go to C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make change$rgName = 'az104-08-rg02' to $rgName = 'az104-08-rg02-[Deployment-Id]' and Save it.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the file **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** into the Cloud Shell home directory.
 
