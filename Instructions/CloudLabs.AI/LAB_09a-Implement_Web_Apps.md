@@ -28,17 +28,17 @@ In this task, you will create an Azure web app.
 
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Add**.
+1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Web App** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09a-rg1** |
+    | Resource group | the name of a existing resource group **az104-09a-rg1-DeploymentID** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
-    | Runtime stack | **PHP 7.3** |
+    | Runtime stack | **PHP 7.4** |
     | Operating system | **Windows** |
     | Region | the name of an Azure region where you can provision Azure web apps |
     | App service plan | accept the default configuration |
