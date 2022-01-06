@@ -110,7 +110,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
-    | Create Azure Run As account | **Yes** |
+    | | |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
