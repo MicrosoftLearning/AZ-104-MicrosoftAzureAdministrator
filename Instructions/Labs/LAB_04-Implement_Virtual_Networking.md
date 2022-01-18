@@ -307,7 +307,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Resource Group | **az104-04-rg1** |
     | Name | the DNS domain name you identified earlier in this task |
 
-1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
+1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     >**Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
 
