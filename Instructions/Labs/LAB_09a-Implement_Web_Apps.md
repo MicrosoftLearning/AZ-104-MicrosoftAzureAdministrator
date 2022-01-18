@@ -48,7 +48,7 @@ In this task, you will create an Azure web app.
     | Resource group | the name of a new resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
-    | Runtime stack | **PHP 7.3** |
+    | Runtime stack | **PHP 7.4** |
     | Operating system | **Windows** |
     | Region | the name of an Azure region where you can provision Azure web apps |
     | App service plan | accept the default configuration |
@@ -65,7 +65,7 @@ In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**, and click **Add a Deployment slot**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
