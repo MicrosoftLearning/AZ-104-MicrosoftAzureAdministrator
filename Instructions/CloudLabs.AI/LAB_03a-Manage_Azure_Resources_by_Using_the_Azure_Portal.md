@@ -79,6 +79,8 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Click Go to resouce. 
 
+1. On the Overview page of the Disk, click the name of the resource group, **az104-03a-rg3-[Deployment-ID]**.
+
 1. On the **az104-03a-rg3-[Deployment-ID]** resource group blade, click **Locks** then **+ Add** and specify the following settings:
 
     |Setting|Value|
