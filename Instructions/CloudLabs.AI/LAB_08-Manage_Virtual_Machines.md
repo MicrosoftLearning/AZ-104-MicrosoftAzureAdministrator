@@ -470,9 +470,9 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Create**.
+1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
 
-1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **OK**.
+1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **Create**.
 
     >**Note**: Wait for the installation of the extension to complete before proceeding to the next step.
 
