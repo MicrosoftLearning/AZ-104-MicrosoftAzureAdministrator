@@ -103,9 +103,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Resource group | **az104-08-rg01-[Deployment ID]** |
-    | Network Interface Name | **az104-08-vm1-nic1** |
+    | Network Interface Name 1 | **az104-08-vm1-nic1** |
     | Public IP Address Name | **az104-08-vm1-ip** |
-    | Virtual Machine Name | **az104-08-vm1** |
+    | Virtual Machine Name 1 | **az104-08-vm1** |
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Pa55w.rd1234** |
@@ -149,7 +149,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
-1. Back on the **Install extension** blade, click **OK**.
+1. Back on the **Install extension** blade, click **Review+Create then click Create**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
