@@ -26,27 +26,16 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. on search box search Subscription and click your subscription and go to resource provider under setting and make sure Microsoft.Kubernetes and Microsoft.KubernetesConfiguration is registered.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+ ![image](https://user-images.githubusercontent.com/33771500/150981040-7dafe8ee-d7b0-4410-9359-6f303ce19a17.png)
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
-
-1. From the Cloud Shell pane, run the following to register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
-
-   ```powershell
-   Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
-
-   Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
-   ```
-
-1. Close the Cloud Shell pane.
 
 #### Task 2: Deploy an Azure Kubernetes Service cluster
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
-1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Add**, and then click **+ Add Kubernetes cluster**.
+1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Create **, and then click **+ Add Kubernetes cluster**.
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
