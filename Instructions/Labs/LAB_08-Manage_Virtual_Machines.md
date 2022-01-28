@@ -52,7 +52,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
     | Availability zone | **1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1/Gen2** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Azure Spot instance | **No** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
