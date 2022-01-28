@@ -203,7 +203,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
-1. In the **Add** section, click **Add a role assignment**.
+1. On the **Check access** tab, click **Add role assignment**.
 
 1. On the **Add role assignment** blade, specify the following settings:
 
