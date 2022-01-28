@@ -213,7 +213,7 @@ In this task, you will test connectivity between virtual machines on the three v
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall.
+    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
 1. Examine the output of the command and verify that the connection was successful.
 
