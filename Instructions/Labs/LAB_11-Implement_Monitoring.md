@@ -292,7 +292,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    | render timechart
    ```
 
-1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile, click the **Run** command button in the tile, and review the results.
+1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile and double-click it to fill the query window, click the **Run** command button in the tile, and review the results.
 
 1. On the **New Query 1** tab, select the **Tables** header, and review the list of tables in the **Virtual machines** section.
 
