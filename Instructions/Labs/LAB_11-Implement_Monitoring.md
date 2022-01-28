@@ -238,7 +238,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Severity | **Sev 3** |
     | Enable rule upon creation | **Yes** |
 
-1. Click **Create alert rule**.
+1. Click **Review + create** and on the **Review + create** tab click **Create**.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
