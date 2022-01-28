@@ -277,7 +277,7 @@ In this task, you will configure network access for Azure Storage.
 
     > **Note**: This is expected, since you are connecting from your client IP address.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container.
+1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
