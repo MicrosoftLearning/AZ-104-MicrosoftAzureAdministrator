@@ -556,7 +556,7 @@ In this task, you will change the size of virtual machine scale set instances, c
    $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
    ```
 
-1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
+1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
 
    ```powershell
    while ($true) { Invoke-WebRequest -Uri "http://$pip" }
