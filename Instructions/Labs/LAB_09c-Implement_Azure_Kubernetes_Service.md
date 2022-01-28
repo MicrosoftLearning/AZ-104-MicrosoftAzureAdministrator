@@ -174,9 +174,9 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     ```sh
 
-    RESOURCE_GROUP='az104-09c-rg1'
+    $RESOURCE_GROUP='az104-09c-rg1'
 
-    AKS_CLUSTER='az104-9c-aks1'
+    $AKS_CLUSTER='az104-9c-aks1'
 
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
