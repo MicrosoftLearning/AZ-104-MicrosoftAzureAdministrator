@@ -40,7 +40,7 @@ In this task, you will create an Azure web app.
 
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Web App** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
