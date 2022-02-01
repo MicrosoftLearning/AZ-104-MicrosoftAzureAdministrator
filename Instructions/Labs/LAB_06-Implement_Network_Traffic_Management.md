@@ -178,7 +178,7 @@ In this task, you will test transitivity of virtual network peering by using Net
 
 1. In the Azure portal, search for and select **Network Watcher**.
 
-1. On the **Network Watcher** blade, expand the listing of Azure regions and verify the service is enabled in region you are using. 
+1. On the **Network Watcher** blade, expand the listing of Azure regions and verify that the service is enabled in the Azure region into which you deployed resources in the first task of this lab.
 
 1. On the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
 
