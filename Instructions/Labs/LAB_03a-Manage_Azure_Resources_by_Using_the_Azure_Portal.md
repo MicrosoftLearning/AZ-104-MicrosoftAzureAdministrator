@@ -35,7 +35,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, search for and select **Disks**, click **+ Add, + Create, or + New**, and specify the following settings:
+1. In the Azure portal, search for and select **Disks**, click **+ Create** and specify the following settings:
 
     |Setting|Value|
     |---|---|
