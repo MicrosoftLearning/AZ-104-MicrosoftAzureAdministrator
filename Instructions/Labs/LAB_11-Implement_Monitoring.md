@@ -234,7 +234,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Settings | Value |
     | --- | --- |
     | Alert rule name | **CPU Percentage above the test threshold** |
-    | Description | **CPU Percentage above the test threshold** |
+    | Alert rule description | **CPU Percentage above the test threshold** |
     | Severity | **Sev 3** |
     | Enable upon creation | **Yes** |
 
