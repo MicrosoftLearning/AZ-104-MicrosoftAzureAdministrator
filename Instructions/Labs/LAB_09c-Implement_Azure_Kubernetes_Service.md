@@ -92,7 +92,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Network configuration | **kubenet** |
     | DNS name prefix | any valid, globally unique DNS host name |
 
-1. Click **Next: Integrations >**, on the **Integrations** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click Create.
+1. Click **Next: Integrations >**, on the **Integrations** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click **Create**.
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
 
