@@ -104,10 +104,10 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     | Settings | Value |
     | --- | --- |
-    | Name | any unique name |
+    | Automation account name | any unique name |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
-    | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
+    | Region | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
@@ -210,7 +210,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation granularity (Period) | **1 minute** |
     | Frequency of evaluation | **Every 1 Minute** |
 
-1. On the **Create alert rule** blade, in the **Action group** section, click **Add action groups** and then click the **+ Create action group** button.
+1. Click **Next: Actions >**, on the **Create an alert rule** blade, in the **Action group** section, click the **+ Create action group** button.
 
 1. On the **Basics** tab of the **Create action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications >**:
 
@@ -221,24 +221,24 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Action group name | **az104-11-ag1** |
     | Display name | **az104-11-ag1** |
 
-1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. In the **Name** text box, type **admin email**. Click the **Edit details** (pencil) icon.
+1. On the **Notifications** tab of the **Create an action group** blade, in the **Notification type** drop-down list, select **Email/SMS message/Push/Voice**. In the **Name** text box, type **admin email**. Click the **Edit details** (pencil) icon.
 
-1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, type your email address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade, select **Next: Actions  >**.
+1. On the **Email/SMS message/Push/Voice** blade, select the **Email** checkbox, type your email address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create an action group** blade, select **Next: Actions  >**.
 
 1. On the **Actions** tab of the **Create action group** blade, review items available in the **Action type** drop-down list without making any changes and select **Review + create**.
 
 1. On the **Review + create** tab of the **Create action group** blade, select **Create**.
 
-1. Back on the **Create alert rule** blade, in the **Alert rule details** section, specify the following settings (leave others with their default values):
+1. Back on the **Create alert rule** blade, click **Next: Details >**, and in the **Alert rule details** section, specify the following settings (leave others with their default values):
 
     | Settings | Value |
     | --- | --- |
     | Alert rule name | **CPU Percentage above the test threshold** |
-    | Description | **CPU Percentage above the test threshold** |
+    | Alert rule description | **CPU Percentage above the test threshold** |
     | Severity | **Sev 3** |
-    | Enable rule upon creation | **Yes** |
+    | Enable upon creation | **Yes** |
 
-1. Click **Create alert rule**.
+1. Click **Review + create** and on the **Review + create** tab click **Create**.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
@@ -278,7 +278,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
 
-1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-vm0**, and click **Apply**.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-rg0**, and click **Apply**.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
@@ -292,7 +292,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    | render timechart
    ```
 
-1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile, click the **Run** command button in the tile, and review the results.
+1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile and double-click it to fill the query window, click the **Run** command button in the tile, and review the results.
 
 1. On the **New Query 1** tab, select the **Tables** header, and review the list of tables in the **Virtual machines** section.
 

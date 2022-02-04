@@ -102,7 +102,7 @@ In this task, you will create a recovery services vault.
 
 1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For Azure Virtual Machines)** is **Enabled**.
+1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
@@ -143,7 +143,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
+1. On the **Backup Items (Azure Virtual Machine)** blade click **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 

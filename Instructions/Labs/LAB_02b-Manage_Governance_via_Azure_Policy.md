@@ -61,7 +61,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     **Note**: note what resource group the storage account is in, you'll need it later in the lab.
 
-1. On the resource group blade, click **Tags**.
+1. On the resource group blade, click **Click here to add tags**.
 
 1. Create a tag with the following settings and Apply your change:
 
@@ -212,7 +212,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Apply**. 
 
-1. Click **Delete**, when prompted for the confirmation, in the **Delete storage account** blade, type the name of the storage account to confirm and click **Delete**. 
+1. Click **Overview** and click **Delete** on the top of the storage account blade. When prompted for the confirmation, in the **Delete storage account** blade, type the name of the storage account to confirm and click **Delete**. 
 
 #### Review
 
