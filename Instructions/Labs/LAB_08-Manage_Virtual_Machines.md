@@ -161,7 +161,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
-1. Back on the **Install extension** blade, click **Review+Create** and **Create**.
+1. Back on the **Install extension** blade, click **Review + create** and, on the **Review + create** blade click **Create**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
