@@ -58,7 +58,7 @@ In this task, you will create an Azure web app.
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
 1. On the deployment blade, click **Go to resource**.
-
+    >**Note**:For Next Step , you will need to upgrade the App service Plan to minimum S1 .Only then Option to Add a Staging Slot will be available. Review the different Plans.
 #### Task 2: Create a staging deployment slot
 
 In this task, you will create a staging deployment slot.
