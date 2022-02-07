@@ -33,6 +33,8 @@ In this lab, we will:
 
 ## Instructions
 
+>**Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+
 ### Exercise 1
 
 #### Task 1: Assign tags via the Azure portal
@@ -200,9 +202,9 @@ In this task, we will use a different policy definition to remediate any non-com
 
 #### Task 4: Clean up resources
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. 
-
-   >**Note**: Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
+   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
+   
+   >**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. You might also try to delete the Resource Group where the resources reside. That is a quick Administrator shortcut. If you have concerns speak to your instructor.
 
 1. In the portal, search for and select **Policy**.
 
