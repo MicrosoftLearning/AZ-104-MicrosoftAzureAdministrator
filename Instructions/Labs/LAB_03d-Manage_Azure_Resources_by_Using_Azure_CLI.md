@@ -23,6 +23,8 @@ In this lab, you will:
 
 ## Instructions
 
+> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+
 ### Exercise 1
 
 #### Task 1: Start a Bash session in Azure Cloud Shell
@@ -106,7 +108,9 @@ In this task, you will managing configuration of the Azure managed disk by using
 
 #### Clean up resources
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+ > **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+
+ > **Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
 
 1. In the Azure portal, open the **Bash** shell session within the **Cloud Shell** pane.
 
