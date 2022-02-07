@@ -5,6 +5,13 @@
 - **[Link to labs (HTML format)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 
+## Security Issue - February 2022
+
+Some Azure training labs instruct the student to use a specific user name and password. Bad actors constantly scan virtual machines and try to log in using those credentials.
+One they login they use the machines for crypto-mining, and could potentially use them for other activities.
+
+**Remediation**: Students should be instructed to use a password of their own choosing. Students should not use the password in the lab instructions. The lab steps will be updated this week to remove the password. 
+
 ## What are we doing?
 
 - To support this course, we will need to make frequent updates to the course content to keep it current with the Azure services used in the course.  We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Azure platform.
