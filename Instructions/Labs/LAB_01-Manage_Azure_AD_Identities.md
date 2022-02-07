@@ -28,6 +28,8 @@ In this lab, you will:
 
 ## Instructions
 
+> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+
 ### Exercise 1
 
 #### Task 1: Create and configure Azure AD users
@@ -57,7 +59,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser1** |
     | Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd123** |
+    | Initial password | **Give the user a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
@@ -72,7 +74,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to **Pa55w.rd1234**.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
@@ -91,7 +93,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser2** |
     | Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd1234** |
+    | Initial password | **Give the user a secure password** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -218,7 +220,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd1234** |
+    | Initial password | **Give the user a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
 
@@ -251,7 +253,9 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 #### Task 5: Clean up resources
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
+> **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
+
+ > **Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. You might also try to delete the Resource Group where the resources reside. That is a quick Administrator shortcut. If you have concerns speak to your instructor.
 
 1. In the **Azure Portal** search for **Azure Active Directory** in the search bar. Within **Azure Active Directory** under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Azure Active Directory Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **Yes**.
 
