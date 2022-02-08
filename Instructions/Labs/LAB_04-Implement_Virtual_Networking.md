@@ -98,7 +98,9 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     >**Note**: You might need to upload each file separately.
 
-1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files you uploaded:
+1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+
+1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
    ```powershell
    $rgName = 'az104-04-rg1'
@@ -235,7 +237,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in with the user and password in the parameters file.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
