@@ -8,9 +8,9 @@
 ## Security Issue - February 2022
 
 Some Azure training labs instruct the student to use a specific user name and password. Bad actors constantly scan virtual machines and try to log in using those credentials.
-One they login they use the machines for crypto-mining, and could potentially use them for other activities.
+Once they login the machines can be used for crypto-mining or other non-classroom activities.
 
-**Remediation**: Students should be instructed to use a password of their own choosing. Students should not use the password in the lab instructions. The lab steps will be updated this week to remove the password. 
+**Remediation**: Students should be instructed to use a password of their own choosing. Students should not use any password in the lab instructions. 
 
 ## What are we doing?
 
