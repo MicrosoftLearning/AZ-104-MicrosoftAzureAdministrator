@@ -56,7 +56,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Azure Spot instance | **No** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
-    | Password | **Pa55w.rd1234** |
+    | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **No** |
 
@@ -120,7 +120,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual Machine Computer Name | **az104-08-vm1** |
     | Virtual Machine RG | **az104-08-rg01** |    
     | Admin Username | **Student** |
-    | Admin Password | **Pa55w.rd1234** |
+    | Admin Password | **Provide a secure password**  |
     | Enable Hotpatching | **false** |
     | Zone | **2** |
 
@@ -365,7 +365,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Azure Spot instance | **No** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
-    | Password | **Pa55w.rd1234** |
+    | Password | **Provide a secure password**  |
     | Already have a Windows Server license? | **No** |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
