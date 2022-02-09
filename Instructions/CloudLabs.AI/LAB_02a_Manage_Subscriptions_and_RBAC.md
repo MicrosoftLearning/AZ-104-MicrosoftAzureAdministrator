@@ -29,6 +29,8 @@ In this lab, you will:
 
 ## Instructions
 
+> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+
 ### Exercise 1
 
 #### Task 1: Implement Management Groups
@@ -131,7 +133,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     | User name | **az104-02-aaduser1**|
     | Name | **az104-02-aaduser1**|
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd1234** |
+    | Initial password | Give the user a secure password |
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
