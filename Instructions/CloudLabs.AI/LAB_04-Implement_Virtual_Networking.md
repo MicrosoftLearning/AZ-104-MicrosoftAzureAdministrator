@@ -21,6 +21,8 @@ In this lab, you will:
 
 ## Instructions
 
+> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password.
+
 ### Exercise 1
 
 #### Task 1: Create and configure a virtual network
@@ -93,6 +95,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     >**Note**: You might need to upload each file separately.
+    
+1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
 
@@ -225,7 +229,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
-    >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine and sign in by using the **Student** username and **Pa55w.rd1234** password.
+    >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
 
 1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
 
@@ -233,7 +237,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in with the user and password in the parameters file.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
