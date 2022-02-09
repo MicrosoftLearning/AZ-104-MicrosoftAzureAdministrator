@@ -17,6 +17,8 @@ In this lab, you will:
 
 ## Instructions
 
+>**Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+
 ### Exercise 1
 
 #### Task 1: Start a PowerShell session in Azure Cloud Shell
