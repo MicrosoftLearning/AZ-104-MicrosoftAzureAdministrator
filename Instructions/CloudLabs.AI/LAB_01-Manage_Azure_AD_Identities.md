@@ -19,6 +19,8 @@ In this lab, you will:
 
 ## Instructions
 
+> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password.
+
 ### Exercise 1
 
 #### Task 1: Create and configure Azure AD users
@@ -46,7 +48,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser1** |
     | Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
+    | Initial password | **Give the user a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
@@ -61,7 +63,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
@@ -80,7 +82,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser2** |
     | Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
+    | Initial password | **Give the user a secure password** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -207,7 +209,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Pa55w.rd124** |
+    | Initial password |**Give the user a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
 
