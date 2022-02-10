@@ -19,7 +19,6 @@ In this lab, you will:
 
 ## Instructions
 
-> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password.
 
 ### Exercise 1
 
@@ -48,7 +47,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser1** |
     | Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Give the user a secure password** |
+    | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
@@ -82,7 +81,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser2** |
     | Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
-    | Initial password | **Give the user a secure password** |
+    | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -209,7 +208,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password |**Give the user a secure password** |
+    | Initial password |**Provide a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
 
