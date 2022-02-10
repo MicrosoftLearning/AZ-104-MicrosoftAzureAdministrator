@@ -39,6 +39,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
+1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
+
 1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder with the names of two different Azure regions where you intend to deploy these Azure virtual machines):
 
    ```powershell
@@ -202,7 +204,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in by using the **Student** username and the password from your parameters file.
 
 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
