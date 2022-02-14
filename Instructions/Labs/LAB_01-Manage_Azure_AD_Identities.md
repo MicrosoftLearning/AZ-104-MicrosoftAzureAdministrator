@@ -57,7 +57,7 @@ In this task, you will create and configure Azure AD users.
     | User name | **az104-01a-aaduser1** |
     | Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Pfovide a secure password** |
+    | Initial password | **Provide a secure password** |
     | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
