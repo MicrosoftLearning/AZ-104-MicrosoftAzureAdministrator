@@ -42,12 +42,13 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09c-rg1** |
+    | Resource group | the name of the existing resource group **az104-09c-rg1** |
     | Kubernetes cluster name | **az104-9c-aks1** |
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Availability zones | **None** (uncheck all boxes) |
     | Kubernetes version | accept the default |
     | Node size | accept the default |
+    | Scale method | **Manual** |
     | Node count | **1** |
 
 1. Click **Next: Node Pools >** and, on the **Node Pools** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
