@@ -61,7 +61,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     **Note**: note what resource group the storage account is in, you'll need it later in the lab.
 
-1. On the resource group blade, click **Click here to add tags**.
+1. On the resource group blade, click Click **edit** nex to **Tags** to create new tags.
 
 1. Create a tag with the following settings and Apply your change:
 
