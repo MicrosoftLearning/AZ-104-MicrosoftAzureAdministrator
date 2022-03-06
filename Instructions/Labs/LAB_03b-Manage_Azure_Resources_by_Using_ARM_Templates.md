@@ -32,7 +32,8 @@ In this lab, you will:
 
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. Sign in to the [**Azure portal**](https://portal.azure.com).
+1. Sign in to the Azure portal:
+```https://portal.azure.com```
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
