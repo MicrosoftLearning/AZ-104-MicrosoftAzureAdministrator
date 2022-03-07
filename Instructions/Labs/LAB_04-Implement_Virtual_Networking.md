@@ -188,6 +188,10 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
 
+1. Stop the **az104-04-vm0** and **az104-04-vm1** virtual machines.
+
+    >**Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
+
 1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
 1. Create a network security group with the following settings (leave others with their default values):
@@ -224,6 +228,8 @@ In this task, you will configure network security groups in order to allow for r
 1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
     >**Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
+
+1. Start the **az104-04-vm0** and **az104-04-vm1** virtual machines.
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
