@@ -4,7 +4,7 @@ lab:
     module: 'Module 01 - Identity'
 ---
 
-# Lab 01 - Manage Azure Active Directory Identities
+# Lab 01 - Manage Azure Active Directory Identities (THIS IS A DEMO FROM MCT Connect)
 
 # Student lab manual
 
