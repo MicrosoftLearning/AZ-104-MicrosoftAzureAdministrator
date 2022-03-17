@@ -1,10 +1,21 @@
 # Getting Started
-## Log-in to the Azure Portal
 
-1. In the virtual machine provided on the left side, open a new browser window and sign in to the **Azure Portal**.
+1. Once the environment is provisioned, a virtual machine and lab guide will get loaded into your browser. Use this virtual machine throughout the workshop to perform the lab.
 
-1. Use the azure credentials provided in the **Environment Details** tab to log in to the portal.
+1. To get the lab environment details, you can select the **Environment Details** tab.
 
-1. Refer the **Environment Details** tab for any other lab credentials/details.
+    ![](../images/image-201.jpg)
+
+1. You can also open the Lab Guide on a separate full window by selecting the **Split Window** button on the bottom right corner.
+
+    ![](../images/image-200.jpg)    
+
+1. Also, you can **start, stop and restart** the virtual machines from the **Resources** tab.
+
+    ![](../images/image002.jpg)
+    
+1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
+
+    ![](../images/image-901.jpg)
 
 1. If you get **PowerShell Window** open, please dropdown the window and start the lab.
