@@ -4,18 +4,18 @@
 
 1. To get the lab environment details, you can select the **Environment Details** tab.
 
-    ![](../images/image-201.jpg)
+    ![](../images/image-100.jpg)
 
 1. You can also open the Lab Guide on a separate full window by selecting the **Split Window** button on the bottom right corner.
 
-    ![](../images/image-200.jpg)    
+    ![](../images/image-102.jpg)    
 
 1. Also, you can **start, stop and restart** the virtual machines from the **Resources** tab.
 
-    ![](../images/image002.jpg)
+    ![](../images/image-101.jpg)
     
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
-    ![](../images/image-901.jpg)
+    ![](../images/image-103.jpg)
 
 1. If you get **PowerShell Window** open, please dropdown the window and start the lab.
