@@ -4,18 +4,18 @@
 
 1. To get the lab environment details, you can select the **Environment Details** tab.
 
-    ![](../Images/image-100.png)
+    ![](../CloudLabs.AI/Images/image-100.png)
 
 1. You can also open the Lab Guide on a separate full window by selecting the **Split Window** button on the bottom right corner.
 
-    ![](../Images/image-200.jpg)    
+    ![](../CloudLabs.AI/Images/image-200.jpg)    
 
 1. Also, you can **start, stop and restart** the virtual machines from the **Resources** tab.
 
-    ![](../Images/image002.jpg)
+    ![](../CloudLabs.AI/Images/image002.jpg)
     
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
-    ![](../Images/image-901.jpg)
+    ![](../CloudLabs.AI/Images/image-901.jpg)
 
 1. If you get **PowerShell Window** open, please dropdown the window and start the lab.
