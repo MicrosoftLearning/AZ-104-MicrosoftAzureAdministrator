@@ -77,13 +77,12 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Enable virtual nodes | **Disabled** (default) |
-    | Enable virtual machine scale sets | **Enabled** (default) |
 
-1. Click **Next: Authentication >** and, on the **Authentication** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Access >** and, on the **Access** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Authentication method | **System-assigned managed identity** (default) | 
+    | Authentication method | **System-assigned managed identity** (default - no change) | 
     | Role-based access control (RBAC) | **Enabled** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
