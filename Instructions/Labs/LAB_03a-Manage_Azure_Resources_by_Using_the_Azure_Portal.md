@@ -43,7 +43,7 @@ In this task, you will use the Azure portal to create resource groups and create
     |Subscription| the name of the Azure subscription where you created the resource group |
     |Resource Group| the name of a new resource group **az104-03a-rg1** |
     |Disk name| **az104-03a-disk1** |
-    |Region| the name of the Azure region where you created the resource group |
+    |Region| choose a valid region (**East US** is recommended) |
     |Availability zone| **None** |
     |Source type| **None** |
 
