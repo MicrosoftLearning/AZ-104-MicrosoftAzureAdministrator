@@ -364,7 +364,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
 
-1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link.
+1. On the **C:\\ on az104-10-vm1.** blade, select **View details** for **az104-10-vm1.** .
 
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
@@ -379,6 +379,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     >**Note**: Make sure to include the trailing period when typing the server name
 
 1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
+
+    >**Note**: This will fail because the **Soft delete** feature must be disabled.
 
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 
