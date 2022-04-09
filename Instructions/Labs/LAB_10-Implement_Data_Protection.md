@@ -412,7 +412,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, Disable **Soft Delete (For workloads running in Azure)** and click **Save**.
+1. On the **Security Settings** blade, Disable **Soft Delete (For workloads running in Azure)** and also disable **Security Features (For workloads running on-premises)** and click **Save**.
 
     >**Note**: This will not affect items already in soft delete state.
 
