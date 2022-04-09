@@ -386,7 +386,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select **View details** for **az104-10-vm0**.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Stop backup**.
 
