@@ -432,6 +432,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
+1. Repeat the steps at the beginning of this task to delete the backup items for **az104-10-vm1**.
+
 #### Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
