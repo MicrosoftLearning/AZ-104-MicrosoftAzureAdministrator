@@ -86,7 +86,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Diagnostics storage account | accept the default value |
     | Patch orchestration options | **Manual updates** |  
 
-    >**Note**: If necessary, select an existing storage account in the dropdown list. Record the name of the storage account. You will use it in the next task.
+    >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
 
