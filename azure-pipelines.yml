@@ -19,7 +19,11 @@ steps:
     azureSubscription: $(azureServiceConnection)
     scriptType: bash
     scriptLocation: inlineScript
-    inlineScript: |
-      az --version
-      az group create --name $(resourceGroupName) --location $(location)
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile)
+    inlineScript: 
+      az --version \
+      az deployment group create \
+      --name $(Build.BuildNumber) \
+      --resource-group $(resourceGroupName) --location $(location) \
+      --template-file $(Build.SourcesDirectory)/main.bicep `
+      --parameters $(Build.SourcesDirectory)/azuredeploy.parameters.json `
+      --resource-group $(resourceGroupName)
