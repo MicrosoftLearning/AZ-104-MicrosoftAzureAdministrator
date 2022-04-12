@@ -9,7 +9,7 @@ variables:
   azureServiceConnection: 'az104-service-connection'
   resourceGroupName: 'azinsider_demo'
   location: 'eastus'
-  templateFile: 'main.bicep'
+  
 pool:
   vmImage: $(vmImageName)
 
@@ -24,4 +24,4 @@ steps:
       az deployment group create \
       --name $(Build.BuildNumber) \
       --resource-group $(resourceGroupName) --location $(location) \
-      --template-file $(Build.SourcesDirectory)/Allfiles/Labs/04/main.bicep
+      --template-file $(templateFile)
