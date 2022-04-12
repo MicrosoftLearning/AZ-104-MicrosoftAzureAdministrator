@@ -24,6 +24,6 @@ steps:
       az deployment group create \
       --name $(Build.BuildNumber) \
       --resource-group $(resourceGroupName) --location $(location) \
-      --template-file $(Build.SourcesDirectory)/main.bicep `
+      --template-file $(Build.SourcesDirectory)/Allfiles/Labs/04/main.bicep `
       --parameters $(Build.SourcesDirectory)/azuredeploy.parameters.json `
       --resource-group $(resourceGroupName)
