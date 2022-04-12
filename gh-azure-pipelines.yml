@@ -1,0 +1,29 @@
+trigger:
+- master
+
+name: Deploy Bicep files
+
+variables:
+  vmImageName: 'ubuntu-latest'
+
+  azureServiceConnection: 'az104-service-connection'
+  resourceGroupName: 'azinsider_demo'
+  location: 'eastus'
+  templateFile: 'main.bicep'
+pool:
+  vmImage: $(vmImageName)
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: $(azureServiceConnection)
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: 
+      az --version \
+      az deployment group create \
+      --name $(Build.BuildNumber) \
+      --resource-group $(resourceGroupName) --location $(location) \
+      --template-file $(Build.SourcesDirectory)/Allfiles/Labs/04/main.bicep `
+      --parameters $(Build.SourcesDirectory)/azuredeploy.parameters.json `
+      --resource-group $(resourceGroupName)
