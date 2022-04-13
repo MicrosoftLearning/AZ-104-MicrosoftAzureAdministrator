@@ -128,19 +128,19 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: This is a workaround that addresses the issue with the Azure portal occasionally not displaying the newly provisioned virtual network when creating virtual network peerings.
 
-1. In the list of virtual networks, click **az104-06-vnet01**.
+1. In the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
+    | This virtual network: Peering link name | **az104-06-vnet1_to_az104-06-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
-    | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
+    | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
@@ -150,21 +150,21 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: Wait for the operation to complete.
 
-    >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet2 and the other from az104-06-vnet2 to az104-06-vnet01.
+    >**Note**: This step establishes two local peerings - one from az104-06-vnet1 to az104-06-vnet2 and the other from az104-06-vnet2 to az104-06-vnet1.
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value |
     | --- | --- |
-    | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
+    | This virtual network: Peering link name | **az104-06-vnet1_to_az104-06-vnet3** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
     | Virtual network gateway | **None (default)** |
-    | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
+    | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
@@ -172,7 +172,7 @@ In this task, you will configure local peering between the virtual networks you 
     | Traffic forwarded from remote virtual network | **Allow (default)** |
     | Virtual network gateway | **None (default)** |
 
-    >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
+    >**Note**: This step establishes two local peerings - one from az104-06-vnet1 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet1. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
@@ -236,6 +236,8 @@ In this task, you will test transitivity of virtual network peering by using Net
     | URI, FQDN or IPv4 | **10.63.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
+    
+    > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
 
 1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
 
@@ -430,7 +432,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-lb4-be1** |
-    | Virtual network | **az104-06-vnet01** |
+    | Virtual network | **az104-06-vnet1** |
     | IP version | **IPv4** |
     | Virtual machine | **az104-06-vm0** |
     | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
@@ -490,9 +492,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Virtual networks**.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet01**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the  **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the  **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values):
 
@@ -518,7 +520,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | HTTP2 | **Disabled** |
-    | Virtual network | **az104-06-vnet01** |
+    | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw** |
 
 1. Click **Next: Frontends >** and, on the **Frontends** tab of the **Create an application gateway** blade, click **Add new**, and specify the following settings (leave others with their default values):
