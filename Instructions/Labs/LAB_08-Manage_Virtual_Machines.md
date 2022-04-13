@@ -58,14 +58,14 @@ In this task, you will deploy Azure virtual machines into different availability
     | Username | **Student** |
     | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
-    | Would you like to use an existing Windows Server license? | **No** |
+    | Would you like to use an existing Windows Server license? | **Unchecked** |
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | OS disk type | **Premium SSD** |
-    | Enable Ultra Disk compatibility | **No** |
+    | Enable Ultra Disk compatibility | **Unchecked** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
@@ -86,8 +86,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
-     | Accelerated networking | **Off**
-    | Place this virtual machine behind an existing load balancing solution? | **No** |
+    | Accelerated networking | **Off**
+    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -365,7 +365,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password**  |
-    | Already have a Windows Server license? | **No** |
+    | Already have a Windows Server license? | **Unchecked** |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
