@@ -5,9 +5,11 @@ lab:
 ---
 
 # Lab 03b - Manage Azure resources by Using ARM Templates
+
 # Student lab manual
 
 ## Lab scenario
+
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
 
 ## Objectives
@@ -32,10 +34,9 @@ In this lab, you will:
 
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. Sign in to the Azure portal:
-```https://portal.azure.com```
+1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **Resource groups**. 
+1. In the Azure portal, search for and select **Resource groups**.
 
 1. In the list of resource groups, click **az104-03a-rg1**.
 
@@ -56,7 +57,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
     >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
-    
+
 1. Close all **File Explorer** windows.
 
 #### Task 2: Create an Azure managed disk by using an ARM template
@@ -96,7 +97,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. **Save** the changes.
 
-1. Back on the **Custom deployment** blade, click **Edit parameters**. 
+1. Back on the **Custom deployment** blade, click **Edit parameters**.
 
 1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
 
@@ -121,7 +122,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 #### Task 3: Review the ARM template-based deployment of the managed disk
 
-1. In the Azure portal, search for and select **Resource groups**. 
+1. In the Azure portal, search for and select **Resource groups**.
 
 1. In the list of resource groups, click **az104-03b-rg1**.
 
@@ -137,6 +138,6 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 In this lab, you have:
 
-- Reviewed an ARM template for deployment of an Azure managed disk
-- Created an Azure managed disk by using an ARM template
-- Reviewed the ARM template-based deployment of the managed disk
++ Reviewed an ARM template for deployment of an Azure managed disk
++ Created an Azure managed disk by using an ARM template
++ Reviewed the ARM template-based deployment of the managed disk
