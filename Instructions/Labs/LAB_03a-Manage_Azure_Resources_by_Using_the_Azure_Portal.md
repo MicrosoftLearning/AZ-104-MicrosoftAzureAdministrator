@@ -33,8 +33,7 @@ In this lab, we will:
 
 In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
-1. Sign in to the Azure portal:
-```https://portal.azure.com```
+1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
 1. In the Azure portal, search for and select **Disks**, click **+ Create** and specify the following settings:
 
