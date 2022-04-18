@@ -7,7 +7,7 @@ lab:
 # Lab 02a - Manage Subscriptions and RBAC
 # Student lab manual
 
-## Lab requirements:
+## Lab requirements
 
 This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
 
@@ -46,8 +46,7 @@ In this lab, you will:
 
 In this task, you will create and configure management groups. 
 
-1. Sign in to the Azure portal:
-```https://portal.azure.com```
+1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
