@@ -394,7 +394,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select **View details** for **az104-10-vm0**.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Stop backup**.
 
@@ -420,7 +420,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, Disable **Soft Delete (For eligible Backup Management Types)** and click **Save**.
+1. On the **Security Settings** blade, Disable **Soft Delete (For eligible Backup Management Types)** and also disable **Security Features (For workloads running on-premises)** and click **Save**.
 
     >**Note**: This will not affect items already in soft delete state.
 
