@@ -56,7 +56,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
-    >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
+    **Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
 1. Click on **Go to resource**
 
@@ -81,7 +81,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
     ![image](../media/cloudhell01.png)
     
@@ -93,7 +93,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
-    >**Note**: You might need to upload each file separately.
+    **Note**: You might need to upload each file separately.
     
 1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
@@ -108,11 +108,11 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
 
-    >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+    **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
-    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
+    **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
- >**Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
+ **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
     > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
     > 1. Check the location in which the 'az104-04-rg1-[Deployment-ID]' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
     > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
@@ -125,7 +125,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
-   >**Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
+   **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-[Deployment-ID]**.
 
@@ -135,7 +135,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
 
-    >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
+    **Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
 1. In the list IP configurations, click **ipconfig1**.
 
@@ -154,7 +154,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
-    >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
+    **Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
 1. In the list IP configurations, click **ipconfig1**.
 
@@ -173,7 +173,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
-    >**Note**: You will need both IP addresses in the last task of this lab.
+    **Note**: You will need both IP addresses in the last task of this lab.
 
 #### Task 4: Configure network security groups
 
@@ -185,7 +185,11 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Note that the connection attempt fails.
 
-    >**Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
+    **Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
+
+1. Stop the **az104-04-vm0** and **az104-04-vm1** virtual machines.
+
+**Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
@@ -200,7 +204,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
 
-    >**Note**: Wait for the deployment to complete. This should take about 2 minutes.
+    **Note**: Wait for the deployment to complete. This should take about 2 minutes.
 
 1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade.
 
@@ -224,21 +228,23 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
-    >**Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
+    **Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
+
+1. Start the **az104-04-vm0** and **az104-04-vm1** virtual machines.
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
-    >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
+    **Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
 
 1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    **Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
 
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
+    **Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
 1. When prompted, sign in with the user and password in the parameters file.
 
-    >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
+    **Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
 #### Task 5: Configure Azure DNS for internal name resolution
 
@@ -256,7 +262,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
 
-    >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
+    **Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Click **Go to resource** to open the **contoso.org** DNS private zone blade.
 
@@ -273,13 +279,13 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Click **OK**.
 
-    >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+    **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
 1. Verify that the DNS records for **az104-04-vm0** and **az104-04-vm1** appear in the list of record sets as **Auto registered**.
 
-    >**Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
+    **Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
 
 1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
@@ -312,7 +318,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
 
-    >**Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
+    **Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
 
 1. Click **Go to resource** to open the blade of the newly created DNS zone.
 
