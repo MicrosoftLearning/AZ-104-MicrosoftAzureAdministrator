@@ -151,7 +151,7 @@
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), concat(variables('subnetName'),copyIndex()))]"
                             },
-                            "privateIPAllocationMethod": "Dynamic"
+                            "privateIPAllocationMethod":"Dynamic"
                         }
                     }
                 ]
