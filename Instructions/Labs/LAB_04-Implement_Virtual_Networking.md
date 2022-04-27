@@ -301,7 +301,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
-1. In the web browser on the **SEA-DEV** lab system, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
+1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
 
 1. Use the domain name search to identify a domain name which is not in use.
 
