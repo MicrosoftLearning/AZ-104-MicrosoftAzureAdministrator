@@ -47,26 +47,27 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** into the Cloud Shell home directory.
 
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+1. **Important**: You must have successfully completed **LAB_03e-Prepare_Environment_for_deployment_of_VMs_by_Using_Azure_PowerShell**. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
-    ```powershell 
+    ```powershell
     $location = '[Azure_region]'
     ```
-    
+
     Now the resource group name:
+
     ```powershell
     $rgName = 'az104-06-rg1'
     ```
-    
-    And finally create the resource group in your desired location:
+
+    And finally create the resource group in your desired location
+
     ```powershell
     New-AzResourceGroup -Name $rgName -Location $location
     ```
-
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
 
@@ -74,7 +75,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-loop-template.json `
-      -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
+      -TemplateParameterFile $HOME/az104-vms-parameters.json
    ```
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.

@@ -92,11 +92,9 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the file **\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** into the Cloud Shell home directory.
 
-    >**Note**: You might need to upload each file separately.
-
-1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+1. **Important**: You must have successfully completed **LAB_03e-Prepare_Environment_for_deployment_of_VMs_by_Using_Azure_PowerShell**. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
@@ -106,7 +104,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
-      -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
+      -TemplateParameterFile $HOME/az104-vms-parameters.json
    ```
 
     >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
