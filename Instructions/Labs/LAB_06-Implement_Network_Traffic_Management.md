@@ -100,7 +100,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
-    >**Note**: If you got an error stating the VM size is not available please consult your instructor and try these steps.
+    >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
     > 1. Click on the `{}` button in your CloudShell, select the **az104-06-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
     > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
     > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
