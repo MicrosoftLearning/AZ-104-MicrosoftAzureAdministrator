@@ -116,7 +116,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps:
     > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
     > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
-    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
+    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell. If there are no listed SKUs (i.e. there are no results), then you cannot deploy any D2S virtual machines in that region. You will need to find a region that will allow you to deploy D2S virtual machines. Once you have chosen a suitable location, delete the AZ104-04-rg1 resource group and restart the lab.
     > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
     > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
 
