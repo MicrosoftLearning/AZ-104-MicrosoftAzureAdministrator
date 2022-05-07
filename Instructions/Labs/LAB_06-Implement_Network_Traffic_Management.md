@@ -79,6 +79,13 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
+    >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
+    > 1. Click on the `{}` button in your CloudShell, select the **az104-06-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
+    > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
+    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
+    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run. If there are no values returned, you may need to choose a different region to deploy into. You may also choose a different family name, like "Standard_B1s".
+    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
+
 1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
 
    ```powershell
@@ -100,12 +107,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
-    >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
-    > 1. Click on the `{}` button in your CloudShell, select the **az104-06-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
-    > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
-    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
-    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
-    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
+
 
 1. Close the Cloud Shell pane.
 
