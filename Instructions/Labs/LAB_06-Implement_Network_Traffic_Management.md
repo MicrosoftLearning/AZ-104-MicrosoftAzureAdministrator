@@ -569,7 +569,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
 
-1. Click **Add new** under to the **HTTP settings** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
+1. Click **Add new** under to the **Backend settings** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
