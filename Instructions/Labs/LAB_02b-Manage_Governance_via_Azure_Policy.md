@@ -134,7 +134,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
-    >**Note**: By clicking the **Tags** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
+    >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
 #### Task 3: Apply tagging via an Azure policy
 
