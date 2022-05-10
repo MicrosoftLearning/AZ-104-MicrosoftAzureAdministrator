@@ -557,6 +557,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Rule name | **az104-06-appgw5-rl1** |
+    | Priority | **10** |
     | Listener name | **az104-06-appgw5-rl1l1** |
     | Frontend IP | **Public** |
     | Protocol | **HTTP** |
