@@ -294,6 +294,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    | render timechart
    ```
 
+    > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors directly from the instructions, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
+
+
 1. Click **Queries** in the toolbar, on the **Queries** pane, locate the **Track VM availability** tile and double-click it to fill the query window, click the **Run** command button in the tile, and review the results.
 
 1. On the **New Query 1** tab, select the **Tables** header, and review the list of tables in the **Virtual machines** section.
