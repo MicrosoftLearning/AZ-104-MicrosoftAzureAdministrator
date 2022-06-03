@@ -366,6 +366,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **C:\\ on az104-10-vm1.** blade, select **View details** for **az104-10-vm1.** .
 
+1. On the deatil blade, click on the **az104-10-vm1.** computer link to open its informations,
+
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
 1. On the **Delete** blade, specify the following settings.
