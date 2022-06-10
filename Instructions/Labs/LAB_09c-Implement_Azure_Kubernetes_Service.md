@@ -173,11 +173,6 @@ In this task, you will scale horizontally the number of pods and then number of 
 1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
 
     ```sh
-
-    RESOURCE_GROUP='az104-09c-rg1'
-
-    AKS_CLUSTER='az104-9c-aks1'
-
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
 
@@ -192,6 +187,10 @@ In this task, you will scale horizontally the number of pods and then number of 
 1. From the **Cloud Shell** pane, run the following to scale out the cluster by increasing the number of nodes to 2:
 
     ```sh
+    RESOURCE_GROUP='az104-09c-rg1'
+
+    AKS_CLUSTER='az104-9c-aks1'
+
     az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
     ```
 
