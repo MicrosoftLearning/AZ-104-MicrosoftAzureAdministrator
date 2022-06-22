@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/Devopsdev20/0307218a-8fcd-442b-9484-6948e98e0fcc/aeacc8ac-2604-48cf-bc0f-2a41d6ab8f02/_apis/work/boardbadge/43480d4b-d0ad-4fac-8e08-bc3fff3fe388)](https://dev.azure.com/Devopsdev20/0307218a-8fcd-442b-9484-6948e98e0fcc/_boards/board/t/aeacc8ac-2604-48cf-bc0f-2a41d6ab8f02/Microsoft.FeatureCategory)
 # AZ-104: Microsoft Azure Administrator
 
 ## Welcome
