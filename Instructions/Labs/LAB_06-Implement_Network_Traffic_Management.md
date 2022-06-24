@@ -322,7 +322,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | --- | --- |
     | Route name | **az104-06-route-vnet2-to-vnet3** |
     | Address prefix destination | **IP Addresses** |
-    | Source IP addresses/CIDR ranges | **10.63.0.0/20** |
+    | Destination IP addresses/CIDR ranges | **10.63.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
@@ -365,7 +365,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | --- | --- |
     | Route name | **az104-06-route-vnet3-to-vnet2** |
     | Address prefix destination | **IP Addresses** |
-    | Source IP addresses/CIDR ranges | **10.62.0.0/20** |    
+    | Destination IP addresses/CIDR ranges | **10.62.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
