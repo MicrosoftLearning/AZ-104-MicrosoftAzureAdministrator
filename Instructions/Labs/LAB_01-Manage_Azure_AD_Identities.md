@@ -18,8 +18,8 @@ In this lab, you will:
 
 + Task 1: Create and configure Azure AD users
 + Task 2: Create Azure AD groups with assigned and dynamic membership
-+ Task 3: Create an Azure Active Directory (AD) tenant
-+ Task 4: Manage Azure AD guest users 
++ Task 3: Create an Azure Active Directory (AD) tenant (Optional - lab environment issue)
++ Task 4: Manage Azure AD guest users (Optional - lab environment issue)
 
 ## Estimated timing: 30 minutes
 
@@ -181,8 +181,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-#### Task 3: Create an Azure Active Directory (AD) tenant
+#### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
 
+
+    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you experience this issue, please skip both this task and the next. We are working on a solution.
+    
 In this task, you will create a new Azure AD tenant.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
