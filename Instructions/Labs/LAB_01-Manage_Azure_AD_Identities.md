@@ -183,9 +183,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 #### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
 
-   >**Note**: There is a known issue with the Captcha verification in the lab environment. If you experience this issue, please skip both this task and the next. We are working on a solution.
-    
 In this task, you will create a new Azure AD tenant.
+
+   >**Note**: There is a known issue with the Captcha verification in the lab environment. If you experience this issue, please skip both this task and the next. We are working on a solution.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
