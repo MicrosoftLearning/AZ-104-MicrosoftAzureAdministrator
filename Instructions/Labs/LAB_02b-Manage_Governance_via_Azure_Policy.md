@@ -174,7 +174,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the resource group if missing** |
+    | Policy to remediate | **Inherit a tag from the subscription if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
