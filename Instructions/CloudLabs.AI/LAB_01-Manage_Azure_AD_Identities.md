@@ -88,6 +88,8 @@ In this task, you will create and configure Azure AD users.
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
+    >**Note**: If the users are already created then you can skip this task and continue further. 
+
 #### Task 2: Create Azure AD groups with assigned and dynamic membership
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
@@ -191,7 +193,7 @@ In this task, you will create a new Azure AD tenant.
 
    > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
-1. Click **Review + create** and then click **Create**.
+1. Click **Review + create** then enter the captcha and click **Submit**.
 
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
@@ -218,7 +220,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New guest user**.
+1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
 
 1. Create a new guest user with the following settings (leave others with their defaults):
 
