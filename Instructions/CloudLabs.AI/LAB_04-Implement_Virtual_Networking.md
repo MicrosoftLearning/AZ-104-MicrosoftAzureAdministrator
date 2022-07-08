@@ -32,7 +32,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
 
-    ![Image](./Instructions/CloudLabs.AI/Images/Virtual Networking Ex1-t2-p1.png)
+    ![Image](https://github.com/ShashankMS9/AZ-104-MicrosoftAzureAdministrator/blob/stage/Instructions/CloudLabs.AI/Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
 1. Create a virtual network with the following settings (leave others with their default values):
 
