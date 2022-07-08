@@ -79,6 +79,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
@@ -94,6 +96,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     **Note**: You might need to upload each file separately.
+    
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
     
 1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
@@ -131,7 +135,11 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
+    ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
+
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
+
+    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p3.png)
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
 
@@ -139,12 +147,16 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
+    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p5.png)
+
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
+    
+    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p6.png)
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
 
@@ -189,7 +201,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Stop the **az104-04-vm0** and **az104-04-vm1** virtual machines.
 
-**Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
+    **Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
@@ -207,6 +219,8 @@ In this task, you will configure network security groups in order to allow for r
     **Note**: Wait for the deployment to complete. This should take about 2 minutes.
 
 1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade.
+
+    ![Image](./Images/Virtual%20Networking%20Ex1-t4-p4.png)
 
 1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Inbound security rules**.
 
@@ -276,8 +290,11 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-04-vnet1** |
     | Enable auto registration | enabled |
+    
+    Click **OK**.
+    
+    ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
 
-1. Click **OK**.
 
     **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
@@ -285,9 +302,13 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Verify that the DNS records for **az104-04-vm0** and **az104-04-vm1** appear in the list of record sets as **Auto registered**.
 
+    ![Image](./Images/Virtual%20Networking%20Ex1-t5-p9.png)
+
     **Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
 
 1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+
+    ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
 
 1. In the Windows PowerShell console window, run the following to test internal name resolution in the newly created private DNS zone:
 
@@ -295,8 +316,10 @@ In this task, you will configure DNS name resolution within a virtual network by
    nslookup az104-04-vm0.contoso.org
    nslookup az104-04-vm1.contoso.org
    ```
-
+    
 1. Verify that the output of the command includes the private IP address of **az104-04-vm1** (**10.40.1.4**).
+
+     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p12.png)
 
 #### Task 6: Configure Azure DNS for external name resolution
 
