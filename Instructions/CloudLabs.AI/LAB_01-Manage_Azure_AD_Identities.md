@@ -38,7 +38,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
+1. Navigate back to the **Users - All users** blade, and then click **+ Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
