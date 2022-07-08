@@ -97,6 +97,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     **Note**: You might need to upload each file separately.
     
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%replace.png)
+    
 1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
