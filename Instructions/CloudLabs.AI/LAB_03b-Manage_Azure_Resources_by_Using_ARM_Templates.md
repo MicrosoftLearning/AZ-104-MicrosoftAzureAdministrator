@@ -45,7 +45,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
-    >**Note**: These files are also available as **\\Allfiles\\Labs\\03\\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
+    >**Note**: These files are also available as **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\03\az104-03b-md-template.json** and **\\Allfiles\\Labs\\03\\az104-03b-md-parameters.json**
     
 1. Close all **File Explorer** windows.
 
