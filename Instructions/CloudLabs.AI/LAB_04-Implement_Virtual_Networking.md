@@ -135,6 +135,8 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
+![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
+
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
@@ -142,6 +144,8 @@ In this task, you will configure static assignment of public and private IP addr
     **Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
 1. In the list IP configurations, click **ipconfig1**.
+
+![Image](./Images/Virtual%20Networking%20Ex1-t3-p3.png)
 
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
