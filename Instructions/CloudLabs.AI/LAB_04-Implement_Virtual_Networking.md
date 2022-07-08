@@ -79,7 +79,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
- ![Image](https://github.com/ShashankMS9/AZ-104-MicrosoftAzureAdministrator/blob/stage/Instructions/CloudLabs.AI/Images/Virtual%20Networking%20Ex1-t2-p1.png)
+ ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
