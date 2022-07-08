@@ -230,7 +230,7 @@ In this task, you will configure network security groups in order to allow for r
 
     **Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
 
-1. Start the **az104-04-vm0** and **az104-04-vm1** virtual machines.
+1.  Navigate to Virtual Machine and start the **az104-04-vm0** and **az104-04-vm1** 
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
@@ -260,7 +260,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Resource Group | **az104-04-rg1-[Deployment-ID]** |
     | Name | **contoso.org** |
 
-1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
+1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
     **Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
