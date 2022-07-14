@@ -260,7 +260,7 @@ In this task, you will configure network access for Azure Storage.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks**.
 
-1. Click the **Selected networks** option and review the configuration settings that become available once this option is enabled.
+1. Click the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
 
     > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
 
