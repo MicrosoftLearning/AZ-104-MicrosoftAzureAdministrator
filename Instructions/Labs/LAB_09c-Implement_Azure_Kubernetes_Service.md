@@ -64,10 +64,12 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-09c-rg1** |
+    | Cluster preset configuration | **Dev/Test ($)** |
     | Kubernetes cluster name | **az104-9c-aks1** |
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Availability zones | **None** (uncheck all boxes) |
     | Kubernetes version | accept the default |
+    | API server availability | accept the default |
     | Node size | accept the default |
     | Scale method | **Manual** |
     | Node count | **1** |
@@ -90,7 +92,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Network configuration | **kubenet** |
-    | DNS name prefix | any valid, globally unique DNS host name |
+    | DNS name prefix | any valid, globally unique DNS prefix|
 
 1. Click **Next: Integrations >**, on the **Integrations** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click **Create**.
 
