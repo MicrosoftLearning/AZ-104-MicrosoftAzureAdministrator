@@ -10,6 +10,8 @@ lab:
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
 
+To preview this lab in interactive guide format, **[click here](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)**.
+
 ## Objectives
 
 In this lab, you will:
