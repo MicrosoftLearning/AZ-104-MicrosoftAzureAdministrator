@@ -15,7 +15,9 @@ In order to improve management of Azure resources in Contoso, you have been task
 
 - ensuring that only properly tagged infrastructure resources can be added to infrastructure resource groups
 
-- remediating any non-compliant resources 
+- remediating any non-compliant resources
+
+To preview this lab in interactive guide format, **[click here](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)**.
 
 ## Objectives
 
