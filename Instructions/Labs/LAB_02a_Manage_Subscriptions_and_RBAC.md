@@ -205,7 +205,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 1. Select **Refresh** to verify that the subscription has successfully moved to the **Tenant Root management group**.
 
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
-  >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the resource group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
+  >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
 
 #### Review
 
