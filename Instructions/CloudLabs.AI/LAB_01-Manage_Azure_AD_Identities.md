@@ -19,7 +19,6 @@ In this lab, you will:
 
 ## Instructions
 
-
 ### Exercise 1
 
 #### Task 1: Create and configure Azure AD users
@@ -34,7 +33,7 @@ In this task, you will create and configure Azure AD users.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
+1. Click **edit properties**, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
