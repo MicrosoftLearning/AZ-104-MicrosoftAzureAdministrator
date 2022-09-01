@@ -97,7 +97,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | select the existed resource group **az104-03b-rg1-[Deployment-ID]** |
+    | Resource Group | select the existing resource group **az104-03b-rg1-[Deployment-ID]** |
     | Region | the name of any Azure region available in the subscription you are using in this lab |
     | Disk Name | **az104-03b-disk1** |
     | Location | the value of the location parameter you noted in the previous task |

@@ -9,7 +9,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 In this lab, we will:
 
-+ Task 1: Use the existed resource groups and deploy resources to resource groups
++ Task 1: Use the existing resource groups and deploy resources to resource groups
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
 
@@ -20,9 +20,9 @@ In this lab, we will:
 
 ### Exercise 1
 
-#### Task 1: Use the existed resource groups and deploy resources to resource groups
+#### Task 1: Use the existing resource groups and deploy resources to resource groups
 
-In this task, you will use the Azure portal to use the existed resource groups and create a disk in the resource group.
+In this task, you will use the Azure portal to use the existing resource groups and create a disk in the resource group.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -33,7 +33,7 @@ In this task, you will use the Azure portal to use the existed resource groups a
     |Subscription| the name of the Azure subscription where you created the resource group |
     |Resource Group| select the existing resource group **az104-03a-rg1-[Deployment-ID]** |
     |Disk name| **az104-03a-disk1** |
-    |Region| the name of the Azure region where the resource group exisit |
+    |Region| Same region as the Resource Group |
     |Availability zone| **None** |
     |Source type| **None** |
 
@@ -55,7 +55,7 @@ In this task, we will move the disk resource you used in the previous task to a 
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Below the **Resource group** text box, select the **az104-03a-rg2-[Deployment-ID]** existed Resource group in the text box. On the **Resource to move** tab, Wait untill Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
+1. Below the **Resource group** text box, select the **az104-03a-rg2-[Deployment-ID]** existing Resource group in the text box. On the **Resource to move** tab, Wait untill Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
@@ -70,7 +70,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Subscription| the name of the subscription you are using in this lab |
     |Resource Group| select the existing resource group **az104-03a-rg3-[Deployment-ID]** |
     |Disk name| **az104-03a-disk2** |
-    |Region| the name of the Azure region where the other resource groups exisit in this lab |
+    |Region| Same region as the resource group  |
     |Availability zone| **None** |
     |Source type| **None** |
 
