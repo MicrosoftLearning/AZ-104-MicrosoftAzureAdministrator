@@ -62,7 +62,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     **Note**: note what resource group the storage account is in, you'll need it later in the lab.
 
-1. On the resource group blade, click **Tags**.
+1. On the resource group blade, click Click **edit** next to **Tags** to create new tags.
 
 1. Create a tag with the following settings and save your change:
 
@@ -131,7 +131,11 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-1. Once you click on **Review + create**, you should see the **Validation failed. Required information is missing or not valid.** message. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**. Close this resource create operation.
+1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
+
+>**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
+
+>**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
 #### Task 3: Apply tagging via an Azure policy
 
@@ -141,7 +145,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the **Authoring** section, click **Assignments**. 
 
-1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment. 
+1. In the list of assignments, click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment. 
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -171,7 +175,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the resource group if missing** |
+    | Policy to remediate | **Inherit a tag from the subscription if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
