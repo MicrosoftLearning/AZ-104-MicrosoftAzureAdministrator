@@ -1,7 +1,7 @@
 ---
 lab:
     title: '04 - Implement Virtual Networking'
-    module: 'Module 04 - Virtual Networking'
+    module: 'Administer Virtual Networking'
 ---
 
 # Lab 04 - Implement Virtual Networking
