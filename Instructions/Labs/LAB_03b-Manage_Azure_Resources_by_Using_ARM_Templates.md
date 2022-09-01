@@ -1,7 +1,7 @@
 ---
 lab:
     title: '03b - Manage Azure resources by Using ARM Templates'
-    module: 'Module 03 - Azure Administration'
+    module: 'Administer Azure Resources'
 ---
 
 # Lab 03b - Manage Azure resources by Using ARM Templates
