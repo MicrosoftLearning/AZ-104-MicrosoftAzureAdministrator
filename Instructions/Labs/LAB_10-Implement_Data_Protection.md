@@ -1,7 +1,7 @@
 ---
 lab:
     title: '10 - Implement Data Protection'
-    module: 'Module 10 - Data Protection'
+    module: 'Administer Data Protection'
 ---
 
 # Lab 10 - Backup virtual machines
