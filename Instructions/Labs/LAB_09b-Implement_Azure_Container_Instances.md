@@ -11,6 +11,8 @@ lab:
 
 Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
 
+To preview this lab in interactive guide format, **[click here](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)**.
+
 ## Objectives
 
 In this lab, you will:

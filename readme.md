@@ -6,6 +6,7 @@ This repository is for instructors teaching Microsoft courses. If you are in cla
 
 - **[Link to labs (HTML format)](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+- To preview this course in interactive guide format, click here:  **[AZ-104 Exam Guide - Microsoft Azure Administrator](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator)**
 
 ## Security Issue - February 2022
 

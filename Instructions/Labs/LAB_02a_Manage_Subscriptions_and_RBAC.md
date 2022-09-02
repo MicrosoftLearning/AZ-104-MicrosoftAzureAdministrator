@@ -20,7 +20,9 @@ In order to improve management of Azure resources in Contoso, you have been task
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
 
     - creating support request tickets
-    - viewing resource groups 
+    - viewing resource groups
+
+To preview this lab in interactive guide format, **[click here](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)**.
 
 ## Objectives
 
