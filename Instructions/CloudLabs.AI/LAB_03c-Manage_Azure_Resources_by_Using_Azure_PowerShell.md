@@ -10,7 +10,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 In this lab, you will:
 
 + Task 1: Start a PowerShell session in Azure Cloud Shell
-+ Task 2: Use the existed resource group and an Azure managed disk by using Azure PowerShell
++ Task 2: Use the existing resource group and an Azure managed disk by using Azure PowerShell
 + Task 3: Configure the managed disk by using Azure PowerShell
 
 ## Estimated timing: 20 minutes
@@ -41,7 +41,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 1. Ensure **PowerShell** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-#### Task 2: Use the existed resource group and an Azure managed disk by using Azure PowerShell
+#### Task 2: Use the existing resource group and an Azure managed disk by using Azure PowerShell
 
 In this task, you will use a existing resource group and an Azure managed disk by using Azure PowerShell session within Cloud Shell
 
