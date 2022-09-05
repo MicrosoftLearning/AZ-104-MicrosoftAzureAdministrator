@@ -170,7 +170,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. Here as well you can switch to the **Custom** view for more detailed configuration settings.
 
-1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
+1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Log Analytics Agent** and then click **Enable**.
 
 1. On the **az104-11-vm0 - Logs** blade, ensure that the Log Analytics workspace you created earlier in this lab is selected in the **Choose a Log Analytics Workspace** drop-down list and click **Enable**.
 
@@ -285,7 +285,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
 
-1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-rg0**, and click **Apply**.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-vm0**, and click **Apply**.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
