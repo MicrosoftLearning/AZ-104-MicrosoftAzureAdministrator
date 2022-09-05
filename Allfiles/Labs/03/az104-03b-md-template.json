@@ -17,12 +17,6 @@
         "sourceResourceId": {
             "type": "String"
         },
-        "sourceUri": {
-            "type": "String"
-        },
-        "osType": {
-            "type": "String"
-        },
         "createOption": {
             "type": "String"
         },
@@ -52,7 +46,6 @@
                     "createOption": "[parameters('createOption')]"
                 },
                 "diskSizeGB": "[parameters('diskSizeGb')]",
-                "osType": "[parameters('osType')]",
                 "networkAccessPolicy": "[parameters('networkAccessPolicy')]"
             }
         }
