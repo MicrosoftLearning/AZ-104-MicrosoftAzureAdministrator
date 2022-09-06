@@ -37,7 +37,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ Create new user**.
+1. Navigate back to the **Users - All users** blade, and then click **+ New user** then select **+ Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -71,7 +71,7 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
-1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**..
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -192,7 +192,7 @@ In this task, you will create a new Azure AD tenant.
 
    > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
-1. Click **Review + create** then enter the captcha and click **Submit**.
+1. Click **Review + create** then **Create**, enter the captcha and click **Submit**.
 
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
@@ -200,7 +200,7 @@ In this task, you will create a new Azure AD tenant.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** select **invite external user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
