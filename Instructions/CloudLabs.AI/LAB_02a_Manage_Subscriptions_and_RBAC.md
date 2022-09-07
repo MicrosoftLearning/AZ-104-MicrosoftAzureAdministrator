@@ -109,7 +109,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. Go to Azure Active directory and click on User and copy the Object ID and save it in Notepad.
+1. Go to the Azure Active directory and click on User on the left pane and then click on All user(preview) and select ODL user and copy the Object ID and save it in Notepad.
 
 1. From the Cloud Shell pane run the following Command.
 
