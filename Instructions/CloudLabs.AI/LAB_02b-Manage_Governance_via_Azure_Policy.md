@@ -36,12 +36,12 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell2.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
-
+    ![image](../media/cloudhell01.png)
+    
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
@@ -175,7 +175,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Create a remediation task | enabled |
-    | Policy to remediate | **Inherit a tag from the subscription if missing** |
+    | Policy to remediate | **Inherit a tag from the resource group if missing** |
 
     >**Note**: This policy definition includes the **Modify** effect.
 
