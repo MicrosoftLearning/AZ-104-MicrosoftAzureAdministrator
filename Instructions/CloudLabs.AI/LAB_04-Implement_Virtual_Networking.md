@@ -158,7 +158,7 @@ In this task, you will configure static assignment of public and private IP addr
     
     ![Image](./Images/Virtual%20Networking%20Ex1-t3-p6.png)
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
+1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
 
 1. Back on the **ipconfig1** blade, save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
@@ -177,7 +177,7 @@ In this task, you will configure static assignment of public and private IP addr
     | Name | **az104-04-pip1** |
     | SKU | **Standard** |
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4**.
+1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4** and click on **Save**.
 
 1. Back on the **ipconfig1** blade, save the changes.
 
