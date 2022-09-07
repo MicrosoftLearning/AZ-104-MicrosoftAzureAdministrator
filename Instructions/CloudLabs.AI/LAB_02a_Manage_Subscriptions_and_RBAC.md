@@ -113,17 +113,19 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. From the Cloud Shell pane run the following Command.
 
-  ```powershell
+   ```powershell
    Connect-azuread
    ```
-1.Replace object id in code and run the command
- 
-  ```powershell
+1. Replace object id in code and run the command.
+
+   ```powershell
    Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | where-object {$_.DisplayName -eq "Directory Readers"}).Objectid -RefObjectId <object-id>
    ```
+    
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\02\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
+    
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
    ```powershell
