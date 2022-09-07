@@ -101,13 +101,30 @@ In this task, you will create a definition of a custom RBAC role.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell1.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
+    ![image](../media/cloudshell2.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+
+1. Go to Azure Active directory and click on User and copy the Object ID and save it in Notepad.
+
+1. ```powershell
+   Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | where-object {$_.DisplayName -eq "Directory Readers"}).Objectid -RefObjectId <object-id>
+   ```
+1. From the Cloud Shell pane run the following Command.
+
+```powershell
+   Connect-azuread
+   ```
+
+ 1.Replace object id in code and run the command
+ 
+1. ```powershell
+   Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | where-object {$_.DisplayName -eq "Directory Readers"}).Objectid -RefObjectId <object-id>
+   ```
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\02\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
@@ -148,7 +165,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** click create a support request and then click **+ New support request**. 
+1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** click **create a support request** . 
 
 1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
 
