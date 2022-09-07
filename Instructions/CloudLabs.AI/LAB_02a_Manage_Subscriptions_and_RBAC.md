@@ -65,7 +65,7 @@ In this task, you will create and configure management groups.
 
 1. On the **az104-02-mg1** blade, click **Subscriptions**. 
 
-1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, seletc the subscription you are using in this lab and click **Save**.
+1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
@@ -140,7 +140,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
+1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **Create new user** from the **+ New user** dropdown.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -155,7 +155,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, navigate back to the **az104-02-mg1** management group and display its **details**.
 
-1. Click **Access control (IAM)**, click **+ Add** followed by **Role assignment**, and search for the **Support Request Contributor (Custom)**and assign the role to the newly created user account.
+1. Click **Access control (IAM)**, click **+ Add** followed by **Role assignment**, and search for the **Support Request Contributor (Custom)** and assign the role to the newly created user account.
 
 1.  Click on **+Select Member** and serach  the newly created user and select.
 
