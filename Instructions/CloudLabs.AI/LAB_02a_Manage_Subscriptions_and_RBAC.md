@@ -111,15 +111,11 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Go to Azure Active directory and click on User and copy the Object ID and save it in Notepad.
 
-1. ```powershell
-   Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | where-object {$_.DisplayName -eq "Directory Readers"}).Objectid -RefObjectId <object-id>
-   ```
 1. From the Cloud Shell pane run the following Command.
 
 ```powershell
    Connect-azuread
    ```
-
  1.Replace object id in code and run the command
  
 1. ```powershell
