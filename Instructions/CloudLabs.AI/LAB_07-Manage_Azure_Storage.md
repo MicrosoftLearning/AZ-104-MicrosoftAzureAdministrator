@@ -122,6 +122,8 @@ In this task, you will create a blob container and upload a blob into it.
     | Name | **az104-07-container**  |
     | Public access level | **Private (no anonymous access)** |
 
+1. Click **Create**.
+
 1. In the list of containers, click **az104-07-container** and then click **Upload**.
 
 1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
