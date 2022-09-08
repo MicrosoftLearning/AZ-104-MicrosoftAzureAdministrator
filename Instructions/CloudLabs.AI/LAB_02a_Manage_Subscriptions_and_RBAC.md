@@ -105,7 +105,7 @@ In this task, you will create a definition of a custom RBAC role.
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudshell2.png)
+    ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
