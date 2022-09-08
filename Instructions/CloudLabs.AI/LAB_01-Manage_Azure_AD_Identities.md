@@ -33,7 +33,7 @@ In this task, you will create and configure Azure AD users.
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Click **edit properties**, set **Usage location** to **United States** and click **save** to apply the change.
+1. Click **Edit properties**, set **Usage location** to **United States** and click **save** to apply the change.
 
     >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
 
@@ -200,7 +200,7 @@ In this task, you will create a new Azure AD tenant.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** select **invite external user**.
+1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -219,7 +219,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
+1. Navigate back to the **Users - All users** blade, click **+ New user** the select **Invite external user**.
 
 1. Create a new guest user with the following settings (leave others with their defaults):
 
