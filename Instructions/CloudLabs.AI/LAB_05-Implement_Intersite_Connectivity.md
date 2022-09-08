@@ -25,6 +25,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
