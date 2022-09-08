@@ -36,15 +36,15 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell1.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
-
+    ![image](../media/cloudhell01.png)
+    
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06** into the Cloud Shell home directory.
 
 1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
@@ -276,7 +276,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Now you need to create and configure user defined routes on the spoke virtual networks.
 
-1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Add**.
+1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
@@ -301,11 +301,12 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet2-to-vnet3** |
-    | Address prefix | **10.63.0.0/20** |
+    | Address prefix destination | **IP Addresses** |
+    | Destination IP addresses/CIDR ranges | **10.63.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Back on the **az104-06-rt23** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
@@ -318,7 +319,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click **OK**
 
-1. Navigate back to **Route tables** blade and click **+ Add**.
+1. Navigate back to **Route tables** blade and click **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
@@ -343,11 +344,12 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet3-to-vnet2** |
-    | Address prefix | **10.62.0.0/20** |
+    | Address prefix destination | **IP Addresses** |
+    | Destination IP addresses/CIDR ranges | **10.62.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Back on the **az104-06-rt32** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
@@ -422,15 +424,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-be1** |
     | Virtual network | **az104-06-vnet01** |
-    | IP version | **IPv4** |
-    | Virtual machine | **az104-06-vm0** |
-    | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
-    | Virtual machine | **az104-06-vm1** |
-    | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
+    | Backend Pool Configuration | **NIC** |
+    
+1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and then click **Save** to save the IP configurations to the backend pool.
 
-1. Click **Add**
-
-1. Click **Next: Inbound rules >**, Add a load balancing rule with the following settings (leave others with their default values):
+1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -457,7 +455,6 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Protocol | **TCP** |
     | Port | **80** |
     | Interval | **5** |
-    | Unhealthy threshold | **2** |
 
 1. Click **OK** and back on the **Add load balancing rules** blade, click **Add**.
 
@@ -465,7 +462,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-1. Wait for the load balancing rule to be created, click **Go to resource** and click **Overview**, and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings** section, click **Frontend IP configuration** and note the value of the **Public IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
@@ -592,6 +589,6 @@ In this lab, you have:
 + Provisioned the lab environment
 + Configured the hub and spoke network topology
 + Tested transitivity of virtual network peering
-+ Task 4: Configure routing in the hub and spoke topology
-+ Task 5: Implement Azure Load Balancer
-+ Task 6: Implement Azure Application Gateway
++ Configure routing in the hub and spoke topology
++ Implement Azure Load Balancer
++ Implement Azure Application Gateway
