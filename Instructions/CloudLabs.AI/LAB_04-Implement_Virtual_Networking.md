@@ -85,7 +85,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell1.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
