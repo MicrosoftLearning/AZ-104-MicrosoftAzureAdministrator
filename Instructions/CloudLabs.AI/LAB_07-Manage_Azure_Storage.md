@@ -46,7 +46,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine) and 
+1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0-DID.
 
     >**Note**: Replace the DID with the unique deployment id, which can be found under the envrionment details tab. To list the names of Azure regions, run `(Get-AzLocation).Location`. 
 
@@ -81,7 +81,7 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **new** resource group **az104-07-rg1-DID** |
+    | Resource group | the name of a **exitisting** resource group **az104-07-rg1-DID** |
     | Storage account name | **strgaz104t07DID** |
     | Location | the name of an Azure region where you can create an Azure Storage account  |
     | Performance | **Standard** |
