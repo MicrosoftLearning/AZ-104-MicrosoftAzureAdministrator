@@ -28,7 +28,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1.on search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Kubernetes** and **Microsoft.KubernetesConfiguration** is registered.
 
- ![image](https://user-images.githubusercontent.com/33771500/150981040-7dafe8ee-d7b0-4410-9359-6f303ce19a17.png)
+ ![image](../media/registekub.png)
 
 
 #### Task 2: Deploy an Azure Kubernetes Service cluster
