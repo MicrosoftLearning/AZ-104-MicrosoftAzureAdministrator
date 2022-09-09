@@ -29,7 +29,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Sign in to the [Azure portal](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create then select +Virtual Machine**.
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create** then select **Azure virtual machine**.
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -40,9 +40,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual machine name | **az104-08-vm0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
-    | Availability zone | **1** |
+    | Availability zone | **Zone 1** |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
-    | Azure Spot instance | **No** |
+    | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
@@ -75,16 +75,17 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
-    | Accelerated networking | **Off**
+    | Enable accelerated networking | **Unchecked**
     | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
 
-1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, under **Guest OS updates**, select **Manual updates** for **Patch orchestration options**.
+
+1. Click **Next: Monitoring >** and, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | accept the default value |
-    | Patch orchestration options | **Manual updates** |  
 
     >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
 
@@ -104,8 +105,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | --- | --- |
     | Resource group | **az104-08-rg01-[Deployment ID]** |
     | Network Interface Name 1 | **az104-08-vm1-nic1** |
-    | Public IP Address Name | **az104-08-vm1-ip** |
-    | Virtual Machine Name,Virtual Machine Name1, Virtual Machine Computer Name  | **az104-08-vm1** |
+    | Public IP Address Name 1 | **az104-08-vm1-ip** |
+    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name  | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password** |
     | Enable Hotpatching | **false** |
@@ -142,13 +143,13 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
+1. On the **Install an Extension** blade, search for and select **Custom Script Extension** and then click **Next**.
 
-1. From the **Install extension** blade, click **Browse**.
+1. From the **Configure Custom Script Extension Extension** blade, click **Browse**.
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
-1. Back on the **Install extension** blade, click **Review+Create then click Create**.
+1. Back on the **Configure Custom Script Extension Extension** blade, click **Review+Create** then click **Create**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
@@ -160,7 +161,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line):
+1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line) and replace '[resourceGroup().location]' placeholder in the JSON file with the virtual machine location:
 
    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
@@ -188,7 +189,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
    >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
 
-1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
+1. Click **Save** and, back on the **Custom template** blade, select the region in which the virtual machine is deployed then click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
