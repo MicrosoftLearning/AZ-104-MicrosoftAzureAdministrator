@@ -66,6 +66,8 @@ In this task, you will create a staging deployment slot.
     | Name | **staging** |
     | Clone settings from | **Do not clone settings**|
 
+1. Click **Add**.
+
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
@@ -153,11 +155,11 @@ In this task, you will deploy code to the staging deployment slot.
 
 In this task, you will swap the staging slot with the production slot
 
-1. Navigate back to the blade displaying the production slot of the web app.
+1. Navigate back to the App Service blade.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-1. On the **Swap** blade, review the default settings and click **Swap**.
+1. On the **Swap** blade, review the default settings and click **Swap** and then Click on **Close**.
 
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
