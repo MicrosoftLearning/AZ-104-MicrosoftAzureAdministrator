@@ -26,7 +26,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. on search box search Subscription and click your subscription and go to resource provider under setting and make sure Microsoft.Kubernetes and Microsoft.KubernetesConfiguration is registered.
+1.on search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Kubernetes** and **Microsoft.KubernetesConfiguration** is registered.
 
  ![image](https://user-images.githubusercontent.com/33771500/150981040-7dafe8ee-d7b0-4410-9359-6f303ce19a17.png)
 
@@ -42,7 +42,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of the existing resource group **az104-09c-rg1** |
+    | Resource group | the name of the existing resource group **az104-09c-rg1-DeploymentID** |
     | Kubernetes cluster name | **az104-9c-aks1** |
     | Region | the name of a region where you can provision a Kubernetes cluster |
     | Availability zones | **None** (uncheck all boxes) |
@@ -61,8 +61,8 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     | Setting | Value |
     | ---- | ---- |
-    | Authentication method | **System-assigned managed identity** (default - no change) |  
-    | Role-based access control (RBAC) | **Enabled** |
+    | Resource identity | **System-assigned managed identity** (default - no change) |
+    | Authentication and Authorization | **Local accounts with Kubernetes RBAC** |
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -94,12 +94,13 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
     ```sh
-    RESOURCE_GROUP='az104-09c-rg1'
+    RESOURCE_GROUP='az104-09c-rg1-DeploymentID'
 
     AKS_CLUSTER='az104-9c-aks1'
 
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER
     ```
+  >**Note**: Replace DeploymentID 
 
 1. From the **Cloud Shell** pane, run the following to verify connectivity to the AKS cluster:
 
@@ -153,12 +154,13 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     ```sh
 
-    RESOURCE_GROUP='az104-09c-rg1'
+     RESOURCE_GROUP='az104-09c-rg1-DeploymentID'
 
     AKS_CLUSTER='az104-9c-aks1'
 
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
+     >**Note**: Replace DeploymentID 
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
 
