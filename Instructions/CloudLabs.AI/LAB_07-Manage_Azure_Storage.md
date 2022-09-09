@@ -99,11 +99,13 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Storage account blade, in the **Data management** section, click **Geo-replication** and note the secondary location. 
+1. On the Storage account blade, in the **Data management** section, click **Redundancy** and note the secondary location. 
 
-1. On the Storage account blade, in the **Settings** section, select **Configuration**, in the **Replication** drop-down list select **Locally redundant storage (LRS)** and save the change.
+1. In the same blade **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change.
+   
+   ![image](../media/TA7-T2-P8.png)
 
-1. Switch back to the **Geo-replication** blade and note that, at this point, the Storage account has only the primary location.
+1. In the same blade note that, at this point, the Storage account has only the primary location.
 
 1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
