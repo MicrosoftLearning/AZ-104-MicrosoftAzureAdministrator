@@ -91,7 +91,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Public endpoint (all networks}** and click **Next: Data protection >**.
+1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable from all network** under network access and click **Next: Data protection >**.
 
 1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
 
