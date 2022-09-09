@@ -270,11 +270,13 @@ In this task, you will configure network access for Azure Storage.
 
 1. Open another browser window by using InPrivate mode and navigate to the blob SAS URL you generated in the previous task.
 
+    > **Note**: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
+
 1. You should be presented with the content of **The MIT License (MIT)** page.
 
     > **Note**: This is expected, since you are connecting from your client IP address.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container.
+1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
