@@ -40,7 +40,7 @@ In this task, you will create an Azure web app.
     | Publish | **Code** |
     | Runtime stack | **PHP 7.4** |
     | Operating system | **Windows** |
-    | Region | the name of an Azure region where you can provision Azure web apps |
+    | Region | Same region as the Resource group |
     | App service plan | accept the default configuration |
 
 1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
