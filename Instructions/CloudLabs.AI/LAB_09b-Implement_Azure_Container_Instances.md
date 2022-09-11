@@ -34,7 +34,7 @@ In this task, you will create a new container instance for the web application.
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | Select resource group **az104-09b-rg1** |
     | Container name | **az104-9b-c1** |
-    | Region | the name of a region where you can provision Azure container instances |
+    | Region | Same region as the Resource group |
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
