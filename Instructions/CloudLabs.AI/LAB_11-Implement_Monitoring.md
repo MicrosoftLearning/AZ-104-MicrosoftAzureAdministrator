@@ -35,11 +35,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell1.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
+    ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -173,7 +173,12 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
 
-1. On the **az104-11-vm0 - Logs** blade, ensure that the Log Analytics workspace you created earlier in this lab is selected in the **Choose a Log Analytics Workspace** drop-down list and click **Enable**.
+1. On the **Monitoring configuration** blade, select the following settings (ensure that the Log Analytics workspace you created earlier in this lab is selected in the **Log Analytics workspaces** drop-down list) and click **Configure**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Enable insights using | **Log Analytics agent** |
+    | Log Analytics workspaces | **analytics-DID** |
 
     >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
 
@@ -207,7 +212,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Create alert rule** blade, in the **Condition** section, click the existing condition entry.
 
-1. On the **Configure signal logic** blade, in the list of signals, in the **Alert logic** section, specify the following settings (leave others with their default values) and click **Done**:
+1. On the **Configure signal logic** blade, in the list of signals, in the **Alert logic** section, specify the following settings (leave others with their default values), click **Done** and select **Next: Actions>**:
 
     | Settings | Value |
     | --- | --- |
@@ -216,11 +221,11 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation type | **Average** |
     | Threshold value | **2** |
     | Aggregation granularity (Period) | **1 minute** |
-    | Frequency of evaluation | **Every 1 Minute** |
+    | Frequency of evaluation | **1 Minute** |
 
 1. On the **Create alert rule** blade, in the **Action group** section, click **Add action groups** and then click the **+ Create action group** button.
 
-1. On the **Basics** tab of the **Create action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications >**:
+1. On the **Basics** tab of the **Create an action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications >**:
 
     | Settings | Value |
     | --- | --- |
@@ -243,10 +248,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | --- | --- |
     | Alert rule name | **CPU Percentage above the test threshold** |
     | Description | **CPU Percentage above the test threshold** |
-    | Severity | **Sev 3** |
-    | Enable rule upon creation | **Yes** |
+    | Severity | **3 - Informational** |
 
-1. Click **Create alert rule**.
+1. Click **Review + create** and click **Create** to create a new alert rule.
 
     >**Note**: It can take up to 10 minutes for a metric alert rule to become active.
 
@@ -258,7 +262,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1.  When prompted, sign in by using the **Student** username and the password from the parameters file.
+1.  When prompted, sign in by using the **Student** username and the password from the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11** parameters file.
 
 1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
 
