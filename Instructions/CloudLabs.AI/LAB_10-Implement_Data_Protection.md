@@ -390,6 +390,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
 
+    >**Note: This will fail because the Soft delete feature must be disabled.
+
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
