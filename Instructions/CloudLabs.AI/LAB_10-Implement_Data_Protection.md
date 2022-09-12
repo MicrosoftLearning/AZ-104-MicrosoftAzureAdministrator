@@ -49,7 +49,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location you copied in previous steps and also replace deployment id value from the environment details tab):
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace deployment id value from the environment details tab):
 
    ```powershell
    $location = '[Azure_region]'
