@@ -224,7 +224,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
 
-1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Schedule Backup**.
+1. In the **Microsoft Azure Backup** console, in the **Action** pane, click **Schedule Backup**.
 
 1. In the **Schedule Backup Wizard**, on the **Getting started** page, click **Next**.
 
@@ -304,7 +304,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. 1. When prompted, sign in by using the **Student** username and the password from the parameters file.
+1. When prompted, sign in by using the **Student** username and the password from the parameters file.
 
    >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
@@ -390,7 +390,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
 
-    >**Note: This will fail because the Soft delete feature must be disabled.
+    >**Note**: This will fail because the Soft delete feature must be disabled.
 
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 
