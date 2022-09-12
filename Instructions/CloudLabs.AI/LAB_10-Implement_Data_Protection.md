@@ -234,7 +234,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Select Items to Backup** page, click **Next**.
 
-1. On the **Specify Backup Schedule** page, ensure that the **Day** option is selected, in the first drop-down list box below the **At following times (Maximum allowed is three times a day)** box, select **4:30 AM**, and then click **Next**.
+1. On the **Specify Backup Schedule** page, ensure that the **Day** option is selected under **Schedule a back up every**, in the first drop-down list box below the **At following times (Maximum allowed is three times a day)** box, select **4:30 AM**, and then click **Next**.
 
 1. On the **Select Retention Policy** page, accept the defaults, and then click **Next**.
 
