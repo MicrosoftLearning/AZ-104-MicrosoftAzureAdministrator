@@ -35,7 +35,7 @@ In this task, you will create an Azure web app.
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a existing resource group **az104-09a-rg1-DeploymentID** |
+    | Resource group | the name of a existing resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 7.4** |
@@ -212,12 +212,11 @@ In this task, you will configure and test autoscaling of Azure web app.
 1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
    ```powershell
-   $rgName = 'az104-09a-rg1-DID'
+   $rgName = 'az104-09a-rg1'
 
    $webapp = Get-AzWebApp -ResourceGroupName $rgName
    ```
 
->**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
 1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
 
