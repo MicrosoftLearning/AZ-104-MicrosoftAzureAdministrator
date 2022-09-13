@@ -224,7 +224,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
 
-1. In the **Microsoft Azure Backup** console, in the **Action** pane, click **Schedule Backup**.
+1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Schedule Backup**.
 
 1. In the **Schedule Backup Wizard**, on the **Getting started** page, click **Next**.
 
@@ -242,7 +242,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Confirmation** page, click **Finish**. When the backup schedule is created, click **Close**.
 
-1. In the **Microsoft Azure Backup** console, in the Actions pane, click **Back Up Now**.
+1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Back Up Now**.
 
     >**Note**: The option to run backup on demand becomes available once you create a scheduled backup.
 
@@ -252,7 +252,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Confirmation** page, click **Back Up**.
 
-1. When the backup is complete, click **Close**, and then close Microsoft Azure Backup.
+1. When the backup is complete, click **Close**, and then close **Microsoft Azure Backup**.
 
 1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**.
 
@@ -266,7 +266,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
 
-1. Open Microsoft Azure Backup and click **Recover data** in the **Actions** pane. This will start **Recover Data Wizard**.
+1. Open **Microsoft Azure Backup** and click **Recover data** in the **Actions** pane. This will start **Recover Data Wizard**.
 
 1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (az104-10-vm1.)** option is selected and click **Next**.
 
@@ -340,7 +340,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Start File Explorer, navigate to the **Downloads** folder, right-click the newly downloaded file, select **Properties** in the right-click menu, in the **Properties** dialog box, select the **Unblock** checkbox, and click **OK**.
 
-1. Back in the File Explorer window, double-click the newly downloaded file.
+1. Back in the **File Explorer** window, double-click the newly downloaded file.
 
 1. When prompted to provide the password from the portal, copy the password from the **Password to run the script** text box on the **File Recovery** blade, paste it at the Command Prompt, and press **Enter**.
 
