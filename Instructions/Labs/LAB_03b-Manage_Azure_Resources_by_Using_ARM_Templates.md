@@ -32,8 +32,6 @@ In this lab, you will:
 
 #### Task 1: Review an ARM template for deployment of an Azure managed disk
 
-In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
-
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
 1. In the Azure portal, search for and select **Resource groups**. 
