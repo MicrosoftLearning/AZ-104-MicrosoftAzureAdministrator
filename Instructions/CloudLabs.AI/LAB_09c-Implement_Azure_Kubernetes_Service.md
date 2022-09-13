@@ -99,8 +99,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     AKS_CLUSTER='az104-9c-aks1'
 
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER
-    ```
-  >**Note**: Replace DeploymentID 
+    ``` 
 
 1. From the **Cloud Shell** pane, run the following to verify connectivity to the AKS cluster:
 
