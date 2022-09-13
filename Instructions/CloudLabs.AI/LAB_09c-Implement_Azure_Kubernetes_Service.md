@@ -35,14 +35,14 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
-1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Create **, and then click **+ Create a Kubernetes cluster**.
+1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Create**, and then click **+ Create a Kubernetes cluster**.
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of the existing resource group **az104-09c-rg1-DeploymentID** |
+    | Resource group | the name of the existing resource group **az104-09c-rg1** |
     | Kubernetes cluster name | **az104-9c-aks1** |
     | Region | Same region as the Resource group |
     | Availability zones | **None** (uncheck all boxes) |
@@ -94,7 +94,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
     ```sh
-    RESOURCE_GROUP='az104-09c-rg1-DeploymentID'
+    RESOURCE_GROUP='az104-09c-rg1'
 
     AKS_CLUSTER='az104-9c-aks1'
 
@@ -154,7 +154,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     ```sh
 
-     RESOURCE_GROUP='az104-09c-rg1-DeploymentID'
+     RESOURCE_GROUP='az104-09c-rg1'
 
     AKS_CLUSTER='az104-9c-aks1'
 
