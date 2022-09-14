@@ -99,7 +99,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: You will use this option to deploy the second virtual machine with matching configuration except for the availability zone.
 
-1. On the **Custom deployment** blade, specify the following settings (leave others with their default values):
+1. On the **Custom deployment** blade, specify the following settings (leave others with their default values) and replace the **zones** value from **1** to **2** for the resource types **Microsoft.Network/publicIpAddresses** and **Microsoft.Compute/virtualMachines**:
 
     | Setting | Value |
     | --- | --- |
@@ -110,7 +110,6 @@ In this task, you will deploy Azure virtual machines into different availability
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password** |
     | Enable Hotpatching | **false** |
-    | Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
@@ -189,7 +188,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
    >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
 
-1. Click **Save** and, back on the **Custom template** blade, select the region in which the virtual machine is deployed then click **Review + Create** and, on the **Review + Create** blade, click **Create**
+1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
 
