@@ -263,7 +263,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **35** `"vmSize": "Standard_D2s_v3"` with the following line):
+1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
                     "vmSize": "Standard_DS1_v2"
@@ -272,7 +272,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line **55** (`"dataDisks": [ ]` line) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line **51** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
                     "dataDisks": [
@@ -298,7 +298,7 @@ In this task you will scale compute for Azure virtual machines by changing their
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
 
-1. Click Save and, back on the Custom template blade, click Review + Create and, on the Review + Create blade, click Create.
+1. Click **Save** and, back on the **Custom template blade**, click **Review + Create** and, on the **Review + Create** blade, click **Create**.
 
     >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Disks** blade of the **az104-08-vm1** virtual machine. This should take no more than 3 minutes.
 
@@ -326,11 +326,11 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudshell1.png)
     
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
+    ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -357,7 +357,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
-    | Azure Spot instance | **No** |
+    | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
@@ -468,11 +468,11 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, navigate back to the **Virtual machine scale sets** blade and click **az10408vmss0**.
 
-1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions**, and the click **+ Add**.
+1. On the **az10408vmss0** blade, in the **Settings** section, click **Extensions + applications**, and the click **+ Add**.
 
-1. On the **New resource** blade, click **Custom Script Extension** and then click **Next**.
+1. On the **Install an Extension** blade, search for and select **Custom Script Extension** and then click **Next**.
 
-1. From the **Install extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **Create**.
+1. From the **Configure Custom Script Extension Extension** blade, **Browse** to and **Select** the **az104-08-install_IIS.ps1** script that was uploaded to the **scripts** container in the storage account earlier in this task, and then click **Create**.
 
     >**Note**: Wait for the installation of the extension to complete before proceeding to the next step.
 
@@ -482,7 +482,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
 1. In the Azure portal, search for and select **Load balancers** and, in the list of load balancers, click **az10408vmss0-lb**.
 
-1. On the **az10408vmss0-lb** blade, note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
+1. On the **az10408vmss0-lb** blade, click **View Frontend IP configurations** note the value of the **Public IP address** assigned to the frontend of the load balancer, open an new browser tab, and navigate to that IP address.
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
 
@@ -542,7 +542,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**.
+1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0** (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
 
    ```powershell
    $rgName = 'az104-08-rg02-[Deployment-Id]'
@@ -578,7 +578,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
-1. In the **Settings** section of the **az10408vmss0** blade, click **Extensions**, click **CustomScriptExtension**, and then click **Uninstall**.
+1. In the **Settings** section of the **az10408vmss0** blade, click **Extensions + applications**, click **CustomScriptExtension**, and then click **Uninstall**.
 
     >**Note**: Wait for uninstallation to complete.
 
