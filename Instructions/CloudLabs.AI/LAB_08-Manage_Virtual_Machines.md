@@ -99,7 +99,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: You will use this option to deploy the second virtual machine with matching configuration except for the availability zone.
 
-1. On the **Custom deployment** blade, specify the following settings (leave others with their default values) and replace the **zones** value from **1** to **2** for the resource types **Microsoft.Network/publicIpAddresses** and **Microsoft.Compute/virtualMachines**:
+1. On the **Custom deployment** blade, click **Edit template**, replace the **zones** value from **1** to **2** for the resource types **Microsoft.Network/publicIpAddresses** and **Microsoft.Compute/virtualMachines**, click **Save** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -585,11 +585,11 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: Open File Explorer and go to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make change $rgName = 'az104-08-rg02' to $rgName = 'az104-08-rg02-[Deployment-Id]' and Save it.
+    >**Note**: Open File Explorer and go to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make change $rgName = 'az104-08-rg02' to $rgName = 'az104-08-rg02-[Deployment-Id]' (replace the [DeploymentId] placeholder with the deploymentid given in environment details) and Save it.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the file **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to display the content of the script:
+1. From the Cloud Shell pane, run the following to display the content of the script (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
 
    ```powershell
    $rgName = 'az104-08-rg02-[Deployment-Id]'
