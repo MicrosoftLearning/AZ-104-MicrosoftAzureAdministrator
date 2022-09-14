@@ -234,7 +234,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New guest user**.
+1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
 
 1. Invite a new guest user with the following settings (leave others with their defaults):
 
