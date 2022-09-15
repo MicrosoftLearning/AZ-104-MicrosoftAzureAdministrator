@@ -72,15 +72,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
-1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-
-   ```powershell
-   Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-
-   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
-   ```
-
-1. Minimize Cloud Shell pane (but do not close it).
+1. On search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Insights** and **Microsoft.AlertsManagement** is registered.
 
 #### Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
@@ -105,7 +97,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
 1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Create**.
 
-1. On the **Add Automation Account** blade, specify the following settings, and click **Create**:
+1. On the Create an **Automation Account blade**, specify the following settings, and click **Review + Create** upon validation click **Create**:
 
     | Settings | Value |
     | --- | --- |
