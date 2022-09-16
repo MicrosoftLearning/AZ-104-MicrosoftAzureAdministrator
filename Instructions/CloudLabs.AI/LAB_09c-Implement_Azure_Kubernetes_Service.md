@@ -57,7 +57,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | ---- | ---- |
     | Enable virtual nodes | **Disabled** (default) |
   
-1. 1. Click **Next: Access >** and, on the **Access** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+1.  Click **Next: Access >** and, on the **Access** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
