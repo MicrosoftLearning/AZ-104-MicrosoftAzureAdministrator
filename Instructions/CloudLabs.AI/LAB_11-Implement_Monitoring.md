@@ -47,7 +47,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
-1. From the Cloud Shell pane, run the following to use the existing resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to use the existing resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where your resource group deployed):
 
     >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
