@@ -1,10 +1,4 @@
----
-lab:
-    title: '09a - Implement Web Apps'
-    module: 'Administer Serverless Computing'
----
-
-# Lab 09a - Implement Web Apps
+# Lab 06 - Implement Web Apps
 # Student lab manual
 
 ## Lab scenario
