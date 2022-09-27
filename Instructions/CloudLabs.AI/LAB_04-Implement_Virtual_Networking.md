@@ -4,7 +4,7 @@
 
 ## Lab scenario
 
-You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from Internet.
+You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from the Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from the Internet.
 
 ## Objectives
 
@@ -41,7 +41,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Name | **az104-04-vnet1** |
     | Region | Same region as the Resource Group |
 
-1. Click **Next : IP Addresses** and enter the following values
+1. Click **Next: IP Addresses** and enter the following values
 
     | Setting | Value |
     | --- | --- |
@@ -87,7 +87,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -197,11 +197,11 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Note that the connection attempt fails.
 
-    **Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from Internet and assign it to network interfaces of both virtual machines.
+    **Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from the Internet and assign it to the network interfaces of both virtual machines.
 
 1. Stop the **az104-04-vm0** and **az104-04-vm1** virtual machines.
 
-    **Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
+    **Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
@@ -252,7 +252,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
 
-    **Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    **Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     **Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
@@ -325,9 +325,9 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
-1. In the web browser on the **SEA-DEV** lab system, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
+1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
 
-1. Use the domain name search to identify a domain name which is not in use.
+1. Find a unique domain name and used it.
 
 1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Create**.
 
@@ -379,7 +379,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. In the Azure portal, open the **PowerShell** session in **Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm0** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test the external name resolution of the **az104-04-vm0** DNS record set in the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
    nslookup az104-04-vm0.[domain name] [Name server 1]
@@ -387,7 +387,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Verify that the output of the command includes the public IP address of **az104-04-vm0**.
 
-1. From the Cloud Shell pane, run the following to test external name resolution of the **az104-04-vm1** DNS record set in the the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
+1. From the Cloud Shell pane, run the following to test the external name resolution of the **az104-04-vm1** DNS record set in the newly created DNS zone (replace the placeholder `[Name server 1]` with the name of **Name server 1** you noted earlier in this task and the `[domain name]` placeholder with the name of the DNS domain you created earlier in this task):
 
    ```powershell
    nslookup az104-04-vm1.[domain name] [Name server 1]
