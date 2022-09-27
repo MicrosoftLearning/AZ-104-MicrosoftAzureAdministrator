@@ -50,7 +50,7 @@ In this task, you will create and configure management groups.
     
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
-1. On the **Management groups** blade, click **+ Add** or **+ Create**.
+1. On the **Management groups** blade, click **+ Create**.
 
     >**Note**: If you have not previously created Management Groups, select **Create management group**
 
@@ -60,6 +60,9 @@ In this task, you will create and configure management groups.
     | --- | --- |
     | Management group ID | **az104-02-mg1** |
     | Management group display name | **az104-02-mg1** |
+
+1. click on **Submit**.
+
 
 1. In the list of management groups, click the entry representing the newly created management group.
 
