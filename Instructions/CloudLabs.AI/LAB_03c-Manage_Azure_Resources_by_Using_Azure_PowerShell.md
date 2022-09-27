@@ -33,7 +33,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type **none** as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -43,7 +43,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 #### Task 2: Use the existing resource group and an Azure managed disk by using Azure PowerShell
 
-In this task, you will use a existing resource group and an Azure managed disk by using Azure PowerShell session within Cloud Shell
+In this task, you will use an existing resource group and an Azure managed disk by using the Azure PowerShell session within Cloud Shell
 
 1. From the PowerShell session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
 
@@ -82,7 +82,7 @@ In this task, you will use a existing resource group and an Azure managed disk b
 
 #### Task 3: Configure the managed disk by using Azure PowerShell
 
-In this task, you will managing configuration of the Azure managed disk by using Azure PowerShell session within Cloud Shell. 
+In this task, you will manage the configuration of the Azure managed disk by using the Azure PowerShell session within Cloud Shell.
 
 1. To increase the size of the Azure managed disk to **64 GB**, from the PowerShell session within Cloud Shell, run the following:
 
