@@ -38,7 +38,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
     
@@ -99,7 +99,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. Review the virtual networks you created in the previous task.
 
-    >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
+    >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
 1. In the list of virtual networks, select **az104-06-vnet2**.
 
@@ -167,11 +167,11 @@ In this task, you will configure local peering between the virtual networks you 
 
 #### Task 3: Test transitivity of virtual network peering
 
-In this task, you will test transitivity of virtual network peering by using Network Watcher.
+In this task, you will test the transitivity of virtual network peering by using Network Watcher.
 
 1. In the Azure portal, search for and select **Network Watcher**.
 
-1.  On the **Network Watcher** blade, expand the listing of Azure regions and verify the service is enabled in region you are using. 
+1.  On the **Network Watcher** blade, expand the listing of Azure regions and verify the service is enabled in the region you are using. 
 
 1. On the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
 
@@ -190,9 +190,9 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.62.0.4** represents the private IP address of **az104-06-vm2**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
-    > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
+    > **Note**: This is expected since the hub virtual network has peered directly with the first spoke virtual network.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -209,9 +209,9 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
-    > **Note**: This is expected, since the hub virtual network is peered directly with the second spoke virtual network.
+    > **Note**: This is expected since the hub virtual network has peered directly with the second spoke virtual network.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -226,9 +226,9 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Click **Check** and wait until the results of the connectivity check are returned. Note that the status is **Unreachable**.
 
-    > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
+    > **Note**: This is expected since the two spoke virtual networks have not peered with each other (virtual network peering is not transitive).
 
 #### Task 4: Configure routing in the hub and spoke topology
 
@@ -246,7 +246,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: This setting is required in order for **az104-06-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
-   > **Note**: Now you need to configure operating system of the **az104-06-vm0** virtual machine to support routing.
+   > **Note**: Now you need to configure the operating system of the **az104-06-vm0** virtual machine to support routing.
 
 1. In the Azure portal, navigate back to the **az104-06-vm0** Azure virtual machine blade and click **Overview**.
 
@@ -377,13 +377,13 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If status is **Unreachable**, you should stop and then start az104-06-vm0.
+1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If the status is **Unreachable**, you should stop and then start az104-06-vm0.
 
-    > **Note**: This is expected, since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
+    > **Note**: This is expected since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
-    >**Note**:Before giving the IPV4 address, go to virtual machine and cross verify the ip address.
+    >**Note**:Before giving the IPV4 address, go to the virtual machine and cross verify the ip address.
 
-    > **Note**: You can use **Network Watcher** to view topology of the network.
+    > **Note**: You can use **Network Watcher** to view the topology of the network.
 
 #### Task 5: Implement Azure Load Balancer
 
@@ -402,7 +402,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Type | **Public** |
     | SKU | **Standard** |
     
-1. Click Next: **Frontend IP configuration** >, on the Frountend IP configuration tab click **+ Add a frountend ip** , under **Add frontend IP address** window add following settings
+1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add a frontend ip** , under **Add frontend IP address** window add following settings
  
     | Setting | Value |
     | --- | --- |
@@ -443,7 +443,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
     | Floating IP (direct server return) | **Disabled** |
-    | Healh probe | **Create new** |
+    | Health probe | **Create new** |
     
 1. click **create new** under **Health probe**, on the **Add load balancing rules** blade.
 
