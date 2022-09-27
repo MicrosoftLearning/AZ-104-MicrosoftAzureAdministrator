@@ -3,7 +3,7 @@
 
 ## Lab scenario
 
-Contoso has its datacenters in Boston, New York, and Seattle offices connected via a mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of the Contoso's on-premises networks and verify its functionality.
+Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 
 ## Objectives
 
@@ -38,7 +38,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -89,7 +89,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
 
-    >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
+    >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
 1. In the list of virtual networks, click **az104-05-vnet0**.
 
@@ -210,7 +210,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
@@ -226,7 +226,7 @@ In this task, you will test connectivity between virtual machines on the three v
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall.
+    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
 1. Examine the output of the command and verify that the connection was successful.
 
@@ -236,13 +236,13 @@ In this task, you will test connectivity between virtual machines on the three v
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-1. Switch back to the Azure portal on your lab computer and navigate back to the **Virtual machines** blade.
+1. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
 
 1. In the list of virtual machines, click **az104-05-vm1**.
 
 1. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
@@ -256,7 +256,7 @@ In this task, you will test connectivity between virtual machines on the three v
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-    >**Note**: The test uses TCP 3389 since this is this port is allowed by default by operating system firewall.
+    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
 1. Examine the output of the command and verify that the connection was successful.
 
