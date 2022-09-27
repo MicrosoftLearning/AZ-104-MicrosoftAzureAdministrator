@@ -40,13 +40,13 @@ In this task, you will create and configure management groups.
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
-1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perfom the following sequence of steps:
+1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
     1. In the Azure portal, search for and select **Azure Active Directory**.
     
     1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
-    1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+    1.  On the **Properties** blade of your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
     
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
@@ -61,8 +61,7 @@ In this task, you will create and configure management groups.
     | Management group ID | **az104-02-mg1** |
     | Management group display name | **az104-02-mg1** |
 
-1. click on **Submit**.
-
+1. Click on **Submit**.
 
 1. In the list of management groups, click the entry representing the newly created management group.
 
@@ -70,7 +69,7 @@ In this task, you will create and configure management groups.
 
 1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
 
-    >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+    >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it for the next task.
 
 #### Task 2: Create custom RBAC roles
 
@@ -106,7 +105,7 @@ In this task, you will create a definition of a custom RBAC role.
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -160,7 +159,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Click **Access control (IAM)**, click **+ Add** followed by **Role assignment**, and search for the **Support Request Contributor (Custom)** and assign the role to the newly created user account.
 
-1.  Click on **+Select Member** and serach  the newly created user and select.
+1.  Click on **+ Select Member**, search and select for the newly created user.
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
@@ -170,7 +169,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** click **create a support request** . 
+1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and click on **create a support request**. 
 
 1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
 
