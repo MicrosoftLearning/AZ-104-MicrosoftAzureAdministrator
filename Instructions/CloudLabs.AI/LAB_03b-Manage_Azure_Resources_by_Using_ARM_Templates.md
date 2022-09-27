@@ -41,7 +41,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Template** blade, click **Inputs**.
 
-1. Note the value of the **location** parameter. You will need it in the next task.
+1. Note the value of the **location** parameter. You will need it for the next task.
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your lab computer.
 
