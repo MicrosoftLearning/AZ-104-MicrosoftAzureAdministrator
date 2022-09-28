@@ -10,14 +10,14 @@ Now that you explored the basic Azure administration capabilities associated wit
 In this lab, you will:
 
 + Task 1: Start a Bash session in Azure Cloud Shell
-+ Task 2: Use the existed resource group and an Azure managed disk by using Azure CLI
++ Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 + Task 3: Configure the managed disk by using Azure CLI
 
 ## Estimated timing: 20 minutes
 
 ## Instructions
 
-> **Note**:  Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
+> **Note**: Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
 
 ### Exercise 1
 
@@ -29,15 +29,22 @@ In this task, you will open a Bash session in Cloud Shell.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
 
-1. If prompted, click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
+    ![image](../media/cloudshell1.png)
+
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+
+    ![image](../media/cloudhell01.png)
+    
+
+1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. Ensure **Bash** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-#### Task 2: Use the existing resource group and an Azure managed disk by using Azure CLI
+#### Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 
-In this task, you will create a resource group and an Azure managed disk by using Azure CLI session within Cloud Shell.
+In this task, you will use the existing resource group for creating the Azure managed disk by using the Azure CLI session within Cloud Shell.
 
 1. From the Bash session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
 
@@ -72,7 +79,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
 
 #### Task 3: Configure the managed disk by using Azure CLI
 
-In this task, you will managing configuration of the Azure managed disk by using Azure CLI session within Cloud Shell. 
+In this task, you will be the managing configuration of the Azure managed disk by using the Azure CLI session within Cloud Shell. 
 
 1. To increase the size of the Azure managed disk to **64 GB**, from the Bash session within Cloud Shell, run the following:
 
@@ -103,5 +110,5 @@ In this task, you will managing configuration of the Azure managed disk by using
 In this lab, you have:
 
 - Started a Bash session in Azure Cloud Shell
-- Created a resource group and an Azure managed disk by using Azure CLI
+- Use the existing resource group and create an Azure managed disk by using Azure CLI
 - Configured the managed disk by using Azure CLI
