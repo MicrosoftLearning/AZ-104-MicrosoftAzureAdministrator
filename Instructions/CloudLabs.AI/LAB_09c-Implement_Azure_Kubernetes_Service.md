@@ -9,7 +9,7 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 In this lab, you will:
 
-+ Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
++ Task 1: Register Microsoft.Kubernetes and Microsoft.Kubernetes configuration resource providers.
 + Task 2: Deploy an Azure Kubernetes Service cluster
 + Task 3: Deploy pods into the Azure Kubernetes Service cluster
 + Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
@@ -20,13 +20,13 @@ In this lab, you will:
 
 ### Exercise 1
 
-#### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
+#### Task 1: Register the Microsoft.Kubernetes and Microsoft.Kubernetes Configuration resource providers.
 
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. On search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Kubernetes** and **Microsoft.KubernetesConfiguration** is registered.
+1. On  the search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Kubernetes** and **Microsoft.Kubernetes Configuration** is registered.
 
   ![image](../media/registerkub.png)
 
@@ -129,7 +129,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     kubectl get deployment
     ```
 
-1. From the **Cloud Shell** pane, run the following to make the pod available from Internet:
+1. From the **Cloud Shell** pane, run the following to make the pod available from the Internet:
 
     ```sh
     kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
@@ -147,9 +147,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 #### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
-In this task, you will scale horizontally the number of pods and then number of cluster nodes.
+In this task, you will scale horizontally the number of pods and then the number of cluster nodes.
 
-1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
+1. From the **Cloud Shell** pane, run the following to scale the deployment by increasing the number of pods to 2:
 
     ```sh
 
