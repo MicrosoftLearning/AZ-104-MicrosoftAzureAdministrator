@@ -4,7 +4,7 @@
 
 ## Lab scenario
 
-Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
+Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for the deployment of Docker images.
 
 ## Objectives
 
@@ -25,7 +25,7 @@ In this task, you will create a new container instance for the web application.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, search for locate **Container instances** and then, on the **Container instances** blade, click **+ Create**.
+1. In the Azure portal, search **Container instances** and then, on the **Container instances** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
@@ -46,7 +46,7 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed, and click **Create**.
 
     >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
 
