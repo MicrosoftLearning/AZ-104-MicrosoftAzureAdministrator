@@ -117,7 +117,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
  **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
-    > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
+    > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
     > 1. Check the location in which the 'az104-04-rg1-[Deployment-ID]' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
     > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
     > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
@@ -160,7 +160,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
 
-1. Back on the **ipconfig1** blade, save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
+1. Back on the **ipconfig1** blade, and save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
 1. Navigate back to the **az104-04-vnet1** blade
 
@@ -193,7 +193,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. In the Azure portal, navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
-1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
 1. Note that the connection attempt fails.
 
@@ -250,7 +250,7 @@ In this task, you will configure network security groups in order to allow for r
 
     **Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
 
-1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
     **Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
@@ -258,7 +258,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. When prompted, sign in with the user and password in the parameters file.
 
-    **Note**: Leave the Remote Desktop session open. You will need it in the next task.
+    **Note**: Leave the Remote Desktop session open. You will need it for the next task.
 
 #### Task 5: Configure Azure DNS for internal name resolution
 
@@ -306,7 +306,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
     **Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
 
-1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button, and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
 
