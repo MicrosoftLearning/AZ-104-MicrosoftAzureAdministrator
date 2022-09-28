@@ -3,7 +3,7 @@
 
 ## Lab scenario
 
-You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While majority of these files are not accessed frequently, there are some exceptions. You would like to minimize cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
+You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While the majority of these files are not accessed frequently, there are some exceptions. You would like to minimize the cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
 ## Objectives
 
@@ -36,7 +36,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -48,7 +48,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0-DID.
 
-    >**Note**: Replace the DID with the unique deployment id, which can be found under the envrionment details tab. To list the names of Azure regions, run `(Get-AzLocation).Location`. 
+    >**Note**: Replace the DID with the unique deployment id, which can be found under the environment details tab. To list the names of Azure regions, run `(Get-AzLocation).Location`. 
 
    ```powershell
    $location = '[Azure_region]'
@@ -81,7 +81,7 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **exitisting** resource group **az104-07-rg1-DID** |
+    | Resource group | the name of an **existing** resource group **az104-07-rg1-DID** |
     | Storage account name | **strgaz104t07DID** |
     | Location | Same region as the Resource group  |
     | Performance | **Standard** |
@@ -91,9 +91,9 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable from all network** under network access and click **Next: Data protection >**.
+1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable from all network** under network access, and click **Next: Data protection >**.
 
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
+1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete, and click **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -109,7 +109,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
-    > **Note**: The cool access tier is optimal for data which is not accessed frequently.
+    > **Note**: The cool access tier is optimal for data that is not accessed frequently.
 
 #### Task 3: Manage blob storage
 
@@ -150,21 +150,21 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. On the **licenses/LICENSE** blade, review the available options.
 
-    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
+    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
 
 #### Task 4: Manage authentication and authorization for Azure Storage
 
 In this task, you will configure authentication and authorization for Azure Storage.
 
-1. On the **licenses/LICENSE** blade, on the **Overview** tab, click **Copy to clipboard** button next to the **URL** entry.
+1. On the **licenses/LICENSE** blade, on the **Overview** tab, click the **Copy to clipboard** button next to the **URL** entry.
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
-    > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
+    > **Note**: This is expected since the container you created has the public access level set to **Private (no anonymous access)**.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the the **Generate SAS** tab.
+1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
 
 1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
 
@@ -181,13 +181,13 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Click **Generate SAS token and URL**.
 
-1. Click **Copy to clipboard** button next to the **Blob SAS URL** entry.
+1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
-    > **Note**: If you are using Microsoft Edge, you should be presented with the **The MIT License (MIT)** page. If you are using Chrome, Microsoft Edge (Chromium) or Firefox, you should be able to view the content of the file by downloading it and opening it with Notepad.
+    > **Note**: If you are using Microsoft Edge, you should be presented with the **The MIT License (MIT)** page. If you are using Chrome, Microsoft Edge (Chromium), or Firefox, you should be able to view the content of the file by downloading it and opening it with Notepad.
 
-    > **Note**: This is expected, since now your access is authorized based on the newly generated the SAS token.
+    > **Note**: This is expected since now your access is authorized based on the newly generated SAS token.
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
 
@@ -197,7 +197,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
 
-    > **Note**: At this point, you do not have permissions to change the Authentication method.
+    > **Note**: At this point, you do not have permission to change the Authentication method.
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
@@ -232,7 +232,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and click **Connect**.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected.  click on **Show script** Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. On the **Connect** blade, ensure that the **Windows** tab is selected, click on **Show script** Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click the **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
@@ -242,7 +242,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
 
-1. Verify that the script completed successfully.
+1. Verify that the script was completed successfully.
 
 1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
 
@@ -252,7 +252,7 @@ In this task, you will create and configure Azure Files shares.
    New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
    ```
 
-1. Verify that the script completed successfully.
+1. Verify that the script was completed successfully.
 
 1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
 
@@ -276,22 +276,22 @@ In this task, you will configure network access for Azure Storage.
 
 1. You should be presented with the content of **The MIT License (MIT)** page.
 
-    > **Note**: This is expected, since you are connecting from your client IP address.
+    > **Note**: This is expected since you are connecting from the client's IP address.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
+1. Close the InPrivate mode browser window, and return to the browser window showing the **Networking** blade of the Azure Storage account.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
+1. From the Cloud Shell pane, run the following to attempt downloading the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
 
    ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
    ```
 1. Verify that the download attempt failed.
 
-    > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
+    > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
 
 1. Close the Cloud Shell pane.
 
@@ -303,5 +303,5 @@ In this lab, you have:
 - Created and configured Azure Storage accounts
 - Managed blob storage
 - Managed authentication and authorization for Azure Storage
-- Created and configured an Azure Files shares
+- Created and configured Azure Files shares
 - Managed network access for Azure Storage
