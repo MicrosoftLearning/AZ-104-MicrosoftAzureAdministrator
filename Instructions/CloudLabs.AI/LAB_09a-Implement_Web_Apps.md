@@ -3,7 +3,7 @@
 
 ## Lab scenario
 
-You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, hosted currently in the company's on-premises data centers. The web sites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
+You need to evaluate the use of Azure Web apps for hosting Contoso's websites, hosted currently in the company's on-premises data centers. The websites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
 
 ## Objectives
 
@@ -35,7 +35,7 @@ In this task, you will create an Azure web app.
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a existing resource group **az104-09a-rg1** |
+    | Resource group | the name of an existing resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 7.4** |
@@ -43,7 +43,7 @@ In this task, you will create an Azure web app.
     | Region | Same region as the Resource group |
     | App service plan | accept the default configuration |
 
-1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
+1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation has passed and click **Create**.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -111,8 +111,7 @@ In this task, you will deploy code to the staging deployment slot.
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
-
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
     ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
@@ -129,15 +128,15 @@ In this task, you will deploy code to the staging deployment slot.
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
-1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name and **Git Clone Url**, respectively, which you identified in previous task):
+1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name and **Git Clone Url**, respectively, which you identified in the previous task):
 
    ```powershell
    git remote add [deployment_user_name] [git_clone_url]
    ```
 
-    >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name, but has to be unique
+    >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name but has to be unique.
 
-1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
+1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in the previous task):
 
    ```powershell
    git push [deployment_user_name] master
@@ -157,17 +156,17 @@ In this task, you will swap the staging slot with the production slot
 
 1. Navigate back to the App Service blade.
 
-1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
+1. In the **Deployment** section, click **Deployment slots** and then click the **Swap** toolbar icon.
 
-1. On the **Swap** blade, review the default settings and click **Swap** and then Click on **Close**.
+1. On the **Swap** blade, review the default settings and click **Swap**, and then Click on **Close**.
 
-1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
+1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the website home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
 #### Task 6: Configure and test autoscaling of the Azure web app
 
-In this task, you will configure and test autoscaling of Azure web app.
+In this task, you will configure and test the autoscaling of the Azure web app.
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
@@ -193,7 +192,7 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
+    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -218,7 +217,7 @@ In this task, you will configure and test autoscaling of Azure web app.
    ```
 
 
-1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
+1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web app:
 
    ```powershell
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
