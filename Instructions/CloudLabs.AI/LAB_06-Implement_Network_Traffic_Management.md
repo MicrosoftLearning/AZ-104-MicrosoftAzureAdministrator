@@ -48,7 +48,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
-1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the `[DeploymentId]` placeholder with the deploymentid given in environment details):
+1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment:
 
    ```powershell
    Get-AzResourceGroup
