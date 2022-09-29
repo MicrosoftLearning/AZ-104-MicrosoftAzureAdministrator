@@ -36,9 +36,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource group | select the existing resource group **az104-08-rg01-[Deployment ID]** |
+    | Resource group | select the existing resource group **az104-08-rg01** |
     | Virtual machine name | **az104-08-vm0** |
-    | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
+    | Region | same location of resource group |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1** |
     | Image | **Windows Server 2019 Datacenter - Gen1** |
@@ -103,13 +103,14 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Resource group | **az104-08-rg01-[Deployment ID]** |
+    | Resource group | **az104-08-rg01** |
     | Network Interface Name 1 | **az104-08-vm1-nic1** |
     | Public IP Address Name 1 | **az104-08-vm1-ip** |
     | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name  | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password** |
     | Enable Hotpatching | **false** |
+    | Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
@@ -222,7 +223,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
     | --- | --- |
     | Disk name | **az104-08-vm0-datadisk-0** |
     | Storage type | **Premium SSD** |
-    | Size (GiB| **1024** |
+    | Size (GiB)| **1024** |
 
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
@@ -327,7 +328,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
     
     ![image](../media/cloudshell1.png)
     
-     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group**(az104-08-rg01/az104-08-rg02) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -544,7 +545,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0** (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
 
    ```powershell
-   $rgName = 'az104-08-rg02-[Deployment-Id]'
+   $rgName = 'az104-08-rg02'
+   
 
    $lbpipName = 'az10408vmss0-ip'
 
@@ -585,14 +587,15 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-    >**Note**: Open File Explorer and go to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make change $rgName = 'az104-08-rg02' to $rgName = 'az104-08-rg02-[Deployment-Id]' (replace the [DeploymentId] placeholder with the deploymentid given in environment details) and Save it.
+    >**Note**: Open File Explorer and go to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make sure $rgName = 'az104-08-rg02'.
+    
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the file **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to display the content of the script (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
 
    ```powershell
-   $rgName = 'az104-08-rg02-[Deployment-Id]'
+   $rgName = 'az104-08-rg02'
    
    Set-Location -Path $HOME
 
