@@ -38,7 +38,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     
     ![image](../media/cloudshell1.png)
     
-     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-06-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
     
@@ -53,7 +53,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    ```powershell
    Get-AzResourceGroup
    
-   $rgName = 'az104-06-rg1-[DeploymentId]'
+   $rgName = 'az104-06-rg1'
    
    ```
 
@@ -180,7 +180,7 @@ In this task, you will test the transitivity of virtual network peering by using
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -199,7 +199,7 @@ In this task, you will test the transitivity of virtual network peering by using
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm0** |
     | Destination | **Specify manually** |
@@ -218,7 +218,7 @@ In this task, you will test the transitivity of virtual network peering by using
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -283,7 +283,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Location | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt23** |
     | Propagate gateway routes | **No** |
@@ -326,7 +326,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Region | the name of the Azure region in which you created the virtual networks |
     | Name | **az104-06-rt32** |
     | Propagate gateway routes | **No** |
@@ -369,7 +369,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-06-rg1-[DeploymentId]** |
+    | Resource group | **az104-06-rg1** |
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
@@ -396,13 +396,13 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | az104-06-rg1-[DeploymentId] |
+    | Resource group | az104-06-rg1 |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
     | Type | **Public** |
     | SKU | **Standard** |
     
-1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add a frontend ip** , under **Add frontend IP address** window add following settings
+1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add following settings
  
     | Setting | Value |
     | --- | --- |
@@ -500,7 +500,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | az104-06-rg1-[DeploymentId] |
+    | Resource group | az104-06-rg1 |
     | Application gateway name | **az104-06-appgw5** |
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
