@@ -48,12 +48,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
    Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
    ```
 
-1. If you faced the error message like you don't have permission and it is already registered, ignore it, and close the Cloud Shell pane.
-
-1. On  the search box search **Subscription** and click your subscription and go to **resource provider** under setting and make sure **Microsoft.Kubernetes** and **Microsoft.Kubernetes Configuration** is registered.
-
-   ![image](../media/registerkub.png)
-
+1. Close the Cloud Shell pane.
 
 #### Task 2: Deploy an Azure Kubernetes Service cluster
 
