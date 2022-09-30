@@ -244,7 +244,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and click **Connect**.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
