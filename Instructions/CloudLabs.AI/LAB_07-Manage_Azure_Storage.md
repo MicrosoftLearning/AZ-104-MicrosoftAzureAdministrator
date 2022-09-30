@@ -36,7 +36,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/*az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -46,14 +46,14 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0-DID.
+1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
 
-    >**Note**: Replace the DID with the unique deployment id, which can be found under the environment details tab. To list the names of Azure regions, run `(Get-AzLocation).Location`. 
+    >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`. 
 
    ```powershell
    $location = '[Azure_region]'
 
-   $rgName = 'az104-07-rg0-DID'
+   $rgName = 'az104-07-rg0'
    
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
@@ -81,7 +81,7 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of an **existing** resource group **az104-07-rg1-DID** |
+    | Resource group | the name of an **existing** resource group **az104-07-rg1** |
     | Storage account name | **strgaz104t07DID** |
     | Location | Same region as the Resource group  |
     | Performance | **Standard** |
@@ -91,7 +91,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable from all network** under network access, and click **Next: Data protection >**.
+1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable public access from all network** under network access, and click **Next: Data protection >**.
 
 1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete, and click **Create**.
 
