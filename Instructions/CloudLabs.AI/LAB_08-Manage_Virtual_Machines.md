@@ -352,7 +352,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | select the existing resource group **az104-08-rg02-[Deployment ID]** |
+    | Resource group | select the existing resource group **az104-08-rg02** |
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
@@ -542,7 +542,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0** (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
+1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**:
 
    ```powershell
    $rgName = 'az104-08-rg02'
@@ -586,13 +586,10 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
-
-    >**Note**: Open File Explorer and go to **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** and make sure $rgName = 'az104-08-rg02'.
-    
-
+  
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the file **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08\\az104-08-configure_VMSS_disks.ps1** into the Cloud Shell home directory.
 
-1. From the Cloud Shell pane, run the following to display the content of the script (replace the [DeploymentId] placeholder with the deploymentid given in environment details):
+1. From the Cloud Shell pane, run the following to display the content of the script:
 
    ```powershell
    $rgName = 'az104-08-rg02'
