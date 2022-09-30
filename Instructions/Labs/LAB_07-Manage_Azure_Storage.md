@@ -67,6 +67,8 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     ```powershell
     New-AzResourceGroup -Name $rgName -Location $location
     ```
+
+    >**Note**: If you receive an error for the last command, check if you already have the resource group and if the resource group exists, go to the next step
     
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
