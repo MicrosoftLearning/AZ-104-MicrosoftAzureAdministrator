@@ -91,13 +91,18 @@ In this task, you will deploy Azure virtual machines into different availability
     | Accelerated networking | **Off**
     | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
 
+1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+
+    | Setting | Value |
+    | --- | --- |
+    | Patch orchestration options | **Manual updates** |  
+
 1. Click **Next: Monitoring >** and, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | accept the default value |
-    | Patch orchestration options | **Manual updates** |  
+    | Diagnostics storage account | **accept the default value** |
 
     >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
 
