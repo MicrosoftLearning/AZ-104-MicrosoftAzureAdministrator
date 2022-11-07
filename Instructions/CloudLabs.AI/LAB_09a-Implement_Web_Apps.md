@@ -174,7 +174,7 @@ In this task, you will configure and test the autoscaling of the Azure web app.
 
     >**Note**: You also have the option of scaling the web app manually.
 
-1. Leave the default option **Scale based on a metric** selected and click **+ Add a rule**
+1. Select **Scale based on a metric** and click **+ Add a rule**
 
 1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
 
