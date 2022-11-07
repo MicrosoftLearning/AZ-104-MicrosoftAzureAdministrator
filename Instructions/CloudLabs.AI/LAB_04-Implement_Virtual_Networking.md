@@ -41,12 +41,11 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Name | **az104-04-vnet1** |
     | Region | Same region as the Resource Group |
 
-1. Click **Next : IP Addresses** and then click **Add an IP Address**. Click **Add** when completed.
+1. Click **Next: IP Addresses** and enter the following values
 
     | Setting | Value |
     | --- | --- |
-    | Starting address | **10.40.0.0** |
-    | Address space size | **/20 (4096 addresses)** |
+    | IPv4 address space | **10.40.0.0/20** |
 
 1. Click **+ Add subnet** enter the following values then click **Add**
 
