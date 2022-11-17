@@ -199,6 +199,8 @@ In this task, you will test transitivity of virtual network peering by using Net
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
+    > **Note**: It may take a few minutes for the resource group to be listed. If you don't want to wait, try this: delete the Network Watcher, create a new Network Watcher, and then retry Connection Troubleshoot. 
+
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
