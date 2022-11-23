@@ -137,10 +137,10 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the **Cloud Shell** pane, run the following to deploy the **nginx** image from the Docker Hub:
 
     ```sh
-    kubectl create deployment nginx-deployment --image=nginx
+    kubectl create deployment whoami-deployment --image=truecharts/whoami
     ```
 
-    > **Note**: Make sure to use lower case letters when typing the name of the deployment (nginx-deployment)
+    > **Note**: Make sure to use lower case letters when typing the name of the deployment (whoami-deployment)
 
 1. From the **Cloud Shell** pane, run the following to verify that a Kubernetes pod has been created:
 
@@ -157,7 +157,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. From the **Cloud Shell** pane, run the following to make the pod available from Internet:
 
     ```sh
-    kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
+    kubectl expose deployment whoami-deployment --port=80 --type=LoadBalancer
     ```
 
 1. From the **Cloud Shell** pane, run the following to identify whether a public IP address has been provisioned:
@@ -166,9 +166,18 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     kubectl get service
     ```
 
-1. Re-run the command until the value in the **EXTERNAL-IP** column for the **nginx-deployment** entry changes from **\<pending\>** to a public IP address. Note the public IP address in the **EXTERNAL-IP** column for **nginx-deployment**.
+1. Re-run the command until the value in the **EXTERNAL-IP** column for the **whoami-deployment** entry changes from **\<pending\>** to a public IP address. Note the public IP address in the **EXTERNAL-IP** column for **whoami-deployment**.
 
-1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
+1. Open a browser private window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Hostname: whoami-deployment-...** message. Close and re-open this browser private window to see the Hostname change each time. Alternatively, you can set get the EXTERNAL IP once and then request the EXTERNAL IP multiple times from the **Cloud Shell** pane:
+
+    ```sh
+    EXTERNAL_IP="$(kubectl get service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' whoami-deployment)"
+    wget -O- "http://$EXTERNAL_IP/" -q
+    wget -O- "http://$EXTERNAL_IP/" -q
+    wget -O- "http://$EXTERNAL_IP/" -q
+    ```
+    
+    > **Note**: watch the Hostname and the node IP (RemoteAddr field). Thoses fields will change as we scale up later on. 
 
 #### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
@@ -177,7 +186,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
 
     ```sh
-    kubectl scale --replicas=2 deployment/nginx-deployment
+    kubectl scale --replicas=2 deployment/whoami-deployment
     ```
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
@@ -211,7 +220,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 1. From the **Cloud Shell** pane, run the following to scale the deployment:
 
     ```sh
-    kubectl scale --replicas=10 deployment/nginx-deployment
+    kubectl scale --replicas=10 deployment/whoami-deployment
     ```
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
@@ -230,10 +239,20 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     > **Note**: Review the output of the command and verify that the pods are distributed across both nodes.
 
+
+1. Open a browser private window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Hostname: whoami-deployment-...** message. Close and re-open this browser private window to see the Hostname change each time. Alternatively, you can set get the EXTERNAL IP once and then request the EXTERNAL IP multiple times from the **Cloud Shell** pane:
+
+    ```sh
+    EXTERNAL_IP="$(kubectl get service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' whoami-deployment)"
+    wget -O- "http://$EXTERNAL_IP/" -q
+    wget -O- "http://$EXTERNAL_IP/" -q
+    wget -O- "http://$EXTERNAL_IP/" -q
+    ```
+
 1. From the **Cloud Shell** pane, run the following to delete the deployment:
 
     ```sh
-    kubectl delete deployment nginx-deployment
+    kubectl delete deployment whoami-deployment
     ```
 
 1. Close the **Cloud Shell** pane.
