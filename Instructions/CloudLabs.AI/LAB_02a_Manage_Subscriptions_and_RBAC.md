@@ -111,22 +111,6 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. Go to the Azure Active directory and click on User on the left pane and then click on All user(preview) and select ODL user and copy the Object ID and save it in Notepad.
-
-    ![image](../media/AZ-104oID.png)
-
-1. From the Cloud Shell pane run the following Command.
-
-   ```powershell
-   Connect-azuread
-   ```
-1. Replace object id in code and run the command.
-
-   ```powershell
-   Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | where-object {$_.DisplayName -eq "Directory Readers"}).Objectid -RefObjectId <object-id>
-   ```
-    
-
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\02\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
     
