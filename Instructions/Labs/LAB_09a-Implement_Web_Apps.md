@@ -50,8 +50,8 @@ In this task, you will create an Azure web app.
     | Resource group | the name of a new resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
-    | Runtime stack | **PHP 7.4** |
-    | Operating system | **Windows** |
+    | Runtime stack | **PHP 8.1** |
+    | Operating system | **Linux** |
     | Region | the name of an Azure region where you can provision Azure web apps |
     | App service plan | accept the default configuration |
 
@@ -225,13 +225,9 @@ In this task, you will configure and test autoscaling of Azure web app.
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
 
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
+1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click Scale out(App Service plan).
 
-    >**Note**: Process explorer facilitates monitoring the number of instances and their resource utilization.
-
-1. Monitor the utilization and the number of instances for a few minutes.
-
-    >**Note**: You may need to **Refresh** the page.
+1. Click "Run history" Tab,Check the "Observed resource instance count".
 
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
