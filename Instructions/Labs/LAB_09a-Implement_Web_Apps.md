@@ -182,18 +182,18 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource** |
-    | Time aggregation | **Maximum** |
-    | Metric namespace | **App Service plans standard metrics** |
+    | Metric namespace | **standard metrics** |
     | Metric name | **CPU Percentage** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
     | Duration (in minutes) | **1** |
     | Time grain statistic | **Maximum** |
+    | Time aggregation | **Maximum** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
+    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -225,9 +225,9 @@ In this task, you will configure and test autoscaling of Azure web app.
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
 
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click Scale out(App Service plan).
+1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
 
-1. Click "Run history" Tab,Check the "Observed resource instance count".
+1. Select the **Run history** tab, and check the **Observed resource instance count**.
 
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
