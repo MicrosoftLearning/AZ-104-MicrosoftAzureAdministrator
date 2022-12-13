@@ -38,8 +38,8 @@ In this task, you will create an Azure web app.
     | Resource group | the name of an existing resource group **az104-09a-rg1** |
     | Web app name | any globally unique name |
     | Publish | **Code** |
-    | Runtime stack | **PHP 7.4** |
-    | Operating system | **Windows** |
+    | Runtime stack | **PHP 8.1** (or latest version) |
+    | Operating system | **Linux** |
     | Region | Same region as the Resource group |
     | App service plan | accept the default configuration |
 
