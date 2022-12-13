@@ -373,7 +373,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.62.0.4** |
+    | URI, FQDN or IPv4 | **10.63.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
