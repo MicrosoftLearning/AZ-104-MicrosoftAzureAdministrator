@@ -330,7 +330,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Back on the **az104-06-rt23** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
@@ -341,7 +341,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Virtual network | **az104-06-vnet2** |
     | Subnet | **subnet0** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Navigate back to **Route tables** blade and click **+ Create**.
 
