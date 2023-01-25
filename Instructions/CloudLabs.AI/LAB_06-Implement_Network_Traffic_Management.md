@@ -399,8 +399,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Resource group | az104-06-rg1 |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
+    | SKU  | **Standard** |
     | Type | **Public** |
-    | SKU | **Standard** |
+	| Tier | **Regional** |
     
 1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add following settings
  
@@ -434,11 +435,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-lbrule1** |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
+    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down** |
+    | Backend pool | **az104-06-lb4-be1** |
     | Protocol | **TCP** |
     | Port | **80** |
     | Backend port | **80** |
-    | Backend pool | **az104-06-lb4-be1** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
