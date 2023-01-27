@@ -181,8 +181,7 @@ In this task, you will configure and test the autoscaling of the Azure web app.
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource** |
-    | Time aggregation | **Maximum** |
-    | Metric namespace | **App Service plans standard metrics** |
+    | Metric namespace | **standard metrics** |
     | Metric name | **CPU Percentage** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
@@ -223,9 +222,9 @@ In this task, you will configure and test the autoscaling of the Azure web app.
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
 
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
+1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
 
-    >**Note**: Process explorer facilitates monitoring the number of instances and their resource utilization.
+1. Select the **Run history** tab, and check the **Observed resource instance count**.
 
 1. Monitor the utilization and the number of instances for a few minutes.
 
