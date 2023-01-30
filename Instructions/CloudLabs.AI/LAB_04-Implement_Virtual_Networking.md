@@ -296,7 +296,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
 
 
-    **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+      **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
