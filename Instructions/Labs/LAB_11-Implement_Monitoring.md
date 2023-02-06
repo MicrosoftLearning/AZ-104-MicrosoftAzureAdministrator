@@ -159,9 +159,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
 
-1. On the **Overview** tab of the **az104-11-vm0 \| Diagnostic settings** blade, click **Enable guest-level monitoring**.
+1. On the **Overview** tab of the **az104-11-vm0 \| Diagnostic settings** blade, select a **Diagnostic storage account**, and then click **Enable guest-level monitoring**.
 
-    >**Note**: Wait for the operation to take effect. This might take about 3 minutes.
+    >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
 
 1. Switch to the **Performance counters** tab of the **az104-11-vm0 \| Diagnostic settings** blade and review the available counters.
 
@@ -171,11 +171,11 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: By default, log collection includes critical, error, and warning entries from the Application Log and System log, as well as Audit failure entries from the Security log. Here as well you can switch to the **Custom** view for more detailed configuration settings.
 
-1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Log Analytics Agent** and then click **Enable**.
+1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
 
-1. On the **az104-11-vm0 - Logs** blade, ensure that the Log Analytics workspace you created earlier in this lab is selected in the **Choose a Log Analytics Workspace** drop-down list and click **Enable**.
+1. On the **az104-11-vm0 - Logs** blade, ensure **Azure Monitor agent (Recommended)** is selected, and then click **Configure**.  
 
-    >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
+    >**Note**: Do not wait for the operation to be completed, but instead proceed to the next step. The operation might take about 5 minutes.
 
 1. On the **az104-11-vm0 \| Logs** blade, in the **Monitoring** section, click **Metrics**.
 
