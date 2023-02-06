@@ -105,7 +105,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
-1. Click **Next** and set **Parameters** to the following values:
+1. Click **Next** twice and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -126,11 +126,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create** and then click **Create**:
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review** and then click **Create**:
 
     | Setting | Value |
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
+
+    >**Note**: You may receive a **Validation failed. Click here for details** error; If so, clcik the error message to identify the reason for the failure and skip the next step. 
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
@@ -165,7 +167,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
     | Policy enforcement | Enabled |
 
-1. Click **Next** and set **Parameters** to the following values:
+1. Click **Next** twice and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -190,7 +192,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review + create**:
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review**:
 
     | Setting | Value |
     | --- | --- |
