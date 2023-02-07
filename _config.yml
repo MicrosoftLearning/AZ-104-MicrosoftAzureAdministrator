@@ -2,6 +2,8 @@ remote_theme: MicrosoftLearning/Jekyll-Theme
 exclude:
   - readme.md
   - .github/
+navigation:
+  -{file: "index.html", "title: Home", icon: home
 header_pages:
   - index.html
 author: Microsoft Learning
