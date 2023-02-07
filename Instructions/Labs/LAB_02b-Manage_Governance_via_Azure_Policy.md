@@ -132,7 +132,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-    >**Note**: You may receive a **Validation failed. Click here for details** error; If so, clcik the error message to identify the reason for the failure and skip the next step. 
+    >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason for the failure and skip the next step. 
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
