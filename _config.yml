@@ -1,16 +1,24 @@
+description: "Az-104 Labs"
 remote_theme: MicrosoftLearning/Jekyll-Theme
+show_social: true
+show_frame: true
+show_sidebar: true
 exclude:
   - readme.md
   - .github/
+navigation:
+  -{file: "index.html", title: Home, icon: home}
 header_pages:
   - index.html
-author: Microsoft Learning
-twitter_username: mslearning
-github_username:  MicrosoftLearning
+author: Wes
+twitter_username: servcomtt
+github_username:  servcomtt
 plugins:
   - jekyll-sitemap
   - jekyll-mentions
   - jemoji
+  - jekyll-feed
+  
 markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
