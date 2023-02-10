@@ -108,9 +108,9 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
 
-1. On the deployment blade, click **Template**.
-
 1. On the **Review + Create** blade, click **Create**.
+
+1. On the deployment blade, click **Template**.
 
 1. Review the template representing the deployment in progress and click **Deploy**.
 
