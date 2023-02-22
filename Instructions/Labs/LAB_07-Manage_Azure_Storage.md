@@ -145,7 +145,6 @@ In this task, you will create a blob container and upload a blob into it.
 
     | Setting | Value |
     | --- | --- |
-    | Authentication type | **Account key**  |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
     | Access tier | **Hot** |
