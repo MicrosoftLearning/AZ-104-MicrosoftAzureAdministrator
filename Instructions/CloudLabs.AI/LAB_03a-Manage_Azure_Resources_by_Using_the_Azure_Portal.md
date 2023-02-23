@@ -58,6 +58,8 @@ In this task, we will move the disk resource you used in the previous task to a 
 1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-[Deployment-ID]**. On the **Resource to move** tab, Wait until Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
+   
+   > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 3: Implement resource locks
 
@@ -104,6 +106,8 @@ In this task, you will apply a resource lock to an Azure resource group containi
 1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Size + performance**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and click **Save** to apply the change. Verify that the change was successful.
 
     >**Note**: This is expected since the resource group-level lock applies to delete operations only. 
+    
+    > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
