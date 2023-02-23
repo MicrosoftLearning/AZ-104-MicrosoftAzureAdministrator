@@ -174,6 +174,8 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Task 3: Create an Azure Active Directory (AD) tenant
 
 In this task, you will create a new Azure AD tenant.
@@ -242,6 +244,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
 
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
+
+   > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
