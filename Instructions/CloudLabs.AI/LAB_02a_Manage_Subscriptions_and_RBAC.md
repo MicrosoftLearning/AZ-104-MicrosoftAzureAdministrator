@@ -163,6 +163,8 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
+    > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Review
 
 In this lab, you have:
