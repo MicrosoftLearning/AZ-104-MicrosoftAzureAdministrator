@@ -104,6 +104,8 @@ In this task, you will be the managing configuration of the Azure managed disk b
    ```sh
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
+   
+   > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
