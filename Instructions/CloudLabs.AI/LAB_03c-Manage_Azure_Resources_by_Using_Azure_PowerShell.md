@@ -113,6 +113,8 @@ In this task, you will manage the configuration of the Azure managed disk by usi
    ```powershell
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
+   
+   > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
