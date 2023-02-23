@@ -73,6 +73,8 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Click **Save**
 
+   > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
@@ -259,6 +261,8 @@ In this task, you will configure network security groups in order to allow for r
 1. When prompted, sign in with the user and password in the parameters file.
 
     **Note**: Leave the Remote Desktop session open. You will need it for the next task.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 5: Configure Azure DNS for internal name resolution
 
@@ -394,6 +398,8 @@ In this task, you will configure external DNS name resolution by using Azure pub
    ```
 
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
+
+   > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
