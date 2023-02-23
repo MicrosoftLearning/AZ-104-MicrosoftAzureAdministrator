@@ -111,6 +111,8 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. From the **az104-03b-rg1-[Deployment-ID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
+   > **Congratulations!** You have successfully completed the exercise. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Review
 
 In this lab, you have:
