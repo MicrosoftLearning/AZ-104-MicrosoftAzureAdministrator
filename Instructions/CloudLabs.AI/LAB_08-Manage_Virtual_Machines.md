@@ -117,6 +117,8 @@ In this task, you will deploy Azure virtual machines into different availability
 1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
 
     >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 2: Configure Azure virtual machines by using virtual machine extensions
 
@@ -205,6 +207,9 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the website hosted on **az104-08-vm1**.
 
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+    
+    
 #### Task 3: Scale compute and storage for Azure virtual machines
 
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
@@ -317,6 +322,8 @@ In this task, you will scale compute for Azure virtual machines by changing thei
    ```
 
     > **Note**: Wait for the confirmation that the commands were completed successfully.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 
@@ -444,6 +451,8 @@ In this task, you will deploy the Azure virtual machine scale set across availab
 1. On the **Review + create** tab of the **Create a virtual machine scale set** blade, ensure that the validation passed, and click **Create**.
 
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 
@@ -485,6 +494,9 @@ In this task, you will install the Windows Server Web Server role on the instanc
 1. On the **az10408vmss0-lb** blade, click **View Frontend IP configurations** note the value of the **Public IP address** assigned to the frontend of the load balancer, open a new browser tab, and navigate to that IP address.
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
+
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 
 #### Task 7: Scale compute and storage for Azure virtual machine scale sets
 
@@ -610,6 +622,8 @@ In this task, you will change the size of virtual machine scale set instances, c
 1. Close the Cloud Shell pane.
 
 1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+
+      > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Review
 
