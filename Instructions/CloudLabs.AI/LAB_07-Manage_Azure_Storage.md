@@ -110,6 +110,8 @@ In this task, you will create and configure an Azure Storage account.
 1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data that is not accessed frequently.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 3: Manage blob storage
 
@@ -151,6 +153,8 @@ In this task, you will create a blob container and upload a blob into it.
 1. On the **licenses/LICENSE** blade, review the available options.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 4: Manage authentication and authorization for Azure Storage
 
@@ -215,6 +219,8 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Task 5: Create and configure an Azure Files shares
 
 In this task, you will create and configure Azure Files shares.
@@ -257,6 +263,8 @@ In this task, you will create and configure Azure Files shares.
 1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
+
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 6: Manage network access for Azure Storage
 
