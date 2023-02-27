@@ -444,6 +444,8 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Repeat the steps at the beginning of this task to delete the backup items for **az104-10-vm1**.
 
+     > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Review
 
 In this lab, you have:
