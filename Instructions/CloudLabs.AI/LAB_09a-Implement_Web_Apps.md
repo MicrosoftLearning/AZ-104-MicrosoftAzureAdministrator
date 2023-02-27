@@ -234,6 +234,8 @@ In this task, you will configure and test the autoscaling of the Azure web app.
 
 1. Close the Cloud Shell pane.
 
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Review
 
 In this lab, you have:
