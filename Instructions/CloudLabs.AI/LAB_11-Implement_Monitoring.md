@@ -70,6 +70,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
 
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
@@ -134,6 +136,8 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 1. On the Automation account blade, in the **Update Management** section, click **Update management** and click **Enable**.
 
     >**Note**: Wait for the installation to complete. This might take about 5 minutes.
+    
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 4: Review default monitoring settings of Azure virtual machines
 
@@ -283,6 +287,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     >**Note**: You might need to wait for a few minutes and click **Refresh**.
 
 1. On the **All Alerts** blade, review generated alerts.
+
+    > **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 #### Task 7: Review Azure Log Analytics functionality
 
