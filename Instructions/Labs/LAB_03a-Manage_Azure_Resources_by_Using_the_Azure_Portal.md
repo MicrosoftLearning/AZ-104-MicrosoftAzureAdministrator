@@ -106,7 +106,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. On the **az104-03a-rg3** resource group blade, click **Overview**, in the list of resource group resources, select the entry representing the disk you created earlier in this task, and click **Delete** in the toolbar. 
 
-1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **delete** and click **Delete**.
+1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **yes** and click **Delete**.
 
 1. You should see an error message, notifying about the failed delete operation. 
 
