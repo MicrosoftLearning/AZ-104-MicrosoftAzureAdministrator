@@ -87,6 +87,8 @@ In this task, you will review the deployment of the container instance.
 
 1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
+    >**Note**: Cloud Shell storage must be created for these commands to work. 
+
 1. List all resource groups created throughout the labs of this module by running the following command:
 
    ```powershell
