@@ -5,9 +5,6 @@
         "adminUsername": {
             "value": "Student"
         },
-        "adminPassword": {
-            "value": "Pa55w.rd1234"
-        },
         "vmNamePrefix": {
             "value": "az104-10-vm"
         },
