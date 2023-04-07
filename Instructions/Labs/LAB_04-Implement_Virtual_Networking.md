@@ -95,10 +95,9 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
-1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
-
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
-
+    >**Note**: You will be prompted to provide an Admin password.
+    
    ```powershell
    $rgName = 'az104-04-rg1'
 
@@ -107,7 +106,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
-
+   
     >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
     >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
