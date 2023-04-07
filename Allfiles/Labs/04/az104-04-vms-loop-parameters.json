@@ -7,9 +7,6 @@
         },
         "adminUsername": {
             "value": "Student"
-        },
-        "adminPassword": {
-            "value": "Pa55w.rd1234"
         }
     }
 }
