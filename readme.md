@@ -8,12 +8,9 @@ This repository is for instructors teaching Microsoft courses. If you are in cla
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 - To preview this course in a self-paced format, see our **[interactive lab simulations](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator)**. You may find slight differences between the interactive simulations and the hosted labs, but the core concepts and ideas being demonstrated are the same.
 
-## Security Issue - February 2022
+## Security Issue - April 2023
 
-Some Azure training labs instruct the student to use a specific user name and password. Bad actors constantly scan virtual machines and try to log in using those credentials.
-Once they login the machines can be used for crypto-mining or other non-classroom activities.
-
-**Remediation**: Students should be instructed to use a password of their own choosing. Students should not use any password in the lab instructions. 
+Effective immediately, the Admin password will be removed from the JSON template parameter files. This means students will have to provide a password when the template is deployed. This effects Labs 4, 5, 6, 7, 10 and 11.  The lab instructions will be changed to reflect this change. 
 
 ## What are we doing?
 
