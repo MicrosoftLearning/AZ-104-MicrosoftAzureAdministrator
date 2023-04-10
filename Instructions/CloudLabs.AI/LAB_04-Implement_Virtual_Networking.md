@@ -37,7 +37,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | Select the existing resource group **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | Select the existing resource group **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** |
     | Name | **az104-04-vnet1** |
     | Region | Same region as the Resource Group |
 
@@ -104,7 +104,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
 
    ```powershell
-   $rgName = 'az104-04-rg1-[deployment-id]'
+   $rgName = 'az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />'
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -118,7 +118,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
  **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
     > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
-    > 1. Check the location in which the 'az104-04-rg1-[Deployment-ID]' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
+    > 1. Check the location in which the 'az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
     > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
     > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
     > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
@@ -131,9 +131,9 @@ In this task, you will configure static assignment of public and private IP addr
 
    **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
-1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-[Deployment-ID]**.
+1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />**.
 
-1. On the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vnet1**.
+1. On the **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
     ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
 
@@ -210,7 +210,7 @@ In this task, you will configure network security groups in order to allow for r
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** |
     | Name | **az104-04-nsg01** |
     | Region | the name of the Azure region where you deployed all other resources in this lab |
 
@@ -271,7 +271,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** |
     | Name | **contoso.org** |
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
@@ -336,7 +336,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** |
     | Name | the DNS domain name you identified earlier in this task |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
