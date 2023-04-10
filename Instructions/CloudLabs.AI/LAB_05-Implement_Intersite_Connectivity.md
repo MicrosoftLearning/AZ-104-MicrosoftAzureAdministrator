@@ -70,6 +70,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location2 $location2
    ```
 
+    **Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
@@ -212,7 +213,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from your parameters file.
+1. When prompted, sign in by using the **Student** username and the password which you given in task1.
 
 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
@@ -244,8 +245,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from your parameters file.
-
+1. When prompted, sign in by using the **Student** username and the password which you given in task1.
 1. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
