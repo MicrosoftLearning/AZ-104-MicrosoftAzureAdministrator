@@ -33,14 +33,16 @@
      ![](../CloudLabs.AI/Images/welcomegamail2.png)
 
 1. Now, you will see two tabs in the edge browser, close the first tab named with Microsoft Edge.
-1. On the **Sign in to Microsoft Azure** window, you will see the login screen, enter the following username and click on **Next**.
-1. On the Sign in to Microsoft Azure window, you will see the login screen, enter the username and click on Next.
 
-    ![](../CloudLabs.AI/Images/portal1.png)
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+     ![](../CloudLabs.AI/Images/portal1.png)
      
 1. Now enter the password and click on Sign in.
+   * Password: <inject key="AzureAdUserPassword"></inject>
   
-    ![](../CloudLabs.AI/Images/portal2.png)
+     ![](../CloudLabs.AI/Images/portal2.png)
 
 1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
 
