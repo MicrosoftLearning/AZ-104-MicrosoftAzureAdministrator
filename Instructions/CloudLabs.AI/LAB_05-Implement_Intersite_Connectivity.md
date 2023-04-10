@@ -21,13 +21,6 @@ In this lab, you will:
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. On the welcome to Microsoft Azure page click **Maybe later**.
-
-     ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)
-
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
