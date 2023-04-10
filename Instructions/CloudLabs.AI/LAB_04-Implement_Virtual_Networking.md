@@ -101,9 +101,9 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     
 5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace DeploymentID = <inject key="DeploymentID" enableCopy="false" />
+6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
     
-    **Note**: You will be prompted to provide an Admin password. Enter your own Password like **Pa55w.rd1234**
+     **Note**: You will be prompted to provide an Admin password. Enter your own Password like **Pa55w.rd1234**
  
    ```powershell
    $rgName = 'az104-04-rg1-DeploymentID'
@@ -115,11 +115,11 @@ In this task, you will deploy Azure virtual machines into different subnets of t
   
      ```
       
- **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+   **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
-  **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
+   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
-  **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
+   **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
  
    > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
    > 1. Check the location in which the 'az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
