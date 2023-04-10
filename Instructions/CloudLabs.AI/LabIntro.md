@@ -51,3 +51,4 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
     
+    ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)
