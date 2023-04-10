@@ -37,7 +37,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | Select the existing resource group **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Resource Group | Select the existing resource group **az104-04-rg1- <inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-vnet1** |
     | Region | Same region as the Resource Group |
 
