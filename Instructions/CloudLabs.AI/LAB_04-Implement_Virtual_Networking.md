@@ -112,9 +112,10 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
-
-     
-  **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+  
+     ```
+      
+ **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
@@ -136,7 +137,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
-1. On the **az104-04-rg1-<inject key="Deployment-id" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
+1. On the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
     ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
 
@@ -298,8 +299,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     
     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
 
-
-      **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+    **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
