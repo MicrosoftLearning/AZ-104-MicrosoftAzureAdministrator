@@ -81,7 +81,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+2. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
@@ -91,29 +91,30 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     ![image](../media/cloudhell01.png)
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
+4. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     **Note**: You might need to upload each file separately.
     
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
     
-1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
+5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. 
-
-
+6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace $rgName = 'az104-04-rg1-DeploymentID' with $rgName = **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**.
+    
+    **Note**: You will be prompted to provide an Admin password. Enter your own Password like **Pa55w.rd1234**
+ 
    ```powershell
-   $rgName = 'az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />'
+   $rgName = 'az104-04-rg1-DeploymentID'
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
-   ```
 
-    **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+     
+  **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
@@ -125,7 +126,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
  
-1. Close the Cloud Shell pane.
+7. Close the Cloud Shell pane.
 
 #### Task 3: Configure private and public IP addresses of Azure VMs
 
