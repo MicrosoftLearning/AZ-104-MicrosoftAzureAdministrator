@@ -62,7 +62,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**.
  
-   >**Note**: Replace Deployment-id with **DeploymentID** and you will get it from the Environmental detail page.
+   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
    >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
 
@@ -102,7 +102,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -110,7 +110,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet1** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
@@ -137,7 +137,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -145,7 +145,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -174,7 +174,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -182,7 +182,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
