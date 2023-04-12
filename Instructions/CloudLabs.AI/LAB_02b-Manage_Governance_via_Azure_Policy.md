@@ -184,18 +184,19 @@ In this task, we will use a different policy definition to remediate any non-com
 
     >**Note**: To verify that the new policy assignment is in effect, you will create another Azure Storage account in the same resource group without explicitly adding the required tag. 
     
-    >**Note**: It might take between 5 and 30 minutes for the policy to take effect.
+    >**Note**: It might take between 5 to 30 minutes for the policy to take effect.
     
     >**Note**: logout and login back to azure portal to take effect quickly.
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
 
-1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
+1. In Azure portal search for **Storage Account** and click on **+Create**
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
+    |Resource Gropup |       cloud-shell-storage-eastus 
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Verify that this time the validation passed and click **Create**.
