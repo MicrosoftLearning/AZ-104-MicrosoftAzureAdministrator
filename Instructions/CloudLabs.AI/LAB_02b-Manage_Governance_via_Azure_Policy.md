@@ -123,12 +123,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
-1. On the resource group blade, and then search for Storage Account, and click **+Create**. 
+1. In Azure portal search for **Storage Account** and click on **+Create**
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
+    |Resource Gropup |       cloud-shell-storage-eastus  
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
