@@ -164,7 +164,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
+1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** with Administrator under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
 
     ```powershell
     md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
