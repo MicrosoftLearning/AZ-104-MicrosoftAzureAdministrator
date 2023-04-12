@@ -446,7 +446,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | Choose the storage account that you created earlier in this lab for boot diagnostics. |
+    | Diagnostics storage account | Create new storage account with a unique name |
 
     >**Note**: You will need the name of this storage account in the next task.
 
