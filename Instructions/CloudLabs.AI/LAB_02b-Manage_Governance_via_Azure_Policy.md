@@ -155,7 +155,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
 
-1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
+1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing** and click on **Add**.
 
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
