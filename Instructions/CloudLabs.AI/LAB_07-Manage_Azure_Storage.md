@@ -44,8 +44,6 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\az104-07-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
 
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
-
 1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
 
     >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`. 
@@ -57,6 +55,8 @@ In this task, you will deploy an Azure virtual machine that you will use later i
    
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+
+    >**Note**: You will be prompted to provide an Admin password. Please enter a valid password within the powershell pane and hit enter.
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -132,7 +132,6 @@ In this task, you will create a blob container and upload a blob into it.
 
     | Setting | Value |
     | --- | --- |
-    | Authentication type | **Account key**  |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
     | Access tier | **Hot** |
@@ -230,7 +229,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and click **Connect**.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected, click on **Show script** Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click the **Copy to clipboard**.
+1.On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
