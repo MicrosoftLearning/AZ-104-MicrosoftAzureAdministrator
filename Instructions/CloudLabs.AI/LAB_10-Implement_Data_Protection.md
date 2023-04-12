@@ -160,7 +160,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from the parameters file.
+1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
