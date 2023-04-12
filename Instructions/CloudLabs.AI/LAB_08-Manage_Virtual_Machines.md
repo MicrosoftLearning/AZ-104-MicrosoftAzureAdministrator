@@ -66,6 +66,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Address range | **10.80.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
+    
+    ![](./Instructions/media/az104_08-createVN.png)
 
 1.  Back on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
