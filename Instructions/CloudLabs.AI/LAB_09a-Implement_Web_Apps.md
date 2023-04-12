@@ -226,7 +226,7 @@ In this task, you will configure and test the autoscaling of the Azure web app.
 
 1. Select the **Run history** tab, and check the **Observed resource instance count**.
 
-1. Monitor the utilization and the number of instances for a few minutes.
+1. Monitor the utilization and the number of instances. It takes about 15 minutes for the number of instances to increase.
 
     >**Note**: You may need to **Refresh** the page.
 
