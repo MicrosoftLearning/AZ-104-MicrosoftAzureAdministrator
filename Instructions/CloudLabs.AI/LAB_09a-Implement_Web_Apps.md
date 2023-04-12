@@ -187,11 +187,12 @@ In this task, you will configure and test the autoscaling of the Azure web app.
     | Metric threshold to trigger scale action | **10** |
     | Duration (minutes) | **1** |
     | Time grain statistic | **Maximum** |
+    | Time aggregation | **Maximum** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
+    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
