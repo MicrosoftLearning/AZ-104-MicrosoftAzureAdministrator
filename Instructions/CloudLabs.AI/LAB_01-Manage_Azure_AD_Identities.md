@@ -69,9 +69,9 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
-1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permission to modify any configuration options.
+1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permission to modify any configuration options, and signout the user account **az104-01a-aaduser1** and close the Inprivate window.
 
-1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
+1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -227,7 +227,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Switch back to your default Azure AD tenant **Adatum Corporation** by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
