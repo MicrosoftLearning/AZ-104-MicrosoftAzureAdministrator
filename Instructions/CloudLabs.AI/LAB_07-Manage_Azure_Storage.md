@@ -26,7 +26,7 @@ In this lab, you will:
 
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -36,7 +36,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/*az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -82,18 +82,16 @@ In this task, you will create and configure an Azure Storage account.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of an **existing** resource group **az104-07-rg1** |
-    | Storage account name | **strgaz104t07DID** |
+    | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** |
     | Location | Same region as the Resource group  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
+1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
+1. On the **Networking** tab of the **Create a storage account** blade, review the available options and accept the default option, **Enable public access from all networks** under network access. Click **Next: Data protection >**.
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable public access from all network** under network access, and click **Next: Data protection >**.
-
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete, and click **Create**.
+1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults. Click **Review** and wait for the validation process to complete. Then click on **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -107,7 +105,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the same blade note that, at this point, the Storage account has only the primary location.
 
-1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
+1. Display the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data that is not accessed frequently.
 
@@ -126,7 +124,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Click **Create**.
 
-1. In the list of containers, click **az104-07-container** and then click **Upload**.
+1. In the list of containers, select **az104-07-container** and within the **Upload blob** pane, click on **Browse for files**.
 
 1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
 
@@ -201,9 +199,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
-1. In the **Add** section, click **Add a role assignment**.
+1. In the **+ Add** section, select **Add role assignment**.
 
-1. On the **Add role assignment** blade, specify the following settings:
+1. On the **Add role assignment** blade, specify the following settings and click on **Review + assign**.
 
     | Setting | Value |
     | --- | --- |
@@ -223,7 +221,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
-1. Click **+ File share** and create a file share with the following settings:
+1. Click **+ File share** and create a file share with the following settings and then click on **Create**.
 
     | Setting | Value |
     | --- | --- |
@@ -262,9 +260,9 @@ In this task, you will create and configure Azure Files shares.
 
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
 
-1. Click the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
+1. Select the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
 
     > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
 
