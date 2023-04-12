@@ -80,7 +80,7 @@ In this task, you will create a recovery services vault.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-10-rg1-{Deployment ID}** |
-    | Name | **az104-10-rsv1** |
+    | Vault Name | **az104-10-rsv1** |
     | Region | the name of a region which you copied in previous steps |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
