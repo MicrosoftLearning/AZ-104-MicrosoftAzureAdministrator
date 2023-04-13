@@ -231,7 +231,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation type | **Average** |
     | Threshold value | **2** |
     | Aggregation granularity (Period)/check every | **1 minute** |
-    | Frequency of evaluation/Look at data from the last | **1 minute** |
+    | Lookback period | **1 minute** |
 
 1. On the **Create alert rule** blade, in the **Actions** section, click on the **+ Create action group** button.
 
