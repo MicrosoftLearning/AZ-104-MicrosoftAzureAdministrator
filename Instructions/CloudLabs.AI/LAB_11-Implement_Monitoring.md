@@ -27,7 +27,9 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com) and log in with Azure credentials.
+
+1. To get the Azure credentials select the Environment Details tab from the lab environment details page.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -35,11 +37,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/cloudshell1-1.png)
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudhell01-1.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -58,7 +60,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**.
+   >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -70,7 +72,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -105,8 +107,6 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
-
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
 1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Create**.
@@ -122,8 +122,6 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | | |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
-
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
@@ -233,7 +231,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation type | **Average** |
     | Threshold value | **2** |
     | Aggregation granularity (Period)/check every | **1 minute** |
-    | Frequency of evaluation/Look at data from the last | **1 minute** |
+    | Lookback period | **1 minute** |
 
 1. On the **Create alert rule** blade, in the **Actions** section, click on the **+ Create action group** button.
 
@@ -276,7 +274,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1.  When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
-1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session, Select the Windows Start button, type and select **Command Prompt**.
 
 1. From the Command Prompt, run the following to trigger increased CPU utilization on the **az104-11-vm0** Azure VM:
 
@@ -296,7 +294,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **All Alerts** blade, review generated alerts.
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
