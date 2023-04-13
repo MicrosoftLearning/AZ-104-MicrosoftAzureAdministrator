@@ -58,6 +58,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
+   >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**.
+
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -91,7 +93,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of an existing resource group **az104-11-rg1** |
+    | Resource group | select existing resource group **az104-11-rg1** |
     | Log Analytics Workspace | analytics-DID |
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
 
