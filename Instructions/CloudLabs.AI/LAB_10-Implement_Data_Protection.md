@@ -325,7 +325,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
+1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine** and click on View policy.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
 
@@ -373,7 +373,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
+1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1** .
 
 1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link under computer name.
 
