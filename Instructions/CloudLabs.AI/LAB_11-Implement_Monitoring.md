@@ -27,7 +27,9 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com).
+
+1. To get the Azure credentials select the Environment Details tab from the lab environment details page.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -70,7 +72,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -292,7 +294,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **All Alerts** blade, review generated alerts.
     
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
