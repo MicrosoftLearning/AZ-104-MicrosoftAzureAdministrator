@@ -105,8 +105,6 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
-
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
 1. In the Azure portal, search for and select **Automation Accounts**, and on the **Automation Accounts** blade, click **+ Create**.
@@ -122,8 +120,6 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | | |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
-
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
