@@ -184,7 +184,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Setting | Value |
     | --- | --- |
     | Enable insights using | **Log Analytics agent** |
-    | Log Analytics workspaces | **analytics-DID** |
+    | Log Analytics workspaces |**analytics-<inject key="DeploymentID" enableCopy="false"/>** |
 
     >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
 
