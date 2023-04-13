@@ -66,6 +66,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
+   >**Note**: You will be prompted to provide an Admin password Pa55w.rd1234.
+
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
