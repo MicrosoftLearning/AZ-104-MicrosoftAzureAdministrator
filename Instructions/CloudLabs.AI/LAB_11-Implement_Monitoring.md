@@ -246,7 +246,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. 
 
-1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, type your email (ODL Username) address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade ,in the **Name** text box, type **admin email**. select **Next: Actions  >**.
+1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, add your **email:<inject key="AzureAdUserEmail"></inject>** address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade ,in the **Name** text box, type **admin email**. select **Next: Actions  >**.
 
 1. On the **Actions** tab of the **Create action group** blade, review items available in the **Action type** drop-down list without making any changes and select **Review + create**.
 
@@ -306,7 +306,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
 
-1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-rg0**, and click **Apply**.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-vm0**, and click **Apply**.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
