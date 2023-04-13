@@ -253,7 +253,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Confirmation** page, click **Back Up**.
 
-1. When the backup is complete, click **Close**, and then close **Microsoft Azure Backup**.
+1. When the backup is complete, click **Close**, and then minimize the **Microsoft Azure Backup**.
 
 1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**.
 
