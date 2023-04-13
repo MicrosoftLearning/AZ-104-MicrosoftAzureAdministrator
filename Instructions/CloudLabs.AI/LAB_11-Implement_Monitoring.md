@@ -268,7 +268,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1.  When prompted, sign in by using the **Student** username and the password from the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11** parameters file.
+1.  When prompted, sign in by using the **Student** username and **Pa55w.rd1234**.
 
 1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
 
