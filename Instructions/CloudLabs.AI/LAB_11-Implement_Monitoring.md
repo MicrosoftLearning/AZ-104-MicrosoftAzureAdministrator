@@ -27,7 +27,7 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com).
+1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com) and log in with Azure credentials.
 
 1. To get the Azure credentials select the Environment Details tab from the lab environment details page.
 
