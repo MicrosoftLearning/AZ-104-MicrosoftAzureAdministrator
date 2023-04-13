@@ -270,7 +270,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1.  When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
-1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session, Select the Windows Start button, type and select **Command Prompt**.
 
 1. From the Command Prompt, run the following to trigger increased CPU utilization on the **az104-11-vm0** Azure VM:
 
