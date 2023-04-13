@@ -94,7 +94,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | select existing resource group **az104-11-rg1** |
-    | Log Analytics Workspace | analytics-DID |
+    | Log Analytics Workspace | **analytics-<inject key="DeploymentID" enableCopy="false"/>**|
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
