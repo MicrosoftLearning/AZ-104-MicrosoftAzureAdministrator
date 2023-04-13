@@ -109,7 +109,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
     
-     **Note**: You will be prompted to provide an Admin password. Enter your own Password like **Pa55w.rd1234**
+     **Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234**
  
    ```powershell
    $rgName = 'az104-04-rg1-DeploymentID'
