@@ -248,7 +248,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Review + create** tab of the **Create action group** blade, select **Create**.
 
-1. Back on the **Create alert rule** blade, in the **Alert rule details** section, specify the following settings (leave others with their default values):
+1. Back on the **Create alert rule** blade, in the **Details** section, specify the following settings (leave others with their default values):
 
     | Settings | Value |
     | --- | --- |
