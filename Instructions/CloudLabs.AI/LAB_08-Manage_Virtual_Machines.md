@@ -41,7 +41,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Region | same location of resource group |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
