@@ -154,6 +154,12 @@ In this task, you will create a blob container and upload a blob into it.
 1. On the **licenses/LICENSE** blade, review the available options.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
@@ -230,6 +236,12 @@ In this task, you will configure authentication and authorization for Azure Stor
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 5: Create and configure an Azure Files shares
 
 In this task, you will create and configure Azure Files shares.
@@ -273,6 +285,12 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
     
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 

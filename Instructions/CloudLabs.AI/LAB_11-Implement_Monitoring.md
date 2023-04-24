@@ -78,6 +78,12 @@ In this task, you will deploy a virtual machine that will be used to test monito
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
@@ -293,13 +299,13 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     >**Note**: You might need to wait for a few minutes and click **Refresh**.
 
 1. On the **All Alerts** blade, review generated alerts.
-    
+
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
+
 #### Task 7: Review Azure Log Analytics functionality
 
 1. In the Azure portal, navigate back to the **Monitor** blade and click **Logs**.

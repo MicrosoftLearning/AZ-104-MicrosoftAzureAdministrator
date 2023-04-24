@@ -97,6 +97,12 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 2: Configure the hub and spoke network topology
 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
@@ -170,6 +176,13 @@ In this task, you will configure local peering between the virtual networks you 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
+
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 3: Test transitivity of virtual network peering
 
@@ -490,6 +503,12 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 6: Implement Azure Application Gateway
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
@@ -613,6 +632,13 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
 #### Review
 
 In this lab, you have:
