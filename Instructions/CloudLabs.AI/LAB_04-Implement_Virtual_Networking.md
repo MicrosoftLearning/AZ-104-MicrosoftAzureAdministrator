@@ -37,7 +37,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | Select the existing resource group **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | Select the existing resource group **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-vnet1** |
     | Region | Same region as the Resource Group |
 
@@ -87,7 +87,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+2. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
@@ -97,39 +97,43 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     ![image](../media/cloudhell01.png)
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
+4. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     **Note**: You might need to upload each file separately.
     
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
     
-1. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
+5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace [deployment-id] with your deployment ID. You will get [deployment-id] from the environmental detail page.
-
+6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
+    
+     **Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234**
+ 
    ```powershell
-   $rgName = 'az104-04-rg1-[deployment-id]'
+   $rgName = 'az104-04-rg1-DeploymentID'
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-04-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
-   ```
+  
+     ```
+      
+   **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
-    **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
-    **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
-
- **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
-    > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
-    > 1. Check the location in which the 'az104-04-rg1-[Deployment-ID]' resource group is deployed. You can run `az group show -n az104-04-rg1-[Deployment-ID] --query location` in your CloudShell to get it.
-    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
-    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
-    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
-
-1. Close the Cloud Shell pane.
+   **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
+ 
+   > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
+   > 1. Check the location in which the 'az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />' resource group is deployed. You can run `az group show -n az104-04-rg1-<inject key="DeploymentID" enableCopy="false" /> --query location` in your CloudShell to get it.
+   > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
+   > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
+   > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
+ 
+7. Close the Cloud Shell pane.
 
 #### Task 3: Configure private and public IP addresses of Azure VMs
 
@@ -137,9 +141,9 @@ In this task, you will configure static assignment of public and private IP addr
 
    **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
-1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-[Deployment-ID]**.
+1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
-1. On the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vnet1**.
+1. On the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
     ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
 
@@ -187,9 +191,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Back on the **ipconfig1** blade, save the changes.
 
-1. Navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
 
-1. Navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
+1. Navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
     **Note**: You will need both IP addresses in the last task of this lab.
 
@@ -197,7 +201,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
-1. In the Azure portal, navigate back to the **az104-04-rg1-[Deployment-ID]** resource group blade, and in the list of its resources, click **az104-04-vm0**.
+1. In the Azure portal, navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
 1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
@@ -216,7 +220,7 @@ In this task, you will configure network security groups in order to allow for r
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-nsg01** |
     | Region | the name of the Azure region where you deployed all other resources in this lab |
 
@@ -283,7 +287,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **contoso.org** |
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
@@ -307,8 +311,7 @@ In this task, you will configure DNS name resolution within a virtual network by
     
     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
 
-
-      **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+    **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
@@ -348,7 +351,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | **az104-04-rg1-[Deployment-ID]** |
+    | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | the DNS domain name you identified earlier in this task |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
@@ -406,6 +409,12 @@ In this task, you will configure external DNS name resolution by using Azure pub
    ```
 
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.

@@ -139,9 +139,9 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
-1. In the Azure portal, navigate back to the **az104-02-mg1** management group and display its **details**.
+1. In the Azure portal, navigate back to the **Management group** and select  **az104-02-mg1** and display its **details**.
 
-1. Click **Access control (IAM)**, click **+ Add** followed by **Role assignment**, and search for the **Support Request Contributor (Custom)** and assign the role to the newly created user account.
+1. Click **Access control (IAM)**, click **+ Add** followed by **Role assignment** and under Role Section search for the **Support Request Contributor (Custom)** and assign the role to the newly created user account.
 
 1.  Click on **+ Select Member**, search and select for the newly created user.
 
@@ -155,7 +155,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and click on **create a support request**. 
 
-1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
+1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, give Summary as **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
@@ -168,6 +168,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Review
 
 In this lab, you have:

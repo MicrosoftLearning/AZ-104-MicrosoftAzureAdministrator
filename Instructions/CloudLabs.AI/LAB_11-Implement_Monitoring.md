@@ -27,7 +27,9 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com) and log in with Azure credentials.
+
+1. To get the Azure credentials select the Environment Details tab from the lab environment details page.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -35,17 +37,15 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/cloudshell1-1.png)
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudhell01-1.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11\az104-11-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11\az104-11-vm-parameters.json** into the Cloud Shell home directory.
-
-1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
 1. From the Cloud Shell pane, run the following to use the existing resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where your resource group deployed):
 
@@ -60,6 +60,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
+   >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**
+
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -69,6 +71,12 @@ In this task, you will deploy a virtual machine that will be used to test monito
    ```
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
@@ -99,13 +107,11 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of an existing resource group **az104-11-rg1** |
-    | Log Analytics Workspace | analytics-DID |
+    | Resource group | select existing resource group **az104-11-rg1** |
+    | Log Analytics Workspace | **analytics-<inject key="DeploymentID" enableCopy="false"/>**|
     | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
-
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
     >**Note**: Wait for the deployment to complete. The deployment should take about 1 minute.
 
@@ -115,15 +121,13 @@ In this task, you will create and configure an Azure Log Analytics workspace and
 
     | Settings | Value |
     | --- | --- |
-    | Name | Automation-DID |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
+    | Name | **Automation-<inject key="DeploymentID" enableCopy="false"/>** |
     | Location | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
     | | |
 
     >**Note**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
-
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
@@ -171,9 +175,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
 
-1. On the **Overview** tab of the **az104-11-vm0 \| Diagnostic settings** blade, click **Enable guest-level monitoring**.
+1. On the **Overview** tab of the **az104-11-vm0 \| Diagnostic settings** blade, select a **Diagnostic storage account**, and then click **Enable guest-level monitoring**.
 
-    >**Note**: Wait for the operation to take effect. This might take about 3 minutes.
+    >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
 
 1. Switch to the **Performance counters** tab of the **az104-11-vm0 \| Diagnostic settings** blade and review the available counters.
 
@@ -190,7 +194,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Setting | Value |
     | --- | --- |
     | Enable insights using | **Log Analytics agent** |
-    | Log Analytics workspaces | **analytics-DID** |
+    | Log Analytics workspaces |**analytics-<inject key="DeploymentID" enableCopy="false"/>** |
 
     >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
 
@@ -233,9 +237,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Aggregation type | **Average** |
     | Threshold value | **2** |
     | Aggregation granularity (Period)/check every | **1 minute** |
-    | Frequency of evaluation/Look at data from the last | **1 minute** |
+    | Lookback period | **1 minute** |
 
-1. On the **Create alert rule** blade, in the **Action group** section, click on the **+ Create action group** button.
+1. On the **Create alert rule** blade, in the **Actions** section, click on the **+ Create action group** button.
 
 1. On the **Basics** tab of the **Create an action group** blade, specify the following settings (leave others with their default values) and select **Next: Notifications >**:
 
@@ -246,15 +250,15 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Action group name | **az104-11-ag1** |
     | Display name | **az104-11-ag1** |
 
-1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. In the **Name** text box, type **admin email**. Click the **Edit details** (pencil) icon.
+1. On the **Notifications** tab of the **Create action group** blade, in the **Notification type** drop-down list, select **Email/SMS/Push/Voice**. 
 
-1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, type your email (ODL Username) address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade, select **Next: Actions  >**.
+1. On the **Email/SMS/Push/Voice** blade, select the **Email** checkbox, add your **email:<inject key="AzureAdUserEmail"></inject>** address in the **Email** textbox, leave others with their default values, click **OK**, back on the **Notifications** tab of the **Create action group** blade ,in the **Name** text box, type **admin email**. select **Next: Actions  >**.
 
 1. On the **Actions** tab of the **Create action group** blade, review items available in the **Action type** drop-down list without making any changes and select **Review + create**.
 
 1. On the **Review + create** tab of the **Create action group** blade, select **Create**.
 
-1. Back on the **Create alert rule** blade, in the **Alert rule details** section, specify the following settings (leave others with their default values):
+1. Back on the **Create alert rule** blade, in the **Details** section, specify the following settings (leave others with their default values):
 
     | Settings | Value |
     | --- | --- |
@@ -274,9 +278,9 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1.  When prompted, sign in by using the **Student** username and the password from the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11** parameters file.
+1.  When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
-1. Within the Remote Desktop session, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session, Select the Windows Start button, type and select **Command Prompt**.
 
 1. From the Command Prompt, run the following to trigger increased CPU utilization on the **az104-11-vm0** Azure VM:
 
@@ -308,7 +312,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
 
-1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-rg0**, and click **Apply**.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, select the **Recent** tab, select **az104-11-vm0**, and click **Apply**.
 
 1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 

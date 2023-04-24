@@ -104,7 +104,7 @@ In this task, you will be the managing configuration of the Azure managed disk b
    ```sh
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
-   
+
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 

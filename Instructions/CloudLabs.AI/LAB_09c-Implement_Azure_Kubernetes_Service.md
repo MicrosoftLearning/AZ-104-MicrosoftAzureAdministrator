@@ -24,13 +24,13 @@ In this lab, you will:
 
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings** else skip to step 5.
     
     ![image](../media/cloudshell1.png)
     
@@ -88,9 +88,16 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Setting | Value |
     | ---- | ---- |
     | Network configuration | **kubenet** |
-    | DNS name prefix | any valid, globally unique DNS host name |
+    | DNS name prefix | **any valid, globally unique DNS host name** |
 
-1. Click **Next: Integration >**, on the **Integration** tab of the **Create Kubernetes cluster** blade, set **Container monitoring** to **Disabled**, click **Review + create**, ensure that the validation passed and click Create.
+1. Click **Next: Integrations >**, on the **Integrations** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
+
+    | Setting | Value |
+    | ---- | ---- |
+    | Enable Container Logs | **Disable** |
+    | Enable recommended alert rules | **Uncheck** |
+
+1.  Click **Review + create**, ensure that the validation passed and click **Create**.
 
     >**Note**: In production scenarios, you would want to enable monitoring. Monitoring is disabled in this case since it is not covered in the lab.
 
@@ -178,8 +185,7 @@ In this task, you will scale horizontally the number of pods and then the number
 
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
-     >**Note**: Replace DeploymentID 
-
+    
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
 
     ```sh
@@ -241,6 +247,12 @@ In this task, you will scale horizontally the number of pods and then the number
     ```
 
 1. Close the **Cloud Shell** pane.
+   
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.

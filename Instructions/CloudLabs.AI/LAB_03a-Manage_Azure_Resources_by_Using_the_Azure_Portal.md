@@ -58,8 +58,9 @@ In this task, we will move the disk resource you used in the previous task to a 
 1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-[Deployment-ID]**. On the **Resource to move** tab, Wait until Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
-   
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+     
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
