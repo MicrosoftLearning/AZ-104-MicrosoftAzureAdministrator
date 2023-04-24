@@ -21,13 +21,6 @@ In this lab, you will:
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. On the welcome to Microsoft Azure page click **Maybe later**.
-
-     ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)
-
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
@@ -62,7 +55,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**.
  
-   >**Note**: Replace Deployment-id with **DeploymentID** and you will get it from the Environmental detail page.
+   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
    >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
 
@@ -77,6 +70,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location2 $location2
    ```
 
+    **Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
@@ -102,7 +96,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -110,11 +104,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet1** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+  
+    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
    $rgName = 'az104-05-rg0-Deployment-id'
@@ -137,7 +133,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -145,11 +141,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+   
+   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
    $rgName = 'az104-05-rg0-Deployment-id'
@@ -174,7 +172,7 @@ In this task, you will configure local and global peering between the virtual ne
     | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -182,11 +180,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Virtual network gateway or Route Server | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+    
+    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
    $rgName = 'az104-05-rg0-Deployment-id'
@@ -199,6 +199,18 @@ In this task, you will configure local and global peering between the virtual ne
 
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
    ``` 
+   
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 3: Test intersite connectivity
 
@@ -214,7 +226,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from your parameters file.
+1. When prompted, sign in by using the **Student** username and the password which you given in task1.
 
 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
@@ -246,8 +258,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from your parameters file.
-
+1. When prompted, sign in by using the **Student** username and the password which you given in task1.
 1. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:

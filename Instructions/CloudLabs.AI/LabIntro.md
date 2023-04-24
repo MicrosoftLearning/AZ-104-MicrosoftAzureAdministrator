@@ -33,12 +33,15 @@
      ![](../CloudLabs.AI/Images/welcomegamail2.png)
 
 1. Now, you will see two tabs in the edge browser, close the first tab named with Microsoft Edge.
-1. On the **Sign in to Microsoft Azure** window, you will see the login screen, enter the following username and click on **Next**.
-1. On the Sign in to Microsoft Azure window, you will see the login screen, enter the username and click on Next.
 
-    ![](../CloudLabs.AI/Images/portal1.png)
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+     ![](../CloudLabs.AI/Images/portal1.png)
      
 1. Now enter the password and click on Sign in.
+   * Password: <inject key="AzureAdUserPassword"></inject>
   
     ![](../CloudLabs.AI/Images/portal2.png)
 
@@ -48,3 +51,4 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
     
+    ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)

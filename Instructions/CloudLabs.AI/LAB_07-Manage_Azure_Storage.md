@@ -26,7 +26,7 @@ In this lab, you will:
 
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -36,15 +36,13 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/*az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\az104-07-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
-
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
 
@@ -57,6 +55,8 @@ In this task, you will deploy an Azure virtual machine that you will use later i
    
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+
+    >**Note**: You will be prompted to provide an Admin password. Please enter a valid password within the powershell pane and hit enter.
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -82,18 +82,16 @@ In this task, you will create and configure an Azure Storage account.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of an **existing** resource group **az104-07-rg1** |
-    | Storage account name | **strgaz104t07DID** |
+    | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** |
     | Location | Same region as the Resource group  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
-    >**Note**: Replace the DID with your deployment ID, DID is your unique deployment id, which can be found under the environment details tab.
+1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
+1. On the **Networking** tab of the **Create a storage account** blade, review the available options and accept the default option, **Enable public access from all networks** under network access. Click **Next: Data protection >**.
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable public access from all network** under network access, and click **Next: Data protection >**.
-
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review**, wait for the validation process to complete, and click **Create**.
+1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults. Click **Review** and wait for the validation process to complete. Then click on **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
@@ -107,9 +105,15 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the same blade note that, at this point, the Storage account has only the primary location.
 
-1. Display again the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
+1. Display the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data that is not accessed frequently.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 3: Manage blob storage
 
@@ -126,7 +130,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Click **Create**.
 
-1. In the list of containers, click **az104-07-container** and then click **Upload**.
+1. In the list of containers, select **az104-07-container** and within the **Upload blob** pane, click on **Browse for files**.
 
 1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
 
@@ -134,7 +138,6 @@ In this task, you will create a blob container and upload a blob into it.
 
     | Setting | Value |
     | --- | --- |
-    | Authentication type | **Account key**  |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
     | Access tier | **Hot** |
@@ -151,7 +154,19 @@ In this task, you will create a blob container and upload a blob into it.
 1. On the **licenses/LICENSE** blade, review the available options.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
 #### Task 4: Manage authentication and authorization for Azure Storage
 
 In this task, you will configure authentication and authorization for Azure Storage.
@@ -201,9 +216,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. On the **az104-07-container** blade, click **Access Control (IAM)**.
 
-1. In the **Add** section, click **Add a role assignment**.
+1. In the **+ Add** section, select **Add role assignment**.
 
-1. On the **Add role assignment** blade, specify the following settings:
+1. On the **Add role assignment** blade, specify the following settings and click on **Review + assign**.
 
     | Setting | Value |
     | --- | --- |
@@ -214,6 +229,18 @@ In this task, you will configure authentication and authorization for Azure Stor
 1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 5: Create and configure an Azure Files shares
 
@@ -223,7 +250,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
-1. Click **+ File share** and create a file share with the following settings:
+1. Click **+ File share** and create a file share with the following settings and then click on **Create**.
 
     | Setting | Value |
     | --- | --- |
@@ -232,7 +259,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and click **Connect**.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected, click on **Show script** Below you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click the **Copy to clipboard**.
+1.On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
@@ -257,14 +284,26 @@ In this task, you will create and configure Azure Files shares.
 1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 6: Manage network access for Azure Storage
 
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
 
-1. Click the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
+1. Select the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
 
     > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
 

@@ -26,7 +26,7 @@ In this lab, you will:
 
 In this task, you will create an Azure web app.
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
 
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
 
@@ -181,18 +181,18 @@ In this task, you will configure and test the autoscaling of the Azure web app.
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource** |
-    | Time aggregation | **Maximum** |
-    | Metric namespace | **App Service plans standard metrics** |
+    | Metric namespace | **standard metrics** |
     | Metric name | **CPU Percentage** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
-    | Duration (in minutes) | **1** |
+    | Duration (minutes) | **1** |
     | Time grain statistic | **Maximum** |
+    | Time aggregation | **Maximum** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
+    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -215,25 +215,30 @@ In this task, you will configure and test the autoscaling of the Azure web app.
 
    $webapp = Get-AzWebApp -ResourceGroupName $rgName
    ```
-
-
+   
 1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web app:
 
    ```powershell
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
    ```
+   
+1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
 
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the **Monitoring** section, click **Process explorer**.
+1. Select the **Run history** tab, and check the **Observed resource instance count**.
 
-    >**Note**: Process explorer facilitates monitoring the number of instances and their resource utilization.
-
-1. Monitor the utilization and the number of instances for a few minutes.
+1. Monitor the utilization and the number of instances. It takes about 15 minutes for the number of instances to increase.
 
     >**Note**: You may need to **Refresh** the page.
 
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
 1. Close the Cloud Shell pane.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
 

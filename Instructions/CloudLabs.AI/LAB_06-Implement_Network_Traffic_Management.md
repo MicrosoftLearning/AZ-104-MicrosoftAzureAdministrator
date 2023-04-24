@@ -5,8 +5,6 @@
 
 You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso considers implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
->**Note**: This lab, by default, requires total of 8 vCPUs available in the Standard_Dsv3 series in the region you choose for deployment, since it involves deployment of four Azure VMs of Standard_D2s_v3 SKU. If your students are using trial accounts, with the limit of 4 vCPUs, you can use a VM size that requires only one vCPU (such as Standard_B1s).
-
 ## Objectives
 
 In this lab, you will:
@@ -28,8 +26,6 @@ In this lab, you will:
 
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
@@ -38,15 +34,17 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     
     ![image](../media/cloudshell1.png)
     
-     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-06-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    > Under the **Show advanced settings**,provide the following details and click **Create Storage**
 
-    ![image](../media/cloudhell01.png)
-    
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+    ![](../media/lab6-1.png)
 
-3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+   * Resource group : Select **Use existing** -> **az104-06-rg1**
+   * Storage account : Select **Create new** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
+   * File Share: Select **Create new** and Enter **none**
 
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
+   > **Note :** Please wait until the storage account is created and proceed with next step.
+   
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment:
 
@@ -66,6 +64,8 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
       
    ```
+
+1. Enter any Password at the **adminPassword** prompt.
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
@@ -90,6 +90,18 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
 1. Close the Cloud Shell pane.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 2: Configure the hub and spoke network topology
 
@@ -165,6 +177,13 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Task 3: Test transitivity of virtual network peering
 
 In this task, you will test the transitivity of virtual network peering by using Network Watcher.
@@ -190,7 +209,7 @@ In this task, you will test the transitivity of virtual network peering by using
 
     > **Note**: **10.62.0.4** represents the private IP address of **az104-06-vm2**
 
-1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected since the hub virtual network has peered directly with the first spoke virtual network.
 
@@ -209,7 +228,7 @@ In this task, you will test the transitivity of virtual network peering by using
 
     > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
 
-1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected since the hub virtual network has peered directly with the second spoke virtual network.
 
@@ -226,7 +245,7 @@ In this task, you will test the transitivity of virtual network peering by using
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until the results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Note that the status is **Fail**.
 
     > **Note**: This is expected since the two spoke virtual networks have not peered with each other (virtual network peering is not transitive).
 
@@ -373,17 +392,23 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Source type | **Virtual machine** |
     | Virtual machine | **az104-06-vm2** |
     | Destination | **Specify manually** |
-    | URI, FQDN or IPv4 | **10.62.0.4** |
+    | URI, FQDN or IPv4 | **10.63.0.4** |
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until the results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If the status is **Unreachable**, you should stop and then start az104-06-vm0.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If the status is **Fail**, you should stop and then start az104-06-vm0.
 
     > **Note**: This is expected since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
     >**Note**:Before giving the IPV4 address, go to the virtual machine and cross verify the ip address.
 
     > **Note**: You can use **Network Watcher** to view the topology of the network.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 5: Implement Azure Load Balancer
 
@@ -401,13 +426,13 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Region| name of the Azure region into which you deployed all other resources in this lab |
     | SKU  | **Standard** |
     | Type | **Public** |
-	| Tier | **Regional** |
+	  | Tier | **Regional** |
     
 1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add following settings
  
     | Setting | Value |
     | --- | --- |
-    | Frountend IP name | **az104-06-pip4** |
+    | Name | **az104-06-pip4** |
     | IP version | **IPv4** |
     | IP type | **IP address** |
     | Public IP address | **Create new** |
@@ -427,7 +452,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Virtual network | **az104-06-vnet01** |
     | Backend Pool Configuration | **NIC** |
     
-1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and then click **Save** to save the IP configurations to the backend pool.
+1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
 
 1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
@@ -472,6 +497,18 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (as indicated by the message).
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Task 6: Implement Azure Application Gateway
 
@@ -515,7 +552,14 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Frontend IP address type | **Public** |
-    | Public IP address name| **az104-06-pip5** |
+    | Public IP address name| **Add new** |
+    
+1. Under **Add a Public IP**, Specify the following settings(leave others with their default values):   
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-pip5** |
+    
 
 1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
 
@@ -582,7 +626,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
 
     > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
+    
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+   
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
 #### Review
 
 In this lab, you have:

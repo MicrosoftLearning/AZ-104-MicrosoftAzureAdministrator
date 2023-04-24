@@ -50,6 +50,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace deployment id value from the environment details tab):
+  >**Note**: You will be prompted to provide an Admin password **qpus85TKL*eO**.
 
    ```powershell
    $location = '[Azure_region]'
@@ -79,7 +80,7 @@ In this task, you will create a recovery services vault.
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-10-rg1-{Deployment ID}** |
-    | Name | **az104-10-rsv1** |
+    | Vault Name | **az104-10-rsv1** |
     | Region | the name of a region which you copied in previous steps |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
@@ -159,11 +160,11 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from the parameters file.
+1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
+1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** with Administrator under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
 
     ```powershell
     md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
@@ -252,7 +253,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Confirmation** page, click **Back Up**.
 
-1. When the backup is complete, click **Close**, and then close **Microsoft Azure Backup**.
+1. When the backup is complete, click **Close**, and then minimize the **Microsoft Azure Backup**.
 
 1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**.
 
@@ -324,7 +325,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
+1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine** and click on View policy.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
 
@@ -372,9 +373,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
+1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1** .
 
-1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link under computer name.
+1. On the **C:\\ on az104-10-vm1.** blade, and click on view details and click on **az104-10-vm1.** link under computer name.
 
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
@@ -443,6 +444,12 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Comments | **az104 10 lab** |
 
 1. Repeat the steps at the beginning of this task to delete the backup items for **az104-10-vm1**.
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
 
