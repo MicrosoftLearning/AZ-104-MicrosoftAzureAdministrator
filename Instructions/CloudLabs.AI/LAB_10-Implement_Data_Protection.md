@@ -163,21 +163,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** with Administrator under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
-
-    ```powershell
-    md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
-    $Download = join-path $env:temp\edgeinstall MicrosoftEdgeEnterpriseX64.msi
-    
-    Invoke-WebRequest 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/a2662b5b-97d0-4312-8946-598355851b3b/MicrosoftEdgeEnterpriseX64.msi'  -OutFile $Download
-    
-    Start-Process "$Download" -ArgumentList "/quiet"
-    
-   ```
-   
-1. After finishing the installation of Microsoft Edge Browser you will notice the Microsoft Edge shortcut on the desktop then close the PowerShell window.
-
-1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start an Edge web browser from the desktop, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, select the Windows Start button, search and open **Microsoft edge** browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
