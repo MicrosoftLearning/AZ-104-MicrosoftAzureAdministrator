@@ -129,7 +129,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
-1. On the **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
