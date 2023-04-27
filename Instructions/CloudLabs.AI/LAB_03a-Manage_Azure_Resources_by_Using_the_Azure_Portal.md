@@ -1,27 +1,18 @@
 # Lab 03a - Manage Azure resources by Using the Azure Portal
-# Student lab manual
 
 ## Lab scenario
-
 You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
 
 ## Objectives
-
 In this lab, we will:
 
 + Task 1: Use the existing resource groups and deploy resources to resource groups
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
 
-## Estimated timing: 20 minutes
+### Estimated timing: 20 minutes
 
-## Instructions
-
-
-### Exercise 1
-
-#### Task 1: Use the existing resource groups and deploy resources to resource groups
-
+## Task 1: Use the existing resource groups and deploy resources to resource groups
 In this task, you will use the Azure portal to use the existing resource groups and create a disk in the resource group.
 
 1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
@@ -43,8 +34,7 @@ In this task, you will use the Azure portal to use the existing resource groups 
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
 
-#### Task 2: Move resources between resource groups 
-
+## Task 2: Move resources between resource groups
 In this task, we will move the disk resource you used in the previous task to a resource group. 
 
 1. Search for and select **Resource groups**. 
@@ -65,8 +55,7 @@ In this task, we will move the disk resource you used in the previous task to a 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Implement resource locks
-
+## Task 3: Implement resource locks
 In this task, you will apply a resource lock to an Azure resource group containing a disk resource.
 
 1. In the Azure portal, search for and select **Disks**, click **+ Create**, and specify the following settings:
@@ -118,9 +107,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
-
 In this lab, you have:
-
 - Created resource groups and deployed resources to resource groups
 - Moved resources between resource groups
 - Implemented and tested resource locks
