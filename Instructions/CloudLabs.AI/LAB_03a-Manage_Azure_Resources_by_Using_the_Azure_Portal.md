@@ -12,6 +12,9 @@ In this lab, we will:
 
 ### Estimated timing: 20 minutes
 
+## Architecture diagram
+![image](../media/lab03a.png)
+
 ## Task 1: Use the existing resource groups and deploy resources to resource groups
 In this task, you will use the Azure portal to use the existing resource groups and create a disk in the resource group.
 
