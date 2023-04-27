@@ -1,4 +1,4 @@
-# Lab 02a - Manage Subscriptions and RBAC
+# Lab 2a - Manage Subscriptions and RBAC
 
 ## Lab scenario
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
