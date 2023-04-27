@@ -1,38 +1,24 @@
 # Lab 02a - Manage Subscriptions and RBAC
-# Student lab manual
-
-## Lab requirements:
-
-This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
 
 ## Lab scenario
-
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
-
 - creating a management group that would include all of Contoso's Azure subscriptions
-
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
-
     - creating support request tickets
     - viewing resource groups 
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Implement Management Groups
 + Task 2: Create custom RBAC roles 
 + Task 3: Assign RBAC roles
 
+### Estimated timing: 30 minutes
 
-## Estimated timing: 30 minutes
+## Architecture diagram
+![image](../media/lab02a.png)
 
-## Instructions
-
-
-### Exercise 1
-
-#### Task 1: Implement Management Groups
+## Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups. 
 
@@ -71,7 +57,7 @@ In this task, you will create and configure management groups.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it for the next task.
 
-#### Task 2: Create custom RBAC roles
+## Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
 
@@ -122,7 +108,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Assign RBAC roles
+## Task 3: Assign RBAC roles
 
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
@@ -169,10 +155,8 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 - Implemented Management Groups
 - Created custom RBAC roles 
 - Assigned RBAC roles
