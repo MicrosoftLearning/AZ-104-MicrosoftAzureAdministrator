@@ -140,7 +140,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Wait for the backup to be enabled. This should take about 2 minutes.
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
+1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** View details links.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click on View details.
 
@@ -205,7 +205,9 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
 
-    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Install.
+1. On **Installtion Settings** page click on **Next** and **Next** on **Proxy Configuration** page 
+
+1. On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Next and Install.
 
 1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, click **Proceed to Registration**. This will start **Register Server Wizard**.
 
