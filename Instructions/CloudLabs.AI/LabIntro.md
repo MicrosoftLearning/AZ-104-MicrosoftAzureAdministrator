@@ -14,10 +14,6 @@
 
     ![](../CloudLabs.AI/Images/image002.jpg)
     
-1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
-
-    ![](../CloudLabs.AI/Images/image-901.jpg)
-
 ### Log in to Azure Portal and verify the pre-deployed resources.
 
 1. In the virtual machine (VM) on the left, click on the Azure Portal as shown below.
@@ -41,3 +37,7 @@
 1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
     
     ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)
+    
+1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
+
+    ![](../CloudLabs.AI/Images/image-901.jpg)
