@@ -190,7 +190,9 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
 
-1. On **Installtion Settings** page click on **Next** and **Next** on **Proxy Configuration** page 
+1. On **Installtion Settings** page click on **Next**.
+
+1. On **Proxy Configuration** page click on **Next**.
 
 1. On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Next and Install.
 
@@ -312,7 +314,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
    >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, start an Edge web browser, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine,  select the Windows Start button, search and open **Microsoft Edge**  browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
