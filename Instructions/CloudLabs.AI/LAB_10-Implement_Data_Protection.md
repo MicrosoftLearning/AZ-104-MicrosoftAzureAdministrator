@@ -180,6 +180,12 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start an Edge web browser from the desktop, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, click **+ Backup**.
@@ -320,6 +326,12 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
    >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
 
 1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, start an Edge web browser, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
