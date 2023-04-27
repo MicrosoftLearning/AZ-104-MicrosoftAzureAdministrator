@@ -31,7 +31,7 @@ In this task, you will use the Azure portal to use the existing resource groups 
     |Setting|Value|
     |---|---|
     |Subscription| the name of the Azure subscription where you created the resource group |
-    |Resource Group| select the existing resource group **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**]** |
+    |Resource Group| select the existing resource group **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     |Disk name| **az104-03a-disk1** |
     |Region| Same region as the Resource Group |
     |Availability zone| **None** |
@@ -49,13 +49,13 @@ In this task, we will move the disk resource you used in the previous task to a 
 
 1. Search for and select **Resource groups**. 
 
-1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**** resource group you used in the previous task.
+1. On the **Resource groups** blade, click the entry representing the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group you used in the previous task.
 
 1. From the **Overview** blade of the resource group, in the list of resource group resources, select the entry representing the newly created disk, click **Move** in the toolbar, and, in the drop-down list, select **Move to another resource group**.
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-<inject key="DeploymentID" enableCopy="false" />****. On the **Resource to move** tab, Wait until Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
+1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-<inject key="DeploymentID" enableCopy="false" />**. On the **Resource to move** tab, Wait until Validation status got success. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
      
@@ -74,7 +74,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Setting|Value|
     |---|---|
     |Subscription| the name of the subscription you are using in this lab |
-    |Resource Group| select the existing resource group **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />**** |
+    |Resource Group| select the existing resource group **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />** |
     |Disk name| **az104-03a-disk2** |
     |Region| Same region as the resource group  |
     |Availability zone| **None** |
@@ -86,7 +86,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Click Go to resource. 
 
-1. On the Overview page of the Disk, click the name of the resource group, **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />****.
+1. On the Overview page of the Disk, click the name of the resource group, **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />**.
 
 1. On the **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />** resource group blade, click **Locks** then **+ Add** and specify the following settings:
 
@@ -105,7 +105,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: As the error message states, this is expected due to the delete lock applied on the resource group level.
 
-1. Navigate back to the list of resources of the **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />**** resource group and click the entry representing the **az104-03a-disk2** resource. 
+1. Navigate back to the list of resources of the **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />** resource group and click the entry representing the **az104-03a-disk2** resource. 
 
 1. On the **az104-03a-disk2** blade, in the **Settings** section, click **Size + performance**, set the disk type and size to **Premium SSD** and **64 GiB**, respectively, and click **Save** to apply the change. Verify that the change was successful.
 
