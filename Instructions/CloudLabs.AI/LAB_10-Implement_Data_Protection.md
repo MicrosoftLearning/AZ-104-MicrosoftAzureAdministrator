@@ -27,9 +27,9 @@ In this lab, you will:
 
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
 
-1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-{DeplymentID}** resource group, on the overview page of **az104-10-rg0-{DeplymentID}** copy the location and paste it in a notepad you will need it in next steps
+1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** resource group, on the overview page of **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** copy the location and paste it in a notepad you will need it in next steps
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -49,13 +49,14 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace deployment id value from the environment details tab):
-  >**Note**: You will be prompted to provide an Admin password **qpus85TKL*eO**.
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
+
+ >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
 
    ```powershell
    $location = '[Azure_region]'
 
-   $rgName = 'az104-10-rg0-{DeplymentID}'
+   $rgName = 'az104-10-rg0-[DeplymentID]'
 
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -79,7 +80,7 @@ In this task, you will create a recovery services vault.
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-10-rg1-{Deployment ID}** |
+    | Resource group | the name of a new resource group **az104-10-rg1-<inject key="DeploymentID" enableCopy="false"/>** |
     | Vault Name | **az104-10-rsv1** |
     | Region | the name of a region which you copied in previous steps |
 
@@ -305,7 +306,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from the parameters file.
+1. When prompted, sign in by using the **Student** username and the password **<inject key="AzureAdUserPassword"></inject>**
 
    >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
