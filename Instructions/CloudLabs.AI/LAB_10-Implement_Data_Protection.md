@@ -141,7 +141,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click on **View details**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select the View details link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
@@ -372,7 +372,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, select **view details link** the entry representing the backup of **az104-10-vm1**.
+1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**
 
 1. On the **C:\\ on az104-10-vm1.** blade, select View details link and click on **az104-10-vm1.** link under computer name.
 
