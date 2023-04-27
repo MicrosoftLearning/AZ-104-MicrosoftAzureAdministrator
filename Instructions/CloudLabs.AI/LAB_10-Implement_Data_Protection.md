@@ -328,7 +328,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine** and click on View policy.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, select View details for**az104-10-vm0**
+1. On the **Backup Items (Azure Virtual Machine)** blade, select View details for **az104-10-vm0**
 
 1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
 
@@ -430,7 +430,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-1. Navigate back to the az104-10-rsv1 Recovery Services vault blade, in the Protected items section, click Backup items, and then click the Azure virtual machines entry and select the **az104-10-vm0** view details link, on Backup Item blade and click **Undelete**.
+1. Navigate back to the az104-10-rsv1 Recovery Services vault blade, in the Protected items section, click Backup items, and then click the Azure virtual machines entry and select View details for  **az104-10-vm0** on Backup Item blade and click **Undelete**.
 
 1. On the **Undelete az104-10-vm0** blade, click **Undelete**.
 
