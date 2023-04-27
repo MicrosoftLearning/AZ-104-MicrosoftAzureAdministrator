@@ -330,7 +330,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **Backup Items (Azure Virtual Machine)** blade, select View details for **az104-10-vm0**
 
-1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
+1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
 
    ![Screenshot of the Image to select train.](../CloudLabs.AI/recovery.png)
 
