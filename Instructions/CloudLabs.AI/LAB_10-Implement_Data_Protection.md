@@ -374,7 +374,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1** .
+1. On the **Backup Items (Azure Backup Agent)** blade, select **view details link** the entry representing the backup of **az104-10-vm1**.
 
 1. On the **C:\\ on az104-10-vm1.** blade, and click on view details and click on **az104-10-vm1.** link under computer name.
 
