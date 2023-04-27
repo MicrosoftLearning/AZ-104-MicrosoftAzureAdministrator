@@ -24,18 +24,7 @@
 
     ![](../CloudLabs.AI/Images/azure.png)
 
-1. When you click on Azure portal, the edge browser will ask you to sign in to sync data, click on **Start without your data**.
-
-    ![](../CloudLabs.AI/Images/welcomegmail.png)
-
-1. On the next window, click on **Confirm and start browsing**.
-
-     ![](../CloudLabs.AI/Images/welcomegamail2.png)
-
-1. Now, you will see two tabs in the edge browser, close the first tab named with Microsoft Edge.
-
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
-
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
      ![](../CloudLabs.AI/Images/portal1.png)
