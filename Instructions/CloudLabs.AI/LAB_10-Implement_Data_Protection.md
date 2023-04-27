@@ -47,11 +47,9 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
-
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
- >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
+   >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
 
    ```powershell
    $location = '[Azure_region]'
@@ -123,7 +121,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
-1. On the **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -141,9 +139,9 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Wait for the backup to be enabled. This should take about 2 minutes.
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
+1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click on View details.
+1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click on **View details**.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
@@ -161,25 +159,17 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+1. When prompted, sign in by using the **Student** username and the **password** **<inject key="AzureAdUserPassword"></inject>**
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. If the Microsoft Edge browser is not installed by default use the below command to install it otherwise skip to the next step. From the Start menu, open **Windows PowerShell** with Administrator under the Windows PowerShell folder and run the following to install Microsoft Edge Browser.
+1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, select the Windows Start button, search and open **Microsoft Edge** browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
-    ```powershell
-    md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
-    $Download = join-path $env:temp\edgeinstall MicrosoftEdgeEnterpriseX64.msi
-    
-    Invoke-WebRequest 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/a2662b5b-97d0-4312-8946-598355851b3b/MicrosoftEdgeEnterpriseX64.msi'  -OutFile $Download
-    
-    Start-Process "$Download" -ArgumentList "/quiet"
-    
-   ```
-   
-1. After finishing the installation of Microsoft Edge Browser you will notice the Microsoft Edge shortcut on the desktop then close the PowerShell window.
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start an Edge web browser from the desktop, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
@@ -200,7 +190,11 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
 
-    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Install.
+1. On **Installtion Settings** page click on **Next**.
+
+1. On **Proxy Configuration** page click on **Next**.
+
+1. On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Next and Install.
 
 1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, click **Proceed to Registration**. This will start **Register Server Wizard**.
 
@@ -280,7 +274,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. On the **Browse And Recover Files** page, note the drive letter of the recovery volume and review the tip regarding the use of robocopy.
 
-1. Click **Start**, search and open **Command Prompt**.
+1. Select the Windows Start button, search and open **Command Prompt**
 
 1. From the Command Prompt, run the following to copy the restore the **hosts** file to the original location (replace `[recovery_volume]` with the drive letter of the recovery volume you identified earlier):
 
@@ -320,7 +314,13 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
    >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, start an Edge web browser, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine,  select the Windows Start button, search and open **Microsoft Edge**  browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
@@ -328,9 +328,11 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine** and click on View policy.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select View details for **az104-10-vm0**
 
-1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
+1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
+
+   ![Screenshot of the Image to select train.](../CloudLabs.AI/recovery.png)
 
     >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
@@ -339,8 +341,6 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     >**Note**: The script mounts the disks from the selected recovery point as local drives within the operating system from which the script is run.
 
 1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Save**.
-
-1. Start File Explorer, navigate to the **Downloads** folder, right-click the newly downloaded file, select **Properties** in the right-click menu, in the **Properties** dialog box, select the **Unblock** checkbox, and click **OK**.
 
 1. Back in the **File Explorer** window, double-click the newly downloaded file.
 
@@ -374,9 +374,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1** .
+1. On the **Backup Items (Azure Backup Agent)** blade, select **view details link** the entry representing the backup of **az104-10-vm1**.
 
-1. On the **C:\\ on az104-10-vm1.** blade, and click on view details and click on **az104-10-vm1.** link under computer name.
+1. On the **C:\\ on az104-10-vm1.** blade, select View details link and click on **az104-10-vm1.** link under computer name.
 
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
@@ -430,7 +430,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-1. Navigate back to the **az104-10-vm0** Backup Item blade and click **Undelete**.
+1. Navigate back to the az104-10-rsv1 Recovery Services vault blade, in the Protected items section, click Backup items, and then click the Azure virtual machines entry and select View details for  **az104-10-vm0** on Backup Item blade and click **Undelete**.
 
 1. On the **Undelete az104-10-vm0** blade, click **Undelete**.
 
