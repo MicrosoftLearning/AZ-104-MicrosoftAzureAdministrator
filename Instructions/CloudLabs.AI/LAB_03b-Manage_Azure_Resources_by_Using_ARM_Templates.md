@@ -23,15 +23,13 @@ In this lab, you will:
 
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. Sign in to the [**Azure portal**](https://portal.azure.com).
-
 1. In the Azure portal, search for and select **Resource groups**. 
 
 1. In the list of resource groups, click **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
-1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** **Deployments** blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** Deployments blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
