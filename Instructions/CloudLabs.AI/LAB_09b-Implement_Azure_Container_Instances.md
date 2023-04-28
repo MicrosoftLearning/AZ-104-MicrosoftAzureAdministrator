@@ -1,26 +1,18 @@
-# Lab 09b - Implement Azure Container Instances
-
-# Student lab manual
-
+# Lab 9b - Implement Azure Container Instances
 ## Lab scenario
-
 Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for the deployment of Docker images.
 
 ## Objectives
-
 In this lab, you will:
-
 - Task 1: Deploy a Docker image by using the Azure Container Instance
 - Task 2: Review the functionality of the Azure Container Instance
 
 ## Estimated timing: 20 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab09b.png)
 
-### Exercise 1
-
-#### Task 1: Deploy a Docker image by using the Azure Container Instance
-
+## Task 1: Deploy a Docker image by using the Azure Container Instance
 In this task, you will create a new container instance for the web application.
 
 1. If you have not yet signed in, please navigate to [Azure portal](https://portal.azure.com) and signin.
@@ -52,8 +44,7 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
-#### Task 2: Review the functionality of the Azure Container Instance
-
+## Task 2: Review the functionality of the Azure Container Instance
 In this task, you will review the deployment of the container instance.
 
 1. On the deployment blade, click the **Go to resource** link.
@@ -74,9 +65,7 @@ In this task, you will review the deployment of the container instance.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
