@@ -1,5 +1,4 @@
-## Lab 2b - Manage Governance via Azure Policy
-
+# Lab 2b - Manage Governance via Azure Policy
 ## Lab scenario
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 - tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
