@@ -12,6 +12,10 @@ In this lab, you will:
 + Task 6: Configure Azure DNS for external name resolution
 
 ## Estimated timing: 40 minutes
+
+## Architecture diagram
+![image](../media/lab04.png)
+
 ## Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
 
