@@ -1,15 +1,9 @@
 # Lab 04 - Implement Virtual Networking
-
-# Student lab manual
-
 ## Lab scenario
-
 You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from the Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from the Internet.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Create and configure a virtual network
 + Task 2: Deploy virtual machines into the virtual network
 + Task 3: Configure private and public IP addresses of Azure VMs
@@ -18,14 +12,7 @@ In this lab, you will:
 + Task 6: Configure Azure DNS for external name resolution
 
 ## Estimated timing: 40 minutes
-
-## Instructions
-
-
-### Exercise 1
-
-#### Task 1: Create and configure a virtual network
-
+## Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -79,7 +66,7 @@ In this task, you will create a virtual network with multiple subnets by using t
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Deploy virtual machines into the virtual network
+## Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
@@ -135,8 +122,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
  
 7. Close the Cloud Shell pane.
 
-#### Task 3: Configure private and public IP addresses of Azure VMs
-
+## Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
    **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
@@ -197,8 +183,7 @@ In this task, you will configure static assignment of public and private IP addr
 
     **Note**: You will need both IP addresses in the last task of this lab.
 
-#### Task 4: Configure network security groups
-
+## Task 4: Configure network security groups
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
 1. In the Azure portal, navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, and in the list of its resources, click **az104-04-vm0**.
@@ -276,8 +261,7 @@ In this task, you will configure network security groups in order to allow for r
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 5: Configure Azure DNS for internal name resolution
-
+## Task 5: Configure Azure DNS for internal name resolution
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
 1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Create**.
@@ -336,8 +320,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p12.png)
 
-#### Task 6: Configure Azure DNS for external name resolution
-
+## Task 6: Configure Azure DNS for external name resolution
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
 1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
@@ -416,10 +399,8 @@ In this task, you will configure external DNS name resolution by using Azure pub
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 + Created and configured a virtual network
 + Deployed virtual machines into the virtual network
 + Configured private and public IP addresses of Azure VMs
