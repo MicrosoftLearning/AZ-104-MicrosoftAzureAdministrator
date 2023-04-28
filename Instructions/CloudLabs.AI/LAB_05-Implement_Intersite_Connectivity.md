@@ -1,24 +1,18 @@
 # Lab 05 - Implement Intersite Connectivity
-# Student lab manual
-
 ## Lab scenario
-
 Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Provision the lab environment
 + Task 2: Configure local and global virtual network peering
 + Task 3: Test intersite connectivity
 
 ## Estimated timing: 30 minutes
+## Architecture diagram
+![image](../media/lab05.png)
 
-### Instructions
-
-#### Task 1: Provision the lab environment
-
+## Task 1: Provision the lab environment
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -75,8 +69,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Configure local and global virtual network peering
-
+## Task 2: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -207,8 +200,7 @@ In this task, you will configure local and global peering between the virtual ne
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-#### Task 3: Test intersite connectivity
-
+## Task 3: Test intersite connectivity
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
 1. In the Azure portal, search for and select **Virtual machines**.
@@ -266,8 +258,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. Examine the output of the command and verify that the connection was successful.
 
-#### Review
-
+### Review
 In this lab, you have:
 
 + Provisioned the lab environment
