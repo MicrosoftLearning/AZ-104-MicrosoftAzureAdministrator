@@ -1,14 +1,9 @@
 # Lab 11 - Implement Monitoring
-# Student lab manual
-
 ## Lab scenario
-
 You need to evaluate Azure functionality that would provide insight into the performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Provision the lab environment
 + Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 + Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
@@ -18,13 +13,10 @@ In this lab, you will:
 + Task 7: Review Azure Log Analytics functionality
 
 ## Estimated timing: 45 minutes
+## Architecture diagram
+![image](../media/lab11.png)
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Provision the lab environment
-
+## Task 1: Provision the lab environment
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
 1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com) and log in with Azure credentials.
@@ -78,8 +70,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-
+## Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
    ```powershell
@@ -90,8 +81,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Minimize Cloud Shell pane (but do not close it).
 
-#### Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
-
+## Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
 1. In the Azure portal, search for and select **Log Analytics workspaces** and, on the **Log Analytics workspaces** blade, click **+ Create**.
@@ -145,8 +135,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 4: Review default monitoring settings of Azure virtual machines
-
+## Task 4: Review default monitoring settings of Azure virtual machines
 In this task, you will review the default monitoring settings of Azure virtual machines
 
 1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-11-vm0**.
@@ -163,8 +152,7 @@ In this task, you will review the default monitoring settings of Azure virtual m
 
 1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
 
-#### Task 5: Configure Azure virtual machine diagnostic settings
-
+## Task 5: Configure Azure virtual machine diagnostic settings
 In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
@@ -206,8 +194,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. In the **Metric** drop-down list, select **Memory\\Available Bytes**, in the **Aggregation** drop-down list, select **Max**, and review the resulting chart.
 
-#### Task 6: Review Azure Monitor functionality
-
+## Task 6: Review Azure Monitor functionality
 1. In the Azure portal, search for and select **Monitor** and, on the **Monitor \| Overview** blade, click **Metrics**.
 
 1. On the **Select a scope** blade, on the **Browse** tab, navigate to the **az104-11-rg0** resource group, expand it, select the checkbox next to the **az104-11-vm0** virtual machine entry within that resource group, and click **Apply**.
@@ -300,8 +287,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 7: Review Azure Log Analytics functionality
-
+## Task 7: Review Azure Log Analytics functionality
 1. In the Azure portal, navigate back to the **Monitor** blade and click **Logs**.
 
     >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics.
@@ -332,10 +318,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You might need to wait a few minutes before the updated data becomes available.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 + Provisioned the lab environment
 + Created and configured an Azure Log Analytics workspace and Azure Automation-based solutions
 + Reviewed default monitoring settings of Azure virtual machines
