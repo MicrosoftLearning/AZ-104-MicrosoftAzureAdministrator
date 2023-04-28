@@ -1,14 +1,9 @@
 # Lab 08 - Manage Virtual Machines
-# Student lab manual
-
 ## Lab scenario
-
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Task 2: Configure Azure virtual machines by using virtual machine extensions
 + Task 3: Scale compute and storage for Azure virtual machines
@@ -18,13 +13,10 @@ In this lab, you will:
 + Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
 
 ## Estimated timing: 50 minutes
+## Architecture diagram
+![image](../media/lab08.png)
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-
+## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
@@ -130,8 +122,7 @@ In this task, you will deploy Azure virtual machines into different availability
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Configure Azure virtual machines by using virtual machine extensions
-
+## Task 2: Configure Azure virtual machines by using virtual machine extensions
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -223,8 +214,7 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-#### Task 3: Scale compute and storage for Azure virtual machines
-
+## Task 3: Scale compute and storage for Azure virtual machines
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
@@ -341,8 +331,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-
+## Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
@@ -364,8 +353,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
    ```
 
-#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
-
+## Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 In this task, you will deploy the Azure virtual machine scale set across availability zones by using the Azure portal.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Create**.
@@ -473,8 +461,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
-
+## Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -520,8 +507,7 @@ In this task, you will install the Windows Server Web Server role on the instanc
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 7: Scale compute and storage for Azure virtual machine scale sets
-
+## Task 7: Scale compute and storage for Azure virtual machine scale sets
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
@@ -651,10 +637,8 @@ In this task, you will change the size of virtual machine scale set instances, c
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 + Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Configured Azure virtual machines by using virtual machine extensions
 + Scaled compute and storage for Azure virtual machines
