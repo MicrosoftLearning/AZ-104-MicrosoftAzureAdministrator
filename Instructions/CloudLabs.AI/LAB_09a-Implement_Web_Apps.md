@@ -1,4 +1,4 @@
-# Lab 09a - Implement Web Apps
+# Lab 9a - Implement Web Apps
 ## Lab scenario
 You need to evaluate the use of Azure Web apps for hosting Contoso's websites, hosted currently in the company's on-premises data centers. The websites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
 
