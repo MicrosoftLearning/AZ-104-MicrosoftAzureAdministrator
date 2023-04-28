@@ -1,14 +1,9 @@
 # Lab 07 - Manage Azure Storage
-# Student lab manual
-
 ## Lab scenario
-
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While the majority of these files are not accessed frequently, there are some exceptions. You would like to minimize the cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Provision the lab environment
 + Task 2: Create and configure Azure Storage accounts
 + Task 3: Manage blob storage
@@ -17,13 +12,10 @@ In this lab, you will:
 + Task 6: Manage network access for Azure Storage
 
 ## Estimated timing: 40 minutes
+## Architecture diagram
+![image](../media/lab07.png)
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Provision the lab environment
-
+## Task 1: Provision the lab environment
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](https://portal.azure.com).
@@ -70,8 +62,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Create and configure Azure Storage accounts
-
+## Task 2: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
 1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
@@ -115,8 +106,7 @@ In this task, you will create and configure an Azure Storage account.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Manage blob storage
-
+## Task 3: Manage blob storage
 In this task, you will create a blob container and upload a blob into it.
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers**.
@@ -161,8 +151,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-#### Task 4: Manage authentication and authorization for Azure Storage
-
+## Task 4: Manage authentication and authorization for Azure Storage
 In this task, you will configure authentication and authorization for Azure Storage.
 
 1. On the **licenses/LICENSE** blade, on the **Overview** tab, click the **Copy to clipboard** button next to the **URL** entry.
@@ -230,11 +219,8 @@ In this task, you will configure authentication and authorization for Azure Stor
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 5: Create and configure an Azure Files shares
-
+## Task 5: Create and configure an Azure Files shares
 In this task, you will create and configure Azure Files shares.
-
-> **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
@@ -279,8 +265,7 @@ In this task, you will create and configure Azure Files shares.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 6: Manage network access for Azure Storage
-
+## Task 6: Manage network access for Azure Storage
 In this task, you will configure network access for Azure Storage.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
@@ -316,10 +301,8 @@ In this task, you will configure network access for Azure Storage.
 
 1. Close the Cloud Shell pane.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 - Provisioned the lab environment
 - Created and configured Azure Storage accounts
 - Managed blob storage
