@@ -1,4 +1,4 @@
-# Lab 11 - Implement Monitoring
+# Lab Scenario Preview - 11 - Implement Monitoring
 ## Lab scenario
 You need to evaluate Azure functionality that would provide insight into the performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
 

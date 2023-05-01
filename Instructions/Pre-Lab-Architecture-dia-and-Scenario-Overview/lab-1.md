@@ -1,4 +1,4 @@
-# Lab 01 - Manage Azure Active Directory Identities
+# Lab Scenario Preview - 01 - Manage Azure Active Directory Identities
 
 ## Lab scenario
 

@@ -1,4 +1,4 @@
-# Lab 05 - Implement Intersite Connectivity
+# Lab Scenario Preview - 05 - Implement Intersite Connectivity
 ## Lab scenario
 Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 

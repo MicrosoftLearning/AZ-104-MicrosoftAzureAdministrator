@@ -1,4 +1,4 @@
-# Lab 08 - Manage Virtual Machines
+# Lab Scenario Preview - 08 - Manage Virtual Machines
 ## Lab scenario
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
 
