@@ -1,0 +1,12 @@
+[
+  {
+  "Name": "Lab 2: Administer Governance and Compliance",
+  "Language": "English",
+  "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Pre-Lab-Architecture-dia-and-Scenario-Overview/lab-2.md",
+        "Order": 1
+      }
+    ]
+  } 
+]

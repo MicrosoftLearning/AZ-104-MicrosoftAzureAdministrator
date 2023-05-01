@@ -1,4 +1,4 @@
-# Lab 03d - Manage Azure resources by Using Azure CLI
+# Lab 3d - Manage Azure resources by Using Azure CLI
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, Azure Resource Manager templates, and Azure PowerShell, you need to carry out the equivalent task by using Azure CLI. To avoid installing Azure CLI, you will leverage Bash environment available in Azure Cloud Shell.
 
