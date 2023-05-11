@@ -425,13 +425,24 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Type | **Public** |
 	| Tier | **Regional** |
     
-1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**. 
+1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings:  
+     
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-fe4** |
+    | IP type | IP address |
+    | Public IP address | Select **Create new** |
+    | Gateway Load Balancer | None |
+    
+1. On the **Add a public IP address** popup, use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**. 
      
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip4** |
-    | IP version | IPv4 |
-    | Public IP address | **Create new** |
+    | SKU | Standard |
+    | Tier | Regional |
+    | Assignment | Static |
+    | Routing Preference | **Microsoft network** |
 
 1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click  **Next:Inbound rules**. 
 
