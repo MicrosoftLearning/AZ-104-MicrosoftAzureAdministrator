@@ -28,11 +28,11 @@ In this lab, you will:
 
 ![image](../media/lab09c.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
+## Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
@@ -54,7 +54,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Deploy an Azure Kubernetes Service cluster
+## Task 2: Deploy an Azure Kubernetes Service cluster
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
@@ -109,7 +109,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
 
-#### Task 3: Deploy pods into the Azure Kubernetes Service cluster
+## Task 3: Deploy pods into the Azure Kubernetes Service cluster
 
 In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
@@ -177,7 +177,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
 
-#### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
+## Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
 
@@ -245,7 +245,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. Close the **Cloud Shell** pane.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -267,7 +267,7 @@ In this task, you will scale horizontally the number of pods and then number of 
 
     >**Note**: The command executes asynchronously (as determined by the --nowait parameter), so while you will be able to run another Azure CLI command immediately afterwards within the same Bash session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
