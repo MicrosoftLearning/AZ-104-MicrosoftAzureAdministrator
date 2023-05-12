@@ -32,11 +32,11 @@ In this lab, you will:
 ![image](../media/lab08.png)
 
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
@@ -136,7 +136,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
 
-#### Task 2: Configure Azure virtual machines by using virtual machine extensions
+## Task 2: Configure Azure virtual machines by using virtual machine extensions
 
 In this task, you will install Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
@@ -223,7 +223,7 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **az104-08-vm1**.
 
-#### Task 3: Scale compute and storage for Azure virtual machines
+## Task 3: Scale compute and storage for Azure virtual machines
 
 In this task you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
@@ -352,7 +352,7 @@ In this task you will scale compute for Azure virtual machines by changing their
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+## Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
 In this task, you will deploy Azure virtual machine scale set across availability zones by using the Azure portal.
 
@@ -456,7 +456,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
 
-#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
+## Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 
 In this task, you will install Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
@@ -619,7 +619,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -646,7 +646,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
