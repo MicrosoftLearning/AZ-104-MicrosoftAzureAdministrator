@@ -497,7 +497,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
 
-#### Task 7: Scale compute and storage for Azure virtual machine scale sets
+## Task 7: Scale compute and storage for Azure virtual machine scale sets
 
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
