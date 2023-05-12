@@ -31,11 +31,11 @@ In this lab, you will:
 ![image](../media/lab07.png)
 
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Provision the lab environment
+## Task 1: Provision the lab environment
 
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
@@ -89,7 +89,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Create and configure Azure Storage accounts
+## Task 2: Create and configure Azure Storage accounts
 
 In this task, you will create and configure an Azure Storage account.
 
@@ -124,7 +124,7 @@ In this task, you will create and configure an Azure Storage account.
 
     > **Note**: The cool access tier is optimal for data which is not accessed frequently.
 
-#### Task 3: Manage blob storage
+## Task 3: Manage blob storage
 
 In this task, you will create a blob container and upload a blob into it.
 
@@ -162,7 +162,7 @@ In this task, you will create a blob container and upload a blob into it.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
 
-#### Task 4: Manage authentication and authorization for Azure Storage
+## Task 4: Manage authentication and authorization for Azure Storage
 
 In this task, you will configure authentication and authorization for Azure Storage.
 
@@ -225,7 +225,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
-#### Task 5: Create and configure an Azure Files shares
+## Task 5: Create and configure an Azure Files shares
 
 In this task, you will create and configure Azure Files shares.
 
@@ -267,7 +267,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
 
-#### Task 6: Manage network access for Azure Storage
+## Task 6: Manage network access for Azure Storage
 
 In this task, you will configure network access for Azure Storage.
 
@@ -304,7 +304,7 @@ In this task, you will configure network access for Azure Storage.
 
 1. Close the Cloud Shell pane.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -326,7 +326,7 @@ In this task, you will configure network access for Azure Storage.
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
