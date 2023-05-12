@@ -27,11 +27,11 @@ In this lab, we will:
 
 ![image](../media/lab03a.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Create resource groups and deploy resources to resource groups
+## Task 1: Create resource groups and deploy resources to resource groups
 
 In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
@@ -56,7 +56,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
 
-#### Task 2: Move resources between resource groups 
+## Task 2: Move resources between resource groups 
 
 In this task, we will move the disk resource you created in the previous task to a new resource group. 
 
@@ -72,7 +72,7 @@ In this task, we will move the disk resource you created in the previous task to
 
     >**Note**: Do not wait for the move to complete but instead proceed to the next task. The move might take about 10 minutes. You can determine that the operation was completed by monitoring activity log entries of the source or target resource group. Revisit this step once you complete the next task.
 
-#### Task 3: Implement resource locks
+## Task 3: Implement resource locks
 
 In this task, you will apply a resource lock to an Azure resource group containing a disk resource.
 
@@ -118,13 +118,13 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
 
-#### Clean up resources
+### Clean up resources
 
    >**Note**: Do not delete resources you deployed in this lab. You will be using them in the next lab of this module. Remove only the resource lock you created in this lab.
 
 1. Navigate to the **az104-03a-rg3** resource group blade, display its **Locks** blade, and remove the lock **az104-03a-delete-lock** by clicking the **Delete** link on the right-hand side of the **Delete** lock entry.
 
-#### Review
+### Review
 
 In this lab, you have:
 
