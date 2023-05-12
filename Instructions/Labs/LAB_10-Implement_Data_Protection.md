@@ -31,11 +31,11 @@ In this lab, you will:
 
 ![image](../media/lab10.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Provision the lab environment
+## Task 1: Provision the lab environment
 
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
 
@@ -78,7 +78,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
 
-#### Task 2: Create a Recovery Services vault
+## Task 2: Create a Recovery Services vault
 
 In this task, you will create a recovery services vault.
 
@@ -115,7 +115,7 @@ In this task, you will create a recovery services vault.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-#### Task 3: Implement Azure virtual machine-level backup
+## Task 3: Implement Azure virtual machine-level backup
 
 In this task, you will implement Azure virtual-machine level backup.
 
@@ -158,7 +158,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-#### Task 4: Implement File and Folder backup
+## Task 4: Implement File and Folder backup
 
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
@@ -257,7 +257,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+## Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
@@ -287,7 +287,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Terminate the Remote Desktop session.
 
-#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
+## Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 
 In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
 
@@ -359,7 +359,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Terminate the Remote Desktop session.
 
-#### Task 7: Review the Azure Recovery Services soft delete functionality
+## Task 7: Review the Azure Recovery Services soft delete functionality
 
 1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
@@ -441,7 +441,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Repeat the steps at the beginning of this task to delete the backup items for **az104-10-vm1**.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -465,7 +465,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
