@@ -31,11 +31,11 @@ In this lab, you will:
 
 ![image](../media/lab04.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Create and configure a virtual network
+## Task 1: Create and configure a virtual network
 
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
 
@@ -81,7 +81,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. Click **Save**
 
-#### Task 2: Deploy virtual machines into the virtual network
+## Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
@@ -174,7 +174,7 @@ In this task, you will configure static assignment of public and private IP addr
 
     >**Note**: You will need both IP addresses in the last task of this lab.
 
-#### Task 4: Configure network security groups
+## Task 4: Configure network security groups
 
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
@@ -295,7 +295,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Verify that the output of the command includes the private IP address of **az104-04-vm1** (**10.40.1.4**).
 
-#### Task 6: Configure Azure DNS for external name resolution
+## Task 6: Configure Azure DNS for external name resolution
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
@@ -369,7 +369,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
 
-#### Clean up resources
+## Clean up resources
 
  > **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -391,7 +391,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
