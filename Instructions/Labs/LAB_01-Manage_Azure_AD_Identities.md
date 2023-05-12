@@ -28,7 +28,7 @@ In this lab, you will:
 ## Architecture diagram
 ![image](../media/lab01.png)
 
-## Instructions
+### Instructions
 
 ## Exercise 1
 
