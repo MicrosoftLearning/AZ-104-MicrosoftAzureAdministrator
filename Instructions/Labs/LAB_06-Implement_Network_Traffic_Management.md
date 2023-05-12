@@ -33,11 +33,11 @@ In this lab, you will:
 ![image](../media/lab06.png)
 
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Provision the lab environment
+## Task 1: Provision the lab environment
 
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
 
@@ -113,7 +113,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Configure the hub and spoke network topology
+## Task 2: Configure the hub and spoke network topology
 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
 
@@ -187,7 +187,7 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-#### Task 3: Test transitivity of virtual network peering
+## Task 3: Test transitivity of virtual network peering
 
 In this task, you will test transitivity of virtual network peering by using Network Watcher.
 
@@ -254,7 +254,7 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
 
-#### Task 4: Configure routing in the hub and spoke topology
+## Task 4: Configure routing in the hub and spoke topology
 
 In this task, you will configure and test routing between the two spoke virtual networks by enabling IP forwarding on the network interface of the **az104-06-vm0** virtual machine, enabling routing within its operating system, and configuring user-defined routes on the spoke virtual network.
 
@@ -407,7 +407,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
     > **Note**: You can use **Network Watcher** to view topology of the network.
 
-#### Task 5: Implement Azure Load Balancer
+## Task 5: Implement Azure Load Balancer
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network.
 
@@ -482,7 +482,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-#### Task 6: Implement Azure Application Gateway
+## Task 6: Implement Azure Application Gateway
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
@@ -585,7 +585,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -607,7 +607,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
