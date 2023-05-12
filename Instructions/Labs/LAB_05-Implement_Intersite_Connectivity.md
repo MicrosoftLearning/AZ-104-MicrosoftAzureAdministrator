@@ -29,7 +29,9 @@ In this lab, you will:
 
 ### Instructions
 
-#### Task 1: Provision the lab environment
+## Exercise 1
+
+## Task 1: Provision the lab environment
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
@@ -82,7 +84,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Configure local and global virtual network peering
+## Task 2: Configure local and global virtual network peering
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
@@ -201,7 +203,7 @@ In this task, you will configure local and global peering between the virtual ne
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
    ``` 
 
-#### Task 3: Test intersite connectivity
+## Task 3: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
@@ -259,7 +261,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. Examine the output of the command and verify that the connection was successful.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -281,7 +283,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
