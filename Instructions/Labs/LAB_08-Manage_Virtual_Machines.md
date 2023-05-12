@@ -336,7 +336,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     > **Note**: Wait for the confirmation that the commands completed successfully.
 
-#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
+## Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
