@@ -40,11 +40,11 @@ In this lab, you will:
 ![image](../media/lab02a.png)
 
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Implement Management Groups
+## Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups. 
 
@@ -81,7 +81,7 @@ In this task, you will create and configure management groups.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
-#### Task 2: Create custom RBAC roles
+## Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
 
@@ -124,7 +124,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Assign RBAC roles
+## Task 3: Assign RBAC roles
 
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
@@ -167,7 +167,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-#### Task 4: Clean up resources
+## Task 4: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
@@ -209,7 +209,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
   >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
 
-#### Review
+## Review
 
 In this lab, you have:
 
