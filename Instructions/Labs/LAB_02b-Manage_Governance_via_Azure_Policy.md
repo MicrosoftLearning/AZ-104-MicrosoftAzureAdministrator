@@ -33,11 +33,11 @@ In this lab, we will:
 
 ![image](../media/lab02b.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Assign tags via the Azure portal
+## Task 1: Assign tags via the Azure portal
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
@@ -74,7 +74,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Click **Apply** and close the tag edition window to navigate back to the storage account blade. click on the ellipsis on the storage account and select **Edit tags** to note that the new tag was not automatically assigned to the storage account. 
 
-#### Task 2: Enforce tagging via an Azure policy
+## Task 2: Enforce tagging via an Azure policy
 
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
@@ -140,7 +140,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
-#### Task 3: Apply tagging via an Azure policy
+## Task 3: Apply tagging via an Azure policy
 
 In this task, we will use a different policy definition to remediate any non-compliant resources. 
 
@@ -202,7 +202,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-#### Task 4: Clean up resources
+## Task 4: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
    
@@ -218,7 +218,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Click **Overview** and click **Delete** on the top of the storage account blade. When prompted for the confirmation, in the **Delete storage account** blade, type the name of the storage account to confirm and click **Delete**. 
 
-#### Review
+## Review
 
 In this lab, you have:
 
