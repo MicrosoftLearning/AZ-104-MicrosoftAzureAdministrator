@@ -26,11 +26,11 @@ In this lab, you will:
 
 ![image](../media/lab03b.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Review an ARM template for deployment of an Azure managed disk
+## Task 1: Review an ARM template for deployment of an Azure managed disk
 
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
@@ -58,7 +58,7 @@ In this lab, you will:
     
 1. Close all **File Explorer** windows.
 
-#### Task 2: Create an Azure managed disk by using an ARM template
+## Task 2: Create an Azure managed disk by using an ARM template
 
 1. In the Azure portal, search for and select **Deploy a custom template**.
 
@@ -108,7 +108,7 @@ In this lab, you will:
 
 1. Verify that the deployment completed successfully.
 
-#### Task 3: Review the ARM template-based deployment of the managed disk
+## Task 3: Review the ARM template-based deployment of the managed disk
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
@@ -118,11 +118,11 @@ In this lab, you will:
 
 1. From the **az104-03b-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-#### Clean up resources
+## Clean up resources
 
    >**Note**: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
 
-#### Review
+## Review
 
 In this lab, you have:
 
