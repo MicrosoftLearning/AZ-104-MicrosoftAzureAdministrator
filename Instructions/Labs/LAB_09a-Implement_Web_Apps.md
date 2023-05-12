@@ -30,11 +30,11 @@ In this lab, you will:
 
 ![image](../media/lab09a.png)
 
-## Instructions
+### Instructions
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Create an Azure web app
+## Task 1: Create an Azure web app
 
 In this task, you will create an Azure web app.
 
@@ -61,7 +61,7 @@ In this task, you will create an Azure web app.
 
 1. On the deployment blade, click **Go to resource**.
 
-#### Task 2: Create a staging deployment slot
+## Task 2: Create a staging deployment slot
 
 In this task, you will create a staging deployment slot.
 
@@ -84,7 +84,7 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-#### Task 3: Configure web app deployment settings
+## Task 3: Configure web app deployment settings
 
 In this task, you will configure web app deployment settings.
 
@@ -107,7 +107,7 @@ In this task, you will configure web app deployment settings.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
-#### Task 4: Deploy code to the staging deployment slot
+## Task 4: Deploy code to the staging deployment slot
 
 In this task, you will deploy code to the staging deployment slot.
 
@@ -151,7 +151,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
-#### Task 5: Swap the staging slots
+## Task 5: Swap the staging slots
 
 In this task, you will swap the staging slot with the production slot
 
@@ -165,7 +165,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
-#### Task 6: Configure and test autoscaling of the Azure web app
+## Task 6: Configure and test autoscaling of the Azure web app
 
 In this task, you will configure and test autoscaling of Azure web app.
 
@@ -237,7 +237,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. Close the Cloud Shell pane.
 
-#### Clean up resources
+## Clean up resources
 
 >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -259,7 +259,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+## Review
 
 In this lab, you have:
 
