@@ -368,7 +368,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
-    | Azure Spot instance | **No** |
+    | Run with Azure Spot discount | **No** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password**  |
@@ -378,7 +378,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values):
+1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values). 
 
     | Setting | Value |
     | --- | --- |
@@ -416,13 +416,18 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. Back on the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
 
-1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, under the **Load balancing** section, ensure that the **Use a load balancer** entry is selected and specify the following **Load balancing settings** (leave others with their default values) and click **Next : Scaling >**:
+1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, under the **Load balancing** section, specify the following (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
-    | Select a load balancer | **(new) az10408vmss0-lb** |
-    | Select a backend pool | **(new) bepool** |
+    | Select a load balancer | **Create a load balancer** |
+    
+1.  On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
+    
+    | Setting | Value |
+    | --- | --- |
+    | Load balancer name | **az10408vmss0-lb** |
 
 1. On the **Scaling** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
