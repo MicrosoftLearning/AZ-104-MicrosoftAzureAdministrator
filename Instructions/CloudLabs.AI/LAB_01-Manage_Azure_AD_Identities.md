@@ -45,7 +45,7 @@ In this task, you will create and configure Azure AD users.
     | Let me create the password | enabled |
     | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
     
-     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and recoed the password. You will need it later in this task.
     
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
