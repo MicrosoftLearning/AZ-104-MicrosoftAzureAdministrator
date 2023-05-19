@@ -61,7 +61,7 @@ In this task, you will create and configure Azure AD users.
 
 1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
 
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1** and under Setting selct assignment type as **Active**, enter **User** in justification and click on **Assign**.
+1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
