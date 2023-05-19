@@ -81,8 +81,8 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
+    | User principal name | **az104-01a-aaduser2** |
+    | Display Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
     | Initial password | uncheck the **Auto-generate password** and **Provide a secure password** |
     
@@ -232,8 +232,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01b-aaduser1** |
-    | Name | **az104-01b-aaduser1** |
+    | User principal name | **az104-01b-aaduser1** |
+    | Display Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
     | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
     
