@@ -36,20 +36,27 @@ In this task, you will create and configure Azure AD users.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
+    | User principal name | **az104-01a-aaduser1** |
+    | Display Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
-    | Job title | **Cloud Administrator** |
-    | Department | **IT** |
+    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    
+     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-1. Click on **Create**.
+    | Setting | Value |
+    | --- | --- |
+    | Job title  | **Cloud Administrator** |
+    | Department | **IT** |
+    | Usage location | **United States** |
+    
+1. Click on **Review + create** and then **Create**
+
 1. In the list of users, click the newly created user account to display its blade.
 
 1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
