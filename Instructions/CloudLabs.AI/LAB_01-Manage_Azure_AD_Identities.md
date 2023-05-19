@@ -240,7 +240,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
-
+    | Setting | Value |
+    | --- | --- |
     | Job title | **System Administrator** |
     | Department | **IT** |
        
