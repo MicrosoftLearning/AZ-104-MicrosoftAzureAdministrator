@@ -45,7 +45,7 @@ In this task, you will create and configure Azure AD users.
     | Let me create the password | enabled |
     | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
     
-     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and recoed the password. You will need it later in this task.
+     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
@@ -77,17 +77,26 @@ In this task, you will create and configure Azure AD users.
 
 1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
     | User name | **az104-01a-aaduser2** |
     | Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
-    | Initial password | **Provide a secure password** |
+    | Initial password | uncheck the **Auto-generate password** and **Provide a secure password** |
+    
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults) 
+    
+    | Setting | Value |
+    | --- | --- |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
+    
+1. Click on **Review + create** and then **Create**
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
@@ -218,17 +227,23 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+
 
     | Setting | Value |
     | --- | --- |
     | User name | **az104-01b-aaduser1** |
     | Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password |**Provide a secure password** |
+    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)   
+
     | Job title | **System Administrator** |
     | Department | **IT** |
-
+       
 1. Click on the newly created profile.
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
@@ -237,12 +252,17 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
-1. Create a new guest user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-01b-aaduser1** |
     | Email address | the User Principal Name you copied earlier in this task |
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)    
+   
+    | Setting | Value |
+    | --- | --- | 
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
