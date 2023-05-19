@@ -36,25 +36,32 @@ In this task, you will create and configure Azure AD users.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
+    | User principal name | **az104-01a-aaduser1** |
+    | Display Name | **az104-01a-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
-    | Job title | **Cloud Administrator** |
-    | Department | **IT** |
+    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    
+     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-1. Click on **Create**.
+    | Setting | Value |
+    | --- | --- |
+    | Job title  | **Cloud Administrator** |
+    | Department | **IT** |
+    | Usage location | **United States** |
+    
+1. Click on **Review + create** and then **Create**
+
 1. In the list of users, click the newly created user account to display its blade.
 
 1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
 
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1** and under Setting selct assignment type as **Active**, enter **User** in justification and click on **Assign**.
+1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
@@ -70,17 +77,26 @@ In this task, you will create and configure Azure AD users.
 
 1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
+    | User principal name | **az104-01a-aaduser2** |
+    | Display Name | **az104-01a-aaduser2** |
     | Let me create the password | enabled |
-    | Initial password | **Provide a secure password** |
+    | Initial password | uncheck the **Auto-generate password** and **Provide a secure password** |
+    
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults) 
+    
+    | Setting | Value |
+    | --- | --- |
     | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
+    
+1. Click on **Review + create** and then **Create**
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
@@ -105,6 +121,8 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 1. Click on **+ Assign**.
 
 1. On Assign license page click on **+ Add Users and groups** and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+
+1. Click on **Review + assign** and **Assign**
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
@@ -209,17 +227,23 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01b-aaduser1** |
-    | Name | **az104-01b-aaduser1** |
+    | User principal name | **az104-01b-aaduser1** |
+    | Display Name | **az104-01b-aaduser1** |
     | Let me create the password | enabled |
-    | Initial password |**Provide a secure password** |
+    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)   
+
     | Job title | **System Administrator** |
     | Department | **IT** |
-
+       
 1. Click on the newly created profile.
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
@@ -228,12 +252,17 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
-1. Create a new guest user with the following settings (leave others with their defaults):
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-01b-aaduser1** |
     | Email address | the User Principal Name you copied earlier in this task |
+    
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)    
+   
+    | Setting | Value |
+    | --- | --- | 
     | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
