@@ -56,13 +56,13 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
-    | Let me create the password | enabled |
+    | User principal name | **az104-01a-aaduser1** |
+    | Display name | **az104-01a-aaduser1** |
+    | Auto-generate password | de-select |
     | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
     | Job title | **Cloud Administrator** |
     | Department | **IT** |
+    | Usage location | **United States** |
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
@@ -90,14 +90,14 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
-    | Let me create the password | enabled |
+    | User principal name | **az104-01a-aaduser2** |
+    | Display name | **az104-01a-aaduser2** |
+    | Auto-generate password | de-select  |
     | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
-
+    | Usage location | **United States** |
+    
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
 ## Task 2: Create Azure AD groups with assigned and dynamic membership
@@ -226,9 +226,9 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01b-aaduser1** |
-    | Name | **az104-01b-aaduser1** |
-    | Let me create the password | enabled |
+    | User principal name | **az104-01b-aaduser1** |
+    | Display name | **az104-01b-aaduser1** |
+    | Auto-generate password | de-select  |
     | Initial password | **Provide a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -245,11 +245,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-01b-aaduser1** |
-    | Email address | the User Principal Name you copied earlier in this task |
-    | Usage location | **United States** |
+    | Email | the User Principal Name you copied earlier in this task |
+    | Display Name | **az104-01b-aaduser1** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
+    | Usage location | **United States** |
 
 1. Click **Invite**. 
 
