@@ -56,8 +56,8 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
+    | User principal name | **az104-01a-aaduser1** |
+    | Display name | **az104-01a-aaduser1** |
     | Auto-generate password | de-select |
     | Initial password | **Provide a secure password** |
     | Job title | **Cloud Administrator** |
@@ -90,8 +90,8 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
+    | User principal name | **az104-01a-aaduser2** |
+    | Display name | **az104-01a-aaduser2** |
     | Auto-generate password | de-select  |
     | Initial password | **Provide a secure password** |
     | Job title | **System Administrator** |
@@ -226,8 +226,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01b-aaduser1** |
-    | Name | **az104-01b-aaduser1** |
+    | User principal name | **az104-01b-aaduser1** |
+    | Display name | **az104-01b-aaduser1** |
     | Auto-generate password | de-select  |
     | Initial password | **Provide a secure password** |
     | Job title | **System Administrator** |
@@ -245,8 +245,8 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-01b-aaduser1** |
-    | Email address | the User Principal Name you copied earlier in this task |
+    | Email | the User Principal Name you copied earlier in this task |
+    | Display Name | **az104-01b-aaduser1** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
     | Usage location | **United States** |
