@@ -28,7 +28,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     
     ![image](../media/cloudshell1.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give **storage<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
 
     ![image](../media/cloudhell01.png)
 
@@ -268,7 +268,7 @@ In this task, you will create and configure Azure Files shares.
 ## Task 6: Manage network access for Azure Storage
 In this task, you will configure network access for Azure Storage.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
+1. In the Azure portal, navigate back to the blade of the storage account **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** you created in the second task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
 
 1. Select the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
 
