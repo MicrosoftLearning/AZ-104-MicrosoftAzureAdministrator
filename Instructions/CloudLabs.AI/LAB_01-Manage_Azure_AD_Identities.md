@@ -229,16 +229,15 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
 
-
     | Setting | Value |
     | --- | --- |
     | User principal name | **az104-01b-aaduser1** |
-    | Display Name | **az104-01b-aaduser1** |
-    | Let me create the password | enabled |
-    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
-    
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
-    
+    |  Display Name | **az104-01b-aaduser1** |
+    |  Let me create the password | enabled |
+    |  Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+       
+>**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
     | Setting | Value |
     | --- | --- |
