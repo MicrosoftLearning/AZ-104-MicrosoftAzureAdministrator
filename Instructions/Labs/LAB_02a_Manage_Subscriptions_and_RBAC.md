@@ -133,7 +133,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
 1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-***********************.**********.onmicrosoft.com. Click **Next** and then **Review and assign**.
-  ![image](../media/lab2-8.png) 
+![image](../media/lab2-8.png) 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
