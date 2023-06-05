@@ -16,6 +16,7 @@ In this lab, you will:
 ### Estimated timing: 30 minutes
 
 ## Architecture diagram
+
    ![image](../media/lab01.png)
 
 ## Task 1: Create and configure Azure AD users
@@ -36,16 +37,16 @@ In this task, you will create and configure Azure AD users.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
 
     | Setting | Value |
     | --- | --- |
     | User principal name | **az104-01a-aaduser1** |
     | Display Name | **az104-01a-aaduser1** |
-    | Let me create the password | enabled |
-    | Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    | Auto-generate password | unchecked |
+    | Password | **Provide a secure password** |
     
-     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+      >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
@@ -73,28 +74,28 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
-1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permission to modify any configuration options, and signout the user account **az104-01a-aaduser1** and close the Inprivate window.
+1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, note that you do not have permission to modify any configuration options, and sign out of the user account **az104-01a-aaduser1** and close the InPrivate window.
 
 1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
 
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
 
     | Setting | Value |
     | --- | --- |
     | User principal name | **az104-01a-aaduser2** |
     | Display Name | **az104-01a-aaduser2** |
-    | Let me create the password | enabled |
-    | Initial password | uncheck the **Auto-generate password** and **Provide a secure password** |
+    | Auto-generate password | unchecked |
+    | Password | **Provide a secure password** |
     
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
  1. on **Properties** tab specify the following settings (leave others with their defaults) 
     
     | Setting | Value |
     | --- | --- |
-    | Usage location | **United States** |
     | Job title | **System Administrator** |
     | Department | **IT** |
+    | Usage location | **United States** |
     
 1. Click on **Review + create** and then **Create**
 
@@ -110,17 +111,19 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     >**Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
-1. In the **Manage** section, click **All products**. Verify **Azure AD Premium P2** is already added to the list of licenses, if it is added then skip next two steps and continue.
+1. In the **Manage** section, click **All products**. Verify **Azure AD Premium P2** is already added to the list of licenses, if it is added then skip the next two steps and continue.
 
 1. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
 
 1. Refresh the browser window to verify that the activation was successful. 
 
+    >**Note**: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
+
 1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry.
 
 1. Click on **+ Assign**.
 
-1. On Assign license page click on **+ Add Users and groups** and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. On the Assign license page click on **+ Add Users and Groups** and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
 1. Click on **Review + assign** and **Assign**
 
@@ -135,7 +138,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Group description | **Contoso IT cloud administrators** |
     | Membership type | **Dynamic User** |
 
-    >**Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
+     >**Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
 
 1. Click **Add dynamic query**.
 
@@ -147,7 +150,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
 
-1. Save the rule and, back on the **New Group** blade, click **Create**. 
+1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
 
 1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
 
@@ -168,7 +171,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **System Administrator** |
 
-1. Save the rule and, back on the **New Group** blade, click **Create**. 
+1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**.
 
 1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button, and create a new group with the following settings:
 
@@ -185,7 +188,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
 
-    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
@@ -201,6 +204,13 @@ In this task, you will create a new Azure AD tenant.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.
 
+   >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:<br>
+    - Try the creation a few times.<br>
+    - Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
+    - Open a new **InPrivate** window and use the Azure Portal and try to create the tenant from there.<br>
+     Raise the problem with the trainer, then use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
+    - You can try this task later, but creating a tenant isn't required in other labs. 
+
 1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
 
     | Setting | Value |
@@ -215,30 +225,31 @@ In this task, you will create a new Azure AD tenant.
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
     | Country/Region | **United States** |
 
-   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+     > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
 1. Click **Review + create** then **Create**, enter the captcha and click **Submit**.
 
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar and, click on **Switch**.
 
-## Task 4: Manage Azure AD guest users.
+## Task 4: Manage Azure AD, guest users.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
 1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
 
     | Setting | Value |
     | --- | --- |
     | User principal name | **az104-01b-aaduser1** |
     |  Display Name | **az104-01b-aaduser1** |
-    |  Let me create the password | enabled |
-    |  Password | uncheck the **Auto-generate password** and  **Provide a secure password** |
+    |  Auto-generate password | uncheck |
+    |  Password | **Provide a secure password** |
        
->**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
 
- 1. on **Properties** tab specify the following settings (leave others with their defaults)   
+ 1. on **Properties** tab specify the following settings (leave others with their defaults)
+
     | Setting | Value |
     | --- | --- |
     | Job title | **System Administrator** |
@@ -252,20 +263,20 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next:properties>**
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-01b-aaduser1** |
     | Email address | the User Principal Name you copied earlier in this task |
+    | Display Name | **az104-01b-aaduser1** |
     
- 1. on **Properties** tab specify the following settings (leave others with their defaults)    
+ 1. on the **Properties** tab specify the following settings (leave others with their defaults)    
    
     | Setting | Value |
     | --- | --- | 
-    | Usage location | **United States** |
     | Job title | **Lab Administrator** |
     | Department | **IT** |
+    | Usage location | **United States** |
 
 1. Click **Invite**. 
 
