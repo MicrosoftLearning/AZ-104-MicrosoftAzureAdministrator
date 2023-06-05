@@ -329,7 +329,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Email address | the User Principal Name you copied earlier in this task |
     | Display Name | **az104-01b-aaduser1** |
     
-     ![](../CloudLabs.AI/Images/exusr.png)  
+     ![](../CloudLabs.AI/Images/exuser.png)  
     
  1. on the **Properties** tab specify the following settings (leave others with their defaults)    
    
