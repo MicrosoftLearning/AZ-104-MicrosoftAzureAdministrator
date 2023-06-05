@@ -10,9 +10,11 @@ In this lab, you will:
 
 ## Estimated timing: 30 minutes
 ## Architecture diagram
+
 ![image](../media/lab05.png)
 
 ## Task 1: Provision the lab environment
+
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -34,8 +36,6 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
-
-1. Edit the **Parameters** file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
 
@@ -64,12 +64,13 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location2 $location2
    ```
 
-    **Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
+    >**Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
 
 ## Task 2: Configure local and global virtual network peering
+
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -86,10 +87,10 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | This virtual network: This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -124,9 +125,9 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -134,7 +135,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | Virtual network gateway | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -163,9 +164,9 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
+    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -173,7 +174,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Virtual network | **az104-05-vnet2** |
     | Traffic to remote virtual network | **Allow (default)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | Virtual network gateway | **None** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
@@ -201,6 +202,7 @@ In this task, you will configure local and global peering between the virtual ne
 
 
 ## Task 3: Test intersite connectivity
+
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
 1. In the Azure portal, search for and select **Virtual machines**.
@@ -209,7 +211,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Stor,e and on Linux computers, you can use anopen-sourcee RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
