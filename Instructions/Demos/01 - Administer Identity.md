@@ -76,7 +76,7 @@ Active Directory blade will be available.
 
 3.  Retrieve the user ObjectId for the member to add.
 
- **Get-AzADUser**
+ > **Get-AzADUser**
 
 4.  Add the user to the group. Replace groupObjectId and userObjectId.
 
