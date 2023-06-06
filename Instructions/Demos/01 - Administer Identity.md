@@ -18,11 +18,11 @@ This area does not have a formal demonstration. Consider these Quickstarts.
 
 In this demonstration, we will explore Azure Active Directory.
 
-**Note:** Depending on your subscription not all areas of the Azure Active Directory blade will be available. Here are some reference pages. 
-
 [Add or delete users - Azure Active Directory \| Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 [Create a basic group and add members - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+
+**Note:** Depending on your subscription not all areas of the Azure Active Directory blade will be available. 
 
 **Review license and domain information**
 
