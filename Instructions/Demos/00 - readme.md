@@ -1,3 +1,9 @@
+---
+demo:
+    title: 'Demonstration Instructions'
+    module: 'All'
+---
+
 # Purpose
 
 This directory provides instructor demonstrations for the AZ-104 Azure Administrator course. **It is not intended for you to do every demonstration. Pick the ones most applicable to your audience.**
