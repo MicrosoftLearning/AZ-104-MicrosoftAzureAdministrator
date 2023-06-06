@@ -8,14 +8,11 @@ demo:
 
 ## Configure Azure Active Directory
 
-This area does not have a formal demonstration. Consider these
-Quickstarts.
+This area does not have a formal demonstration. Consider these Quickstarts.
 
-[Quickstart - Access & create new tenant - Azure AD \| Microsoft
-Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+[Quickstart - Access & create new tenant - Azure AD \| Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-[Quickstart - View groups & members - Azure AD \| Microsoft
-Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+[Quickstart - View groups & members - Azure AD \| Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## Configure User and Group Accounts
 
