@@ -24,12 +24,9 @@ In this demonstration, we will explore Azure Active Directory.
 **Note:** Depending on your subscription not all areas of the Azure
 Active Directory blade will be available.
 
-> [Add or delete users - Azure Active Directory \| Microsoft
-> Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
->
-> [Create a basic group and add members - Azure Active Directory \|
-> Microsoft
-> Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+> [Add or delete users - Azure Active Directory \| Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+> 
+> [Create a basic group and add members - Azure Active Directory | Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 **Review license and domain information**
 
@@ -85,9 +82,7 @@ Active Directory blade will be available.
 4.  Add the user to the group. Replace groupObjectId and userObjectId.
 
     ```powershell
-    Add-AzADGroupMember -MemberUserPrincipalName
-    \"\"myemail@domain.com\"\" -TargetGroupDisplayName
-    \"\"MyGroupDisplayName\"\"
+    Add-AzADGroupMember -MemberUserPrincipalName "myemail@domain.com" -TargetGroupDisplayName "MyGroupDisplayName"
     ```
 
 5.  Verify the members of the group. Replace groupObjectId.
