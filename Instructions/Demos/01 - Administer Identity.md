@@ -1,3 +1,9 @@
+---
+demo:
+    title: 'Demonstration: Administer Identity'
+    module: 'Administer Identity'
+---
+
 # 1 - Administer Identity
 
 ## Configure Azure Active Directory
