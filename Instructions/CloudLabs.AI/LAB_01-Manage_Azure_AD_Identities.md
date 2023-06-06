@@ -23,7 +23,13 @@ In this lab, you will:
 
 In this task, you will create and configure Azure AD users.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If not  Sign in to the [Azure portal](https://portal.azure.com).
+
+1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for Azure Active Directory (1) and select **Azure Active Directory (2)**.
 
