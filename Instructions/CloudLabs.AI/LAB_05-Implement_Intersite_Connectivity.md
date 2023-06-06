@@ -8,12 +8,13 @@ In this lab, you will:
 + Task 2: Configure local and global virtual network peering
 + Task 3: Test intersite connectivity
 
-## Estimated timing: 30 minutes
 ## Architecture diagram
 
  ![image](../media/lab05.png)
+ 
+ ## Exercise 1: Provision the lab environment
 
-## Task 1: Provision the lab environment
+#### Task 1: Provision the lab environment
 
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
 
@@ -25,7 +26,6 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 1. Now enter the following **Password** and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/cloudshell.png)
@@ -78,7 +78,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-## Task 2: Configure local and global virtual network peering
+#### Task 2: Configure local and global virtual network peering
 
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
@@ -220,7 +220,7 @@ In this task, you will configure local and global peering between the virtual ne
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-## Task 3: Test intersite connectivity
+#### Task 3: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 

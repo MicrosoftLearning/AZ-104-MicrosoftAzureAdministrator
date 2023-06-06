@@ -16,6 +16,8 @@ In this lab, you will:
 ## Architecture diagram
 
    ![image](../media/lab1.png)
+   
+## Exercise 1: Create and configure Azure AD users
 
 #### Task 1: Create and configure Azure AD users
 
@@ -137,7 +139,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: If the users are already created then you can skip this task and continue further. 
 
-## Task 2: Create Azure AD groups with assigned and dynamic membership
+#### Task 2: Create Azure AD groups with assigned and dynamic membership
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
@@ -250,7 +252,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 3: Create an Azure Active Directory (AD) tenant
+#### Task 3: Create an Azure Active Directory (AD) tenant
 
 In this task, you will create a new Azure AD tenant.
 
@@ -292,7 +294,7 @@ In this task, you will create a new Azure AD tenant.
 
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar and, click on **Switch**.
 
-## Task 4: Manage Azure AD, guest users.
+#### Task 4: Manage Azure AD, guest users.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
