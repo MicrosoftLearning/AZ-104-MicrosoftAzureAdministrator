@@ -12,14 +12,23 @@ In this lab, you will:
 + Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 + Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
 
-## Estimated timing: 50 minutes
 ## Architecture diagram
+
 ![image](../media/lab08.png)
 
-## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+## Exercise 1: eploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+
+#### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
+1. If not  Sign in to the [Azure portal](https://portal.azure.com).
+
+1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create** then select **Azure virtual machine**.
 
@@ -34,7 +43,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Availability options | **Availability zone** |
     | Availability zone | **Zones 1** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
-    | Run with Azure Spot discount | **Unchecked** |
+    | Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
@@ -69,8 +78,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
-    | Enable accelerated networking | **Unchecked**
-    | Load balancing options | **None** |
+    | Accelerated networking | **Unchecked**
+    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+ |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -83,7 +93,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | accept the default value |
+    | Diagnostics storage account | **accept the default value** |
 
     >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
 
@@ -122,7 +132,8 @@ In this task, you will deploy Azure virtual machines into different availability
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Configure Azure virtual machines by using virtual machine extensions
+#### Task 2: Configure Azure virtual machines by using virtual machine extensions
+
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -214,7 +225,8 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-## Task 3: Scale compute and storage for Azure virtual machines
+#### Task 3: Scale compute and storage for Azure virtual machines
+
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
@@ -303,7 +315,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
     >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 49.
 
-    >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
+    >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**,similary to the storage configuration of the first virtual machine via the Azure portal.
 
 1. Click **Save** and, back on the **Custom template blade**, click **Review + Create** and, on the **Review + Create** blade, click **Create**.
 
@@ -331,7 +343,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
+#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
@@ -351,9 +363,11 @@ In this task, you will scale compute for Azure virtual machines by changing thei
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
 
+   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-## Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+
 In this task, you will deploy the Azure virtual machine scale set across availability zones by using the Azure portal.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Create**.
@@ -367,13 +381,14 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
+    | Orchestration mode | **Uniform** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
-    | Licensing | **Unchecked** |
-    | Orchestration mode | **Uniform** |
+    | Already have a Windows Server license? | **Unchecked** |
+
     >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
@@ -461,7 +476,8 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
+#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
+
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -507,7 +523,8 @@ In this task, you will install the Windows Server Web Server role on the instanc
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 7: Scale compute and storage for Azure virtual machine scale sets
+#### Task 7: Scale compute and storage for Azure virtual machine scale sets
+
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
@@ -567,7 +584,6 @@ In this task, you will change the size of virtual machine scale set instances, c
    ```powershell
    $rgName = 'az104-08-rg02'
    
-
    $lbpipName = 'az10408vmss0-lb-publicip'
 
    $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
