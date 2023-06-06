@@ -23,20 +23,22 @@
 1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
-     ![](../CloudLabs.AI/Images/portal1.png)
+     ![](../CloudLabs.AI/Images/image7.png)
      
 1. Now enter the password and click on Sign in.
    * Password: <inject key="AzureAdUserPassword"></inject>
   
-    ![](../CloudLabs.AI/Images/portal2.png)
+    ![](../CloudLabs.AI/Images/image8.png)
+        
+1. If you see the pop-up **Action Required**, click **Ask Later**.
+   
+    ![](../CloudLabs.AI/Images/asklater.png)
 
 1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
 
-    ![](../CloudLabs.AI/Images/portal3.png)
-
 1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
     
-    ![image](https://user-images.githubusercontent.com/33771500/189094051-b2a2818f-d751-4187-b60e-b0ae14417263.png)
+    ![](../CloudLabs.AI/Images/maybelater.png)    
     
 1. Click on **Next** from the bottom right and follow the instructions to perform the lab.
 
