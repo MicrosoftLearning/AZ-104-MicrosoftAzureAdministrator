@@ -11,7 +11,7 @@ In this lab, you will:
 ## Estimated timing: 30 minutes
 ## Architecture diagram
 
-![image](../media/lab05.png)
+ ![image](../media/lab05.png)
 
 ## Task 1: Provision the lab environment
 
@@ -19,23 +19,23 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
+    ![Image](./Images/cloudshell.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/advancesetting.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
+    ![image](../media/crtstorage.png)
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
+     ![Image](./Images/upload.png)
 
 1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
 
@@ -75,30 +75,38 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. In the Azure portal, search for and select **Virtual networks**.
 
+    ![Image](./Images/selectvnet.png)
+
 1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
 
     >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
 1. In the list of virtual networks, click **az104-05-vnet0**.
+     
+      ![Image](./Images/vnet0.png)
+      
+1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings (1)** and then click **+ Add (2)**.
 
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+     ![Image](./Images/addpeering.png)
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+1. Add a peering with the following settings (leave others with their default values) and click **Add (12)**:
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
-    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet1** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway or Route Server | **None** |
+    | Peering link name | **az104-05-vnet0_to_az104-05-vnet1 (1)** |
+    | Traffic to remote virtual network | **Allow (default) (2)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network (2)** |
+    | Virtual network gateway or Route server| **None (4)** |
+    | Peering link name | **az104-05-vnet1_to_az104-05-vnet0 (5)** |
+    | Virtual network deployment model | **Resource manager (6)** |
+    | I know my resource ID | unselected  |
+    | Subscription | the name of the Azure subscription you are using in this lab **(7)** |
+    | Virtual network | **az104-05-vnet1 (8)** |
+    | Traffic to remote virtual network | **Allow (default) (9)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network (10)** |
+    | Virtual network gateway or Route Server | **None (11)** |
+    
+     ![Image](./Images/vnet1peering.png)
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
@@ -157,6 +165,8 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
 
+     ![Image](./Images/vnet01.png)
+
 1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
@@ -207,15 +217,27 @@ In this task, you will test connectivity between virtual machines on the three v
 
 1. In the Azure portal, search for and select **Virtual machines**.
 
+     ![Image](./Images/vm.png)
+
 1. In the list of virtual machines, click **az104-05-vm0**.
 
+      ![Image](./Images/vm0.png)
+
 1. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+
+      ![Image](./Images/connect.png)
+      
+      ![Image](./Images/downloadfile.png)
+      
+      ![Image](./Images/rdp.png)
+
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Stor,e and on Linux computers, you can use anopen-sourcee RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password which you given in task1.
+1. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
+
 
 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
@@ -240,6 +262,8 @@ In this task, you will test connectivity between virtual machines on the three v
 1. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
 
 1. In the list of virtual machines, click **az104-05-vm1**.
+
+    ![Image](./Images/vm1.png)
 
 1. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
