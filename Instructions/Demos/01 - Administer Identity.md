@@ -68,22 +68,30 @@ Active Directory blade will be available.
 
 1.  Create a new group called Developers.
 
-> **New-AzADGroup -DisplayName Developers -MailNickname Developers**
-
+    ```powershell
+    New-AzADGroup -DisplayName Developers -MailNickname Developers
+    ```
 2.  Retrieve the Developers group ObjectId.
 
-> **Get-AzADGroup**
-
+    ```powershell
+    Get-AzADGroup
+    ```
 3.  Retrieve the user ObjectId for the member to add.
 
- > **Get-AzADUser**
-
+    ```powershell
+    Get-AzADUser
+    ```
+    
 4.  Add the user to the group. Replace groupObjectId and userObjectId.
 
-> **Add-AzADGroupMember -MemberUserPrincipalName
-> \"\"myemail@domain.com\"\" -TargetGroupDisplayName
-> \"\"MyGroupDisplayName\"\"**
+    ```powershell
+    Add-AzADGroupMember -MemberUserPrincipalName
+    \"\"myemail@domain.com\"\" -TargetGroupDisplayName
+    \"\"MyGroupDisplayName\"\"
+    ```
 
 5.  Verify the members of the group. Replace groupObjectId.
 
-> **Get-AzADGroupMember -GroupDisplayName \"MyGroupDisplayName\"**
+    ```powershell
+    Get-AzADGroupMember -GroupDisplayName "MyGroupDisplayName"
+    ```
