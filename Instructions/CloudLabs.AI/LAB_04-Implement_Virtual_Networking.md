@@ -17,6 +17,7 @@ In this lab, you will:
 ![image](../media/lab04.png)
 
 
+
 ## Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
 
@@ -320,6 +321,8 @@ In this task, you will configure DNS name resolution within a virtual network by
 
    ```powershell
    nslookup az104-04-vm0.contoso.org
+   ```
+   ```powershell
    nslookup az104-04-vm1.contoso.org
    ```
     
