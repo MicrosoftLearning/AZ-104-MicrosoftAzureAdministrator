@@ -271,8 +271,7 @@ In this task, you will create and configure Azure Files shares.
 
    ```powershell
    New-Item -Type Directory -Path 'Z:\az104-07-folder'
-   ```
-   ```powershell
+   
    New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
    ```
 
