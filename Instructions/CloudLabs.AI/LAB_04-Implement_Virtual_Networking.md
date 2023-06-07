@@ -212,7 +212,7 @@ In this task, you will configure network security groups in order to allow for r
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-nsg01** |
-    | Region | the name of the Azure region where you deployed all other resources in this lab |
+    | Region |  Select **<inject key="Region" enableCopy="false" />** |
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
 
@@ -344,7 +344,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Name | the DNS domain name you identified earlier in this task |
+    | Name | The DNS domain name you identified earlier in this task |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
 
@@ -378,7 +378,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Alias record set | **No** |
     | TTL | **1** |
     | TTL unit | **Hours** |
-    | IP address | the public IP address of **az104-04-vm1** which you identified in the third exercise of this lab |
+    | IP address | The public IP address of **az104-04-vm1** which you identified in the third exercise of this lab |
 
 1. Click **OK**
 
