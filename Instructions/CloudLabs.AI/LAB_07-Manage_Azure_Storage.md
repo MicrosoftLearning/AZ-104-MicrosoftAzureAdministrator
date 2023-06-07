@@ -18,7 +18,6 @@ In this lab, you will:
 
   ![](../CloudLabs.AI/Images/lab07.png)
 
-
 ## Exercise 1: Provision the lab environment
 
 #### Task 1: Provision the lab environment
@@ -51,15 +50,18 @@ In this task, you will deploy an Azure virtual machine that you will use later i
      ![Image](./Images/upload.png)
 
 1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
-
-    >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`. 
-
+  
    ```powershell
    $location = '[Azure_region]'
-
+   ```
+   
+   ```powershell
    $rgName = 'az104-07-rg0'
    
    ```
+   
+     >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`. 
+
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
     
@@ -109,7 +111,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the same blade **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change. 
 
-   ![image](../media/TA7-T2-P8.png)
+    ![](../CloudLabs.AI/Images/TA7-T2-P8.png)
 
 1. In the same blade note that, at this point, the Storage account has only the primary location.
 
@@ -269,7 +271,8 @@ In this task, you will create and configure Azure Files shares.
 
    ```powershell
    New-Item -Type Directory -Path 'Z:\az104-07-folder'
-
+   ```
+   ```powershell
    New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
    ```
 
