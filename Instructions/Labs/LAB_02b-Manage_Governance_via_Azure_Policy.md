@@ -19,13 +19,11 @@ In this lab, we will:
 + Task 2: Enforce tagging via an Azure policy
 + Task 3: Apply tagging via an Azure policy
 
-## Estimated timing: 30 minutes
 
 ## Architecture diagram
 
 ![image](../media/lab02b.png)
 
-## Instructions
 
 ### Exercise 1
 
@@ -46,6 +44,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ```
 
 1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
+  ![image](../media/2b-new.png)
 
    ```
    //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
@@ -160,6 +159,7 @@ In this task, we will use a different policy definition to remediate any non-com
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
+![image](../media/2b-09.png)
 
     | Setting | Value |
     | --- | --- |
@@ -167,7 +167,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
     | Policy enforcement | Enabled |
 
- ![image](../media/2b-09.png)
+ 
 
 1. Click **Next** and set **Parameters** to the following values:
 
@@ -204,23 +204,14 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-#### Clean up resources
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. 
+ 
 
-   >**Note**: Removing unused resources ensures you will not see unexpected charges, although keep in mind that Azure policies do not incur extra cost.
-
-1. In the portal, search for and select **Policy**.
-
-1. In the **Authoring** section, click **Assignments**, click the ellipsis icon to the right of the assignment you created in the previous task and click **Delete assignment**. 
-
-1. In the portal, search for and select **Storage accounts**.
-
-1. In the list of storage accounts, select the resource group corresponding to the storage account you created in the last task of this lab. Select **Tags** and click **Delete** (Trash can to the right) to the **Role:Infra** tag and press **Save**. 
-
-1. In the portal, again search for and select **Storage accounts** or use the menu at the top to select **Storage accounts**
-
-1. In the list of storage accounts, select the storage account you created in the last task of this lab, click **Delete**, when prompted for the confirmation, in the **Confirm delete** type **yes** and click **Delete**. 
+- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
 
