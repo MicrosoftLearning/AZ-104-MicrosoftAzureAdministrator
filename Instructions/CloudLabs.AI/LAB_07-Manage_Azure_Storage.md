@@ -16,7 +16,8 @@ In this lab, you will:
 
 ## Architecture diagram
 
-![image](../media/lab07.png)
+  ![](../CloudLabs.AI/Images/lab07.png)
+
 
 ## Exercise 1: Provision the lab environment
 
