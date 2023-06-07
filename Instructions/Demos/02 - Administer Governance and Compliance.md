@@ -1,7 +1,7 @@
 ---
 
 demo:
-    title: 'Demonstration: 02- Administer Governance and Compliance'
+    title: 'Demonstration: 02 - Administer Governance and Compliance'
     module: 'Administer Governance and Compliance'
 ---
 
