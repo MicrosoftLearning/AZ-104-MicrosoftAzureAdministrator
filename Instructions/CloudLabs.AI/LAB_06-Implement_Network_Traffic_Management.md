@@ -11,14 +11,17 @@ In this lab, you will:
 + Task 5: Implement Azure Load Balancer
 + Task 6: Implement Azure Application Gateway
 
-## Estimated timing: 60 minutes
 ## Architecture diagram
 ![image](../media/lab06.png)
+
+## Excercise: Implement Traffic Management
 
 ## Task 1: Provision the lab environment
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+ ![image](../media/cloudshell.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
@@ -100,15 +103,19 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. In the list of virtual networks, select **az104-06-vnet2**.
 
-1. On the **az104-06-vnet2** blade, select **Properties**. 
+1. On the **az104-06-vnet2** blade, select **Properties(1)**. 
 
-1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID** property.
+1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID(2)** property.
+
+   ![image](../media/vnet2properties.png)
 
 1. Navigate back to the list of virtual networks and select **az104-06-vnet3**.
 
-1. On the **az104-06-vnet3** blade, select **Properties**. 
+1. On the **az104-06-vnet3** blade, select **Properties(1)**. 
 
-1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID** property.
+1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID(2)** property.
+
+   ![image](../media/properties.png)
 
     >**Note**: You will need the values of the ResourceID property for both virtual networks later in this task.
 
