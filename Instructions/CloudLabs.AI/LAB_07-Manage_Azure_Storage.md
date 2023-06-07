@@ -23,21 +23,31 @@ In this lab, you will:
 #### Task 1: Provision the lab environment
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](https://portal.azure.com).
+1. If not  Sign in to the [Azure portal](https://portal.azure.com).
 
+1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+   
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+    ![Image](./Images/cloudshell.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell.png)
-    
+      ![image](../media/advancesetting.png)
+     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give **storage<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
 
-    ![image](../media/creatstr.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+
+    ![image](../media/crtstorage.png)
+
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\az104-07-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
 
@@ -67,7 +77,8 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Close the Cloud Shell pane.
 
-## Task 2: Create and configure Azure Storage accounts
+#### Task 2: Create and configure Azure Storage accounts
+
 In this task, you will create and configure an Azure Storage account.
 
 1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
@@ -111,7 +122,7 @@ In this task, you will create and configure an Azure Storage account.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 3: Manage blob storage
+#### Task 3: Manage blob storage
 
 In this task, you will create a blob container and upload a blob into it.
 
@@ -186,6 +197,8 @@ In this task, you will configure authentication and authorization for Azure Stor
 1. Click **Generate SAS token and URL**.
 
 1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
+
+    ![](../CloudLabs.AI/Images/sasurl.png)
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
