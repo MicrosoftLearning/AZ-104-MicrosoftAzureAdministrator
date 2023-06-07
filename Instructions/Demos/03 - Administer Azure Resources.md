@@ -1,10 +1,8 @@
 ---
 demo:
-    title: 'Demonstration: Administer Azure Resources
+    title: 'Demonstration: Administer Azure Resources'
     module: 'Administer Administer Azure Resources'
 ---
-
-
 # 03 - Administer Azure Resources
 
 ## Demonstration -- Azure Portal
