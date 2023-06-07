@@ -463,7 +463,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Initial instance count | **2** |
-    | Scaling policy | **Manual scaling** |
+    | Scaling policy | **Manual** |
 
 1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
 
@@ -471,7 +471,9 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | **default** |
-
+    
+      ![](../CloudLabs.AI/Images/az104str2mod8.png)   
+  
     >**Note**: You will need the name of this storage account in the next task.
 
    Click **Next : Health >**:
