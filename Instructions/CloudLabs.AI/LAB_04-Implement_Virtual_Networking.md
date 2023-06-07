@@ -11,10 +11,11 @@ In this lab, you will:
 + Task 5: Configure Azure DNS for internal name resolution
 + Task 6: Configure Azure DNS for external name resolution
 
-## Estimated timing: 40 minutes
+
 
 ## Architecture diagram
 ![image](../media/lab04.png)
+
 
 ## Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
@@ -82,19 +83,19 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/AZ-104-strorage-mount.png)
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+    ![image](../media/Az-104-storagecreate.png)
 
 3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 4. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     **Note**: You might need to upload each file separately.
-    
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
+   
+   ![image](../media/AZ-104-uploaddoc.png)
     
 5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
@@ -135,11 +136,11 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. On the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
-    ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
+    ![image](../media/AZ-104-azvnet.png) 
 
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p3.png)
+    ![image](../media/AZ-104-connecteddevices.png)
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
 
@@ -147,8 +148,8 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p5.png)
-
+    ![image](../media/AZ-104-ipconfig.png)
+    
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
@@ -156,13 +157,13 @@ In this task, you will configure static assignment of public and private IP addr
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
     
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p6.png)
+    ![image](../media/AZ-104-ipconfig-step2.png)
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
 
 1. Back on the **ipconfig1** blade, and save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-1. Navigate back to the **az104-04-vnet1** blade
+1. Navigate back to the **az104-04-vnet1** blade an click on **Connected Devices**.
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
@@ -219,9 +220,11 @@ In this task, you will configure network security groups in order to allow for r
 
 1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t4-p4.png)
+    ![image](../media/AZ-104-gotoresource.png)
 
 1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Inbound security rules**.
+
+     ![image](../media/AZ-104-addinboundrule.png)
 
 1. Add an inbound rule with the following settings (leave others with their default values):
 
@@ -237,7 +240,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Click **Add**
 
-1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
+1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **Associate**.
 
 1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
@@ -290,14 +293,14 @@ In this task, you will configure DNS name resolution within a virtual network by
 
     | Setting | Value |
     | --- | --- |
-    | Link name | **az104-04-vnet1-link** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-04-vnet1** |
-    | Enable auto registration | enabled |
+    | Link name (1)| **az104-04-vnet1-link** |
+    | Subscription (2)| the name of the Azure subscription you are using in this lab |
+    | Virtual network (3) | **az104-04-vnet1** |
+    | Enable auto registration (4) | enabled |
     
-    Click **OK**.
+ 1. Click **OK** (5).
     
-    ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
+    ![image](../media/AZ-104-addvirtualnetwork.png)
 
     **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
@@ -329,7 +332,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
 
-1. Find a unique domain name and used it.
+1. Find a unique domain name and check in the website if the domain name that you have chosen is unique.
 
 1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Create**.
 
