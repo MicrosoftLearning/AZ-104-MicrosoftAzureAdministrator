@@ -45,10 +45,10 @@ In this task, you will create and assign a tag to an Azure resource group via th
    df
    ```
 
-1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxxxxxxxxxxxx`:
+1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
 
    ```
-   //xxxxxxxxxxxxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
+   //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
    ```
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
@@ -131,7 +131,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
- ![image](../media/2b-7.png)
+ ![image](../media/2b-7new.png)
 
 
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
