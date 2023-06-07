@@ -40,7 +40,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
 
-    ![image](../media/crtstorage.png)
+    ![image](../media/crtstr.png)
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
@@ -141,10 +141,10 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
-    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
-    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway or Route server | **None** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
@@ -180,11 +180,11 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
-    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
+    | Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
+    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
+    | Virtual network gateway or Route server | **None** |
+    | Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
