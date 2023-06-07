@@ -57,33 +57,3 @@ In this demonstration, we will explore Azure Active Directory.
 
 3.  Review information about a group including **Membership
     type** and **Type**.
-
-**Optional - Explore PowerShell for group management**
-
-1.  Create a new group called Developers.
-
-    ```powershell
-    New-AzADGroup -DisplayName Developers -MailNickname Developers
-    ```
-2.  Retrieve the Developers group ObjectId.
-
-    ```powershell
-    Get-AzADGroup
-    ```
-3.  Retrieve the user ObjectId for the member to add.
-
-    ```powershell
-    Get-AzADUser
-    ```
-    
-4.  Add the user to the group. Replace groupObjectId and userObjectId.
-
-    ```powershell
-    Add-AzADGroupMember -MemberUserPrincipalName "myemail@domain.com" -TargetGroupDisplayName "MyGroupDisplayName"
-    ```
-
-5.  Verify the members of the group. Replace groupObjectId.
-
-    ```powershell
-    Get-AzADGroupMember -GroupDisplayName "MyGroupDisplayName"
-    ```
