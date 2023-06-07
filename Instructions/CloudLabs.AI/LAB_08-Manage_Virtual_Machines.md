@@ -376,7 +376,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. Click **Create storage** and wait until the Azure Cloud Shell pane is displayed.
 
-      ![](../CloudLabs.AI/Images/crtstr.png)
+      ![](../media/crtstr.png) 
    
 1. From the Cloud Shell pane, run the following to register Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
