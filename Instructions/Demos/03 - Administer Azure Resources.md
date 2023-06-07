@@ -1,5 +1,4 @@
 ---
-
 demo:
     title: 'Demonstration: Administer Azure Resources
     module: 'Administer Administer Azure Resources'
