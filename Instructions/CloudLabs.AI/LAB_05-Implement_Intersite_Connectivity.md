@@ -40,7 +40,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
 
-    ![image](../media/crtstorage.png)
+    ![image](../media/crtstr.png)
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
