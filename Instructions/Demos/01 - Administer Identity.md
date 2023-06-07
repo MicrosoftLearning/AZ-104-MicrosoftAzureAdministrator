@@ -14,6 +14,7 @@ This area does not have a formal demonstration. Consider these Quickstarts.
 
 [Quickstart - View groups & members - Azure AD \| Microsoft Docs](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
+
 ## Configure User and Group Accounts
 
 In this demonstration, we will explore Azure Active Directory.
