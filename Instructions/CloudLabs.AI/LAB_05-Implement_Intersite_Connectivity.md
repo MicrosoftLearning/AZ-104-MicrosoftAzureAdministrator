@@ -174,8 +174,6 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
 
-     ![Image](./Images/vnet01.png)
-
 1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
