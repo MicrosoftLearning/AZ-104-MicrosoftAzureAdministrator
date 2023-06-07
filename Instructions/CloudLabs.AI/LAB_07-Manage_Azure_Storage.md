@@ -38,19 +38,17 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.     
     
-      ![image](../media/advancesetting.png)
-     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give **storage<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
-
+1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give **storage<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
     ![image](../media/crtstr.png)
 
-
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\az104-07-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
+
+     ![Image](./Images/upload.png)
 
 1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
 
@@ -64,8 +62,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
    ```
 1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
-    >**Note**: You will be prompted to provide an Admin password. Please enter a valid password within the powershell pane and hit enter.
-
+    
    ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
@@ -73,7 +70,10 @@ In this task, you will deploy an Azure virtual machine that you will use later i
       -TemplateParameterFile $HOME/az104-07-vm-parameters.json `
       -AsJob
    ```
-
+  
+  
+    >**Note**: You will be prompted to provide an Admin password. Please enter a valid password within the powershell pane and hit enter.
+   
     >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
 
 1. Close the Cloud Shell pane.
