@@ -1,33 +1,22 @@
-## Lab 02b - Manage Governance via Azure Policy
-# Student lab manual
-
+# Lab 2b - Manage Governance via Azure Policy
 ## Lab scenario
-
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
-
 - tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
-
 - ensuring that only properly tagged infrastructure resources can be added to infrastructure resource groups
-
 - remediating any non-compliant resources 
 
 ## Objectives
-
 In this lab, we will:
-
 + Task 1: Create and assign tags via the Azure portal
 + Task 2: Enforce tagging via an Azure policy
 + Task 3: Apply tagging via an Azure policy
 
-## Estimated timing: 30 minutes
+### Estimated timing: 30 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab02b.png)
 
-
-### Exercise 1
-
-#### Task 1: Assign tags via the Azure portal
-
+## Task 1: Assign tags via the Azure portal
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
 1. In the Azure portal, open **Cloud Shell** pane by clicking on the toolbar icon directly to the right of the search textbox.
@@ -73,8 +62,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
-#### Task 2: Enforce tagging via an Azure policy
-
+## Task 2: Enforce tagging via an Azure policy
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
 1. In the Azure portal, search for and select **Policy**. 
@@ -138,8 +126,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
-#### Task 3: Apply tagging via an Azure policy
-
+## Task 3: Apply tagging via an Azure policy
 In this task, we will use a different policy definition to remediate any non-compliant resources. 
 
 1. In the Azure portal, search for and select **Policy**. 
@@ -203,16 +190,14 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-     > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-     > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-     
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 #### Review
-
 In this lab, you have:
-
 - Created and assigned tags via the Azure portal
 - Enforced tagging via an Azure policy
 - Applied tagging via an Azure policy

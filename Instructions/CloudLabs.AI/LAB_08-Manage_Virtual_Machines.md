@@ -1,14 +1,9 @@
 # Lab 08 - Manage Virtual Machines
-# Student lab manual
-
 ## Lab scenario
-
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Task 2: Configure Azure virtual machines by using virtual machine extensions
 + Task 3: Scale compute and storage for Azure virtual machines
@@ -18,13 +13,10 @@ In this lab, you will:
 + Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
 
 ## Estimated timing: 50 minutes
+## Architecture diagram
+![image](../media/lab08.png)
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-
+## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
@@ -40,8 +32,8 @@ In this task, you will deploy Azure virtual machines into different availability
     | Virtual machine name | **az104-08-vm0** |
     | Region | same location of resource group |
     | Availability options | **Availability zone** |
-    | Availability zone | **Zone 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Availability zone | **Zones 1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
@@ -58,7 +50,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
-1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on "OK":
+1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **OK**:
 
     | Setting | Value |
     | --- | --- |
@@ -78,7 +70,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
     | Enable accelerated networking | **Unchecked**
-    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+    | Load balancing options | **None** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -105,18 +97,18 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: You will use this option to deploy the second virtual machine with a matching configuration except for the availability zone.
 
-1. On the **Custom deployment** blade, click **Edit template**, replace the **zones** value from **1** to **2** for the resource types **Microsoft.Network/publicIpAddresses** and **Microsoft.Compute/virtualMachines**, click **Save**, and specify the following settings (leave others with their default values):
+1. On the **Custom deployment** blade, click **Edit parameter**, replace the **VirtualMachine1Zone** value from **1** to **2** for the resource types, click **Save**, and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Resource group | **az104-08-rg01** |
     | Network Interface Name 1 | **az104-08-vm1-nic1** |
     | Public IP Address Name 1 | **az104-08-vm1-ip** |
-    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name  | **az104-08-vm1** |
+    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name 1 | **az104-08-vm1** |
     | Admin Username | **Student** |
     | Admin Password | **Provide a secure password** |
     | Enable Hotpatching | **false** |
-    | Zone | **2** |
+    | VirtualMachine1Zone | **2** |
 
     >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
 
@@ -124,14 +116,13 @@ In this task, you will deploy Azure virtual machines into different availability
 
     >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Configure Azure virtual machines by using virtual machine extensions
-
+## Task 2: Configure Azure virtual machines by using virtual machine extensions
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -149,7 +140,7 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
 1. On the **scripts** blade, click **Upload**.
 
-1. On the **Upload blob** blade, click on **Browse for files**. In the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**.
+1. On the **Upload blob** blade, click on **Browse for files**. In the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**, then close **Upload blob** blade.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
@@ -217,14 +208,13 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the website hosted on **az104-08-vm1**.
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-#### Task 3: Scale compute and storage for Azure virtual machines
-
+## Task 3: Scale compute and storage for Azure virtual machines
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
@@ -284,7 +274,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
-                    "vmSize": "Standard_DS1_v2"
+            "vmSize": "Standard_DS1_v2"
 
    ```
 
@@ -335,14 +325,13 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
     > **Note**: Wait for the confirmation that the commands were completed successfully.
     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-
+## Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
@@ -364,8 +353,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
    ```
 
-#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
-
+## Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 In this task, you will deploy the Azure virtual machine scale set across availability zones by using the Azure portal.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Create**.
@@ -379,18 +367,18 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
-    | Image | **Windows Server 2019 Datacenter - Gen1** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
-    | Already have a Windows Server license? | **Unchecked** |
-
+    | Licensing | **Unchecked** |
+    | Orchestration mode | **Uniform** |
     >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values):
+1. On the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values), then click on **Ok**:
 
     | Setting | Value |
     | --- | --- |
@@ -403,7 +391,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
 
 1. Back on the **Networking** tab of the **Create a virtual machine scale set** blade, click the **Edit network interface** icon to the right of the network interface entry.
 
-1. On the **Edit network interface** blade, in the **NIC network security group** section, select **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
+1. On the **Edit network interface** blade, in the **subnet** section select **subnet0**, in the **NIC network security group** section, select **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
 
 1. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
@@ -411,7 +399,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | --- | --- |
     | Name | **az10408vmss0-nsg** |
 
-1. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
+1. Click **+ Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -433,8 +421,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
-    | Select a load balancer | **(new) az10408vmss0-lb** |
-    | Select a backend pool | **(new) bepool** |
+    | Select a load balancer | click on **create a load balancer** then give the name: **az10408vmss0-lb** (leave others with their default values) |
 
 1. On the **Scaling** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
@@ -448,7 +435,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | Create new storage account with a unique name |
+    | Diagnostics storage account | **default** |
 
     >**Note**: You will need the name of this storage account in the next task.
 
@@ -469,13 +456,12 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take about 5 minutes.
     
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
+    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
-
+## Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
 1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
@@ -515,14 +501,13 @@ In this task, you will install the Windows Server Web Server role on the instanc
 
     >**Note**: Verify that the browser page displays the name of one of the instances of the Azure virtual machine scale set **az10408vmss0**.
     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 7: Scale compute and storage for Azure virtual machine scale sets
-
+## Task 7: Scale compute and storage for Azure virtual machine scale sets
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
@@ -545,7 +530,7 @@ In this task, you will change the size of virtual machine scale set instances, c
     | --- |--- |
     | Scale mode | **Scale based on a metric** |
 
-1. Click the **+ Add a rule** link and, on the **Scale rule** blade, specify the following settings (leave others with their default values):
+1. Click the **Add a rule** link and, on the **Scale rule** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- |--- |
@@ -602,7 +587,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Close the Cloud Shell pane.
 
-1. On the **az10408vmss0** blade, in the **Settings** section, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values):
+1. On the **az10408vmss0** blade, in the **Settings** section, click **Disks**, click **+ Create and attach a new disk**, and attach a new managed disk with the following settings (leave others with their default values), then click on **Save**:
 
     | Setting | Value |
     | --- | --- |
@@ -646,16 +631,14 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 + Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Configured Azure virtual machines by using virtual machine extensions
 + Scaled compute and storage for Azure virtual machines

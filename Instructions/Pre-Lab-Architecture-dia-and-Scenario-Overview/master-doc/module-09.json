@@ -1,0 +1,12 @@
+[
+  {
+  "Name": "Lab 9: Administer Serverless Computing",
+  "Language": "English",
+  "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Pre-Lab-Architecture-dia-and-Scenario-Overview/lab-9.md",
+        "Order": 1
+      }
+    ]
+  } 
+]

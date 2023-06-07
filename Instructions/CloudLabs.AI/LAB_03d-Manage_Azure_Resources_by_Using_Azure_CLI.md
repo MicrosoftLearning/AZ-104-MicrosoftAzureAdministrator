@@ -1,28 +1,19 @@
-# Lab 03d - Manage Azure resources by Using Azure CLI
-# Student lab manual
-
+# Lab 3d - Manage Azure resources by Using Azure CLI
 ## Lab scenario
-
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, Azure Resource Manager templates, and Azure PowerShell, you need to carry out the equivalent task by using Azure CLI. To avoid installing Azure CLI, you will leverage Bash environment available in Azure Cloud Shell.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Start a Bash session in Azure Cloud Shell
 + Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 + Task 3: Configure the managed disk by using Azure CLI
 
-## Estimated timing: 20 minutes
+### Estimated timing: 20 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab03d.png)
 
-> **Note**: Always create your own secure password for any virtual machine or user account you create. If the virtual machine is created for you, use **Reset password** in the Portal to update the password. 
-
-### Exercise 1
-
-#### Task 1: Start a Bash session in Azure Cloud Shell
-
+## Task 1: Start a Bash session in Azure Cloud Shell
 In this task, you will open a Bash session in Cloud Shell. 
 
 1. From the portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -42,8 +33,7 @@ In this task, you will open a Bash session in Cloud Shell.
 
 1. Ensure **Bash** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-#### Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
-
+## Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 In this task, you will use the existing resource group for creating the Azure managed disk by using the Azure CLI session within Cloud Shell.
 
 1. From the Bash session within Cloud Shell, run the following commands with the value of the DeploymentID, you can find Deployment ID from the environmental detail page:
@@ -77,8 +67,7 @@ In this task, you will use the existing resource group for creating the Azure ma
    az disk show --resource-group $RGNAME --name $DISKNAME
    ```
 
-#### Task 3: Configure the managed disk by using Azure CLI
-
+## Task 3: Configure the managed disk by using Azure CLI
 In this task, you will be the managing configuration of the Azure managed disk by using the Azure CLI session within Cloud Shell. 
 
 1. To increase the size of the Azure managed disk to **64 GB**, from the Bash session within Cloud Shell, run the following:
@@ -104,13 +93,14 @@ In this task, you will be the managing configuration of the Azure managed disk b
    ```sh
    az disk show --resource-group $RGNAME --name $DISKNAME --query sku
    ```
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
-#### Review
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### Review
 
 In this lab, you have:
 

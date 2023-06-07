@@ -129,7 +129,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
-1. On the **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -170,20 +170,6 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
-
-1. From Start menu open **Windows PowerShell** under Windows PowerShell folder and run the following to install Microsoft Edge Browser.
-
-    ```powershell
-    md -Path $env:temp\edgeinstall -erroraction SilentlyContinue | Out-Null
-    $Download = join-path $env:temp\edgeinstall MicrosoftEdgeEnterpriseX64.msi
-    
-    Invoke-WebRequest 'https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/a2662b5b-97d0-4312-8946-598355851b3b/MicrosoftEdgeEnterpriseX64.msi'  -OutFile $Download
-    
-    Start-Process "$Download" -ArgumentList "/quiet"
-    
-   ```
-   
-1. After finishing the installation of Microsoft Edge Browser you will notice Microsoft Edge shortcut on the desktop then close the PowerShell window.
 
 1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start an Edge web browser from desktop, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
 
@@ -286,7 +272,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. On the **Browse And Recover Files** page, note the drive letter of the recovery volume and review the tip regarding the use of robocopy.
 
-1. Click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Select the Windows Start button, search and open **Command Prompt**
 
 1. From the Command Prompt, run the following to copy the restore the **hosts** file to the original location (replace `[recovery_volume]` with the drive letter of the recovery volume you identified earlier):
 

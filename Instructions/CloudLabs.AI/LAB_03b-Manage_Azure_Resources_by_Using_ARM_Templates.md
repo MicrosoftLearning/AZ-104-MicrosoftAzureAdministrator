@@ -1,37 +1,28 @@
-# Lab 03b - Manage Azure resources by Using ARM Templates
-# Student lab manual
-
+# Lab 3b - Manage Azure resources by Using ARM Templates
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Review an ARM template for deployment of an Azure managed disk
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
-## Estimated timing: 20 minutes
+### Estimated timing: 20 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab03b.png)
 
-
-### Exercise 1
-
-#### Task 1: Review an ARM template for deployment of an Azure managed disk
-
+## Task 1: Review an ARM template for deployment of an Azure managed disk
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
-
-1. Sign in to the [**Azure portal**](https://portal.azure.com).
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03a-rg1-[Deployment-ID]**.
+1. In the list of resource groups, click **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
-1. On the **az104-03a-rg1-[Deployment-ID]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-[Deployment-ID] - Deployments** blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** Deployments blade, click the first entry in the list of deployments.
 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
@@ -49,7 +40,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     
 1. Close all **File Explorer** windows.
 
-#### Task 2: Create an Azure managed disk by using an ARM template
+## Task 2: Create an Azure managed disk by using an ARM template
 
 1. In the Azure portal, search for and select **Deploy a custom template**.
 
@@ -87,7 +78,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Setting | Value |
     | --- |--- |
     | Subscription | *the name of the Azure subscription you are using in this lab* |
-    | Resource Group | select the existing resource group **az104-03b-rg1-[Deployment-ID]** |
+    | Resource Group | select the existing resource group **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Region | Same region as the Resource Group |
     | Disk Name | **az104-03b-disk1** |
     | Location | the value of the location parameter you noted in the previous task |
@@ -101,26 +92,24 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Verify that the deployment completed successfully.
 
-#### Task 3: Review the ARM template-based deployment of the managed disk
+## Task 3: Review the ARM template-based deployment of the managed disk
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1-[Deployment-ID]**.
+1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />****.
 
-1. On the **az104-03b-rg1-[Deployment-ID]** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. From the **az104-03b-rg1-[Deployment-ID] - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** **Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
     
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 - Reviewed an ARM template for deployment of an Azure managed disk
 - Created an Azure managed disk by using an ARM template
 - Reviewed the ARM template-based deployment of the managed disk

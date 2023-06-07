@@ -1,14 +1,9 @@
-# Lab 09a - Implement Web Apps
-# Student lab manual
-
+# Lab 9a - Implement Web Apps
 ## Lab scenario
-
 You need to evaluate the use of Azure Web apps for hosting Contoso's websites, hosted currently in the company's on-premises data centers. The websites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Create an Azure web app
 + Task 2: Create a staging deployment slot
 + Task 3: Configure web app deployment settings
@@ -18,12 +13,10 @@ In this lab, you will:
 
 ## Estimated timing: 30 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab09a.png)
 
-### Exercise 1
-
-#### Task 1: Create an Azure web app
-
+## Task 1: Create an Azure web app
 In this task, you will create an Azure web app.
 
 1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
@@ -49,8 +42,7 @@ In this task, you will create an Azure web app.
 
 1. On the deployment blade, click **Go to resource**.
 
-#### Task 2: Create a staging deployment slot
-
+## Task 2: Create a staging deployment slot
 In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
@@ -74,8 +66,7 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-#### Task 3: Configure web app deployment settings
-
+## Task 3: Configure web app deployment settings
 In this task, you will configure web app deployment settings.
 
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
@@ -99,8 +90,7 @@ In this task, you will configure web app deployment settings.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
-#### Task 4: Deploy code to the staging deployment slot
-
+## Task 4: Deploy code to the staging deployment slot
 In this task, you will deploy code to the staging deployment slot.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -150,8 +140,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
-#### Task 5: Swap the staging slots
-
+## Task 5: Swap the staging slots
 In this task, you will swap the staging slot with the production slot
 
 1. Navigate back to the App Service blade.
@@ -164,8 +153,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
-#### Task 6: Configure and test autoscaling of the Azure web app
-
+## Task 6: Configure and test autoscaling of the Azure web app
 In this task, you will configure and test the autoscaling of the Azure web app.
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
@@ -233,17 +221,15 @@ In this task, you will configure and test the autoscaling of the Azure web app.
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
 1. Close the Cloud Shell pane.
-    
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-#### Review
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### Review
 In this lab, you have:
-
 + Created an Azure web app
 + Created a staging deployment slot
 + Configured web app deployment settings

@@ -1,27 +1,19 @@
-# Lab 09c - Implement Azure Kubernetes Service
-# Student lab manual
-
+# Lab 9c - Implement Azure Kubernetes Service
 ## Lab scenario
-
 Contoso has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
 
 ## Objectives
-
 In this lab, you will:
-
 + Task 1: Register Microsoft.Kubernetes and Microsoft.Kubernetes configuration resource providers.
 + Task 2: Deploy an Azure Kubernetes Service cluster
 + Task 3: Deploy pods into the Azure Kubernetes Service cluster
 + Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 ## Estimated timing: 40 minutes
+## Architecture diagram
+![image](../media/lab09c.png)
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Register the Microsoft.Kubernetes and Microsoft.Kubernetes Configuration resource providers.
-
+## Task 1: Register the Microsoft.Kubernetes and Microsoft.Kubernetes Configuration resource providers.
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
 1. If you have not yet signed in, please navigate to [Azure portal](https://portal.azure.com).
@@ -50,8 +42,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Deploy an Azure Kubernetes Service cluster
-
+## Task 2: Deploy an Azure Kubernetes Service cluster
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
 1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Create**, and then click **+ Create a Kubernetes cluster**.
@@ -103,8 +94,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
 
-#### Task 3: Deploy pods into the Azure Kubernetes Service cluster
-
+## Task 3: Deploy pods into the Azure Kubernetes Service cluster
 In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. On the deployment blade, click the **Go to resource** link.
@@ -171,8 +161,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
 
-#### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
-
+## Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 In this task, you will scale horizontally the number of pods and then the number of cluster nodes.
 
 1. From the **Cloud Shell** pane, run the following to scale the deployment by increasing the number of pods to 2:
@@ -248,16 +237,14 @@ In this task, you will scale horizontally the number of pods and then the number
 
 1. Close the **Cloud Shell** pane.
    
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click the (...) icon located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.If you receive a success message, you can proceed to the next task. 
-    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
-
+### Review
 In this lab, you have:
-
 + Deployed an Azure Kubernetes Service cluster
 + Deployed pods into the Azure Kubernetes Service cluster
 + Scaled containerized workloads in the Azure Kubernetes service cluster
