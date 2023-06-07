@@ -82,8 +82,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public inbound Ports | **None** |
     | Accelerated networking | **Unchecked**
     | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
- |
-
+ 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -377,7 +376,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. Click **Create storage** and wait until the Azure Cloud Shell pane is displayed.
 
-      ![](../CloudLabs.AI/Images/crtstorage.png)
+      ![](../CloudLabs.AI/Images/crtstr.png)
    
 1. From the Cloud Shell pane, run the following to register Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
