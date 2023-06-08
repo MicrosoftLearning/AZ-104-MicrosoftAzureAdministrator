@@ -45,11 +45,12 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ```
 
 1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
-    ![image](../media/2b-new.png)
 
    ```
    //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
    ```
+
+    ![image](../media/2b-new.png)
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
 
@@ -209,14 +210,11 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
- 
-
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
 
