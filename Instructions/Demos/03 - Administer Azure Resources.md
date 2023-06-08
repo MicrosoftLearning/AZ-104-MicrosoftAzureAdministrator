@@ -9,13 +9,11 @@ demo:
 
 In this demonstration, we will explore the Azure portal.
 
-**References**
+**Reference**: [Manage Azure portal settings and preferences](https://docs.microsoft.com/azure/azure-portal/set-preferences)
 
-[Manage Azure portal settings and preferences](https://docs.microsoft.com/azure/azure-portal/set-preferences)
+**Reference**: [Create a dashboard in the Azure portal](https://docs.microsoft.com/azure/azure-portal/azure-portal-dashboards)
 
-[Create a dashboard in the Azure portal](https://docs.microsoft.com/azure/azure-portal/azure-portal-dashboards)
-
-[How to create an Azure support request](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request)
+**Reference**: [How to create an Azure support request](https://docs.microsoft.com/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
 1. Access the Azure Portal.
 
@@ -31,9 +29,7 @@ In this demonstration, we will explore the Azure portal.
 
 In this demonstration, we will experiment with Cloud Shell.
 
-**Reference**
-
-[Quickstart for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
+**Reference**: [Quickstart for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
 
 **Configure the Cloud Shell**
 
@@ -73,9 +69,7 @@ In this demonstration, we will experiment with Cloud Shell.
 
 In this demonstration, we will explore QuickStart templates.
 
-**Reference**
-
-[Tutorial - Create & deploy template - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
+**Reference**: [Tutorial - Create & deploy template - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
 
 1. Start by browsing to the [Azure Quickstart Templates gallery](https://learn.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-resource-manager). Notice there are JSON and Bicep examples. 
 
