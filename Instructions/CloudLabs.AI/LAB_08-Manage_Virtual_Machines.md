@@ -143,7 +143,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in **Task 1**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -502,7 +502,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
 
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the **Task 5**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
