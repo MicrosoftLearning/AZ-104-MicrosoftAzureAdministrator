@@ -288,3 +288,5 @@ In this lab, you have:
 + Deployed an Azure Kubernetes Service cluster
 + Deployed pods into the Azure Kubernetes Service cluster
 + Scaled containerized workloads in the Azure Kubernetes service cluster
+
+**You have successfully completed the lab**
