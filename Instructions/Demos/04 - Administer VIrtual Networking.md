@@ -11,7 +11,7 @@ demo:
 
 In this demonstration, you will create virtual networks.
 
-**Note:** You can use the suggested values for the settings, or your own custom values if you prefer.
+**Reference**
 
 [Quickstart: Create a virtual network - Azure portalk](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
 
@@ -26,6 +26,8 @@ In this demonstration, you will create virtual networks.
 ## Configure Network Security Groups
 
 In this demonstration, you will explore NSGs and service endpoints.
+
+**Reference**
 
 [Restrict access to PaaS resources - tutorial - Azure portal](https://docs.microsoft.com/azure/virtual-network/tutorial-restrict-network-access-to-resources)
 
@@ -54,6 +56,8 @@ In this demonstration, you will explore NSGs and service endpoints.
 ## Configure Azure DNS
 
 In this demonstration, you will explore Azure DNS.
+
+**Reference**
 
 [Tutorial: Host your domain and subdomain - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
 
