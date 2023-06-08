@@ -189,3 +189,5 @@ In this lab, you have:
 - Implemented Management Groups
 - Created custom RBAC roles 
 - Assigned RBAC roles
+
+**You have successfully completed the lab**
