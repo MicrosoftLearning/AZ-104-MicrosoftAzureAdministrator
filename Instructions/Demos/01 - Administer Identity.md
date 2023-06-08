@@ -10,22 +10,18 @@ demo:
 
 This area does not have a formal demonstration. 
 
-**References**
+**Reference**: [Quickstart - Access & create new tenant - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-[Quickstart - Access & create new tenant - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
-
-[Quickstart - View groups & members - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+**Reference**: [Quickstart - View groups & members - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 
 ## Configure User and Group Accounts
 
 In this demonstration, we will explore Azure Active Directory.
 
-**References**
+**Reference**: [Add or delete users - Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-[Add or delete users - Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-
-[Create a basic group and add members - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**Reference**: [Create a basic group and add members - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
 **Note:** Depending on your subscription not all areas of the Azure Active Directory blade will be available. 
 
