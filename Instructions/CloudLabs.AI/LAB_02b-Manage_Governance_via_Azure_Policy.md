@@ -30,13 +30,21 @@ In this lab, we will:
 #### Task 1: Assign tags via the Azure portal
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
-    ![image](../media/2b-1.png)
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    
+    ![image](../media/cloudshell1.png)
+    
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    ![image](../media/cloudhell01.png)
+
+1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. From the Cloud Shell pane, run the following to identify the name of the storage account used by Cloud Shell:
 
