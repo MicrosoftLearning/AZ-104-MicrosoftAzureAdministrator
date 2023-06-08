@@ -24,7 +24,7 @@ In this lab, you will:
 
 In this task, you will create a new container instance for the web application.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
 1. In the Azure portal, search for locate **Container instances** and then, on the **Container instances** blade, click **+ Create**.
 
