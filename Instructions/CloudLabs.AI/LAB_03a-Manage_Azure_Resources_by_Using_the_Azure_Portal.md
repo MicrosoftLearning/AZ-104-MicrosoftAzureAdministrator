@@ -13,9 +13,9 @@ In this lab, we will:
 ## Architecture diagram
 ![image](../media/lab03a.png)
 
-## Excercise 1: Manage Azure resources by Using the Azure Portal
+### Excercise 1: Manage Azure resources by Using the Azure Portal
 
-## Task 1: Use the existing resource groups and deploy resources to resource groups
+#### Task 1: Use the existing resource groups and deploy resources to resource groups
 In this task, you will use the Azure portal to use the existing resource groups and create a disk in the resource group.
 
 1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
