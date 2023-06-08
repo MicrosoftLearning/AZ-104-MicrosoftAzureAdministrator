@@ -14,9 +14,7 @@ a custom route, and associate the route with a subnet.
 
 **Note:** This demonstration requires a virtual network with at least one subnet.
 
-**Reference**
-
-[Route network traffic - tutorial - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
+**Reference**: [Route network traffic - tutorial - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
 
 **Create a routing table**
 
