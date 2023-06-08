@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 07 - Administer Azure Storage'
+    title: 'Demonstration 07: Administer Azure Storage'
     module: 'Administer Azure Storage'
 ---
 
