@@ -8,7 +8,9 @@ demo:
 
 ## Configure Azure Active Directory
 
-This area does not have a formal demonstration. Consider these Quickstarts.
+This area does not have a formal demonstration. 
+
+**References**
 
 [Quickstart - Access & create new tenant - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
