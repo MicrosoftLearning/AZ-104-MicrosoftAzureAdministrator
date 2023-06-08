@@ -143,7 +143,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in **Task 1**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -366,23 +366,26 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+      ![Image](./Images/cloudshell.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-      ![Image](./Images/cloudshell.png)
-    
-     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group**(az104-08-rg01/az104-08-rg02) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+1. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+
+      ![image](../media/advancesetting.png)
+      
+1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and enter under the **Storage Account (2)** section as **cloudshell<inject key="DeploymentID" enableCopy="false" />**, and under the **File share (3)** section type **none** as shown in the below image.
 
 1. Click **Create storage** and wait until the Azure Cloud Shell pane is displayed.
 
-      ![](../CloudLabs.AI/Images/crtstr.png)
+      ![](../media/crtstr.png) 
    
 1. From the Cloud Shell pane, run the following to register Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-
+   ```
+    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
@@ -502,7 +505,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
 
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the **Task 5**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -605,13 +608,15 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**:
 
+     ```powershell
+     $rgName = 'az104-08-rg02'
+     ```
+    ```powershell 
+     $lbpipName = 'az10408vmss0-lb-publicip'
+     ```
    ```powershell
-   $rgName = 'az104-08-rg02'
-   
-   $lbpipName = 'az10408vmss0-lb-publicip'
-
-   $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
-   ```
+     $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
+     ```
 
 1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
 
@@ -653,9 +658,11 @@ In this task, you will change the size of virtual machine scale set instances, c
 
    ```powershell
    $rgName = 'az104-08-rg02'
-   
+   ``` 
+   ```powershell
    Set-Location -Path $HOME
-
+   ```  
+   ```powershell
    Get-Content -Path ./az104-08-configure_VMSS_disks.ps1
    ```
 
