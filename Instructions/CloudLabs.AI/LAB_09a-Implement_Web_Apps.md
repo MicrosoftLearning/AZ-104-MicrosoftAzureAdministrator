@@ -296,3 +296,5 @@ In this lab, you have:
 + Deployed code to the staging deployment slot
 + Swapped the staging slots
 + Configured and test autoscaling of the Azure web app
+
+**You have successfully completed the lab**
