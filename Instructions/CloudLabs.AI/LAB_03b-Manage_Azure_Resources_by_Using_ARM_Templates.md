@@ -22,13 +22,13 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** Deployments blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** **Deployments (1)** blade, click the **first entry (2)** in the list of deployments.
+
+   ![image](../media/deployement.png)
 
 1. On the **Microsoft.ManagedDisk-<inject key="DeploymentID" enableCopy="false" />| Overview** blade, click **Template**.
 
     >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, or **Deploy** it again.
-
-    ![image](../media/deployement.png)
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
