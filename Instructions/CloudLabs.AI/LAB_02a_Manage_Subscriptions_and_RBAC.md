@@ -97,11 +97,21 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Replace the **`SUBSCRIPTION_ID`** placeholder in the JSON file with the subscription ID you copied into Clipboard and save the change.
 
-1. In the Azure portal, open **Cloud Shell** pane by clicking on the toolbar icon directly to the right of the search textbox.
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    
+    ![image](../media/cloudshell1.png)
+    
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+
+    ![image](../media/cloudhell01.png)
+
+1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
@@ -141,7 +151,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     ![image](../media/lab2-7.png) 
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-***********************.**********.onmicrosoft.com. Click **Next** and then **Review and assign**.
+1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
 
     ![image](../media/lab2-8.png)
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
