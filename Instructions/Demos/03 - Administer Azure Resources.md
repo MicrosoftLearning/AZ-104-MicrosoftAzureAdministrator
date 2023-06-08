@@ -9,6 +9,8 @@ demo:
 
 In this demonstration, we will explore the Azure portal.
 
+**References**
+
 [Manage Azure portal settings and preferences](https://docs.microsoft.com/azure/azure-portal/set-preferences)
 
 [Create a dashboard in the Azure portal](https://docs.microsoft.com/azure/azure-portal/azure-portal-dashboards)
@@ -29,9 +31,11 @@ In this demonstration, we will explore the Azure portal.
 
 In this demonstration, we will experiment with Cloud Shell.
 
-**Configure the Cloud Shell**
+**Reference**
 
 [Quickstart for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
+
+**Configure the Cloud Shell**
 
 1.  Access the **Azure Portal**.
 
@@ -68,6 +72,8 @@ In this demonstration, we will experiment with Cloud Shell.
 ## Demonstration -- QuickStart Templates
 
 In this demonstration, we will explore QuickStart templates.
+
+**Reference**
 
 [Tutorial - Create & deploy template - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
 
