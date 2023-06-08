@@ -11,9 +11,7 @@ demo:
 
 In this demonstration, you will create virtual networks.
 
-**Reference**
-
-[Quickstart: Create a virtual network - Azure portalk](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
+**Reference**: [Quickstart: Create a virtual network - Azure portalk](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
 
 ## Create a virtual network in the portal
 
@@ -27,9 +25,7 @@ In this demonstration, you will create virtual networks.
 
 In this demonstration, you will explore NSGs and service endpoints.
 
-**Reference**
-
-[Restrict access to PaaS resources - tutorial - Azure portal](https://docs.microsoft.com/azure/virtual-network/tutorial-restrict-network-access-to-resources)
+**Reference**: [Restrict access to PaaS resources - tutorial - Azure portal](https://docs.microsoft.com/azure/virtual-network/tutorial-restrict-network-access-to-resources)
 
 **Create a network security group**
 
@@ -57,9 +53,7 @@ In this demonstration, you will explore NSGs and service endpoints.
 
 In this demonstration, you will explore Azure DNS.
 
-**Reference**
-
-[Tutorial: Host your domain and subdomain - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
+**Reference**: [Tutorial: Host your domain and subdomain - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
 
 
 **Create a DNS zone**
@@ -74,8 +68,7 @@ In this demonstration, you will explore Azure DNS.
 
 **Add a DNS record set**
 
-
-[Tutorial: Create an alias record to refer to a zone resource record](https://learn.microsoft.com/azure/dns/tutorial-alias-rr)
+**Reference**: [Tutorial: Create an alias record to refer to a zone resource record](https://learn.microsoft.com/azure/dns/tutorial-alias-rr)
 
 1. Once your zone is created, select **+Record Set**.
 
