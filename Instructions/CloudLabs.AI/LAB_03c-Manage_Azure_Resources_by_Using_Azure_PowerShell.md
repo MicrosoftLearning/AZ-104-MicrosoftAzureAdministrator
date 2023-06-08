@@ -11,29 +11,31 @@ In this lab, you will:
 ## Architecture diagram
 ![image](../media/lab03c.png)
 
-## Excercise: Manage Azure resources by Using Azure PowerShell
+### Excercise: Manage Azure resources by Using Azure PowerShell
 
-## Task 1: Start a PowerShell session in Azure Cloud Shell
+#### Task 1: Start a PowerShell session in Azure Cloud Shell
 
 In this task, you will open a PowerShell session in Cloud Shell. 
 
 1. In the portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+   ![image](../media/cloudshellicon.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/showadvancesettings.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an **use existing(1)** for the **Resource group**, and give some unique name under the **Storage Account(2)** section, and under the **File share** section type **none(3)** as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+    ![image](../media/createstorage.png)
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
+1. Click **Create storage(4)**, and wait until the Azure Cloud Shell pane is displayed. 
 
 1. Ensure **PowerShell** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-## Task 2: Use the existing resource group and create an Azure managed disk by using Azure PowerShell
+#### Task 2: Use the existing resource group and create an Azure managed disk by using Azure PowerShell
 
 In this task, you will use an existing resource group and create an Azure managed disk by using the Azure PowerShell session within the Cloud Shell
 
@@ -72,7 +74,7 @@ In this task, you will use an existing resource group and create an Azure manage
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
-## Task 3: Configure the managed disk by using Azure PowerShell
+#### Task 3: Configure the managed disk by using Azure PowerShell
 
 In this task, you will manage the configuration of the Azure managed disk by using the Azure PowerShell session within Cloud Shell.
 
@@ -117,3 +119,5 @@ In this lab, you have:
 - Started a PowerShell session in Azure Cloud Shell
 - Use the existing resource group and create an Azure managed disk by using Azure PowerShell
 - Configured the managed disk by using Azure PowerShell
+
+## You have successfully completed the lab
