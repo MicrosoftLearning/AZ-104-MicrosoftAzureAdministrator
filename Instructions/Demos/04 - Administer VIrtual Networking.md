@@ -1,7 +1,7 @@
 ---
 
 demo:
-    title: 'Demonstration: 04 - Administer Vritual Networking'
+    title: 'Demonstration 04: Administer Virtual Networking'
     module: 'Administer Virtual Networking'
 ---
 
