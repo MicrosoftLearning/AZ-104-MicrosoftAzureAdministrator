@@ -32,11 +32,11 @@ In this lab, you will:
 #### Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups. 
-
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
-
+1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
-![image](../media/lab2-1.png) 
+
+    ![image](../media/lab2-1.png) 
+    
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perfom the following sequence of steps:
 
     1. In the Azure portal, search for and select **Azure Active Directory**.
@@ -44,7 +44,9 @@ In this task, you will create and configure management groups.
     1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
     1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
- ![image](../media/lab2-2.png)
+
+        ![image](../media/lab2-2.png)
+   
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
 1. On the **Management groups** blade, click **+ Create**.
@@ -59,7 +61,9 @@ In this task, you will create and configure management groups.
     | Management group display name | **az104-02-mg1** |
 
 1. In the list of management groups, click the entry representing the newly created management group.
-  ![image](../media/lab2-3.png)
+
+    ![image](../media/lab2-3.png)
+  
 1. On the **az104-02-mg1** blade, click **Subscriptions**. 
 
 1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
@@ -91,7 +95,7 @@ In this task, you will create a definition of a custom RBAC role.
    ```
     > **Note**: If you are not sure where the files are stored locally in your lab environment, please ask your instructor.
 
-1. Replace the `SUBSCRIPTION_ID` placeholder in the JSON file with the subscription ID you copied into Clipboard and save the change.
+1. Replace the **`SUBSCRIPTION_ID`** placeholder in the JSON file with the subscription ID you copied into Clipboard and save the change.
 
 1. In the Azure portal, open **Cloud Shell** pane by clicking on the toolbar icon directly to the right of the search textbox.
 
@@ -100,7 +104,9 @@ In this task, you will create a definition of a custom RBAC role.
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
-  ![image](../media/lab2-5.png)
+
+    ![image](../media/lab2-5.png)
+
 1. From the Cloud Shell pane, run the following to create the custom role definition:
 
    ```powershell
@@ -114,7 +120,9 @@ In this task, you will create a definition of a custom RBAC role.
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
 1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
-  ![image](../media/lab2-6.png)
+
+    ![image](../media/lab2-6.png)
+
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -129,12 +137,13 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 1. In the Azure portal, navigate back to the **az104-02-mg1** management group and display its **details**.
 
 1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. On the **Role** tab.
-  ![image](../media/lab2-7.png) 
+
+    ![image](../media/lab2-7.png) 
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
 1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-***********************.**********.onmicrosoft.com. Click **Next** and then **Review and assign**.
 
-![image](../media/lab2-8.png) 
+    ![image](../media/lab2-8.png)
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
