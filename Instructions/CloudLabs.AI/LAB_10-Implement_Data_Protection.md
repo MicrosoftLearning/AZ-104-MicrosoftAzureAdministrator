@@ -12,9 +12,10 @@ In this lab, you will:
 + Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 + Task 7: Review the Azure Recovery Services soft delete functionality (optional)
 
-## Estimated timing: 50 minutes
 ## Architecture diagram
 ![image](../media/lab10.png)
+
+## Excercise1: Backup virtual machines
 
 ## Task 1: Provision the lab environment
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
@@ -24,6 +25,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
 1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** resource group, on the overview page of **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** copy the location and paste it in a notepad you will need it in next steps
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+   ![image](../media/cloudshell1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
@@ -38,6 +41,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
+
+   ![image](../media/uploaddownloadfilesicon.png)
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
@@ -177,6 +182,8 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
 
+1. Open the downloaded file in folder and right click on it and **Run as administrator** to install it.
+
 1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
 
 1. On **Installtion Settings** page click on **Next**.
@@ -210,6 +217,8 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected, and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
 
 1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Schedule Backup**.
+
+   ![image](../media/action.png)
 
 1. In the **Schedule Backup Wizard**, on the **Getting started** page, click **Next**.
 
