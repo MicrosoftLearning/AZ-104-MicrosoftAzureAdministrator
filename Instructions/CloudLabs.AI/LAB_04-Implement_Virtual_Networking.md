@@ -130,7 +130,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 #### Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
-   >**Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
+   > **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
@@ -416,3 +416,5 @@ In this lab, you have:
 + Configured network security groups
 + Configured Azure DNS for internal name resolution
 + Configured Azure DNS for external name resolution
+
+## You have successfully completed the lab
