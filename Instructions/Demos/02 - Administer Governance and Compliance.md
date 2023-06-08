@@ -9,17 +9,15 @@ demo:
 
 ## Configure Subscriptions
 
-This area does not have a formal demonstration. Consider this Quickstart.
+This area does not have a formal demonstration. 
 
-[Create an additional Azure subscription](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
+**Reference**: [Create an additional Azure subscription](https://docs.microsoft.com/azure/cost-management-billing/manage/create-subscription)
 
 ## Configure Azure Policy
 
 In this demonstration, we will work with Azure policies.
 
-**Reference**
-
-[Tutorial: Build policies to enforce compliance - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
+**Reference**: [Tutorial: Build policies to enforce compliance - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
 
 **Assign a policy**
 
@@ -95,11 +93,9 @@ In this demonstration, we will work with Azure policies.
 
 In this demonstration, we will learn about role assignments.
 
-**References**
+**Reference**: [Tutorial: Grant a user access to Azure resources using the Azure portal - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
 
-[Tutorial: Grant a user access to Azure resources using the Azure portal - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
-
-[Quickstart - Check access for a user to Azure resources - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
+**Reference**: [Quickstart - Check access for a user to Azure resources - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/check-access)
 
 **Locate Access Control blade**
 
@@ -113,30 +109,24 @@ In this demonstration, we will learn about role assignments.
 
 1.  Select the **Roles** tab (top).
 
-2.  Review the large number of built-in roles that are available.
+1.  Review the large number of built-in roles that are available.
 
-3.  Double-click a role, and then select **Permissions** (top).
+1.  Double-click a role, and then select **Permissions** (top).
 
-4.  Continue drilling into the role until you can view the **Read, Write, and Delete** actions for that role.
+1.  Continue drilling into the role until you can view the **Read, Write, and Delete** actions for that role.
 
-5.  Return to the **Access Control (IAM)** blade.
+1.  Return to the **Access Control (IAM)** blade.
 
 **Add a role assignment**
 
 1.  Create a user.
 
-2.  Select **Add role assignment**.
+1.  Select **Add role assignment** and pick a role. For exmaple, *owner*.
 
-    -   **Role**: *Owner*
+1.  Select **Check access**.
 
-    -   **Select**: *Managers*
+1.  Select the user.
 
-    -   **Save** your changes.
+1.  Notice the user is part of the **Managers** group and is an **Owner**.
 
-3.  Select **Check access**.
-
-4.  Select the user.
-
-5.  Notice the user is part of the **Managers** group and is an **Owner**.
-
-6.  Notice that you can **Deny assignments**.
+1.  Notice that you can **Deny assignments**.
