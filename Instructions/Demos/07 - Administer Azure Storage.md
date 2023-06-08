@@ -11,7 +11,7 @@ demo:
 
 In this demonstration, we will create a storage account.
 
-[Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
+**Reference**: [Create a storage account](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal)
 
 1. Use the Azure portal.
 
@@ -38,7 +38,7 @@ In this demonstration, we will explore blob storage.
 
 **Note:** These steps require a storage account.
 
-[Quickstart: Upload, download, and list blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)
+**Reference**: [Quickstart: Upload, download, and list blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)
 
 1. Navigate to a storage account in the Azure portal.
 
@@ -54,7 +54,7 @@ In this demonstration, we will work with files shares and snapshots.
 
 **Note:** These steps require a storage account.
 
-[Quickstart for managing Azure file shares](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal)
+**Reference**: [Quickstart for managing Azure file shares](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-portal?tabs=azure-portal)
 
 1. Review the purpose of file shares. 
 
@@ -71,7 +71,7 @@ In this demonstration, we will create a shared access signature.
 
 **Note:** This demonstration requires a storage account, with a blob container, and an uploaded file.
 
-[Create SAS tokens for storage containers](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
+**Reference**: [Create SAS tokens for storage containers](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
 
 1. Select a blob or file that you want to secure. 
 
@@ -84,13 +84,13 @@ In this demonstration, we will create a shared access signature.
 
 In this demonstration, we will review several common Azure storage tools. 
 
-[Get started with Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
+**Reference**: [Get started with Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
 
 1. Install the Storage Explorer or use the Storage Browser.
 
 1. Review how to browse and create storage resources. For example, add a blob container. 
 
-[Copy or move data to Azure Storage by using AzCopy v10](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/files/toc.json)
+**Reference**: [Copy or move data to Azure Storage by using AzCopy v10](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/files/toc.json)
 
 1. Discuss when to use AzCopy. View  the help, **azcopy /?**.
 
