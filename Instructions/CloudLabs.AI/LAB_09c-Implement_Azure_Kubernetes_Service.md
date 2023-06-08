@@ -28,7 +28,7 @@ In this lab, you will:
 
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
