@@ -10,9 +10,7 @@ demo:
 
 **Note:** For this demonstration you will need two virtual networks.
 
-**Reference**
-
-[Connect virtual networks with VNet peering - tutorial](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
+**Reference**: [Connect virtual networks with VNet peering - tutorial](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 
 **Configure VNet peering on the first virtual network**
 
