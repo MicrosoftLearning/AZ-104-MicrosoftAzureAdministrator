@@ -19,6 +19,8 @@ This area does not have a formal demonstration. Consider these Quickstarts.
 
 In this demonstration, we will explore Azure Active Directory.
 
+**References**
+
 [Add or delete users - Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
 [Create a basic group and add members - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
