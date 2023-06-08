@@ -98,3 +98,5 @@ In this lab, you have:
 
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
+
+**You have successfully completed the lab**
