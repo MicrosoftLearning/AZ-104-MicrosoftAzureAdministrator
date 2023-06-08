@@ -195,7 +195,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     ![image](../media/9c-9.png)
 
 
-## Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
+#### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
 
