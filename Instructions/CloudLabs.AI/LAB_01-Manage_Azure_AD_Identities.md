@@ -90,7 +90,7 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **Manage** section, click **Assigned roles**.
 
-    ![](../CloudLabs.AI/Images/assignrole.png)
+     ![](../CloudLabs.AI/Images/assignrole.png)
 
 1.  then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
@@ -282,7 +282,6 @@ In this task, you will create a new Azure AD tenant.
     | Organization name | **Contoso Lab (1)** |
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter **(2)** | 
     | Country/Region | **United States (3)** |
-    
     
       ![](../CloudLabs.AI/Images/crttenant2.png)   
    
