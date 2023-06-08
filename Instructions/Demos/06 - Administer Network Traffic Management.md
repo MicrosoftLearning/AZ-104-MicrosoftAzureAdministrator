@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 06 - Administer Network Traffic Management'
+    title: 'Demonstration 06: Administer Network Traffic Management'
     module: 'Administer Network Traffic Management'
 ---
 
