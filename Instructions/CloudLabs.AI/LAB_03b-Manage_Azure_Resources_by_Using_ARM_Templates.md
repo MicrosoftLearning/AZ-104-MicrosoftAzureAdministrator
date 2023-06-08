@@ -102,7 +102,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />****.
+1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
 1. On the **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
