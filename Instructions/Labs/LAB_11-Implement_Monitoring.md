@@ -1,9 +1,3 @@
----
-lab:
-    title: '11 - Implement Monitoring'
-    module: 'Module 11 - Monitoring'
----
-
 # Lab 11 - Implement Monitoring
 # Student lab manual
 
@@ -22,8 +16,6 @@ In this lab, you will:
 + Task 5: Review Azure Monitor functionality
 + Task 6: Review Azure Log Analytics functionality
 
-## Estimated timing: 45 minutes
-
 ## Instructions
 
 ### Exercise 1
@@ -32,19 +24,15 @@ In this lab, you will:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudhell01.png)
-    
     >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
-
-    ![image](../media/cloudhell02.png)
+     
+     ![image](../media/cloudhell01.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -52,7 +40,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Edit the Parameters file you just uploaded and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with <inject key="Region" enableCopy="false" /> ):
 
     >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
@@ -66,15 +54,14 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-   >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**.
-
-   ```powershell
+     ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-11-vm-template.json `
       -TemplateParameterFile $HOME/az104-11-vm-parameters.json `
       -AsJob
    ```
+    >**Note**: You will be prompted to provide an Admin password enter **Pa55w.rd1234**.
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
 
@@ -103,7 +90,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-11-rg1** |
     | Log Analytics Workspace | any unique name |
-    | Region | the name of the Azure region into which you deployed the virtual machine in the previous task |
+    | Region | <inject key="Region" enableCopy="false" /> |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -346,3 +333,5 @@ In this lab, you have:
 + Configured Azure virtual machine diagnostic settings
 + Reviewed Azure Monitor functionality
 + Reviewed Azure Log Analytics functionality
+
+### You have successfully completed the lab.
