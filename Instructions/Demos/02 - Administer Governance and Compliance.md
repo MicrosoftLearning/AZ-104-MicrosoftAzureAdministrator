@@ -17,6 +17,8 @@ This area does not have a formal demonstration. Consider this Quickstart.
 
 In this demonstration, we will work with Azure policies.
 
+**Reference**
+
 [Tutorial: Build policies to enforce compliance - Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage)
 
 **Assign a policy**
@@ -92,6 +94,8 @@ In this demonstration, we will work with Azure policies.
 ## Configure Role-Based Access Control
 
 In this demonstration, we will learn about role assignments.
+
+**References**
 
 [Tutorial: Grant a user access to Azure resources using the Azure portal - Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal)
 
