@@ -27,6 +27,7 @@ In this lab, you will:
 
 ## Architecture diagram
 ![image](../media/lab02a.png)
+
 ### Exercise 1: Manage Subscriptions and RBAC
 
 #### Task 1: Implement Management Groups
