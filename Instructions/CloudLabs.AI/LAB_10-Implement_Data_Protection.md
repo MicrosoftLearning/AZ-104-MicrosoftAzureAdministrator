@@ -177,6 +177,8 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
 
+1. Open the downloaded file in folder and right click on it and **Run as administrator** to install it.
+
 1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
 
 1. On **Installtion Settings** page click on **Next**.
