@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 05 - Administer Intersite Connectivity'
+    title: 'Demonstration 05: Administer Intersite Connectivity'
     module: 'Administer Intersite Connectivity'
 ---
 
