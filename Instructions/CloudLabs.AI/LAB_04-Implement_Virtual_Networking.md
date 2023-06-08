@@ -87,7 +87,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     
 4. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give the name as **str<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section give the name as **fs<inject key="DeploymentID" enableCopy="false" />** as shown in the below image.
 
-   ![image](../media/AZ-104-labrecent.jpg)
+   ![image](../media/AZ-104-labrecent1.0.png)
 
 3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
