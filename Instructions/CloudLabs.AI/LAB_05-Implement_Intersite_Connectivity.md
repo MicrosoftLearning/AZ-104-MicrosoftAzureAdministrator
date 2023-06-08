@@ -36,7 +36,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
     
     ![image](../media/advancesetting.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and enter under the **Storage Account (2)** section as **cloudshell<inject key="DeploymentID" enableCopy="false" />**, and under the **File share (3)** section type **none** as shown in the below image.
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
 
