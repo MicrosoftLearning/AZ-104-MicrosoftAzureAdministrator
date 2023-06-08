@@ -20,7 +20,7 @@ In this lab, you will:
 #### Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with Azure credentials.
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
 
 1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
 
@@ -81,13 +81,13 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 2. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
     ![image](../media/AZ-104-strorage-mount.png)
+ 
+3. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+4. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give the name as **str<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section give the name as **fs<inject key="DeploymentID" enableCopy="false" />** as shown in the below image.
 
-    ![image](../media/Az-104-storagecreate.png)
+   ![image](../media/AZ-104-labrecent1.0.png)
 
 3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -101,7 +101,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
     
-     >**Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234**
+     
  
    ```powershell
    $rgName = 'az104-04-rg1-DeploymentID'
@@ -112,7 +112,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
   
      ```
-      
+   >**Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234** 
    >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
