@@ -608,13 +608,15 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**:
 
+     ```powershell
+     $rgName = 'az104-08-rg02'
+     ```
+    ```powershell 
+     $lbpipName = 'az10408vmss0-lb-publicip'
+     ```
    ```powershell
-   $rgName = 'az104-08-rg02'
-   
-   $lbpipName = 'az10408vmss0-lb-publicip'
-
-   $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
-   ```
+     $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
+     ```
 
 1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
 
@@ -656,9 +658,11 @@ In this task, you will change the size of virtual machine scale set instances, c
 
    ```powershell
    $rgName = 'az104-08-rg02'
-   
+   ``` 
+   ```powershell
    Set-Location -Path $HOME
-
+   ```  
+   ```powershell
    Get-Content -Path ./az104-08-configure_VMSS_disks.ps1
    ```
 
