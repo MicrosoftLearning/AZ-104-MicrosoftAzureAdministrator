@@ -384,7 +384,8 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-
+   ```
+    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
