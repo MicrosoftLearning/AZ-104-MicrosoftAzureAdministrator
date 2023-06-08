@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 01 - Administer Identity'
+    title: 'Demonstration 01: Administer Identity'
     module: 'Administer Identity'
 ---
 
