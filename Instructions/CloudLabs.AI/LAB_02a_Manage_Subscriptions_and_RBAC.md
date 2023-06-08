@@ -110,7 +110,9 @@ In this task, you will create a definition of a custom RBAC role.
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
 1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
-  ![image](../media/lab2-6.png)
+
+   ![image](../media/lab2-6.png)
+  
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
