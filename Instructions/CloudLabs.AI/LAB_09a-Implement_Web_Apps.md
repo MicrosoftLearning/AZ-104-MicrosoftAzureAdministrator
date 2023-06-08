@@ -18,7 +18,6 @@ In this lab, you will:
 + Task 5: Swap the staging slots
 + Task 6: Configure and test autoscaling of the Azure web app
 
-## Estimated timing: 30 minutes
 
 ## Architecture diagram
 
@@ -27,7 +26,7 @@ In this lab, you will:
 
 ### Exercise 1
 
-## Task 1: Create an Azure web app
+#### Task 1: Create an Azure web app
 
 In this task, you will create an Azure web app.
 
@@ -54,15 +53,17 @@ In this task, you will create an Azure web app.
 
 1. On the deployment blade, click **Go to resource**.
 
-## Task 2: Create a staging deployment slot
+#### Task 2: Create a staging deployment slot
 
 In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
-![image](../media/9a-1.png)
+
+    ![image](../media/9a-1.png)
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
-![image](../media/9a-2new.png)
+
+    ![image](../media/9a-2new.png)
 
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
@@ -80,12 +81,13 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-## Task 3: Configure web app deployment settings
+#### Task 3: Configure web app deployment settings
 
 In this task, you will configure web app deployment settings.
 
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
-![image](../media/9a-3new.png)
+
+    ![image](../media/9a-3new.png)
 
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
@@ -93,13 +95,15 @@ In this task, you will configure web app deployment settings.
 1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
 
 1. On the **Deployment Center** blade, copy the **Git Clone Url** entry to Notepad.
-![image](../media/9a-4.png)
+
+    ![image](../media/9a-4.png)
 
 
     >**Note:** You will need the Git Clone Url value in the next task of this lab.
 
 1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
-![image](../media/9a-5.png)
+
+    ![image](../media/9a-5.png)
 
 
     | Setting | Value |
@@ -109,14 +113,15 @@ In this task, you will configure web app deployment settings.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
-## Task 4: Deploy code to the staging deployment slot
+#### Task 4: Deploy code to the staging deployment slot
 
 In this task, you will deploy code to the staging deployment slot.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
-![image](../media/9a-6.png)
+
+    ![image](../media/9a-6.png)
 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
@@ -148,27 +153,30 @@ In this task, you will deploy code to the staging deployment slot.
    ```
 
 1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
-![image](../media/9a-7.png)
 
+    ![image](../media/9a-7.png)
 
 1. Close the Cloud Shell pane.
 
 1. On the staging slot blade, click **Overview** and then click the **URL** link to display the default web page in a new browser tab.
-![image](../media/9a-8.png)
+
+    ![image](../media/9a-8.png)
 
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
-![image](../media/9a-9.png)
+
+    ![image](../media/9a-9.png)
 
 
-## Task 5: Swap the staging slots
+#### Task 5: Swap the staging slots
 
 In this task, you will swap the staging slot with the production slot
 
 1. Navigate back to the blade displaying the production slot of the web app.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
-![image](../media/9a-10.png)
+
+    ![image](../media/9a-10.png)
 
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
@@ -177,7 +185,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
-## Task 6: Configure and test autoscaling of the Azure web app
+#### Task 6: Configure and test autoscaling of the Azure web app
 
 In this task, you will configure and test autoscaling of Azure web app.
 
@@ -186,7 +194,8 @@ In this task, you will configure and test autoscaling of Azure web app.
 1. From the **Scaling section** select the **Rule Based** option, then click on the **Manage rules based scaling** link.
 
 1. Click **Custom autoscale**.
-![image](../media/9a-11.png)
+
+    ![image](../media/9a-11.png)
 
 
     >**Note**: You also have the option of scaling the web app manually.
@@ -194,7 +203,8 @@ In this task, you will configure and test autoscaling of Azure web app.
 1. Select **Scale based on a metric** and click **+ Add a rule**
 
 1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
-![image](../media/9a-12.png)
+
+    ![image](../media/9a-12.png)
 
 
     | Setting | Value |
@@ -254,7 +264,8 @@ In this task, you will configure and test autoscaling of Azure web app.
     >**Note**: You may need to **Refresh** the page.
 
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
-![image](../media/9a-14.png)
+
+    ![image](../media/9a-14.png)
 
 
 1. Close the Cloud Shell pane.
