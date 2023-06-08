@@ -81,7 +81,8 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
     | Enable virtual nodes | **Disabled** (default) |
 
 1. Click **Next: Access >** and, on the **Access** tab of the **Create Kubernetes cluster** blade, leave settings with their default values:
-![image](../media/9c-3.png)
+
+    ![image](../media/9c-3.png)
 
 
     | Setting | Value |
