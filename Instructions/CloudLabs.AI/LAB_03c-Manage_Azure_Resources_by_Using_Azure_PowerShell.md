@@ -19,7 +19,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 1. In the portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-   ![image](../media/cloudshellicon.png)
+   ![image](../media/cloudshellicon1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
