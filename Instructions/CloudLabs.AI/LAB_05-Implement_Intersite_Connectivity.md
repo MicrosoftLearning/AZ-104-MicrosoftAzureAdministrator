@@ -12,7 +12,7 @@ In this lab, you will:
 
  ![image](../media/lab05.png)
  
- ## Exercise 1: Provision the lab environment
+ ## Exercise 1: Configure local and global virtual network peering
 
 #### Task 1: Provision the lab environment
 

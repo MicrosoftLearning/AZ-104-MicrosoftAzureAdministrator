@@ -150,7 +150,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Back on the **ipconfig1** blade, save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-1. Navigate back to the **az104-04-vnet1** blade
+1. Navigate back to the **az104-04-vnet1** blade and click on **Connected Devices** from the left navigation pane.
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
@@ -218,7 +218,7 @@ In this task, you will configure network security groups in order to allow for r
     | Priority | **300** |
     | Name | **AllowRDPInBound** |
 
-1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
+1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **Associate**.
 
 1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
@@ -269,9 +269,10 @@ In this task, you will configure DNS name resolution within a virtual network by
     | Virtual network | **az104-04-vnet1** |
     | Enable auto registration | enabled |
 
+
 1. Click **OK**.
 
-    >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+     >**Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
