@@ -29,6 +29,7 @@ In this lab, we will:
 #### Task 1: Assign tags via the Azure portal
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
+
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
