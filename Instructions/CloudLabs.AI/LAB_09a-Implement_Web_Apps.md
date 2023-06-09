@@ -171,7 +171,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
-    ![image](../media/9a-9.png)
+    ![image](../media/9a-9new.png)
 
 
 #### Task 5: Swap the staging slots
