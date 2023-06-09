@@ -51,11 +51,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
    df
    ```
 
-1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
-
-   ```
-   //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
-   ```
+1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount and ensure the storage account name is there in the output panel (example: `//[Storageacc_name].file.core.windows.net/none`).
 
     ![image](../media/2b-new.png)
 
