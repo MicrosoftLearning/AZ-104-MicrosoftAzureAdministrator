@@ -45,6 +45,8 @@ In this task, you will use the existing resource group for creating the Azure ma
 
    RGNAME='az104-03d-rg1-DeploymentID'
    ```
+   >**Note**: Replace the DeploymentID in the above CLI command with the **<inject key="DeploymentID" enableCopy="false"/>**
+
 1. To retrieve properties of the created resource group, run the following:
 
    ```sh
