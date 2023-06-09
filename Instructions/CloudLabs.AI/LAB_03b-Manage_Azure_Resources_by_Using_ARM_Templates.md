@@ -11,28 +11,28 @@ In this lab, you will:
 ## Architecture diagram
 ![image](../media/lab03b.png)
 
-## Excercise 1: Manage Azure resources by Using ARM Templates
+### Excercise 1: Manage Azure resources by Using ARM Templates
 
-## Task 1: Review an ARM template for deployment of an Azure managed disk
+#### Task 1: Review an ARM template for deployment of an Azure managed disk
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
-1. In the Azure portal, search for and select **Resource groups**. 
+1. In the Azure portal home page, search for and select **Resource groups**. 
 
 1. In the list of resource groups, click **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
 1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 
-1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** Deployments blade, click the first entry in the list of deployments.
+1. On the **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** **Deployments (1)** blade, click the **first entry (2)** in the list of deployments.
 
-1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
+   ![image](../media/deployement.png)
+
+1. On the **Microsoft.ManagedDisk-<inject key="DeploymentID" enableCopy="false" />| Overview** blade, click **Template**.
 
     >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, or **Deploy** it again.
 
-    ![image](../media/deployement.png)
-
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
-1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Template** blade, click **Inputs**.
+1. On the **Microsoft.ManagedDisk-<inject key="DeploymentID" enableCopy="false" />| Template** blade, click **Inputs**.
 
 1. Note the value of the **location** parameter. You will need it for the next task.
 
@@ -42,9 +42,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     
 1. Close all **File Explorer** windows.
 
-## Task 2: Create an Azure managed disk by using an ARM template
+#### Task 2: Create an Azure managed disk by using an ARM template
 
-1. In the Azure portal, search for and select **Deploy a custom template**.
+1. Navigate to Azure portal home page, search for and select **Deploy a custom template**.
 
 1. Click **Template deployment (deploy using custom templates)** found under the **Marketplace** group.
 
@@ -98,9 +98,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Verify that the deployment completed successfully.
 
-## Task 3: Review the ARM template-based deployment of the managed disk
+#### Task 3: Review the ARM template-based deployment of the managed disk
 
-1. In the Azure portal, search for and select **Resource groups**. 
+1. Navigate to the Azure portal home page, search for and select **Resource groups**. 
 
 1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
@@ -119,3 +119,5 @@ In this lab, you have:
 - Reviewed an ARM template for deployment of an Azure managed disk
 - Created an Azure managed disk by using an ARM template
 - Reviewed the ARM template-based deployment of the managed disk
+
+## You have successfully completed the lab

@@ -14,32 +14,38 @@ In this lab, you will:
 ## Architecture diagram
 ![image](../media/lab06.png)
 
-## Excercise: Implement Traffic Management
+### Excercise: Implement Traffic Management
 
-## Task 1: Provision the lab environment
+#### Task 1: Provision the lab environment
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
- ![image](../media/cloudshell.png)
+   ![image](../media/cloudshellicon1.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/showadvancesettings.png)
     
-    > Under the **Show advanced settings**,provide the following details and click **Create Storage**
+    > Under the **Show advanced settings**,provide the following details and click **Create Storage(4)**
 
-    ![](../media/lab6-1.png)
+   * Resource group : Select **Use existing(1)** -> **az104-06-rg1**
+   * Storage account : Select **Create new(2)** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
+   * File Share: Select **Create new** and Enter **none(3)**
 
-   * Resource group : Select **Use existing** -> **az104-06-rg1**
-   * Storage account : Select **Create new** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
-   * File Share: Select **Create new** and Enter **none**
+    ![image](../media/createstorage.png)
 
    > **Note :** Please wait until the storage account is created and proceed with next step.
    
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files (1)** icon, in the drop-down menu, click **Upload (2)** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+
+    ![image](../media/uploadicon.png)
+    
+    ![image](../media/templatefileupload.png)
+    
+    ![image](../media/parametersfileupload.png)
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment:
 
@@ -92,7 +98,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Configure the hub and spoke network topology
+#### Task 2: Configure the hub and spoke network topology
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -130,16 +136,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None (default)** |
+    | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Traffic to remote virtual network | **Allow** |
+    | Traffic forwarded from remote virtual network | **Allow** |
+    | Virtual network gateway | **None** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -176,7 +182,7 @@ In this task, you will configure local peering between the virtual networks you 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 3: Test transitivity of virtual network peering
+#### Task 3: Test transitivity of virtual network peering
 In this task, you will test the transitivity of virtual network peering by using Network Watcher.
 
 1. In the Azure portal, search for and select **Network Watcher**.
@@ -240,7 +246,7 @@ In this task, you will test the transitivity of virtual network peering by using
 
     > **Note**: This is expected since the two spoke virtual networks have not peered with each other (virtual network peering is not transitive).
 
-## Task 4: Configure routing in the hub and spoke topology
+#### Task 4: Configure routing in the hub and spoke topology
 In this task, you will configure and test routing between the two spoke virtual networks by enabling IP forwarding on the network interface of the **az104-06-vm0** virtual machine, enabling routing within its operating system, and configuring user-defined routes on the spoke virtual network.
 
 1. In the Azure portal, search and select **Virtual machines**.
@@ -400,7 +406,7 @@ In this task, you will configure and test routing between the two spoke virtual 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 5: Implement Azure Load Balancer
+#### Task 5: Implement Azure Load Balancer
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
 1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
@@ -492,7 +498,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 6: Implement Azure Application Gateway
+#### Task 6: Implement Azure Application Gateway
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal, search and select **Virtual networks**.
@@ -622,3 +628,5 @@ In this lab, you have:
 + Configure routing in the hub and spoke topology
 + Implement Azure Load Balancer
 + Implement Azure Application Gateway
+
+## You have successfully completed the lab

@@ -15,9 +15,9 @@ In this lab, you will:
 ## Architecture diagram
 ![image](../media/lab10.png)
 
-## Excercise1: Backup virtual machines
+### Excercise1: Backup virtual machines
 
-## Task 1: Provision the lab environment
+#### Task 1: Provision the lab environment
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
 
 1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
@@ -32,17 +32,21 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/showadvancesettings.png)
     
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
+  
+    ![image](../media/createstorage.png)
 
-    ![image](../media/cloudhell01.png)
+1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files (1)** icon, in the drop-down menu, click **Upload (2)** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
-
-   ![image](../media/uploaddownloadfilesicon.png)
+   ![image](../media/uploadicon.png)
+   
+   ![image](../media/templatefileupload.png)
+   
+   ![image](../media/parametersfileupload.png)
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
@@ -64,10 +68,10 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
 
-## Task 2: Create a Recovery Services vault
+#### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
+1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
@@ -100,7 +104,7 @@ In this task, you will create a recovery services vault.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-## Task 3: Implement Azure virtual machine-level backup
+#### Task 3: Implement Azure virtual machine-level backup
 In this task, you will implement Azure virtual-machine level backup.
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to the respected resource group in the Azure portal and on the overview page of the resource group click on **Deployments**.
@@ -142,10 +146,10 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-## Task 4: Implement File and Folder backup
+#### Task 4: Implement File and Folder backup
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
+1. Navigate to the **Home** page, and search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
 
 1. On the **az104-10-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
@@ -254,7 +258,7 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
 
-## Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
 1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
@@ -283,7 +287,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Terminate the Remote Desktop session.
 
-## Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
+#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
 
 1. Switch to the browser window running on your lab computer and displaying the Azure portal.
@@ -326,9 +330,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
 
-   ![Screenshot of the Image to select train.](../CloudLabs.AI/recovery.png)
-
-    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
+   ![image](../CloudLabs.AI/recovery.png)
+   
+   >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
 1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
 
@@ -360,7 +364,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Terminate the Remote Desktop session.
 
-## Task 7: Review the Azure Recovery Services soft delete functionality
+#### Task 7: Review the Azure Recovery Services soft delete functionality
 1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
@@ -454,3 +458,5 @@ In this lab, you have:
 + Performed file recovery by using Azure Recovery Services agent
 + Performed file recovery by using Azure virtual machine snapshots
 + Reviewed the Azure Recovery Services soft delete functionality
+
+## You have successfully completed the lab
