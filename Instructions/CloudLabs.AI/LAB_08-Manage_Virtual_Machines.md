@@ -193,24 +193,24 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
    ```json
-        {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "az104-08-vm1/customScriptExtension",
-            "apiVersion": "2018-06-01",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "az104-08-vm1"
-            ],
-            "properties": {
-                "publisher": "Microsoft.Compute",
-                "type": "CustomScriptExtension",
-                "typeHandlerVersion": "1.7",
-                "autoUpgradeMinorVersion": true,
-                "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
-            }
-        },
+   {
+     "type": "Microsoft.Compute/virtualMachines/extensions",
+     "name": "az104-08-vm1/customScriptExtension",
+     "apiVersion": "2018-06-01",
+     "location": "[resourceGroup().location]",
+     "dependsOn": [
+     "az104-08-vm1"
+             ],
+      "properties": {
+      "publisher": "Microsoft.Compute",
+      "type": "CustomScriptExtension",
+      "typeHandlerVersion": "1.7",
+      "autoUpgradeMinorVersion": true,
+      "settings": {
+                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+             }
+        }
+   },
 
    ```
 
@@ -314,22 +314,22 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace line **51** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
-                    "dataDisks": [
-                      {
-                        "lun": 0,
-                        "name": "az104-08-vm1-datadisk0",
-                        "diskSizeGB": "1024",
-                        "caching": "ReadOnly",
-                        "createOption": "Empty"
-                      },
-                      {
-                        "lun": 1,
-                        "name": "az104-08-vm1-datadisk1",
-                        "diskSizeGB": "1024",
-                        "caching": "ReadOnly",
-                        "createOption": "Empty"
-                      }
-                    ]
+   "dataDisks": [
+     {
+       "lun": 0,
+       "name": "az104-08-vm1-datadisk0",
+       "diskSizeGB": "1024",
+       "caching": "ReadOnly",
+       "createOption": "Empty"
+     },
+     {
+       "lun": 1,
+       "name": "az104-08-vm1-datadisk1",
+       "diskSizeGB": "1024",
+       "caching": "ReadOnly",
+       "createOption": "Empty"
+      }
+   ]
    ```
 
     >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into.
@@ -611,10 +611,10 @@ In this task, you will change the size of virtual machine scale set instances, c
      ```powershell
      $rgName = 'az104-08-rg02'
      ```
-    ```powershell 
+     ```powershell 
      $lbpipName = 'az10408vmss0-lb-publicip'
      ```
-   ```powershell
+     ```powershell
      $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
      ```
 
