@@ -1,5 +1,4 @@
 # Lab 09a - Implement Web Apps
-# Student lab manual
 
 ## Lab scenario
 
@@ -103,13 +102,13 @@ In this task, you will configure web app deployment settings.
 
 1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
 
-    ![image](../media/9a-5.png)
-
 
     | Setting | Value |
     | --- | ---|
     | User name | any globally unique name (must not contain `@` character) |
     | Password | any password that satisfies complexity requirements|
+    
+    ![image](../media/9a-5.png)
 
     >**Note:** You will need these credentials in the next task of this lab.
 
@@ -211,9 +210,6 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
 
-    ![image](../media/9a-12.png)
-
-
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource** |
@@ -227,6 +223,9 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
+    
+    ![image](../media/9a-12.png)
+
 
     >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
 
