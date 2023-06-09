@@ -42,6 +42,10 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files (1)** icon, in the drop-down menu, click **Upload (2)** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
 
     ![image](../media/uploadicon.png)
+    
+    ![image](../media/templatefileupload.png)
+    
+    ![image](../media/parametersfileupload.png)
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment:
 
