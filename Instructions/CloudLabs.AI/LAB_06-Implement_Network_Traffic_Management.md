@@ -25,11 +25,11 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/showadvancesettings.png)
-    
-    > Under the **Show advanced settings**,provide the following details and click **Create Storage(4)**
+   ![image](../media/showadvancesettings.png)
+   
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+       
+   > Under the **Show advanced settings**,provide the following details and click **Create Storage(4)**
 
    * Resource group : Select **Use existing(1)** -> **az104-06-rg1**
    * Storage account : Select **Create new(2)** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
@@ -160,16 +160,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Traffic to remote virtual network | **Allow (default)** |
+    | Traffic to remote virtual network | **Allow** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None (default)** |
+    | Virtual network gateway | **None** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Traffic to remote virtual network | **Allow** |
+    | Traffic forwarded from remote virtual network | **Allow** |
+    | Virtual network gateway | **None** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
