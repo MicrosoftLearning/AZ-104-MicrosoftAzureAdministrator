@@ -36,7 +36,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
   
-    ![image](../media/createstoragelab6.png)
+    ![image](../media/createstorage.png)
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -71,7 +71,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 #### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
+1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
@@ -149,7 +149,7 @@ In this task, you will implement Azure virtual-machine level backup.
 #### Task 4: Implement File and Folder backup
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
+1. Navigate to the **Home** page, and search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
 
 1. On the **az104-10-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
@@ -330,9 +330,9 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
 
-   ![Screenshot of the Image to select train.](../CloudLabs.AI/recovery.png)
-
-    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
+   ![image](../CloudLabs.AI/recovery.png)
+   
+   >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
 1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
 
