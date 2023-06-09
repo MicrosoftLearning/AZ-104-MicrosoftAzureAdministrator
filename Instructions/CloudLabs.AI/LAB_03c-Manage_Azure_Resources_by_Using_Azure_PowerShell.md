@@ -23,9 +23,9 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/showadvancesettings.png)
+   ![image](../media/showadvancesettings.png)
+   
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.   
     
     >Under **Advanced Settings**, you need to select an **use existing(1)** for the **Resource group**, and give some unique name under the **Storage Account(2)** section, and under the **File share** section type **none(3)** as shown in the below image.
 
