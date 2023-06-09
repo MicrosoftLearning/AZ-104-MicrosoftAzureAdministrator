@@ -305,7 +305,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
-            "vmSize": "Standard_DS1_v2"
+   "vmSize": "Standard_DS1_v2"
 
    ```
 
