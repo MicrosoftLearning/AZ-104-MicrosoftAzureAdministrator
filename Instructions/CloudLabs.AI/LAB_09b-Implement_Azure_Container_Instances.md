@@ -1,5 +1,4 @@
 # Lab 09b - Implement Azure Container Instances
-# Student lab manual
 
 ## Lab scenario
 
@@ -30,8 +29,6 @@ In this task, you will create a new container instance for the web application.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
-    ![image](../media/9b-1.png)
-
 
     | Setting | Value |
     | ---- | ---- |
@@ -42,14 +39,16 @@ In this task, you will create a new container instance for the web application.
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
-1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
+    ![image](../media/9b-1.png)
 
-    ![image](../media/9b-2.png)
+1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
 
     | Setting | Value |
     | --- | --- |
     | DNS name label | any valid, globally unique DNS host name |
+
+    ![image](../media/9b-2.png)
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
