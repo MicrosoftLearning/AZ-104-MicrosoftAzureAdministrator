@@ -35,10 +35,6 @@ In this lab, you will:
 
 In this task, you will create and configure management groups. 
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
-
-In this task, you will create and configure management groups.
-
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
