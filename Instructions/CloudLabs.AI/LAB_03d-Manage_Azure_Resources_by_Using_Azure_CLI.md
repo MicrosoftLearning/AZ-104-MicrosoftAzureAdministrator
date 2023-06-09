@@ -23,9 +23,9 @@ In this task, you will open a Bash session in Cloud Shell.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **Bash**. 
 
-    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
-
-    ![image](../media/showadvancesettings.png)
+   ![image](../media/showadvancesettings.png)
+   
+   **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.   
 
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group(1)** dropdown and give some unique name under the **Storage Account(2)** section, and under the **File share(3)** section type none as shown in the below image.
 
