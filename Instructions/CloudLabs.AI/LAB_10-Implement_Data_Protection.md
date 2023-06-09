@@ -32,12 +32,10 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshellicon1.png)
-    
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
-
     ![image](../media/showadvancesettings.png)
     
+    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
+  
     ![image](../media/createstoragelab6.png)
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed.
