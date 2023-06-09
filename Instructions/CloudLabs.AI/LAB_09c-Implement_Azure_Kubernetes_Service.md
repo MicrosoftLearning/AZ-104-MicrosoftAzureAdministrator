@@ -1,5 +1,4 @@
 # Lab 09c - Implement Azure Kubernetes Service
-# Student lab manual
 
 ## Lab scenario
 
@@ -48,14 +47,13 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
-    ![image](../media/9c-1.png)
-
 
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
 
    Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
    ```
+    ![image](../media/9c-1.png)
 
 1. Close the Cloud Shell pane.
 
@@ -197,7 +195,8 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     ```
 
 1. Re-run the command until the value in the **EXTERNAL-IP** column for the **nginx-deployment** entry changes from **\<pending\>** to a public IP address. Note the public IP address in the **EXTERNAL-IP** column for **nginx-deployment**.
-![image](../media/9c-8.png)
+
+    ![image](../media/9c-8.png)
 
 
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
@@ -240,12 +239,11 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the cluster:
 
-    ![image](../media/9c-13.png)
-
 
     ```sh
     kubectl get nodes
     ```
+    ![image](../media/9c-13.png)
 
     > **Note**: Review the output of the command and verify that the number of nodes increased to 2.
 
@@ -265,12 +263,11 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to review the pods distribution across cluster nodes:
 
-    ![image](../media/9c-14.png)
-
 
     ```sh
     kubectl get pod -o=custom-columns=NODE:.spec.nodeName,POD:.metadata.name
     ```
+    ![image](../media/9c-14.png)
 
     > **Note**: Review the output of the command and verify that the pods are distributed across both nodes.
 
