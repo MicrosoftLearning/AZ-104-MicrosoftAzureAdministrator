@@ -35,7 +35,7 @@ In this lab, you will:
 
 In this task, you will create and configure management groups. 
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
