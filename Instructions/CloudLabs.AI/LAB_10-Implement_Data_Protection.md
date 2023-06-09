@@ -30,13 +30,13 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+   ![image](../media/showadvancesettings.png)
+   
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
     
-    ![image](../media/showadvancesettings.png)
-    
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
+   >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
   
-    ![image](../media/createstorage.png)
+   ![image](../media/createstorage.png)
 
 1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed.
 
@@ -50,8 +50,6 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
-   >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
-
    ```powershell
    $location = '[Azure_region]'
 
@@ -63,7 +61,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
-
+    >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
+    
 1. Minimize Cloud Shell (but do not close it).
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
