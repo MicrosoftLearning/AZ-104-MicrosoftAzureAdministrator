@@ -8,10 +8,10 @@ In this lab, you will:
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
-### Estimated timing: 20 minutes
-
 ## Architecture diagram
 ![image](../media/lab03b.png)
+
+## Excercise 1: Manage Azure resources by Using ARM Templates
 
 ## Task 1: Review an ARM template for deployment of an Azure managed disk
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
@@ -27,6 +27,8 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 1. On the **Microsoft.ManagedDisk-*XXXXXXXXX* \| Overview** blade, click **Template**.
 
     >**Note**: Review the content of the template and note that you have the option to **Download** it to the local computer, **Add to library**, or **Deploy** it again.
+
+    ![image](../media/deployement.png)
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
@@ -49,6 +51,8 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 1. On the **Custom deployment** blade, click **Build your own template in the editor**.
 
 1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
+
+   ![image](../media/templete.png)
 
 1. Within the editor pane, remove the following lines:
 
@@ -73,6 +77,8 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
 
+   ![image](../media/parameter.png)
+
 1. Back on the **Custom deployment** blade, specify the following settings:
 
     | Setting | Value |
@@ -96,7 +102,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />****.
+1. In the list of resource groups, click **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
 1. On the **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the **Settings** section, click **Deployments**.
 

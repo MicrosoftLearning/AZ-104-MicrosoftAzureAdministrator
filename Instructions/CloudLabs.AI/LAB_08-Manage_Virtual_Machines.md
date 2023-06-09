@@ -12,16 +12,27 @@ In this lab, you will:
 + Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 + Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
 
-## Estimated timing: 50 minutes
 ## Architecture diagram
-![image](../media/lab08.png)
 
-## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+![](../CloudLabs.AI/Images/lab08.png)
+
+## Exercise 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+
+#### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
+
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
+1. If not  Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create** then select **Azure virtual machine**.
+1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
+   
+1. Now enter the following **Password** and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+
+1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create (1)** then select **Azure virtual machine (2)**.
+
+    ![](../CloudLabs.AI/Images/img1lab8.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -34,7 +45,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Availability options | **Availability zone** |
     | Availability zone | **Zones 1** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
-    | Run with Azure Spot discount | **Unchecked** |
+    | Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
@@ -59,7 +70,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
     
-    ![](Instructions/media/az104_08-createVN.png)
+    ![](../media/az104_08-createVN.png)
 
 1.  Back on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -69,9 +80,9 @@ In this task, you will deploy Azure virtual machines into different availability
     | Public IP | **default** |
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
-    | Enable accelerated networking | **Unchecked**
-    | Load balancing options | **None** |
-
+    | Accelerated networking | **Unchecked**
+    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+ 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -83,13 +94,19 @@ In this task, you will deploy Azure virtual machines into different availability
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | accept the default value |
+    | Diagnostics storage account | **accept the default value** |
 
     >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
 
 1. On the **Review + Create** blade, click **Create**.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 1. On the deployment blade, click **Template**.
 
@@ -122,10 +139,11 @@ In this task, you will deploy Azure virtual machines into different availability
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Configure Azure virtual machines by using virtual machine extensions
+#### Task 2: Configure Azure virtual machines by using virtual machine extensions
+
 In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in **Task 1**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -148,15 +166,21 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
 1. On the **Install an Extension** blade, search for and select **Custom Script Extension** and then click **Next**.
 
+    ![](../CloudLabs.AI/Images/cse.png) 
+
 1. From the **Configure Custom Script Extension Extension** blade, click **Browse**.
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
+
+    ![](../CloudLabs.AI/Images/iis.png) 
 
 1. Back on the **Configure Custom Script Extension Extension** blade, click **Review+Create** then click **Create**.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
 
 1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
+
+   ![](../CloudLabs.AI/Images/export.png)
 
 1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
 
@@ -169,24 +193,24 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
 
    ```json
-        {
-            "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "az104-08-vm1/customScriptExtension",
-            "apiVersion": "2018-06-01",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "az104-08-vm1"
-            ],
-            "properties": {
-                "publisher": "Microsoft.Compute",
-                "type": "CustomScriptExtension",
-                "typeHandlerVersion": "1.7",
-                "autoUpgradeMinorVersion": true,
-                "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
-            }
-        },
+   {
+     "type": "Microsoft.Compute/virtualMachines/extensions",
+     "name": "az104-08-vm1/customScriptExtension",
+     "apiVersion": "2018-06-01",
+     "location": "[resourceGroup().location]",
+     "dependsOn": [
+     "az104-08-vm1"
+             ],
+      "properties": {
+      "publisher": "Microsoft.Compute",
+      "type": "CustomScriptExtension",
+      "typeHandlerVersion": "1.7",
+      "autoUpgradeMinorVersion": true,
+      "settings": {
+                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+             }
+        }
+   },
 
    ```
 
@@ -214,25 +238,30 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-## Task 3: Scale compute and storage for Azure virtual machines
+#### Task 3: Scale compute and storage for Azure virtual machines
+
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size** under the **Settings** section and set the virtual machine size to **Standard DS1_v2**, and click **Resize**
+1. On the **az104-08-vm0** virtual machine blade, click **Size (1)** under the **Settings** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
+   ![](../CloudLabs.AI/Images/resize.png) 
+
 1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values) and then click on **Save**:
+1. Create a managed disk with the following settings (leave others with their default values) and then click on **Save (4)**:
 
     | Setting | Value |
     | --- | --- |
-    | Disk name | **az104-08-vm0-datadisk-0** |
-    | Storage type | **Premium SSD** |
-    | Size (GiB)| **1024** |
+    | Disk name | **az104-08-vm0-datadisk-0 (1)** |
+    | Storage type | **Premium SSD (2)** |
+    | Size (GiB)| **1024 (3)** |
 
+   ![](../CloudLabs.AI/Images/diskset.png) 
+      
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
 1. Create a managed disk with the following settings (leave others with their default values):
@@ -247,6 +276,8 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
+   ![](../CloudLabs.AI/Images/runcommand.png) 
+  
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
    ```powershell
@@ -274,7 +305,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace the line **30** `"vmSize": "Standard_D2s_v3"` with the following line):
 
    ```json
-            "vmSize": "Standard_DS1_v2"
+   "vmSize": "Standard_DS1_v2"
 
    ```
 
@@ -283,25 +314,25 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 1. On the **Edit template** blade, in the section displaying the content of the template, replace line **51** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
-                    "dataDisks": [
-                      {
-                        "lun": 0,
-                        "name": "az104-08-vm1-datadisk0",
-                        "diskSizeGB": "1024",
-                        "caching": "ReadOnly",
-                        "createOption": "Empty"
-                      },
-                      {
-                        "lun": 1,
-                        "name": "az104-08-vm1-datadisk1",
-                        "diskSizeGB": "1024",
-                        "caching": "ReadOnly",
-                        "createOption": "Empty"
-                      }
-                    ]
+   "dataDisks": [
+     {
+       "lun": 0,
+       "name": "az104-08-vm1-datadisk0",
+       "diskSizeGB": "1024",
+       "caching": "ReadOnly",
+       "createOption": "Empty"
+     },
+     {
+       "lun": 1,
+       "name": "az104-08-vm1-datadisk1",
+       "diskSizeGB": "1024",
+       "caching": "ReadOnly",
+       "createOption": "Empty"
+      }
+   ]
    ```
 
-    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 49.
+    >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into.
 
     >**Note**: This section of the template creates two managed disks and attaches them to **az104-08-vm1**, similarly to the storage configuration of the first virtual machine via the Azure portal.
 
@@ -325,35 +356,41 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
     > **Note**: Wait for the confirmation that the commands were completed successfully.
     
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > **Congratulations** on completing the task! Now, it is time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
+#### Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
+
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+
+      ![Image](./Images/cloudshell.png)
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/cloudshell1.png)
-    
-     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group**(az104-08-rg01/az104-08-rg02) dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+1. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
 
-    ![image](../media/cloudhell01.png)
+      ![image](../media/advancesetting.png)
+      
+1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and enter under the **Storage Account (2)** section as **cloudshell<inject key="DeploymentID" enableCopy="false" />**, and under the **File share (3)** section type **none** as shown in the below image.
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+1. Click **Create storage** and wait until the Azure Cloud Shell pane is displayed.
 
+      ![](../media/crtstr.png) 
+   
 1. From the Cloud Shell pane, run the following to register Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
-
+   ```
+    ```powershell
+   Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-## Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+#### Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+
 In this task, you will deploy the Azure virtual machine scale set across availability zones by using the Azure portal.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Create**.
@@ -365,15 +402,16 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | select the existing resource group **az104-08-rg02** |
     | Virtual machine scale set name | **az10408vmss0** |
-    | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
+    | Region | Select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
     | Availability zone | **Zones 1, 2, 3** |
+    | Orchestration mode | **Uniform** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | **Student** |
     | Password | **Provide a secure password** |
-    | Licensing | **Unchecked** |
-    | Orchestration mode | **Uniform** |
+    | Already have a Windows Server license? | **Unchecked** |
+
     >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
@@ -428,7 +466,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Setting | Value |
     | --- | --- |
     | Initial instance count | **2** |
-    | Scaling policy | **Manual scaling** |
+    | Scaling policy | **Manual** |
 
 1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
 
@@ -436,7 +474,9 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | --- | --- |
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | **default** |
-
+    
+      ![](../CloudLabs.AI/Images/az104str2mod8.png)   
+  
     >**Note**: You will need the name of this storage account in the next task.
 
    Click **Next : Health >**:
@@ -461,10 +501,11 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
+#### Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
+
 In this task, you will install the Windows Server Web Server role on the instances of the Azure virtual machine scale set you deployed in the previous task by using the Custom Script virtual machine extension.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the previous task.
+1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in the **Task 5**.
 
 1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
@@ -507,7 +548,8 @@ In this task, you will install the Windows Server Web Server role on the instanc
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 7: Scale compute and storage for Azure virtual machine scale sets
+#### Task 7: Scale compute and storage for Azure virtual machine scale sets
+
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
@@ -518,9 +560,11 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the **Settings** section, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
+   ![](../CloudLabs.AI/Images/upgrade.png)
+
 1. In the list of instances, click the entry representing the first instance and, on the scale set instance blade, note its **Location** (it should be one of the zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 
-1. Return to the **az10408vmss0 - Instances** blade, click the entry representing the second instance and, on the scale set instance blade, note its **Location** (it should be one of the other two zones in the target Azure region into which you deployed the Azure virtual machine scale set).
+1. Return to the **az10408vmss0 - Instances** blade, click the entry representing the second instance, and on the scale set instance blade, note it’s **Location** (it should be one of the other two zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 
 1. Return to the **az10408vmss0 - Instances** blade, and in the **Settings** section, click **Scaling**.
 
@@ -546,7 +590,7 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
 
-    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
+    >**Note**: Obviously, these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
 
 1. Click **Add** and, back on the **az10408vmss0 - Scaling** blade, specify the following settings (leave others with their default values):
 
@@ -564,14 +608,15 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. From the Cloud Shell pane, run the following to identify the public IP address of the load balancer in front of the Azure virtual machine scale set **az10408vmss0**:
 
-   ```powershell
-   $rgName = 'az104-08-rg02'
-   
-
-   $lbpipName = 'az10408vmss0-lb-publicip'
-
-   $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
-   ```
+     ```powershell
+     $rgName = 'az104-08-rg02'
+     ```
+     ```powershell 
+     $lbpipName = 'az10408vmss0-lb-publicip'
+     ```
+     ```powershell
+     $pip = (Get-AzPublicIpAddress -ResourceGroupName $rgName -Name $lbpipName).IpAddress
+     ```
 
 1. From the Cloud Shell pane, run the following to start an infinite loop that sends the HTTP requests to the web sites hosted on the instances of Azure virtual machine scale set **az10408vmss0**.
 
@@ -583,7 +628,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: You might need to wait a couple of minutes and click **Refresh**.
 
-1. Once the third instance is provisioned, navigate to its blade to determine its **Location** (it should be different than the first two zones you identified earlier in this task.
+1. Once the third instance is provisioned, navigate to its blade to determine its **Location** (it should be different from the first two zones you identified earlier in this task.
 
 1. Close the Cloud Shell pane.
 
@@ -613,9 +658,11 @@ In this task, you will change the size of virtual machine scale set instances, c
 
    ```powershell
    $rgName = 'az104-08-rg02'
-   
+   ``` 
+   ```powershell
    Set-Location -Path $HOME
-
+   ```  
+   ```powershell
    Get-Content -Path ./az104-08-configure_VMSS_disks.ps1
    ```
 
@@ -639,9 +686,9 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 ### Review
 In this lab, you have:
-+ Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-+ Configured Azure virtual machines by using virtual machine extensions
-+ Scaled compute and storage for Azure virtual machines
-+ Deployed zone-reslient Azure virtual machine scale sets by using the Azure portal
-+ Configured Azure virtual machine scale sets by using virtual machine extensions
-+ Scaled compute and storage for Azure virtual machine scale sets
++ Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template.
++ Configured Azure virtual machines by using virtual machine extensions.
++ Scaled compute and storage for Azure virtual machines.
++ Deployed zone-resilient Azure virtual machine scale sets by using the Azure portal.
++ Configured Azure virtual machine scale sets by using virtual machine extensions.
++ Scaled compute and storage for Azure virtual machine scale sets.

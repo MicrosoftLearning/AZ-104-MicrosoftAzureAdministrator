@@ -15,7 +15,7 @@ In order to improve management of Azure resources in Contoso, you have been task
     - creating support request tickets
     - viewing resource groups
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+   **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
 ## Objectives
 
@@ -26,14 +26,21 @@ In this lab, you will:
 + Task 3: Assign RBAC roles
 
 ## Architecture diagram
-![image](../media/lab02a.png)
+
+   ![image](../media/lab02a.png)
 
 ### Exercise 1: Manage Subscriptions and RBAC
 
 #### Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups. 
+
+1. Sign in to the [**Azure portal**](http://portal.azure.com).
+
+In this task, you will create and configure management groups.
+
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
+
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
     ![image](../media/lab2-1.png) 
@@ -64,7 +71,7 @@ In this task, you will create and configure management groups.
 1. In the list of management groups, click the entry representing the newly created management group.
 
     ![image](../media/lab2-3.png)
-  
+ 
 1. On the **az104-02-mg1** blade, click **Subscriptions**. 
 
 1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
@@ -104,13 +111,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/cloudshell1.png)
-    
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
-
-    ![image](../media/cloudhell01.png)
+    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
@@ -132,8 +133,8 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
 
-    ![image](../media/lab2-6.png)
-
+   ![image](../media/lab2-6.png)
+  
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -155,6 +156,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
 
     ![image](../media/lab2-8.png)
+    
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
@@ -173,7 +175,6 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -181,9 +182,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-
-
-#### Review
+## Review
 
 In this lab, you have:
 

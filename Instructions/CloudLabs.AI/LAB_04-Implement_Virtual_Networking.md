@@ -11,15 +11,16 @@ In this lab, you will:
 + Task 5: Configure Azure DNS for internal name resolution
 + Task 6: Configure Azure DNS for external name resolution
 
-## Estimated timing: 40 minutes
 
 ## Architecture diagram
 ![image](../media/lab04.png)
 
-## Task 1: Create and configure a virtual network
-In this task, you will create a virtual network with multiple subnets by using the Azure portal
+### Exercise 1: Create and configure a virtual network
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+#### Task 1: Create and configure a virtual network
+In this task, you will create a virtual network with multiple subnets by using the Azure portal.
+
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
 
 1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
 
@@ -30,7 +31,7 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Subscription | the name of the Azure subscription you will be using in this lab |
     | Resource Group | Select the existing resource group **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-vnet1** |
-    | Region | Same region as the Resource Group |
+    | Region | Select **<inject key="Region" enableCopy="false" />** |
 
 1. Click **Next: IP Addresses** and enter the following values
 
@@ -45,9 +46,9 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Subnet name | **subnet0** |
     | Subnet address range | **10.40.0.0/24** |
 
-1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
+1. Accept the defaults and click **Review + Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
-    **Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
+    >**Note**: Wait for the virtual network to be provisioned. This should take less than a minute.
 
 1. Click on **Go to resource**
 
@@ -65,12 +66,12 @@ In this task, you will create a virtual network with multiple subnets by using t
 1. Click **Save**
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Deploy virtual machines into the virtual network
+#### Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
@@ -80,27 +81,27 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 2. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    **Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+    ![image](../media/AZ-104-strorage-mount.png)
+ 
+3. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**
     
-    ![image](../media/cloudshell1.png)
-    
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
+4. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give the name as **str<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section give the name as **fs<inject key="DeploymentID" enableCopy="false" />** as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+   ![image](../media/AZ-104-labrecent1.0.png)
 
 3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
 4. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
 
-    **Note**: You might need to upload each file separately.
+    ![image](../media/AZ-104-uploaddoc.png)
     
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p4%20replace.png)
+     >**Note**: You might need to upload each file separately.
     
 5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
 6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
     
-     **Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234**
+     
  
    ```powershell
    $rgName = 'az104-04-rg1-DeploymentID'
@@ -111,12 +112,12 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
   
      ```
-      
-   **Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+   >**Note**: You will be prompted to provide an admin password. Enter your own Password like **Pa55w.rd1234** 
+   >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
-   **Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
+   >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
-   **Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
+   >**Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
  
    > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
    > 1. Check the location in which the 'az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />' resource group is deployed. You can run `az group show -n az104-04-rg1-<inject key="DeploymentID" enableCopy="false" /> --query location` in your CloudShell to get it.
@@ -126,29 +127,29 @@ In this task, you will deploy Azure virtual machines into different subnets of t
  
 7. Close the Cloud Shell pane.
 
-## Task 3: Configure private and public IP addresses of Azure VMs
+#### Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
-   **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
+   > **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**.
 
 1. On the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vnet1**.
 
-    ![IMAGE](./Images/Virtual%20Networking%20Ex1-t3-p2%20replace.png)
+    ![image](../media/AZ-104-azvnet.png) 
 
 1. On the **az104-04-vnet1** virtual network blade, review the **Connected devices** section and verify that there are two network interfaces **az104-04-nic0** and **az104-04-nic1** attached to the virtual network.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p3.png)
+    ![image](../media/AZ-104-connecteddevices.png)
 
 1. Click **az104-04-nic0** and, on the **az104-04-nic0** blade, click **IP configurations**.
 
-    **Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
+    >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
 1. In the list IP configurations, click **ipconfig1**.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p5.png)
-
+    ![image](../media/AZ-104-ipconfig.png)
+    
 1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
 
     | Setting | Value |
@@ -156,17 +157,17 @@ In this task, you will configure static assignment of public and private IP addr
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
     
-    ![Image](./Images/Virtual%20Networking%20Ex1-t3-p6.png)
+    ![image](../media/AZ-104-ipconfig-step2.png)
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
 
 1. Back on the **ipconfig1** blade, and save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-1. Navigate back to the **az104-04-vnet1** blade
+1. Navigate back to the **az104-04-vnet1** blade an click on **Connected Devices**.
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
-    **Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
+    >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
 1. In the list IP configurations, click **ipconfig1**.
 
@@ -185,9 +186,9 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
 
-    **Note**: You will need both IP addresses in the last task of this lab.
+   >**Note**: You will need both IP addresses in the last task of this lab.
 
-## Task 4: Configure network security groups
+#### Task 4: Configure network security groups
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
 1. In the Azure portal, navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, and in the list of its resources, click **az104-04-vm0**.
@@ -196,11 +197,11 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Note that the connection attempt fails.
 
-    **Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from the Internet and assign it to the network interfaces of both virtual machines.
+    >**Note**: This is expected, because public IP addresses of the Standard SKU, by default, require that the network interfaces to which they are assigned are protected by a network security group. In order to allow Remote Desktop connections, you will create a network security group explicitly allowing inbound RDP traffic from the Internet and assign it to the network interfaces of both virtual machines.
 
 1. Stop the **az104-04-vm0** and **az104-04-vm1** virtual machines.
 
-    **Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
+    >**Note**: This is done for lab expediency. If the virtual machines are running when a network security group is attached to their network interface, it can take over 30 minutes for the attachment to take effect. Once the network security group has been created and attached, the virtual machines will be restarted, and the attachment will be in effect immediately.
 
 1. In the Azure portal, search for and select **Network security groups**, and, on the **Network security groups** blade, click **+ Create**.
 
@@ -211,17 +212,19 @@ In this task, you will configure network security groups in order to allow for r
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Name | **az104-04-nsg01** |
-    | Region | the name of the Azure region where you deployed all other resources in this lab |
+    | Region |  Select **<inject key="Region" enableCopy="false" />** |
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** to submit your deployment.
 
-    **Note**: Wait for the deployment to complete. This should take about 2 minutes.
+    >**Note**: Wait for the deployment to complete. This should take about 2 minutes.
 
 1. On the deployment blade, click **Go to resource** to open the **az104-04-nsg01** network security group blade.
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t4-p4.png)
+    ![image](../media/AZ-104-gotoresource.png)
 
 1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Inbound security rules**.
+
+     ![image](../media/AZ-104-addinboundrule.png)
 
 1. Add an inbound rule with the following settings (leave others with their default values):
 
@@ -237,35 +240,35 @@ In this task, you will configure network security groups in order to allow for r
 
 1. Click **Add**
 
-1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **+ Associate**.
+1. On the **az104-04-nsg01** network security group blade, in the **Settings** section, click **Network interfaces** and then click **Associate**.
 
 1. Associate the **az104-04-nsg01** network security group with the **az104-04-nic0** and **az104-04-nic1** network interfaces.
 
-    **Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
+    >**Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
 
 1.  Navigate to Virtual Machine and start the **az104-04-vm0** and **az104-04-vm1** 
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 
-    **Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
+    >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
 
 1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
-    **Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
-    **Note**: You can ignore any warning prompts when connecting to the target virtual machines.
+    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
 1. When prompted, sign in with the user and password in the parameters file.
 
-    **Note**: Leave the Remote Desktop session open. You will need it for the next task.
+    >**Note**: Leave the Remote Desktop session open. You will need it for the next task.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 5: Configure Azure DNS for internal name resolution
+#### Task 5: Configure Azure DNS for internal name resolution
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
 1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Create**.
@@ -280,7 +283,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
-    **Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
+    >**Note**: Wait for the private DNS zone to be created. This should take about 2 minutes.
 
 1. Click **Go to resource** to open the **contoso.org** DNS private zone blade.
 
@@ -290,16 +293,16 @@ In this task, you will configure DNS name resolution within a virtual network by
 
     | Setting | Value |
     | --- | --- |
-    | Link name | **az104-04-vnet1-link** |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-04-vnet1** |
-    | Enable auto registration | enabled |
+    | Link name (1)| **az104-04-vnet1-link** |
+    | Subscription (2)| the name of the Azure subscription you are using in this lab |
+    | Virtual network (3) | **az104-04-vnet1** |
+    | Enable auto registration (4) | enabled |
     
-    Click **OK**.
+ 1. Click **OK** (5).
     
-    ![Image](./Images/Virtual%20Networking%20Ex1-t5-p6.png)
+    ![image](../media/AZ-104-addvirtualnetwork.png)
 
-    **Note:** Wait for the virtual network link to be created. This should take less than 1 minute.
+    >**Note**: Wait for the virtual network link to be created. This should take less than 1 minute.
 
 1. On the **contoso.org** private DNS zone blade, in the sidebar, click **Overview**
 
@@ -307,7 +310,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p9.png)
 
-    **Note:** You might need to wait a few minutes and refresh the page if the record sets are not listed.
+    >**Note**: You might need to wait a few minutes and refresh the page if the record sets are not listed.
 
 1. Switch to the Remote Desktop session to **az104-04-vm0**, right-click the **Start** button, and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
@@ -317,6 +320,8 @@ In this task, you will configure DNS name resolution within a virtual network by
 
    ```powershell
    nslookup az104-04-vm0.contoso.org
+   ```
+   ```powershell
    nslookup az104-04-vm1.contoso.org
    ```
     
@@ -329,7 +334,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.
 
-1. Find a unique domain name and used it.
+1. Find a unique domain name and check in the website if the domain name that you have chosen is unique.
 
 1. In the Azure portal, search for and select **DNS zones** and, on the **DNS zones** blade, click **+ Create**.
 
@@ -339,11 +344,11 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Name | the DNS domain name you identified earlier in this task |
+    | Name | The DNS domain name you identified earlier in this task |
 
 1. Click Review and Create. Let validation occur, and hit Create again to submit your deployment.
 
-    **Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
+    >**Note**: Wait for the DNS zone to be created. This should take about 2 minutes.
 
 1. Click **Go to resource** to open the blade of the newly created DNS zone.
 
@@ -373,7 +378,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | Alias record set | **No** |
     | TTL | **1** |
     | TTL unit | **Hours** |
-    | IP address | the public IP address of **az104-04-vm1** which you identified in the third exercise of this lab |
+    | IP address | The public IP address of **az104-04-vm1** which you identified in the third exercise of this lab |
 
 1. Click **OK**
 
@@ -398,9 +403,9 @@ In this task, you will configure external DNS name resolution by using Azure pub
 1. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
@@ -411,3 +416,5 @@ In this lab, you have:
 + Configured network security groups
 + Configured Azure DNS for internal name resolution
 + Configured Azure DNS for external name resolution
+
+## You have successfully completed the lab
