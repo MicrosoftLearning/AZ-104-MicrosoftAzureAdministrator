@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '06 - Implement Traffic Management'
+    title: 'Lab 06: Implement Traffic Management'
     module: 'Administer Network Traffic Management'
 ---
 
