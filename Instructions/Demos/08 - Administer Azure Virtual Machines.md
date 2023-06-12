@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 08 - Administer Azure Virtual Machines'
+    title: 'Demonstration 08: Administer Azure Virtual Machines'
     module: 'Administer Azure Virtual Machines'
 ---
 
