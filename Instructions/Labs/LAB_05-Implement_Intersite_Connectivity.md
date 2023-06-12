@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '05 - Implement Intersite Connectivity'
+    title: 'Lab 05: Implement Intersite Connectivity'
     module: 'Administer Intersite Connectivity'
 ---
 
