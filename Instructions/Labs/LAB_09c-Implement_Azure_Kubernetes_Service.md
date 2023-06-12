@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '09c - Implement Azure Kubernetes Service'
+    title: 'Lab 09c: Implement Azure Kubernetes Service'
     module: 'Administer Serverless Computing'
 ---
 
