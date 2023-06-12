@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '09a - Implement Web Apps'
+    title: 'Lab 09a: Implement Web Apps'
     module: 'Administer Serverless Computing'
 ---
 
