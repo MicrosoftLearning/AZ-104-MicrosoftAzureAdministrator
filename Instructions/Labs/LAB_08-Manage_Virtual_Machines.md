@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '08 - Manage Virtual Machines'
+    title: 'Lab 08: Manage Virtual Machines'
     module: 'Administer Virtual Machines'
 ---
 
