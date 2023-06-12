@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '11 - Implement Monitoring'
+    title: 'Lab 11: Implement Monitoring'
     module: 'Administer Monitoring'
 ---
 
