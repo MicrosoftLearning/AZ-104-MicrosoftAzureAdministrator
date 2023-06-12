@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 09 - Administer PaaS Compute Options'
+    title: 'Demonstration 09: - Administer PaaS Compute Options'
     module: 'Administer PaaS Compute Options'
 ---
 
