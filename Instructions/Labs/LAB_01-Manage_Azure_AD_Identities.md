@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '01 - Manage Azure Active Directory Identities'
+    title: 'Lab 01: Manage Azure Active Directory Identities'
     module: 'Administer Identity'
 ---
 
