@@ -25,15 +25,13 @@ In this demonstration, we will work with Azure policies.
 
 2.  Search for and select **Policy**.
 
-3.  Select **Assignments** on the left side of the Azure Policy page.
+3.  Select **Assignments** and then **Assign Policy**.
 
-4.  Select **Assign Policy** from the top of the Policy - Assignments page.
+5.  Discuss the **Scope** which determines what resources or grouping of resources the policy assignment is enforced on.
 
-5.  Notice the **Scope** which determines what resources or grouping of resources the policy assignment is enforced on.
+6.  Select the **Policy definition** ellipsis to open the list of available definitions. Take some time to review the built-in policy definitions.
 
-6.  Select the **Policy definition ellipsis** to open the list of available definitions. Take some time to review the built-in policy definitions.
-
-7.  Search for and select **Allowed locations**. This policy enables you to restrict the locations your organization can specify when deploying resources.
+7.  Search for and select the **Allowed locations** policy. This policy enables you to restrict the locations your organization can specify when deploying resources.
 
 8.  Move the **Parameters** tab and using the drop-down select one or more allowed locations.
 
