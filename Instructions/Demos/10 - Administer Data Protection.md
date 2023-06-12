@@ -1,6 +1,6 @@
 ---
 demo:
-    title: 'Demonstration: 10 - Administer Data Protection'
+    title: 'Demonstration 10: Administer Data Protection'
     module: 'Administer Data Protection'
 ---
 
