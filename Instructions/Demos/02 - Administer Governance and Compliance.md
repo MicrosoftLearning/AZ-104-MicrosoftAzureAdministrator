@@ -69,23 +69,7 @@ In this demonstration, we will work with Azure policies.
 
 3.  Review any remediation tasks that are listed.
 
-**Remove your policy and initiative (optional)**
-
-1.  Return to the Azure Policy service page.
-
-2.  Select **Assignments**.
-
-3.  Select your **Allowed locations** policy.
-
-4.  Click **Delete assignment**.
-
-5.  Return to the Azure Policy service page.
-
-6.  Select **Initiatives**.
-
-7.  Select your new initiative.
-
-8.  Click **Delete initiative**.
+4. As you have time, remove the policy and the initiative. 
 
 ## Configure Role-Based Access Control
 
@@ -117,14 +101,12 @@ In this demonstration, we will learn about role assignments.
 
 **Add a role assignment**
 
-1.  Create a user.
+1.  Create a user or select an existing user.
 
-1.  Select **Add role assignment** and pick a role. For exmaple, *owner*.
+1.  Select **Add role assignment** and select a role. For exmaple, *owner*.
 
 1.  Select **Check access**.
 
-1.  Select the user.
+1.  Review the user permissions.
 
-1.  Notice the user is part of the **Managers** group and is an **Owner**.
-
-1.  Notice that you can **Deny assignments**.
+1.  Note that you can **Deny assignments**.
