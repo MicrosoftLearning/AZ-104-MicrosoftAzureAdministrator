@@ -34,8 +34,6 @@ In this demonstration, we will create a new web app that runs a Docker container
 
 **Reference**: [Create a Web App](https://learn.microsoft.com/training/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp)
 
-https://learn.microsoft.com/en-us/training/modules/deploy-run-container-app-service/5-exercise-deploy-web-app?pivots=csharp
-
 In this task, we will create an Azure App Service Web App.
 
 1. Use the Azure portal. 
