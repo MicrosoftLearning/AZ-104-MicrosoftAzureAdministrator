@@ -42,9 +42,9 @@ In this task, we will create an Azure App Service Web App.
 
 1. **Create** a **Web App**.
 
-- Publish: **Code**. Review other choices.
-- Runtime stack: **.Net**. Review other choices.
-- Operating system: **Linux**
+    - Publish: **Code**. Review other choices.
+    - Runtime stack: **.Net**. Review other choices.
+    - Operating system: **Linux**
 
 1. Select the **Free F1** service plan.
 
