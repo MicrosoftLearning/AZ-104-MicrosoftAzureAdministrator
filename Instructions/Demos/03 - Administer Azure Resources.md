@@ -17,7 +17,7 @@ In this demonstration, we will explore the Azure portal.
 
 1. Access the Azure Portal.
 
-1. Click the **Support & Troubleshooting** icon on the top banner. Review the **Support resources** links. 
+1. Select  the **Support & Troubleshooting** icon on the top banner. Review the **Support resources** links. 
 
 1. Select the **Settings** icon on the top banner. Review **Appearance + startup views** settings. 
 
