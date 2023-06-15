@@ -146,18 +146,27 @@ In this task, you will configure static assignment of public and private IP addr
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
-1. In the list IP configurations, click **ipconfig1**.
-
-    ![image](../media/AZ-104-ipconfig.png)
-    
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
+1.  On the  search bar search for Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**. 
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
+
+1. Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**.
+   
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-04-pip1** |
+    | SKU | **Standard** |
+
+1. In the list IP configurations, click **ipconfig1**.
+
+    ![image](../media/AZ-104-ipconfig.png)
     
-    ![image](../media/AZ-104-ipconfig-step2.png)
+1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
+    
+    ![image](../media/AZ-104lab4.png)
 
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
 
@@ -171,13 +180,8 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
-
-    | Setting | Value |
-    | --- | --- |
-    | Name | **az104-04-pip1** |
-    | SKU | **Standard** |
-
+1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+  
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4** and click on **Save**.
 
 1. Back on the **ipconfig1** blade, save the changes.
