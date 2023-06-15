@@ -153,7 +153,7 @@ In this task, you will configure static assignment of public and private IP addr
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
 
-1. Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**.
+1. On the Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**.
    
     | Setting | Value |
     | --- | --- |
@@ -164,7 +164,7 @@ In this task, you will configure static assignment of public and private IP addr
 
     ![image](../media/AZ-104-ipconfig.png)
     
-1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, Select Allocation **Static**, leave the default value of **IP address** set to **10.40.0.4**. Select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
+1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.0.4**. In the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
     
     ![image](../media/AZ-104newui.png)
 
@@ -178,7 +178,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, Select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. Select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. In the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
   
 1. Back on the **ipconfig1** blade, save the changes.
 
