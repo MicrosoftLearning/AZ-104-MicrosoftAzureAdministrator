@@ -24,9 +24,9 @@ In this lab, we will:
 ![image](../media/lab02b.png)
 
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Assign tags via the Azure portal
+### Task 1: Assign tags via the Azure portal
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
@@ -75,7 +75,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
     
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
-#### Task 2: Enforce tagging via an Azure policy
+### Task 2: Enforce tagging via an Azure policy
 
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
@@ -146,7 +146,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
-#### Task 3: Apply tagging via an Azure policy
+### Task 3: Apply tagging via an Azure policy
 
 In this task, we will use a different policy definition to remediate any non-compliant resources. 
 
@@ -220,7 +220,7 @@ In this task, we will use a different policy definition to remediate any non-com
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
+### Review
 
 In this lab, you have:
 
