@@ -164,11 +164,9 @@ In this task, you will configure static assignment of public and private IP addr
 
     ![image](../media/AZ-104-ipconfig.png)
     
-1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
+1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, Select Allocation **Static**, leave the default value of **IP address** set to **10.40.0.4**. Select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
     
-    ![image](../media/AZ-104lab4.png)
-
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4** and click on **Save**.
+    ![image](../media/AZ-104newui.png)
 
 1. Back on the **ipconfig1** blade, and save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
@@ -180,10 +178,8 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+1. On the **Edit IP configuration** blade, in the **Public IP address settings** section, Select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. Select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
   
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4** and click on **Save**.
-
 1. Back on the **ipconfig1** blade, save the changes.
 
 1. Navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
