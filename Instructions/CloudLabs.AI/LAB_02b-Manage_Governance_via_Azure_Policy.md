@@ -98,7 +98,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
     
    
-   ![image](../media/2b-5.png)
+    ![image](../media/2b-5.png)
 
    
   >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
@@ -179,7 +179,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
     | Policy enforcement | Enabled |
 
-    ![image](../media/2b-09.png) 
+      ![image](../media/2b-09.png) 
 
 1. Click **Next** and set **Parameters** to the following values:
 
