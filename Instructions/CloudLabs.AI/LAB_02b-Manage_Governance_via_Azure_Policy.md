@@ -169,16 +169,16 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
-1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
+1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
-    | Policy enforcement | Enabled |
+    | Subscription | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing** |
+    | Resource Group | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing** |
+    
+   ![image](../media/2b-09.png)
 
-      ![image](../media/2b-09.png) 
 
 1. Click **Next** and set **Parameters** to the following values:
 
