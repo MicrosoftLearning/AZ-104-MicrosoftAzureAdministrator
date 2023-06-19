@@ -126,6 +126,24 @@ In this task, you will configure static assignment of public and private IP addr
 
    >**Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
+   >**Note**: You will need **two** public IP addresses to complete this lab. 
+
+1. In the Azure portal, search for and select **Public IP addresses**, then select **+ Create**.
+
+1. Ensure the **resource group** is **az104-04-rg1**,
+
+1. In the **Configuration Details** ensure the **name** is **az104-04-pip0**.
+
+1. Select **Review and create** and then **Create**.
+
+1. In the Azure portal, search for and select **Public IP addresses**, then select **+ Create**.
+
+1. Ensure the **resource group** is **az104-04-rg1**,
+
+1. In the **Configuration Details** ensure the **name** is **az104-04-pip01**.
+
+1. Select **Review and create** and then **Create**.
+
 1. In the Azure portal, search for and select **Resource groups**, and, on the **Resource groups** blade, click **az104-04-rg1**.
 
 1. On the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vnet1**.
@@ -138,18 +156,13 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
+1. Ensure the **Allocation** is **Static**.
 
-    | Setting | Value |
-    | --- | --- |
-    | Name | **az104-04-pip0** |
-    | SKU | **Standard** |
+1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip0**.
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
+1. Select **Save**.
 
-1. Back on the **ipconfig1** blade, save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
-
-1. Navigate back to the **az104-04-vnet1** blade
+1. Navigate back to the **az104-04-vnet1** blade.
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
@@ -157,17 +170,12 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
+1. Ensure the **Allocation** is **Static**.
 
-    | Setting | Value |
-    | --- | --- |
-    | Name | **az104-04-pip1** |
-    | SKU | **Standard** |
+1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip0**.
 
-1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.1.4**.
-
-1. Back on the **ipconfig1** blade, save the changes.
-
+1. Select **Save**.
+   
 1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm0**, and from the **az104-04-vm0** virtual machine blade, note the public IP address entry.
 
 1. Navigate back to the **az104-04-rg1** resource group blade, in the list of its resources, click **az104-04-vm1**, and from the **az104-04-vm1** virtual machine blade, note the public IP address entry.
