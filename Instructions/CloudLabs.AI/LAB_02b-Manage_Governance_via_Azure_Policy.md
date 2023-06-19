@@ -159,7 +159,6 @@ In this task, we will use a different policy definition to remediate any non-com
 
     ![image](../media/2b-8.png)
 
-
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
