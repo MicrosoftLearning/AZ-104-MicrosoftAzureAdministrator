@@ -98,7 +98,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
     
    
-     ![image](../media/2b-5.png)
+   ![image](../media/2b-5.png)
 
    
   >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
