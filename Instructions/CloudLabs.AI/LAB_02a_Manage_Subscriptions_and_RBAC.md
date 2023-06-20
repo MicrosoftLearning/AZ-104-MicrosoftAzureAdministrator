@@ -1,5 +1,9 @@
 # Lab 02a - Manage Subscriptions and RBAC
 
+## Lab requirements
+
+This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
+
 ## Lab scenario
 
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
@@ -31,7 +35,11 @@ In this lab, you will:
 
 In this task, you will create and configure management groups. 
 
-1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
+1. Sign in to the [**Azure portal**](http://portal.azure.com).
+
+In this task, you will create and configure management groups.
+
+1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
@@ -133,8 +141,8 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     | --- | --- |
     | User name | **az104-02-aaduser1**|
     | Name | **az104-02-aaduser1**|
-    | Auto generated password box | **Unchecked** |
-    | Password | **Provide a secure password** |
+    | Let me create the password | enabled |
+    | Initial password | **Provide a secure password** |
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 

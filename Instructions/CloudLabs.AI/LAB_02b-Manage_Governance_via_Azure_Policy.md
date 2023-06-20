@@ -24,12 +24,11 @@ In this lab, we will:
 ![image](../media/lab02b.png)
 
 
-## Exercise 1
+### Exercise 1
 
-### Task 1: Assign tags via the Azure portal
+#### Task 1: Assign tags via the Azure portal
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
@@ -52,7 +51,11 @@ In this task, you will create and assign a tag to an Azure resource group via th
    df
    ```
 
-1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount and ensure the storage account name is there in the output panel (example: `//[Storageacc_name].file.core.windows.net/none`).
+1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
+
+   ```
+   //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
+   ```
 
     ![image](../media/2b-new.png)
 
@@ -75,7 +78,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
     
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
-### Task 2: Enforce tagging via an Azure policy
+#### Task 2: Enforce tagging via an Azure policy
 
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
@@ -89,18 +92,17 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![image](../media/2b-4.png)
 
-1. Specify the **Scope** by clicking the ellipsis button and selecting the following values::
+1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
+
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | **the name of the Azure subscription you are using in this lab** |
-    | Resource Group | **the name of the resource group containing the Cloud Shell account you identified in the previous task** |
+    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
     
-
-   ![image](../media/2b-5.png)
-
+    ![image](../media/2b-5.png)
    
-   >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
+    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
@@ -147,7 +149,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
-### Task 3: Apply tagging via an Azure policy
+#### Task 3: Apply tagging via an Azure policy
 
 In this task, we will use a different policy definition to remediate any non-compliant resources. 
 
@@ -159,6 +161,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
     ![image](../media/2b-8.png)
 
+
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
@@ -168,16 +171,16 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
-
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
+
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing** |
-    | Resource Group | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing** |
-    
-   ![image](../media/2b-09.png)
+    | Assignment name | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
+    | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
+    | Policy enforcement | Enabled |
 
+    ![image](../media/2b-09.png) 
 
 1. Click **Next** and set **Parameters** to the following values:
 
@@ -220,7 +223,7 @@ In this task, we will use a different policy definition to remediate any non-com
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Review
+#### Review
 
 In this lab, you have:
 
