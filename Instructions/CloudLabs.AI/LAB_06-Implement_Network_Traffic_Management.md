@@ -430,10 +430,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | IP version | **IPv4** |
     | IP type | **IP address** |
     | Public IP address | **Create new** |
+
     
     | Setting | Value |
     | --- | --- |
-    | name | **az104-06-pip4** |
+    | Name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
 
 1. Click Next: **Backend pools**, and click **+ Add**.
