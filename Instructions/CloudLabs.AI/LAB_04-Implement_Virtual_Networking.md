@@ -97,9 +97,8 @@ In this task, you will deploy Azure virtual machines into different subnets of t
     
      >**Note**: You might need to upload each file separately.
     
-5. Edit the Parameters file, and change the password. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault.
 
-6. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
+5. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
     
      
  
@@ -125,7 +124,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
  
-7. Close the Cloud Shell pane.
+6. Close the Cloud Shell pane.
 
 #### Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
