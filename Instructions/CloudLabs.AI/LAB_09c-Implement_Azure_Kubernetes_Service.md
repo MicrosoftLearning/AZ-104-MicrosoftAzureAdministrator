@@ -49,7 +49,8 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
    Register-AzResourceProvider -ProviderNamespace Microsoft.KubernetesConfiguration
    ```
-    ![image](../media/9c-1.png)
+
+   ![image](../media/9c-1.png)
 
 1. Close the Cloud Shell pane.
 
@@ -60,7 +61,6 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 1. In the Azure portal, search for locate **Kubernetes services** and then, on the **Kubernetes services** blade, click **+ Create**, and then click **+ Create a Kubernetes cluster**.
 
     ![image](../media/9c-2.png)
-
 
 1. On the **Basics** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -86,13 +86,12 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
 1. Click **Next: Access >** and, on the **Access** tab of the **Create Kubernetes cluster** blade, leave settings with their default values:
 
-    ![image](../media/9c-3.png)
-
-
     | Setting | Value |
     | ---- | ---- |
     | Resource identity | **System-assigned managed identity** |
     | Authentication method | **Local accounts with Kubernetes RBAC** |
+
+    ![image](../media/9c-3.png)
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create Kubernetes cluster** blade, specify the following settings (leave others with their default values):
 
@@ -206,18 +205,17 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, and run the following to scale the deployment by increasing of the number of pods to 2:
 
-
     ```sh
     kubectl scale --replicas=2 deployment/nginx-deployment
     ```
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the deployment:
 
-    ![image](../media/9c-10new.png)
-
     ```sh
     kubectl get pods
     ```
+
+    ![image](../media/9c-10new.png)
 
     > **Note**: Review the output of the command and verify that the number of pods increased to 2.
 
