@@ -9,21 +9,17 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 ## Objectives
 
 In this lab, you will:
-
-+ Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
++ Task 1: Register Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 + Task 2: Deploy an Azure Kubernetes Service cluster
 + Task 3: Deploy pods into the Azure Kubernetes Service cluster
-+ Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
-
++ Task 4: Scale containerized workloads in the Azure Kubernetes Service cluster
 
 ## Architecture diagram
 
 ![image](../media/lab09c.png)
 
-
-### Exercise 1
-
-#### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
+## Exercise 1
+### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
@@ -57,7 +53,7 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Deploy an Azure Kubernetes Service cluster
+### Task 2: Deploy an Azure Kubernetes Service cluster
 
 In this task, you will deploy an Azure Kubernetes Services cluster by using the Azure portal.
 
@@ -118,7 +114,7 @@ In this task, you will deploy an Azure Kubernetes Services cluster by using the 
 
     >**Note**: Wait for the deployment to complete. This should take about 10 minutes.
 
-#### Task 3: Deploy pods into the Azure Kubernetes Service cluster
+### Task 3: Deploy pods into the Azure Kubernetes Service cluster
 
 In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
@@ -204,7 +200,7 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
     ![image](../media/9c-9.png)
 
 
-#### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
+### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
 In this task, you will scale horizontally the number of pods and then number of cluster nodes.
 
