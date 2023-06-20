@@ -237,8 +237,7 @@ In this task, you will test connectivity between virtual machines on the three v
       
       ![Image](./Images/rdp.png)
 
-
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Stor,e and on Linux computers, you can use anopen-sourcee RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
