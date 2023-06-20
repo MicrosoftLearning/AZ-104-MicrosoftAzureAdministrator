@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Exercise 1: Provision the lab environment
 
-#### Task 1: Provision the lab environment
+### Task 1: Provision the lab environment
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
 1. If not  Sign in to the [Azure portal](https://portal.azure.com).
@@ -80,7 +80,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Create and configure Azure Storage accounts
+### Task 2: Create and configure Azure Storage accounts
 
 In this task, you will create and configure an Azure Storage account.
 
@@ -125,7 +125,7 @@ In this task, you will create and configure an Azure Storage account.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Manage blob storage
+### Task 3: Manage blob storage
 
 In this task, you will create a blob container and upload a blob into it.
 
@@ -171,7 +171,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-#### Task 4: Manage authentication and authorization for Azure Storage
+### Task 4: Manage authentication and authorization for Azure Storage
 In this task, you will configure authentication and authorization for Azure Storage.
 
 1. On the **licenses/LICENSE** blade, on the **Overview** tab, click the **Copy to clipboard** button next to the **URL** entry.
@@ -241,7 +241,7 @@ In this task, you will configure authentication and authorization for Azure Stor
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 5: Create and configure an Azure Files shares
+### Task 5: Create and configure an Azure Files shares
 In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
@@ -255,7 +255,9 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and click **Connect**.
 
-1.On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**.
+
+1. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
