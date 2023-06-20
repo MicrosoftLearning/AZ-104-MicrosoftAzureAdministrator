@@ -1,7 +1,6 @@
 # Lab 09c - Implement Azure Kubernetes Service
 
 ## Lab scenario
-
 Contoso has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
@@ -121,20 +120,17 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
     ![image](../media/9c-4.png)
 
-
 1. On the **az104-9c-aks1** Kubernetes service blade, in the **Settings** section, click **Node pools**.
 
 1. On the **az104-9c-aks1 - Node pools** blade, verify that the cluster consists of a single pool with one node.
 
     ![image](../media/9c-5.png)
 
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. Switch the **Azure Cloud Shell** to **Bash** (black background).
 
     ![image](../media/9c-6.png)
-
 
 1. From the Cloud Shell pane, run the following to retrieve the credentials to access the AKS cluster:
 
@@ -155,7 +151,6 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 1. In the **Cloud Shell** pane, review the output and verify that the one node which the cluster consists of at this point is reporting the **Ready** status.
 
     ![image](../media/9c-7.png)
-
 
 1. From the **Cloud Shell** pane, run the following to deploy the **nginx** image from the Docker Hub:
 
@@ -193,11 +188,9 @@ In this task, you will deploy a pod into the Azure Kubernetes Service cluster.
 
     ![image](../media/9c-8.png)
 
-
 1. Open a browser window and navigate to the IP address you obtained in the previous step. Verify that the browser page displays the **Welcome to nginx!** message.
 
     ![image](../media/9c-9.png)
-
 
 ### Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
 
@@ -233,10 +226,10 @@ In this task, you will scale horizontally the number of pods and then number of 
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the cluster:
 
-
     ```sh
     kubectl get nodes
     ```
+    
     ![image](../media/9c-13.png)
 
     > **Note**: Review the output of the command and verify that the number of nodes increased to 2.
@@ -256,7 +249,6 @@ In this task, you will scale horizontally the number of pods and then number of 
     > **Note**: Review the output of the command and verify that the number of pods increased to 10.
 
 1. From the **Cloud Shell** pane, run the following to review the pods distribution across cluster nodes:
-
 
     ```sh
     kubectl get pod -o=custom-columns=NODE:.spec.nodeName,POD:.metadata.name
