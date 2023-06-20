@@ -243,11 +243,11 @@ In this task, you will test connectivity between virtual machines on the three v
 
 4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
 
-5. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
 
-6. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
+1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
    ```powershell
    Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
@@ -255,30 +255,30 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
-7. Examine the output of the command and verify that the connection was successful.
+8. Examine the output of the command and verify that the connection was successful.
 
-8. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
+9. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
 
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
    ```
 
-9. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
+10. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
 
-10. In the list of virtual machines, click **az104-05-vm1**.
+11. In the list of virtual machines, click **az104-05-vm1**.
 
     ![Image](./Images/vm1.png)
 
-11. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+12. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-12. When prompted, sign in by using the **Student** username and the password which you given in task1.
-13. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+13. When prompted, sign in by using the **Student** username and the password which you given in task1.
+14. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
-14. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
+15. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
    ```powershell
    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
