@@ -62,8 +62,8 @@ In this task, you will create a staging deployment slot.
 ![image](../media/9a-1.png)
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
-![image](../media/9a-2new.png)
 
+    ![image](../media/9a-2new.png)
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
