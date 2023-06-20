@@ -64,8 +64,7 @@ In this task, you will create a staging deployment slot.
 
     ![image](../media/9a-2new.png)
 
-
-    >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
+    >**Note**: The web app currently has a single deployment slot labeled **PRODUCTION**.
 
 1. Click **+ Add slot**, and add a new slot with the following settings:
 
