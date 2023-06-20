@@ -283,9 +283,7 @@ In this task, you will configure and test autoscaling of Azure web app.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-
 ## Review
-
 In this lab, you have:
 
 + Created an Azure web app
