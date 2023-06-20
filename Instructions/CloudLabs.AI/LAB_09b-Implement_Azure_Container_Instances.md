@@ -29,7 +29,6 @@ In this task, you will create a new container instance for the web application.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
-
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
@@ -43,10 +42,9 @@ In this task, you will create a new container instance for the web application.
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
-
     | Setting | Value |
     | --- | --- |
-    | DNS name label | any valid, globally unique DNS host name |
+    | DNS name label | any valid, globally unique DNS hostname |
 
     ![image](../media/9b-2.png)
 
@@ -68,16 +66,13 @@ In this task, you will review the deployment of the container instance.
 
     ![image](../media/9b-3new.png)
 
-
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
     ![image](../media/9b-4.png)
 
-
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
 
     ![image](../media/9b-5.png)
-
 
 1. Close the new browser tab, back in the Azure portal, in the **Settings** section of the container instance blade, click **Containers**, and then click **Logs**.
 
