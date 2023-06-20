@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, hosted currently in the company's on-premises data centers. The web sites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web apps deployment slots.
+You need to evaluate the use of Azure Web apps for hosting Contoso's websites, hosted currently in the company's on-premises data centers. The websites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web app deployment slots.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
@@ -23,9 +23,9 @@ In this lab, you will:
 ![image](../media/lab09a.png)
 
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Create an Azure web app
+### Task 1: Create an Azure web app
 
 In this task, you will create an Azure web app.
 
@@ -52,7 +52,7 @@ In this task, you will create an Azure web app.
 
 1. On the deployment blade, click **Go to resource**.
 
-#### Task 2: Create a staging deployment slot
+### Task 2: Create a staging deployment slot
 
 In this task, you will create a staging deployment slot.
 
@@ -79,28 +79,25 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-#### Task 3: Configure web app deployment settings
+### Task 3: Configure web app deployment settings
 
 In this task, you will configure web app deployment settings.
 
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
 
-    ![image](../media/9a-3new.png)
+   ![image](../media/9a-3new.png)
 
+   >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
 
-    >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
-    
 1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
 
 1. On the **Deployment Center** blade, copy the **Git Clone Url** entry to Notepad.
 
-    ![image](../media/9a-4.png)
+   ![image](../media/9a-4.png)
 
-
-    >**Note:** You will need the Git Clone Url value in the next task of this lab.
+   >**Note:** You will need the Git Clone Url value in the next task of this lab.
 
 1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
-
 
     | Setting | Value |
     | --- | ---|
@@ -167,11 +164,9 @@ In this task, you will deploy code to the staging deployment slot.
 
     ![image](../media/9a-8.png)
 
-
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
     ![image](../media/9a-9new.png)
-
 
 #### Task 5: Swap the staging slots
 
@@ -181,8 +176,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-    ![image](../media/9a-10.png)
-
+   ![image](../media/9a-10.png)
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
@@ -200,8 +194,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. Click **Custom autoscale**.
 
-    ![image](../media/9a-11.png)
-
+   ![image](../media/9a-11.png)
 
     >**Note**: You also have the option of scaling the web app manually.
 
@@ -225,8 +218,7 @@ In this task, you will configure and test autoscaling of Azure web app.
     
     ![image](../media/9a-12.png)
 
-
-    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period.
+    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
 
 1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
 
@@ -271,8 +263,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
 
-    ![image](../media/9a-14.png)
-
+   ![image](../media/9a-14.png)
 
 1. Close the Cloud Shell pane.
 
