@@ -17,9 +17,9 @@ In this lab, you will:
 
 ![image](../media/lab09b.png)
 
-### Exercise 1
+## Exercise 1
 
-#### Task 1: Deploy a Docker image by using the Azure Container Instance
+### Task 1: Deploy a Docker image by using the Azure Container Instance
 
 In this task, you will create a new container instance for the web application.
 
@@ -56,7 +56,7 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
-#### Task 2: Review the functionality of the Azure Container Instance
+### Task 2: Review the functionality of the Azure Container Instance
 
 In this task, you will review the deployment of the container instance.
 
