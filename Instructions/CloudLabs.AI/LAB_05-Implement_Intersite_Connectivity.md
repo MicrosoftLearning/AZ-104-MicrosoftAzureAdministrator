@@ -242,11 +242,10 @@ In this task, you will test connectivity between virtual machines on the three v
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
 4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
-
-1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+5. 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
-
+   
 1. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
 
    ```powershell
