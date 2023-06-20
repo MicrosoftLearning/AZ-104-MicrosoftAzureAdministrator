@@ -94,12 +94,10 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
-
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
-   
 
     ![image](../media/2b-5.png)
    
