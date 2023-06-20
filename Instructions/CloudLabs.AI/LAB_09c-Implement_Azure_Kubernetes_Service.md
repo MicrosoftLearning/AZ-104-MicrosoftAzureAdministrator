@@ -42,7 +42,6 @@ In this task, you will register resource providers necessary to deploy an Azure 
 
 1. From the Cloud Shell pane, run the following to register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 
-
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Kubernetes
 
