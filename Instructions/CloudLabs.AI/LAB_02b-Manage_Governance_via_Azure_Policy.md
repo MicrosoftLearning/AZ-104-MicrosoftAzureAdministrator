@@ -157,8 +157,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
-    ![image](../media/2b-8.png)
-
+   ![image](../media/2b-8.png)
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
