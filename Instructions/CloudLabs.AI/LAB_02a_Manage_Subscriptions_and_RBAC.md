@@ -29,13 +29,9 @@ In this lab, you will:
 
    ![image](../media/lab02a.png)
 
-### Exercise 1: Manage Subscriptions and RBAC
+## Exercise 1: Manage Subscriptions and RBAC
 
-#### Task 1: Implement Management Groups
-
-In this task, you will create and configure management groups. 
-
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+### Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups.
 
@@ -78,7 +74,7 @@ In this task, you will create and configure management groups.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
-#### Task 2: Create custom RBAC roles
+### Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
 
@@ -127,7 +123,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Assign RBAC roles
+### Task 3: Assign RBAC roles
 
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 

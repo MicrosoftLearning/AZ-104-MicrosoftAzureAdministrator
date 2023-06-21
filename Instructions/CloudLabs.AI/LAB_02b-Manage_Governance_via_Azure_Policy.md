@@ -94,15 +94,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
-
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
-    
-    ![image](../media/2b-5.png)
-   
-    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
+
+   ![image](../media/2b-5.png)
+   >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
