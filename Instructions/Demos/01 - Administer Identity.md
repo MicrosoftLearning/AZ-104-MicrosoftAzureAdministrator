@@ -10,6 +10,9 @@ demo:
 
 This area does not have a formal demonstration. Consider walking throught the interactive lab simulation for student Lab 01. 
 
+[Interactive Lab Simulation Lab 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
+
+Alternatively, you could use one of these QuickStarts. 
 
 **Reference**: [Quickstart - Access & create new tenant - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
