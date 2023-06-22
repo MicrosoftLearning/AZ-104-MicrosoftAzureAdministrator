@@ -50,7 +50,7 @@ In this task, we will move the disk resource you used in the previous task to a 
 
     >**Note**: This method allows you to move multiple resources at the same time. 
 
-1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-<inject key="DeploymentID" enableCopy="false" />**. On the **Resource to move** tab, Wait until Validation status got success. 
+1. Under the target **Resource group** select the existing Resource group **az104-03a-rg2-<inject key="DeploymentID" enableCopy="false" />**. On the **Resource to move** tab, Wait until the Validation status got successful. 
  
 1. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
