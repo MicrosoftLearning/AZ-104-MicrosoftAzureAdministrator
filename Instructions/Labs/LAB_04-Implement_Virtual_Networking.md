@@ -140,7 +140,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Ensure the **resource group** is **az104-04-rg1**,
 
-1. In the **Configuration Details** ensure the **name** is **az104-04-pip01**.
+1. In the **Configuration Details** ensure the **name** is **az104-04-pip1**.
 
 1. Select **Review and create** and then **Create**.
 
@@ -172,7 +172,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Ensure the **Allocation** is **Static**.
 
-1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip0**.
+1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip1**.
 
 1. Select **Save**.
    
