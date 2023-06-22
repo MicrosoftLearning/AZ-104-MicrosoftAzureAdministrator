@@ -39,7 +39,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 In this task, you will use an existing resource group and create an Azure managed disk by using the Azure PowerShell session within the Cloud Shell
 
-1. From the PowerShell session within Cloud Shell, run the following commands and make sure you replace the value of DeploymentID: **<inject key="DeploymentID" enableCopy="false" />**.
+1. From the PowerShell session within Cloud Shell, run the following commands and make sure you replace the value of DeploymentID: **<inject key="DeploymentID" enableCopy="false" />**
 
    ```powershell
    $location = (Get-AzResourceGroup -Name az104-03b-rg1-DeploymentID).Location
