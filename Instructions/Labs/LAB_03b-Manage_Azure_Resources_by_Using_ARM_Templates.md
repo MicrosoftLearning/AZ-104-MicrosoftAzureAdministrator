@@ -102,7 +102,9 @@ In this lab, you will:
     | Disk Size Gb | **32** |
     | Create Option | **empty** |
     | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
+    | Data Access Auth Mode | None |
     | Network Access Policy | **AllowAll** |
+    | Public Network Access | Disabled |
 
 1. Select **Review + Create** and then select **Create**.
 
