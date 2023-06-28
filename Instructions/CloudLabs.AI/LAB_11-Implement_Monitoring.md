@@ -37,7 +37,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11\az104-11-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\11\az104-11-vm-parameters.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\11\az104-11-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\11\az104-11-vm-parameters.json** into the Cloud Shell home directory.
 
 1. From the Cloud Shell pane, run the following to use the existing resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where your resource group deployed):
 
