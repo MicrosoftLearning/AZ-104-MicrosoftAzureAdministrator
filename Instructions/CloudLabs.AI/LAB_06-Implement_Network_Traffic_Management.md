@@ -43,7 +43,6 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     ![image](../media/uploadicon.png)
     
-    ![image](../media/parametersfileupload.png)
 
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment:
 
