@@ -520,7 +520,7 @@ In this task, you will install the Windows Server Web Server role on the instanc
 
 1. On the **scripts** blade, click **Upload**.
 
-1. On the **Upload blob** blade, click on **Browse for files**, in the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-master\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**.
+1. On the **Upload blob** blade, click on **Browse for files**, in the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**.
 
 1. In the Azure portal, navigate back to the **Virtual machine scale sets** blade and click **az10408vmss0**.
 
