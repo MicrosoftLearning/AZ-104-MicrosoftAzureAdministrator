@@ -246,10 +246,10 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Setting | Value |
     | --- | --- |
     | Email | the User Principal Name you copied earlier in this task |
-    | Display Name | **az104-01b-aaduser1** |
-    | Job title | **Lab Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
+    | Display Name (Properties tab)  | **az104-01b-aaduser1** |
+    | Job title (Properties tab) | **Lab Administrator** |
+    | Department (Properties tab) | **IT** |
+    | Usage location (Properties tab) | **United States** |
 
 1. Click **Invite**. 
 
