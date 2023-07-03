@@ -60,9 +60,9 @@ In this task, you will create and configure Azure AD users.
     | Display name | **az104-01a-aaduser1** |
     | Auto-generate password | de-select |
     | Initial password | **Provide a secure password** |
-    | Job title | **Cloud Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
+    | Job title (Properties tab) | **Cloud Administrator** |
+    | Department (Properties tab) | **IT** |
+    | Usage location (Properties tab) | **United States** |
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
