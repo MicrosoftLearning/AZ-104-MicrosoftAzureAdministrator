@@ -54,12 +54,13 @@ In this task, we will create an Azure App Service Web App.
 
 1. Select the **URL** and ensure the default placeholder page loads.
 
-1. As you have time, explore the **Deployment slots** options. 
+1. As you have time, explore the **Deployment slots** options.
+   
 ## Configure Azure Container Instances
 
 In this demonstration we create, configure, and deploy a container by using Azure Container Instances (ACI) from the Azure Portal. The ACI application displays a static HTML page with the public Microsoft Hello World image. 
 
-[Quickstart - Deploy Docker container to container instance](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
+**Reference**: [Quickstart - Deploy Docker container to container instance](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal)
 
 1. Use the Azure portal.
 
@@ -84,3 +85,25 @@ In this demonstration we create, configure, and deploy a container by using Azur
 1. Navigate to the **FQDN** for the container instance and ensure the welcome page displays. 
 
 **Note**: To avoid additional costs, delete the resource. 
+
+## Configure Azure Container Apps
+
+In this demonstration, we will create and work with Azure Container Apps. 
+
+**Reference**: [Quickstart: Deploy your first container app using the Azure portal](https://learn.microsoft.com/azure/container-apps/quickstart-portal)
+
+1. Search for and select **Container Apps**.
+
+1. Complete the **Project details** and create the container apps **environment**.
+
+1. **Review and create** the container app.
+
+1. Use the **Application URL** link to view your application.
+
+1. Verify the browser displays the **Welcome to Azure Container Apps** message. 
+
+
+
+
+
+
