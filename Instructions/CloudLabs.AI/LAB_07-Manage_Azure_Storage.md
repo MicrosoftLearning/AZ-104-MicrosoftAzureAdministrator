@@ -244,7 +244,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 ### Task 5: Create and configure an Azure Files shares
 In this task, you will create and configure Azure Files shares.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares**.
 
 1. Click **+ File share** and create a file share with the following settings and then click on **Create**.
 
