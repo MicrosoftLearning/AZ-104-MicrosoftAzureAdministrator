@@ -259,7 +259,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in with the user and password in the parameters file.
+1. When prompted, sign in with the username mentioned in the parameters file and provide password as **<inject key="AzureAdUserPassword"></inject>**.
 
     >**Note**: Leave the Remote Desktop session open. You will need it for the next task.
     

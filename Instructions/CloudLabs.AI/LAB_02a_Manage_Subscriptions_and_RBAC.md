@@ -135,7 +135,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02-aaduser1**|
+    | User Principal name | **az104-02-aaduser1**|
     | Name | **az104-02-aaduser1**|
     | Let me create the password | enabled |
     | Initial password | **Provide a secure password** |

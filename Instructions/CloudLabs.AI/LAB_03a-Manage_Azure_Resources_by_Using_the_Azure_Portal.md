@@ -29,7 +29,7 @@ In this task, you will use the Azure portal to use the existing resource groups 
     |Resource Group| select the existing resource group **az104-03a-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     |Disk name| **az104-03a-disk1** |
     |Region| Same region as the Resource Group |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
 1. Change the disk type and size to **Standard HDD** and **32 GiB**, respectively.

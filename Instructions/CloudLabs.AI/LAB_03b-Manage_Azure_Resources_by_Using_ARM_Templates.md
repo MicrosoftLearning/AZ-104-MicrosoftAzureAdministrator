@@ -32,7 +32,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Click **Download** and save the compressed file containing the template and parameters files to the **Downloads** folder on your lab computer.
 
-1. On the **Microsoft.ManagedDisk-<inject key="DeploymentID" enableCopy="false" />| Template** blade, click **Inputs**.
+1. On the **Microsoft.ManagedDisk-<SUFFIX>| Template** blade, click **Inputs**.
+
+   >**Note**: SUFFIX is a unique ID which is added to the deployment name
 
 1. Note the value of the **location** parameter. You will need it for the next task.
 
@@ -92,7 +94,10 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Disk Size Gb | **32** |
     | Create Option | **empty** |
     | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
+    | Data Access Auth Mode | **None** |
     | Network Access Policy | **AllowAll** |
+    | Public Network Access | **Enabled** |    
+
 
 1. Select **Review + Create** and then select **Create**.
 
