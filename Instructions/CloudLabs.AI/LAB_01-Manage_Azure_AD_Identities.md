@@ -102,6 +102,8 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
+1. In Settings tab, leave everything to default and click on **Assign**.    
+
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
 
       ![](../CloudLabs.AI/Images/aad01.png)
