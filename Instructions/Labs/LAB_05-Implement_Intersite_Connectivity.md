@@ -217,7 +217,7 @@ In this task, you will test connectivity between virtual machines on the three v
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and the password from your parameters file. 
+1. When prompted, sign in by using the **Student** username and the password you configured when deploying your virtual machines via the CloudShell. 
 
 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
