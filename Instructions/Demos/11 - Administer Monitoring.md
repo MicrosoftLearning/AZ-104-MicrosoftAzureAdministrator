@@ -30,10 +30,7 @@ In this demonstration, we will create an alert rule.
 
 ## Configure Log Analytics
 
-In this demonstration, you will work with the Log Analytics query
-language.
-
-**Reference**: [Log Analytics tutorial - Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial)
+In this demonstration, you will work with the Log Analytics query language.
 
 1. Use the Azure portal.
 
