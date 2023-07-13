@@ -11,7 +11,7 @@ demo:
 
 In this demonstration, you will create virtual networks.
 
-**Reference**: [Quickstart: Create a virtual network - Azure portalk](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
+**Reference**: [Quickstart: Create a virtual network - Azure portal](https://docs.microsoft.com/azure/virtual-network/quick-create-portal)
 
 ## Create a virtual network in the portal
 
