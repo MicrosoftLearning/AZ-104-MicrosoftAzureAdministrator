@@ -24,7 +24,7 @@ In this demonstration, we will explore backing up a file share in the Azure port
 
 1. Wait for the vault to be created. 
 
-**Configure the file share backup**
+**Configure the Azure files backup**
 
 1. Go to **Backup center** and create a new **Backup** instance.
 
