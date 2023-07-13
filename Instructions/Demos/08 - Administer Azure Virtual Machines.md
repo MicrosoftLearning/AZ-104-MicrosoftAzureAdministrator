@@ -37,11 +37,11 @@ In this demonstration, we will create and access an Azure virtual machine in the
 
 1. There are several ways to **Connect** to the virtual machine. 
 
-1. For a Windows server you can use **RDP**, as shown in the tutorial. You can go one step further by installing the web server and viewing the IIS welcome page. 
+1. For a Windows server you can use **RDP**, as shown in the QuickStart. 
 
-1. For a Linux server you can **SSH**, as shown in the tutorial. You can go one step further by installing the web server and viewing the web server in action.
+1. For a Linux server you can **SSH**, as shown in the QuickStart. 
 
-1. For either server you can connect with the **Bastion** service (tutorial). Review why Bastion is preferred to RDP or SSH. 
+1. For either server you can connect with the **Bastion** service (QuickStart). Review why Bastion is preferred to RDP or SSH. 
 
 ## Configure Virtual Machine Availability
 
