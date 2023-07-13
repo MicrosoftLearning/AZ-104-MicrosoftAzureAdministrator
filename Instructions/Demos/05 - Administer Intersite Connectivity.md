@@ -30,6 +30,7 @@ demo:
 
 1. Notice that a peering has automatically been created. Notice that the **Peering Status** is **Connected**.
 
+1. In the lab, students will create peering and test the connection between virtual machines. 
 
 ## Configure Network Routing and Endpoints
 
@@ -64,12 +65,7 @@ a custom route, and associate the route with a subnet.
 
 1.  Navigate to the subnet you want to associate with the routing table.
 
-1.  Select **Route table* and choose your new routing table. 
+1.  Select **Route table** and choose your new routing table. 
 
 1.  **Save** your changes.
-
-
-1. In the lab, students will create peering and test the connection between virtual machines. 
-
-
 
