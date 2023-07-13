@@ -7,40 +7,59 @@ demo:
 
 # 06 - Administer Network Traffic Management
 
-## Configure Network Routing and Endpoints
+## Configure Azure Load Balancer
 
-In this demonstration, we will learn how to create a route table, define
-a custom route, and associate the route with a subnet.
+In this demonstration, we will learn how to create a public load balancer. 
 
-**Note:** This demonstration requires a virtual network with at least one subnet.
+**Note:** This demonstration requires a virtual network with at least one subnet. 
 
-**Reference**: [Route network traffic - tutorial - Azure portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
+**Reference**: [Quickstart: Create a public load balancer to load balance VMs using the Azure portal](https://learn.microsoft.com/azure/load-balancer/quickstart-load-balancer-standard-public-portal)
 
-**Create a routing table**
-
-1. As you have time review the tutorial diagram. Explain why you need to create a user-defined route. 
+**Show the portal's help me choose feature**
 
 1. Access the Azure portal.
 
-1. Search for and select **Route tables**. Discuss when **propagate gateway routes** should be used. 
+1. Search for and select **Load balancing - help me choose**.
 
-1. Create a routing table, explain any uncommon settings. 
+1. Use the wizard to walk-through different scenarios.
+   
+**Create a load balancer**
 
-1. Wait for the new routing table to be deployed.
+1. Continue in the Azure portal.
 
-**Add a route**
+1. Search for and select **Load balancer**. **Create** a load balancer. 
 
-1.  Select your new routing table, and then select **Routes**.
+1. On the **Basics** tab, discuss **SKU**, **Type**, and **Tier**.
 
-1.  Create a new **route**. Discuss the different **hop types** that are available. 
+1. On the **Frontend IP configuration** tab, discuss using a public IP address.
 
-1.  Create the new route and wait for the resource to be deployed.
- 
-**Associate a route table to a subnet**
+1. On the **Backend pools** tab, select the virtual network with IP address range.
 
-1.  Navigate to the subnet you want to associate with the routing table.
+1. On the **Inbound rules** tab, create a load balancing rule. Discuss parameters like **Protocol**, **Ports**, **Health probes**, and **Session persistence**. 
 
-1.  Select **Route table* and choose your new routing table. 
 
-1.  **Save** your changes.
+## Configure Azure Application Gateway
 
+In this demonstration, we will learn how to create an Azure Application Gateway. 
+
+**Note**: To keep things simple, create new virtual networks and subnets as you go through the configuration. 
+
+**Reference**: [Quickstart: Direct web traffic with Azure Application Gateway - Azure portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
+
+**Create the Azure Application Gateway**
+
+1. Access the Azure portal.
+
+1. Search for and select **Azure Application Gateway**.
+
+1. **Create** a new gateway.
+
+1. On the **Basics** tab, discuss **Tiers**, **Autoscaling**, and **Instance counts**.
+
+1. On the **Frontends** tab, discuss the IP address types.
+
+1. On the **Backends** tab, discuss when to use an empty backend pool.
+
+1. On the **Configuration** tab, discuss routing rules. Compare to the load balancer rules.
+
+1. Explain that after gateway is created, you would then add backend targets and test. 
