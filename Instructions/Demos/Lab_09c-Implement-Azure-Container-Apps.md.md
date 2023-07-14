@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab 09d: Deploy a container app in the portal'
+    title: 'Lab 09c: Deploy a container app in the portal'
     module: 'Administer PaaS Compute Options'
 ---
 
