@@ -4,7 +4,7 @@ lab:
     module: 'Administer PaaS Compute Options'
 ---
 
-# Lab 09d: Deploy a container app in the portal
+# Lab 09c: Deploy a container app in the portal
 
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
