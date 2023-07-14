@@ -16,7 +16,7 @@ Begin by signing in to the [Azure portal](https://portal.azure.com).
 
 To create your container app, start at the Azure portal home page.
 
-1. Search for **Container Apps** in the top search bar.
+1. Search for `Container Apps` in the top search bar.
 1. Select **Container Apps** in the search results.
 1. Select the **Create** button.
 
@@ -29,8 +29,8 @@ In the *Basics* tab, do the following actions.
     | Setting | Action |
     |---|---|
     | Subscription | Select your Azure subscription. |
-    | Resource group | Select **Create new** and enter **az104-09c-rg1**. |
-    | Container app name |  Enter **my-container-app**. |
+    | Resource group | Select **Create new** and enter `az104-09c-rg1`. |
+    | Container app name |  Enter `my-container-app`. |
 
 #### Create an environment
 
@@ -47,7 +47,7 @@ Next, create an environment for your container app.
 
     | Setting | Value |
     |--|--|
-    | Environment name | Enter **my-environment**. |
+    | Environment name | Enter `my-environment`. |
     | Zone redundancy | Select **Disabled** |
 
 1. Select the **Monitoring** tab to create a Log Analytics workspace.
@@ -55,7 +55,7 @@ Next, create an environment for your container app.
 
     | Setting | Value |
     |--|--|
-    | Name | Enter **my-container-apps-logs**. |
+    | Name | Enter `my-container-apps-logs` |
   
     The *Location* field is pre-filled with your region for you.
 
