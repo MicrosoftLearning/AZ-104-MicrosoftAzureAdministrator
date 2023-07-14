@@ -1,15 +1,10 @@
 ---
-title: 'Quickstart: Deploy your first container app using the Azure portal'
-description: Deploy your first application to Azure Container Apps using the Azure portal.
-services: container-apps
-author: craigshoemaker
-ms.service: container-apps
-ms.topic: quickstart
-ms.date: 12/13/2021
-ms.author: cshoe
-ms.custom: mode-ui, event-tier1-build-2022
+lab:
+    title: 'Lab 09d: Deploy a container app in the portal'
+    module: 'Administer Identity'
 ---
 
+# Lab 01 - Manage Azure Active Directory Identities
 # Quickstart: Deploy your first container app using the Azure portal
 
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
