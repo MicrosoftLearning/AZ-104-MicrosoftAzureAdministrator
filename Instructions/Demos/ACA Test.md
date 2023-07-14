@@ -1,36 +1,66 @@
 ---
 lab:
     title: 'Lab 09d: Deploy a container app in the portal'
-    module: 'Administer Identity'
+    module: 'Administer PaaS Compute Options'
 ---
 
-# Lab 01 - Manage Azure Active Directory Identities
-# Quickstart: Deploy your first container app using the Azure portal
+# Lab 09d: Deploy a container app in the portal
 
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
-In this quickstart, you create a secure Container Apps environment and deploy your first container app using the Azure portal.
+In this lab, you create a secure Container Apps environment and deploy your first container app using the Azure portal.
 
-## Prerequisites
+Begin by signing in to the [Azure portal](https://portal.azure.com).
 
-An Azure account with an active subscription is required. If you don't already have one, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F). Also, please make sure to have the Resource Provider "Microsoft.App" registered.
+## Create a container app
 
-## Setup
+To create your container app, start at the Azure portal home page.
 
-<!-- Create -->
-[!INCLUDE [container-apps-create-portal-steps.md](../../includes/container-apps-create-portal-steps.md)]
+1. Search for **Container Apps** in the top search bar.
+1. Select **Container Apps** in the search results.
+1. Select the **Create** button.
 
-7. Select the **Create** button at the bottom of the *Create Container App Environment* page.
+### Basics tab
 
-<!-- Deploy the container app -->
-[!INCLUDE [container-apps-create-portal-deploy.md](../../includes/container-apps-create-portal-deploy.md)]
+In the *Basics* tab, do the following actions.
 
-### Verify deployment
+1. Enter the following values in the *Project details* section.
 
-Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. You'll see the following message in your browser.
+    | Setting | Action |
+    |---|---|
+    | Subscription | Select your Azure subscription. |
+    | Resource group | Select **Create new** and enter **my-container-apps**. |
+    | Container app name |  Enter **my-container-app**. |
 
-:::image type="content" source="media/get-started/azure-container-apps-quickstart.png" alt-text="Your first Azure Container Apps deployment.":::
+#### Create an environment
 
+Next, create an environment for your container app.
+
+1. Select the appropriate region.
+
+    | Setting | Value |
+    |--|--|
+    | Region | Select **Central US**. |
+
+1. In the *Create Container Apps environment* field, select the **Create new** link.
+1. In the *Create Container Apps Environment* page on the *Basics* tab, enter the following values:
+
+    | Setting | Value |
+    |--|--|
+    | Environment name | Enter **my-environment**. |
+    | Zone redundancy | Select **Disabled** |
+
+1. Select the **Monitoring** tab to create a Log Analytics workspace.
+1. Select the **Create new** link in the *Log Analytics workspace* field and enter the following values.
+
+    | Setting | Value |
+    |--|--|
+    | Name | Enter **my-container-apps-logs**. |
+  
+    The *Location* field is pre-filled with *Central US* for you.
+
+1. Select **OK**.
+   
 ## Clean up resources
 
 If you're not going to continue to use this application, you can delete the Azure Container Apps instance and all the associated services by removing the resource group.
@@ -38,11 +68,8 @@ If you're not going to continue to use this application, you can delete the Azur
 1. Select the **my-container-apps** resource group from the *Overview* section.
 1. Select the **Delete resource group** button at the top of the resource group *Overview*.
 1. Enter the resource group name **my-container-apps** in the *Are you sure you want to delete "my-container-apps"* confirmation dialog.
-1. Select **Delete**.  
-    The process to delete the resource group may take a few minutes to complete.
-
-> [!TIP]
-> Having issues? Let us know on GitHub by opening an issue in the [Azure Container Apps repo](https://github.com/microsoft/azure-container-apps).
+1. Select **Delete**.
+1. The process to delete the resource group may take a few minutes to complete.
 
 ## Next steps
 
