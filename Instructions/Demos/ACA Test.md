@@ -40,7 +40,7 @@ Next, create an environment for your container app.
 
     | Setting | Value |
     |--|--|
-    | Region | Select **Central US**. |
+    | Region | **Your choice**. |
 
 1. In the *Create Container Apps environment* field, select the **Create new** link.
 1. In the *Create Container Apps Environment* page on the *Basics* tab, enter the following values:
@@ -76,7 +76,7 @@ Next, create an environment for your container app.
    
 ### Verify deployment
 
-Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. You'll see the following message in your browser.
+Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. Verify you have a *Welcome to Azure Container Apps* message.
 
 ## Clean up resources
 
