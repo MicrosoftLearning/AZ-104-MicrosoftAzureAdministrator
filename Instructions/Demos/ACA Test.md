@@ -60,7 +60,24 @@ Next, create an environment for your container app.
     The *Location* field is pre-filled with *Central US* for you.
 
 1. Select **OK**.
+
+
+### Deploy the container app
+
+1. Select the **Review and create** button at the bottom of the page.  
+
+    Next, the settings in the Container App are verified. If no errors are found, the *Create* button is enabled.  
+
+    If there are errors, any tab containing errors is marked with a red dot.  Navigate to the appropriate tab.  Fields containing an error will be highlighted in red.  Once all errors are fixed, select **Review and create** again.
+
+1. Select **Create**.
+
+    A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
    
+### Verify deployment
+
+Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. You'll see the following message in your browser.
+
 ## Clean up resources
 
 If you're not going to continue to use this application, you can delete the Azure Container Apps instance and all the associated services by removing the resource group.
@@ -70,8 +87,3 @@ If you're not going to continue to use this application, you can delete the Azur
 1. Enter the resource group name **my-container-apps** in the *Are you sure you want to delete "my-container-apps"* confirmation dialog.
 1. Select **Delete**.
 1. The process to delete the resource group may take a few minutes to complete.
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Communication between microservices](communicate-between-microservices.md)
