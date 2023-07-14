@@ -29,7 +29,7 @@ In the *Basics* tab, do the following actions.
     | Setting | Action |
     |---|---|
     | Subscription | Select your Azure subscription. |
-    | Resource group | Select **Create new** and enter **my-container-apps**. |
+    | Resource group | Select **Create new** and enter **az104-09c-rg1**. |
     | Container app name |  Enter **my-container-app**. |
 
 #### Create an environment
@@ -57,7 +57,7 @@ Next, create an environment for your container app.
     |--|--|
     | Name | Enter **my-container-apps-logs**. |
   
-    The *Location* field is pre-filled with *Central US* for you.
+    The *Location* field is pre-filled with your region for you.
 
 1. Select **OK**.
 
@@ -84,6 +84,6 @@ If you're not going to continue to use this application, you can delete the Azur
 
 1. Select the **my-container-apps** resource group from the *Overview* section.
 1. Select the **Delete resource group** button at the top of the resource group *Overview*.
-1. Enter the resource group name **my-container-apps** in the *Are you sure you want to delete "my-container-apps"* confirmation dialog.
+1. Enter the resource group name and confirm you want to delete the app. 
 1. Select **Delete**.
 1. The process to delete the resource group may take a few minutes to complete.
