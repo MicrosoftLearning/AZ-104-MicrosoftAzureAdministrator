@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Lab 09c: Deploy a container app in the portal'
+    title: 'Lab 09c: Implement Azure Container Apps'
     module: 'Administer PaaS Compute Options'
 ---
 
-# Lab 09c: Deploy a container app in the portal
+# Lab 09c: Implement Azure Container Apps
 # Student lab manual
 
 ## Lab scenario
@@ -13,13 +13,15 @@ Azure Container Apps enables you to run microservices and containerized applicat
 ## Objectives
 
 In this lab, we will:
-- Create a container app and environment
-- Deploy the container app
-- Test and verfiy deployment of the container app
+- Task 1: Create a container app and environment
+- Task 2: Deploy the container app
+- Task 3: Test and verfiy deployment of the container app
 
 Begin by signing in to the [Azure portal](https://portal.azure.com).
 
-## Create a container app
+## Estimated timing: 20 minutes
+
+## Task 1: Create a container app and environment
 
 To create your container app, start at the Azure portal home page.
 
@@ -69,7 +71,7 @@ Next, create an environment for your container app.
 1. Select **OK**.
 
 
-### Deploy the container app
+## Task 2: Deploy the container app
 
 1. Select the **Review and create** button at the bottom of the page.  
 
@@ -81,7 +83,7 @@ Next, create an environment for your container app.
 
     A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
    
-### Verify deployment
+## Task 3: Test and verfiy deployment of the container app
 
 Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. Verify you have a *Welcome to Azure Container Apps* message.
 
