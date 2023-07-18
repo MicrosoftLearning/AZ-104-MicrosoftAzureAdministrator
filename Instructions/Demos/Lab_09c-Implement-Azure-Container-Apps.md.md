@@ -5,7 +5,9 @@ lab:
 ---
 
 # Lab 09c: Deploy a container app in the portal
+# Student lab manual
 
+## Lab scenario
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
 In this lab, you create a secure Container Apps environment and deploy your first container app using the Azure portal.
