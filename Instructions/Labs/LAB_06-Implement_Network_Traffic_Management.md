@@ -473,8 +473,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Protocol | **TCP** |
     | Port | **80** |
     | Interval | **5** |
-    | Unhealthy threshold | **2** |
-	| Close the create health probe window | **OK** | 
+    | Close the create health probe window | **OK** | 
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
     | TCP reset | **Disabled** |
