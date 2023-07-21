@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab 09c (new): Implement Azure Container Apps'
+    title: 'Lab 09c: Implement Azure Container Apps'
     module: 'Administer PaaS Compute Options'
 ---
 
