@@ -59,8 +59,8 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Setting | Value |
     | --- | --- |
     | Subnet name | **subnet0** |
-    | Starting address | **10.40.0.0/24** |
-    | Starting address | **/24 (256 addresses)** |
+    | Starting address | **10.40.0.0** |
+    | Subnet size | **/24 (256 addresses)** |
 
 1. Accept the defaults and click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
