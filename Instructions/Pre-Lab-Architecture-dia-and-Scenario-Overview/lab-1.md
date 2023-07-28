@@ -16,4 +16,4 @@ In this lab, you will:
 ## Architecture diagram
    ![image](../media/lab01.png)
 
-Once you understand the lab's content, you can start the Hands-on Lab by clicking the Launch button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/b7bfa889-6ab0-4b33-bf7d-ca6b3584f2ac) if you want to go through detailed guide prior to launching lab environment.   
+Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/b7bfa889-6ab0-4b33-bf7d-ca6b3584f2ac) if you want to go through detailed guide prior to launching lab environment.   
