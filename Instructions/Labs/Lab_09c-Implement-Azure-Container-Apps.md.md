@@ -68,14 +68,15 @@ Next, create an environment for your container app.
   
     The *Location* field is pre-filled with your region for you.
 
-1. Select **OK**.
+1. Select **OK** and then **Create**. 
 
+1. Click **Next: Container**.
 
-## Task 2: Deploy the container app
+1. Check the box next to **Use quickstart image**.
 
-1. Select the **Review and create** button at the bottom of the page.  
+1. Select the **Review and create** button at the bottom of the page. This step may take a couple of minutes. 
 
-    Next, the settings in the Container App are verified. If no errors are found, the *Create* button is enabled.  
+    The settings in the Container App are verified. If no errors are found, the *Create* button is enabled.  
 
     If there are errors, any tab containing errors is marked with a red dot.  Navigate to the appropriate tab.  Fields containing an error will be highlighted in red.  Once all errors are fixed, select **Review and create** again.
 
@@ -83,9 +84,13 @@ Next, create an environment for your container app.
 
     A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
    
-## Task 3: Test and verfiy deployment of the container app
+## Task 2: Test and verfiy deployment of the container app
 
-Select **Go to resource** to view your new container app.  Select the link next to *Application URL* to view your application. Verify you have a *Welcome to Azure Container Apps* message.
+1. Select **Go to resource** to view your new container app.
+
+1. Select the link next to *Application URL* to view your application.
+
+1. Verify you receive the *Your Azure Container Apps app is live** message.
 
 ## Clean up resources
 
