@@ -90,7 +90,7 @@ Next, create an environment for your container app.
 
 1. Select the link next to *Application URL* to view your application.
 
-1. Verify you receive the *Your Azure Container Apps app is live** message.
+1. Verify you receive the **Your Azure Container Apps app is live** message.
 
 ## Clean up resources
 
