@@ -10,7 +10,7 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 
 In this lab, you will:
 
-- Task 1: Deploy a Docker image by using the Azure Container Instance
+- Task 1: Deploy an Azure Container Instance using a Docker image
 - Task 2: Review the functionality of the Azure Container Instance
 
 ## Architecture diagram
@@ -19,7 +19,7 @@ In this lab, you will:
 
 ## Exercise 1
 
-### Task 1: Deploy a Docker image by using the Azure Container Instance
+### Task 1: Deploy an Azure Container Instance using a Docker image
 
 In this task, you will create a new container instance for the web application.
 
