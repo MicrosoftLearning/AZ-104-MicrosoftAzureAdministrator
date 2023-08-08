@@ -31,9 +31,19 @@ In this task, you will create an Azure web app.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
-1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create**.
+1. In the Sign in window enter you will see a login screen, in that enter the following email/username and then click on **Next**. 
 
-1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
+    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the password and click on Sign in.
+   
+   * Password: <inject key="AzureAdUserPassword"></inject>
+  
+1. When prompted to stay signed-in, select **Yes**. This takes you to the Microsoft 365 admin center page.
+
+1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create** and choose **Create Web App**
+
+1. On the **Basics** tab , specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
@@ -56,9 +66,9 @@ In this task, you will create an Azure web app.
 
 In this task, you will create a staging deployment slot.
 
-1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
+1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
 
-    ![image](../media/9a-1.png)
+    ![image](../media/ds.png)
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
@@ -76,6 +86,8 @@ In this task, you will create a staging deployment slot.
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
+
+1. Click on the **Browse** tab.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
@@ -120,7 +132,7 @@ In this task, you will deploy code to the staging deployment slot.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/storage.png)
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
@@ -160,7 +172,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Close the Cloud Shell pane.
 
-1. On the staging slot blade, click **Overview** and then click the **URL** link to display the default web page in a new browser tab.
+1. On the staging slot blade, click **Overview** and then click on the **Browse** tab to display the default web page in a new browser tab.
 
     ![image](../media/9a-8.png)
 
