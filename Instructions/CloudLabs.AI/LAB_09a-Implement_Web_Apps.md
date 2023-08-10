@@ -67,9 +67,7 @@ In this task, you will create an Azure web app.
 In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
-
-    ![image](../media/ds.png)
-
+  
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
     ![image](../media/9a-2new.png)
@@ -191,6 +189,8 @@ In this task, you will swap the staging slot with the production slot
    ![image](../media/9a-10.png)
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
+
+   >**Note**: Kindly Wait till Swap successfully complete.
 
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
