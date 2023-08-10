@@ -16,13 +16,13 @@ In this lab, we will:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, search for locate **Container apps** and then, on the **Container instances** blade, click **+ Create**.
+1. In the Azure portal, in the Search resources, services, and docs search and select **Container apps** then on the **Container instances** blade, click **+ Create**.
 
 ### Basics tab
 
-In the *Basics* tab, do the following actions.
+In the **Basics** tab, Specify the following actions.
 
-1. Enter the following values in the *Project details* section.
+1. Enter the following values in the **Project details** section.
 
     | Setting | Action |
     |---|---|
@@ -40,8 +40,8 @@ Next, create an environment for your container app.
     |--|--|
     | Region | **Your choice**. |
 
-1. In the *Create Container Apps environment* field, select the **Create new** link.
-1. In the *Create Container Apps Environment* page on the *Basics* tab, enter the following values:
+1. In the **Create Container Apps environment** field, select the **Create new** link.
+1. In the **Create Container Apps Environment** page on the **Basics** tab, enter the following values:
 
     | Setting | Value |
     |--|--|
@@ -49,35 +49,31 @@ Next, create an environment for your container app.
     | Zone redundancy | Select **Disabled** |
 
 1. Select the **Monitoring** tab to create a Log Analytics workspace.
-1. Select the **Create new** link in the *Log Analytics workspace* field and enter the following values.
+1. Select the **Create new** link in the **Log Analytics workspace** field and enter the following values.
 
     | Setting | Value |
     |--|--|
     | Name | Enter `my-container-apps-logs` |
   
-    The *Location* field is pre-filled with your region for you.
+    >**Note**: The **Location** field is pre-filled with your region for you.
 
 1. Select **OK** and then **Create**. 
 
-1. Click **Next: Container**.
+1. Back on the **Create Container App** page  click **Next: Container**.
 
-1. Check the box next to **Use quickstart image**.
+1. On the **Container** tab, Check the box next to **Use quickstart image**.
 
-1. Select the **Review and create** button at the bottom of the page. This step may take a couple of minutes. 
+1. Select the **Review and create** button at the bottom of the page.
 
-    The settings in the Container App are verified. If no errors are found, the *Create* button is enabled.  
+1. Select **Create**, This step may take a couple of minutes. 
 
-    If there are errors, any tab containing errors is marked with a red dot.  Navigate to the appropriate tab.  Fields containing an error will be highlighted in red.  Once all errors are fixed, select **Review and create** again.
-
-1. Select **Create**.
-
-    A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
+    >**Note**: A page with the message **Deployment is in progress** is displayed.  Once the deployment is successfully completed, you'll see the message: **Your deployment is complete**.
    
 ## Task 2: Test and verfiy deployment of the container app
 
 1. Select **Go to resource** to view your new container app.
 
-1. Select the link next to *Application URL* to view your application.
+1. Select the link next to **Application URL** to view your application.
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
 
