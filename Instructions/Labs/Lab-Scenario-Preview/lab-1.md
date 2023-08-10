@@ -1,7 +1,6 @@
 # Lab Scenario Preview - 01 - Manage Azure Active Directory Identities
 
-## Lab scenario
-
+## Lab overview
 In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
 ## Objectives

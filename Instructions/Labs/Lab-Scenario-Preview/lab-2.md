@@ -1,6 +1,6 @@
 # Lab Scenario Preview - 02 - Administer Governance and Compliance
 
-## Lab scenario
+## Lab overview
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 - creating a management group that would include all of Contoso's Azure subscriptions
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 

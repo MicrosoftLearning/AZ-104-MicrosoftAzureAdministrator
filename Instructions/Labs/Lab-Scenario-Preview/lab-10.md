@@ -1,5 +1,6 @@
 # Lab Scenario Preview - 10 - Backup virtual machines
-## Lab scenario
+
+## Lab overview
 You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
 ## Objectives
