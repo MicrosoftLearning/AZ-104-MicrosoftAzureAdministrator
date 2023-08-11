@@ -28,7 +28,7 @@ In this lab, you will:
 ![image](../media/lab09b.png)
 
 ## Lab 9c - Architecture diagram
-![image](../media/az-104lab(9)new1.png)
+![image](../media/az-104lab(9)new(1).png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/bb5b591a-9f0a-4749-8d59-a19847b6e0e9) if you want to go through detailed guide prior to launching lab environment.
 
