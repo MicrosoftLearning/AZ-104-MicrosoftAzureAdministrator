@@ -11,7 +11,8 @@ In this lab, we will:
 
 ## Architecture diagram
 
-   ![image](../media/az-104labnew9.png)
+   ![image](../media/az-104lab(9)new(1).png)
+ 
 
 ## Estimated timing: 20 minutes
 
