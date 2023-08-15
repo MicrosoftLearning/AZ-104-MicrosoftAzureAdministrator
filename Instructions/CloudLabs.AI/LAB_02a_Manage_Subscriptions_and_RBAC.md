@@ -97,7 +97,6 @@ In this task, you will create a definition of a custom RBAC role.
       ]
    }
    ```
-    > **Note**: If you are not sure where the files are stored locally in your lab environment, please ask your instructor.
 
     > **Note**: Replace the **`SUBSCRIPTION_ID`** placeholder in the JSON file with the subscription ID you copied into Clipboard and save the change.
 
