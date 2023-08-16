@@ -13,7 +13,7 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment
 + Task 2: Create and configure Azure Storage accounts
@@ -326,3 +326,5 @@ In this lab, you have:
 - Managed authentication and authorization for Azure Storage
 - Created and configured an Azure Files shares
 - Managed network access for Azure Storage
+
+## You have successfully completed the lab

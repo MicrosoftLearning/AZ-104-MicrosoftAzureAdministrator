@@ -12,7 +12,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Review an ARM template for deployment of an Azure managed disk
 + Task 2: Create an Azure managed disk by using an ARM template
@@ -141,3 +141,5 @@ In this lab, you have:
 - Reviewed an ARM template for deployment of an Azure managed disk
 - Created an Azure managed disk by using an ARM template
 - Reviewed the ARM template-based deployment of the managed disk
+
+## You have successfully completed the lab

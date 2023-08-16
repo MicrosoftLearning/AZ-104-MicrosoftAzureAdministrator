@@ -5,7 +5,7 @@
 + Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Lab 9a - Implement Web Apps
     + Task 1: Create an Azure web app
     + Task 2: Create a staging deployment slot

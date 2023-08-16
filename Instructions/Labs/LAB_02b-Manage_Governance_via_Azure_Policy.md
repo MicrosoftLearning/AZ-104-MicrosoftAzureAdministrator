@@ -13,7 +13,7 @@ In order to improve management of Azure resources in Contoso, you have been task
 
 ## Objectives
 
-In this lab, we will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create and assign tags via the Azure portal
 + Task 2: Enforce tagging via an Azure policy
@@ -217,3 +217,5 @@ In this lab, you have:
 - Created and assigned tags via the Azure portal
 - Enforced tagging via an Azure policy
 - Applied tagging via an Azure policy
+
+## You have successfully completed the lab

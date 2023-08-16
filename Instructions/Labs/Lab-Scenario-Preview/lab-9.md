@@ -6,7 +6,7 @@
 + Contoso also has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Lab 9a - Implement Web Apps
     + Task 1: Create an Azure web app
     + Task 2: Create a staging deployment slot

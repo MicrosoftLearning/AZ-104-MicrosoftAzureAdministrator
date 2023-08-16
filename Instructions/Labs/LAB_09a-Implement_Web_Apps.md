@@ -9,7 +9,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's web sites, 
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create an Azure web app
 + Task 2: Create a staging deployment slot
@@ -281,3 +281,5 @@ In this lab, you have:
 + Deployed code to the staging deployment slot
 + Swapped the staging slots
 + Configured and test autoscaling of the Azure web app
+
+## You have successfully completed the lab

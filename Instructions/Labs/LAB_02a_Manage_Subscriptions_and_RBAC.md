@@ -19,7 +19,7 @@ In order to improve management of Azure resources in Contoso, you have been task
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Implement Management Groups
 + Task 2: Create custom RBAC roles 
@@ -172,3 +172,5 @@ In this lab, you have:
 - Implemented Management Groups
 - Created custom RBAC roles 
 - Assigned RBAC roles
+
+## You have successfully completed the lab

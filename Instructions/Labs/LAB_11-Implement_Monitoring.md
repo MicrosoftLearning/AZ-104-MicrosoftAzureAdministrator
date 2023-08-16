@@ -7,7 +7,7 @@ You need to evaluate Azure functionality that would provide insight into perform
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment
 + Task 2: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
