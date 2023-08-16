@@ -43,7 +43,7 @@ In this task, you will use the Azure portal to create resource groups and create
     |Resource Group| the name of a new resource group **az104-03a-rg1** |
     |Disk name| **az104-03a-disk1** |
     |Region| the name of the Azure region where you created the resource group |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
     >**Note**: When creating a resource, you have the option of creating a new resource group or using an existing one.
@@ -82,7 +82,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Resource Group| click **create new** resource group and name it **az104-03a-rg3** |
     |Disk name| **az104-03a-disk2** |
     |Region| the name of the Azure region where you created the other resource groups in this lab |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
@@ -102,7 +102,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. On the **az104-03a-rg3** resource group blade, click **Overview**, in the list of resource group resources, select the entry representing the disk you created earlier in this task, and click **Delete** in the toolbar. 
 
-1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **yes** and click **Delete**.
+1. When prompted **Do you want to delete all the selected resources?**, in the **Confirm delete** text box, type **delete** and click **Delete**.
 
 1. You should see an error message, notifying about the failed delete operation. 
 
