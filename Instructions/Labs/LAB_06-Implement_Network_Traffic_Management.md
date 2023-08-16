@@ -15,7 +15,7 @@ You were tasked with testing managing network traffic targeting Azure virtual ma
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment
 + Task 2: Configure the hub and spoke network topology
@@ -618,3 +618,5 @@ In this lab, you have:
 + Task 4: Configure routing in the hub and spoke topology
 + Task 5: Implement Azure Load Balancer
 + Task 6: Implement Azure Application Gateway
+
+## You have successfully completed the lab

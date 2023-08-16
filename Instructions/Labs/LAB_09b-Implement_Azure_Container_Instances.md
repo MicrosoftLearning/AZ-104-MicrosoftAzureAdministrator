@@ -9,7 +9,7 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 - Task 1: Deploy a Docker image by using the Azure Container Instance
 - Task 2: Review the functionality of the Azure Container Instance
@@ -95,3 +95,5 @@ In this lab, you have:
 
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
+
+## You have successfully completed the lab

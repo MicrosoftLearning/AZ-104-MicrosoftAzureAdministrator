@@ -9,7 +9,7 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 + Task 2: Deploy an Azure Kubernetes Service cluster
@@ -289,3 +289,5 @@ In this lab, you have:
 + Deployed an Azure Kubernetes Service cluster
 + Deployed pods into the Azure Kubernetes Service cluster
 + Scaled containerized workloads in the Azure Kubernetes service cluster
+
+## You have successfully completed the lab

@@ -14,7 +14,7 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure a virtual network
 + Task 2: Deploy virtual machines into the virtual network
@@ -395,3 +395,5 @@ In this lab, you have:
 + Configured network security groups
 + Configured Azure DNS for internal name resolution
 + Configured Azure DNS for external name resolution
+
+## You have successfully completed the lab

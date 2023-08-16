@@ -13,7 +13,7 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Start a Bash session in Azure Cloud Shell
 + Task 2: Create a resource group and an Azure managed disk by using Azure CLI
@@ -131,3 +131,5 @@ In this lab, you have:
 - Started a Bash session in Azure Cloud Shell
 - Created a resource group and an Azure managed disk by using Azure CLI
 - Configured the managed disk by using Azure CLI
+
+## You have successfully completed the lab

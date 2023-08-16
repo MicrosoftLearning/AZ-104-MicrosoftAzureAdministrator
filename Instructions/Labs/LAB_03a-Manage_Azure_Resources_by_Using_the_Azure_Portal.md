@@ -13,7 +13,7 @@ You need to explore the basic Azure administration capabilities associated with 
 
 ## Objectives
 
-In this lab, we will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create resource groups and deploy resources to resource groups
 + Task 2: Move resources between resource groups
@@ -127,3 +127,5 @@ In this lab, you have:
 - Created resource groups and deployed resources to resource groups
 - Moved resources between resource groups
 - Implemented and tested resource locks
+
+## You have successfully completed the lab

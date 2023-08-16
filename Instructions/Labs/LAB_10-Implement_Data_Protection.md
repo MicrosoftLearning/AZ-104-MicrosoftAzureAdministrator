@@ -13,7 +13,7 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
@@ -467,3 +467,5 @@ In this lab, you have:
 + Performed file recovery by using Azure Recovery Services agent
 + Performed file recovery by using Azure virtual machine snapshots
 + Reviewed the Azure Recovery Services soft delete functionality
+
+## You have successfully completed the lab

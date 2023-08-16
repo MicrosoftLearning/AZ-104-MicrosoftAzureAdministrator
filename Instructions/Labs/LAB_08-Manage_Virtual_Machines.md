@@ -13,7 +13,7 @@ You were tasked with identifying different options for deploying and configuring
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Task 2: Configure Azure virtual machines by using virtual machine extensions
@@ -656,3 +656,5 @@ In this lab, you have:
 + Deployed zone-reslient Azure virtual machine scale sets by using the Azure portal
 + Configured Azure virtual machine scale sets by using virtual machine extensions
 + Scaled compute and storage for Azure virtual machine scale sets
+
+## You have successfully completed the lab

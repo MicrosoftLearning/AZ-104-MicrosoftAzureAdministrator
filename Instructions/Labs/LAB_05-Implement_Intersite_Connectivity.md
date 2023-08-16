@@ -13,7 +13,7 @@ Contoso has its datacenters in Boston, New York, and Seattle offices connected v
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment
 + Task 2: Configure local and global virtual network peering
@@ -282,3 +282,5 @@ In this lab, you have:
 + Provisioned the lab environment
 + Configured local and global virtual network peering
 + Tested intersite connectivity
+
+## You have successfully completed the lab
