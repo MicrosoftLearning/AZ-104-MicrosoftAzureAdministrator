@@ -3,7 +3,7 @@
 You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from the Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from the Internet.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Create and configure a virtual network
 + Task 2: Deploy virtual machines into the virtual network
 + Task 3: Configure private and public IP addresses of Azure VMs
@@ -410,7 +410,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 + Created and configured a virtual network
 + Deployed virtual machines into the virtual network
 + Configured private and public IP addresses of Azure VMs

@@ -6,8 +6,7 @@ Contoso has a number of multi-tier applications that are not suitable to run by 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2015)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## Objectives
-
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Register Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
 + Task 2: Deploy an Azure Kubernetes Service cluster
 + Task 3: Deploy pods into the Azure Kubernetes Service cluster
@@ -272,9 +271,7 @@ In this task, you will scale horizontally the number of pods and then number of 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
-
-In this lab, you have:
-
+In this lab, you have completed:
 + Deployed an Azure Kubernetes Service cluster
 + Deployed pods into the Azure Kubernetes Service cluster
 + Scaled containerized workloads in the Azure Kubernetes service cluster

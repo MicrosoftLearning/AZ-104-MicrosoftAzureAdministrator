@@ -4,8 +4,7 @@
 You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
 
 ## Objectives
-In this lab, we will:
-
+In this lab, you will complete the following tasks:
 + Task 1: Use the existing resource groups and deploy resources to resource groups
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
@@ -115,7 +114,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 #### Review
-In this lab, you have:
+In this lab, you have completed:
 - Created resource groups and deployed resources to resource groups
 - Moved resources between resource groups
 - Implemented and tested resource locks

@@ -6,7 +6,7 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 ## Objectives
 
-In this lab, you will:
+In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure Azure AD users
 + Task 2: Create Azure AD groups with assigned and dynamic membership
@@ -361,10 +361,10 @@ In this task, you will create Azure AD guest users and grant them access to reso
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-
-In this lab, you have:
-
+In this lab, you have completed:
 - Created and configured Azure AD users
 - Created Azure AD groups with assigned and dynamic membership
 - Created an Azure Active Directory (AD) tenant
 - Managed Azure AD guest users 
+
+## You have successfully completed the lab

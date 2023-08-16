@@ -7,9 +7,7 @@ Contoso wants to find a new platform for its virtualized workloads. You identifi
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
 ## Objectives
-
-In this lab, you will:
-
+In this lab, you will complete the following tasks:
 - Task 1: Deploy an Azure Container Instance using a Docker image
 - Task 2: Review the functionality of the Azure Container Instance
 
@@ -87,9 +85,7 @@ In this task, you will review the deployment of the container instance.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
-
-In this lab, you have:
-
+In this lab, you have completed:
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
 

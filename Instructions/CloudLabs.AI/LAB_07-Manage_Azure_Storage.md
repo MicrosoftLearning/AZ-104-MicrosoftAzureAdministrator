@@ -4,9 +4,7 @@
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While the majority of these files are not accessed frequently, there are some exceptions. You would like to minimize the cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
 ## Objectives
-
-In this lab, you will:
-
+In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Create and configure Azure Storage accounts
 + Task 3: Manage blob storage
@@ -328,10 +326,12 @@ In this task, you will configure network access for Azure Storage.
 1. Close the Cloud Shell pane.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 - Provisioned the lab environment
 - Created and configured Azure Storage accounts
 - Managed blob storage
 - Managed authentication and authorization for Azure Storage
 - Created and configured Azure Files shares
 - Managed network access for Azure Storage
+
+## You have successfully completed the lab

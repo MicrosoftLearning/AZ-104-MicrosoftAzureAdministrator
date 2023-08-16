@@ -3,7 +3,7 @@
 Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Configure local and global virtual network peering
 + Task 3: Test intersite connectivity
@@ -290,8 +290,9 @@ In this task, you will test connectivity between virtual machines on the three v
 15. Examine the output of the command and verify that the connection was successful.
 
 ### Review
-In this lab, you have:
-
+In this lab, you have completed:
 + Provisioned the lab environment
 + Configured local and global virtual network peering
 + Tested intersite connectivity
+
+## You have successfully completed the lab

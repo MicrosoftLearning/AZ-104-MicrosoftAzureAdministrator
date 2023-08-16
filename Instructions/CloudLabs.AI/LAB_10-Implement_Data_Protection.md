@@ -3,7 +3,7 @@
 You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
@@ -449,7 +449,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 + Provisioned the lab environment
 + Created a Recovery Services vault
 + Implemented Azure virtual machine-level backup

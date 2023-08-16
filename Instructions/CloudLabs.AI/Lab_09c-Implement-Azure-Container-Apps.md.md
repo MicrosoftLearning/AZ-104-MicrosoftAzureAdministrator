@@ -4,8 +4,7 @@
 Azure Container Apps enables you to run microservices and containerized applications on a serverless platform. With Container Apps, you enjoy the benefits of running containers while leaving behind the concerns of manually configuring cloud infrastructure and complex container orchestrators.
 
 ## Objectives
-
-In this lab, we will:
+In this lab, you will complete the following tasks:
 - Task 1: Create a container app and environment
 - Task 2: Test and verfiy deployment of the container app
 
@@ -88,3 +87,8 @@ Next, create an environment for your container app.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.   
 
+### Review
+In this lab, you have completed:
++ Create a container app and environment
++ Test and verfiy deployment of the container app
+## You have successfully completed the lab

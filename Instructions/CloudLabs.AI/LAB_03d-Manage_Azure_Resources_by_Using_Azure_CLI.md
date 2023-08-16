@@ -3,7 +3,7 @@
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, Azure Resource Manager templates, and Azure PowerShell, you need to carry out the equivalent task by using Azure CLI. To avoid installing Azure CLI, you will leverage Bash environment available in Azure Cloud Shell.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Start a Bash session in Azure Cloud Shell
 + Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 + Task 3: Configure the managed disk by using Azure CLI
@@ -105,9 +105,7 @@ In this task, you will be the managing configuration of the Azure managed disk b
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-
-In this lab, you have:
-
+In this lab, you have completed:
 - Started a Bash session in Azure Cloud Shell
 - Use the existing resource group and create an Azure managed disk by using Azure CLI
 - Configured the managed disk by using Azure CLI

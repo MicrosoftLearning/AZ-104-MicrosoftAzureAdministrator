@@ -3,7 +3,6 @@
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
 
 ## Objectives
-In this lab, you will:
 + Task 1: Review an ARM template for deployment of an Azure managed disk
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
@@ -120,7 +119,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 - Reviewed an ARM template for deployment of an Azure managed disk
 - Created an Azure managed disk by using an ARM template
 - Reviewed the ARM template-based deployment of the managed disk

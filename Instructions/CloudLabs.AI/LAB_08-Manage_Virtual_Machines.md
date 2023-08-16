@@ -3,7 +3,7 @@
 You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 + Task 2: Configure Azure virtual machines by using virtual machine extensions
 + Task 3: Scale compute and storage for Azure virtual machines
@@ -685,10 +685,12 @@ In this task, you will change the size of virtual machine scale set instances, c
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 + Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template.
 + Configured Azure virtual machines by using virtual machine extensions.
 + Scaled compute and storage for Azure virtual machines.
 + Deployed zone-resilient Azure virtual machine scale sets by using the Azure portal.
 + Configured Azure virtual machine scale sets by using virtual machine extensions.
 + Scaled compute and storage for Azure virtual machine scale sets.
+
+## You have successfully completed the lab

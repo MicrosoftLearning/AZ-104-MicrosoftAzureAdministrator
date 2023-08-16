@@ -3,7 +3,7 @@
 You need to evaluate Azure functionality that would provide insight into the performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
 
 ## Objectives
-In this lab, you will:
+In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 + Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
@@ -319,10 +319,12 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     >**Note**: You might need to wait a few minutes before the updated data becomes available.
 
 ### Review
-In this lab, you have:
+In this lab, you have completed:
 + Provisioned the lab environment
 + Created and configured an Azure Log Analytics workspace and Azure Automation-based solutions
 + Reviewed default monitoring settings of Azure virtual machines
 + Configured Azure virtual machine diagnostic settings
 + Reviewed Azure Monitor functionality
 + Reviewed Azure Log Analytics functionality
+
+## You have successfully completed the lab
