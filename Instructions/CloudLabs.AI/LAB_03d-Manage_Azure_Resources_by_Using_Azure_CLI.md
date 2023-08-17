@@ -8,6 +8,8 @@ In this lab, you will complete the following tasks:
 + Task 2: Use the existing resource group and create an Azure managed disk by using Azure CLI
 + Task 3: Configure the managed disk by using Azure CLI
 
+## Estimated timing: 20 minutes
+
 ## Architecture diagram
 ![image](../media/lab03d.png)
 

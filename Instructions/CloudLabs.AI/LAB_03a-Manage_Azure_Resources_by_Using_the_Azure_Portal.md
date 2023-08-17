@@ -9,6 +9,8 @@ In this lab, you will complete the following tasks:
 + Task 2: Move resources between resource groups
 + Task 3: Implement and test resource locks
 
+## Estimated timing: 20 minutes
+
 ## Architecture diagram
 ![image](../media/lab03a.png)
 

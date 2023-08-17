@@ -7,6 +7,8 @@ Now that you explored the basic Azure administration capabilities associated wit
 + Task 2: Create an Azure managed disk by using an ARM template
 + Task 3: Review the ARM template-based deployment of the managed disk
 
+## Estimated timing: 20 minutes
+
 ## Architecture diagram
 ![image](../media/lab03b.png)
 

@@ -11,6 +11,7 @@ In this lab, you will complete the following tasks:
 + Task 5: Configure Azure DNS for internal name resolution
 + Task 6: Configure Azure DNS for external name resolution
 
+## Estimated timing: 40 minutes
 
 ## Architecture diagram
 ![image](../media/lab04.png)

@@ -12,6 +12,8 @@ In this lab, you will complete the following tasks:
 + Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
 + Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
 
+## Estimated timing: 50 minutes
+
 ## Architecture diagram
 
 ![](../CloudLabs.AI/Images/lab08.png)

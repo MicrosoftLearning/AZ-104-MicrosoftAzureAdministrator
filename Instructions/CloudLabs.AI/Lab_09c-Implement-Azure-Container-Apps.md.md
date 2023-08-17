@@ -8,6 +8,8 @@ In this lab, you will complete the following tasks:
 - Task 1: Create a container app and environment
 - Task 2: Test and verfiy deployment of the container app
 
+## Estimated timing: 20 minutes
+
 ## Architecture diagram
 
    ![image](../media/az-104lab(9)new(1).png)
