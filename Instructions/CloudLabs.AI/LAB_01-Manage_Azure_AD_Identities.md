@@ -72,7 +72,7 @@ In this task, you will create and configure Azure AD users.
     
       ![](../CloudLabs.AI/Images/aad1.png)
     
- 1. on **Properties** tab specify the following settings (leave others with their defaults)   
+ 1. On **Properties** tab specify the following settings (leave others with their defaults)   
 
     | Setting | Value |
     | --- | --- |
@@ -266,7 +266,7 @@ In this task, you will create a new Azure AD tenant.
     - Try the creation a few times.<br>
     - Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
     - Open a new **InPrivate** window and use the Azure Portal and try to create the tenant from there.<br>
-     Raise the problem with the trainer, then use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
+    - Use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
     - You can try this task later, but creating a tenant isn't required in other labs. 
 
 1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
