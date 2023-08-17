@@ -11,7 +11,9 @@ In this lab, you will complete the following tasks:
 + Task 1: Create and configure Azure AD users
 + Task 2: Create Azure AD groups with assigned and dynamic membership
 + Task 3: Create an Azure Active Directory (AD) tenant
-+ Task 4: Manage Azure AD guest users 
++ Task 4: Manage Azure AD guest users
+
+## Estimated timing: 30 minutes
 
 ## Architecture diagram
 
