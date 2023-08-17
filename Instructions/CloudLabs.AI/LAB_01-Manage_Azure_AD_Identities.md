@@ -65,10 +65,11 @@ In this task, you will create and configure Azure AD users.
     | Display Name | **az104-01a-aaduser1 (3)** |
     | Auto-generate password | unchecked **(4)** |
     | Password | **Provide a secure password (5)** |
+    | Account enabled | **Checked (7)** |
     
       >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
-      ![](../CloudLabs.AI/Images/aad1.png)
+      ![](../CloudLabs.AI/Images/az-104-ex-1-task-1-st-10.png)
     
  1. on **Properties** tab specify the following settings (leave others with their defaults)   
 
@@ -92,11 +93,11 @@ In this task, you will create and configure Azure AD users.
 
      ![](../CloudLabs.AI/Images/assignrole.png)
 
-1.  then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
+1.  Then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
 
-      ![](../CloudLabs.AI/Images/useradmi.png)
+      ![](../CloudLabs.AI/Images/az-104-ex-1-task-1-st-16.png)
      
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
@@ -124,6 +125,7 @@ In this task, you will create and configure Azure AD users.
     | Display Name | **az104-01a-aaduser2** |
     | Auto-generate password | unchecked |
     | Password | **Provide a secure password** |
+    | Account enabled | **Checked** |
     
      >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
@@ -169,7 +171,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. On the Assign license page click on **+ Add Users and Groups** and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
 
-   ![](../CloudLabs.AI/Images/ad12.png)     
+   ![](../CloudLabs.AI/Images/az-104-ex-1-task-2-st-7.png)     
    
 1. Click on **Review + assign** and **Assign**
 
@@ -240,7 +242,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
 
-    ![](../CloudLabs.AI/Images/addmember.png)   
+    ![](../CloudLabs.AI/Images/az-104-ex-1-task-2-st-21.png)   
 
 1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
 
@@ -289,7 +291,7 @@ In this task, you will create a new Azure AD tenant.
    
      > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
-1. ON **Review + create (4)** page Click **Create**, enter the captcha and click **Submit**.
+1. On **Review + create (4)** page Click **Create**, enter the captcha and click **Submit**.
 
    ![](../CloudLabs.AI/Images/catche.png)   
 
@@ -309,6 +311,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     |  Display Name | **az104-01b-aaduser1** |
     |  Auto-generate password | uncheck |
     |  Password | **Provide a secure password** |
+    | Account enabled | **Checked** |
        
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
 
@@ -346,7 +349,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     | Department | **IT** |
     | Usage location | **United States** |
 
-1. Click **Invite**. 
+1. Click **Review+Invite** and then **Invite**. 
 
 1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
 
