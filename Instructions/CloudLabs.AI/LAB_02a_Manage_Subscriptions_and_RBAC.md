@@ -49,7 +49,7 @@ In this task, you will create and configure management groups.
     
     1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
-        ![image](../media/lab2-2.png)
+        ![image](../media/az-104-Lab-02a-e1-t1-s3.png)
    
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
@@ -110,7 +110,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file ***C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
     ![image](../media/lab2-5.png)
 
@@ -135,9 +135,10 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     | Setting | Value |
     | --- | --- |
     | User Principal name | **az104-02-aaduser1**|
-    | Name | **az104-02-aaduser1**|
-    | Let me create the password | enabled |
-    | Initial password | **Provide a secure password** |
+    | Display name | **az104-02-aaduser1**|
+    | Auto-generate password | unchecked |
+    | Password | **Provide a secure password** |
+    | Account enabled | **Checked** |
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
