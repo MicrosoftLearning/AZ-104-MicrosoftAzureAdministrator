@@ -36,11 +36,11 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
     
-    ![image](../media/cloudshell1.png)
+    ![image](../media/cloudshell1.1.png)
     
     >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell01.png)
+    ![image](../media/cloudhell01.1.png)
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
@@ -56,7 +56,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
    //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
    ```
 
-    ![image](../media/2b-new.png)
+    ![image](../media/2b-new.1.png)
 
 1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
 
@@ -66,7 +66,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. On the resource group blade, click **Tags**.
 
-    ![image](../media/2b-2.png)
+    ![image](../media/2b-2.1.png)
 
 1. Create a tag with the following settings and save your change:
 
@@ -89,7 +89,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
-    ![image](../media/2b-4.png)
+    ![image](../media/2b-4.1.png)
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -98,7 +98,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
 
-   ![image](../media/2b-5.png)
+   ![image](../media/2b-5.1.png)
    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
@@ -140,7 +140,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
-    ![image](../media/2b-7new.png)
+    ![image](../media/2b-7new.1.png)
 
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
@@ -156,7 +156,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
-   ![image](../media/2b-8.png)
+   ![image](../media/2b-8.1.png)
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -175,7 +175,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
     | Policy enforcement | Enabled |
 
-    ![image](../media/2b-09.png) 
+    ![image](../media/2b-09.1.png) 
 
 1. Click **Next** and set **Parameters** to the following values:
 
