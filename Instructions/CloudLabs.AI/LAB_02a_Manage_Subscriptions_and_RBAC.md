@@ -110,7 +110,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file ***C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
 
     ![image](../media/lab2-5.1.png)
 
