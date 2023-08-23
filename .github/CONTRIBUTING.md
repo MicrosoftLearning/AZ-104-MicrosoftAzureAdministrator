@@ -19,3 +19,4 @@ To address general comments about the course and demos, or how to prepare for a 
 A user guide has been provided for MCTs who are new to GitHub. It provides steps for connecting to GitHub, downloading and printing course materials, updating the scripts that students use in labs, and explaining how you can help ensure that this course’s content remains current.
 
 <https://microsoftlearning.github.io/MCT-User-Guide/>
+https://github.dev/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/eba720a76371faf1d0cbf5007654ebeb9f426a57/.github/CONTRIBUTING.
