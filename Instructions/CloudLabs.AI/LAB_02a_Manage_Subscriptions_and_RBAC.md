@@ -1,17 +1,9 @@
 # Lab 02a - Manage Subscriptions and RBAC
 
-## Lab requirements
-
-This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
-
 ## Lab scenario
-
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
-
 - creating a management group that would include all of Contoso's Azure subscriptions
-
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
-
     - creating support request tickets
     - viewing resource groups
 
