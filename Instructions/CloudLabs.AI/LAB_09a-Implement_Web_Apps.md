@@ -117,7 +117,7 @@ In this task, you will configure web app deployment settings.
 
     >**Note:** You will need these credentials in the next task of this lab.
 
-#### Task 4: Deploy code to the staging deployment slot
+### Task 4: Deploy code to the staging deployment slot
 
 In this task, you will deploy code to the staging deployment slot.
 
@@ -177,7 +177,7 @@ In this task, you will deploy code to the staging deployment slot.
 
     ![image](../media/9a-9new.png)
 
-#### Task 5: Swap the staging slots
+### Task 5: Swap the staging slots
 
 In this task, you will swap the staging slot with the production slot
 
@@ -195,7 +195,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
-#### Task 6: Configure and test autoscaling of the Azure web app
+### Task 6: Configure and test autoscaling of the Azure web app
 
 In this task, you will configure and test autoscaling of Azure web app.
 
