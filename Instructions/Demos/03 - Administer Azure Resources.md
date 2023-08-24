@@ -21,9 +21,15 @@ In this demonstration, we will explore the Azure portal.
 
 1. Select the **Settings** icon on the top banner. Review **Appearance + startup views** settings. 
 
-1. Use the left-side menu and select **Dashboard**. **Edit** the dashboard using the **Tile Gallery**. Discuss customization options. 
+1. Use the left-side menu and select **Dashboard**. **Edit** the dashboard using the **Tile Gallery**. Discuss customization options.
 
-1. Ask if the students have any questions on how to use the Azure portal. 
+1. Show how to search for and locate resources.
+
+1. Use the upper left menu to locate **All services**. 
+
+1. As you have time review other features.
+   
+1. Ask if the students have any questions.
 
 ## Demonstration -- Cloud Shell
 
