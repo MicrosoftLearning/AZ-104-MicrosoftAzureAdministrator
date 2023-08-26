@@ -48,6 +48,21 @@ In this demonstration, we will explore blob storage.
 
 1. Upload a blob to the container. As you have time review the advanced settings. For example, blob type and blob size. 
 
+## Configure Storage Security
+
+In this demonstration, we will create a shared access signature.
+
+**Note:** This demonstration requires a storage account, with a blob container, and an uploaded file.
+
+**Reference**: [Create SAS tokens for storage containers](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
+
+1. Select a blob or file that you want to secure. 
+
+1. Generate a shared access signature (SAS). Review the permissions, start and expiry times, and allowed protocols.
+
+1. Use the SAS URL to ensure the resource displays. 
+
+
 ## Configure Azure Files 
 
 In this demonstration, we will work with files shares and snapshots.
@@ -62,22 +77,7 @@ In this demonstration, we will work with files shares and snapshots.
 
 1. Create a file share. Review quotas, uploading files, and adding directories to organize the information. 
 
-1. Create a file share snapshot. Review when to use snapshots and how they are different from backups. As you have time, upload a file, take a snapshot, delete the file, and restore the snapshot. 
-
-
-## Configure Storage Security
-
-In this demonstration, we will create a shared access signature.
-
-**Note:** This demonstration requires a storage account, with a blob container, and an uploaded file.
-
-**Reference**: [Create SAS tokens for storage containers](https://learn.microsoft.com/azure/applied-ai-services/form-recognizer/create-sas-tokens?source=recommendations&view=form-recog-3.0.0)
-
-1. Select a blob or file that you want to secure. 
-
-1. Generate a shared access signature (SAS). Review the permissions, start and expiry times, and allowed protocols.
-
-1. Use the SAS URL to ensure the resource displays. 
+1. Create a file share snapshot. Review when to use snapshots and how they are different from backups. As you have time, upload a file, take a snapshot, delete the file, and restore the snapshot.
 
 
 ## Storage Tools (optional)
