@@ -26,7 +26,7 @@ In this demonstration, we will create and work with Azure App Service plans.
 
 1. Review the **Scale up (App Service Plan)** blade. Discuss the difference between **Dev/Test** and **Production** plans. Review the feature list. 
 
-1. Review the **Scale out (App Service Plan)** blade. Review the difference between **Manual** and **Rule=based**. 
+1. Review the **Scale out (App Service Plan)** blade. Review the difference between **Manual** and **Rule-based**. 
 
 ## Configure Azure App Services
 
