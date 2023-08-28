@@ -227,6 +227,7 @@ In this task, you will configure and test autoscaling of Azure web app.
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
+
     
     ![image](../media/9a-12.png)
 
