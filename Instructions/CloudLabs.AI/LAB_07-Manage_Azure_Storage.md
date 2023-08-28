@@ -1,6 +1,5 @@
 # Lab 07 - Manage Azure Storage
 ## Lab scenario
-
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While the majority of these files are not accessed frequently, there are some exceptions. You would like to minimize the cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
 
 ## Objectives
@@ -18,18 +17,10 @@ In this lab, you will complete the following tasks:
 
   ![](../CloudLabs.AI/Images/lab07.png)
 
-## Exercise 1: Provision the lab environment
+## Exercise 1:
 
 ### Task 1: Provision the lab environment
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
-
-1. If not  Sign in to the [Azure portal](https://portal.azure.com).
-
-1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
-   
-1. Now enter the following **Password** and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
    
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -81,7 +72,6 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 1. Close the Cloud Shell pane.
 
 ### Task 2: Create and configure Azure Storage accounts
-
 In this task, you will create and configure an Azure Storage account.
 
 1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
@@ -126,7 +116,6 @@ In this task, you will create and configure an Azure Storage account.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 3: Manage blob storage
-
 In this task, you will create a blob container and upload a blob into it.
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers**.
@@ -253,13 +242,13 @@ In this task, you will create and configure Azure Files shares.
     | Name | **az104-07-share** |
     | Tier | **transaction optimized** |
 
-1. In the Backup tab, uncheck **Enable backup** option  and then click on **Create**.
+1. In the Backup tab, uncheck **Enable backup** option and then click on **Create**.
 
 1. Click the newly created file share and click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**.
 
-1. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. Click on the button and you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
 1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 

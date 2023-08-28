@@ -1,11 +1,9 @@
 # Lab 01 - Manage Azure Active Directory Identities
 
 ## Lab scenario
-
-In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
+To allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user's job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
 ## Objectives
-
 In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure Azure AD users
@@ -19,19 +17,10 @@ In this lab, you will complete the following tasks:
 
    ![image](../media/lab1.png)
    
-## Exercise 1: Create and configure Azure AD users
+## Exercise 1:
 
-#### Task 1: Create and configure Azure AD users
-
+### Task 1: Create and configure Azure AD users
 In this task, you will create and configure Azure AD users.
-
-1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
-
-1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
-   
-1. Now enter the following **Password** and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for Azure Active Directory (1) and select **Azure Active Directory (2)**.
 
@@ -49,7 +38,7 @@ In this task, you will create and configure Azure AD users.
 
      ![](../CloudLabs.AI/Images/odluser.png)
 
-1. Click **Edit properties**, set **Usage location** to **United States**, and click **save** to apply the change.
+1. Click **Edit properties**, set **Usage location** to **United States**, and click **Save** to apply the change.
 
      ![](../CloudLabs.AI/Images/editpro.png)
 
@@ -73,7 +62,7 @@ In this task, you will create and configure Azure AD users.
     
       ![](../CloudLabs.AI/Images/az-104-ex-1-task-1-st-10.png)
     
- 1. On **Properties** tab specify the following settings (leave others with their defaults)   
+ 1. On  the **Properties** tab specify the following settings (leave others with their defaults)   
 
     | Setting | Value |
     | --- | --- |
@@ -105,7 +94,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
-1. In  the Settings tab, leave everything to default and click on **Assign**.    
+1. In the Settings tab, leave everything to default and click on **Assign**.    
 
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
 
@@ -115,7 +104,7 @@ In this task, you will create and configure Azure AD users.
 
 1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, note that you do not have permission to modify any configuration options, and sign out of the user account **az104-01a-aaduser1** and close the InPrivate window.
 
-1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, and then click **+ New user** then select **+ Create new user**.
+1. In the Azure portal, search for and select **Azure Active Directory**, in the **Manage** section, click **Users**, then click **+ New user** then select **+ Create new user**.
 
      ![](../CloudLabs.AI/Images/newuser.png)
 
@@ -145,8 +134,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: If the users are already created then you can skip this task and continue further. 
 
-#### Task 2: Create Azure AD groups with assigned and dynamic membership
-
+### Task 2: Create Azure AD groups with assigned and dynamic membership
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
 1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
@@ -175,7 +163,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
    ![](../CloudLabs.AI/Images/az-104-ex-1-task-2-st-7.png)     
    
-1. Click on **Review + assign** and **Assign**
+1. Click on **Review + assign** and **Assign**.
 
 1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
 
@@ -258,8 +246,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Create an Azure Active Directory (AD) tenant
-
+### Task 3: Create an Azure Active Directory (AD) tenant
 In this task, you will create a new Azure AD tenant.
 
 1. In the Azure portal, search for and select **Azure Active Directory**.

@@ -1,7 +1,6 @@
 # Lab 09a - Implement Web Apps
 
 ## Lab scenario
-
 You need to evaluate the use of Azure Web apps for hosting Contoso's websites, hosted currently in the company's on-premises data centers. The websites are running on Windows servers using PHP runtime stack. You also need to determine how you can implement DevOps practices by leveraging Azure web app deployment slots.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
@@ -25,12 +24,11 @@ In this lab, you will complete the following tasks:
 ## Exercise 1
 
 ### Task 1: Create an Azure web app
-
 In this task, you will create an Azure web app.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
-1. In the Sign in window enter you will see a login screen, in that enter the following email/username and then click on **Next**. 
+1. In the Sign-in window, you will see a login screen, in that enter the following email/username and then click on **Next**. 
 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
@@ -38,7 +36,7 @@ In this task, you will create an Azure web app.
    
    * Password: <inject key="AzureAdUserPassword"></inject>
   
-1. When prompted to stay signed-in, select **Yes**. This takes you to the Microsoft 365 admin center page.
+1. When prompted to stay signed in, select **Yes**. This takes you to the Microsoft 365 admin center page.
 
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create** and choose **Create Web App**
 
@@ -62,7 +60,6 @@ In this task, you will create an Azure web app.
 1. On the deployment blade, click **Go to resource**.
 
 ### Task 2: Create a staging deployment slot
-
 In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
@@ -89,7 +86,6 @@ In this task, you will create a staging deployment slot.
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
 ### Task 3: Configure web app deployment settings
-
 In this task, you will configure web app deployment settings.
 
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
@@ -119,7 +115,6 @@ In this task, you will configure web app deployment settings.
     >**Note:** You will need these credentials in the next task of this lab.
 
 ### Task 4: Deploy code to the staging deployment slot
-
 In this task, you will deploy code to the staging deployment slot.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -179,7 +174,6 @@ In this task, you will deploy code to the staging deployment slot.
     ![image](../media/9a-9new.png)
 
 ### Task 5: Swap the staging slots
-
 In this task, you will swap the staging slot with the production slot
 
 1. Navigate back to the blade displaying the production slot of the web app.
@@ -197,8 +191,7 @@ In this task, you will swap the staging slot with the production slot
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
 ### Task 6: Configure and test autoscaling of the Azure web app
-
-In this task, you will configure and test autoscaling of Azure web app.
+In this task, you will configure and test autoscaling of the Azure web app.
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
@@ -293,6 +286,6 @@ In this lab, you have completed:
 + Configured web app deployment settings
 + Deployed code to the staging deployment slot
 + Swapped the staging slots
-+ Configured and test autoscaling of the Azure web app
++ Configured and tested autoscaling of the Azure web app
 
 **You have successfully completed the lab**

@@ -14,10 +14,9 @@ In this lab, you will complete the following tasks:
 ## Architecture diagram
 ![image](../media/lab03a.png)
 
-### Excercise 1: Manage Azure resources by Using the Azure Portal
+## Excercise 1: Manage Azure resources by Using the Azure Portal
 
-#### Task 1: Use the existing resource groups and deploy resources to resource groups
-
+### Task 1: Use the existing resource groups and deploy resources to resource groups
 In this task, you will use the Azure portal to use the existing resource groups and create a disk in the resource group.
 
 1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
@@ -39,7 +38,7 @@ In this task, you will use the Azure portal to use the existing resource groups 
 
     >**Note**: Wait until the disk is created. This should take less than a minute.
 
-#### Task 2: Move resources between resource groups
+### Task 2: Move resources between resource groups
 In this task, we will move the disk resource you used in the previous task to a resource group. 
 
 1. Navigate to **Home** page and select the **Resource groups**. 
@@ -64,7 +63,7 @@ In this task, we will move the disk resource you used in the previous task to a 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Implement resource locks
+### Task 3: Implement resource locks
 In this task, you will apply a resource lock to an Azure resource group containing a disk resource.
 
 1. In the Azure portal, search for and select **Disks**, click **+ Create**, and specify the following settings:
@@ -115,7 +114,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Review
+### Review
 In this lab, you have completed:
 - Created resource groups and deployed resources to resource groups
 - Moved resources between resource groups

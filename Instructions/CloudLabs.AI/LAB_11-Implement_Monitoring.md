@@ -4,6 +4,7 @@ You need to evaluate Azure functionality that would provide insight into the per
 
 ## Objectives
 In this lab, you will complete the following tasks:
+
 + Task 1: Provision the lab environment
 + Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
 + Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
@@ -72,7 +73,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-1. From the Cloud Shell pane, run the following to register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
+1. From the Cloud Shell pane, run the following to register the Microsoft. Insights and Microsoft.AlertsManagement resource providers.
 
    ```powershell
    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
@@ -80,7 +81,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-1. Minimize Cloud Shell pane (but do not close it).
+1. Minimize the Cloud Shell pane (but do not close it).
 
 ## Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions

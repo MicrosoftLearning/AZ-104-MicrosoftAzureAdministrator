@@ -16,12 +16,10 @@ In this lab, you will complete the following tasks:
 ## Architecture diagram
 ![image](../media/lab04.png)
 
-### Exercise 1: Create and configure a virtual network
+## Exercise 1: Create and configure a virtual network
 
-#### Task 1: Create and configure a virtual network
+### Task 1: Create and configure a virtual network
 In this task, you will create a virtual network with multiple subnets by using the Azure portal.
-
-1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with Azure credentials.
 
 1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
 
@@ -72,7 +70,7 @@ In this task, you will create a virtual network with multiple subnets by using t
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Deploy virtual machines into the virtual network
+### Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
@@ -130,7 +128,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 7. Close the Cloud Shell pane.
 
 #### Task 3: Configure private and public IP addresses of Azure VMs
-In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
+In this task, you will configure the static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
    > **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
 
@@ -148,14 +146,14 @@ In this task, you will configure static assignment of public and private IP addr
 
     >**Note**: Verify that **ipconfig1** is currently set up with a dynamic private IP address.
 
-1.  On the  search bar search for Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**. 
+1.  On the search bar search for Public IP addresses click on **create**  and on the Create public IP address page specify the following settings and click on **Create**. 
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
 
-1. On the Public IP addresses click on **create**  and on Create public IP address page specify the following settings and click on **Create**.
+1. On the Public IP addresses click on **create** and on the Create public IP address page specify the following settings and click on **Create**.
    
     | Setting | Value |
     | --- | --- |
@@ -166,13 +164,13 @@ In this task, you will configure static assignment of public and private IP addr
 
     ![image](../media/AZ-104-ipconfig.png)
     
-1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.0.4**. In the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip0** and click **Save**.
+1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.0.4**. In the **Public IP address settings** section, select checkbox **Associate public IP address**, on the Public IP address dropdown select **az104-04-pip0** and click **Save**.
     
     ![image](../media/AZ-104newui.png)
 
 1. Back on the **ipconfig1** blade, and save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
 
-1. Navigate back to the **az104-04-vnet1** blade an click on **Connected Devices**.
+1. Navigate back to the **az104-04-vnet1** blade and click on **Connected Devices**.
 
 1. Click **az104-04-nic1** and, on the **az104-04-nic1** blade, click **IP configurations**.
 
@@ -180,7 +178,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. In the **Public IP address settings** section, select checkbox **Associate public IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. In the **Public IP address settings** section, select the checkbox **Associate public** IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
   
 1. Back on the **ipconfig1** blade, save the changes.
 
@@ -190,12 +188,12 @@ In this task, you will configure static assignment of public and private IP addr
 
    >**Note**: You will need both IP addresses in the last task of this lab.
 
-#### Task 4: Configure network security groups
-In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
+### Task 4: Configure network security groups
+In this task, you will configure network security groups to allow for restricted connectivity to Azure virtual machines.
 
 1. In the Azure portal, navigate back to the **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
-1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** overview blade, click **Connect**, and click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
 1. Note that the connection attempt fails.
 
@@ -254,7 +252,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: In the subsequent steps, you will verify that you can successfully connect to the target virtual machine.
 
-1. On the **az104-04-vm0** blade, click **Connect**, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** blade, click **Connect**, and click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address, and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
@@ -270,7 +268,7 @@ In this task, you will configure network security groups in order to allow for r
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 5: Configure Azure DNS for internal name resolution
+### Task 5: Configure Azure DNS for internal name resolution
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
 1. In the Azure portal, search for and select **Private DNS zones** and, on the **Private DNS zones** blade, click **+ Create**.
@@ -331,7 +329,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p12.png)
 
-## Task 6: Configure Azure DNS for external name resolution
+### Task 6: Configure Azure DNS for external name resolution
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
 1. In a web browser, open a new tab and navigate to <https://www.godaddy.com/domains/domain-name-search>.

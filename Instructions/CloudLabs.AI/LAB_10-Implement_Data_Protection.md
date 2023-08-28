@@ -8,7 +8,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
 + Task 4: Implement File and Folder backup
-+ Task 5: Perform file recovery by using Azure Recovery Services agent
++ Task 5: Perform file recovery by using the Azure Recovery Services agent
 + Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 + Task 7: Review the Azure Recovery Services soft delete functionality (optional)
 
@@ -17,12 +17,10 @@ In this lab, you will complete the following tasks:
 ## Architecture diagram
 ![image](../media/lab10.png)
 
-### Excercise1: Backup virtual machines
+## Excercise 1: Backup virtual machines
 
-#### Task 1: Provision the lab environment
+### Task 1: Provision the lab environment
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
-
-1. If you have not yet signed in, please navigate to the [**Azure portal**](http://portal.azure.com).
 
 1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** resource group, on the overview page of **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** copy the location and paste it in a notepad you will need it in next steps
 
@@ -50,7 +48,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
    
    ![image](../media/parametersfileupload.png)
 
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: (replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
    ```powershell
    $location = '[Azure_region]'
@@ -69,7 +67,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
 
-#### Task 2: Create a Recovery Services vault
+### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
 1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
@@ -105,7 +103,7 @@ In this task, you will create a recovery services vault.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-#### Task 3: Implement Azure virtual machine-level backup
+### Task 3: Implement Azure virtual machine-level backup
 In this task, you will implement Azure virtual-machine level backup.
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to the respected resource group in the Azure portal and on the overview page of the resource group click on **Deployments**.
@@ -147,7 +145,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-#### Task 4: Implement File and Folder backup
+### Task 4: Implement File and Folder backup
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
 1. Navigate to the **Home** page, and search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
@@ -288,7 +286,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Terminate the Remote Desktop session.
 
-#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
+### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
 
 1. Switch to the browser window running on your lab computer and displaying the Azure portal.

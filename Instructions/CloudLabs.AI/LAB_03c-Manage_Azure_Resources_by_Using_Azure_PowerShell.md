@@ -1,6 +1,6 @@
 # Lab 3c - Manage Azure resources by Using Azure PowerShell
 ## Lab scenario
-Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal and Azure Resource Manager templates, you need to carry out the equivalent task by using Azure PowerShell. To avoid installing Azure PowerShell modules, you will leverage PowerShell environment available in Azure Cloud Shell.
+Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal and Azure Resource Manager templates, you need to carry out the equivalent task by using Azure PowerShell. To avoid installing Azure PowerShell modules, you will leverage the PowerShell environment available in Azure Cloud Shell.
 
 ## Objectives
 In this lab, you will complete the following tasks:
@@ -13,9 +13,9 @@ In this lab, you will complete the following tasks:
 ## Architecture diagram
 ![image](../media/lab03c.png)
 
-### Excercise: Manage Azure resources by Using Azure PowerShell
+## Excercise 1: Manage Azure resources by Using Azure PowerShell
 
-#### Task 1: Start a PowerShell session in Azure Cloud Shell
+### Task 1: Start a PowerShell session in Azure Cloud Shell
 
 In this task, you will open a PowerShell session in Cloud Shell. 
 
@@ -37,7 +37,7 @@ In this task, you will open a PowerShell session in Cloud Shell.
 
 1. Ensure **PowerShell** appears in the drop-down menu in the upper-left corner of the Cloud Shell pane.
 
-#### Task 2: Use the existing resource group and create an Azure managed disk by using Azure PowerShell
+### Task 2: Use the existing resource group and create an Azure managed disk by using Azure PowerShell
 
 In this task, you will use an existing resource group and create an Azure managed disk by using the Azure PowerShell session within the Cloud Shell
 
@@ -76,7 +76,7 @@ In this task, you will use an existing resource group and create an Azure manage
    Get-AzDisk -ResourceGroupName $rgName -Name $diskName
    ```
 
-#### Task 3: Configure the managed disk by using Azure PowerShell
+### Task 3: Configure the managed disk by using Azure PowerShell
 
 In this task, you will manage the configuration of the Azure managed disk by using the Azure PowerShell session within Cloud Shell.
 

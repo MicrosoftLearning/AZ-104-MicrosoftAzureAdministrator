@@ -1,12 +1,12 @@
 # Lab 06 - Implement Traffic Management
 ## Lab scenario
-You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso considers implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
+You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso is considering implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
 ## Objectives
 In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Configure the hub and spoke network topology
-+ Task 3: Test transitivity of virtual network peering
++ Task 3: Test the transitivity of virtual network peering
 + Task 4: Configure routing in the hub and spoke topology
 + Task 5: Implement Azure Load Balancer
 + Task 6: Implement Azure Application Gateway
@@ -16,9 +16,9 @@ In this lab, you will complete the following tasks:
 ## Architecture diagram
 ![image](../media/lab06.png)
 
-### Excercise: Implement Traffic Management
+## Excercise 1: Implement Traffic Management
 
-#### Task 1: Provision the lab environment
+### Task 1: Provision the lab environment
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -97,8 +97,8 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Configure the hub and spoke network topology
-In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
+### Task 2: Configure the hub and spoke network topology
+In this task, you will configure local peering between the virtual networks you deployed in the previous tasks to create a hub and spoke network topology.
 
 1. In the Azure portal, search for and select **Virtual networks**.
 
@@ -181,7 +181,7 @@ In this task, you will configure local peering between the virtual networks you 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 3: Test transitivity of virtual network peering
+### Task 3: Test the transitivity of virtual network peering
 In this task, you will test the transitivity of virtual network peering by using Network Watcher.
 
 1. In the Azure portal, search for and select **Network Watcher**.
@@ -421,7 +421,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard** |
     | Type | **Public** |
     
-1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add following settings
+1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
  
     | Setting | Value |
     | --- | --- |

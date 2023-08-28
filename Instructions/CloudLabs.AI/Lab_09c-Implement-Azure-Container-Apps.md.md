@@ -5,8 +5,9 @@ Azure Container Apps enables you to run microservices and containerized applicat
 
 ## Objectives
 In this lab, you will complete the following tasks:
+
 - Task 1: Create a container app and environment
-- Task 2: Test and verfiy deployment of the container app
+- Task 2: Test and verify deployment of the container app
 
 ## Estimated timing: 20 minutes
 
@@ -18,8 +19,6 @@ In this lab, you will complete the following tasks:
 ## Estimated timing: 20 minutes
 
 ## Task 1: Create a container app and environment
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, in the Search resources, services, and docs search and select **Container apps** then on the **Container instances** blade, click **+ Create**.
 
@@ -74,7 +73,7 @@ Next, create an environment for your container app.
 
     >**Note**: A page with the message **Deployment is in progress** is displayed.  Once the deployment is successfully completed, you'll see the message: **Your deployment is complete**.
    
-## Task 2: Test and verfiy deployment of the container app
+## Task 2: Test and verify deployment of the container app
 
 1. Select **Go to resource** to view your new container app.
 
@@ -92,5 +91,6 @@ Next, create an environment for your container app.
 ### Review
 In this lab, you have completed:
 + Create a container app and environment
-+ Test and verfiy deployment of the container app
++ Test and verify deployment of the container app
+
 ## You have successfully completed the lab

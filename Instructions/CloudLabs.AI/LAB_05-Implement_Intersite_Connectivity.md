@@ -16,17 +16,8 @@ In this lab, you will complete the following tasks:
  
  ## Exercise 1: Configure local and global virtual network peering
 
-#### Task 1: Provision the lab environment
-
+### Task 1: Provision the lab environment
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
-
-1. If not  Sign in to the [Azure portal](https://portal.azure.com).
-
-1. On the **Sign into** tab you will see the login screen, in that enter following **Email/Username** and then click on **Next**. 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject>   
-   
-1. Now enter the following **Password** and click on **Sign in**.
-   * Password: <inject key="AzureAdUserPassword"></inject>
    
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -47,7 +38,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
      ![Image](./Images/upload.png)
 
-1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
+1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (Replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
 
    ```powershell
    $location1 = '[Azure_region_1]'
@@ -79,8 +70,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-#### Task 2: Configure local and global virtual network peering
-
+### Task 2: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -219,7 +209,7 @@ In this task, you will configure local and global peering between the virtual ne
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-#### Task 3: Test intersite connectivity
+### Task 3: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 

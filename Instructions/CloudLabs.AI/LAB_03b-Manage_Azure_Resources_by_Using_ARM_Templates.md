@@ -12,9 +12,9 @@ Now that you explored the basic Azure administration capabilities associated wit
 ## Architecture diagram
 ![image](../media/lab03b.png)
 
-### Excercise 1: Manage Azure resources by Using ARM Templates
+## Excercise 1: Manage Azure resources by Using ARM Templates
 
-#### Task 1: Review an ARM template for deployment of an Azure managed disk
+### Task 1: Review an ARM template for deployment of an Azure managed disk
 In this task, you will create an Azure disk resource by using an Azure Resource Manager template.
 
 1. In the Azure portal home page, search for and select **Resource groups**. 
@@ -45,7 +45,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     
 1. Close all **File Explorer** windows.
 
-#### Task 2: Create an Azure managed disk by using an ARM template
+### Task 2: Create an Azure managed disk by using an ARM template
 
 1. Navigate to Azure portal home page, search for and select **Deploy a custom template**.
 
@@ -102,9 +102,9 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Verify that the deployment completed successfully.
+1. Verify that the deployment is completed successfully.
 
-#### Task 3: Review the ARM template-based deployment of the managed disk
+### Task 3: Review the ARM template-based deployment of the managed disk
 
 1. Navigate to the Azure portal home page, search for and select **Resource groups**. 
 

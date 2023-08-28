@@ -1,7 +1,7 @@
 # Lab 02a - Manage Subscriptions and RBAC
 
 ## Lab scenario
-In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
+To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 - creating a management group that would include all of Contoso's Azure subscriptions
 - granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
     - creating support request tickets
@@ -21,25 +21,22 @@ In this lab, you will complete the following tasks:
 
    ![image](../media/lab02a.png)
 
-## Exercise 1: Manage Subscriptions and RBAC
+## Exercise 1:
 
 ### Task 1: Implement Management Groups
-
 In this task, you will create and configure management groups.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
-
-1. Search for and select **Management groups** to navigate to the **Management groups** blade.
+1. In the Azure portal search for Management groups, and select **Management groups** to navigate to the **Management groups** blade.
 
     ![image](../media/lab2-1.1.1.png) 
     
-1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perfom the following sequence of steps:
+1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
     1. In the Azure portal, search for and select **Azure Active Directory**.
     
     1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
-    1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+    1.  On the **Properties** blade of your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
         ![image](../media/Lab-02a-e1-t1-s3.png)
    
@@ -141,7 +138,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
     ![image](../media/lab2-7.1.png) 
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
+1. Search for **Support Request Contributor (Custom)**. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
 
     ![image](../media/lab2-8.1.png)
     

@@ -1,8 +1,7 @@
 # Lab 02b - Manage Governance via Azure Policy
 
 ## Lab scenario
-
-In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
+To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 
 - tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
 
@@ -26,8 +25,8 @@ In this lab, you will complete the following tasks:
 ## Exercise 1
 
 ### Task 1: Assign tags via the Azure portal
-
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
+
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
     ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
@@ -50,7 +49,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
    df
    ```
 
-1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`:
+1. In the output of the command, note the first part of the fully qualified path designating the Cloud Shell home drive mount (marked here as `xxxx`):
 
    ```
    //xxxx.file.core.windows.net/cloudshell   (..)  /usr/csuser/clouddrive
@@ -58,7 +57,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     ![image](../media/2b-new.1.png)
 
-1. In the Azure portal, search and select **Storage accounts** and, in the list of the storage accounts, click the entry representing the storage account you identified in the previous step.
+1. In the Azure portal, search and select **Storage accounts** and, in the list of storage accounts, click the entry representing the storage account you identified in the previous step.
 
 1. On the storage account blade, click the link representing the name of the resource group containing the storage account.
 
@@ -78,7 +77,6 @@ In this task, you will create and assign a tag to an Azure resource group via th
 1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
 ### Task 2: Enforce tagging via an Azure policy
-
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
 1. In the Azure portal, search for and select **Policy**. 
@@ -147,7 +145,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
 ### Task 3: Apply tagging via an Azure policy
-
 In this task, we will use a different policy definition to remediate any non-compliant resources. 
 
 1. In the Azure portal, search for and select **Policy**. 
@@ -202,7 +199,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review + create**:
+1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to, and specify the following settings (leave others with their defaults) and click **Review + create**:
 
     | Setting | Value |
     | --- | --- |
