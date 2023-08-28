@@ -85,7 +85,7 @@ In this task, you will create and configure Azure AD users.
      
       ![](../CloudLabs.AI/Images/location.png)
     
-1. Click on **Review + create** and then **Create**
+1. Click on **Review + create** and then **Create**.
 
 1. In the list of users, click the newly created user account to display its blade.
 
@@ -105,7 +105,7 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
-1. In Settings tab, leave everything to default and click on **Assign**.    
+1. In  the Settings tab, leave everything to default and click on **Assign**.    
 
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
 
@@ -139,7 +139,7 @@ In this task, you will create and configure Azure AD users.
     | Department | **IT** |
     | Usage location | **United States** |
     
-1. Click on **Review + create** and then **Create**
+1. Click on **Review + create** and then **Create**.
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
