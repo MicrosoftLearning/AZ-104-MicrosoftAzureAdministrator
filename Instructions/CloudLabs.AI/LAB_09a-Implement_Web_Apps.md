@@ -112,6 +112,7 @@ In this task, you will configure web app deployment settings.
     | --- | ---|
     | User name | any globally unique name (must not contain `@` character) |
     | Password | any password that satisfies complexity requirements|
+   
     
     ![image](../media/9a-5.png)
 
