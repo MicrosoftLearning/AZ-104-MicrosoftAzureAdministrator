@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 
 ![](../CloudLabs.AI/Images/lab08.png)
 
-## Exercise 1:
+## Exercise 1
 
 ### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
 In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.

@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
    ![image](../media/lab1.png)
    
-## Exercise 1:
+## Exercise 1
 
 ### Task 1: Create and configure Azure AD users
 In this task, you will create and configure Azure AD users.

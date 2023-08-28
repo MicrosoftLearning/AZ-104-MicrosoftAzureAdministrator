@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 
    ![image](../media/lab02a.png)
 
-## Exercise 1:
+## Exercise 1
 
 ### Task 1: Implement Management Groups
 In this task, you will create and configure management groups.

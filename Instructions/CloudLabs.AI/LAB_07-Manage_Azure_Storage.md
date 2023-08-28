@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
   ![](../CloudLabs.AI/Images/lab07.png)
 
-## Exercise 1:
+## Exercise 1
 
 ### Task 1: Provision the lab environment
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
