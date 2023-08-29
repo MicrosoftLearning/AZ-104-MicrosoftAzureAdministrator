@@ -145,7 +145,7 @@ In this task, you will deploy code to the staging deployment slot.
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
-1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_password]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Url**, respectively, which you identified in previous task):
+1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_user_name_password]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Url**, respectively, which you identified in previous task):
 
    ```powershell
    git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the URL]
