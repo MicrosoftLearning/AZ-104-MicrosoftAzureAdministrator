@@ -96,7 +96,7 @@ In this task, you will configure local and global peering between the virtual ne
     | --- | --- |
     | Peering link name | **az104-05-vnet0_to_az104-05-vnet1 (1)** |
     | Traffic to remote virtual network | **Allow (default) (2)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network (2)** |
+    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network (3)** |
     | Virtual network gateway or Route server| **None (4)** |
     | Peering link name | **az104-05-vnet1_to_az104-05-vnet0 (5)** |
     | Virtual network deployment model | **Resource manager (6)** |
