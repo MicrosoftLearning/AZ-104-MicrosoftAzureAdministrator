@@ -5,7 +5,7 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's websites, h
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Create an Azure web app
 + Task 2: Create a staging deployment slot
