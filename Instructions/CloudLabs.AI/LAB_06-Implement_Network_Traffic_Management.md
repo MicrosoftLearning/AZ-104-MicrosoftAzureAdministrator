@@ -27,9 +27,10 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-   ![image](../media/showadvancesettings.png)
    
-   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
+
+      ![image](../media/showadvancesettings.png)
        
    > Under the **Show advanced settings**, provide the following details and click **Create Storage(4)**.
 
