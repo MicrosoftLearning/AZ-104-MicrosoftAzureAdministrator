@@ -9,7 +9,7 @@ To improve the management of Azure resources in Contoso, you have been tasked wi
 
 - remediating any non-compliant resources 
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Create and assign tags via the Azure portal
 + Task 2: Enforce tagging via an Azure policy

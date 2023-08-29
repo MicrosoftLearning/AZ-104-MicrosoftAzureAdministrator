@@ -2,7 +2,7 @@
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal and Azure Resource Manager templates, you need to carry out the equivalent task by using Azure PowerShell. To avoid installing Azure PowerShell modules, you will leverage the PowerShell environment available in Azure Cloud Shell.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Start a PowerShell session in Azure Cloud Shell
 + Task 2: Use the existing resource group and create an Azure managed disk by using Azure PowerShell

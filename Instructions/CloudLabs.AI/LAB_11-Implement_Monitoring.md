@@ -2,7 +2,7 @@
 ## Lab scenario
 You need to evaluate Azure functionality that would provide insight into the performance and configuration of Azure resources, focusing in particular on Azure virtual machines. To accomplish this, you intend to examine the capabilities of Azure Monitor, including Log Analytics.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 
 + Task 1: Provision the lab environment

@@ -10,7 +10,7 @@ In order to improve management of Azure resources in Contoso, you have been task
 - ensuring that only properly tagged infrastructure resources can be added to infrastructure resource groups
 - remediating any non-compliant resources 
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Lab 2a - Manage Subscriptions and RBAC
     + Task 1: Implement Management Groups

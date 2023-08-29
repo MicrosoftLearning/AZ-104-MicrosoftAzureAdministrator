@@ -3,7 +3,7 @@
 ## Lab overview
 You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups using Azure portal, zure Resource Manager templates, Azure PowerShell and Azure CLI. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Lab 3a - Manage Azure resources by Using the Azure Portal
     + Task 1: Use the existing resource groups and deploy resources to resource groups

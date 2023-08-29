@@ -9,7 +9,7 @@ To improve the management of Azure resources in Contoso, you have been tasked wi
 
    **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Implement Management Groups
 + Task 2: Create custom RBAC roles 

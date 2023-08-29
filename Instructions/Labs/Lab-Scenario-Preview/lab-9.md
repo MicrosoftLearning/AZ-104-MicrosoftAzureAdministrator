@@ -5,7 +5,7 @@
 + Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for the deployment of Docker images.
 + Contoso also has a number of multi-tier applications that are not suitable to run by using Azure Container Instances. In order to determine whether they can be run as containerized workloads, you want to evaluate using Kubernetes as the container orchestrator. To further minimize management overhead, you want to test Azure Kubernetes Service, including its simplified deployment experience and scaling capabilities.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Lab 9a - Implement Web Apps
     + Task 1: Create an Azure web app
