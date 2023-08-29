@@ -120,7 +120,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Configure private and public IP addresses of Azure VMs
+## Task 3: Configure private and public IP addresses of Azure VMs
 
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
@@ -247,11 +247,11 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in with the user and password in the parameters file.
+1. When prompted, sign in with the user and password.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
-#### Task 5: Configure Azure DNS for internal name resolution
+## Task 5: Configure Azure DNS for internal name resolution
 
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
