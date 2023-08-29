@@ -60,7 +60,7 @@ In this task, you will create and configure Azure AD users.
     
       >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
-      ![](../CloudLabs.AI/Images/az-104-ex-1-task-1-st-10.png)
+      ![](../CloudLabs.AI/Images/aad1.1.png)
     
  1. On  the **Properties** tab specify the following settings (leave others with their defaults)   
 
