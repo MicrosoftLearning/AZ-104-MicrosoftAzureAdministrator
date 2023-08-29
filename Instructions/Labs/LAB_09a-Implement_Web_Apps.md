@@ -102,11 +102,13 @@ In this task, you will configure web app deployment settings.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any globally unique name (must not contain `@` character) |
-    | Password | any password that satisfies complexity requirements|
+    | User name | any globally unique name (see note)  |
+    | Password | any password that satisfies complexity requirements (see note) |
 
-    >**Note:** You will need these credentials in the next task of this lab.
-
+    >**Note:** Copy these credentials to Notepad. You will need them later.
+    
+    >**Note:** These credentials will be passed through the URI. Do not include any special charaters that affect the interpretation of the URI. For example, @, $, or #. An asterick or plus sign (in the middle of the string) would work.
+    
 ## Task 4: Deploy code to the staging deployment slot
 
 In this task, you will deploy code to the staging deployment slot.
@@ -140,10 +142,8 @@ In this task, you will deploy code to the staging deployment slot.
 1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
 
    ```powershell
-   git push [deployment_user_name] master
+    git push https://<deployment-username>:<deployment-password>@<app-name>.scm.azurewebsites.net/<app-name>.git master
    ```
-
-1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
 
 1. Close the Cloud Shell pane.
 
