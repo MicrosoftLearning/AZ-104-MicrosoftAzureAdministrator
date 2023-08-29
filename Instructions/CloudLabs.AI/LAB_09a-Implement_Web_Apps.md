@@ -89,10 +89,9 @@ In this task, you will create a staging deployment slot.
 In this task, you will configure web app deployment settings.
 
 1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
+   >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
 
    ![image](../media/9a-3new.png)
-
-   >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
 
 1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
 
