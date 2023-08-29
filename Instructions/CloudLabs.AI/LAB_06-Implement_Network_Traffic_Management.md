@@ -31,7 +31,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    
    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
        
-   > Under the **Show advanced settings**,provide the following details and click **Create Storage(4)**
+   > Under the **Show advanced settings**, provide the following details and click **Create Storage(4)**.
 
    * Resource group : Select **Use existing(1)** -> **az104-06-rg1**
    * Storage account : Select **Create new(2)** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
