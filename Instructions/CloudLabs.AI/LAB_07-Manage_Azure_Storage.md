@@ -11,7 +11,7 @@ In this lab, you will complete the following tasks:
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
 
-## Estimated timing: 40 minutes
+## Estimated timing: 90 minutes
 
 ## Architecture diagram
 
