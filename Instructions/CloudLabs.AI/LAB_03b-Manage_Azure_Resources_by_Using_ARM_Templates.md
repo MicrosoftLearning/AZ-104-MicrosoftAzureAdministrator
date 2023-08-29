@@ -72,7 +72,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
    },      
    ```
 
-    >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
+     >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
 1. **Save** the changes.
 
