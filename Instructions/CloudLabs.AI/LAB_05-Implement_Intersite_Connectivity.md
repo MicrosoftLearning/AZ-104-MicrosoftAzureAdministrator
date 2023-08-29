@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 
  ![image](../media/lab05.png)
  
- ## Exercise 1: Configure local and global virtual network peering
+## Exercise 1: Configure local and global virtual network peering
 
 ### Task 1: Provision the lab environment
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
@@ -66,6 +66,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    ```
 
     >**Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
+    
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
@@ -105,6 +106,7 @@ In this task, you will configure local and global peering between the virtual ne
     | Traffic to remote virtual network | **Allow (default) (9)** |
     | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network (10)** |
     | Virtual network gateway or Route Server | **None (11)** |
+   
     
      ![Image](./Images/vnet1peering.png)
 
@@ -234,7 +236,8 @@ In this task, you will test connectivity between virtual machines on the three v
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
 4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
-5. 1. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
+
+5. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
 
      ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
    
