@@ -99,7 +99,6 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Network Access Policy | **AllowAll** |
     | Public Network Access | **Enabled** |    
 
-
 1. Select **Review + Create** and then select **Create**.
 
 1. Verify that the deployment is completed successfully.
