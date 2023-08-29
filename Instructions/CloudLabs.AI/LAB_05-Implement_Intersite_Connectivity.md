@@ -2,7 +2,7 @@
 ## Lab scenario
 Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 
-## Objectives
+## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
 + Task 2: Configure local and global virtual network peering
@@ -275,12 +275,12 @@ In this task, you will test connectivity between virtual machines on the three v
 
 14. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
 
-   ```powershell
-   Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
-   ```
+    ```powershell
+    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
+    ```
 
 
-   >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
+    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
 
 15. Examine the output of the command and verify that the connection was successful.
 
