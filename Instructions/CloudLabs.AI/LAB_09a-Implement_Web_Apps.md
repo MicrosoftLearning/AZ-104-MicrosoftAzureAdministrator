@@ -148,10 +148,11 @@ In this task, you will deploy code to the staging deployment slot.
 1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_user_name_password]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Url**, respectively, which you identified in previous task):
 
    ```powershell
-   git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the URL]
+   git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the Git Clone URL]
    ```
 
     >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name, but has to be unique. Also make sure that the password does not contain '@' symbol.
+    >For example : git remote add stageuser1234 https://stageuser1234:Staging123-@az10409astaging.scm.azurewebsites.net:443/az10409a.git
 
 1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
 
