@@ -21,10 +21,6 @@ In this lab, you will complete the following tasks:
 ## Task 1: Provision the lab environment
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. If you are not logged in already, click on Azure portal shortcut that is available on the desktop [Azure portal](https://portal.azure.com) and log in with Azure credentials.
-
-1. To get the Azure credentials select the Environment Details tab from the lab environment details page.
-
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
