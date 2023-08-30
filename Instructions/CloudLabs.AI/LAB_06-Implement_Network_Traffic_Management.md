@@ -250,7 +250,7 @@ In this task, you will test the transitivity of virtual network peering by using
 
     > **Note**: This is expected since the two spoke virtual networks have not peered with each other (virtual network peering is not transitive).
 
-#### Task 4: Configure routing in the hub and spoke topology
+### Task 4: Configure routing in the hub and spoke topology
 In this task, you will configure and test routing between the two spoke virtual networks by enabling IP forwarding on the network interface of the **az104-06-vm0** virtual machine, enabling routing within its operating system, and configuring user-defined routes on the spoke virtual network.
 
 1. In the Azure portal, search and select **Virtual machines**.
@@ -320,7 +320,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet2-to-vnet3** |
-    | Address prefix destination | **IP Addresses** |
+    | Destination type |  select **IP Addresses** |
     | Destination IP addresses/CIDR ranges | **10.63.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
