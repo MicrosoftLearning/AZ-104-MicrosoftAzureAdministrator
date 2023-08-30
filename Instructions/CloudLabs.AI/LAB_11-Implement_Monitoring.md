@@ -50,16 +50,15 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
 
-    
-       ```powershell
-       New-AzResourceGroupDeployment `
+  
+   ```powershell
+   New-AzResourceGroupDeployment `
           -ResourceGroupName $rgName `
           -TemplateFile $HOME/az104-11-vm-template.json `
           -TemplateParameterFile $HOME/az104-11-vm-parameters.json `
           -AsJob
-       ```
-
-
+    ```
+  
    >**Note**: You will be prompted to provide an Admin password enter **password** **<inject key="AzureAdUserPassword"></inject>**.
     
    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
