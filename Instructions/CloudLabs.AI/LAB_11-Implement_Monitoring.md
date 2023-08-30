@@ -60,9 +60,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
    ```
 
 
-    >**Note**: You will be prompted to provide an Admin password enter **password** **<inject key="AzureAdUserPassword"></inject>**.
+   >**Note**: You will be prompted to provide an Admin password enter **password** **<inject key="AzureAdUserPassword"></inject>**.
     
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
+   >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
