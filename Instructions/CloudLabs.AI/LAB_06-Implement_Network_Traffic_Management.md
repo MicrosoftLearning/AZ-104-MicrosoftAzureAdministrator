@@ -261,7 +261,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click the **az104-06-nic0** link next to the **Network interface** label, and then, on the **az104-06-nic0** network interface blade, in the **Settings** section, click **IP configurations**.
 
-1. Set **IP forwarding** to **Enabled** and save the change.
+1. Set **Enable IP forwarding** to **Enabl** and  click on **Apply**.
 
    > **Note**: This setting is required in order for **az104-06-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
@@ -410,7 +410,7 @@ In this task, you will configure and test routing between the two spoke virtual 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 5: Implement Azure Load Balancer
+### Task 5: Implement Azure Load Balancer
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
 1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
@@ -503,7 +503,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 6: Implement Azure Application Gateway
+### Task 6: Implement Azure Application Gateway
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal, search and select **Virtual networks**.
