@@ -364,7 +364,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Terminate the Remote Desktop session.
 
-#### Task 7: Review the Azure Recovery Services soft delete functionality
+### Task 7: Review the Azure Recovery Services soft delete functionality
 1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
