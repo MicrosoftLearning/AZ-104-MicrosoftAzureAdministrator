@@ -256,9 +256,9 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
+1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1**.
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
+### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
 1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
