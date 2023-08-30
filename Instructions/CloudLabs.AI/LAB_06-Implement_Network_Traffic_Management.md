@@ -113,7 +113,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. In the list of virtual networks, select **az104-06-vnet2**.
 
-1. On the **az104-06-vnet2** blade, select **Properties(1)**. 
+1. On the **az104-06-vnet2** blade, select **Properties(1)** under Settings. 
 
 1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID(2)** property.
 
