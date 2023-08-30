@@ -399,7 +399,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** Backup Item blade, click **Stop backup**.
 
-1. On the **Stop backup** blade, select **Delete Backup Data**, specify the following settings, and click **Stop backup**:
+1. On the **Stop backup level** blade, select **Delete Backup Data**, specify the following settings, and click **Stop backup**:
 
     | Settings | Value |
     | --- | --- |
