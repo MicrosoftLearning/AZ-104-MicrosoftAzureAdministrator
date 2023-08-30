@@ -60,7 +60,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
    ```
   
-   >**Note**: You will be prompted to provide an Admin password enter **password** **<inject key="AzureAdUserPassword"></inject>**.
+   >**Note**: You will be prompted to provide an Admin password enter **<inject key="AzureAdUserPassword"></inject>**.
     
    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
     
@@ -259,7 +259,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1.  When prompted, sign in by using the **Student** username and **password** **<inject key="AzureAdUserPassword"></inject>**.
+1.  When prompted, sign in by using the **Student** username and password **<inject key="AzureAdUserPassword"></inject>**.
 
 1. Within the Remote Desktop session, Select the Windows Start button, type and select **Command Prompt**.
 
