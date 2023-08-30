@@ -57,7 +57,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
           -TemplateFile $HOME/az104-11-vm-template.json `
           -TemplateParameterFile $HOME/az104-11-vm-parameters.json `
           -AsJob
-    ```
+
+   ```
   
    >**Note**: You will be prompted to provide an Admin password enter **password** **<inject key="AzureAdUserPassword"></inject>**.
     
