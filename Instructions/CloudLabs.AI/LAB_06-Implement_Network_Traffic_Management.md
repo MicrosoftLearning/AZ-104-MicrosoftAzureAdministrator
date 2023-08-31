@@ -140,16 +140,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Traffic to remote virtual network | **Allow** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Allow traffic to remote virtual network | **Allow** |
+    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
+    | Use remote virtual network gateway or route server | **Block** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow** |
-    | Traffic forwarded from remote virtual network | **Allow** |
-    | Virtual network gateway | **None** |
+    | Allow traffic to current virtual network | **Allow** |
+    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
+    | Use current virtual network gateway or route server| **Block** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -164,16 +164,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Traffic to remote virtual network | **Allow** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Allow traffic to remote virtual network | **Allow** |
+    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
+    | Use remote virtual network gateway or route server | **Block** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow** |
-    | Traffic forwarded from remote virtual network | **Allow** |
-    | Virtual network gateway | **None** |
+    | Allow traffic to current virtual network | **Allow** |
+    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
+    | Use current virtual network gateway or route server | **Block** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
