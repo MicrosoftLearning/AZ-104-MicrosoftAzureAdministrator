@@ -62,7 +62,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
-    >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
+    >**Note**: You will be prompted to provide an Admin password. Please enter Admin password **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
     
 1. Minimize Cloud Shell (but do not close it).
 
