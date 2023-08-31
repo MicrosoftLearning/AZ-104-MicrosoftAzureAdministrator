@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 + Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 + Task 7: Review the Azure Recovery Services soft delete functionality (optional)
 
-## Estimated timing: 50 minutes
+## Estimated timing: 60 minutes
 
 ## Instructions
 
