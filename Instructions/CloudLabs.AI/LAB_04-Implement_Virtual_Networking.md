@@ -71,7 +71,6 @@ In this task, you will create a virtual network with multiple subnets by using t
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy virtual machines into the virtual network
-
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -127,7 +126,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
  
 7. Close the Cloud Shell pane.
 
-#### Task 3: Configure private and public IP addresses of Azure VMs
+### Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure the static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
    > **Note**: Private and public IP addresses are actually assigned to the network interfaces, which, in turn are attached to Azure virtual machines, however, it is fairly common to refer to IP addresses assigned to Azure VMs instead.
