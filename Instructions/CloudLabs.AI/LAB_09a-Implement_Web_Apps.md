@@ -105,13 +105,15 @@ In this task, you will configure web app deployment settings.
 
     | Setting | Value |
     | --- | ---|
-    | User name | any globally unique name (must not contain `@` character) |
-    | Password | any password that satisfies complexity requirements (must not contain `@` character)|
+    | User name | any globally unique name (see note) |
+    | Password | any password that satisfies complexity requirements (see note)|
    
     
     ![image](../media/9a-5.png)
 
-    >**Note:** You will need these credentials in the next task of this lab.
+    >**Note:** Copy these credentials to Notepad. You will need them later.
+
+    >**Note:** These credentials will be passed through the URI. Do not include any special charaters that affect the interpretation of the URI. For example, @, $, or #. An asterick or plus sign (in the middle of the string) would work.
 
 ### Task 4: Deploy code to the staging deployment slot
 In this task, you will deploy code to the staging deployment slot.
