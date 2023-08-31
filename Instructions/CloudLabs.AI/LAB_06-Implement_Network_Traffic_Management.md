@@ -53,7 +53,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
    Get-AzResourceGroup
    
    ```
-1. From the Cloud Shell pane, run the following to declare the resource group that will be hosting the lab environment:
+1. From the Cloud Shell pane, run the following to declare the resource group that will be use to perform the lab:
 
     ```powershell
    $rgName = 'az104-06-rg1'
@@ -70,7 +70,7 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       
    ```
 
-1. Enter any Password at the **adminPassword** prompt.
+1. You will be prompted to provide an Admin password. Please enter Admin password **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
