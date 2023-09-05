@@ -8,7 +8,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Configure local and global virtual network peering
 + Task 3: Test intersite connectivity
 
-## Estimated timing: 45 minutes
+## Estimated timing: 30 minutes
 
 ## Architecture diagram
 
