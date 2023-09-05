@@ -16,8 +16,6 @@ In this lab, you will complete the following tasks:
    ![image](../media/az-104lab(9)new(1).png)
  
 
-## Estimated timing: 20 minutes
-
 ## Task 1: Create a container app and environment
 
 1. In the Azure portal, in the Search resources, services, and docs search and select **Container apps** then on the **Container instances** blade, click **+ Create**.
