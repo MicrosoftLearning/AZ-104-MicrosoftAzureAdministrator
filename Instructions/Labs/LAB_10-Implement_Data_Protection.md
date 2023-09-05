@@ -209,6 +209,8 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. Back on the **Vault Identification** page, click **Next**.
 
+1. Ensure **Save passphrase securely to Azure Key Vault** is not checked. 
+
 1. On the **Encryption Setting** page of the **Register Server Wizard**, click **Generate Passphrase**.
 
 1. On the **Encryption Setting** page of the **Register Server Wizard**, click the **Browse** button next to the **Enter a location to save the passphrase**.
