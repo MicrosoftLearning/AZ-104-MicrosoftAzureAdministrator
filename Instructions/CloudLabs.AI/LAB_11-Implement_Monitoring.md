@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 6: Review Azure Monitor functionality
 + Task 7: Review Azure Log Analytics functionality
 
-## Estimated timing: 90 minutes
+## Estimated timing: 45 minutes
 
 ## Architecture diagram
 ![image](../media/lab11.png)
