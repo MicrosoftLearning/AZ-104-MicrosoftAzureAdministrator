@@ -45,7 +45,7 @@ In this task, you will use the Azure portal to create resource groups and create
     |Resource Group| the name of a new resource group **az104-03a-rg1** |
     |Disk name| **az104-03a-disk1** |
     |Region| **(US) East US** |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
     >**Note**: When creating a resource, you have the option of creating a new resource group or using an existing one.
