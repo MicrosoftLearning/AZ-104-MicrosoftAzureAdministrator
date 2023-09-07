@@ -74,7 +74,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
     -Location $location `
     -CreateOption Empty `
     -DiskSizeGB 32 `
-    -Sku Standard_LRS
+    -SkuName Standard_LRS
 
    $diskName = 'az104-03c-disk1'
 
@@ -115,7 +115,7 @@ In this task, you will be managing the configuration of the Azure managed disk b
 1. To change the disk performance SKU to **Premium_LRS**, from the PowerShell session within Cloud Shell, run the following:
 
    ```powershell
-   New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+   New-AzDiskUpdateConfig -SkuName Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
    ```
 
 1. To verify that the change took effect, run the following:
