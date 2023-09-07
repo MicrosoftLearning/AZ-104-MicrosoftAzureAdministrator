@@ -13,6 +13,8 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%206)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
+>**Note:** This lab requires Lab 03b to be completed. 
+
 ## Objectives
 
 In this lab, you will:
