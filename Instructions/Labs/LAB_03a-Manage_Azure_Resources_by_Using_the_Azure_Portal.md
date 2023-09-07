@@ -84,7 +84,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Resource Group| click **create new** resource group and name it **az104-03a-rg3** |
     |Disk name| **az104-03a-disk2** |
     |Region| the name of the Azure region where you created the other resource groups in this lab |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
