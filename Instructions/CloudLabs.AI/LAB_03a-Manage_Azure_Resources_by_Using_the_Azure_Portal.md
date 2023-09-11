@@ -74,7 +74,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     |Resource Group| select the existing resource group **az104-03a-rg3-<inject key="DeploymentID" enableCopy="false" />** |
     |Disk name| **az104-03a-disk2** |
     |Region| Same region as the resource group  |
-    |Availability zone| **None** |
+    |Availability zone| **No infrastructure redundancy required** |
     |Source type| **None** |
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
