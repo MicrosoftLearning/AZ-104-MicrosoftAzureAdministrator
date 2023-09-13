@@ -290,4 +290,4 @@ In this lab, you have completed:
 + Swapped the staging slots
 + Configured and tested autoscaling of the Azure web app
 
-**You have successfully completed the lab**
+## You have successfully completed the lab**
