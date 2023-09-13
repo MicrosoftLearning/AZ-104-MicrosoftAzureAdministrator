@@ -221,4 +221,4 @@ In this lab, you have completed:
 - Enforced tagging via an Azure policy
 - Applied tagging via an Azure policy
 
-**You have successfully completed the lab**
+### You have successfully completed the lab
