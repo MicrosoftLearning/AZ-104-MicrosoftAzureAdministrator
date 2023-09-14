@@ -38,19 +38,17 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
      ![Image](./Images/upload.png)
 
-1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (Replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.):
+1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (Replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.
 
    ```powershell
    $location1 = '[Azure_region_1]'
 
    $location2 = '[Azure_region_2]'
 
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" />'
    ```
 
    >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**.
- 
-   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
    >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
 
@@ -108,10 +106,9 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
   
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" />'
 
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
@@ -141,10 +138,9 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
    
-   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" />'
 
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
@@ -176,10 +172,9 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
     
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID" />'
 
    $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
 
@@ -275,4 +270,4 @@ In this lab, you have completed:
 + Configured local and global virtual network peering
 + Tested intersite connectivity
 
-## You have successfully completed the lab
+### You have successfully completed the lab

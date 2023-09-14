@@ -461,4 +461,4 @@ In this lab, you have completed:
 + Performed file recovery by using Azure virtual machine snapshots
 + Reviewed the Azure Recovery Services soft delete functionality
 
-## You have successfully completed the lab
+### You have successfully completed the lab

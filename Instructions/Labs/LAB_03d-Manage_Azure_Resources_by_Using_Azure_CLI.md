@@ -111,4 +111,4 @@ In this lab, you have completed:
 - Use the existing resource group and create an Azure managed disk by using Azure CLI
 - Configured the managed disk by using Azure CLI
 
-## You have successfully completed the lab
+### You have successfully completed the lab

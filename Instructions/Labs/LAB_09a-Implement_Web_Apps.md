@@ -281,7 +281,7 @@ In this task, you will configure and test autoscaling of the Azure web app.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-## Review
+### Review
 In this lab, you have completed:
 + Created an Azure web app
 + Created a staging deployment slot
@@ -290,4 +290,4 @@ In this lab, you have completed:
 + Swapped the staging slots
 + Configured and tested autoscaling of the Azure web app
 
-## You have successfully completed the lab**
+### You have successfully completed the lab**

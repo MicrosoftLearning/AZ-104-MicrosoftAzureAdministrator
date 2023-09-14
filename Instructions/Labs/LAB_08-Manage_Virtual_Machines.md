@@ -682,4 +682,4 @@ In this lab, you have completed:
 + Configured Azure virtual machine scale sets by using virtual machine extensions.
 + Scaled compute and storage for Azure virtual machine scale sets.
 
-## You have successfully completed the lab
+### You have successfully completed the lab

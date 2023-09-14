@@ -85,9 +85,9 @@ In this task, you will review the deployment of the container instance.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 In this lab, you have completed:
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
 
-**You have successfully completed the lab**
+### You have successfully completed the lab

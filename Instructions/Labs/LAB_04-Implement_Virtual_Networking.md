@@ -416,4 +416,4 @@ In this lab, you have completed:
 + Configured Azure DNS for internal name resolution
 + Configured Azure DNS for external name resolution
 
-## You have successfully completed the lab
+### You have successfully completed the lab

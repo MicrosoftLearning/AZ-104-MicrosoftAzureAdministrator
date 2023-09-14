@@ -272,10 +272,10 @@ In this task, you will scale horizontally the number of pods and then number of 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Review
+### Review
 In this lab, you have completed:
 + Deployed an Azure Kubernetes Service cluster
 + Deployed pods into the Azure Kubernetes Service cluster
 + Scaled containerized workloads in the Azure Kubernetes service cluster
 
-**You have successfully completed the lab**
+### You have successfully completed the lab

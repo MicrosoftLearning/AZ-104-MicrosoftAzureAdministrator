@@ -634,4 +634,4 @@ In this lab, you have completed:
 + Implement Azure Load Balancer
 + Implement Azure Application Gateway
 
-## You have successfully completed the lab
+### You have successfully completed the lab

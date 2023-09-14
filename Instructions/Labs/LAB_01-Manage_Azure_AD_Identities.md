@@ -358,4 +358,4 @@ In this lab, you have completed:
 - Created an Azure Active Directory (AD) tenant
 - Managed Azure AD guest users 
 
-## You have successfully completed the lab
+### You have successfully completed the lab

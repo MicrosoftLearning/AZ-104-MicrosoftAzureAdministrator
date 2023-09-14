@@ -3,11 +3,11 @@
   "Language": "English",
   "Files": [
     {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LabIntro.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LabIntro.md",
         "Order": 1
      },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_01-Manage_Azure_AD_Identities.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md",
       "Order": 2
     }
   ]
