@@ -108,7 +108,7 @@ In this task, you will configure local and global peering between the virtual ne
   
     
    ```powershell
-   $rgName = 'az104-05-rg0-<inject key="DeploymentID" />'
+   $rgName = 'az104-05-rg0-<inject key="DeploymentID"/>'
 
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
