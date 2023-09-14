@@ -205,7 +205,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **Monitor \| Metrics** blade, on the **Avg Percentage CPU for az104-11-vm0** pane, click **New alert rule**.
 
-    >**Note**: Creating an alert rule from Metrics is not supported for metrics from the Guest (classic) metric namespace. This can be accomplished by using Azure Resource Manager templates, as described in the document [Send Guest OS metrics to the Azure Monitor metric store using a Resource Manager template for a Windows virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm)
+    >**Note**: Creating an alert rule from Metrics is not supported for metrics from the Guest (classic) metric namespace. This can be accomplished by using Azure Resource Manager templates, as described in the document [Send Guest OS metrics to the Azure Monitor metric store using a Resource Manager template for a Windows virtual machine](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vm).
 
 1. On the **Create alert rule** blade, in the **Condition** section, click the existing condition entry.
 
@@ -327,4 +327,4 @@ In this lab, you have completed:
 + Reviewed Azure Monitor functionality
 + Reviewed Azure Log Analytics functionality
 
-## You have successfully completed the lab
+### You have successfully completed the lab

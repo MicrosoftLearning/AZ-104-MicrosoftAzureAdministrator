@@ -48,7 +48,7 @@ In this task, you will create and configure Azure AD users.
 
      ![](../CloudLabs.AI/Images/newuser.png)
 
-1. Create a new user on the **Basics (1)** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**
+1. Create a new user on the **Basics (1)** tab with the following settings (leave others with their defaults) and select **Next: properties (6) >**.
 
     | Setting | Value |
     | --- | --- |
@@ -62,7 +62,7 @@ In this task, you will create and configure Azure AD users.
     
       ![](../CloudLabs.AI/Images/aad1.1.png)
     
- 1. On  the **Properties** tab specify the following settings (leave others with their defaults)   
+ 1. On  the **Properties** tab specify the following settings (leave others with their defaults):  
 
     | Setting | Value |
     | --- | --- |
@@ -108,7 +108,7 @@ In this task, you will create and configure Azure AD users.
 
      ![](../CloudLabs.AI/Images/newuser.png)
 
-1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
 
     | Setting | Value |
     | --- | --- |
@@ -120,7 +120,7 @@ In this task, you will create and configure Azure AD users.
     
      >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
- 1. on **Properties** tab specify the following settings (leave others with their defaults) 
+ 1. on **Properties** tab specify the following settings (leave others with their defaults):
     
     | Setting | Value |
     | --- | --- |
@@ -285,13 +285,13 @@ In this task, you will create a new Azure AD tenant.
 
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar and, click on **Switch**.
 
-#### Task 4: Manage Azure AD, guest users.
+### Task 4: Manage Azure AD, guest users.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
 1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
-1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
+1. Create a new user on the **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
 
     | Setting | Value |
     | --- | --- |
@@ -303,7 +303,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
        
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
 
- 1. on **Properties** tab specify the following settings (leave others with their defaults)
+ 1. on **Properties** tab specify the following settings (leave others with their defaults).
 
     | Setting | Value |
     | --- | --- |
@@ -320,7 +320,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     ![](../CloudLabs.AI/Images/exuserinv.png)  
     
-1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**
+1. Create a new user on **Basics** tab with the following settings (leave others with their defaults) and select **Next: properties>**.
 
     | Setting | Value |
     | --- | --- |
@@ -329,7 +329,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
     
      ![](../CloudLabs.AI/Images/exuser.png)  
     
- 1. on the **Properties** tab specify the following settings (leave others with their defaults)    
+ 1. on the **Properties** tab specify the following settings (leave others with their defaults).    
    
     | Setting | Value |
     | --- | --- | 

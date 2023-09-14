@@ -54,7 +54,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
 
-1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **OK**:
+1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **OK**.
 
     | Setting | Value |
     | --- | --- |
@@ -237,7 +237,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size (1)** under the **Settings** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**
+1. On the **az104-08-vm0** virtual machine blade, click **Size (1)** under the **Settings** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**.
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
@@ -403,7 +403,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Password | **Provide a secure password** |
     | Already have a Windows Server license? | **Unchecked** |
 
-    >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
+    >**Note**: For the list of Azure regions which support the deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview).
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
 
@@ -541,7 +541,7 @@ In this task, you will install the Windows Server Web Server role on the instanc
 ### Task 7: Scale compute and storage for Azure virtual machine scale sets
 In this task, you will change the size of virtual machine scale set instances, configure their autoscaling settings, and attach disks to them.
 
-1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
+1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set.
 
 1. In the **az10408vmss0** blade, in the **Settings** section, click **Size**.
 
@@ -617,7 +617,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: You might need to wait a couple of minutes and click **Refresh**.
 
-1. Once the third instance is provisioned, navigate to its blade to determine its **Location** (it should be different from the first two zones you identified earlier in this task.
+1. Once the third instance is provisioned, navigate to its blade to determine its **Location** it should be different from the first two zones you identified earlier in this task.
 
 1. Close the Cloud Shell pane.
 

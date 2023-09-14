@@ -35,7 +35,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
 
 1. On the **Microsoft.ManagedDisk-<SUFFIX>| Template** blade, click **Inputs**.
 
-   >**Note**: SUFFIX is a unique ID which is added to the deployment name
+   >**Note**: SUFFIX is a unique ID which is added to the deployment name.
 
 1. Note the value of the **location** parameter. You will need it for the next task.
 

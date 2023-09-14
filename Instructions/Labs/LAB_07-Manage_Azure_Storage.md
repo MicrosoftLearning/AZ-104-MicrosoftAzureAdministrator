@@ -40,7 +40,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
      ![Image](./Images/upload.png)
 
-1. From the Cloud Shell pane, run the following to create the virtual machine (replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
+1. From the Cloud Shell pane, run the following to create the virtual machine replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
   
    ```powershell
    $location = '[Azure_region]'

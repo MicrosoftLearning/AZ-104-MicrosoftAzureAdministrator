@@ -19,8 +19,7 @@ In this lab, you will complete the following tasks:
 ![image](../media/lab09c.png)
 
 ## Exercise 1
-### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers.
-
+### Task 1: Register the Microsoft.Kubernetes and Microsoft.KubernetesConfiguration resource providers
 In this task, you will register resource providers necessary to deploy an Azure Kubernetes Services cluster.
 
 1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).

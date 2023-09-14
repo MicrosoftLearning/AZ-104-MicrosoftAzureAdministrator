@@ -227,7 +227,7 @@ In this task, you will test the transitivity of virtual network peering by using
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-    > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
+    > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**.
 
 1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 

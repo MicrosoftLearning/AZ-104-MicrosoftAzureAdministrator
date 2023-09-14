@@ -65,7 +65,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location2 $location2
    ```
 
-    >**Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**
+    >**Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
     
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 

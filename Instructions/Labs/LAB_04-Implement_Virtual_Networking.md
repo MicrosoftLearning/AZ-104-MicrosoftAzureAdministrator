@@ -32,13 +32,13 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Name | **az104-04-vnet1** |
     | Region | Select **<inject key="Region" enableCopy="false" />** |
 
-1. Click **Next: IP Addresses** and enter the following values
+1. Click **Next: IP Addresses** and enter the following values.
 
     | Setting | Value |
     | --- | --- |
     | IPv4 address space | **10.40.0.0/20** |
 
-1. Click **+ Add subnet** enter the following values then click **Add**
+1. Click **+ Add subnet** enter the following values then click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -49,7 +49,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 
     >**Note**: Wait for the virtual network to be provisioned. This should take less than a minute.
 
-1. Click on **Go to resource**
+1. Click on **Go to resource**.
 
 1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
 
@@ -71,7 +71,7 @@ In this task, you will create a virtual network with multiple subnets by using t
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Deploy virtual machines into the virtual network
-In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
+In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -81,7 +81,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     ![image](../media/AZ-104-strorage-mount.png)
  
-3. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**
+3. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
     
 4. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give the name as **str<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section give the name as **fs<inject key="DeploymentID" enableCopy="false" />** as shown in the below image.
 
@@ -96,7 +96,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
      >**Note**: You might need to upload each file separately.
     
 
-5. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**
+5. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**.
 
     >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
     
@@ -112,7 +112,7 @@ In this task, you will deploy Azure virtual machines into different subnets of t
   
      ```
   
-   >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+   >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
    >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
 
@@ -245,7 +245,7 @@ In this task, you will configure network security groups to allow for restricted
 
     >**Note**: It may take up to 5 minutes for the rules from the newly created Network Security Group to be applied to the Network Interface Card.
 
-1.  Navigate to Virtual Machine and start the **az104-04-vm0** and **az104-04-vm1** 
+1.  Navigate to Virtual Machine and start the **az104-04-vm0** and **az104-04-vm1**.
 
 1. Navigate back to the **az104-04-vm0** virtual machine blade.
 

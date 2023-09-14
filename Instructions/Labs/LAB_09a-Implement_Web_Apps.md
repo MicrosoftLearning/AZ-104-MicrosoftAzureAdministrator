@@ -176,7 +176,7 @@ In this task, you will deploy code to the staging deployment slot.
     ![image](../media/9a-9new.png)
 
 ### Task 5: Swap the staging slots
-In this task, you will swap the staging slot with the production slot
+In this task, you will swap the staging slot with the production slot.
 
 1. Navigate back to the blade displaying the production slot of the web app.
 
@@ -205,7 +205,7 @@ In this task, you will configure and test autoscaling of the Azure web app.
 
     >**Note**: You also have the option of scaling the web app manually.
 
-1. Select **Scale based on a metric** and click **+ Add a rule**
+1. Select **Scale based on a metric** and click **+ Add a rule**.
 
 1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
 
