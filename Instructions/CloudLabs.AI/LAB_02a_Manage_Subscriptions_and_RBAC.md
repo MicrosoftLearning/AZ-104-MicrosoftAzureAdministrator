@@ -167,10 +167,10 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-## Review
+### Review
 In this lab, you have completed:
 - Implemented Management Groups
 - Created custom RBAC roles 
 - Assigned RBAC roles
 
-## You have successfully completed the lab
+### You have successfully completed the lab

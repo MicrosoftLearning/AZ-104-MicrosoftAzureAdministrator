@@ -1,98 +1,90 @@
----
-lab:
-    title: '10 - Implement Data Protection'
-    module: 'Module 10 - Data Protection'
----
-
 # Lab 10 - Backup virtual machines
-# Student lab manual
-
 ## Lab scenario
-
 You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
-## Objectives
-
+## Lab objectives
 In this lab, you will complete the following tasks:
-
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
 + Task 4: Implement File and Folder backup
-+ Task 5: Perform file recovery by using Azure Recovery Services agent
++ Task 5: Perform file recovery by using the Azure Recovery Services agent
 + Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 + Task 7: Review the Azure Recovery Services soft delete functionality (optional)
 
-## Estimated timing: 60 minutes
+## Estimated timing: 50 minutes
 
-## Instructions
+## Architecture diagram
+![image](../media/lab10.png)
 
-### Exercise 1
+## Excercise 1: Backup virtual machines
 
-#### Task 1: Provision the lab environment
-
+### Task 1: Provision the lab environment
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. On the azure portal home page go to **Resource Groups** and click on **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** resource group, on the overview page of **az104-10-rg0-<inject key="DeploymentID" enableCopy="false"/>** copy the location and paste it in a notepad you will need it in next steps
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+   ![image](../media/cloudshell1.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+   
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
+
+   ![image](../media/showadvancesettings.png)
     
-    ![image](../media/cloudhell01.png)
-    
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
+   >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and give some unique name under the **Storage Account (2)** section, and under the **File share (3)** section type none as shown in the below image.
+  
+   ![image](../media/createstorage.png)
 
-    ![image](../media/cloudhell02.png)
+1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed.
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files (1)** icon, in the drop-down menu, click **Upload (2)** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** into the Cloud Shell home directory.
+   ![image](../media/uploadicon.png)
+   
+   ![image](../media/templatefileupload.png)
+   
+   ![image](../media/parametersfileupload.png)
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines):
+1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded: replace the `[Azure_region]` placeholder with the location of your resource group and also replace **[DeploymentID]**: **<inject key="DeploymentID" enableCopy="false"/>** 
 
    ```powershell
    $location = '[Azure_region]'
 
-   $rgName = 'az104-10-rg0'
+   $rgName = 'az104-10-rg0-[DeplymentID]'
 
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-
-1. From the Cloud Shell pane, run the following to create the first virtual network and deploy a virtual machine into it by using the template and parameter files you uploaded:
-
-   ```powershell
    New-AzResourceGroupDeployment `
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-10-vms-edge-template.json `
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
-
+    >**Note**: You will be prompted to provide an Admin password. Please enter Admin password **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
+    
 1. Minimize Cloud Shell (but do not close it).
 
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 5 minutes.
 
-#### Task 2: Create a Recovery Services vault
-
+### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ New**.
+1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-10-rg1** |
-    | Name | **az104-10-rsv1** |
-    | Region | the name of a region where you deployed the two virtual machines in the previous task |
+    | Resource group | Select resource group **az104-10-rg1-<inject key="DeploymentID" enableCopy="false"/>** |
+    | Vault Name | **az104-10-rsv1** |
+    | Region | the name of a region which you copied in previous steps |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-1. Click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Review + Create**, ensure that the validation has passed, and click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
@@ -112,11 +104,10 @@ In this task, you will create a recovery services vault.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-#### Task 3: Implement Azure virtual machine-level backup
-
+### Task 3: Implement Azure virtual machine-level backup
 In this task, you will implement Azure virtual-machine level backup.
 
-   >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed.
+   >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to the respected resource group in the Azure portal and on the overview page of the resource group click on **Deployments**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, click **Overview**, then click **+ Backup**.
 
@@ -147,31 +138,36 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Wait for the backup to be enabled. This should take about 2 minutes.
 
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machines** entry.
+1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade of **az104-10-vm0**, review the values of the **Backup Pre-Check** and **Last Backup Status** entries, and click the **az104-10-vm0** entry.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select the View details link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-#### Task 4: Implement File and Folder backup
-
+### Task 4: Implement File and Folder backup
 In this task, you will implement file and folder backup by using Azure Recovery Services.
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
+1. Navigate to the **Home** page, and search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
 
 1. On the **az104-10-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in by using the **Student** username and the **password** **<inject key="AzureAdUserPassword"></inject>**
 
     >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, start an Edge web browser from desktop, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Within the Remote Desktop session to the **az104-10-vm1** Azure virtual machine, select the Windows Start button, search and open **Microsoft Edge** browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
@@ -190,9 +186,15 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
 
-1. When prompted, click **Run** to start installation of **MARSAgentInstaller.exe** with the default settings.
+1. Open the downloaded file in folder and right click on it and **Run as administrator** to install it.
 
-    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option.
+1. After completing the download, click on it to start the installation of **MARSAgentInstaller.exe** with the default settings.
+
+1. On **Installtion Settings** page click on **Next**.
+
+1. On **Proxy Configuration** page click on **Next**.
+
+1. On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option. Then click on Next and Install.
 
 1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, click **Proceed to Registration**. This will start **Register Server Wizard**.
 
@@ -206,6 +208,8 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. Back on the **Vault Identification** page, click **Next**.
 
+1. Ensure **Save passphrase securely to Azure Key Vault** is not checked. 
+
 1. On the **Encryption Setting** page of the **Register Server Wizard**, click **Generate Passphrase**.
 
 1. On the **Encryption Setting** page of the **Register Server Wizard**, click the **Browse** button next to the **Enter a location to save the passphrase** drop-down list.
@@ -216,9 +220,11 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
     >**Note**: In a production environment, you should store the passphrase file in a secure location other than the server being backed up.
 
-1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
+1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected, and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
 
 1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Schedule Backup**.
+
+   ![image](../media/action.png)
 
 1. In the **Schedule Backup Wizard**, on the **Getting started** page, click **Next**.
 
@@ -228,15 +234,15 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Select Items to Backup** page, click **Next**.
 
-1. On the **Specify Backup Schedule** page, ensure that the **Day** option is selected, in the first drop-down list box below the **At following times (Maximum allowed is three times a day)** box, select **4:30 AM**, and then click **Next**.
+1. On the **Specify Backup Schedule** page, ensure that the **Day** option is selected under **Schedule a back up every**, in the first drop-down list box below the **At following times (Maximum allowed is three times a day)** box, select **4:30 AM**, and then click **Next**.
 
-1. On the **Select Retention Policy** page, accept the defaults, and then click **Next**.
+1. On the **Select Retention Policy** page, accept the defaults and then click **Next**.
 
 1. On the **Choose Initial Backup type** page, accept the defaults, and then click **Next**.
 
 1. On the **Confirmation** page, click **Finish**. When the backup schedule is created, click **Close**.
 
-1. In the **Microsoft Azure Backup** console, in the Actions pane, click **Back Up Now**.
+1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Back Up Now**.
 
     >**Note**: The option to run backup on demand becomes available once you create a scheduled backup.
 
@@ -246,23 +252,22 @@ In this task, you will implement file and folder backup by using Azure Recovery 
 
 1. On the **Confirmation** page, click **Back Up**.
 
-1. When the backup is complete, click **Close**, and then close Microsoft Azure Backup.
+1. When the backup is complete, click **Close**, and then minimize the **Microsoft Azure Backup**.
 
 1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**.
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
+1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1**.
 
-#### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
-
+### Task 5: Perform file recovery by using Azure Recovery Services agent (optional)
 In this task, you will perform file restore by using Azure Recovery Services agent.
 
 1. Within the Remote Desktop session to **az104-10-vm1**, open File Explorer, navigate to the **C:\\Windows\\System32\\drivers\\etc\\** folder and delete the **hosts** file.
 
-1. Open Microsoft Azure Backup and click **Recover data** in the **Actions** pane. This will start **Recover Data Wizard**.
+1. Open **Microsoft Azure Backup** and click **Recover data** in the **Actions** pane. This will start **Recover Data Wizard**.
 
-1. On the **Getting Started** page of **Recover Data Wizard**, ensue that **This server (az104-10-vm1.)** option is selected and click **Next**.
+1. On the **Getting Started** page of **Recover Data Wizard**, ensure that **This server (az104-10-vm1.)** option is selected and click **Next**.
 
 1. On the **Select Recovery Mode** page, ensure that **Individual files and folders** option is selected, and click **Next**.
 
@@ -284,8 +289,7 @@ In this task, you will perform file restore by using Azure Recovery Services age
 
 1. Terminate the Remote Desktop session.
 
-#### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
-
+### Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
 In this task, you will restore a file from the Azure virtual machine-level snapshot-based backup.
 
 1. Switch to the browser window running on your lab computer and displaying the Azure portal.
@@ -294,15 +298,15 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software.
+    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers, you can use an open source RDP client software.
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, sign in by using the **Student** username and the password **<inject key="AzureAdUserPassword"></inject>**
 
    >**Note:** Because the Azure portal doesn't support IE11 anymore, you'll have to use the Microsoft Edge Browser for this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0**, click **Start**, expand the **Windows System** folder, and click **Command Prompt**.
+1. Within the Remote Desktop session to the **az104-10-vm0**, Click **Start**, search and open **Command Prompt**.
 
 1. From the Command Prompt, run the following to delete the **hosts** file:
 
@@ -312,19 +316,25 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
    >**Note**: You will restore this file from the Azure virtual machine-level snapshot-based backup later in this task.
 
-1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine, start an Edge web browser, browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+1. Within the Remote Desktop session to the **az104-10-vm0** Azure virtual machine,  select the Windows Start button, search and open **Microsoft Edge**  browse to the [Azure portal](https://portal.azure.com), and sign in using your credentials.
+
+1. On **Sign in to Microsoft Azure** blade, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
 
 1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
-1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select View details for **az104-10-vm0**
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
 
-1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**.
-
-    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
+   ![image](../CloudLabs.AI/recovery.png)
+   
+   >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 
 1. On the **File Recovery** blade, accept the default recovery point and click **Download Executable**.
 
@@ -332,9 +342,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Click **Download** and, when prompted whether to run or save **IaaSVMILRExeForWindows.exe**, click **Save**.
 
-1. Start File Explorer, navigate to the **Downloads** folder, right-click the newly downloaded file, select **Properties** in the right-click menu, in the **Properties** dialog box, select the **Unblock** checkbox, and click **OK**.
-
-1. Back in the File Explorer window, double-click the newly downloaded file.
+1. Back in the **File Explorer** window, double-click the newly downloaded file.
 
 1. When prompted to provide the password from the portal, copy the password from the **Password to run the script** text box on the **File Recovery** blade, paste it at the Command Prompt, and press **Enter**.
 
@@ -358,17 +366,16 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Terminate the Remote Desktop session.
 
-#### Task 7: Review the Azure Recovery Services soft delete functionality
-
+### Task 7: Review the Azure Recovery Services soft delete functionality
 1. On the lab computer, in the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-10-rsv1**.
 
 1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**.
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Backup Agent**.
 
-1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**.
+1. On the **Backup Items (Azure Backup Agent)** blade, click the entry representing the backup of **az104-10-vm1**
 
-1. On the **C:\\ on az104-10-vm1.** blade, click the **az104-10-vm1.** link.
+1. On the **C:\\ on az104-10-vm1.** blade, select View details link and click on **az104-10-vm1.** link under computer name.
 
 1. On the **az104-10-vm1.** Protected Servers blade, click **Delete**.
 
@@ -384,15 +391,17 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. Enable the checkbox next to the label **There is backup data of 1 backup items associated with this server. I understand that clicking "Confirm" will permanently delete all the cloud backup data. This action cannot be undone. An alert may be sent to the administrators of this subscription notifying them of this deletion** and click **Delete**.
 
+    >**Note**: This will fail because the Soft delete feature must be disabled.
+
 1. Navigate back to the **az104-10-rsv1 - Backup items** blade and click **Azure Virtual Machines**.
 
 1. On the **az104-10-rsv1 - Backup items** blade, click **Azure Virtual Machine**.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, click **az104-10-vm0**.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select **View details** for **az104-10-vm0**.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Stop backup**.
 
-1. On the **Stop backup** blade, select **Delete Backup Data**, specify the following settings and click **Stop backup**:
+1. On the **Stop backup level** blade, select **Delete Backup Data**, specify the following settings, and click **Stop backup**:
 
     | Settings | Value |
     | --- | --- |
@@ -414,13 +423,13 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, Disable **Soft Delete (For eligible Backup Management Types)** and click **Save**.
+1. On the **Security Settings** blade, Disable **Soft Delete (For eligible Backup Management Types)** and also disable **Security Features (For workloads running on-premises)** and click **Save**.
 
-    >**Note**: This will not affect items already in soft delete state.
+    >**Note**: This will not affect items already in the soft delete state.
 
 1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
 
-1. Navigate back to the **az104-10-vm0** Backup Item blade and click **Undelete**.
+1. Navigate back to the az104-10-rsv1 Recovery Services vault blade, in the Protected items section, click Backup items, and then click the Azure virtual machines entry and select View details for  **az104-10-vm0** on Backup Item blade and click **Undelete**.
 
 1. On the **Undelete az104-10-vm0** blade, click **Undelete**.
 
@@ -434,32 +443,16 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
     | Reason | **Others** |
     | Comments | **az104 10 lab** |
 
-#### Clean up resources
+1. Repeat the steps at the beginning of this task to delete the backup items for **az104-10-vm1**.
 
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-10*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-10*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-   >**Note**: Optionally, you might consider deleting the auto-generated resource group with the prefix **AzureBackupRG_** (there is no additional charge associated with its existence).
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-#### Review
-
-In this lab, you have:
-
+### Review
+In this lab, you have completed:
 + Provisioned the lab environment
 + Created a Recovery Services vault
 + Implemented Azure virtual machine-level backup

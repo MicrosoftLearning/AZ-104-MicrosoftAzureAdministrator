@@ -1,0 +1,12 @@
+[
+  {
+  "Name": "Lab 10: Backup virtual machines",
+  "Language": "English",
+  "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/Lab-Scenario-Preview/lab-10.md",
+        "Order": 1
+      }
+    ]
+  } 
+]

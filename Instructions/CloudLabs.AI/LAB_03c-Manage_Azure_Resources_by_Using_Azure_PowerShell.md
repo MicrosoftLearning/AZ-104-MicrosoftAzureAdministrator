@@ -122,4 +122,4 @@ In this lab, you have completed:
 - Use the existing resource group and create an Azure managed disk by using Azure PowerShell
 - Configured the managed disk by using Azure PowerShell
 
-## You have successfully completed the lab
+### You have successfully completed the lab

@@ -1,0 +1,14 @@
+[ {
+  "Name": "Virtual Networking",
+  "Language": "English",
+  "Files": [
+     {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LabIntro.md",
+        "Order": 1
+     },
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_04-Implement_Virtual_Networking.md",
+      "Order": 2
+    }
+  ]
+} ]

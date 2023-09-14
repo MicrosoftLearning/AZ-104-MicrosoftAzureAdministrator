@@ -125,4 +125,4 @@ In this lab, you have completed:
 - Created an Azure managed disk by using an ARM template
 - Reviewed the ARM template-based deployment of the managed disk
 
-## You have successfully completed the lab
+### You have successfully completed the lab

@@ -3,11 +3,11 @@
   "Language": "English",
   "Files": [
      {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LabIntro.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LabIntro.md",
         "Order": 1
      },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/CloudLabs.AI/LAB_11-Implement_Monitoring.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_11-Implement_Monitoring.md",
       "Order": 2
     }
   ]

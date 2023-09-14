@@ -1,17 +1,14 @@
 # Lab 09b - Implement Azure Container Instances
-# Student lab manual
 
 ## Lab scenario
-
-Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
+Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for the deployment of Docker images.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
-
+## Lab objectives
 In this lab, you will complete the following tasks:
 
-- Task 1: Deploy a Docker image by using the Azure Container Instance
+- Task 1: Deploy an Azure Container Instance using a Docker image
 - Task 2: Review the functionality of the Azure Container Instance
 
 ## Estimated timing: 20 minutes
@@ -20,36 +17,35 @@ In this lab, you will complete the following tasks:
 
 ![image](../media/lab09b.png)
 
-### Exercise 1
+## Exercise 1
 
-## Task 1: Deploy a Docker image by using the Azure Container Instance
-
+### Task 1: Deploy an Azure Container Instance using a Docker image
 In this task, you will create a new container instance for the web application.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
 
 1. In the Azure portal, search for locate **Container instances** and then, on the **Container instances** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
-![image](../media/9b-1.png)
-
 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09b-rg1** |
+    | Resource group | Select **az104-09b-rg1** |
     | Container name | **az104-9b-c1** |
     | Region | the name of a region where you can provision Azure container instances |
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
-1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
-![image](../media/9b-2.png)
+    ![image](../media/9b-1.png)
 
+1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | DNS name label | any valid, globally unique DNS host name |
+    | DNS name label | any valid, globally unique DNS hostname |
+
+    ![image](../media/9b-2.png)
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
@@ -59,43 +55,39 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
-## Task 2: Review the functionality of the Azure Container Instance
+### Task 2: Review the functionality of the Azure Container Instance
 
 In this task, you will review the deployment of the container instance.
 
 1. On the deployment blade, click the **Go to resource** link.
 
 1. On the **Overview** blade of the container instance, verify that **Status** is reported as **Running**.
-![image](../media/9b-3new.png)
 
+    ![image](../media/9b-3new.png)
 
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
-![image](../media/9b-4.png)
 
+    ![image](../media/9b-4.png)
 
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
-![image](../media/9b-5.png)
 
+    ![image](../media/9b-5.png)
 
 1. Close the new browser tab, back in the Azure portal, in the **Settings** section of the container instance blade, click **Containers**, and then click **Logs**.
-![image](../media/9b-6.png)
+
+    ![image](../media/9b-6.png)
 
 1. Verify that you see the log entries representing the HTTP GET request generated by displaying the application in the browser.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
- 
-
-- Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Review
-
-In this lab, you have:
-
+In this lab, you have completed:
 - Deployed a Docker image by using the Azure Container Instance
 - Reviewed the functionality of the Azure Container Instance
 
-## You have successfully completed the lab
+**You have successfully completed the lab**

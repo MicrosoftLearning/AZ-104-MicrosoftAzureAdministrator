@@ -325,4 +325,4 @@ In this lab, you have completed:
 - Created and configured Azure Files shares
 - Managed network access for Azure Storage
 
-## You have successfully completed the lab
+### You have successfully completed the lab

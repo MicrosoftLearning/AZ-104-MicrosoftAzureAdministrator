@@ -1,25 +1,12 @@
----
-lab:
-    title: '06 - Implement Traffic Management'
-    module: 'Module 06 - Network Traffic Management'
----
-
 # Lab 06 - Implement Traffic Management
-# Student lab manual
-
 ## Lab scenario
+You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso is considering implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
-You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso considers implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
-
->**Note**: This lab, by default, requires total of 8 vCPUs available in the Standard_Dsv3 series in the region you choose for deployment, since it involves deployment of four Azure VMs of Standard_D2s_v3 SKU. If your students are using trial accounts, with the limit of 4 vCPUs, you can use a VM size that requires only one vCPU (such as Standard_B1s).
-
-## Objectives
-
+## Lab objectives
 In this lab, you will complete the following tasks:
-
 + Task 1: Provision the lab environment
 + Task 2: Configure the hub and spoke network topology
-+ Task 3: Test transitivity of virtual network peering
++ Task 3: Test the transitivity of virtual network peering
 + Task 4: Configure routing in the hub and spoke topology
 + Task 5: Implement Azure Load Balancer
 + Task 6: Implement Azure Application Gateway
@@ -27,44 +14,50 @@ In this lab, you will complete the following tasks:
 ## Estimated timing: 60 minutes
 
 ## Architecture diagram
-
 ![image](../media/lab06.png)
 
+## Excercise 1: Implement Traffic Management
 
-## Instructions
-
-### Exercise 1
-
-#### Task 1: Provision the lab environment
-
+### Task 1: Provision the lab environment
 In this task, you will deploy four virtual machines into the same Azure region. The first two will reside in a hub virtual network, while each of the remaining two will reside in a separate spoke virtual network.
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
+   ![image](../media/cloudshellicon1.png)
+
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
+   
+   >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
+
+      ![image](../media/showadvancesettings.png)
+       
+   > Under the **Show advanced settings**, provide the following details and click **Create Storage(4)**.
+
+   * Resource group : Select **Use existing(1)** -> **az104-06-rg1**
+   * Storage account : Select **Create new(2)** and Enter **cloudstore<inject key="DeploymentID" enableCopy="false"/>**
+   * File Share: Select **Create new** and Enter **none(3)**
+
+    ![image](../media/createstorage.png)
+
+   > **Note :** Please wait until the storage account is created and proceed with next step.
+   
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files (1)** icon, in the drop-down menu, click **Upload (2)** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
+
+    ![image](../media/uploadicon.png)
     
-    ![image](../media/cloudhell01.png)
-    
-    >Under **Advanced Settings** you need to select the resource group from **Resource group** dropdown and give some unique name under **Storage Account** section and under **File share** section type none as shown in the below image.
 
-    ![image](../media/cloudhell02.png)
-
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
-
-3. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** into the Cloud Shell home directory.
-
-1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the `[Azure_region]` placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
+1. From the Cloud Shell pane, run the following to know  all the resource group that will be hosting the lab environment:
 
    ```powershell
-   $location = '[Azure_region]'
+   Get-AzResourceGroup
+   
+   ```
+1. From the Cloud Shell pane, run the following to declare the resource group that will be use to perform the lab:
 
+    ```powershell
    $rgName = 'az104-06-rg1'
-
-   New-AzResourceGroup -Name $rgName -Location $location
+   
    ```
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and four Azure VMs into them by using the template and parameter files you uploaded:
@@ -74,14 +67,16 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -ResourceGroupName $rgName `
       -TemplateFile $HOME/az104-06-vms-loop-template.json `
       -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
+      
    ```
+
+1. You will be prompted to provide an Admin password. Please enter Admin password **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
 1. From the Cloud Shell pane, run the following to install the Network Watcher extension on the Azure VMs deployed in the previous step:
 
    ```powershell
-   $rgName = 'az104-06-rg1'
    $location = (Get-AzResourceGroup -ResourceGroupName $rgName).location
    $vmNames = (Get-AzVM -ResourceGroupName $rgName).Name
 
@@ -100,28 +95,37 @@ In this task, you will deploy four virtual machines into the same Azure region. 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
 1. Close the Cloud Shell pane.
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 2: Configure the hub and spoke network topology
-
-In this task, you will configure local peering between the virtual networks you deployed in the previous tasks in order to create a hub and spoke network topology.
+### Task 2: Configure the hub and spoke network topology
+In this task, you will configure local peering between the virtual networks you deployed in the previous tasks to create a hub and spoke network topology.
 
 1. In the Azure portal, search for and select **Virtual networks**.
 
 1. Review the virtual networks you created in the previous task.
 
-    >**Note**: The template you used for deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
+    >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
 
 1. In the list of virtual networks, select **az104-06-vnet2**.
 
-1. On the **az104-06-vnet2** blade, select **Properties**. 
+1. On the **az104-06-vnet2** blade, select **Properties(1)** under Settings. 
 
-1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID** property.
+1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID(2)** property.
+
+   ![image](../media/vnet2properties2.png)
 
 1. Navigate back to the list of virtual networks and select **az104-06-vnet3**.
 
-1. On the **az104-06-vnet3** blade, select **Properties**. 
+1. On the **az104-06-vnet3** blade, select **Properties(1)**. 
 
-1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID** property.
+1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID(2)** property.
+
+   ![image](../media/properties3.png)
 
     >**Note**: You will need the values of the ResourceID property for both virtual networks later in this task.
 
@@ -136,16 +140,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None (default)** |
+    | Allow traffic to remote virtual network | **Allow** |
+    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
+    | Use remote virtual network gateway or route server | **Block** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Allow traffic to current virtual network | **Allow** |
+    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
+    | Use current virtual network gateway or route server| **Block** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -160,28 +164,34 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None (default)** |
+    | Allow traffic to remote virtual network | **Allow** |
+    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
+    | Use remote virtual network gateway or route server | **Block** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Allow (default)** |
-    | Virtual network gateway | **None (default)** |
+    | Allow traffic to current virtual network | **Allow** |
+    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
+    | Use current virtual network gateway or route server | **Block** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-#### Task 3: Test transitivity of virtual network peering
 
-In this task, you will test transitivity of virtual network peering by using Network Watcher.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### Task 3: Test the transitivity of virtual network peering
+In this task, you will test the transitivity of virtual network peering by using Network Watcher.
 
 1. In the Azure portal, search for and select **Network Watcher**.
 
-1. On the **Network Watcher** blade, expand the listing of Azure regions and verify that the service is enabled in the Azure into which you deployed resources in the first task of this lab.
+1.  On the **Network Watcher** blade, expand the listing of Azure regions and verify the service is enabled in the region you are using. 
 
 1. On the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
 
@@ -200,9 +210,9 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.62.0.4** represents the private IP address of **az104-06-vm2**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
-    > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
+    > **Note**: This is expected since the hub virtual network has peered directly with the first spoke virtual network.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -219,9 +229,9 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
-    > **Note**: This is expected, since the hub virtual network is peered directly with the second spoke virtual network.
+    > **Note**: This is expected since the hub virtual network has peered directly with the second spoke virtual network.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -236,12 +246,11 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Note that the status is **Fail**.
 
-    > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
+    > **Note**: This is expected since the two spoke virtual networks have not peered with each other (virtual network peering is not transitive).
 
-#### Task 4: Configure routing in the hub and spoke topology
-
+### Task 4: Configure routing in the hub and spoke topology
 In this task, you will configure and test routing between the two spoke virtual networks by enabling IP forwarding on the network interface of the **az104-06-vm0** virtual machine, enabling routing within its operating system, and configuring user-defined routes on the spoke virtual network.
 
 1. In the Azure portal, search and select **Virtual machines**.
@@ -252,11 +261,11 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click the **az104-06-nic0** link next to the **Network interface** label, and then, on the **az104-06-nic0** network interface blade, in the **Settings** section, click **IP configurations**.
 
-1. Set **IP forwarding** to **Enabled** and save the change.
+1. Set **Enable IP forwarding** to **Enabl** and  click on **Apply**.
 
    > **Note**: This setting is required in order for **az104-06-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
-   > **Note**: Now you need to configure operating system of the **az104-06-vm0** virtual machine to support routing.
+   > **Note**: Now you need to configure the operating system of the **az104-06-vm0** virtual machine to support routing.
 
 1. In the Azure portal, navigate back to the **az104-06-vm0** Azure virtual machine blade and click **Overview**.
 
@@ -286,7 +295,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Now you need to create and configure user defined routes on the spoke virtual networks.
 
-1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Add**.
+1. In the Azure portal, search and select **Route tables** and, on the **Route tables** blade, click **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
@@ -302,7 +311,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt23**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt23** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
@@ -311,11 +320,12 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet2-to-vnet3** |
-    | Address prefix | **10.63.0.0/20** |
+    | Destination type |  select **IP Addresses** |
+    | Destination IP addresses/CIDR ranges | **10.63.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Back on the **az104-06-rt23** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
@@ -328,7 +338,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click **OK**
 
-1. Navigate back to **Route tables** blade and click **+ Add**.
+1. Navigate back to **Route tables** blade and click **+ Create**.
 
 1. Create a route table with the following settings (leave others with their default values):
 
@@ -344,7 +354,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
    > **Note**: Wait for the route table to be created. This should take about 3 minutes.
 
-1. Back on the **Route tables** blade, click **Refresh** and then click **az104-06-rt32**.
+1. Click **Go to resource**.
 
 1. On the **az104-06-rt32** route table blade, in the **Settings** section, click **Routes**, and then click **+ Add**.
 
@@ -353,11 +363,12 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Setting | Value |
     | --- | --- |
     | Route name | **az104-06-route-vnet3-to-vnet2** |
-    | Address prefix | **10.62.0.0/20** |
+    | Address prefix destination | **IP Addresses** |
+    | Destination IP addresses/CIDR ranges | **10.62.0.0/20** |
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.60.0.4** |
 
-1. Click **OK**
+1. Click **Add**
 
 1. Back on the **az104-06-rt32** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
@@ -385,40 +396,52 @@ In this task, you will configure and test routing between the two spoke virtual 
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If status is **Unreachable**, you should restart az104-06-vm0.
+1. Click **Run diagnostic tests** and wait until the results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the traffic was routed via **10.60.0.4**, assigned to the **az104-06-nic0** network adapter. If the status is **Fail**, you should stop and then start az104-06-vm0.
 
-    > **Note**: This is expected, since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
+    > **Note**: This is expected since the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
-    > **Note**: You can use **Network Watcher** to view topology of the network.
+    >**Note**:Before giving the IPV4 address, go to the virtual machine and cross verify the ip address.
 
-#### Task 5: Implement Azure Load Balancer
+    > **Note**: You can use **Network Watcher** to view the topology of the network.
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+### Task 5: Implement Azure Load Balancer
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
-1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Add**.
+1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg4** |
+    | Resource group | az104-06-rg1 |
     | Name | **az104-06-lb4** |
     | Region| name of the Azure region into which you deployed all other resources in this lab |
-    | Type | **Public** |
     | SKU | **Standard** |
+    | Type | **Public** |
+    
+1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
+ 
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-pip4** |
+    | IP version | **IPv4** |
+    | IP type | **IP address** |
     | Public IP address | **Create new** |
-    | Public IP address name | **az104-06-pip4** |
+
+    
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-pip4** |
     | Availability zone | **No Zone** |
-    | Add a public IPv6 address | **No** |
 
-1. Click Review and Create. Let validation occur, and hit Create to submit your deployment.
-
-    > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
-
-1. On the deployment blade, click **Go to resource**.
-
-1. On the **az104-06-lb4** load balancer blade, in the **Settings** section, click **Backend pools**, and click **+ Add**.
+1. Click Next: **Backend pools**, and click **+ Add**.
 
 1. Add a backend pool with the following settings (leave others with their default values):
 
@@ -426,17 +449,30 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-be1** |
     | Virtual network | **az104-06-vnet01** |
-    | IP version | **IPv4** |
-    | Virtual machine | **az104-06-vm0** |
-    | Virtual machine IP address | **ipconfig1 (10.60.0.4)** |
-    | Virtual machine | **az104-06-vm1** |
-    | Virtual machine IP address | **ipconfig1 (10.60.1.4)** |
+    | Backend Pool Configuration | **NIC** |
+    
+1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
 
-1. Click **Add**
+1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
-1. Wait for the backend pool to be created, in the **Settings** section, click **Health probes**, and then click **+ Add**.
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-lb4-lbrule1** |
+    | IP Version | **IPv4** |
+    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
+    | Backend pool | **az104-06-lb4-be1** |    
+    | Protocol | **TCP** |
+    | Port | **80** |
+    | Backend port | **80** |
+    | Session persistence | **None** |
+    | Idle timeout (minutes) | **4** |
+    | TCP reset | **Disabled** |
+    | Floating IP (direct server return) | **Disabled** |
+    | Health probe | **Create new** |
+    
+1. click **create new** under **Health probe**, on the **Add load balancing rules** blade.
 
-1. Add a health probe with the following settings:
+    Add a health probe with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -444,32 +480,14 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Protocol | **TCP** |
     | Port | **80** |
     | Interval | **5** |
-    | Unhealthy threshold | **2** |
 
-1. Click **Add**
+1. Click **OK** and back on the **Add load balancing rules** blade, click **Add**.
 
-1. Wait for the health probe to be created, in the **Settings** section, click **Load balancing rules**, and then click **+ Add**.
+1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
 
-1. Add a load balancing rule with the following settings (leave others with their default values):
+    > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
-    | Setting | Value |
-    | --- | --- |
-    | Name | **az104-06-lb4-lbrule1** |
-    | IP Version | **IPv4** |
-    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
-    | Protocol | **TCP** |
-    | Port | **80** |
-    | Backend port | **80** |
-    | Backend pool | **az104-06-lb4-be1** |
-    | Health probe | **az104-06-lb4-hp1** |
-    | Session persistence | **None** |
-    | Idle timeout (minutes) | **4** |
-    | TCP reset | **Disabled** |
-    | Floating IP (direct server return) | **Disabled** |
-
-1. Click **Add**
-
-1. Wait for the load balancing rule to be created, click **Overview**, and note the value of the **Public IP address**.
+1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings** section, click **Frontend IP configuration** and note the value of the **Public IP address**.
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
@@ -478,9 +496,14 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (as indicated by the message).
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-#### Task 6: Implement Azure Application Gateway
-
+### Task 6: Implement Azure Application Gateway
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal, search and select **Virtual networks**.
@@ -500,14 +523,14 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
-1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **+ Add**.
+1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create an application gateway** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-06-rg5** |
+    | Resource group | az104-06-rg1 |
     | Application gateway name | **az104-06-appgw5** |
     | Region | name of the Azure region into which you deployed all other resources in this lab |
     | Tier | **Standard V2** |
@@ -521,7 +544,14 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Frontend IP address type | **Public** |
-    | Public IP address| the name of a new public ip address **az104-06-pip5** |
+    | Public IP address name| **Add new** |
+    
+1. Under **Add a Public IP**, Specify the following settings(leave others with their default values):   
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | **az104-06-pip5** |
+    
 
 1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
 
@@ -543,6 +573,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Rule name | **az104-06-appgw5-rl1** |
+    | Priority | **1** |
     | Listener name | **az104-06-appgw5-rl1l1** |
     | Frontend IP | **Public** |
     | Protocol | **HTTP** |
@@ -557,18 +588,18 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
 
-1. Click **Add new** under to the **HTTP setting** text box, and, on the **Add an HTTP setting** blade, specify the following settings (leave others with their default values):
+1. Click **Add new** under to the **Backend setting** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | HTTP setting | **az104-06-appgw5-http1** |
+    | Backend setting | **az104-06-appgw5-http1** |
     | Backend protocol | **HTTP** |
     | Backend port | **80** |
     | Cookie-based affinity | **Disable** |
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. Click **Add** on the **Add an HTTP setting** blade, and back on the **Add a routing rule** blade, click **Add**.
+1. Click **Add** on the **Add Backend setting** blade, and back on the **Add a routing rule** blade, click **Add**.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
@@ -587,36 +618,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
 
     > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
-
-#### Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-06*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-06*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-#### Review
-
-In this lab, you have:
-
+    
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
+### Review
+In this lab, you have completed:
 + Provisioned the lab environment
 + Configured the hub and spoke network topology
 + Tested transitivity of virtual network peering
-+ Task 4: Configure routing in the hub and spoke topology
-+ Task 5: Implement Azure Load Balancer
-+ Task 6: Implement Azure Application Gateway
++ Configure routing in the hub and spoke topology
++ Implement Azure Load Balancer
++ Implement Azure Application Gateway
 
 ## You have successfully completed the lab

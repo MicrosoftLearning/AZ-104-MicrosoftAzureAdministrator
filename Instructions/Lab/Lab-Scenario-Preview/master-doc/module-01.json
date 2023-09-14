@@ -1,0 +1,12 @@
+[
+  {
+  "Name": "Lab 1: Manage Azure Active Directory Identities",
+  "Language": "English",
+  "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/Lab-Scenario-Preview/lab-1.md",
+        "Order": 1
+      }
+    ]
+  } 
+]

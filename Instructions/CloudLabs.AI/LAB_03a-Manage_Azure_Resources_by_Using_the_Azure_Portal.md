@@ -120,4 +120,4 @@ In this lab, you have completed:
 - Moved resources between resource groups
 - Implemented and tested resource locks
 
-## You have successfully completed the lab
+### You have successfully completed the lab
