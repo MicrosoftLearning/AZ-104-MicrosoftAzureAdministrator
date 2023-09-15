@@ -84,7 +84,7 @@ Next, create an environment for your container app.
 
     A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
    
-## Task 2: Test and verfiy deployment of the container app
+## Task 2: Test and verify deployment of the container app
 
 1. Select **Go to resource** to view your new container app.
 
