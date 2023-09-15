@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](../CloudLabs.AI/Images/lab08.png)
+![](../Labs/Images/lab08.png)
 
 ## Exercise 1
 
@@ -25,7 +25,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create (1)** then select **Azure virtual machine (2)**.
 
-    ![](../CloudLabs.AI/Images/img1lab8.png)
+    ![](../Labs/Images/img1lab8.png)
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -160,13 +160,13 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
 1. On the **Install an Extension** blade, search for and select **Custom Script Extension** and then click **Next**.
 
-    ![](../CloudLabs.AI/Images/cse.png) 
+    ![](../Labs/Images/cse.png) 
 
 1. From the **Configure Custom Script Extension Extension** blade, click **Browse**.
 
 1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
 
-    ![](../CloudLabs.AI/Images/iis.png) 
+    ![](../Labs/Images/iis.png) 
 
 1. Back on the **Configure Custom Script Extension Extension** blade, click **Review+Create** then click **Create**.
 
@@ -174,7 +174,7 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
 1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
 
-   ![](../CloudLabs.AI/Images/export.png)
+   ![](../Labs/Images/export.png)
 
 1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
 
@@ -241,7 +241,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-   ![](../CloudLabs.AI/Images/resize.png) 
+   ![](../Labs/Images/resize.png) 
 
 1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
@@ -253,7 +253,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
     | Storage type | **Premium SSD (2)** |
     | Size (GiB)| **1024 (3)** |
 
-   ![](../CloudLabs.AI/Images/diskset.png) 
+   ![](../Labs/Images/diskset.png) 
       
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
@@ -269,7 +269,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-   ![](../CloudLabs.AI/Images/runcommand.png) 
+   ![](../Labs/Images/runcommand.png) 
   
 1. On the **Run Command Script** blade, type the following and click **Run** to create a drive Z: consisting of the two newly attached disks with the simple layout and fixed provisioning:
 
@@ -466,7 +466,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Boot diagnostics | **Enable with custom storage account** |
     | Diagnostics storage account | Click on **Create new** and provide a unique name to create a new storage account. |
     
-      ![](../CloudLabs.AI/Images/az104str2mod8.png)   
+      ![](../Labs/Images/az104str2mod8.png)   
   
     >**Note**: You will need the name of this storage account in the next task.
 
@@ -549,7 +549,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the **Settings** section, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
-   ![](../CloudLabs.AI/Images/upgrade.png)
+   ![](../Labs/Images/upgrade.png)
 
 1. In the list of instances, click the entry representing the first instance and, on the scale set instance blade, note its **Location** (it should be one of the zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 

@@ -332,7 +332,7 @@ In this task, you will restore a file from the Azure virtual machine-level snaps
 
 1. On the **az104-10-vm0** Backup Item blade, click **File Recovery**, use (...) to select the option.
 
-   ![image](../CloudLabs.AI/recovery.png)
+   ![image](../Labs/recovery.png)
    
    >**Note**: You have the option of running recovery shortly after backup starts based on the application consistent snapshot.
 

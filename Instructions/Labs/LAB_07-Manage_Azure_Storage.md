@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ![](../CloudLabs.AI/Images/lab07.png)
+  ![](../Labs/Images/lab07.png)
 
 ## Exercise 1
 
@@ -101,7 +101,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the same blade **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change. 
 
-    ![](../CloudLabs.AI/Images/TA7-T2-P8.png)
+    ![](../Labs/Images/TA7-T2-P8.png)
 
 1. In the same blade note that, at this point, the Storage account has only the primary location.
 
@@ -190,7 +190,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
 
-    ![](../CloudLabs.AI/Images/sasurl.png)
+    ![](../Labs/Images/sasurl.png)
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
