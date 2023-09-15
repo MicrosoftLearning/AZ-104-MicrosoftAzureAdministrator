@@ -145,7 +145,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. In the **Manage** section, click **All products**. Verify **Microsoft Entra ID P2** is already added to the list of licenses, if it is added then skip the next two steps and continue.
 
-1. Click **+ Try/Buy** and activate the free trial of Microsoft Entra ID P2.
+1. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
 
       ![](../Labs/Images/trybuy.png)    
 
