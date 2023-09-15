@@ -117,7 +117,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet2 \| Properties** blade, record the value of the **Resource ID(2)** property.
 
-   ![image](../Labs/media/az-104(1).png)
+   ![image](../media/az-104(1).png)
 
 1. Navigate back to the list of virtual networks and select **az104-06-vnet3**.
 
@@ -125,7 +125,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet3 \| Properties** blade, record the value of the **Resource ID(2)** property.
 
-   ![image](../Labs/media/az-104(2).png)
+   ![image](../media/az-104(2).png)
 
     >**Note**: You will need the values of the ResourceID property for both virtual networks later in this task.
 
@@ -135,7 +135,7 @@ In this task, you will configure local peering between the virtual networks you 
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-   ![image](../Labs/media/az-104peerings.png)
+   ![image](../media/az-104peerings.png)
 
 1. Add a peering with the following settings (leave others with their default values) and click Add:
 
@@ -197,7 +197,7 @@ In this task, you will test the transitivity of virtual network peering by using
 
 1. On the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
 
-   ![image](../Labs/media/az-104(3).png)
+   ![image](../media/az-104(3).png)
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings (leave others with their default values):
 
@@ -265,11 +265,11 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Click the **az104-06-nic0** link next to the **Network interface** label, and then, on the **az104-06-nic0** network interface blade, in the **Settings** section, click **IP configurations**.
 
-   ![image](../Labs/media/az-104(4).png)
+   ![image](../media/az-104(4).png)
 
 1. Set **Enable IP forwarding** to **Enable** and  click on **Apply**.
 
-    ![image](../Labs/media/az-104(5).png)
+    ![image](../media/az-104(5).png)
 
    > **Note**: This setting is required in order for **az104-06-vm0** to function as a router, which will route traffic between two spoke virtual networks.
 
@@ -337,7 +337,7 @@ In this task, you will configure and test routing between the two spoke virtual 
 
 1. Back on the **az104-06-rt23** route table blade, in the **Settings** section, click **Subnets**, and then click **+ Associate**.
 
-    ![image](../Labs/media/az-104(7).png)
+    ![image](../media/az-104(7).png)
 
 1. Associate the route table **az104-06-rt23** with the following subnet:
 
@@ -503,7 +503,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Verify that the browser window displays the message **Hello World from az104-06-vm0** or **Hello World from az104-06-vm1**.
 
-    ![image](../Labs/media/az-104(8).png)
+    ![image](../media/az-104(8).png)
 
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (as indicated by the message).
 
@@ -625,7 +625,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Verify that the browser window displays the message **Hello World from az104-06-vm2** or **Hello World from az104-06-vm3**.
 
-   ![image](../Labs/media/az-104(9).png)
+   ![image](../media/az-104(9).png)
 
 
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (based on the message displayed on the web page).
