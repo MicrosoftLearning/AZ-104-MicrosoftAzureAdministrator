@@ -93,8 +93,7 @@ In this task, you will create and configure Azure AD users.
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
-
-1. In the Settings tab, leave everything to default and click on **Assign**.    
+   
 
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
 
@@ -275,7 +274,8 @@ In this task, you will create a new Azure AD tenant.
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter **(2)** | 
     | Country/Region | **United States (3)** |
     
-      ![](../Labs/Images/crttenant2.png)   
+
+    ![](../Labs/Images/crttenant2.png)   
    
      > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
