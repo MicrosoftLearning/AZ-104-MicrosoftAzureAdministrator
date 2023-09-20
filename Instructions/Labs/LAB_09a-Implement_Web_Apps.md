@@ -95,11 +95,11 @@ In this task, you will configure web app deployment settings.
 
 1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
 
-1. On the **Deployment Center** blade, copy the **Git Clone Url** entry to Notepad.
+1. On the **Deployment Center** blade, copy the **Git Clone Uri** entry to Notepad.
 
    ![image](../media/9a-4.png)
 
-   >**Note:** You will need the Git Clone Url value in the next task of this lab.
+   >**Note:** You will need the Git Clone Uri value in the next task of this lab.
 
 1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
 
@@ -146,10 +146,10 @@ In this task, you will deploy code to the staging deployment slot.
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
-1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_user_name_password]` and `[git_clone_url]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Url**, respectively, which you identified in previous task):
+1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_user_name_password]` and `[git_clone_uri]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Uri**, respectively, which you identified in previous task):
 
    ```powershell
-   git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the Git Clone URL]
+   git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the Git Clone Uri]
    ```
 
     >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name, but has to be unique. Also make sure that the password does not contain '@' symbol.
