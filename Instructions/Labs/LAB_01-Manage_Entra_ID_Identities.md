@@ -4,7 +4,7 @@ lab:
     module: 'Administer Identity'
 ---
 
-# Lab 01 - Manage Microsoft Entra ID Identities
+# Lab 01 - Manage Microsoft Entra ID Identities (rebranding test)
 
 # Student lab manual
 
