@@ -37,7 +37,7 @@ In this lab, you will:
 
 ## Architecture diagram
 
-![image](../media/lab02a.png)
+![image](../media/lab02aentra.png)
 
 
 ### Instructions
