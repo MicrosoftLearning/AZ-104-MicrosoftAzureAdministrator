@@ -6,7 +6,7 @@ demo:
 
 # 01 - Administer Identity
 
-## Configure Azure Active Directory
+## Configure Entra ID Identities
 
 This area does not have a formal demonstration. Consider walking throught the interactive lab simulation for student Lab 01. 
 
@@ -14,27 +14,25 @@ This area does not have a formal demonstration. Consider walking throught the in
 
 Alternatively, you could use one of these QuickStarts. 
 
-**Reference**: [Quickstart - Access & create new tenant - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+**Reference**: [Quickstart - Access & create new tenant in Microsoft Entra ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
-**Reference**: [Quickstart - View groups & members - Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
+**Reference**: [Quickstart - Create a group with members and view all groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## Configure User and Group Accounts
 
-In this demonstration, we will explore Azure Active Directory.
+In this demonstration, we will explore Entra ID identities.
 
-**Reference**: [Add or delete users - Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**Reference**: [Add or delete users](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 
-**Reference**: [Create a basic group and add members - Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
+**Reference**: [Create a basic group and add members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members)
 
-**Note:** Depending on your subscription not all areas of the Azure Active Directory blade will be available. 
+**Note:** Depending on your subscription not all areas of the Microsoft Entra ID blade will be available. 
 
 **Review license and domain information**
 
-1.  Access the Azure portal and navigate to the **Azure Active
-    Directory** blade.
+1.  Access the Azure portal and navigate to the **Microsoft Entra ID** blade.
 
-2.  On the Overview blade, review the **Tenant information** including
-    license and primary domain.
+2.  On the Overview blade, review the **Tenant information** including license and primary domain.
 
 **Explore user accounts**
 
@@ -53,7 +51,7 @@ In this demonstration, we will explore Azure Active Directory.
 
 **Explore group accounts**
 
-1.  Return to the **Azure Active Directory** page and select
+1.  Return to the **Microsoft Entra ID** page and select
     the **Groups** blade.
 
 2.  Create a **New group** or select an existing group to review.
