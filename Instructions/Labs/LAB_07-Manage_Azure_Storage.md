@@ -39,7 +39,7 @@ In this lab, you will:
 
 In this task, you will deploy an Azure virtual machine that you will use later in this lab.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the **[Azure portal](https://portal.azure.com)**.
 
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
@@ -239,7 +239,9 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click **Review and create**, and then **Create**. Wait for the file share to deploy. 
 
-1. Click the newly created file share and click **Connect**.
+1. Click the newly created file share and note the information available on the **az104-07-share** blade.
+
+1. Click **Browse** and note that there are no files or folders in the new file share. Click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
@@ -263,7 +265,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Verify that the script completed successfully.
 
-1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
+1. Navigate back to the **az104-07-share \| Browse** file share blade, click **Refresh**, and verify that the **az104-07-folder** appears in the list of folders.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
 
