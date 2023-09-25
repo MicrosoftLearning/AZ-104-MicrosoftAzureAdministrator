@@ -65,7 +65,7 @@ In this task, you will create an Azure web app.
 
 In this task, you will create a staging deployment slot.
 
-1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
+1. On the blade of the newly deployed web app, click the **Default domain** link to display the default web page in a new browser tab.
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
@@ -147,7 +147,7 @@ In this task, you will deploy code to the staging deployment slot.
 
 1. Close the Cloud Shell pane.
 
-1. On the staging slot blade, click **Overview** and then click the **URL** link to display the default web page in a new browser tab.
+1. On the staging slot blade, click **Overview** and then click the **Default domain** link to display the default web page in a new browser tab.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
@@ -161,7 +161,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
-1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
+1. Click **Overview** on the production slot blade of the web app and then click the **Default domain** link to display the web site home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
