@@ -195,7 +195,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
-    > **Note**: If you are using Microsoft Edge, you should be presented with the **The MIT License (MIT)** page. If you are using Chrome, Microsoft Edge (Chromium) or Firefox, you should be able to view the content of the file by downloading it and opening it with Notepad.
+    > **Note**: You should be able to view the content of the file by downloading it and opening it with Notepad.
 
     > **Note**: This is expected, since now your access is authorized based on the newly generated the SAS token.
 
