@@ -75,7 +75,7 @@ In this task, you will deploy Azure virtual machines into different availability
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-08-rg01-vnet** |
+    | Name | **az104-08-vnet01** |
     | Address range | **10.80.0.0/20** |
     | Subnet name | **subnet0** |
     | Subnet range | **10.80.0.0/24** |
