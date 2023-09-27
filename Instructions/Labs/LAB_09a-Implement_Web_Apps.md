@@ -65,7 +65,7 @@ In this task, you will create an Azure web app.
 
 In this task, you will create a staging deployment slot.
 
-1. On the blade of the newly deployed web app, click the **URL** link to display the default web page in a new browser tab.
+1. On the blade of the newly deployed web app, click the **Default domain** link to display the default web page in a new browser tab.
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
@@ -142,12 +142,12 @@ In this task, you will deploy code to the staging deployment slot.
 1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the placeholder values with the value of the **Deployment Credentials** user name and password and the app name, which you identified in previous task):
 
    ```powershell
-    git push https://<deployment-username>:<deployment-password>@<app-name>.scm.azurewebsites.net/<app-name>.git master
+    git push https://<deployment-username>:<deployment-password>@<app-name>-staging.scm.azurewebsites.net/<app-name>.git master
    ```
 
 1. Close the Cloud Shell pane.
 
-1. On the staging slot blade, click **Overview** and then click the **URL** link to display the default web page in a new browser tab.
+1. On the staging slot blade, click **Overview** and then click the **Default domain** link to display the default web page in a new browser tab.
 
 1. Verify that the browser page displays the **Hello World!** message and close the new tab.
 
@@ -161,7 +161,7 @@ In this task, you will swap the staging slot with the production slot
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
-1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
+1. Click **Overview** on the production slot blade of the web app and then click the **Default domain** link to display the web site home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
@@ -229,7 +229,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
 
-1. Select **Autoscale Settings**, select the **Run history** tab, and check the **Observed resource instance count**.
+1. Select **Autoscale Settings**, select the **Run history** tab. Under **Show data for last**, select **1 hour** and check the **Observed resource instance count**.
 
 1. Monitor the utilization and the number of instances for a few minutes. 
 
