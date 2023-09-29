@@ -3,7 +3,7 @@
 ## Lab overview
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 - creating a management group that would include all of Contoso's Azure subscriptions
-- granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
+- granting permissions to submit support requests for all subscriptions in the management group to a designated Manage Microsoft Entra ID Identities user. That user's permissions should be limited only to: 
     - creating support request tickets
     - viewing resource groups 
 - tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
