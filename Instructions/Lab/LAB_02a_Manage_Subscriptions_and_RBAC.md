@@ -61,7 +61,7 @@ In this task, you will create and configure management groups.
     | Management group display name | **az104-02-mg1** |
 
 1. In the list of management groups, click the entry representing the newly created management group.
-  ![image](../media/lab2-3.png)
+   ![image](../media/lab2-3.png)
 1. On the **az104-02-mg1** blade, click **Subscriptions**. 
 
 1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
@@ -116,7 +116,9 @@ In this task, you will create a definition of a custom RBAC role.
 In this task, you will create an Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, on the Microsoft Entra ID overview blade, click **Users**, and then click **+ New user**.
-  ![image](../media/lab2-6.png)
+
+    ![image](../media/lab2-6.png)
+
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -136,7 +138,8 @@ In this task, you will create an Microsoft Entra ID user, assign the RBAC role y
 
 1. Search for **Support Request Contributor (Custom)**.Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-***********************.**********.onmicrosoft.com. Click **Next** and then **Review and assign**.
 
-![image](../media/lab2-8.png) 
+    ![image](../media/lab2-8.png) 
+
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
