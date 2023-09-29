@@ -41,7 +41,7 @@ In this task, you will create and configure Entra ID users.
 
      ![](../Labs/Images/editpro.png)
 
-    >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
+    >**Note**: This is necessary in order to assign a Microsoft Entra ID Premium P2 license to your user account later in this lab.
   
 1. Navigate back to the **Users - All users** blade, and then click **+ New user (1)** then select **+ Create new user (2)**.
 
@@ -142,7 +142,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. In the **Manage** section, click **All products**. Verify **Microsoft Entra ID P2** is already added to the list of licenses, if it is added then skip the next two steps and continue.
 
-1. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
+1. Click **+ Try/Buy** and activate the free trial of Microsoft Entra ID Premium P2.
 
       ![](../Labs/Images/trybuy.png)    
 
