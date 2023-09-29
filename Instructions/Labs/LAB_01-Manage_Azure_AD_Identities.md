@@ -27,7 +27,7 @@ In this task, you will create and configure Entra ID users.
 
 1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
-   ![](../Labs/Images/usersetting.png)
+   ![](../Labs/media/az-104n1.png)
 
 1. On the Azure Active Directory blade, in the **Manage** section, click **Users**.
 
