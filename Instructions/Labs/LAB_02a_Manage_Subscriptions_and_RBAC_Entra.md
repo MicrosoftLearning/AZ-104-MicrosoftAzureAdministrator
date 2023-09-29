@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab 02a: Manage Subscriptions and RBAC (rebranding test)'
+    title: 'Lab 02a: Manage Subscriptions and RBAC'
     module: 'Administer Governance and Compliance'
 ---
 
