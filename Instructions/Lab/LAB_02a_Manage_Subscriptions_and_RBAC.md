@@ -46,7 +46,9 @@ In this task, you will create and configure management groups.
     1.  On the blade displaying properties of your Microsoft Entra ID tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
     1.  On the **Properties** blade of your your Microsoft Entra ID tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
- ![image](../media/lab2-2.png)
+
+        ![image](../media/lab2-(2).png)
+    
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
 1. On the **Management groups** blade, click **+ Create**.
