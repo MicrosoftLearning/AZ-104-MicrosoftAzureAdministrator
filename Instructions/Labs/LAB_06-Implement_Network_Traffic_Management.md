@@ -148,13 +148,12 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Allow access to remote virtual network | **Ensure the box is checked (default)** |
-    | Allow traffic to remote virtual network | **Ensure the box is checked** |
+    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | The value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task. |
-    | Allow access to current virtual network | **Ensure the box is checked (default)** |
+    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
     
 
     >**Note**: Wait for the operation to complete.
@@ -168,13 +167,12 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Allow access to remote virtual network | **Ensure the box is checked (default)** |
-    | Allow traffic to remote virtual network | **Ensure the box is checked** |	
+    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
-    | Allow access to current virtual network | **Ensure the box is checked (default)** |
+    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
 
     >**Note**: Wait for the operation to complete.
     
