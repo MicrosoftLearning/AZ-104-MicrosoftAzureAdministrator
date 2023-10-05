@@ -148,13 +148,14 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
+    | Allow 'az104-06-vnet01' to access the peered virtual network | **Ensure the box is checked (default)** |
+    | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network | **Ensure the box is checked** 
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | The value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task. |
-    | Settings to allow access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
-    
+    | Allow az104-06-vnet2 to access az104-06-vnet01 | **Ensure the box is checked (default)** |
+    | Allow az104-06-vnet2 to receive forwarded traffic from az104-06-vnet01 | **Ensure the box is checked** |
 
     >**Note**: Wait for the operation to complete.
 
