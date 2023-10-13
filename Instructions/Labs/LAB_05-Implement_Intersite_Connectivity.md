@@ -95,13 +95,15 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Allow access to remote virtual network | **Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1** |
-    | Allow access to current virtual network |  **Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
+
+     ![Image](./Images/peering.png)
    
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
@@ -130,13 +132,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
-    | Allow access to remote virtual network |**Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2** |
-    | Allow access to current virtual network |**Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
 
@@ -166,13 +168,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | Allow access to remote virtual network | **Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
     | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2** |
-    | Allow access to current virtual network | **Ensure the box is checked (default)** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
