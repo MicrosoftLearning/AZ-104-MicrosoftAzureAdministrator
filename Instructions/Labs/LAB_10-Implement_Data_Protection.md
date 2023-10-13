@@ -94,7 +94,7 @@ In this task, you will create a recovery services vault.
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
 
-1. On the **Backup Configuration** blade, note that you can set the **Storage replication type** to either **Locally-redundant** or **Geo-redundant**. Leave the default setting of **Geo-redundant** in place and close the blade.
+1. On the **Backup Configuration** blade, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the blade.
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
