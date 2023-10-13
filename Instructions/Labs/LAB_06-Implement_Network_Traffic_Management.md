@@ -142,22 +142,19 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Allow traffic to remote virtual network | **Allow** |
-    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
-    | Use remote virtual network gateway or route server | **Block** |
+    | Allow 'az104-06-vnet01' to access the peered virtual network | **Ensure the box is checked (default)** |
+    | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network | **Ensure the box is checked** |
     | Remote virtual network: Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet2** you recorded earlier in this task |
-    | Allow traffic to current virtual network | **Allow** |
-    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
-    | Use current virtual network gateway or route server| **Block** |
+    | Allow az104-06-vnet2 to access az104-06-vnet01 | **Ensure the box is checked (default)** |
+    | Allow az104-06-vnet2 to receive forwarded traffic from az104-06-vnet01 | **Ensure the box is checked** |
 
     >**Note**: Wait for the operation to complete.
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet2 and the other from az104-06-vnet2 to az104-06-vnet01.
 
-    >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
 1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
@@ -166,21 +163,16 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Allow traffic to remote virtual network | **Allow** |
-    | Allow traffic forwarded from the remote virtual network (allow gateway transit) | **Block** |
-    | Use remote virtual network gateway or route server | **Block** |
+    | Allow 'az104-06-vnet01' to access the peered virtual network | **Ensure the box is checked (default)** |
+    | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network | **Ensure the box is checked** |
     | Remote virtual network: Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | enabled |
     | Resource ID | the value of resourceID parameter of **az104-06-vnet3** you recorded earlier in this task |
-    | Allow traffic to current virtual network | **Allow** |
-    | Allow traffic forwarded from current virtual network (allow gateway transit) | **Allow** |
-    | Use current virtual network gateway or route server | **Block** |
+    | Allow az104-06-vnet3 to access az104-06-vnet01 | **Ensure the box is checked (default)** |
+    | Allow az104-06-vnet3 to receive forwarded traffic from az104-06-vnet01 | **Ensure the box is checked** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
-
-    >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
