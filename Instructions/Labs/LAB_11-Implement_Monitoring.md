@@ -214,8 +214,8 @@ In this task, you will configure Azure virtual machine diagnostic settings.
     | Settings | Value |
     | --- | --- |
     | Threshold | **Static** |
-    | Operator | **Greater than** |
     | Aggregation type | **Average** |
+    | Operator | **Greater than** |
     | Threshold value | **2** |
     | Check every | **1 minute** |
     | Lookback period | **1 minute** |
