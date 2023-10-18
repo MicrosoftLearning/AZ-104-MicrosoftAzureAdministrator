@@ -213,13 +213,15 @@ In this task, you will install Windows Server Web Server role on the two Azure v
 
 1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
-1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **az104-08-vm0**:
+1. On the **Run Command Script** blade, type the following and click **Run** to access the web site hosted on **az104-08-vm1**:
 
    ```powershell
    Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
    ```
 
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
+
+    >**Note**: The **-URI** parameter is the **Private IP address** of the VM. Navigate to the **az104-08-vm1** blade, in the **Networking** section, and click **Network settings**
 
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the web site hosted on **az104-08-vm1**.
 
