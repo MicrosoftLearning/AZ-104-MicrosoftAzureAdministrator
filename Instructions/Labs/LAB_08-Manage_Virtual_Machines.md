@@ -617,7 +617,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
     >**Note**: The script installs a custom script extension that configures the attached disk.
 
-1. From the Cloud Shell pane, run the following to excecute the script and configure disks of Azure virtual machine scale set:
+1. From the Cloud Shell pane, run the following to execute the script and configure disks of Azure virtual machine scale set:
 
    ```powershell
    ./az104-08-configure_VMSS_disks.ps1
