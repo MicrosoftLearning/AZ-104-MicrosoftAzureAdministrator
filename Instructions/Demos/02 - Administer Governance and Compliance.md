@@ -103,7 +103,7 @@ In this demonstration, we will learn about role assignments.
 
 1.  Create a user or select an existing user.
 
-1.  Select **Add role assignment** and select a role. For exmaple, *owner*.
+1.  Select **Add role assignment** and select a role. For example, *owner*.
 
 1.  Select **Check access**.
 

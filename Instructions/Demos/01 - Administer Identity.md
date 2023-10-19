@@ -8,7 +8,7 @@ demo:
 
 ## Configure Entra ID Identities
 
-This area does not have a formal demonstration. Consider walking throught the interactive lab simulation for student Lab 01. 
+This area does not have a formal demonstration. Consider walking throughout the interactive lab simulation for student Lab 01. 
 
 [Interactive Lab Simulation Lab 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
 
