@@ -80,7 +80,7 @@ In this demonstration we create, configure, and deploy a container by using Azur
 
 1. Wait for the resource to deploy.
 
-1. On the **Overview** page for the resoure, ensure the **Status** is **Running**.
+1. On the **Overview** page for the resource, ensure the **Status** is **Running**.
 
 1. Navigate to the **FQDN** for the container instance and ensure the welcome page displays. 
 
