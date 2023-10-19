@@ -107,7 +107,7 @@ In this task, you will configure web app deployment settings.
 
     >**Note:** Copy these credentials to Notepad. You will need them later.
     
-    >**Note:** These credentials will be passed through the URI. Do not include any special charaters that affect the interpretation of the URI. For example, @, $, or #. An asterick or plus sign (in the middle of the string) would work.
+    >**Note:** These credentials will be passed through the URI. Do not include any special characters that affect the interpretation of the URI. For example, @, $, or #. An asterick or plus sign (in the middle of the string) would work.
     
 ## Task 4: Deploy code to the staging deployment slot
 
