@@ -1,36 +1,36 @@
-# **Getting Started with Your AZ-104: Microsoft Azure Administrator Workshop**
+# Getting Started with Your AZ-104: Microsoft Azure Administrator Workshop
  
 Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
  
-## **Accessing Your Lab Environment**
+## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
 ![Access Your VM and Lab Guide](../media/labguide.png)
 
-### **Virtual Machine & Lab Guide**
+### Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
-## **Exploring Your Lab Resources**
+## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
 ![Explore Lab Resources](../media/env.png)
  
-## **Utilizing the Split Window Feature**
+## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
 ![Use the Split Window Feature](../media/split.png)
  
-## **Managing Your Virtual Machine**
+## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../media/resourses.png)
   
-## **Let's Get Started with Azure Portal**
+## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
