@@ -183,13 +183,13 @@ In this task, you will create groups with assigned and dynamic membership.
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-## Task 3: Create a tenant (Optional - Lab environment issue)
+## Task 3: Create a tenant (Optional - Possible captcha issues, paid subscription required)
 
 In this task, you will create a new tenant.
     
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:<br>
+    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:
     - Try the creation a few times.<br>
     - Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
     - Open a new **InPrivate** window and using the Azure Portal and try to create the tenant from there.<br>
