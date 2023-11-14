@@ -237,7 +237,10 @@ In this task, you will create  guest users and grant them access to resources in
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Return to the first tenant that you created earlier. Do this by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Return to the first tenant that you created earlier.
+2. Select **Overview** in the navigation pane.
+3. Click **Manage tenants**.
+4. Check the box next to the first tenant you created earlier, then select **Switch**.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
 
