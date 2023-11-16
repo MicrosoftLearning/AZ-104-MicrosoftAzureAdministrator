@@ -171,7 +171,7 @@ In this task, you will configure and test autoscaling of Azure web app.
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
-1. From the **Scaling section** select the **Rule Based** option, then click on the **Manage rules based scaling** link.
+1. From the **Scaling section** select the **Rules Based** option, then click on the **Manage rules based scaling** link.
 
 1. Click **Custom autoscale**.
 
@@ -228,8 +228,6 @@ In this task, you will configure and test autoscaling of Azure web app.
    ```
 
 1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
-
-1. Select **Autoscale Settings**, select the **Run history** tab. Under **Show data for last**, select **1 hour** and check the **Observed resource instance count**.
 
 1. Monitor the utilization and the number of instances for a few minutes. 
 
