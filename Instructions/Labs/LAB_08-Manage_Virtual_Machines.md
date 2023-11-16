@@ -292,7 +292,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line **51** (`"dataDisks": [ ],`) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line **54** (`"dataDisks": [ ],`) with the following code :
 
    ```json
                     "dataDisks": [
