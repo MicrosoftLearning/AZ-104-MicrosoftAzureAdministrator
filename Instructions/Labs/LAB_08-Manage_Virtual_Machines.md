@@ -54,11 +54,11 @@ In this task, you will deploy Azure virtual machines into different availability
     | Region | select one of the regions that support availability zones and where you can provision Azure virtual machines |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1/Gen2** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Azure Spot instance | **No** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
-    | Password | **Provide a secure password** |
+    | Password | **Provide a secure password, minimum 12 characters** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
 
@@ -89,7 +89,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
     | Accelerated networking | **Off**
-    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+    | Load balancing options | **None** |
 
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -237,7 +237,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values):
+1. Create a managed disk with the following settings (leave others with their default values) and click **Apply**:
 
     | Setting | Value |
     | --- | --- |
@@ -247,7 +247,7 @@ In this task you will scale compute for Azure virtual machines by changing their
 
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values) and Save changes:
+1. Create a managed disk with the following settings (leave others with their default values) and click **Apply**:
 
     | Setting | Value |
     | --- | --- |
@@ -255,7 +255,6 @@ In this task you will scale compute for Azure virtual machines by changing their
     | Storage type | **Premium SSD** |
     | Size (GiB)| **1024 GiB** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
 
 1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
@@ -534,13 +533,13 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource (az10480vmss0)** |
-    | Time aggregation | **Average** |
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Network In Total** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
     | Duration (in minutes) | **1** |
     | Time grain statistic | **Average** |
+    | Time aggregation | **Average** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
@@ -593,7 +592,9 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Storage type | **Standard HDD** |
     | Size (GiB) | **32** |
 
-1. Save the change, in the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. Apply the change
+
+1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
