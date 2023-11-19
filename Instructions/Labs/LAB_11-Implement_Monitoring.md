@@ -173,7 +173,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
 
-1. On the **az104-11-vm0 - Logs** blade, ensure **Azure Monitor agent (Recommended)** is selected, and then click **Configure**.  
+1. On the **az104-11-vm0 - Logs** blade, note **Azure Monitor agent** will be installed, and then click **Configure**.  
 
     >**Note**: Do not wait for the operation to be completed, but instead proceed to the next step. The operation might take about 5 minutes.
 
