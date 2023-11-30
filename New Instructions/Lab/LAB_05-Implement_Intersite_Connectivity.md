@@ -164,7 +164,7 @@ In this task, you will test whether the VMs can communicate with each other. Thi
 
 
 1. The test connection should fail, and you will see a result similar to the following:
-   ![PowerShell window with Test-NetConnection 10.0.0.4 -port 3389 showing failed ](./media/az104-lab05-fail.png)
+   ![PowerShell window with Test-NetConnection failed ](../media/az104-lab05-fail.png)
 
  
 
@@ -219,7 +219,7 @@ In this task, you will check whether the VMs can communicate with each other. Yo
 
 
 1. The test connection should succeed, and you will see a result similar to the following:
-   ![Powershell window with Test-NetConnection 10.20.20.4 -port 3389 showing TCP test succeeded: true](../media/az104-lab05-success.png)
+   ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
  
 
