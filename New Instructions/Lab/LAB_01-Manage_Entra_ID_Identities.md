@@ -27,7 +27,7 @@ In this lab, you will:
 ## Estimated timing: 30 minutes
 
 ## Architecture diagram
-![image](./media/az104-lab1-user-and-groups2.png)
+![image](../media/az104-lab1-user-and-groups2.png)
 
 ### Instructions
 
@@ -66,7 +66,7 @@ In this task, you will create and configure user accounts. User accounts will st
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 
-    ![image](./media/az104-lab1-create-user.png)
+    ![image](../media/az104-lab1-create-user.png)
 
 1. In the list of users, click the newly created user account to display its blade.
 
@@ -126,7 +126,7 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
 1. From the **Add members** blade, search for **IT Cloud Administrators**, click the checkbox to the left of it. Next, search for **IT System Administrators** groups, click the checkbox to the left of it and then click **Select**. Back on the **New Group** blade, click **Create**.
 
-    ![image](./media/az104-lab1-add-member-to-group.png)
+    ![image](../media/az104-lab1-add-member-to-group.png)
 
 ## Task 3: Create a new resource group
 
@@ -148,7 +148,7 @@ In this task, you will create a new resource group. A resource group is a groupi
 
 1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
 
-![image](./media/az104-lab1-create-resource-group.png)
+![image](../media/az104-lab1-create-resource-group.png)
 
 ## Task 4: Assign the Virtual Machine Contributor role.
 
@@ -166,7 +166,7 @@ In this task, you will assign an Azure role to an existing group. This will prov
     | Assign access to (Under Members pane) | **User, group, or service principal** |
     | Select (+Select Members) | **IT Lab Administrators** |
 
-![image](./media/az104-lab1-assign-role.png)
+![image](../media/az104-lab1-assign-role.png)
 
 4. Click **Review + assign** twice to create the role assignment.
 
