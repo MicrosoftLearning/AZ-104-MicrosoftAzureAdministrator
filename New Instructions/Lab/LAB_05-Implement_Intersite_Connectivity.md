@@ -26,7 +26,7 @@ In this unit, you will:
 
 ## Architecture diagram
 
-![image](./media/az104-lab5-architecture-diagram.png)
+![image](../media/az104-lab5-architecture-diagram.png)
 
 ## Task 1: Create a core services VM and network
 
@@ -63,7 +63,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Subnet Name | `Compute` |
     | Subnet address range | `10.0.0.0/24` |
 
-    ![image](./media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
+    ![image](../media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
 
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
@@ -77,7 +77,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
 
 1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
 
-    ![image](./media/az104-lab05-createmfgvm.png)
+    ![image](../media/az104-lab05-createmfgvm.png)
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -107,7 +107,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Subnet Name | `Compute` |
     | Subnet address range | `172.16.0.0/24` |
 
-    ![image](./media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
+    ![image](../media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
 
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
@@ -198,7 +198,7 @@ In this task, you will create peerings to enable communications between VNets.
 
 1. Review your settings and select **Add**.
 
-    ![image](./media/az104-lab05-peering.png)
+    ![image](../media/az104-lab05-peering.png)
  
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
 
@@ -219,7 +219,7 @@ In this task, you will check whether the VMs can communicate with each other. Yo
 
 
 1. The test connection should succeed, and you will see a result similar to the following:
-   ![Powershell window with Test-NetConnection 10.20.20.4 -port 3389 showing TCP test succeeded: true](./media/az104-lab05-success.png)
+   ![Powershell window with Test-NetConnection 10.20.20.4 -port 3389 showing TCP test succeeded: true](../media/az104-lab05-success.png)
 
  
 
