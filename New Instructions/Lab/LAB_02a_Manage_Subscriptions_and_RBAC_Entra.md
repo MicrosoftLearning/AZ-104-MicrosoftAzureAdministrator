@@ -38,7 +38,7 @@ In this lab, you will:
 ## Architecture diagram
 
 <!-- Update diagram - simplify names, get rid of custom role JSON--> 
-![image](./media/az104-lab2a-architecture.png)
+![image](../media/az104-lab2a-architecture.png)
 
 
 # Instructions
@@ -74,7 +74,7 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-    ![image](./media/az104-lab2a-create-mgmt-group.png)
+    ![image](../media/az104-lab2a-create-mgmt-group.png)
 
 1. In the list of management groups, click the entry representing the newly created management group.
 
@@ -82,7 +82,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. On the **az104-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
 
-    ![image](./media/az104-lab2a-mgmt-add-subscription.png)
+    ![image](../media/az104-lab2a-mgmt-add-subscription.png)
 
 ## Task 2: Create custom RBAC roles
 
@@ -96,13 +96,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. From Access Control (IAM), in Create a custom role, select **Add**.
 
-    ![image](./media/az104-lab2a-add-custom-role.png)
+    ![image](../media/az104-lab2a-add-custom-role.png)
 
 1. On the Basics tab of Create a custom role, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.`
 
 1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
 
-    ![image](./media/az104-lab2a-clone-role.png)
+    ![image](../media/az104-lab2a-clone-role.png)
 
 1. Select the **Permissions** tab, and then select **+ Exclude permissions**.
 
@@ -110,7 +110,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    ![image](./media/az104-lab2a-add-not-action.png)
+    ![image](../media/az104-lab2a-add-not-action.png)
 
 1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
 
@@ -145,7 +145,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
 
-    ![image](./media/az104-lab2a-assign-role.png)
+    ![image](../media/az104-lab2a-assign-role.png)
 
 1. On the **Role** tab, search for `Custom Support Request`. 
 
@@ -153,7 +153,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-<your_tenant_name>.onmicrosoft.com. 
 
-    ![image](./media/az104-lab2a-add-members.png)
+    ![image](../media/az104-lab2a-add-members.png)
 
 1. Select **Review + assign** twice.
 
