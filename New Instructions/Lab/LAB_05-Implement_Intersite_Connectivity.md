@@ -41,7 +41,7 @@ In this task, you will create a core services virtual network with a virtual mac
     | Setting | Value | 
     | --- | --- |
     |   Subscription |  The subscription that you have access to |
-    | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
+    | Resource group |  `az104-rg5` (If necessary, select **Create new**. Use this group for all your lab resources.)
     | Virtual machine name |    `CoreServicesVM` |
     | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
