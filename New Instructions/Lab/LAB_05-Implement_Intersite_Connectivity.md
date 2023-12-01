@@ -45,7 +45,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Virtual machine name |    `CoreServicesVM` |
     | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
-    | Image | **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** |
+    | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** |
     | Authentication type | **Password** |
     | Username | `localadmin` | 
@@ -62,7 +62,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | --- | --- |
     | Name | `CoreServicesVNet` |
     | Address space | `10.0.0.0/16` (If necessary, remove or replace the existing address range) |
-    | Subnet Name | `Compute` | (If necessary, remove or replace the existing subnet name)
+    | Subnet Name | `Core` | (If necessary, remove or replace the existing subnet name)
     | Subnet address range | `10.0.0.0/24` |
 
     ![image](../media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
@@ -70,6 +70,8 @@ In this task, you will create a manufacturing virtual network and virtual machin
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
 1. Select **Review + Create**, and then select **Create**.
+
+1. You do not need to wait for the virtual machine to be created. Continue on to the next task.    
 
 ## Task 2: Create the manufacturing services VM and network
 
@@ -90,7 +92,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Virtual machine name |    `ManufacturingVM` |
     | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
-    | Image | **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** |
+    | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
@@ -107,7 +109,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | --- | --- |
     | Name | `ManufacturingVNet` |
     | Address space | `172.16.0.0/16` (Remove or replace the existing address range) |
-    | Subnet Name | `Compute` |
+    | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
 
     ![image](../media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
@@ -119,64 +121,30 @@ In this task, you will create a manufacturing virtual network and virtual machin
 ## Task 3: Connect to a VM using RDP
 In this task, you will connect to the VMs that you have deployed by using Remote Desktop Connection. This will confirm that they VMs have deployed successfully and you can document the IP addresses that have been assigned to the NICs.
 
-### Connect to the **ManufacturingVM** and verify the private IP address. 
+### Verify the private IP address fo the ManufacturingVM
 
 1. From the Azure portal, search for and select **Virtual Machines**.
 
-1. Select the **ManufacturingVM** virtual machine.
+1. Select the **CoreServicesVM** virtual machine.
 
-1. On the **Overview** blade, select **Connect**.
-
-1. In the Native RDP card, select **Select**.
-
-1. Save the RDP file to your desktop by selecting **Download RDP File**. Open the file. 
-
-1. **Connect** to ManufacturingVM using the RDP file. Use the username `localadmin` and the password you provided during deployment.
-
-1. Select **Yes** to acknowledge the warning that the remote computer cannot be identified.
-
-1. Once the VM loads, select **Yes** to allow the VM to be discovered on the network.
-
-1. From the **Tools** menu, select **PowerShell**. Use the **ipconfig** command to document the **IPv4 address** of the machine.
-
-### Connect to the **CoreServicesVM** and verify the private IP address. 
+1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You will need this information to test the connection.
+   
+### Connect to the **CoreServicesVM**.
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
-1. Select **CoreServicesVM**. On the overview tab, document the private IP address of the VM. It *should* be **10.0.0.4**.
+1. Select the **ManufacturingVM** virtual machine.
 
-1. On CoreServicesVM, select **Connect**.
+1. On the **Operations** section, select the **Run command** blade.
 
-1. On CoreServicesVM | Connect, in the Native RDP card, select **Select**.
+1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-1. Select **Download RDP file** to download the RDP file to your computer. 
-
-1. Save the RDP file to your desktop.
-
-1. Connect to the VM using the RDP file. Use the username `localadmin` and the password you provided during deployment.
-
-1. Select **Yes** to acknowledge the warning that the remote computer cannot be identified.
-
-1. Once the VM loads, select **Yes** to allow the VM to be discovered on the network.
-
-1. From the **Tools** menu, select **PowerShell**. Use the **ipconfig** command to document the **IPv4 address** of the machine.
-
-
-## Task 4: Test the connection between the VMs
-In this task, you will test whether the VMs can communicate with each other. This is a common troubleshooting step when setting up new networks, new VMs, or adjusting network security settings.
-
-1. On the ManufacturingVM, open a PowerShell prompt.
-
-1. Use the following command to verify that there is no connection to CoreServicesVM on the CoreServicesVnet. Be sure to use the IPv4 address for the CoreServicesVM.
-
-   ```powershell
-    Test-NetConnection 10.0.0.4 -port 3389
-    ```
+     ```Test-NetConnection 10.0.0.4 -port 3389 ```
+   
 1. The test connection should fail, and you will see a result similar to the following:
    ![PowerShell window with Test-NetConnection failed ](../media/az104-lab05-fail.png)
 
  
-
 ## Task 5: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 In this task, you will create peerings to enable communications between VNets.
 
