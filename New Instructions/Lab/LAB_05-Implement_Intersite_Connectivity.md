@@ -44,10 +44,12 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
     | Virtual machine name |    `CoreServicesVM` |
     | Region | **East US** |
-    | Availability options | No infrastructure redundancy required | 
-    | Size | **Standard_DS2_v3** | 
+    | Availability options | No infrastructure redundancy required |
+    | Image | **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** |
+    | Size | **Standard_DS2_v3** |
+    | Authentication type | **Password** |
     | Username | `localadmin` | 
-    | Password | `Provide a complex password` |
+    | Password | **Provide a complex password** |
 
     ![image](./media/az104-lab05-createcorevm.png)
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
@@ -59,8 +61,8 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Setting | Value | 
     | --- | --- |
     | Name | `CoreServicesVNet` |
-    | Address space | `10.0.0.0/16` (Remove or replace the existing address range) |
-    | Subnet Name | `Compute` |
+    | Address space | `10.0.0.0/16` (If necessary, remove or replace the existing address range) |
+    | Subnet Name | `Compute` | (If necessary, remove or replace the existing subnet name)
     | Subnet address range | `10.0.0.0/24` |
 
     ![image](../media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
@@ -87,10 +89,11 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
     | Virtual machine name |    `ManufacturingVM` |
     | Region | **East US** |
-    | Availability options | No infrastructure redundancy required | 
+    | Availability options | No infrastructure redundancy required |
+    | Image | **Windows Server 2022 Datacenter: Azure Edition - x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
     | Username | `localadmin` | 
-    | Password | `Provide a complex password` |
+    | Password | **Provide a complex password** |
 
     ![image](./media/az104-lab05-createmfgvm2.png)
 
@@ -116,17 +119,27 @@ In this task, you will create a manufacturing virtual network and virtual machin
 ## Task 3: Connect to a VM using RDP
 In this task, you will connect to the VMs that you have deployed by using Remote Desktop Connection. This will confirm that they VMs have deployed successfully and you can document the IP addresses that have been assigned to the NICs.
 
-1. On the Azure Portal home page, select **Virtual Machines**.
+### Connect to the **ManufacturingVM** and verify the private IP address. 
 
-1. Select **ManufacturingVM**.
+1. From the Azure portal, search for and select **Virtual Machines**.
 
-1. On ManufacturingVM, select **Connect**.
+1. Select the **ManufacturingVM** virtual machine.
 
-1. On ManufacturingVM | Connect, in the Native RDP card, select **Select**.
+1. On the **Overview** blade, select **Connect**.
 
-1. Save the RDP file to your desktop by selecting **Download RDP File**.
+1. In the Native RDP card, select **Select**.
 
-1. Connect to ManufacturingVM using the RDP file. Use the username `localadmin` and the password you provided during deployment.
+1. Save the RDP file to your desktop by selecting **Download RDP File**. Open the file. 
+
+1. **Connect** to ManufacturingVM using the RDP file. Use the username `localadmin` and the password you provided during deployment.
+
+1. Select **Yes** to acknowledge the warning that the remote computer cannot be identified.
+
+1. Once the VM loads, select **Yes** to allow the VM to be discovered on the network.
+
+1. From the **Tools** menu, select **PowerShell**. Use the **ipconfig** command to document the **IPv4 address** of the machine.
+
+### Connect to the **CoreServicesVM** and verify the private IP address. 
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -142,13 +155,11 @@ In this task, you will connect to the VMs that you have deployed by using Remote
 
 1. Connect to the VM using the RDP file. Use the username `localadmin` and the password you provided during deployment.
 
-1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
+1. Select **Yes** to acknowledge the warning that the remote computer cannot be identified.
 
-1. On both VMs, in **Networks**, select **Yes**.
+1. Once the VM loads, select **Yes** to allow the VM to be discovered on the network.
 
-1. On CoreServicesVM, open a PowerShell prompt, and run the following command: ipconfig
-
-1. Note the IPv4 address, it should match what was documented earlier in this task.
+1. From the **Tools** menu, select **PowerShell**. Use the **ipconfig** command to document the **IPv4 address** of the machine.
 
 
 ## Task 4: Test the connection between the VMs
@@ -161,8 +172,6 @@ In this task, you will test whether the VMs can communicate with each other. Thi
    ```powershell
     Test-NetConnection 10.0.0.4 -port 3389
     ```
-
-
 1. The test connection should fail, and you will see a result similar to the following:
    ![PowerShell window with Test-NetConnection failed ](../media/az104-lab05-fail.png)
 
