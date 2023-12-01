@@ -26,11 +26,11 @@ In this unit, you will:
 
 ## Architecture diagram
 
-![image](../media/az104-lab5-architecture-diagram.png)
+![Lab 05 architecture diagrm](../media/az104-lab5-architecture-diagram.png)
 
 ## Task 1: Create a core services VM and network
 
-In this task, you will create a manufacturing virtual network and virtual machine. You will use this VM in a later task to try to communicate with a different VM in a different network. By default, two virtual networks in Azure *cannot* communicate. You will configure peering to enable communication between networks.
+In this task, you will create a core services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
@@ -47,22 +47,21 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** |
-    | Authentication type | **Password** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
-    ![image](../media/az104-lab05-createcorevm.png)
+    ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **Ok**.
+1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing address range.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `CoreServicesVNet` |
-    | Address space | `10.0.0.0/16` (If necessary, remove or replace the existing address range) |
-    | Subnet Name | `Core` | (If necessary, remove or replace the existing subnet name)
+    | Name | `CoreServicesVNet` (Create new) |
+    | Address space | `10.0.0.0/16`  |
+    | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
 
     ![image](../media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
@@ -75,13 +74,13 @@ In this task, you will create a manufacturing virtual network and virtual machin
 
 ## Task 2: Create the manufacturing services VM and network
 
-In this task, you will create a manufacturing virtual network and virtual machine. You will use this VM in a later task to try to communicate with the core services VM in a different network.
+In this task, you will create a manufacturing services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
 1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
 
-    ![image](../media/az104-lab05-createmfgvm.png)
+    ![Screenshot of create virtual machine page. ](../media/az104-lab05-createmfgvm.png)
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -97,31 +96,31 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
-    ![image](./media/az104-lab05-createmfgvm2.png)
+    ![Screenshot of Basic page for virtual machine creation.](./media/az104-lab05-createmfgvm2.png)
 
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **Ok**.
+1. Use the following information to configure the virtual network, and then select **Ok**.  If necessary, remove or replace the existing address range.
 
     | Setting | Value | 
     | --- | --- |
     | Name | `ManufacturingVNet` |
-    | Address space | `172.16.0.0/16` (Remove or replace the existing address range) |
+    | Address space | `172.16.0.0/16`  |
     | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
 
-    ![image](../media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
+    ![Screenshot of virtual network page.](../media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
 
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
 1. Select **Review + Create**, and then select **Create**.
 
 ## Task 3: Test the connection between the virtual machines. 
-In this task, you will confirm that they VMs have deployed successfully and you can document the IP addresses that have been assigned to the NICs.
+In this task, you will test the connection between the virtual machines in different virtual networks.
 
-### Verify the private IP address fo the ManufacturingVM
+### Verify the private IP address fo the CoreServicesVM
 
 1. From the Azure portal, search for and select **Virtual Machines**.
 
@@ -135,17 +134,19 @@ In this task, you will confirm that they VMs have deployed successfully and you 
 
 1. Select the **ManufacturingVM** virtual machine.
 
-1. On the **Operations** section, select the **Run command** blade.
+1. In the **Operations** section, select the **Run command** blade.
 
 1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
 
      ```Test-NetConnection 10.0.0.4 -port 3389 ```
+
+1. It may take a couple of minutes for the script to run. The top of the page will show an information icon *Script execution in progress.*
    
-1. The test connection should fail, and you will see a result similar to the following:
-   ![PowerShell window with Test-NetConnection failed ](../media/az104-lab05-fail.png)
+1. The test connection should fail.
+   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
  
-## Task 5: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
+## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 In this task, you will create peerings to enable communications between VNets.
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
@@ -175,22 +176,25 @@ In this task, you will create peerings to enable communications between VNets.
 
 1. Review your settings and select **Add**.
 
-    ![image](../media/az104-lab05-peering.png)
+    ![Screenshot of peering page.](../media/az104-lab05-peering.png)
  
-1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
+1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
-1. Under Virtual networks, select **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed.
+1. Switch to the **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
 
  
+## Task 5: Test the connection between the VMs
+In this task, you will veify the virtual machines in different virtual networks can communicate with each other.
 
-## Task 6: Test the connection between the VMs
-In this task, you will check whether the VMs can communicate with each other. You can use a variety of tools and methods for this testing. In this task, you'll use PowerShell which provides an easy and quick way to perform the test.
+1. Search for and select the **ManufacturingVM**.
 
-1. On the ManufacturingVM, open a PowerShell prompt.
+1. In the **Operations** section, select the **Run command** blade.
 
-1. Use the following command to verify that there is now a connection to CoreServicesVM on CoreServicesVnet. Ensure that you use the IP address of the VM as documented earlier in the lab.
+1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-    ```Test-NetConnection 10.0.0.4 -port 3389```
+     ```Test-NetConnection 10.0.0.4 -port 3389```
+
+1. It may take a couple of minutes for the script to run. The top of the page will show an information icon *Script execution in progress.*
     
 1. The test connection should succeed, and you will see a result similar to the following:
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
