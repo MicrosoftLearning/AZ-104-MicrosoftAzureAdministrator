@@ -118,8 +118,8 @@ In this task, you will create a manufacturing virtual network and virtual machin
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Connect to a VM using RDP
-In this task, you will connect to the VMs that you have deployed by using Remote Desktop Connection. This will confirm that they VMs have deployed successfully and you can document the IP addresses that have been assigned to the NICs.
+## Task 3: Test the connection between the virtual machines. 
+In this task, you will confirm that they VMs have deployed successfully and you can document the IP addresses that have been assigned to the NICs.
 
 ### Verify the private IP address fo the ManufacturingVM
 
