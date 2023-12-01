@@ -51,7 +51,7 @@ In this task, you will create a manufacturing virtual network and virtual machin
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
-    ![image](./media/az104-lab05-createcorevm.png)
+    ![image](../media/az104-lab05-createcorevm.png)
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
