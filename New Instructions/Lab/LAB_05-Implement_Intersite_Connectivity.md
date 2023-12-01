@@ -190,11 +190,8 @@ In this task, you will check whether the VMs can communicate with each other. Yo
 
 1. Use the following command to verify that there is now a connection to CoreServicesVM on CoreServicesVnet. Ensure that you use the IP address of the VM as documented earlier in the lab.
 
-   ```powershell
-    Test-NetConnection 10.0.0.4 -port 3389
-    ```
-
-
+    ```Test-NetConnection 10.0.0.4 -port 3389```
+    
 1. The test connection should succeed, and you will see a result similar to the following:
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
