@@ -102,7 +102,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    ![Screenshot not actions. ](../media/az104-lab2a-add-not-action.png)
+    ![Screenshot of the not actions. ](../media/az104-lab2a-add-not-action.png)
 
 1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
 
@@ -118,20 +118,21 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 In this task, you will create a user, assign the RBAC role you created in the previous task, and verify that the user can perform the task specified in the RBAC role definition.
 
-** Note: This task requires a user, **AZ104-user1**.**
+### Identity the Help Desk account you will use for testing the new role
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-1. If your subscription has the **AZ104-user1** user skip to the next step. If your subscription does not have this user, create a new user with the following settings (leave others with their defaults):
+    >**Note**: This section requires a testing user account, **HelpDesk-user1**. You will need the full **User name** for testing, so take a minute to copy that information to the clip board. 
+
+1. If you have the **HelpDesk-user1** user account, skip to the next step. If your subscription doesn't have the **HelpDesk-user1** user account, create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
-    | User name | `az104-user1` |
-    | Name | `az104-user1` |
-    | Let me create the password | enabled |
-    | Initial password | `Provide a secure password` |
+    | User name | `HelpDesk-user1` |
+    | Name | `HelpDesk-user1` |
+    | Let me create the password | disabled |
 
-    >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
+    >**Note**: Copy to the clipboard the full **User name**. You will need it later in this lab. 
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group and display its details.
 
@@ -149,13 +150,13 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Select **Review + assign** twice.
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. If prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of clipboard.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the az104-user1 user can see all resource groups.
+1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the Help Desk user can see all resource groups.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the az104-user1 user cannot see any resources.
+1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the Help Desk user cannot see any resources.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ Create a support request**. 
 
@@ -167,7 +168,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
     >**Note**: If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
 
-1. Do not continue with creating the support request. Instead, sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
+1. Do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
 ## Review
 
