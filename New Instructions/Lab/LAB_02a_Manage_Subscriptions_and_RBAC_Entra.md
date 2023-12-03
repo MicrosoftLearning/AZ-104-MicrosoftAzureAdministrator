@@ -82,6 +82,8 @@ In this task, you will create and configure management groups. Management groups
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
 
+### Create the custom RBAC role for the help desk
+
 1. From the Azure portal, search for and select **Subscriptions**. 
 
 1. Select your subscription, and then select **Access Control (IAM)**.
@@ -118,11 +120,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 In this task, you will create a user, assign the RBAC role you created in the previous task, and verify that the user can perform the task specified in the RBAC role definition.
 
-### Identity the Help Desk account you will use for testing the new role
+### Identity the Help Desk user account you will use for testing the new role
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This section requires a testing user account, **HelpDesk-user1**. You will need the full **User name** for testing, so take a minute to copy that information to the clip board. 
+    >**Note**: This section requires a user account, **HelpDesk-user1**, for testing. 
 
 1. If you have the **HelpDesk-user1** user account, skip to the next step. If your subscription doesn't have the **HelpDesk-user1** user account, create a new user with the following settings (leave others with their defaults):
 
@@ -132,7 +134,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
     | Name | `HelpDesk-user1` |
     | Let me create the password | disabled |
 
-    >**Note**: Copy to the clipboard the full **User name**. You will need it later in this lab. 
+1. Before continuing ensure you have the full **User name** for your test account. You will need this information to log in to the portal. So, take a minute and copy the information to the clipboard. 
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group and display its details.
 
@@ -144,11 +146,13 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-<your_tenant_name>.onmicrosoft.com. 
+1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **HelpDesk-user1**.  
 
     ![Screenshot add members](../media/az104-lab2a-add-members.png)
 
 1. Select **Review + assign** twice.
+
+### Test the Help Desk account to ensure it has the correct privledges
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. If prompted to update the password, change the password for the user.
 
