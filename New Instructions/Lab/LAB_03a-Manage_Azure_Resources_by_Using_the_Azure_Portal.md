@@ -25,7 +25,7 @@ In this lab, we will:
 
 ## Architecture diagram
 
-![image](./media/az104-lab03a-architecture-diagram.png)
+![Diagram lab 03a architecture](../media/az104-lab03a-architecture-diagram.png)
 
 ### Instructions
 
@@ -52,7 +52,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. Change the disk type and size to **Standard HDD** and **32 GiB**, respectively.
 
-    ![image](./media/az104-lab03a-createdisk1.png)
+    ![Screenshot of the create a disk page.](../media/az104-lab03a-createdisk1.png)
 
 1. Click **Review + Create** and then click **Create**.
 
@@ -70,7 +70,7 @@ In this task, we will move the disk resource you created in the previous task to
 
     >**Note**: This method allows you to move multiple resources at the same time. If you do not see the Move menu option, you might need to first select the elipses. 
 
-    ![image](./media/az104-lab03a-moverg.png)
+    ![Screenshot to move the resource.](../media/az104-lab03a-moverg.png)
 
 1. Below the **Resource group** text box, click **Create new** then type `az104-rg2` in the text box. On the Review tab, select the checkbox **I understand that tools and scripts associated with moved resources will not work until I update them to use new resource IDs**, and click **Move**.
 
@@ -93,7 +93,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. Set the disk type and size to **Standard HDD** and **32 GiB**, respectively.
 
-    ![image](./media/az104-lab03a-createdisk2.png)
+    ![Screenshot of setting the disk type and size.](,./media/az104-lab03a-createdisk2.png)
 
 1. Click **Review + Create** and then click **Create**.
 
@@ -110,7 +110,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
     
 1. Click **OK**    
 
-    ![image](./media/az104-lab03a-deletelock.png)
+    ![Screenshot of resource locks screen.](../media/az104-lab03a-deletelock.png)
 
 1. On the **az104-rg3** resource group blade, click **Overview**, in the list of resource group resources, select the entry representing the disk you created earlier in this task, and click **Delete** in the toolbar. 
 
@@ -120,7 +120,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: As the error message states, this is expected due to the delete lock applied on the resource group level.
 
-    ![image](./media/az104-lab03a-deleteerror.png)
+    ![Screenshot of error message.](../media/az104-lab03a-deleteerror.png)
 
 1. Navigate back to the list of resources of the **az104-rg3** resource group and click the entry representing the **az104-disk2** resource. 
 
@@ -128,7 +128,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
 
-     ![image](./media/az104-lab03a-premium.png)
+     ![Screenshot of successful message](./media/az104-lab03a-premium.png)
 
 ## Review
 
