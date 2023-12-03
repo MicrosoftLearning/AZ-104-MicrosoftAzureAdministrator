@@ -74,9 +74,8 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-    ![image](../media/az104-lab2a-create-mgmt-group.png)
+    ![Screenshot of creating a management group.](../media/az104-lab2a-create-mgmt-group.png)
 
-1. In the list of management groups, click the entry representing the newly created management group.
 
 ## Task 2: Create custom RBAC roles
 
@@ -87,6 +86,8 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 1. From the Azure portal, search for and select **Subscriptions**. 
 
 1. Select your subscription, and then select **Access Control (IAM)**.
+
+1. Take a minute to review the options on this page, such as view and grant access. 
 
 1. From Access Control (IAM), in Create a custom role, select **Add**.
 
