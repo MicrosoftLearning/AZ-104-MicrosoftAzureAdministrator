@@ -22,7 +22,7 @@ The **ManufacturingVnet** virtual network is deployed in the **West Europe** reg
 
 The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
-![Network layout](./media/az104-lab04-diagram.png)
+![Network layout](../media/az104-lab04-diagram.png)
 
 You will create the following resources:
  
@@ -81,11 +81,11 @@ In this exercise, you will:
 The organization plans a large amount of growth for core services. In this task, you will create the virtual network and the associated subnets to accomodate the existing resources and planned growth.
 1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  
 
-    ![Azure portal home page Global Search bar results for virtual network.](./media/az104-lab04-vnet-search.png)
+    ![Azure portal home page Global Search bar results for virtual network.](../media/az104-lab04-vnet-search.png)
 
 2. Select **Create** on the Virtual networks page.  
 
-    ![Create a virtual network wizard.](./media/az104-lab04-createvnet.png)
+    ![Create a virtual network wizard.](../media/az104-lab04-createvnet.png)
 
 3. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
@@ -98,7 +98,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 >**Note:** Remove or overwrite the default IP Address space.
     
-![IP address configuration for azure virtual network deployment](./media/az104-lab04-address-space.png)
+![IP address configuration for azure virtual network deployment](../media/az104-lab04-address-space.png)
 
  4. Use the information in the following table to create the CoreServicesVnet subnets. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
