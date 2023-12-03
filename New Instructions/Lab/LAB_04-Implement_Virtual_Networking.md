@@ -57,33 +57,37 @@ In this exercise, you will:
 
 ## Task 1: Create a resource group
 
-1. Go to [Azure portal](https://portal.azure.com/).
+### Create a resource group for all the resources in this lab. 
 
-2. On the home page, under **Azure services**, select **Resource groups**.  
+1. Go to the [Azure portal](https://portal.azure.com/).
 
-3. In the Resource groups, select **+ Create**.
+1. Search for and select **Resource groups**, then select **+ Create**.  
 
-4. Use the information in the following table to create the resource group.
+1. Create the resource group with these settings. 
 
 | **Tab**         | **Option**                                 | **Value**            |
 | --------------- | ------------------------------------------ | -------------------- |
-| Basics          | Resource group                             | `az104-rg1` |
+| Basics          | Resource group                             | `az104-rg4` |
 |                 | Region                                     | (US) **East US**         |
 | Tags            | No changes required                        |                      |
 | Review + create | Review your settings and select **Create** |                      |
 
 
-5. In Resource groups, verify that **az104-rg1** appears in the list.
+1. Refresh the **Resource groups** page, and verify that **az104-rg4** appears in the list.
 
  
 
 ## Task 2: Create the CoreServicesVnet virtual network and subnets
+
 The organization plans a large amount of growth for core services. In this task, you will create the virtual network and the associated subnets to accomodate the existing resources and planned growth.
-1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.  
+
+### Create the CoreServicesVnet virtual network
+
+1. Search for and select **Virtual Networks**.
 
     ![Azure portal home page Global Search bar results for virtual network.](../media/az104-lab04-vnet-search.png)
 
-2. Select **Create** on the Virtual networks page.  
+1. Select **Create** on the Virtual networks page.  
 
     ![Create a virtual network wizard.](../media/az104-lab04-createvnet.png)
 
@@ -96,11 +100,11 @@ The organization plans a large amount of growth for core services. In this task,
 |              | Region             | (US) **East US**         |
 | IP Addresses | IPv4 address space | `10.20.0.0/16`         |
 
->**Note:** Remove or overwrite the default IP Address space.
+    >**Note:** Remove or overwrite the default IP Address space.
     
 ![IP address configuration for azure virtual network deployment](../media/az104-lab04-address-space.png)
 
- 4. Use the information in the following table to create the CoreServicesVnet subnets. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
+ 4. Create the CoreServicesVnet subnets. To begin creating each subnet, select **+ Add subnet**. To finish creating each subnet, select **Add**.
 
 | **Subnet**             | **Option**           | **Value**              |
 | ---------------------- | -------------------- | ---------------------- |
@@ -113,14 +117,15 @@ The organization plans a large amount of growth for core services. In this task,
 | PublicWebServiceSubnet | Subnet name          | `PublicWebServiceSubnet` |
 |                        | Subnet address range | `10.20.30.0/24`          |
 
- 6. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+ 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
- 7. Verify your configuration passed validation, and then select **Create**.
+ 1. Verify your configuration passed validation, and then select **Create**.
  
- 8. Repeat steps 1 -8 for each VNet based on the tables below in Task 3 and Task 4.
-
 ## Task 3: Create the ManufacturingVnet virtual network and subnets
+
 In this task, you will continue to create an additional virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
+
+    >**Note**: If you need help, use the detailed steps in Task 2. 
 
 | **Tab**      | **Option**         | **Value**             |
 | ------------ | ------------------ | --------------------- |
@@ -144,7 +149,10 @@ In this task, you will continue to create an additional virtual network and asso
  
 
 ## Task 4: Create the ResearchVnet virtual network and subnets
+
 In this task, you will create the final virtual network and associated subnet. The organization does not plan for growth and has limited needs for the research and development offices.
+
+    >**Note**: If you need help, use the detailed steps in Task 2. 
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
