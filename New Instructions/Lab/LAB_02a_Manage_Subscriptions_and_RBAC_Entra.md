@@ -9,13 +9,13 @@ lab:
 
 ## Lab requirements
 
-This lab requires permissions to create users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to users. Not all lab hosters provide this capability. Ask your instructor for the availability of this lab.
+This lab requires permissions to create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to users. 
 
 ## Lab scenario
 
 In order to simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
 
-- Creating a management group that includes all your Azure subscriptions
+- Creating a management group that includes all your Azure subscriptions.
 
 - Granting permissions to submit support requests for all subscriptions in the management group to a designated user. That user's permissions should be limited only to: 
 
@@ -47,7 +47,9 @@ In this lab, you will:
 
 ## Task 1: Implement Management Groups
 
-In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented as part of the [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing access to all subscriptions).
+**Note: Cannot add subscription to the management group.**
+
+In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented as part of the [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
 
 1. Sign in to the [**Azure portal**](http://portal.azure.com).
 
@@ -65,9 +67,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. On the **Management groups** blade, click **+ Create**.
 
-    >**Note**: If you have not previously created management groups, select **Start using management groups**
-
-1. Create a management group with the following settings:
+1. Create a management group with the following settings. Select **Submit** when you are done. 
 
     | Setting | Value |
     | --- | --- |
@@ -78,31 +78,23 @@ In this task, you will create and configure management groups. Management groups
 
 1. In the list of management groups, click the entry representing the newly created management group.
 
-1. On the **az104-mg1** blade, click **Subscriptions**. 
-
-1. On the **az104-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
-
-    ![image](../media/az104-lab2a-mgmt-add-subscription.png)
-
 ## Task 2: Create custom RBAC roles
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in *Contributor* roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
 
 1. From the Azure portal, search for and select **Subscriptions**. 
 
-1. Select the subscription assigned to your lab environment.
-
-1. From the subscription, select **Access Control (IAM)**.
+1. Select your subscription, and then select **Access Control (IAM)**.
 
 1. From Access Control (IAM), in Create a custom role, select **Add**.
 
-    ![image](../media/az104-lab2a-add-custom-role.png)
+    ![Screenshot add a custom role. ](../media/az104-lab2a-add-custom-role.png)
 
 1. On the Basics tab of Create a custom role, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.`
 
 1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
 
-    ![image](../media/az104-lab2a-clone-role.png)
+    ![Screenshot clone a role.](../media/az104-lab2a-clone-role.png)
 
 1. Select the **Permissions** tab, and then select **+ Exclude permissions**.
 
@@ -110,27 +102,27 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    ![image](../media/az104-lab2a-add-not-action.png)
+    ![Screenshot not actions. ](../media/az104-lab2a-add-not-action.png)
 
 1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
 
 1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group that was created in the prevous task, then select **Select**.
 
-    ![image](./media/az104-lab2a-add-scope.png)
+    ![Screenshot assign scope.](./media/az104-lab2a-add-scope.png)
 
 1. Select the **JSON** tab. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
 1. Selct **Review + Create**, and then select **Create**.
 
-
-
 ## Task 3: Assign RBAC roles
 
 In this task, you will create a user, assign the RBAC role you created in the previous task, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**, click **Users**, and then click **+ New user**.
+** Note: This task requires a user, **AZ104-user1**.**
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
+
+1. If your subscription has the **AZ104-user1** user skip to the next step. If your subscription does not have this user, create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
@@ -145,7 +137,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
 
-    ![image](../media/az104-lab2a-assign-role.png)
+    ![Screenshot assign roles.](../media/az104-lab2a-assign-role.png)
 
 1. On the **Role** tab, search for `Custom Support Request`. 
 
@@ -153,7 +145,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account az104-<your_tenant_name>.onmicrosoft.com. 
 
-    ![image](../media/az104-lab2a-add-members.png)
+    ![Screenshot add members](../media/az104-lab2a-add-members.png)
 
 1. Select **Review + assign** twice.
 
