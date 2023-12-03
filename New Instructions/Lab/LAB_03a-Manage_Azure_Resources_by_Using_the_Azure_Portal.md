@@ -132,9 +132,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
 1. From the **Overview** blade, confirm you were able to change the disk size. 
 
-    >**Note**: This is expected. The resource group-level lock applies to delete operations only. 
-
-     ![Screenshot of successful message](./media/az104-lab03a-premium.png)
+    >**Note**: This is expected. The resource group-level lock applies to delete operations only. You are able to edit the resource settings. 
 
 ## Review
 
