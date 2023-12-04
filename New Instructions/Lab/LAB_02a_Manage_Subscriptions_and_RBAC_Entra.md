@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires permissions to create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to users. 
+This lab requires an Azure subscription. You must have permissions to create a custom Azure Role Based Access Control (RBAC) role, and assign the role to users. 
 
 ## Estimated timing: 30 minutes
 
@@ -42,7 +42,7 @@ In order to simplify management of Azure resources in your organization, you hav
 
 In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented as part of the [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
