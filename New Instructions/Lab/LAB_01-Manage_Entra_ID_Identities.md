@@ -106,7 +106,7 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     >**Note**: Your **Membership type** drop-down list might be grayed out. This is where you can switch from an assigned group to a dynamic group if you have an Entra ID Premium P1 or P2 license.
 
-    ![Screenshot of create assigned group.](./media/az104-lab1-create-assigned-group.png)
+    ![Screenshot of create assigned group.](../media/az104-lab1-create-assigned-group.png)
 
 1. Select **No members selected**.
 
@@ -114,7 +114,31 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![Screenshot of the add member to group page.](../media/az104-lab1-add-member-to-group.png)
 
-#### Review
+## Task 4: Create groups with PowerShell and the CLI
+
+In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell.
+
+### Access and configure the Cloud Shell 
+
+1. Select the **Cloud Shell** icon in the top right of the Azure Portal.
+
+    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../images/1002.png)
+
+3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+
+4. On the **You have no storage mounted** screen select **Show advanced settings** then fill in the information below
+
+    | Settings | Values |
+    |  -- | -- |
+    | Resource Group | **Create new resource group** |
+    | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
+    | File share (create new) | **shellstorage** |
+
+5. Select **Create Storage**
+
+
+
+## Review
 
 Congratulations! You created and configured user accounts, created a group, created a resource group, assigned a role to a user, and deleted a user account.
 
