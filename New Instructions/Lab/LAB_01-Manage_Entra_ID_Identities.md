@@ -143,20 +143,30 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
 
-1. Get a list of resource groups. 
+1. Azure PowerShell uses a *Verb*-*Noun* format for cmdlets. For example, the cmdlet to create a new resource group is **New-AzResourceGroup**. To view how to use the cmdlet, run the Get-Help command.
 
    ```powershell
-   Get-AzResourceGroup
+   Get-Help New-AzResourceGroup
    ```
-1. Get a list of group accounts.
+
+
+1. To create a resource group from the PowerShell session within Cloud Shell, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables that you can use in later commands.
 
    ```powershell
-   Get-Az
+   $location = 'eastus'
+
+   $rgName = 'az104-rg-ps'
+
+   New-AzResourceGroup -Name $rgName -Location $location
+   ```
+   ![Screenshot of create resource group. ](../media/az104-lab03c-createrg.png)
+
+1. To retrieve properties of the newly created resource group, run the following command:
+
+   ```powershell
+   Get-AzResourceGroup -Name $rgName
    ```
 
-1. Create a new resource group.
-
-1. Create a new group account. 
 
 ## Practice with Bash
 
