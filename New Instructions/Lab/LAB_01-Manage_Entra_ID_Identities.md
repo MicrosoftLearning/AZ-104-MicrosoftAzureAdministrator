@@ -18,7 +18,7 @@ Your organization is building out a new lab environment for pre-production testi
 
 In this lab, you will:
 
-+ Task 1: Familiarize yourself with the Azure portal (optional)
++ Task 1: Familiarize yourself with the Azure portal 
 + Task 2: Create and configure users
 + Task 3: Create groups
 + Task 4: Create a resource group
@@ -31,22 +31,29 @@ In this lab, you will:
 
 ### Instructions
 
-## Task 1: Familiarize yourself with the Azure portal
+## Task 1: Familiarize yourself with the Azure portal 
 
-    >**Note:** During this course you will use the Azure portal. If you are not familiar with the portal, please take a few minutes to orient yourself. 
+In this task, you familiarize yourself with the Azure portal. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+    >**Note:** The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
 
-1. Begin your tour of the Azure portal, by selecting the top left menu icon.
+1. Sign in to the [Azure portal](https://portal.azure.com). 
 
-   + Select **Home** to view recent and favorite resources.
-   + Select **Dashboard**. [Dashboards](https://learn.microsoft.com/zure/azure-portal/azure-portal-dashboards) are a focused and organized view of your cloud resources in the Azure portal. Use dashboards as a workspace where you can monitor resources and quickly launch tasks for day-to-day operations.
+1. Begin your tour of the Azure portal, by selecting the top left menu icon. 
+
+   + Select **Home** to view recent services and resources. You can also create favorites. 
+   + Select **Dashboard** for a customized view. [Dashboards](https://learn.microsoft.com/zure/azure-portal/azure-portal-dashboards) are a focused and organized view of your cloud resources in the Azure portal. Use dashboards as a workspace where you can monitor resources and quickly launch tasks for day-to-day operations.
+   + Select **All services** to view a categorized list of Azure services.
+
+1. You may find it quicker to **Search resources, services, and docs** using the search box in the top center of the portal. The search box provides autocomplete and suggestions for services or resources. For example, try `virt` and notice the suggested matches.
+
+1. On the right side of the top menu bar, select the **Settings** icon. Settings lets you customize the portal appearance, language and region.
+
+1. Lastly, in the top right corner is your user account information. 
 
 ## Task 2: Create and configure  users
 
 In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
-
-
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
