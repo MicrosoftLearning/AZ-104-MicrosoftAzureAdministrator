@@ -21,8 +21,7 @@ In this lab, you will:
 + Task 1: Create and configure users
 + Task 2: Create groups
 + Task 3: Create a resource group
-+ Task 4: Assign an Azure built-in role
-+ Task 5: Delete a user
+
 
 ## Estimated timing: 30 minutes
 
@@ -150,41 +149,6 @@ In this task, you will create a new resource group. A resource group is a groupi
 
 ![image](../media/az104-lab1-create-resource-group.png)
 
-## Task 4: Assign the Virtual Machine Contributor role.
-
-In this task, you will assign an Azure role to an existing group. This will provide the ability to manage virtual machines to all members of the IT Lab Administrators group.
-
-1. On the **Resource groups** blade, click the **az104-rg1** resource group entry.
-
-1. On the **az104-rg1** blade, click **Access control (IAM)** in the middle pane.
-
-1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
-
-    | Setting | Value |
-    | --- | --- |
-    | Role in the search tab | **Virtual Machine Contributor** |
-    | Assign access to (Under Members pane) | **User, group, or service principal** |
-    | Select (+Select Members) | **IT Lab Administrators** |
-
-![image](../media/az104-lab1-assign-role.png)
-
-4. Click **Review + assign** twice to create the role assignment.
-
-2. From the **Access control (IAM)** blade, select **Role assignments**.
-3. On the **az104-rg1 | Access control (IAM)** blade, on the **Check access** tab, in the **Searcy by name or email address** text box, type `az104-user2`.
-4. In the list of search results, select the user account of user2 and, on the **az104-user2 assignments - az104-rg1** blade, view the newly created assignment.
-
-## Task 5: Delete a user.
-
-In this task, you will delete an existing user account. You will commonly delete user accounts when users leave the company. And, you will delete user accounts that are being used as service accounts when they are no longer being used. Deleting user accounts is an important part of the user account lifecycle and reduces the risks of having dormant user accounts in the environment.
-
-1. In your **All users** pane for Microsoft Entra organization, from the list, select **az104-user2**.
-
-1. In the top menu bar, select **Delete**. If you don't see that option, select **More**.
-
-1. Select **Delete** again to confirm deletion.
-
->**Note**: Some organizations opt to disable user accounts, reset the passwords, and remove them from all groups. After 90 days, the accounts get deleted permanently. This can be helpful when there is a need to retrieve data from the user's mailbox or computer.
 
 #### Review
 
