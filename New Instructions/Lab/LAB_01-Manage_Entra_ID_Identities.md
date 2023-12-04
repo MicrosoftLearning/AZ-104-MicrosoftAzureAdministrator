@@ -33,9 +33,7 @@ In this lab, you will:
 
 ## Task 1: Familiarize yourself with the Azure portal 
 
-In this task, you familiarize yourself with the Azure portal. 
-
-    >**Note:** The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
+In this task, you familiarize yourself with the Azure portal. The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com). 
 
