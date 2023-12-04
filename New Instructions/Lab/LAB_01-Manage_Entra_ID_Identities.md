@@ -18,9 +18,10 @@ Your organization is building out a new lab environment for pre-production testi
 
 In this lab, you will:
 
-+ Task 1: Create and configure users
-+ Task 2: Create groups
-+ Task 3: Create a resource group
++ Task 1: Familiarize yourself with the Azure portal (optional)
++ Task 2: Create and configure users
++ Task 3: Create groups
++ Task 4: Create a resource group
 
 
 ## Estimated timing: 30 minutes
@@ -30,13 +31,22 @@ In this lab, you will:
 
 ### Instructions
 
-## Exercise 1
+## Task 1: Familiarize yourself with the Azure portal
 
-## Task 1: Create and configure  users
+    >**Note:** During this course you will use the Azure portal. If you are not familiar with the portal, please take a few minutes to orient yourself. 
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Begin your tour of the Azure portal, by selecting the top left menu icon.
+
+   + Select **Home** to view recent and favorite resources.
+   + Select **Dashboard**. [Dashboards](https://learn.microsoft.com/zure/azure-portal/azure-portal-dashboards) are a focused and organized view of your cloud resources in the Azure portal. Use dashboards as a workspace where you can monitor resources and quickly launch tasks for day-to-day operations.
+
+## Task 2: Create and configure  users
 
 In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
@@ -101,7 +111,7 @@ In this task, you will create and configure user accounts. User accounts will st
     
 1. Sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
 
-## Task 2: Create groups with assigned and dynamic membership
+## Task 3: Create groups with assigned and dynamic membership
 
 In this task, you will create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
@@ -127,7 +137,7 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![image](../media/az104-lab1-add-member-to-group.png)
 
-## Task 3: Create a new resource group
+## Task 4: Create a new resource group
 
 In this task, you will create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). Resource groups provide a way to limit access to a subset of your organization's resources. In this case, we want the virtual machine administrators to only have access to virtual machines in the lab and not all of the organization's virtual machines.
     
