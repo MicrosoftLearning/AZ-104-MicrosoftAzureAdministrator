@@ -146,7 +146,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 1. Azure PowerShell uses a *Verb*-*Noun* format for cmdlets. For example, the cmdlet to create a new resource group is **New-AzResourceGroup**. To view how to use the cmdlet, run the Get-Help command.
 
    ```powershell
-   Get-Help New-AzResourceGroup
+   Get-Help New-AzResourceGroup -detailed
    ```
 
 
@@ -154,9 +154,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
    ```powershell
    $location = 'eastus'
-
    $rgName = 'az104-rg-ps'
-
    New-AzResourceGroup -Name $rgName -Location $location
    ```
    ![Screenshot of create resource group. ](../media/az104-lab03c-createrg.png)
@@ -167,6 +165,19 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
    Get-AzResourceGroup -Name $rgName
    ```
 
+1. Let's try to create new Azure AD group.
+
+   ```powershell
+   Get-Help New-AzureADGroup -detailed
+   ```
+
+1. Using the example in the help, here are the commands. Notice you must first connect to Azure AD.
+
+    ``powershell
+   Connect-AzureAD
+   New-AzureADGroup -DisplayName "My new group" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
+   ``
+1.  Return to Azure portal. Confirm you have a new resource group and a new Azure AD group. 
 
 ## Practice with Bash
 
