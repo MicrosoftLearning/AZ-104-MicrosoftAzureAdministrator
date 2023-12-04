@@ -6,21 +6,19 @@ lab:
 
 # Lab 01 - Manage Microsoft Entra ID Identities
 
+## Lab requirements
+
+This lab requires an Azure subscription. You must have access to the Azure portal and the ability to create group accounts. 
+
+## Estimated timing: 40 minutes
+
 ## Lab scenario
 
 Your organization is building out a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. In order to allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. You also need to know how to delete users to prevent access after an engineer leaves your organization.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Lab requirements
-
-This lab requires access to the Azure portal and the ability to create group accounts. 
-
-## Estimated timing: 40 minutes
-
 ## Tasks
-
-In this lab, you will:
 
 + Task 1: Familiarize yourself with the Azure portal.
 + Task 2: Create a resource group.
@@ -37,7 +35,7 @@ In this lab, you will:
 
 In this task, you familiarize yourself with the Azure portal. The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. Begin your tour of the Azure portal, by selecting the top left menu icon. 
 
