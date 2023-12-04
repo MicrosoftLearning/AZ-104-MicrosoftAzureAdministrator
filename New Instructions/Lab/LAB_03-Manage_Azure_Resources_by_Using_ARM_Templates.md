@@ -10,7 +10,7 @@ lab:
 
 This lab requires an Azure subscription. 
 
-# Estimated timing: 30 minutes
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
@@ -25,7 +25,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 ## Architecture diagram
 
-![image](./media/az104-lab03b-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab03b-architecture-diagram.png)
 
 ## Task 1: Create an ARM template for deployment of an Azure managed disk.
 
@@ -50,7 +50,7 @@ In this task, you use the Azure portal to generate an ARM template. You can then
     | Size | **32 Gb** | 
     | Performance | **Standard HDD** |
 
-    ![image](./media/az104-lab03b-createdisk.png)
+    ![Screenshot of create disk.](../media/az104-lab03b-createdisk.png)
 
 1. Click **Review + Create** *once*. Do **not** actually deploy the resource.
 
@@ -116,7 +116,7 @@ In this task, you use the template that you created to deploy a new managed disk
     | Network Access Policy | **AllowAll** |
     | Public Network Access | Disabled |
 
-    ![image](./media/az104-lab03b-customdeploy.png)
+    ![Screenshot of cusomtized template.](../media/az104-lab03b-customdeploy.png)
 
 1. Select **Review + Create** and then select **Create**.
 
