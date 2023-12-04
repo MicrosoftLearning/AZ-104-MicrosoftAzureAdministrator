@@ -114,11 +114,11 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![Screenshot of the add member to group page.](../media/az104-lab1-add-member-to-group.png)
 
-## Task 4: Create groups with PowerShell and the CLI
+## Task 4: Access and configure the Cloud Shell
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell.
 
-### Access and configure the Cloud Shell 
+    >**Note:** Use will use the Cloud Shell in future lab exercises. 
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal.
 
