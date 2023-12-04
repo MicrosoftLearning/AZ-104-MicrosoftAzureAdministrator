@@ -29,8 +29,9 @@ In order to simplify management of Azure resources in your organization, you hav
 In this lab, you will:
 
 + Task 1: Implement management groups
-+ Task 2: Create custom RBAC roles 
-+ Task 3: Assign RBAC roles
++ Task 2: Review and assign a built-in Azure role
++ Task 3: Create and assign acustom RBAC roles 
++ Task 4: Monitor role assignments with the Activity Log
 
 
 ## Estimated timing: 30 minutes
@@ -38,7 +39,7 @@ In this lab, you will:
 ## Architecture diagram
 
 <!-- Update diagram - simplify names, get rid of custom role JSON--> 
-![image](../media/az104-lab2a-architecture.png)
+![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
 
 
 # Instructions
@@ -46,8 +47,6 @@ In this lab, you will:
 ## Exercise 1
 
 ## Task 1: Implement Management Groups
-
-**Note: Cannot add subscription to the management group.**
 
 In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented as part of the [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
 
@@ -76,8 +75,28 @@ In this task, you will create and configure management groups. Management groups
 
     ![Screenshot of creating a management group.](../media/az104-lab2a-create-mgmt-group.png)
 
+## Task 2: Review and assign a built-in Azure role
 
-## Task 2: Create custom RBAC roles
+1. In the portal, search for and the **az104-mg1** management group.
+
+1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
+
+1. Scroll through the large number of roles definitions that are available. Use the Informational icons to get an idea of each role's permissions. Notice there is also information on the number of users and groups that are assigned to each role.
+
+1. Select the **Access control (IAM)** blade, and then the **Role assignments** tab.
+
+1. Select **+ Add** and then **Add role assignment**. Search for and select the **Virtual Machine Contributor** role.
+
+1. Switch to the **Members** tab and Assign access to: **User, group, or service principal**. Click **+ Select members** and loocate your user account. Your user account is shown in the top right corner of the portal.
+
+1. After assigning yourself the **VM Contributor** role, select **Review and Assign**. 
+
+    >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
+
+    >**Note:** This assignment does not actually grant you any additional provileges, since your account has already the Owner role, which includes all privileges associated with the Contributor role.
+
+
+## Task 3: Create custom RBAC roles
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
 
@@ -153,7 +172,7 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Select **Review + assign** twice.
 
-### Test the Help Desk account to ensure it has the correct privledges
+### Test the Help Desk account to ensure it has the correct privileges
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. If prompted to update the password, change the password for the user.
 
