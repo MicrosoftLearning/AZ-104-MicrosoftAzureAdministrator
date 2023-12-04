@@ -1,24 +1,19 @@
 ---
 lab:
-    title: 'Lab 03b: Manage Azure resources by Using ARM Templates'
+    title: 'Lab 03: Manage Azure resources by Using ARM Templates'
     module: 'Administer Azure Resources'
 ---
 
-# Lab 03b - Manage Azure resources by Using ARM Templates
-# Student lab manual
+# Lab 03 - Manage Azure resources by Using ARM Templates
 
 ## Lab scenario
 Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Lab requirements
 
-In this lab, you will:
-
-+ Task 1: Create an ARM template for deployment of an Azure managed disk
-+ Task 2: Edit an ARM template and then create an Azure managed disk by using the template
-+ Task 3: Review the ARM template-based deployment of the managed disk
+This lab requires 
 
 ## Estimated timing: 30 minutes
 
@@ -26,14 +21,16 @@ In this lab, you will:
 
 ![image](./media/az104-lab03b-architecture-diagram.png)
 
-### Instructions
+## Tasks
 
-## Exercise 1
++ Task 1: Create an ARM template for deployment of an Azure managed disk.
++ Task 2: Edit an ARM template and then create an Azure managed disk by using the template.
++ Task 3: Review the ARM template-based deployment of the managed disk.
 
-## Task 1: Create an ARM template for deployment of an Azure managed disk
+## Task 1: Create an ARM template for deployment of an Azure managed disk.
 In this task, you will use the Azure portal to generate an ARM template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. In this task, we use the Azure portal. You can also decompile the template into Azure Bicep.
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. In the Azure portal, search for and select `Disks`.
 
