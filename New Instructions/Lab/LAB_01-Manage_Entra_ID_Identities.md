@@ -121,11 +121,13 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. In this task, we will use PowerShell. 
 
-1. Select the **Cloud Shell** icon in the top right of the Azure Portal.
+1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
     ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/AZ104-lab01-cloudshellicon.png)
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash will be used in the next task.
+
+    >**Did you know?**  If you mostly work with Linux systems, Azure CLI will feel more natural. If you mostly work with Windows systems, Azure PowerShell will feel more natural. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**. 
 
@@ -137,9 +139,11 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** If you are working in a hosted lab environment, you will need to configure cloud shell storage each time a new lab environement is created.
 
-    >**Note:** When working in the Cloud Shell you are automatically connected to Azure. 
+    >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
-## Practice with PowerShell
+## Task 5: Practice with PowerShell
+
+In this task, you will create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
 
 1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
 
@@ -148,8 +152,6 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
    ```powershell
    Get-Help New-AzResourceGroup -detailed
    ```
-
-
 1. To create a resource group from the PowerShell session within Cloud Shell, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables that you can use in later commands.
 
    ```powershell
@@ -175,14 +177,53 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     ``powershell
    Connect-AzureAD
-   New-AzureADGroup -DisplayName "My new group" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-   ``
-1.  Return to Azure portal. Confirm you have a new resource group and a new Azure AD group. 
+   New-AzureADGroup -DisplayName "MyPSgroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "MyPSgroup"
+   ```
 
-## Practice with Bash
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. 
 
+## Task 6: Practice with Bash
 
+In this task, you will create a resource group and an Azure AD group by using Azure CLI session within Cloud Shell.
 
+1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**. 
+
+1. The Azure CLI uses an easy to read syntax for most resource types and working with those resources. For example, to interact with resource groups, the command is **az group**.  
+
+   ```sh
+   az group --help
+   ```
+
+1. The **create** option looks promising. Note  the capitalized names create variables that you can reference in subsequent commands. 
+
+   ```sh
+   RGNAME='az104-rg1-cli'
+   LOCATION='eastus'
+   az group create --name $RGNAME --location $LOCATION
+   ```
+   
+1. To verify and retrieve properties for the newly created resource group, run the following command:
+
+   ```sh
+   az group show --name $RGNAME
+   ```
+   ![image](./media/az104-lab03d-createrg.png)
+
+1. Let's use help to learn more about creating an Azure AD group.
+
+    ```sh
+    az ad group --help
+    ```
+
+1. Now **create** the group and **list** the groups to verify.
+
+   ```sh
+   az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
+   az ad group list
+   ```
+
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group.    
+    
 ## Review
 
 Congratulations! You created and configured user accounts, created a group, created a resource group, assigned a role to a user, and deleted a user account.
