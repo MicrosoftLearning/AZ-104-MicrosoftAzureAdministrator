@@ -152,7 +152,7 @@ In this task, you will continue to create an additional virtual network and asso
 
 In this task, you will create the final virtual network and associated subnet. The organization does not plan for growth and has limited needs for the research and development offices.
 
-    >**Note**: If you need help, use the detailed steps in Task 2. 
+>**Note**: If you need help, use the detailed steps in Task 2. 
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
@@ -168,8 +168,10 @@ In this task, you will create the final virtual network and associated subnet. T
  
 
 ## Task 5: Verify the creation of VNets and Subnets
+
 In this task, you will validate that you have all the necessary virtual networks and subnets to meet the organization's requirements.
-1. On the Azure portal home page, select **All resources**.
+
+1. On the Azure portal home page, search for and select **All resources**.
 
 2. Verify that the CoreServicesVnet, ManufacturingVnet, and ResearchVnet are listed.
 
@@ -179,7 +181,7 @@ In this task, you will validate that you have all the necessary virtual networks
 
 5. In CoreServicesVnet | Subnets, verify that the subnets you created are listed, and that the IP address ranges are correct.
 
-   ![List of subnets in CoreServicesVnet.](./media/az104-lab04-subnets.png)
+   ![List of subnets in CoreServicesVnet.](../media/az104-lab04-subnets.png)
 
 6. Repeat steps 3 - 5 for each VNet. Just remember to change the virtual network selection to ensure you verify all of them.
 
