@@ -32,7 +32,7 @@ In this task, you will use the Azure portal to generate an ARM template. You can
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. In the Azure portal, search for and select `Disks`.
+1. Search for and select `Disks`.
 
 1. On the Disks page, select **Create**.
 
