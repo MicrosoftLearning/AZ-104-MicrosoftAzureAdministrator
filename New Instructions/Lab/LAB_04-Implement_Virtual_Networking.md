@@ -14,13 +14,13 @@ This lab requires an Azure subscription. You must be able to create virtual netw
 
 ## Lab scenario 
 
-Your global organization plans to implement virtual networks. These networks will be in East US, West Europe, and Southeast Asia. The immediate goal is to accomodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
+Your global organization plans to implement virtual networks. These networks are in East US, West Europe, and Southeast Asia. The immediate goal is to accomodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
+The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network has the largest number of resources. The network has connectivity to on-premises networks through a VPN connection. This network has web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS are located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
-The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network will contain systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and will need an IP address space that it can expand into.
+The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and needs an IP address space that it can expand into.
 
 The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
@@ -34,9 +34,6 @@ The **ResearchVnet** virtual network is deployed in the **Southeast Asia** regio
 
 ## Architecture diagram
 ![Network layout](../media/az104-lab04-diagram.png)
-
-You will create the following resources:
- 
 
 | **Virtual Network** | **Region**   | **Virtual network address space** | **Subnet**                | **Subnet**    |
 | ------------------- | ------------ | --------------------------------- | ------------------------- | ------------- |
@@ -82,7 +79,7 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ## Task 2: Create the CoreServicesVnet virtual network and subnets
 
-The organization plans a large amount of growth for core services. In this task, you will create the virtual network and the associated subnets to accomodate the existing resources and planned growth.
+The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accomodate the existing resources and planned growth.
 
 1. Search for and select **Virtual Networks**.
 
@@ -151,7 +148,7 @@ In this task, you continue to create an additional virtual network and associate
 
 ## Task 4: Create the ResearchVnet virtual network and subnets
 
-In this task, you will create the final virtual network and associated subnet. The organization does not plan for growth and has limited needs for the research and development offices.
+In this task, you create the final virtual network and associated subnet. The organization does not plan for growth and has limited needs for the research and development offices.
 
 >**Note**: If you need help, use the detailed steps in Task 2. 
 
@@ -170,7 +167,7 @@ In this task, you will create the final virtual network and associated subnet. T
 
 ## Task 5: Verify the creation of VNets and Subnets
 
-In this task, you will validate that you have all the necessary virtual networks and subnets to meet the organization's requirements.
+In this task, you validate that you have all the necessary virtual networks and subnets to meet the organization's requirements.
 
 1. On the Azure portal home page, search for and select **All resources**.
 
@@ -185,5 +182,7 @@ In this task, you will validate that you have all the necessary virtual networks
    ![List of subnets in CoreServicesVnet.](../media/az104-lab04-subnets.png)
 
 6. Repeat steps 3 - 5 for each VNet. Just remember to change the virtual network selection to ensure you verify all of them.
+
+## Review
 
 Congratulations! You have successfully created a resource group, three virtual networks, and associated subnets.
