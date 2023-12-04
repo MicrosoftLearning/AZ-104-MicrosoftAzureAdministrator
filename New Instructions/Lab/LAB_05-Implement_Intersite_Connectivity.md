@@ -14,7 +14,7 @@ This lab requires an Azure subscription. You must have the ability to create vir
 
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you will configure connectivity between the segmented areas. This is a common scenario which is also popular for separating production from development or separting one subsidiary from another.
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario which is also popular for separating production from development or separting one subsidiary from another.
 
 ## Tasks
 
@@ -35,7 +35,7 @@ Your organization segments core IT apps and services (such as DNS and security s
 
 ## Task 1: Create a core services VM and network.
 
-In this task, you will create a core services virtual network with a virtual machine. 
+In this task, we create a core services virtual network with a virtual machine. 
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
@@ -47,10 +47,10 @@ In this task, you will create a core services virtual network with a virtual mac
  
     | Setting | Value | 
     | --- | --- |
-    |   Subscription |  The subscription that you have access to |
+    | Subscription |  <your subscription> |
     | Resource group |  `az104-rg5` (If necessary, select **Create new**. Use this group for all your lab resources.)
     | Virtual machine name |    `CoreServicesVM` |
-    | Region | **East US** |
+    | Region | <your region> |
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** |
@@ -58,6 +58,7 @@ In this task, you will create a core services virtual network with a virtual mac
     | Password | **Provide a complex password** |
 
     ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
+   
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
@@ -79,9 +80,9 @@ In this task, you will create a core services virtual network with a virtual mac
 
 1. You do not need to wait for the virtual machine to be created. Continue on to the next task.    
 
-## Task 2: Create the manufacturing services VM and network
+## Task 2: Create the manufacturing services VM and network.
 
-In this task, you will create a manufacturing services virtual network with a virtual machine. 
+In this task, we create a manufacturing services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
@@ -93,10 +94,10 @@ In this task, you will create a manufacturing services virtual network with a vi
  
     | Setting | Value | 
     | --- | --- |
-    |   Subscription |  The subscription that you have access to |
+    |   Subscription |  <your subscription> |
     | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
     | Virtual machine name |    `ManufacturingVM` |
-    | Region | **East US** |
+    | Region | <your region> |
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
@@ -125,13 +126,13 @@ In this task, you will create a manufacturing services virtual network with a vi
 1. Select **Review + Create**, and then select **Create**.
 
 ## Task 3: Test the connection between the virtual machines. 
-In this task, you will test the connection between the virtual machines in different virtual networks.
+In this task, you test the connection between the virtual machines in different virtual networks.
 
 ### Verify the private IP address fo the CoreServicesVM
 
 1. From the Azure portal, search for and select the `**CoreServicesVM**` virtual machine.
 
-1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You will need this information to test the connection.
+1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
    
 ### Connect to the **ManufacturingVM**.
 
@@ -143,7 +144,7 @@ In this task, you will test the connection between the virtual machines in diffe
 
      ```Test-NetConnection <CoreServicesVM private IP address> -port 3389```
 
-1. It may take a couple of minutes for the script to run. The top of the page will show an informational message *Script execution in progress.*
+1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
    
 1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. 
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
@@ -151,7 +152,7 @@ In this task, you will test the connection between the virtual machines in diffe
  
 ## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 
-In this task, we create peerings to enable communications between VNets.
+In this task, you create virtual network peerings to enable communications between VNets.
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
@@ -172,7 +173,7 @@ In this task, we create peerings to enable communications between VNets.
     |                                      | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
     |                                      | Virtual network deployment model              | **Resource manager**                      |
     |                                      | I know my resource ID                         | Not selected                          |
-    |                                      | Subscription                                  | Select your subscription      |
+    |                                      | Subscription                                  | <your subscription>    |
     |                                      | Virtual network                               | **ManufacturingVnet**                     |
     |                                      | Traffic to remote virtual network             | Allow (default)                       |
     |                                      | Traffic forwarded from remote virtual network | **Allow**                       |
@@ -187,8 +188,9 @@ In this task, we create peerings to enable communications between VNets.
 1. Switch to the **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
 
  
-## Task 5: Test the connection between the VMs
-In this task, you will veify the virtual machines in different virtual networks can communicate with each other.
+## Task 5: Test the connection between the VMs.
+
+In this task, you verify the virtual machines in different virtual networks can communicate with each other.
 
 1. Search for and select the **ManufacturingVM**.
 
@@ -198,9 +200,9 @@ In this task, you will veify the virtual machines in different virtual networks 
 
      ```Test-NetConnection 10.0.0.4 -port 3389```
 
-1. It may take a couple of minutes for the script to run. The top of the page will show an information icon *Script execution in progress.*
+1. It may take a couple of minutes for the script to run. The top of the page shows an informational icon *Script execution in progress.*
     
-1. The test connection should succeed, and you will see a result similar to the following:
+1. The test connection should succeed. 
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
 ## Review
