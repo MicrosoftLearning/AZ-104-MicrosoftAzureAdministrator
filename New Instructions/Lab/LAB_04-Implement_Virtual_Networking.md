@@ -6,15 +6,17 @@ lab:
 
 # Lab 04 - Implement Virtual Networking
 
-# Student lab manual
+## Lab requirements
 
-## Exercise scenario 
+This lab requires an Azure subscription. You must be able to create virtual networks and subnets. 
+
+## Estimated time: 20 minutes
+
+## Lab scenario 
 
 Your global organization plans to implement virtual networks. These networks will be in East US, West Europe, and Southeast Asia. The immediate goal is to accomodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
-#### Estimated time: 20 minutes
 
 The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network will have the largest number of resources. It will have connectivity to on-premises networks through a VPN connection. This network will have web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS also will be located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
@@ -22,6 +24,15 @@ The **ManufacturingVnet** virtual network is deployed in the **West Europe** reg
 
 The **ResearchVnet** virtual network is deployed in the **Southeast Asia** region, near the location of the organization's research and development team. The research and development team uses this virtual network. The team has a small, stable set of resources that is not expected to grow. The team needs a small number of IP addresses for a few virtual machines for their work.
 
+## Tasks
+
++ Task 1: Create a resource group.
++ Task 2: Create the CoreServicesVnet virtual network and subnets.
++ Task 3: Create the ManufacturingVnet virtual network and subnets.
++ Task 4: Create the ResearchVnet virtual network and subnets.
++ Task 5: Verify the creation of VNets and Subnets.
+
+## Architecture diagram
 ![Network layout](../media/az104-lab04-diagram.png)
 
 You will create the following resources:
@@ -47,19 +58,13 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 >**Did you know?**: It is a good practice to avoid overlapping IP address ranges to reduce issues and simplify troubleshooting. Overlapping is a concern across the entire network, whether in the cloud or on-premises. Many organizations design an enterprise-wide IP addressing scheme to avoid overlapping and plan for future growth.
 
-In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create the CoreServicesVnet virtual network and subnets
-+ Task 3: Create the ManufacturingVnet virtual network and subnets
-+ Task 4: Create the ResearchVnet virtual network and subnets
-+ Task 5: Verify the creation of VNets and Subnets
 
 ## Task 1: Create a resource group
 
 ### Create a resource group for all the resources in this lab. 
 
-1. Go to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. Search for and select **Resource groups**, then select **+ Create**.  
 
@@ -68,20 +73,16 @@ In this exercise, you will:
 | **Tab**         | **Option**                                 | **Value**            |
 | --------------- | ------------------------------------------ | -------------------- |
 | Basics          | Resource group                             | `az104-rg4` |
-|                 | Region                                     | (US) **East US**         |
+|                 | Region                                     | (US) **East US**     |
 | Tags            | No changes required                        |                      |
 | Review + create | Review your settings and select **Create** |                      |
 
 
 1. Refresh the **Resource groups** page, and verify that **az104-rg4** appears in the list.
 
- 
-
 ## Task 2: Create the CoreServicesVnet virtual network and subnets
 
 The organization plans a large amount of growth for core services. In this task, you will create the virtual network and the associated subnets to accomodate the existing resources and planned growth.
-
-### Create the CoreServicesVnet virtual network
 
 1. Search for and select **Virtual Networks**.
 
@@ -123,7 +124,7 @@ The organization plans a large amount of growth for core services. In this task,
  
 ## Task 3: Create the ManufacturingVnet virtual network and subnets
 
-In this task, you will continue to create an additional virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
+In this task, you continue to create an additional virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
 
     >**Note**: If you need help, use the detailed steps in Task 2. 
 
