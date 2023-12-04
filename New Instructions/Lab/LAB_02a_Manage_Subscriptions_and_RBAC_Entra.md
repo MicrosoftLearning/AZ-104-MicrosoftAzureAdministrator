@@ -202,7 +202,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 2. Select **Add filter**, select **Operation**, and then **Create role assignment**.
 
-    ![Screenshot of the Activity log page with configured filter.](../images/1503.png)
+    ![Screenshot of the Activity log page with configured filter.](../media/AZ104-lab02a-searchactivitylog.png)
 
 3. Verify the Activity log shows your role assignment.
    
