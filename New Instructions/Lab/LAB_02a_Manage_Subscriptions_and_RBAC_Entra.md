@@ -1,15 +1,16 @@
 ---
 lab:
-    title: 'Lab 02: Manage Subscriptions and RBAC'
+    title: 'Lab 02a: Manage Subscriptions and RBAC'
     module: 'Administer Governance and Compliance'
 ---
 
-# Lab 02 - Manage Subscriptions and RBAC
-# Student lab manual
+# Lab 02a - Manage Subscriptions and RBAC
 
 ## Lab requirements
 
 This lab requires permissions to create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to users. 
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
@@ -24,27 +25,18 @@ In order to simplify management of Azure resources in your organization, you hav
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through a similar lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Objectives
-
-In this lab, you will:
+## Tasks
 
 + Task 1: Implement management groups
 + Task 2: Review and assign a built-in Azure role
 + Task 3: Create and assign a custom RBAC roles 
 + Task 4: Monitor role assignments with the Activity Log
 
-
-## Estimated timing: 30 minutes
-
 ## Architecture diagram
 
 <!-- Update diagram - simplify names, get rid of custom role JSON--> 
 ![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
 
-
-# Instructions
-
-## Exercise 1
 
 ## Task 1: Implement Management Groups
 
