@@ -5,34 +5,41 @@ lab:
 ---
 
 # Lab 05 - Implement Intersite Connectivity
-# Student lab manual
 
-## Exercise scenario 
+## Lab requirements
+
+This lab requires an Azure subscription. You must have the ability to create virtual machines and virtual networks. 
+
+## Estimated time: 30 minutes
+
+## Lab scenario 
+
 Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you will configure connectivity between the segmented areas. This is a common scenario which is also popular for separating production from development or separting one subsidiary from another.
 
-In this unit, you will:
+## Tasks
 
-+ Task 1: Create a core services virtual machine and virtual network
-+ Task 2: Create a manufacturing services virtual machine and virtual network
-+ Task 3: Connect to a VM using RDP
-+ Task 4: Test the connection between the VMs
-+ Task 5: Create VNet peerings between VNets
-+ Task 6: Test the connection between VMs
++ Task 1: Create a core services virtual machine and virtual network.
++ Task 2: Create a manufacturing services virtual machine and virtual network.
++ Task 3: Connect to a VM using RDP.
++ Task 4: Test the connection between the VMs.
++ Task 5: Create VNet peerings between VNets.
++ Task 6: Test the connection between VMs.
  
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-#### Estimated time: 30 minutes
 
 ## Architecture diagram
 
 ![Lab 05 architecture diagrm](../media/az104-lab5-architecture-diagram.png)
 
-## Task 1: Create a core services VM and network
+## Task 1: Create a core services VM and network.
 
 In this task, you will create a core services virtual network with a virtual machine. 
 
-1. From the Azure portal, search for and navigate to **Virtual Machines**.
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+
+1. Search for and select `**Virtual Machines**`.
 
 1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
 
@@ -122,32 +129,29 @@ In this task, you will test the connection between the virtual machines in diffe
 
 ### Verify the private IP address fo the CoreServicesVM
 
-1. From the Azure portal, search for and select **Virtual Machines**.
-
-1. Select the **CoreServicesVM** virtual machine.
+1. From the Azure portal, search for and select the `**CoreServicesVM**` virtual machine.
 
 1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You will need this information to test the connection.
    
-### Connect to the **CoreServicesVM**.
+### Connect to the **ManufacturingVM**.
 
-1. On the Azure Portal home page, select **Virtual Machines**.
-
-1. Select the **ManufacturingVM** virtual machine.
+1. In the portal, select for and select the `**ManufacturingVM**` virtual machine.
 
 1. In the **Operations** section, select the **Run command** blade.
 
-1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
+1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-     ```Test-NetConnection 10.0.0.4 -port 3389 ```
+     ```Test-NetConnection <CoreServicesVM private IP address> -port 3389```
 
-1. It may take a couple of minutes for the script to run. The top of the page will show an information icon *Script execution in progress.*
+1. It may take a couple of minutes for the script to run. The top of the page will show an informational message *Script execution in progress.*
    
-1. The test connection should fail.
+1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. 
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
  
 ## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
-In this task, you will create peerings to enable communications between VNets.
+
+In this task, we create peerings to enable communications between VNets.
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
@@ -199,6 +203,6 @@ In this task, you will veify the virtual machines in different virtual networks 
 1. The test connection should succeed, and you will see a result similar to the following:
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
- 
+## Review
 
 Congratulations! You have successfully created VMs, created peerings, and tested communications between virtual machines.
