@@ -6,30 +6,29 @@ lab:
 
 # Lab 01 - Manage Microsoft Entra ID Identities
 
-# Student lab manual
-
 ## Lab scenario
 
 Your organization is building out a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. In order to allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. You also need to know how to delete users to prevent access after an engineer leaves your organization.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
-## Objectives
+## Lab requirements
+
+This lab requires access to the Azure portal and the ability to create group accounts. 
+
+## Estimated timing: 30 minutes
+
+## Tasks
 
 In this lab, you will:
 
 + Task 1: Familiarize yourself with the Azure portal 
 + Task 2: Create a resource group
-+ Task 3: Create groups
++ Task 3: Familiarize yourself with user accounts and group membership
 + Task 4: Create a resource group
 
-
-## Estimated timing: 30 minutes
-
 ## Architecture diagram
-![image](../media/az104-lab1-user-and-groups2.png)
-
-### Instructions
+![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
 
 ## Task 1: Familiarize yourself with the Azure portal 
 
@@ -72,47 +71,25 @@ In this task, you will create a new resource group. A resource group is a groupi
 ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
 
 
-## Task 2: CFamiliarize yourself with user accounts
+## Task 2: Familiarize yourself with user accounts and group membership. 
 
-In this task, you 
+In this task, you will familiarize yourself with user account and profiles. You also view group membership.
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-1. Navigate to the **Users - All users** blade, and select your user account. 
+1. In the **Manage** section, select the **Users** blade. 
 
-1. In the list of users, click the newly created user account to display its blade.
+1. Select **New user** from the top menu. Notice the selections for **Create new user** and **Invite external user**. We will not be creating new users in this lab.
+
+1. **Search** for and select your user account.
+
+1. Select the **Properties** tab and review all the profile information that can be provided for a user account. 
 
 1. Review the options available in the **Manage** section and note that you can identify the roles assigned to the user account as well as the user account's permissions to Azure resources.
 
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-user1**.
+1. Select **Groups** to view your group memberships.
 
-    >**Note**: You also have the option of assigning roles when provisioning a new user.
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
-
-    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
-
-1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
-
-    >**Note**: While this user account can access the tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | `az104-user2` |
-    | Display name | `az104-user2` |
-    | Auto-generate password | de-select  |
-    | Initial password | **Provide a secure password** |
-    | Job title | `System Administrator` |
-    | Department | `IT` |
-    | Usage location | **United States** |
-    
-1. Sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
 
 ## Task 3: Create groups with assigned and dynamic membership
 
@@ -159,6 +136,35 @@ In this task, you will create a group. Groups are used for user accounts or devi
     ![image](../media/az104-lab1-create-user.png)
 
 
+1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-user1**.
+
+    >**Note**: You also have the option of assigning roles when provisioning a new user.
+
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
+
+    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
+
+1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
+
+    >**Note**: While this user account can access the tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
+
+1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
+
+1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
+
+1. Create a new user with the following settings (leave others with their defaults):
+
+    | Setting | Value |
+    | --- | --- |
+    | User principal name | `az104-user2` |
+    | Display name | `az104-user2` |
+    | Auto-generate password | de-select  |
+    | Initial password | **Provide a secure password** |
+    | Job title | `System Administrator` |
+    | Department | `IT` |
+    | Usage location | **United States** |
+    
+1. Sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
 
 #### Review
 
