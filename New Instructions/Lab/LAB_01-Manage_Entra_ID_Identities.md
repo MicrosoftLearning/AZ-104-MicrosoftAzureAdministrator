@@ -57,7 +57,7 @@ In this task, you will create a new resource group. A resource group is a groupi
     
 1. In the Azure portal, search for and select **Resource groups**.
    
-1. On the **Resource groups** blade, click **+ Create**, and specify the following setting:
+1. On the **Resource groups** blade, click **+ Create**, and provide the required information. 
 
     | Setting | Value |
     | --- | --- |
@@ -78,19 +78,19 @@ In this task, you will create a new resource group. A resource group is a groupi
 
 In this task, you will familiarize yourself with user account and profiles. You also view group membership.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**.
+1. In the Azure portal, search for and select `Microsoft Entra ID`.
 
 1. In the **Manage** section, select the **Users** blade. 
 
 1. Select **New user** from the top menu. Notice the selections for **Create new user** and **Invite external user**. We will not be creating new users in this lab.
 
-1. **Search** for and select your user account.
+1. **Search** for and select your user account. Your user account is shown in the upper right corner of the portal. 
 
 1. Select the **Properties** tab and review all the profile information that can be provided for a user account. 
 
-1. Review the options available in the **Manage** section and note that you can identify the roles assigned to the user account as well as the user account's permissions to Azure resources.
+1. In the **Manage** section, select **Groups**. If you are part of a group, select the group.
 
-1. Select **Groups** to view your group memberships.
+1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
 ## Task 4: Create groups with assigned and dynamic membership
 
@@ -103,7 +103,7 @@ In this task, you will create a group. Groups are used for user accounts or devi
     | Setting | Value |
     | --- | --- |
     | Group type | **Security** |
-    | Group name | `IT Lab Administrators` |
+    | Group name | `IT Lab Administrators` (adjust the name if this one is not available) |
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
@@ -113,9 +113,9 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
 1. Select **No members selected**.
 
-1. From the **Add members** blade, search for **IT Cloud Administrators**, click the checkbox to the left of it. Next, search for **IT System Administrators** groups, click the checkbox to the left of it and then click **Select**. Back on the **New Group** blade, click **Create**.
+1. From the **Add members** blade, search for your user account. **Select** your user account to add to the group. 
 
-    ![Screenshot of the add member to group page.](../media/az104-lab1-add-member-to-group.png)
+1. Click **Create** to finish creating the group. 
 
 ## Task 4: Configure the Cloud Shell
 
