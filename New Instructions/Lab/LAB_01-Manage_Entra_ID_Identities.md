@@ -114,19 +114,17 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![Screenshot of the add member to group page.](../media/az104-lab1-add-member-to-group.png)
 
-## Task 4: Access and configure the Cloud Shell
+## Task 4: Configure the Cloud Shell
 
-In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell.
-
-    >**Note:** Use will use the Cloud Shell in future lab exercises. 
+In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. In this task, we will use PowerShell. 
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal.
 
-    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../images/1002.png)
+    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/AZ104-lab01-cloudshellicon.png)
 
-3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash will be used in the next task.
 
-4. On the **You have no storage mounted** screen select **Show advanced settings** then fill in the information below
+1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**. 
 
     | Settings | Values |
     |  -- | -- |
@@ -134,8 +132,29 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
     | File share (create new) | **shellstorage** |
 
-5. Select **Create Storage**
+    >**Note:** If you are working in a hosted lab environment, you will need to configure cloud shell storage each time a new lab environement is created.
 
+    >**Note:** When working in the Cloud Shell you are automatically connected to Azure. 
+
+## Create a group using PowerShell
+
+1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
+
+1. Get a list of resource groups. 
+
+   ```powershell
+   Get-AzResourceGroup
+   ```
+1. Get a list of group accounts.
+
+   ```powershell
+   Get-Az
+   ```
+
+1. Create a new resource group.
+
+1. Create a new group account. 
+   
 
 
 ## Review
