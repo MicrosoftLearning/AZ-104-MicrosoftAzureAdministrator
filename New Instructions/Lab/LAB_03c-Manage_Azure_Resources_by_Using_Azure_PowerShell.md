@@ -25,7 +25,7 @@ In this lab, you will:
 
 ## Architecture diagram
 
-![image](./media/az104-lab03c-architecture-diagram.png)
+![Diagram of the architecture.](../media/az104-lab03c-architecture-diagram.png)
 
 ### Instructions
 
@@ -67,7 +67,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
    ```
    >**Note**: If **az104-rg1** already exists, use a different name in the **$rgName** parameter. 
 
-   ![image](./media/az104-lab03c-createrg.png)
+   ![Screenshot of create resource group. ](../media/az104-lab03c-createrg.png)
 
 1. To retrieve properties of the newly created resource group, run the following command:
 
@@ -98,7 +98,7 @@ In this task, you will create a resource group and an Azure managed disk by usin
     -Disk $diskConfig
    ```
 
-   ![image](./media/az104-lab03c-createdisk.png)
+   ![Screenshot of create disk. ](../media/az104-lab03c-createdisk.png)
 
 1. To retrieve properties of the newly created disk, run the following command:
 
@@ -130,7 +130,7 @@ In this task, you will configure the Azure managed disk by using Azure PowerShel
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
 
-   ![image](./media/az104-lab03c-updatesku.png)
+   ![Screenshot of update sku.](../media/az104-lab03c-updatesku.png)
 
 1. To change the disk performance SKU to **Premium_LRS**, from the PowerShell session within Cloud Shell, run the following command:
 
@@ -144,7 +144,7 @@ In this task, you will configure the Azure managed disk by using Azure PowerShel
    (Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
    ```
 
-   ![image](./media/az104-lab03c-updatesku2.png)
+   ![Screenshot of update sku final.](../media/az104-lab03c-updatesku2.png)
 
 >**Did you notice?** PowerShell cmdlets use common verbs such as **Get**, **New**, and **Update**. Cmdlets starting with  **Get** are usually retrieving information about your configuration. Cmdlets starting with **New** are usually creating new resources. Cmdlets starting with **Update** are usually configuring existing resources.
 
