@@ -47,9 +47,32 @@ In this task, you familiarize yourself with the Azure portal. The Azure portal i
 
 1. On the right side of the top menu bar, select the **Settings** icon. Settings lets you customize the portal appearance, language and region.
 
-1. Lastly, in the top right corner is your user account information. 
+1. Lastly, in the top right corner is your user account information.
+   
+## Task 2: Create a new resource group
 
-## Task 2: Create and configure  users
+In this task, you will create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you will create a resource group. 
+    
+1. In the Azure portal, search for and select **Resource groups**.
+   
+1. On the **Resource groups** blade, click **+ Create**, and specify the following setting:
+
+    | Setting | Value |
+    | --- | --- |
+    | Subscription name | the name of your Azure subscription |
+    | Resource group name | `az104-rg1` |
+    | Location | **East US** |
+    
+1. Click **Review + create** and then click **Create**.
+
+    >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track progress of the deployment.
+
+1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
+
+![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
+
+
+## Task 2: Create and configure users
 
 In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
 
@@ -142,27 +165,7 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![image](../media/az104-lab1-add-member-to-group.png)
 
-## Task 4: Create a new resource group
 
-In this task, you will create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). Resource groups provide a way to limit access to a subset of your organization's resources. In this case, we want the virtual machine administrators to only have access to virtual machines in the lab and not all of the organization's virtual machines.
-    
-1. In the Azure portal, search for and select **Resource groups**.
-   
-1. On the **Resource groups** blade, click **+ Create**, and specify the following setting:
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription name | the name of your Azure subscription |
-    | Resource group name | `az104-rg1` |
-    | Location | **East US** |
-    
-1. Click **Review + create** and then click **Create**.
-
->**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track progress of the deployment.
-
-1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
-
-![image](../media/az104-lab1-create-resource-group.png)
 
 
 #### Review
