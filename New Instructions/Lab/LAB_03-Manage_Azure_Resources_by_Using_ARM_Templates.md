@@ -29,7 +29,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 ## Task 1: Create an ARM template for deployment of an Azure managed disk.
 
-In this task, you will use the Azure portal to generate an ARM template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
+In this task, you use the Azure portal to generate an ARM template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
@@ -68,7 +68,7 @@ In this task, you will use the Azure portal to generate an ARM template. You can
 
 ## Task 2: Edit an ARM template and then create an Azure managed disk by using the template.
 
-In this task, you will use the ARM template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
+In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
@@ -124,7 +124,7 @@ In this task, you will use the ARM template that you created to deploy a new man
 
 ## Task 3: Review the ARM template-based deployment of the managed disk.
 
-In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review will show the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
+In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
