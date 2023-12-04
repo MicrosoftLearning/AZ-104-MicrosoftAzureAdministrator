@@ -77,19 +77,25 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
+In this task, you will assign the VM Contributor role to your user account.  T
+
 1. In the portal, search for and the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
 1. Scroll through the large number of roles definitions that are available. Use the Informational icons to get an idea of each role's permissions. Notice there is also information on the number of users and groups that are assigned to each role.
 
-1. Select the **Access control (IAM)** blade, and then the **Role assignments** tab.
+1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
 
-1. Select **+ Add** and then **Add role assignment**. Search for and select the **Virtual Machine Contributor** role.
+    | Setting | Value |
+    | --- | --- |
+    | Role in the search tab | **Virtual Machine Contributor** |
+    | Assign access to (Under Members pane) | **User, group, or service principal** |
+    | Select (+Select Members) | <your user account> (shown in upper right corner of the portal) |
 
-1. Switch to the **Members** tab and Assign access to: **User, group, or service principal**. Click **+ Select members** and loocate your user account. Your user account is shown in the top right corner of the portal.
+![image](../media/az104-lab1-assign-role.png)
 
-1. After assigning yourself the **VM Contributor** role, select **Review and Assign**. 
+4. Click **Review + assign** twice to create the role assignment.
 
     >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
 
