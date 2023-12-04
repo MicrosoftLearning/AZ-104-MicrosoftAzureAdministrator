@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Lab 02a: Manage Subscriptions and RBAC'
+    title: 'Lab 02: Manage Subscriptions and RBAC'
     module: 'Administer Governance and Compliance'
 ---
 
-# Lab 02a - Manage Subscriptions and RBAC
+# Lab 02 - Manage Subscriptions and RBAC
 # Student lab manual
 
 ## Lab requirements
