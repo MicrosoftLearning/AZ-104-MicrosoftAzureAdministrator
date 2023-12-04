@@ -25,7 +25,10 @@ In this lab, you will:
 + Task 1: Familiarize yourself with the Azure portal 
 + Task 2: Create a resource group
 + Task 3: Familiarize yourself with user accounts and group membership
-+ Task 4: Create a resource group
++ Task 4: Create groups with assigned and dynamic membership
++ Task 5: Familiarize yourself with the Cloud Shell
++ Task 6: Practice with Azure PowerShell
++ Task 7: Practice with Bash
 
 ## Architecture diagram
 ![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
@@ -89,7 +92,7 @@ In this task, you will familiarize yourself with user account and profiles. You 
 
 1. Select **Groups** to view your group memberships.
 
-## Task 3: Create groups with assigned and dynamic membership
+## Task 4: Create groups with assigned and dynamic membership
 
 In this task, you will create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
@@ -136,7 +139,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** When working in the Cloud Shell you are automatically connected to Azure. 
 
-## Create a group using PowerShell
+## Practice with PowerShell
 
 1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
 
@@ -154,60 +157,13 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 1. Create a new resource group.
 
 1. Create a new group account. 
-   
+
+## Practice with Bash
+
 
 
 ## Review
 
 Congratulations! You created and configured user accounts, created a group, created a resource group, assigned a role to a user, and deleted a user account.
-
-
-1. Create a new user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | `az104-user1` |
-    | Display name | `az104-user1` |
-    | Auto-generate password | de-select |
-    | Initial password | **Provide a secure password** |
-    | Job title (Properties tab) | `Cloud Administrator` |
-    | Department (Properties tab) | `IT` |
-    | Usage location (Properties tab) | **United States** |
-
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-
-
-    ![image](../media/az104-lab1-create-user.png)
-
-
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-user1**.
-
-    >**Note**: You also have the option of assigning roles when provisioning a new user.
-
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
-
-    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
-
-1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
-
-    >**Note**: While this user account can access the tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | `az104-user2` |
-    | Display name | `az104-user2` |
-    | Auto-generate password | de-select  |
-    | Initial password | **Provide a secure password** |
-    | Job title | `System Administrator` |
-    | Department | `IT` |
-    | Usage location | **United States** |
-    
-1. Sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
 
 
