@@ -19,7 +19,7 @@ Your organization is building out a new lab environment for pre-production testi
 In this lab, you will:
 
 + Task 1: Familiarize yourself with the Azure portal 
-+ Task 2: Create and configure users
++ Task 2: Create a resource group
 + Task 3: Create groups
 + Task 4: Create a resource group
 
@@ -72,38 +72,13 @@ In this task, you will create a new resource group. A resource group is a groupi
 ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
 
 
-## Task 2: Create and configure users
+## Task 2: CFamiliarize yourself with user accounts
 
-In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
+In this task, you 
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
-
-1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
-
-1. Click **Edit properties**, and then in the **Settings** tab, set **Usage location** to **United States** and click **Save** to apply the change.
-
-    >**Note**: This is necessary in order to assign an Microsoft Entra ID license to an  account.
-
-1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | `az104-user1` |
-    | Display name | `az104-user1` |
-    | Auto-generate password | de-select |
-    | Initial password | **Provide a secure password** |
-    | Job title (Properties tab) | `Cloud Administrator` |
-    | Department (Properties tab) | `IT` |
-    | Usage location (Properties tab) | **United States** |
-
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-
-
-    ![image](../media/az104-lab1-create-user.png)
+1. Navigate to the **Users - All users** blade, and select your user account. 
 
 1. In the list of users, click the newly created user account to display its blade.
 
@@ -165,6 +140,23 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     ![image](../media/az104-lab1-add-member-to-group.png)
 
+
+1. Create a new user with the following settings (leave others with their defaults):
+
+    | Setting | Value |
+    | --- | --- |
+    | User principal name | `az104-user1` |
+    | Display name | `az104-user1` |
+    | Auto-generate password | de-select |
+    | Initial password | **Provide a secure password** |
+    | Job title (Properties tab) | `Cloud Administrator` |
+    | Department (Properties tab) | `IT` |
+    | Usage location (Properties tab) | **United States** |
+
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+
+
+    ![image](../media/az104-lab1-create-user.png)
 
 
 
