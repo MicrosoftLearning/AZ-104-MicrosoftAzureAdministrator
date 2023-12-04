@@ -30,7 +30,7 @@ In this lab, you will:
 
 + Task 1: Implement management groups
 + Task 2: Review and assign a built-in Azure role
-+ Task 3: Create and assign acustom RBAC roles 
++ Task 3: Create and assign a custom RBAC roles 
 + Task 4: Monitor role assignments with the Activity Log
 
 
@@ -100,7 +100,7 @@ In this task, you will create and configure management groups. Management groups
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
 
-### Create the custom RBAC role for the help desk
+### Create the custom RBAC role for the Help Desk users
 
 1. From the Azure portal, search for and select **Subscriptions**. 
 
@@ -136,11 +136,9 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Selct **Review + Create**, and then select **Create**.
 
-## Task 3: Assign RBAC roles
+    >**Note:** At this point, you have created a custom role. Your next step is to assign the role to a Help Desk user. 
 
-In this task, you will create a user, assign the RBAC role you created in the previous task, and verify that the user can perform the task specified in the RBAC role definition.
-
-### Identity the Help Desk user account you will use for testing the new role
+### Identity the Help Desk user account you will use for testing the new role and assign the custom role. 
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
@@ -172,7 +170,9 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Select **Review + assign** twice.
 
-### Test the Help Desk account to ensure it has the correct privileges
+    >**Note:** At this point, you have a Help Desk user account with custom privleges to create a support ticket. Your next step is to test the account.
+    
+### Test the Help Desk user account to ensure it has the correct privileges
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. If prompted to update the password, change the password for the user.
 
@@ -194,6 +194,18 @@ In this task, you will create a user, assign the RBAC role you created in the pr
 
 1. Do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
+## Monitor role assignments with the Activity Log
+
+In this task, you view the activity log to determine if anyone has created a new role. 
+
+1. Return to the **az104-mg1** resource, and select **Activity log**.
+
+2. Select **Add filter**, select **Operation**, and then **Create role assignment**.
+
+    ![Screenshot of the Activity log page with configured filter.](../images/1503.png)
+
+3. Verify the Activity log shows your role assignment.
+   
 ## Review
 
 Congratulations! You implemented management groups, created a custom RBAC role, and assigned RABC roles.
