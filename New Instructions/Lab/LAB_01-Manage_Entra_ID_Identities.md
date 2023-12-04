@@ -71,7 +71,7 @@ In this task, you will create a new resource group. A resource group is a groupi
 ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
 
 
-## Task 2: Familiarize yourself with user accounts and group membership. 
+## Task 2: Familiarize yourself with user accounts and group membership 
 
 In this task, you will familiarize yourself with user account and profiles. You also view group membership.
 
@@ -89,15 +89,13 @@ In this task, you will familiarize yourself with user account and profiles. You 
 
 1. Select **Groups** to view your group memberships.
 
-
-
 ## Task 3: Create groups with assigned and dynamic membership
 
 In this task, you will create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
-1. In the Azure portal, navigate to the Microsoft Entra ID tenant blade and click **Groups**.
+1. In the Azure portal, search for and select **Groups**.
 
-1. Use the **+ New group** button to create a new group with the following settings:
+1. Select **+ New group** and create a new group. 
 
     | Setting | Value |
     | --- | --- |
@@ -108,14 +106,17 @@ In this task, you will create a group. Groups are used for user accounts or devi
 
     >**Note**: Your **Membership type** drop-down list might be grayed out. This is where you can switch from an assigned group to a dynamic group if you have an Entra ID Premium P1 or P2 license.
 
-    ![image](./media/az104-lab1-create-assigned-group.png)
+    ![Screenshot of create assigned group.](./media/az104-lab1-create-assigned-group.png)
 
-   
-1. Click **No members selected**.
+1. Select **No members selected**.
 
 1. From the **Add members** blade, search for **IT Cloud Administrators**, click the checkbox to the left of it. Next, search for **IT System Administrators** groups, click the checkbox to the left of it and then click **Select**. Back on the **New Group** blade, click **Create**.
 
-    ![image](../media/az104-lab1-add-member-to-group.png)
+    ![Screenshot of the add member to group page.](../media/az104-lab1-add-member-to-group.png)
+
+#### Review
+
+Congratulations! You created and configured user accounts, created a group, created a resource group, assigned a role to a user, and deleted a user account.
 
 
 1. Create a new user with the following settings (leave others with their defaults):
@@ -166,6 +167,4 @@ In this task, you will create a group. Groups are used for user accounts or devi
     
 1. Sign out as the az104-user1 user from the Azure portal and close the InPrivate browser window.
 
-#### Review
 
-Congratulations! You created and configured user accounts, created a group, created a resource group, assigned a role to a user, and deleted a user account.
