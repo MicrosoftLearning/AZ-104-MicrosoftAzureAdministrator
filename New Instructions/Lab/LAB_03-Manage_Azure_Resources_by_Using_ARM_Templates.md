@@ -24,6 +24,8 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 + Task 1: Create an ARM template for deployment of an Azure managed disk.
 + Task 2: Edit an ARM template and then create an Azure managed disk by using the template.
 + Task 3: Review the ARM template-based deployment of the managed disk.
++ Task 4: Experiment with Azure PowerShell (optional).
++ Task 5: Experiment with the CLI (optional). 
 
 ## Architecture diagram
 
@@ -136,22 +138,17 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. From the **az104-rg3 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-## Task 4: Deploy your template using Azure PowerShell
+## Task 4: Experiment with Azure PowerShell
 
-# [powershell](#tab/azure-powershell)
+1. locate your template and change the name of the disk.
 
-1. instrutions 1
+1. You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
-1. instruction 2
+1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
     ```powershell
-    new-az
+    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile <path-to-template>
     ```
-# [cli](#tab/az-cli)
-
-1. ss
-2. sss
-
    
 ## Task 5: Deploy your template using CLI
 
