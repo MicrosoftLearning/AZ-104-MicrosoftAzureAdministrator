@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. You must have access to the Azure portal and the ability to create group accounts. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps have been only been tested in **East US**. 
 
 ## Estimated timing: 40 minutes
 
@@ -47,7 +47,7 @@ In this task, you familiarize yourself with the Azure portal. The Azure portal i
 
 1. You may find it quicker to **Search resources, services, and docs** using the search box in the top center of the portal. The search box provides autocomplete and suggestions for services or resources. For example, try `virt` and notice the suggested matches.
 
-1. On the right side of the top menu bar, select the **Settings** icon. Settings lets you customize the portal appearance, language and region.
+1. On the right side of the top menu bar, select the **Settings** icon. Settings lets you customize the portal appearance.
 
 1. Lastly, in the top right corner is your user account information.
    
@@ -71,8 +71,7 @@ In this task, you create a new resource group. A resource group is a grouping of
 
 1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
 
-![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
-
+    ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
 
 ## Task 2: Familiarize yourself with user accounts and group membership. 
 
@@ -172,10 +171,10 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    Get-Help New-AzureADGroup -detailed
    ```
 
-1. Using the example in the Help, here are the commands. Notice you must first connect to Azure AD.
+1. Using the example in the Help, try these commands. Notice you must first connect to Azure AD.
 
-    ``powershell
-   Connect-AzureAD
+   ```powershell
+   Connect-AzureAD 
    New-AzureADGroup -DisplayName "MyPSgroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "MyPSgroup"
    ```
 
@@ -201,20 +200,18 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    az group create --name $RGNAME --location $LOCATION
    ```
    
-1. To verify and retrieve properties for the newly created resource group, run the following command:
+1. To verify and retrieve properties for the newly created resource group, try the **show** command. 
 
    ```sh
    az group show --name $RGNAME
    ```
-   ![image](./media/az104-lab03d-createrg.png)
-
 1. Now, let's use help to learn more about creating an Azure AD group.
 
     ```sh
     az ad group --help
     ```
 
-1. Now **create** the group and **list** the groups to verify.
+1. **Create** the group and **list** the groups to verify.
 
    ```sh
    az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
@@ -223,8 +220,17 @@ In this task, you create a resource group and an Azure AD group by using Azure C
 
 1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. You may need to Refresh the pages.   
     
-## Review
+## Main takeaways
 
+Here are some of the main takeways from this lab:
+
++ The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
++ Resource groups are a grouping of related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
++ There are different types of user accounts in Microsoft Entra ID. Each use account type has a level of access specific to the scope of work expected. 
++ Group accounts group related users or devices. Group membership can be assigned statically or dynamically. 
++ Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
++ Azure PowerShell and Bash provide a scripted way to create resources. 
+  
 Congratulations! You have familiarized yourself with the Azure portal, Cloud Shell, Azure PowerShell, and the CLI. You have also created a group and assigned a member.
 
 
