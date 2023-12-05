@@ -138,7 +138,21 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 ## Task 4: Deploy your template using Azure PowerShell
 
+# [powershell](#tab/azure-powershell)
 
+1. instrutions 1
+
+1. instruction 2
+
+    ```powershell
+    new-az
+    ```
+# [cli](#tab/az-cli)
+
+1. ss
+2. sss
+
+   
 ## Task 5: Deploy your template using CLI
 
 ## Review
