@@ -43,10 +43,10 @@ In this task, you use the Azure portal to generate an ARM template. You can then
     
     | Setting | Value |
     | --- | --- |
-    | Subscription | <your subscription> | 
+    | Subscription | *your subscription* | 
     | Resource Group | `az104-rg3` (If necessary, select **Create new**.)
     | Disk name | `az104-disk1` | 
-    | Region | <your region> |
+    | Region | **East US** |
     | Availability zone | **No infrastructure redundancy required** | 
     | Source type | **None** |
     | Size | **32 Gb** | 
@@ -105,9 +105,9 @@ In this task, you use the template that you created to deploy a new managed disk
 
     | Setting | Value |
     | --- |--- |
-    | Subscription | <your subscription> |
+    | Subscription | *your subscription* |
     | Resource Group | `az104-rg3` (If necessary, select **Create new**)|
-    | Region | <your region> |
+    | Region | **East US** |
     | Disk Name | `az104-disk1` |
     | Location | the value of the location parameter you noted in the previous task |
     | Sku | **Standard_LRS** |
