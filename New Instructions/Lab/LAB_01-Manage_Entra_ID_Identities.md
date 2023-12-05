@@ -51,7 +51,7 @@ In this task, you familiarize yourself with the Azure portal. The Azure portal i
    
 ## Task 2: Create a new resource group.
 
-In this task, you will create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you will create a resource group. 
+In this task, you create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you create a resource group. 
     
 1. In the Azure portal, search for and select **Resource groups**.
    
@@ -59,9 +59,9 @@ In this task, you will create a new resource group. A resource group is a groupi
 
     | Setting | Value |
     | --- | --- |
-    | Subscription name | the name of your Azure subscription |
+    | Subscription name | <your subscription> |
     | Resource group name | `az104-rg1` |
-    | Location | **East US** |
+    | Location | <your region> |
     
 1. Click **Review + create** and then click **Create**.
 
@@ -74,7 +74,7 @@ In this task, you will create a new resource group. A resource group is a groupi
 
 ## Task 2: Familiarize yourself with user accounts and group membership. 
 
-In this task, you will familiarize yourself with user account and profiles. You also view group membership.
+In this task, you familiarize yourself with user account and profiles. You also view group membership.
 
 1. In the Azure portal, search for and select `Microsoft Entra ID`.
 
@@ -92,7 +92,7 @@ In this task, you will familiarize yourself with user account and profiles. You 
 
 ## Task 4: Create groups with assigned and dynamic membership.
 
-In this task, you will create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
+In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
 1. In the Azure portal, search for and select **Groups**.
 
@@ -123,9 +123,9 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/AZ104-lab01-cloudshellicon.png)
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash will be used in the next task.
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash is used in the next task.
 
-    >**Did you know?**  If you mostly work with Linux systems, Azure CLI will feel more natural. If you mostly work with Windows systems, Azure PowerShell will feel more natural. 
+    >**Did you know?**  If you mostly work with Linux systems, Azure CLI feels more natural. If you mostly work with Windows systems, Azure PowerShell feels more natural. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**. 
 
@@ -135,13 +135,13 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
     | File share (create new) | **shellstorage** |
 
-    >**Note:** If you are working in a hosted lab environment, you will need to configure cloud shell storage each time a new lab environement is created.
+    >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environement is created.
 
     >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
 ## Task 5: Practice with PowerShell.
 
-In this task, you will create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
+In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
 
 1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
 
@@ -182,7 +182,7 @@ In this task, you will create a resource group and an Azure AD group by using Az
 
 ## Task 6: Practice with Bash.
 
-In this task, you will create a resource group and an Azure AD group by using Azure CLI session within Cloud Shell.
+In this task, you create a resource group and an Azure AD group by using Azure CLI session within Cloud Shell.
 
 1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**. 
 
