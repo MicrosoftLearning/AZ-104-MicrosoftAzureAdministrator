@@ -196,7 +196,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
-## Monitor role assignments with the Activity Log
+## Task 4: Monitor role assignments with the Activity Log
 
 In this task, you view the activity log to determine if anyone has created a new role. 
 
