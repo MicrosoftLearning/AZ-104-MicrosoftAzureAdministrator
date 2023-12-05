@@ -1,14 +1,14 @@
 ---
 lab:
-    title: 'Lab 03: Manage Azure resources by Using ARM Templates'
+    title: 'Lab 03: Manage Azure resources by Using Azure Resource Manager Templates'
     module: 'Administer Azure Resources'
 ---
 
-# Lab 03 - Manage Azure resources by Using ARM Templates
+# Lab 03 - Manage Azure resources by Using Azure Resource Manager Templates
 
 ## Lab requirements
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps have been only been tested in **East US**. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
 ## Estimated timing: 30 minutes
 
@@ -21,9 +21,9 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 
 ## Tasks
 
-+ Task 1: Create an ARM template for deployment of an Azure managed disk.
-+ Task 2: Edit an ARM template and then create an Azure managed disk by using the template.
-+ Task 3: Review the ARM template-based deployment of the managed disk.
++ Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
++ Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
++ Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
 + Task 4: Experiment with Azure PowerShell (optional).
 + Task 5: Experiment with the CLI (optional). 
 
@@ -31,9 +31,9 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 
 ![Diagram of the tasks.](../media/az104-lab03b-architecture-diagram.png)
 
-## Task 1: Create an ARM template for deployment of an Azure managed disk.
+## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 
-In this task, you use the Azure portal to generate an ARM template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
+In this task, you use the Azure portal to generate an Azure Resource Manager template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
@@ -70,7 +70,7 @@ In this task, you use the Azure portal to generate an ARM template. You can then
 
 1. In the Azure portal, cancel the deployment of the managed disk.
 
-## Task 2: Edit an ARM template and then create an Azure managed disk by using the template.
+## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
 
 In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
 
@@ -126,7 +126,7 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Verify that the deployment completed successfully.
 
-## Task 3: Review the ARM template-based deployment of the managed disk.
+## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
 
 In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
@@ -138,7 +138,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. From the **az104-rg3 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-## Task 4: Experiment with Azure PowerShell
+## Task 4: Experiment with Azure PowerShell (optional)
 
 1. locate your template and change the name of the disk.
 
@@ -150,8 +150,13 @@ In this task, you verify that the deployment has finished successfuly. All prior
     New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile <path-to-template>
     ```
    
-## Task 5: Deploy your template using CLI
+## Task 5: Experiment with CLI (optional)
 
 ## Review
 
-Congratulations! In this lab, you have used the Azure Portal to create an ARM template for a managed disk and then used the template to deploy a new disk.
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Resource Manager templates let you deploy, manage, and monitor all the resources for your solution as a group, rather than handling these resources individually.
++ An Azure Resource Manager template is a JavaScript Object Notation (JSON) file that lets you manage your infrastructure declaratively rather than with scripts.
++ Rather than passing parameters as inline values in your template, you can use a separate JSON file that contains the parameter values.
++ Azure Resource Manager templates can be deployed in a variety of ways including the Azure portal, Azure PowerShell, and CLI. 
