@@ -85,7 +85,7 @@ In this task, you will assign the VM Contributor role to your user account.  T
     | --- | --- |
     | Role in the search tab | **Virtual Machine Contributor** |
     | Assign access to (Under Members pane) | **User, group, or service principal** |
-    | Select (+Select Members) | <your user account> (shown in upper right corner of the portal) |
+    | Select (+Select Members) | your user account (shown in upper right corner of the portal) |
 
 ![image](../media/az104-lab1-assign-role.png)
 
@@ -130,7 +130,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group that was created in the prevous task, then select **Select**.
 
-    ![Screenshot assign scope.](./media/az104-lab2a-add-scope.png)
+    ![Screenshot assign scope.](../media/az104-lab2a-add-scope.png)
 
 1. Select the **JSON** tab. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
