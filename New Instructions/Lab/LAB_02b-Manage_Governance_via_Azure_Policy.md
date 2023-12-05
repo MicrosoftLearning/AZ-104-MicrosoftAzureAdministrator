@@ -23,7 +23,7 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 ## Interactive lab simulation
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required.
 
 ## Tasks
 
@@ -33,7 +33,7 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 
 ## Architecture diagram
 
-![image](./media/az104-lab02b-architecture-diagram.png)
+![Diagram of the task architecture.](./media/az104-lab02b-architecture-diagram.png)
 
 ## Task 1: Assign tags via the Azure portal
 
@@ -45,7 +45,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Provide the name `az104-rg1` and ensure that the Region is set to **East US**.
 
-    ![image](./media/az104-lab02b-newrg.png)
+    ![image](../media/az104-lab02b-newrg.png)
 
 1. Click **Review + Create**, and then click **Create**.
 
@@ -62,7 +62,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Click **Apply**. You have now manually added a tag to a resource.
 
-    ![image](./media/az104-lab02b-manualtag.png)
+    ![image](../media/az104-lab02b-manualtag.png)
 
 ## Task 2: Enforce tagging via an Azure policy
 
@@ -72,7 +72,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. It might also help to search for `Require a tag`.
 
-    ![image](./media/az104-lab02b-policytags.png)
+    ![image](../media/az104-lab02b-policytags.png)
 
 1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
 
@@ -87,7 +87,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope).
 
-    ![image](./media/az104-lab02b-policyscope.png) 
+    ![image](../media/az104-lab02b-policyscope.png) 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
@@ -106,7 +106,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Tag Name | `Cost Center` |
     | Tag Value | `Default` |
 
-    ![image](./media/az104-lab02b-policyparams.png) 
+    ![image](../media/az104-lab02b-policyparams.png) 
 
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -129,13 +129,13 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource group | **az104-rg1** |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-    ![image](./media/az104-lab02b-createstorage1.png) 
+    ![image](../media/az104-lab02b-createstorage1.png) 
 
     >**Note**: You may receive a **Validation failed. Click here for details** error; If so, click the error message to identify the reason for the failure and skip the next step. 
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
-    ![image](./media/az104-lab02b-policyerror.png) 
+    ![image](../media/az104-lab02b-policyerror.png) 
 
     >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
 
@@ -158,7 +158,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
 
-    ![image](./media/az104-lab02b-policyscope2.png) 
+    ![image](../media/az104-lab02b-policyscope2.png) 
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select `Inherit a tag from the resource group if missing`.
 
@@ -176,7 +176,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | --- | --- |
     | Tag Name | `Role` |
 
-    ![image](./media/az104-lab02b-policyparams2.png) 
+    ![image](../media/az104-lab02b-policyparams2.png) 
 
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults):
 
@@ -187,7 +187,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     >**Note**: This policy definition includes the **Modify** effect.
 
-    ![image](./media/az104-lab02b-policyremediation.png) 
+    ![image](../media/az104-lab02b-policyremediation.png) 
 
 1. Click **Review + Create** and then click **Create**.
 
@@ -205,12 +205,15 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | --- | --- |
     | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
 
-    ![image](./media/az104-lab02b-createstorage1.png) 
+    ![image](../media/az104-lab02b-createstorage1.png) 
 
 1. Verify that this time the validation passed and click **Create**.
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-## Review
+## Main takeaways
 
-Congratulations! You have successfully created tags on resources, enforced tagging by using Azure Policy, and applied tagging inheritance using Azure Policy.
+Congratulations on completing the lab. The main takeaways from the lab are:
+
+
+
