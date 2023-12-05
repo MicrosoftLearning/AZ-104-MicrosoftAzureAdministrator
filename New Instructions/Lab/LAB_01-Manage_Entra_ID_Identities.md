@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps have been only been tested in **East US**. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown in **East US**. 
 
 ## Estimated timing: 40 minutes
 
@@ -222,7 +222,7 @@ In this task, you create a resource group and an Azure AD group by using Azure C
     
 ## Main takeaways
 
-Here are some of the main takeways from this lab:
+Congratulations on completing the lab. Here are some main takeways for this lab:
 
 + The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
 + Resource groups are a grouping of related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
@@ -231,6 +231,3 @@ Here are some of the main takeways from this lab:
 + Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
 + Azure PowerShell and Bash provide a scripted way to create resources. 
   
-Congratulations! You have familiarized yourself with the Azure portal, Cloud Shell, Azure PowerShell, and the CLI. You have also created a group and assigned a member.
-
-
