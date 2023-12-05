@@ -144,7 +144,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note**: This section requires a user account, **HelpDesk-user1**, for testing. 
 
-1. If you have the **HelpDesk-user1** user account, skip to the next step. If your subscription doesn't have the **HelpDesk-user1** user account, create a new user with the following settings (leave others with their defaults):
+1. Identify a another user for testing. If this task we use the **HelpDesk-user1** user account. 
 
     | Setting | Value |
     | --- | --- |
