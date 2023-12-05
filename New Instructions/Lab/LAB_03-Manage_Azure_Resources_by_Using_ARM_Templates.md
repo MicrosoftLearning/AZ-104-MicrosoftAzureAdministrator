@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps have been only been tested in **East US**. 
 
 ## Estimated timing: 30 minutes
 
