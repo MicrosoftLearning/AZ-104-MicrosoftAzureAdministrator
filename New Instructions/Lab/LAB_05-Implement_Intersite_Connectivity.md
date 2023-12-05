@@ -48,10 +48,10 @@ In this task, we create a core services virtual network with a virtual machine.
  
     | Setting | Value | 
     | --- | --- |
-    | Subscription |  <your subscription> |
+    | Subscription |  *your subscription* |
     | Resource group |  `az104-rg5` (If necessary, select **Create new**. Use this group for all your lab resources.)
     | Virtual machine name |    `CoreServicesVM` |
-    | Region | <your region> |
+    | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** |
@@ -95,10 +95,10 @@ In this task, we create a manufacturing services virtual network with a virtual 
  
     | Setting | Value | 
     | --- | --- |
-    |   Subscription |  <your subscription> |
+    | Subscription |  *your subscription* |
     | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
     | Virtual machine name |    `ManufacturingVM` |
-    | Region | <your region> |
+    | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
