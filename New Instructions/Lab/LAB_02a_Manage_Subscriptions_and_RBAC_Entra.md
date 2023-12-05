@@ -50,13 +50,13 @@ In this task, you will create and configure management groups. Management groups
 
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
-    1. In the Azure portal, search for and select **Microsoft Entra ID**.
+    + In the Azure portal, search for and select **Microsoft Entra ID**.
     
-    1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
+    + On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
-    1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+    + On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
     
-    1.  Navigate back to the **Management groups** blade, and select **Refresh**.
+    + Navigate back to the **Management groups** blade, and select **Refresh**.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -68,6 +68,8 @@ In this task, you will create and configure management groups. Management groups
     | Management group display name | `az104-mg1` |
 
     ![Screenshot of creating a management group.](../media/az104-lab2a-create-mgmt-group.png)
+
+1. In this scenario, all subscriptions would now be added to the management group. RBAC could then be applied to management group and scoped to the Help Desk. Depending on your subscription you may or may not be able to practice adding subscriptions. 
 
 ## Task 2: Review and assign a built-in Azure role
 
