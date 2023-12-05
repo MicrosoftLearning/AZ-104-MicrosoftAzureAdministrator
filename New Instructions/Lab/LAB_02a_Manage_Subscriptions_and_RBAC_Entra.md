@@ -73,7 +73,7 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
-In this task, you will assign the VM Contributor role to your user account.  T
+In this task, you will assign the VM Contributor role to your user account.  
 
 1. In the portal, search for and the **az104-mg1** management group.
 
@@ -89,7 +89,7 @@ In this task, you will assign the VM Contributor role to your user account.  T
     | Assign access to (Under Members pane) | **User, group, or service principal** |
     | Select (+Select Members) | your user account (shown in upper right corner of the portal) |
 
-![image](../media/az104-lab1-assign-role.png)
+    ![Screenshot of assigning a role.](../media/az104-lab1-assign-role.png)
 
 4. Click **Review + assign** twice to create the role assignment.
 
@@ -210,4 +210,9 @@ In this task, you view the activity log to determine if anyone has created a new
    
 ## Review
 
-Congratulations! You implemented management groups, created a custom RBAC role, and assigned RABC roles.
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Management groups are used to logically organize subscriptions.
++ Azure AD has a large number of built-in roles. You can assign these roles to control access to resources.
++ You can create new Azure AD roles or customize existing roles. Roles are specified in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
++ You can use the Activity Log to monitor role assignments. 
