@@ -137,7 +137,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
     | File share (create new) | **shellstorage** |
 
-    >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environement is created.
+    >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environment is created.
 
     >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
@@ -152,14 +152,13 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    ```powershell
    Get-Help New-AzResourceGroup -detailed
    ```
-1. To create a resource group from the PowerShell session within Cloud Shell, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables that you can use in later commands.
+1. To create a resource group from the PowerShell session within Cloud Shell, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables that you can use in later commands. Ensure you receive a succeeded message. 
 
    ```powershell
    $location = 'eastus'
    $rgName = 'az104-rg-ps'
    New-AzResourceGroup -Name $rgName -Location $location
    ```
-   ![Screenshot of create resource group. ](../media/az104-lab03c-createrg.png)
 
 1. To retrieve properties of the newly created resource group, run the following command:
 
@@ -167,20 +166,20 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    Get-AzResourceGroup -Name $rgName
    ```
 
-1. Let's try to create new Azure AD group.
+1. Now, let's try to create new Azure AD group.
 
    ```powershell
    Get-Help New-AzureADGroup -detailed
    ```
 
-1. Using the example in the help, here are the commands. Notice you must first connect to Azure AD.
+1. Using the example in the Help, here are the commands. Notice you must first connect to Azure AD.
 
     ``powershell
    Connect-AzureAD
    New-AzureADGroup -DisplayName "MyPSgroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "MyPSgroup"
    ```
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. 
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. You may need to Refresh the pages. 
 
 ## Task 6: Practice with Bash.
 
@@ -194,7 +193,7 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    az group --help
    ```
 
-1. The **create** option looks promising. Note  the capitalized names create variables that you can reference in subsequent commands. 
+1. The **create** option looks promising. Note the capitalized names create variables that you can reference in subsequent commands. 
 
    ```sh
    RGNAME='az104-rg1-cli'
@@ -209,7 +208,7 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    ```
    ![image](./media/az104-lab03d-createrg.png)
 
-1. Let's use help to learn more about creating an Azure AD group.
+1. Now, let's use help to learn more about creating an Azure AD group.
 
     ```sh
     az ad group --help
@@ -222,7 +221,7 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    az ad group list
    ```
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group.    
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. You may need to Refresh the pages.   
     
 ## Review
 
