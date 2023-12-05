@@ -33,7 +33,7 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 
 ## Architecture diagram
 
-![Diagram of the task architecture.](./media/az104-lab02b-architecture-diagram.png)
+![Diagram of the task architecture.](../media/az104-lab02b-architecture-diagram.png)
 
 ## Task 1: Assign tags via the Azure portal
 
