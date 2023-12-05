@@ -61,9 +61,9 @@ In this task, you create a new resource group. A resource group is a grouping of
 
     | Setting | Value |
     | --- | --- |
-    | Subscription name | <your subscription> |
+    | Subscription name | your subscription |
     | Resource group name | `az104-rg1` |
-    | Location | <your region> |
+    | Location | your region |
     
 1. Click **Review + create** and then click **Create**.
 
@@ -76,19 +76,19 @@ In this task, you create a new resource group. A resource group is a grouping of
 
 ## Task 2: Familiarize yourself with user accounts and group membership. 
 
-In this task, you familiarize yourself with user account and profiles. You also view group membership.
+In this task, you familiarize yourself with user accounts and profiles. You also view group memberships.
 
 1. In the Azure portal, search for and select `Microsoft Entra ID`.
 
 1. In the **Manage** section, select the **Users** blade. 
 
-1. Select **New user** from the top menu. Notice the selections for **Create new user** and **Invite external user**. 
+1. Select **New user** from the top menu. Notice the selections for **Create new user** and **Invite external user**. Creating users is outside the scope of this lab. 
 
-1. **Search** for and select your user account. Your user account is shown in the upper right corner of the portal. 
+1. **Search** for and select your user account. Your user account information is shown in the upper right corner of the portal. 
 
 1. Select the **Properties** tab and review all the profile information that can be provided for a user account. 
 
-1. In the **Manage** section, select **Groups**. If you are part of a group, select the group.
+1. In the **Manage** section, select **Groups**. If you are part of a group, select the group. If you are not part of agroup, select any group. 
 
 1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
