@@ -5,7 +5,11 @@ lab:
 ---
 
 # Lab 02b - Manage Governance via Azure Policy
-# Student lab manual
+
+## Lab requirements
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown as **East US**. 
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
@@ -17,25 +21,19 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - update existing resources with resource tags
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulation
 
-## Objectives
+An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-In this lab, we will:
+## Tasks
 
 + Task 1: Create and assign tags via the Azure portal
 + Task 2: Enforce tagging via an Azure policy
 + Task 3: Apply tagging via an Azure policy
 
-## Estimated timing: 30 minutes
-
 ## Architecture diagram
 
 ![image](./media/az104-lab02b-architecture-diagram.png)
-
-# Instructions
-
-## Exercise 1
 
 ## Task 1: Assign tags via the Azure portal
 
