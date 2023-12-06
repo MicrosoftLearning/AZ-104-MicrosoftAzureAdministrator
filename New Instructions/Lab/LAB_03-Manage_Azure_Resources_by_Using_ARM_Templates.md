@@ -146,7 +146,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. As you have time, try the deployment again. Be sure to make a change, like disk name, before you deploy.
    
-## Task 4: Experiment with Azure PowerShell (optional)
+## Task 4: Experiment with using Azure PowerShell to deploy a template (optional)
 
 1. Open the Cloud Shell, and select **PowerShell**.
 
@@ -163,7 +163,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
     ```powershell
     dir
     ```
-    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+>**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
@@ -172,7 +172,32 @@ In this task, you verify that the deployment has finished successfuly. All prior
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
    
-## Task 5: Experiment with CLI (optional)
+## Task 5: Experiment with using the CLI to deploy a template (optional)
+
+1. Open the Cloud Shell, and select **Bash**.
+
+1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
+
+1. On the local drive, locate the parameters JSON file.
+
+1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
+
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to each separately.
+
+1. Verify your files are available in the Cloud Shell storage.
+
+    ```sh
+    dir
+    ```
+
+>**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+
+1. To deploy to a resource group, use **az deployment group create**.
+
+    ```sh
+    az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
+    ```
+1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
 ## Review
 
