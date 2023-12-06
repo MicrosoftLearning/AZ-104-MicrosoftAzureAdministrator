@@ -58,13 +58,13 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. Click **Review + Create** *once*. Do **not** actually deploy the resource.
 
-1. On the Review + create tab, click **Download a template for automation**.
+1. After the validation, click **Download a template for automation** (bottom of the page).
 
-1. Review the information shown on the template, including the parameters and resources that are created.
+1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
 1. Click **Download** and save the template to your computer.
 
-1. Extract the content of the downloaded file into the **Downloads** folder on your computer.
+1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
 1. Close all **File Explorer** windows.
 
@@ -76,19 +76,21 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
-1. On the **Custom deployment** blade, click **Build your own template in the editor**.
+1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are a large number of built-in templates. Selecting any template will provide a short description.
+
+1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
 1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
 
-1. Within the editor pane, remove the following lines:
+1. Within the editor pane, remove the following lines. Be sure to remove the closing bracket and comma. 
 
-   ```json
+   ```
     "sourceResourceId": {
             "type": "string"
     },
    ```
    
-   ```json
+   ```
       "hyperVGeneration": {
        "defaultValue": "V1",
        "type": "String"
@@ -108,7 +110,7 @@ In this task, you use the template that you created to deploy a new managed disk
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
-    | Resource Group | `az104-rg3` (If necessary, select **Create new**)|
+    | Resource Group | `az104-rg3` |
     | Region | **East US** |
     | Disk Name | `az104-disk1` |
     | Location | the value of the location parameter you noted in the previous task |
@@ -138,17 +140,37 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. From the **az104-rg3 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
+1. In the Azure portal, search for and select **Disks**.
+
+1. Notice your managed disk was created.
+
+1. As you have time, try the deployment again. Be sure to make a change, like disk name, before you deploy.
+   
 ## Task 4: Experiment with Azure PowerShell (optional)
 
-1. locate your template and change the name of the disk.
+1. Open the Cloud Shell, and select **PowerShell**.
 
-1. You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
+
+1. On the local drive, locate the parameters JSON file.
+
+1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
+
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to each separately.
+
+1. Verify your files are available in the Cloud Shell storage.
+
+    ```powershell
+    dir
+    ```
+    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
     ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile <path-to-template>
+    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
+1. Ensure the command completes and the ProvisioningState is **Succeeded**.
    
 ## Task 5: Experiment with CLI (optional)
 
