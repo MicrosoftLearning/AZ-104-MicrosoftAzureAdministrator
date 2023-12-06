@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. You must have permissions to create a custom Azure Role Based Access Control (RBAC) role, and assign the role to users. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
 ## Estimated timing: 30 minutes
 
@@ -29,10 +29,12 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 
 ## Tasks
 
-+ Task 1: Implement management groups
-+ Task 2: Review and assign a built-in Azure role
-+ Task 3: Create and assign a custom RBAC roles 
-+ Task 4: Monitor role assignments with the Activity Log
++ Task 1: Implement management groups.
++ Task 2: Review and assign a built-in Azure role.
++ Task 3: Create and assign a custom RBAC roles. 
++ Task 4: Monitor role assignments with the Activity Log.
++ Task 5: Experiment with PowerShell (optional)
++ Task 6: Experiment with CLI (optional)
 
 ## Architecture diagram
 
@@ -69,7 +71,7 @@ In this task, you will create and configure management groups. Management groups
 
     ![Screenshot of creating a management group.](../media/az104-lab2a-create-mgmt-group.png)
 
-1. In this scenario, all subscriptions would now be added to the management group. RBAC could then be applied to management group and scoped to the Help Desk. Depending on your subscription you may or may not be able to practice adding subscriptions. 
+1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to management group and scoped to the Help Desk. 
 
 ## Task 2: Review and assign a built-in Azure role
 
@@ -79,7 +81,7 @@ In this task, you will assign the VM Contributor role to your user account.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Scroll through the large number of roles definitions that are available. Use the Informational icons to get an idea of each role's permissions. Notice there is also information on the number of users and groups that are assigned to each role.
+1. Scroll through the role definitions that are available. Use the Informational icons to get an idea of each role's permissions. 
 
 1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
 
@@ -87,7 +89,7 @@ In this task, you will assign the VM Contributor role to your user account.
     | --- | --- |
     | Role in the search tab | **Virtual Machine Contributor** |
     | Assign access to (Under Members pane) | **User, group, or service principal** |
-    | Select (+Select Members) | your user account (shown in upper right corner of the portal) |
+    | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
 
     ![Screenshot of assigning a role.](../media/az104-lab1-assign-role.png)
 
@@ -95,22 +97,22 @@ In this task, you will assign the VM Contributor role to your user account.
 
     >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
 
-    >**Note:** This assignment does not actually grant you any additional provileges, since your account has already the Owner role, which includes all privileges associated with the Contributor role.
+    >**Note:** This assignment might not actually grant you any additional provileges. If you already have the Owner role, this role includes all privileges associated with the Contributor role.
 
 
 ## Task 3: Create custom RBAC roles
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization, and should be customized to remove permissions that are not be necessary for day to day management.
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization. In this task we will create a new role and remove permissions that are not be necessary.
 
 ### Create the custom RBAC role for the Help Desk users
 
-1. From the Azure portal, search for and select **Subscriptions**. 
+1. In the portal, search for and the **az104-mg1** management group.
 
-1. Select your subscription, and then select **Access Control (IAM)**.
+1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
 1. Take a minute to review the options on this page, such as view and grant access. 
 
-1. From Access Control (IAM), in Create a custom role, select **Add**.
+1. In the Create a custom role section, select **Add**.
 
     ![Screenshot add a custom role. ](../media/az104-lab2a-add-custom-role.png)
 
@@ -144,15 +146,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This section requires a user account, **HelpDesk-user1**, for testing. 
-
-1. Identify a another user for testing. If this task we use the **HelpDesk-user1** user account. 
-
-    | Setting | Value |
-    | --- | --- |
-    | User name | `HelpDesk-user1` |
-    | Name | `HelpDesk-user1` |
-    | Let me create the password | disabled |
+    >**Note**: This task requires a user account, **HelpDesk-user1**, for testing. If you have this user please continue. If you do not have this user, take a minute to **Add** a new user or identify another account that can used for testing. 
 
 1. Before continuing ensure you have the full **User name** for your test account. You will need this information to log in to the portal. So, take a minute and copy the information to the clipboard. 
 
@@ -196,6 +190,8 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
+1. You have finished testing your custom role and reviewed how to create a support ticket. 
+
 ## Task 4: Monitor role assignments with the Activity Log
 
 In this task, you view the activity log to determine if anyone has created a new role. 
@@ -207,7 +203,13 @@ In this task, you view the activity log to determine if anyone has created a new
     ![Screenshot of the Activity log page with configured filter.](../media/AZ104-lab02a-searchactivitylog.png)
 
 3. Verify the Activity log shows your role assignment.
-   
+
+## Experiment with PowerShell (optional)
+
+
+
+
+
 ## Review
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
