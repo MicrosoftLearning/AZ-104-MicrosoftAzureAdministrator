@@ -81,7 +81,9 @@ In this task, you will assign the VM Contributor role to your user account.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Scroll through the role definitions that are available. Use the Informational icons to get an idea of each role's permissions. 
+1. Scroll through the role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**.
+
+1. Select **+ Add**, and then **Add role assignment**. 
 
 1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
 
@@ -106,13 +108,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 ### Create the custom RBAC role for the Help Desk users
 
-1. In the portal, search for and the **az104-mg1** management group.
+1. In the portal, search for and select the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Take a minute to review the options on this page, such as view and grant access. 
-
-1. In the Create a custom role section, select **Add**.
+1. Select the **Check access** tab, then in the Create a custom role box, select **Add**.
 
     ![Screenshot add a custom role. ](../media/az104-lab2a-add-custom-role.png)
 
@@ -132,7 +132,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
 
-1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group that was created in the prevous task, then select **Select**.
+1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
 
     ![Screenshot assign scope.](../media/az104-lab2a-add-scope.png)
 
@@ -146,9 +146,9 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This task requires a user account, **HelpDesk-user1**, for testing. If you have this user please continue. If you do not have this user, take a minute to **Add** a new user or identify another account that can used for testing. 
+    >**Note**: This task requires a user account for testing. For this lab we will use, **HelpDesk-user1**. Please take a minute to identify a test user, if necessary **Add** a new user. If you are creating a new user, require the password to be set when they login. 
 
-1. Before continuing ensure you have the full **User name** for your test account. You will need this information to log in to the portal. So, take a minute and copy the information to the clipboard. 
+1. Before continuing ensure you have the **User principal name** for your test account. You will need this to login to the portal. Use the icon to copy this information to the clipboard. 
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group and display its details.
 
@@ -170,7 +170,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
     
 ### Test the Help Desk user account to ensure it has the correct privileges
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. If prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the test user account. If prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of clipboard.
 
@@ -180,7 +180,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ Create a support request**. 
 
->**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
+    >**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
 
 1. In the **InPrivate** browser window, on the **Problem Description/Summary** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
 
@@ -188,7 +188,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note**: If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
 
-1. Do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
+1. Take a few minutes to explore creating a **New support request**, but do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
 1. You have finished testing your custom role and reviewed how to create a support ticket. 
 
@@ -202,7 +202,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
     ![Screenshot of the Activity log page with configured filter.](../media/AZ104-lab02a-searchactivitylog.png)
 
-3. Verify the Activity log shows your role assignment.
+3. Verify the Activity log shows the role creation activities. 
 
 ## Experiment with PowerShell (optional)
 
