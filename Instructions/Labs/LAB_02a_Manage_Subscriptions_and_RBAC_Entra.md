@@ -33,7 +33,7 @@ In this lab, you will:
 + Task 3: Assign RBAC roles
 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
