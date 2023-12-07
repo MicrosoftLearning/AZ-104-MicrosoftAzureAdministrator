@@ -156,7 +156,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
 
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to each separately.
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
@@ -182,7 +182,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
 
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to each separately.
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
