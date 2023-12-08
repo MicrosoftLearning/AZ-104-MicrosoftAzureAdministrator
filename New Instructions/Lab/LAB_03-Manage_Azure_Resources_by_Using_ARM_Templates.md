@@ -1,16 +1,24 @@
 ---
 lab:
-    title: 'Lab 03: Manage Azure resources by Using Azure Resource Manager Templates'
+    title: 'Lab 03: Manage Azure resources by using Azure Resource Manager Templates'
     module: 'Administer Azure Resources'
 ---
 
-# Lab 03 - Manage Azure resources by Using Azure Resource Manager Templates
+# Lab 03 - Manage Azure resources by using Azure Resource Manager Templates
 
 ## Lab requirements
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
 ## Estimated timing: 30 minutes
+
+## Interactive lab simulation
+
+There are a couple of interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
+**[Create a virtual machine with a template](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209)**. Deploy a virtual machine with a QuickStart template. 
+
+**[Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)**. Review, create, and deploy a managed disks with a template.
 
 ## Lab scenario
 Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
