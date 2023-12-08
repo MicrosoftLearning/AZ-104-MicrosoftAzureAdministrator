@@ -23,9 +23,9 @@ There are a couple of interactive lab simulations that you might find useful for
 ## Lab scenario
 Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
 
-## Interactive lab simulation
+## Architecture diagram
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
+![Diagram of the tasks.](../media/az104-lab03b-architecture-diagram.png)
 
 ## Tasks
 
@@ -34,10 +34,6 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 + Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
 + Task 4: Experiment with Azure PowerShell (optional).
 + Task 5: Experiment with the CLI (optional). 
-
-## Architecture diagram
-
-![Diagram of the tasks.](../media/az104-lab03b-architecture-diagram.png)
 
 ## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 
@@ -152,8 +148,6 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. Notice your managed disk was created.
 
-1. As you have time, try the deployment again. Be sure to make a change, like disk name, before you deploy.
-   
 ## Task 4: Experiment with using Azure PowerShell to deploy a template (optional)
 
 1. Open the Cloud Shell, and select **PowerShell**.
