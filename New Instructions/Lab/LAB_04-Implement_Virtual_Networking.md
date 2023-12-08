@@ -23,11 +23,9 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%2
 + Task 1: Create a resource group.
 + Task 2: Create the CoreServicesVnet virtual network and subnets.
 + Task 3: Create the ManufacturingVnet virtual network and subnets.
-+ Task 4: Configure a Network Security Group. 
++ Task 4: Configure communication between an Application Security Group and a Network Security Group. 
 
 ## Architecture diagram
-![Network layout](../media/az104-lab04-diagram.png)
-
 
 | **Virtual Network** | **VNet address and region**   |  **Subnet**                | **Subnet address**    |
 | ------------------- | ------------ | --------------------------------- | ------------------------- | 
@@ -35,6 +33,8 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%2
 |                     |              		  | DatabaseSubnet            | 10.20.20.0/24 |
 | ManufacturingVnet   | 10.30.0.0/16  West Europe | SensorSubnet1             | 10.30.20.0/24 |
 |                     |                           | SensorSubnet2             | 10.30.21.0/24 |
+
+![Network layout](../media/az104-lab04-diagram.png)
 
 These virtual networks and subnets are structured in a way that accommodates existing resources yet allows for the projected growth. Let's create these virtual networks and subnets to lay the foundation for our networking infrastructure.
 
@@ -52,11 +52,11 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 1. Create the resource group with these settings. 
 
-| **Tab**         | **Option**                                 | **Value**            |
-| --------------- | ------------------------------------------ | -------------------- |
-| Basics          | Resource group                             | `az104-rg4` |
-|                 | Region                                     | (US) **East US**     |
-| Tags            | No changes required                        |                      |
+	| **Tab**         | **Option**                                 | **Value**            |
+	| --------------- | ------------------------------------------ | -------------------- |
+	| Basics          | Resource group                             | `az104-rg4` |
+	|                 | Region                                     | (US) **East US**     |
+	| Tags            | No changes required                        |                      |
    
 1. When finished select **Review + create** and then **Create**.
    
@@ -66,34 +66,30 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Search for and select **Virtual Networks**.
 
-    ![Azure portal home page Global Search bar results for virtual network.](../media/az104-lab04-vnet-search.png)
+1. Select **Create** on the Virtual networks page, and complete the **Basics** and **IPv4 address space**. 
 
-1. Select **Create** on the Virtual networks page.  
+1. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
-    ![Create a virtual network wizard.](../media/az104-lab04-createvnet.png)
+	| **Tab**      | **Option**         | **Value**            |
+	| ------------ | ------------------ | -------------------- |
+	| Basics       | Resource Group     | **az104-rg4** |
+	|              | Name               | `CoreServicesVnet`     |
+	|              | Region             | (US) **East US**         |
+	| IP Addresses | IPv4 address space | `10.20.0.0/16` (Delete or overwrite the IP address space)     |
 
-3. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
-| **Tab**      | **Option**         | **Value**            |
-| ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | **az104-rg4** |
-|              | Name               | `CoreServicesVnet`     |
-|              | Region             | (US) **East US**         |
-| IP Addresses | IPv4 address space | `10.20.0.0/16` (Delete or overwrite the IP address space)     |
+1. In the subnets area, delete the **default** subnet.
 
-   
-![IP address configuration for azure virtual network deployment](../media/az104-lab04-address-space.png)
+1. Select **+ Add subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
-4. Create the CoreServicesVnet subnets. To begin delete the **default** subnet, then select **+ Add subnet**. To finish creating each subnet, select **Add**.
-
-| **Subnet**             | **Option**           | **Value**              |
-| ---------------------- | -------------------- | ---------------------- |
-| SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet`   |
-|                        | Starting address		| `10.20.10.0`          |
-|						 | Size					| `/24`	|
-| DatabaseSubnet         | Subnet name          | `DatabaseSubnet`         |
-|                        | Starting address		| `10.20.20.0`        |
-|						 | Size					| `/24`	|
+	| **Subnet**             | **Option**           | **Value**              |
+	| ---------------------- | -------------------- | ---------------------- |
+	| SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet`   |
+	|                        | Starting address		| `10.20.10.0`          |
+	|						 | Size					| `/24`	|
+	| DatabaseSubnet         | Subnet name          | `DatabaseSubnet`         |
+	|                        | Starting address		| `10.20.20.0`        |
+	|						 | Size					| `/24`	|
 
 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
@@ -113,7 +109,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
 
-1. Edit the local **template.json** file in the **Downloads** folder. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in **restricted mode**. 
+1. Edit the local **template.json** file in the **Downloads** folder. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**. 
 
 ### Make changes for the ManufacturingVnet virtual network
 
@@ -199,11 +195,11 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Return to the portal, and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
    
-## Task 4: Configure a Network Security Group 
+## Task 4: Configure communication between an Application Security Group and a Network Security Group. 
 
 In this task, we create a network security group, associate it with a subnet, and add inbound and outbound rules. 
 
-### Create an application security group
+### Create the Application Security Group (ASG)
 
 1. In the Azure portal, search for and select **Application security groups**.
 
@@ -218,7 +214,7 @@ In this task, we create a network security group, associate it with a subnet, an
 
 1. Click **Review + create** and then after the validation click **Create**.
 
-### Create the network security group and associate it with a subnet
+### Create the Network Security Group and associate it with the ASG subnet
 
 1. In the Azure portal, search for and select **Network security groups**.
 
@@ -265,3 +261,6 @@ In this task, we create a network security group, associate it with a subnet, an
     | Priority | **100** |
     | Name | **AllowInternet** |
 
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resource. This will ensure resourcess are freed up and cost is minimized.
