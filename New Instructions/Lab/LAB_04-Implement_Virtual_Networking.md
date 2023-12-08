@@ -16,10 +16,13 @@ The **ManufacturingVnet** virtual network is deployed in the **West Europe** reg
 
 ## Interactive lab simulations
 
-There are several interactive lab simulations that you might find useful around this topic.
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-**[Implement virtual networking]([https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208).**
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
+**[Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204)**. Create a virtual networks with two virtual machines. Demonstrate the virtual machines can communicate. 
+
+**[Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure).** Create a resource group, and create virtual networks with subnets.  
+
+**[Implement virtual networking](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208).** Create and configure a virtual network, deploy virtual machines, configure network security groups, and configure Azure DNS.
 
 ## Tasks
 
@@ -185,22 +188,23 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Verify your files are available in the Cloud Shell storage.
 
-    ```sh
+    ```bash
     ls
     ```
 
 1. Deploy the template to the az104-rg4 resource group.
 
-    ```sh
+    ```bash
     az deployment group create --resource-group az104-rg4 --template-file template.json --parameters parameters.json
     ```
+    
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
 1. Return to the portal, and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
    
 ## Task 4: Configure communication between an Application Security Group and a Network Security Group. 
 
-In this task, we create a network security group, associate it with a subnet, and add inbound and outbound rules. 
+In this task, we create an Appication Security Group and a Network Security Group. The NSG will have inbound security rule that allows traffic from the ASG. 
 
 ### Create the Application Security Group (ASG)
 
@@ -253,8 +257,8 @@ In this task, we create a network security group, associate it with a subnet, an
 
     | Setting | Value |
     | -- | -- |
-    | Source | **Any** |
-    | Source port ranges | *****|
+    | Source | **any** |
+    | Source port ranges |  ***** |
     | Destination | **Application security group** |
     | Destination application security groups | **asg-web** |
     | Service | **Custom** (notice your other choices) |
@@ -262,8 +266,10 @@ In this task, we create a network security group, associate it with a subnet, an
     | Protocol | **TCP** |
     | Action | **Allow** |
     | Priority | **100** |
-    | Name | **AllowInternet** |
+    | Name | **AllowASG** |
 
+1. After creating your NSG rule, take a minute to review the default **Outgoing security rules**.
+   
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resource. This will ensure resourcess are freed up and cost is minimized.
