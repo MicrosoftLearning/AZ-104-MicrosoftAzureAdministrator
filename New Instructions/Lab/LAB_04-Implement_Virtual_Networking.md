@@ -14,8 +14,11 @@ The **CoreServicesVnet** virtual network is deployed in the **East US** region. 
 
 The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and needs an IP address space that it can expand into.
 
-## Interactive lab simulation
+## Interactive lab simulations
 
+There are several interactive lab simulations that you might find useful around this topic.
+
+**[Implement virtual networking]([https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208).**
 An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
 
 ## Tasks
@@ -168,7 +171,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 	
 
 
-1. Before continuing, return to the portal and ensure the ManufacturingVnet virtual network and subnets were created. You may need to **Refresh** the virtual networks page. 
+1. Before continuing, return to the portal and ensure the **ManufacturingVnet** virtual network and subnets were created. You may need to **Refresh** the virtual networks page. 
 
 
 ### Deploy the template with Bash (option 2)
