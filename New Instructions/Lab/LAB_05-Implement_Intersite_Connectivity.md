@@ -79,7 +79,9 @@ In this task, we create a core services virtual network with a virtual machine.
 
 1. Select **Review + Create**, and then select **Create**.
 
-1. You do not need to wait for the virtual machine to be created. Continue on to the next task.    
+1. You do not need to wait for the resources to be created. Continue on to the next task.
+
+    >**Note:** Did you notice in this task you created the virtual network when you created the virtual machine? 
 
 ## Task 2: Create a manufacturing services virtual machine and virtual network.
 
@@ -121,6 +123,7 @@ In this task, we create a manufacturing services virtual network with a virtual 
 1. Select **Review + Create**, and then select **Create**.
 
 ## Task 3: Test the connection between the virtual machines. 
+
 In this task, you test the connection between the virtual machines in different virtual networks.
 
 ### Verify the private IP address fo the CoreServicesVM
@@ -129,7 +132,7 @@ In this task, you test the connection between the virtual machines in different 
 
 1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
    
-### Connect to the **ManufacturingVM**.
+### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
 1. In the portal, select for and select the `**ManufacturingVM**` virtual machine.
 
@@ -137,8 +140,10 @@ In this task, you test the connection between the virtual machines in different 
 
 1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-     ```Test-NetConnection <CoreServicesVM private IP address> -port 3389```
-
+   ```Powershell
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389```
+   ```
+   
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
    
 1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate.
@@ -169,7 +174,7 @@ In this task, you create virtual network peerings to enable communications betwe
     |                                      | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
     |                                      | Virtual network deployment model              | **Resource manager**                      |
     |                                      | I know my resource ID                         | Not selected                          |
-    |                                      | Subscription                                  | <your subscription>    |
+    |                                      | Subscription                                  | *your subscription*    |
     |                                      | Virtual network                               | **ManufacturingVnet**                     |
     |                                      | Traffic to remote virtual network             | Allow (default)                       |
     |                                      | Traffic forwarded from remote virtual network | **Allow**                       |
@@ -206,7 +211,12 @@ In this task, you verify the virtual machines in different virtual networks can 
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
++ By default, resources in different virtual networks cannot communicate with other.
++ Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
++ Peered virtual networks appear as one for connectivity purposes.
++ The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
+
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource. This will ensure resourcess are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
 
