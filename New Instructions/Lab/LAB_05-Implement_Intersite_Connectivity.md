@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. You must have the ability to create virtual machines and virtual networks. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
 ## Estimated time: 30 minutes
 
@@ -16,25 +16,27 @@ This lab requires an Azure subscription. You must have the ability to create vir
 
 Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario which is also popular for separating production from development or separting one subsidiary from another.
 
-## Interactive lab simulation
+## Interactive lab simulations
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Connect two Azure virtual networks using global virtual network peering](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering). Test the connection between two virtual machines in different virtual networks. Create a virtual network peering and retest.
++ [Implement intersite connectivity](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209). Run a template to create a virtual network infrastructure with several virtual machines. Configure virtual network peerings and test the connections. 
 
 ## Tasks
 
 + Task 1: Create a core services virtual machine and virtual network.
 + Task 2: Create a manufacturing services virtual machine and virtual network.
-+ Task 3: Connect to a VM using RDP.
-+ Task 4: Test the connection between the VMs.
-+ Task 5: Create VNet peerings between VNets.
-+ Task 6: Test the connection between VMs.
++ Task 3: Test the connection between the virtual machines. 
++ Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Task 5: Retest the connection between the virtual machines. 
  
 
 ## Architecture diagram
 
 ![Lab 05 architecture diagrm](../media/az104-lab5-architecture-diagram.png)
 
-## Task 1: Create a core services VM and network.
+## Task 1:  Create a core services virtual machine and virtual network.
 
 In this task, we create a core services virtual network with a virtual machine. 
 
@@ -73,23 +75,19 @@ In this task, we create a core services virtual network with a virtual machine.
     | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
 
-    ![image](../media/az104-lab05-createcorevnet.png) <!-- This is not improperly cropped - there are no breadcrumbs on this UI. --> 
-
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
 1. Select **Review + Create**, and then select **Create**.
 
 1. You do not need to wait for the virtual machine to be created. Continue on to the next task.    
 
-## Task 2: Create the manufacturing services VM and network.
+## Task 2: Create a manufacturing services virtual machine and virtual network.
 
 In this task, we create a manufacturing services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
 1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
-
-    ![Screenshot of create virtual machine page. ](../media/az104-lab05-createmfgvm.png)
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -105,8 +103,6 @@ In this task, we create a manufacturing services virtual network with a virtual 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
-    ![Screenshot of Basic page for virtual machine creation.](./media/az104-lab05-createmfgvm2.png)
-
 1. On the Disks tab, set the OS disk type to **Standard HDD**, and then select **Next: Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
@@ -119,8 +115,6 @@ In this task, we create a manufacturing services virtual network with a virtual 
     | Address space | `172.16.0.0/16`  |
     | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
-
-    ![Screenshot of virtual network page.](../media/az104-lab05-mfgvnet.png) <!-- This is not improperly cropped - there are no breadcrumbs in on this UI. --> 
 
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
@@ -147,7 +141,8 @@ In this task, you test the connection between the virtual machines in different 
 
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
    
-1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. 
+1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate.
+   
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
  
@@ -206,6 +201,12 @@ In this task, you verify the virtual machines in different virtual networks can 
 1. The test connection should succeed. 
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
-## Review
 
-Congratulations! You have successfully created VMs, created peerings, and tested communications between virtual machines.
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resource. This will ensure resourcess are freed up and cost is minimized.
+
