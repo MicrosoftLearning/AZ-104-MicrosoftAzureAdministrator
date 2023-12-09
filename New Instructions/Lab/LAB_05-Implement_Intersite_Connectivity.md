@@ -28,7 +28,7 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 1: Create a core services virtual machine and virtual network.
 + Task 2: Create a manufacturing services virtual machine and virtual network.
 + Task 3: Test the connection between the virtual machines. 
-+ Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Task 4: Create VNet peerings between the virtual networks. 
 + Task 5: Retest the connection between the virtual machines. 
  
 
@@ -151,7 +151,7 @@ In this task, you test the connection between the virtual machines in different 
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
  
-## Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
+## Task 4: Create VNet peerings between the virtual networks
 
 In this task, you create virtual network peerings to enable communications between VNets.
 
