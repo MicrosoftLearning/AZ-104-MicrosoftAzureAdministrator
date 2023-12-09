@@ -26,64 +26,29 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Tasks
 
-+ Task 1: Provision the lab environment
++ Task 1: Create a resource group. 
 + Task 2: Create and configure Azure Storage accounts
 + Task 3: Manage blob storage
 + Task 4: Manage authentication and authorization for Azure Storage
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
+## Task 1: Create a resource group
 
-### Instructions
+### Create a resource group for all the resources in this lab. 
 
-## Exercise 1
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-## Task 1: Provision the lab environment
+1. Search for and select **Resource groups**, then select **+ Create**.  
 
-In this task, you will deploy an Azure virtual machine by using an existing template. This VM will be used later in the lab to work with Azure storage.
+1. Create the resource group with these settings. 
 
-1. If necessary, download the **\\Allfiles\\Labs\\07\\az104-vm1-template.json** and **\\Allfiles\\Labs\\07\\az104-vm1-parameters.json** lab files to your computer.
-
-1. Sign in to the [Azure portal](https://portal.azure.com). 
-
-1. From the Azure portal, search for and select `Deploy a custom template`.
-
-1. On the custom deployment page, select **Build you own template in the editor**.
-
-1. On the edit template page, select **Load file**.
-
-1. Locate and select the **\\Allfiles\\Labs\\07\\az104-vm1-template.json** file and select **Open**.
-
-    ![image](./media/az104-lab07-template1.png)
-
-1. Select **Save**.
-
-1. On the custom deployment page, select **Edit parameters**.
-
-1. On the edit parameters page, select **Load file**. Locate and select the **\\Allfiles\\Labs\\07\\az104-vm1-parameters.json** file and select **Open**.
-
-    ![image](./media/az104-lab07-parameters1.png)
-
-1. Select **Save**.
-
-1. Use the following information to complete the fields on the custom deployment page.
-
-    | Setting       | Value         | 
-    | ---           | ---           |
-    | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg1` (If necessary, select **Create new**)
-    | Region        | **East US**   |
-    | VM Size       | **Standard DS2 v3** |
-    | Admin Username| `Student` |
-    | Password      | Provide a secure password |
-
-    ![image](./media/az104-lab07-deploy1.png)
-
-1. Select **Review + Create**, and then select **Create**.
-
-    >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
-
-    >**Note**: If you got an error stating the VM size is not available, perform the steps again, select **Change size** and try a SKU that is available in your subscription.
-
+	| **Tab**         | **Option**                                 | **Value**            |
+	| --------------- | ------------------------------------------ | -------------------- |
+	| Basics          | Resource group                             | `az104-rg7` |
+	|                 | Region                                     | (US) **East US**     |
+	| Tags            | No changes required                        |                      |
+   
+1. When finished select **Review + create** and then **Create**.
 
 ## Task 2: Create and configure Azure Storage accounts
 
@@ -96,7 +61,7 @@ In this task, you will create and configure an Azure Storage account. Azure stor
     | Setting | Value |
     | --- | --- |
     | Subscription          | the name of your Azure subscription  |
-    | Resource group        | **az104-rg1** |
+    | Resource group        | **az104-rg4** |
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **East US**  |
     | Performance           | **Standard** |
