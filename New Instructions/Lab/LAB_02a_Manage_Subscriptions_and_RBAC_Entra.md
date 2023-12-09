@@ -25,7 +25,11 @@ In order to simplify management of Azure resources in your organization, you hav
 
 ## Interactive lab scenario
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
+There are some interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Manage access with RBAC](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2014). Assign built-in role to a user and monitor the activity logs. 
+
++ [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group, and create and assign a custom RBAC role.
 
 ## Tasks
 
@@ -33,12 +37,9 @@ An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%2
 + Task 2: Review and assign a built-in Azure role.
 + Task 3: Create and assign a custom RBAC roles. 
 + Task 4: Monitor role assignments with the Activity Log.
-+ Task 5: Experiment with PowerShell (optional)
-+ Task 6: Experiment with CLI (optional)
 
 ## Architecture diagram
 
-<!-- Update diagram - simplify names, get rid of custom role JSON--> 
 ![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
 
 
@@ -69,8 +70,6 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-    ![Screenshot of creating a management group.](../media/az104-lab2a-create-mgmt-group.png)
-
 1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to management group and scoped to the Help Desk. 
 
 ## Task 2: Review and assign a built-in Azure role
@@ -93,8 +92,6 @@ In this task, you will assign the VM Contributor role to your user account.
     | Assign access to (Under Members pane) | **User, group, or service principal** |
     | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
 
-    ![Screenshot of assigning a role.](../media/az104-lab1-assign-role.png)
-
 4. Click **Review + assign** twice to create the role assignment.
 
     >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
@@ -114,8 +111,6 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select the **Check access** tab, then in the Create a custom role box, select **Add**.
 
-    ![Screenshot add a custom role. ](../media/az104-lab2a-add-custom-role.png)
-
 1. On the Basics tab of Create a custom role, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.`
 
 1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
@@ -128,13 +123,9 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    ![Screenshot of the not actions. ](../media/az104-lab2a-add-not-action.png)
-
 1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
 
 1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
-
-    ![Screenshot assign scope.](../media/az104-lab2a-add-scope.png)
 
 1. Select the **JSON** tab. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
@@ -154,15 +145,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
 
-    ![Screenshot assign roles.](../media/az104-lab2a-assign-role.png)
-
 1. On the **Role** tab, search for `Custom Support Request`. 
 
     >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
 1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **HelpDesk-user1**.  
-
-    ![Screenshot add members](../media/az104-lab2a-add-members.png)
 
 1. Select **Review + assign** twice.
 
@@ -204,17 +191,18 @@ In this task, you view the activity log to determine if anyone has created a new
 
 3. Verify the Activity log shows the role creation activities. 
 
-## Experiment with PowerShell (optional)
-
-
-
-
-
-## Review
+## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Management groups are used to logically organize subscriptions.
-+ Azure AD has a large number of built-in roles. You can assign these roles to control access to resources.
-+ You can create new Azure AD roles or customize existing roles. Roles are specified in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
++ Azure has a large number of built-in roles. You can assign these roles to control access to resources.
++ You can create new roles or customize existing roles.
++ Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments. 
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resourcess are freed up and cost is minimized.
+
+
