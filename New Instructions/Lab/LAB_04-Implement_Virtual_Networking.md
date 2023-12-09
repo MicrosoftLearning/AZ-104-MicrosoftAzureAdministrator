@@ -269,7 +269,17 @@ In this task, we create an Appication Security Group and a Network Security Grou
     | Name | **AllowASG** |
 
 1. After creating your NSG rule, take a minute to review the default **Outgoing security rules**.
-   
+
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ A virtual network is a representation of your own network in the cloud. 
++ When designing virtual networks it is a good practice to avoid overlapping IP address ranges. This will reduce issues and simplify troubleshooting.
++ A subnet is a range of IP addresses in the virtual network. You can divide a virtual network into multiple subnets for organization and security.
++ A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
++ Application security groups are used to protect groups of servers with a common function, such as web servers or database servers. 
+
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource. This will ensure resourcess are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resource. This will ensure resources are freed up and cost is minimized.
