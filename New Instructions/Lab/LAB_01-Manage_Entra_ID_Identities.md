@@ -18,7 +18,11 @@ Your organization is building out a new lab environment for pre-production testi
 
 ## Interactive lab simulation
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this hosted lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required. 
+There are a couple of interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a suport request, technical or billing. 
+
++ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
 ## Tasks
 
@@ -122,8 +126,6 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
-    ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/AZ104-lab01-cloudshellicon.png)
-
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash is used in the next task.
 
     >**Did you know?**  If you mostly work with Linux systems, Azure CLI feels more natural. If you mostly work with Windows systems, Azure PowerShell feels more natural. 
@@ -140,7 +142,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
-## Task 5: Practice with PowerShell.
+## Task 5: Practice with Azure PowerShell.
 
 In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
 
@@ -167,7 +169,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    Get-AzResourceGroup -Name $rgName
    ```
 
-1. Now, let's try to create new Azure AD group.
+1. Now, let's try to create new Azure group.
 
    ```powershell
    Get-Help New-AzureADGroup -detailed
@@ -180,11 +182,11 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    New-AzureADGroup -DisplayName "MyPSgroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "MyPSgroup"
    ```
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. You may need to Refresh the pages. 
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages. 
 
-## Task 6: Practice with Bash.
+## Task 6: Practice with the Bash shell. 
 
-In this task, you create a resource group and an Azure AD group by using Azure CLI session within Cloud Shell.
+In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell.
 
 1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**.
 
@@ -209,7 +211,7 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    ```sh
    az group show --name $RGNAME
    ```
-1. Now, let's use help to learn more about creating an Azure AD group.
+1. Now, let's use help to learn more about creating an Azure group.
 
     ```sh
     az ad group --help
@@ -222,16 +224,16 @@ In this task, you create a resource group and an Azure AD group by using Azure C
    az ad group list
    ```
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure AD group. You may need to Refresh the pages.   
+1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages.   
     
-## Main takeaways
+## Review the main points of the lab
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
 + The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
-+ Resource groups are a grouping of related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
-+ There are different types of user accounts in Microsoft Entra ID. Each use account type has a level of access specific to the scope of work expected. 
-+ Group accounts group related users or devices. Group membership can be assigned statically or dynamically. 
-+ Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
++ Resource groups are a way of grouping of related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
++ There are different types of user accounts in Microsoft Entra ID. Each user account type has a level of access specific to the scope of work expected. 
++ Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
++ The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
 + Azure PowerShell and Bash provide a scripted way to create resources. 
   
