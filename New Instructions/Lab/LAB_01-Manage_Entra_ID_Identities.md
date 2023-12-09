@@ -236,4 +236,8 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
 + The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
 + Azure PowerShell and Bash provide a scripted way to create resources. 
-  
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
+
