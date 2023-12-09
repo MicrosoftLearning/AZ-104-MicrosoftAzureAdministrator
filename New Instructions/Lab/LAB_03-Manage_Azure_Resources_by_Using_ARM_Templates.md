@@ -204,4 +204,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Resource Manager templates let you deploy, manage, and monitor all the resources for your solution as a group, rather than handling these resources individually.
 + An Azure Resource Manager template is a JavaScript Object Notation (JSON) file that lets you manage your infrastructure declaratively rather than with scripts.
 + Rather than passing parameters as inline values in your template, you can use a separate JSON file that contains the parameter values.
-+ Azure Resource Manager templates can be deployed in a variety of ways including the Azure portal, Azure PowerShell, and CLI. 
++ Azure Resource Manager templates can be deployed in a variety of ways including the Azure portal, Azure PowerShell, and CLI.
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
