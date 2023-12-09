@@ -5,17 +5,26 @@ lab:
 ---
 
 # Lab 07 - Manage Azure Storage
-# Student lab manual
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
 Your organization is currently storing data in on-premises data stores. The majority of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-In this lab, you will:
++ [Create blob storage](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%205). Create a storage account, manage blob storage, and monitor storage activities. 
+  
++ [Manage Azure storage](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011). Create a storage account and review the configuration. Manage blob storage containers. Configure storage networking. 
+
+## Architecture diagram
+
+![image](./media/az104-lab07-architecture-diagram.png)
+
+## Tasks
 
 + Task 1: Provision the lab environment
 + Task 2: Create and configure Azure Storage accounts
@@ -23,13 +32,6 @@ In this lab, you will:
 + Task 4: Manage authentication and authorization for Azure Storage
 + Task 5: Create and configure an Azure Files shares
 + Task 6: Manage network access for Azure Storage
-
-## Estimated timing: 30 minutes
-
-## Architecture diagram
-
-![image](./media/az104-lab07-architecture-diagram.png)
-
 
 ### Instructions
 
