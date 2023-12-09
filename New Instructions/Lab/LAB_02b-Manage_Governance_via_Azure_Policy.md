@@ -12,6 +12,10 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Estimated timing: 30 minutes
 
+## Interactive lab simulation
+
+An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required.
+
 ## Lab scenario
 
 Your organization's cloud footprint has grown considerably in the last year. During a recent audit, you discovered a substantial number of resources that do not have a defined owner, project, or cost center. In order to improve management of Azure resources in your organization, you decide to implement the following functionality:
@@ -22,9 +26,7 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - update existing resources with resource tags
 
-## Interactive lab simulation
 
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required.
 
 ## Tasks
 
