@@ -203,6 +203,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resourcess are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
 
 
