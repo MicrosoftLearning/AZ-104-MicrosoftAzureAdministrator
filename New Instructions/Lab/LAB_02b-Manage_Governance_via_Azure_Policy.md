@@ -12,10 +12,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Estimated timing: 30 minutes
 
-## Interactive lab simulation
-
-An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203)** is available for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but the core concepts and ideas being demonstrated are the same. An Azure subscription is not required.
-
 ## Lab scenario
 
 Your organization's cloud footprint has grown considerably in the last year. During a recent audit, you discovered a substantial number of resources that do not have a defined owner, project, or cost center. In order to improve management of Azure resources in your organization, you decide to implement the following functionality:
@@ -26,13 +22,19 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - update existing resources with resource tags
 
+## Interactive lab simulations
 
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Create an Azure policy](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2017). Create an Azure policy that restricts the location resources can be located. Create a new resource and ensure the policy is enforced. 
+
++ [Manage governance via Azure policy](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203). Create and assign tags via the Azure portal. Create an Azure policy that requires tagging. Remediate non-compliant resources.
 
 ## Tasks
 
-+ Task 1: Create and assign tags via the Azure portal
-+ Task 2: Enforce tagging via an Azure Policy
-+ Task 3: Apply tagging via an Azure Policy
++ Task 1: Create and assign tags via the Azure portal.
++ Task 2: Enforce tagging via an Azure Policy.
++ Task 3: Apply tagging via an Azure Policy.
 
 ## Architecture diagram
 
@@ -49,8 +51,6 @@ In this task, you will create and assign a tag to an Azure resource group via th
 1. From the Resource groups, select **Create**.
 
 1. Provide the name `az104-rg2b` and ensure that the Region is set to **East US**.
-
-    ![Screenshot of the create resource gr](../media/az104-lab02b-newrg.png)
 
 1. Click **Review + Create**, and then click **Create**.
 
@@ -92,8 +92,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope).
 
-    ![Screenshot of the policy scope.](../media/az104-lab02b-policyscope.png) 
-
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -110,8 +108,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Tag Name | `Cost Center` |
     | Tag Value | `Default` |
-
-    ![Screenshot of the policy parameters.](../media/az104-lab02b-policyparams.png) 
 
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -133,8 +129,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Resource group | **az104-rg2b** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
-
-    ![Screenshot of the create storage page.](../media/az104-lab02b-createstorage1.png) 
 
     >**Note**: You may receive a **Validation failed. Click here for details** error. If so, click the error message to identify the reason for the failure and skip the next step. 
 
@@ -181,8 +175,6 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | --- | --- |
     | Tag Name | `Role` |
 
-    ![Screenshot of the policy parameters.](../media/az104-lab02b-policyparams2.png) 
-
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -208,17 +200,15 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     | Setting | Value |
     | --- | --- |
-    | Storage account name | any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter |
-
-    ![Screenshot of the validation passed page. ](../media/az104-lab02b-createstorage1.png) 
+    | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
 
 1. Verify that this time the validation passed and click **Create**.
 
 1. Once the new storage account is provisioned, click **Go to resource** button. On the **Overview** blade, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-## Review
+## Review the main points of the lab
 
-Congratulations on completing the lab. The main takeaways from the lab are:
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Azure tags are metadata that consists of a key-value pair. Tags describe a particular resource in your environment. In particular, tagging in Azure enables you to label your resources in a logical manne.
 + Azure Policy establishes conventions for resources. Policy definitions describe resource compliance conditions and the effect to take if a condition is met. A condition compares a resource property field or a value to a required value. There are many built-in policy definitions.
