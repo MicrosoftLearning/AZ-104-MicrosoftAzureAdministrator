@@ -6,7 +6,7 @@ lab:
 
 # Lab 07 - Manage Azure Storage
 
-## Estimated timing: 30 minutes
+## Estimated timing: 40 minutes
 
 ## Lab scenario
 
@@ -22,13 +22,13 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture diagram
 
-![image](./media/az104-lab07-architecture-diagram.png)
+![image](../media/az104-lab07-architecture-diagram.png)
 
 ## Tasks
 
 + Task 1: Create and configure a storage account. 
 + Task 2: Implement secure blob storage.
-+ Task 3: Implement 
++ Task 3: Provide limited access to blob storage. 
 
 ## Task 1: Create and configure the private storage account. 
 
@@ -50,13 +50,13 @@ In this task, you will create and configure a storage account.
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
-1. On the **Advanced** tab, review the available options, accept the defaults, and click **Next: Networking >**.
+1. On the **Advanced** tab, review the available options, accept the defaults.
 
 1. On the **Networking** tab, review the available options, select **Private (no anonymous access)**.
 
-1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy.
+1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Accept the defaults
 
-1. Review the **Encryption** tab. Notice the additional security options. 
+1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
 1. Select **Review**, wait for the validation process to complete and then click **Create**.
 
@@ -64,9 +64,16 @@ In this task, you will create and configure a storage account.
 
 1. Review the **Overview** blade and the additional configurations that can be changed.
 
-1. Notice in the **Data storage** section, this storage account is for Blob containers, File shares, Queues, and Tables.
+1. Notice in the **Data storage** section, this storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Data management** section, view the **Redundancy** blade. Notice information about your primary and secondary data regions. 
+1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+
+1. In the **Data management** section, select **Lifecycle management**, and then select **Add rule**.
+
++ **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
++ On the **Base blobs** tab, if based blobs were last modified more than `30 days` ago then **move to cool storage**.
+
+    ![image](../media/az104-lab07-mvoetocool.png)
 
 ## Task 2: Manage blob storage
 
@@ -76,7 +83,7 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
 1. In the **Data storage** section, click **Containers**. 
 
-1. Click **+ Container** and create a container with the following settings:
+1. Click **+ Container** and **Create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -85,7 +92,7 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
     ![image](../media/az104-lab07-create-container.png)
 
-1. In the list of containers, click **data** and then click **Upload**.
+1. Select your **data** container and then click **Upload**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
@@ -93,7 +100,7 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
     | Setting | Value |
     | --- | --- |
-    | Upload file | add the file you have selected to upload |
+    | browse for files | add the file you have selected to upload |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
     | Access tier | **Hot**  (notice the other options) |
@@ -101,33 +108,25 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
     > **Note**: Access tiers can be set for individual blobs.
 
-    ![image](../media/az104-lab07-upload-blob.png)
-
 1. Click **Upload**.
 
-    > **Note**: Note that the upload automatically created a subfolder named **licenses**.
+1. Confirm you have a new folder and your file was uploaded. 
 
-1. Back on the **data** blade, click **licenses** and then click **LICENSE**.
+1. Select your upload file and review the options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
-1. On the **licenses/LICENSE** blade, review the available options.
-
-    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
-
-## Task 4: Manage authentication and authorization for Azure Storage
-
-In this task, you will configure authentication and authorization for Azure Storage. By default, new Azure storage accounts do not allow you to set containers to anonymous access. You can choose to override this for the storage account if you need to be able to allow anonymous access, or you can use other authentication options to access blobs.
-
-1. On the **licenses/LICENSE** blade, on the **Overview** tab, click **Copy to clipboard** button next to the **URL** entry.
-
-1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+1. Copy the file **URL** and paste into a new **Inprivate** browsing window.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
     > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the the **Generate SAS** tab.
+## Task 3: Provide limited access to blob storage. 
 
-1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
+In this task, you will configure limited access to the blob storage. 
+
+1. Return to your **data** container and select your upload file.
+
+1. Use the ellipses on the right side to select **Generate SAS**. Specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -138,8 +137,6 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    
-    ![image](./media/az104-lab07-sas1.png)
 
 1. Click **Generate SAS token and URL**.
 
