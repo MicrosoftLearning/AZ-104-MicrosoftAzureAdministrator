@@ -14,7 +14,7 @@ Your organization is currently storing data in on-premises data stores. The majo
 
 ## Interactive lab simulations
 
-There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
 + [Create blob storage](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%205). Create a storage account, manage blob storage, and monitor storage activities. 
   
@@ -26,39 +26,51 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Tasks
 
-## Task 1: Create and configure Azure Storage accounts
++ Task 1: Create and configure the storage account for the public website.
++ Task 2: 
 
-In this task, you will create and configure an Azure Storage account. Azure storage accounts can be used for blob, file, queue, and table storage. 
+## Task 1: Create and configure the storage account for the public website. 
 
-1. 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
+In this task, you will create and configure the Azure storage account for the public website. 
+
+### Create the public storage account
+
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+
+1. Search for and select **Storage accounts**, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Subscription          | the name of your Azure subscription  |
-    | Resource group        | **az104-rg4** |
+    | Resource group        | **az104-rg7** (create new) |
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **East US**  |
-    | Performance           | **Standard** |
-    | Redundancy            | **Locally redundant storage (LRS)** |
+    | Performance           | **Standard** (notice the Premium option) |
+    | Redundancy            | **Geo-redundant storage** (note your other options)|
+    | Make read access to data in the event of regional availability | Check the box |
 
     ![image](./media/az104-lab07-storage1.png)
 
-1. Click **Next: Advanced >**. 
-
 1. On the **Advanced** tab, review the available options, accept the defaults, and click **Next: Networking >**.
 
-1. On the **Networking** tab, review the available options, accept the default option **Enable public access from all networks** and click **Next: Data protection >**.
+1. On the **Networking** tab, review the available options, select **Private (no anonymous access)**.
 
-1. On the **Review** tab, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
+1. Select **Review + Create**, wait for the validation process to complete and then click **Create**.
 
-    >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
+    >**Note**: Wait for the Storage account to be deployed. This should take about 2 minutes.
 
     ![image](./media/az104-lab07-storage-review.png)
 
-1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
+### 
+1. Select **Go to resource**.
+
+1. 
+
+### Review and configure the public storage account
+
+
 
 ## Task 3: Manage blob storage
 
