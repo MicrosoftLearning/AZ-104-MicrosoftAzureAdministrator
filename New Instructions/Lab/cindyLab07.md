@@ -26,14 +26,12 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Tasks
 
-+ Task 1: Create and configure the storage account for the public website.
++ Task 1: Create and configure a storage account. 
 + Task 2: 
 
-## Task 1: Create and configure the storage account for the public website. 
+## Task 1: Create and configure the private storage account. 
 
-In this task, you will create and configure the Azure storage account for the public website. 
-
-### Create the public storage account
+In this task, you will create and configure a storage account.
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
@@ -48,29 +46,26 @@ In this task, you will create and configure the Azure storage account for the pu
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **East US**  |
     | Performance           | **Standard** (notice the Premium option) |
-    | Redundancy            | **Geo-redundant storage** (note your other options)|
+    | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
-    ![image](./media/az104-lab07-storage1.png)
+    ![image](../media/az104-lab07-storage1.png)
 
 1. On the **Advanced** tab, review the available options, accept the defaults, and click **Next: Networking >**.
 
 1. On the **Networking** tab, review the available options, select **Private (no anonymous access)**.
 
-1. Select **Review + Create**, wait for the validation process to complete and then click **Create**.
+1. Review the **Data protection** and **Encryption** tab choices. 
 
-    >**Note**: Wait for the Storage account to be deployed. This should take about 2 minutes.
+1. Select **Review**, wait for the validation process to complete and then click **Create**.
 
-    ![image](./media/az104-lab07-storage-review.png)
+1. Once the storage account deploys, **Go to resource**.
 
-### 
-1. Select **Go to resource**.
+1. Review the **Overview** blade and the additional configurations that can be changed.
 
-1. 
+1. Notice in the **Data storage** section, this storage account is for Blob containers, File shares, Queues, and Tables.
 
-### Review and configure the public storage account
-
-
+1. In the **Data management** section, view the **Redundancy** blade. Notice information about primary and secondary regions. 
 
 ## Task 3: Manage blob storage
 
@@ -85,7 +80,7 @@ In this task, you will create a blob container and upload a blob into it. Blob c
     | Name | `data`  |
     | Public access level | **Private (no anonymous access)** |
 
-    ![image](./media/az104-lab07-create-container.png)
+    ![image](../media/az104-lab07-create-container.png)
 
 1. In the list of containers, click **data** and then click **Upload**.
 
