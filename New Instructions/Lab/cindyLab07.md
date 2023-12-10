@@ -72,14 +72,17 @@ In this task, you will create and configure a storage account.
 
 + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
 + On the **Base blobs** tab, if based blobs were last modified more than `30 days` ago then **move to cool storage**.
++ Notice you can configure other conditions. Select **Add** when you are ready to create the rule. 
 
-    ![image](../media/az104-lab07-mvoetocool.png)
+    ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
 
 ## Task 2: Manage blob storage
 
 In this task, you will create a blob container and upload a blob into it. Blob containers are directory-like structures that store blobs (unstructured data) in the storage account. 
 
 1. Continue working with your storage account.
+
+### Create a blob container and a time-based retention policy
 
 1. In the **Data storage** section, click **Containers**. 
 
@@ -91,6 +94,19 @@ In this task, you will create a blob container and upload a blob into it. Blob c
     | Public access level | **Private (no anonymous access)** |
 
     ![image](../media/az104-lab07-create-container.png)
+
+1. Select your container and in the **Sectings** section, select **Access Policy**.
+
+1. In the **Immutable blob storage** area, select **Add policy**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Policy type | **Time-based retention**  |
+    | Set retention period for | `90` days |
+
+1. Select **Save**.
+
+### Manage blob uploads
 
 1. Select your **data** container and then click **Upload**.
 
@@ -120,13 +136,9 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
     > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
 
-## Task 3: Provide limited access to blob storage. 
+### Configure limited access to the blob storage
 
-In this task, you will configure limited access to the blob storage. 
-
-1. Return to your **data** container and select your upload file.
-
-1. Use the ellipses on the right side to select **Generate SAS**. Specify the following settings (leave others with their default values):
+1. Return to your uploaded file and select the **Generate SAS** tab. Specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -145,34 +157,6 @@ In this task, you will configure limited access to the blob storage.
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
     > **Note**: You should be able to view the content of the file by downloading it and opening it with Notepad. If you receive a Windows SmartScreen error, continue to the page.
-
-    > **Note**: Save the blob SAS URL. You will need it later in this lab.
-
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **data** blade.
-
-1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
-
-    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Microsoft Entra ID"*). It is expected.  
-
-    > **Note**: At this point, you do not have permissions to change the Authentication method.
-
-    ![image](./media/az104-lab07-storage-error.png)
-
-1. On the **data** blade, click **Access Control (IAM)**.
-
-1. On the **Check access** tab, click **Add role assignment**.
-
-1. On the **Add role assignment** blade, specify the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Role | **Storage Blob Data Owner** |
-    | Assign access to | **User, group, or service principal** |
-    | Members | the name of your user account |
-
-1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **data** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
-
-    > **Note**: It might take about 5 minutes for the change to take effect.
 
 ## Task 5: Create and configure an Azure Files shares
 
