@@ -27,7 +27,8 @@ There are interactive lab simulations that you might find useful for this topic.
 ## Tasks
 
 + Task 1: Create and configure a storage account. 
-+ Task 2: 
++ Task 2: Implement secure blob storage.
++ Task 3: Implement 
 
 ## Task 1: Create and configure the private storage account. 
 
@@ -49,13 +50,13 @@ In this task, you will create and configure a storage account.
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
-    ![image](../media/az104-lab07-storage1.png)
-
 1. On the **Advanced** tab, review the available options, accept the defaults, and click **Next: Networking >**.
 
 1. On the **Networking** tab, review the available options, select **Private (no anonymous access)**.
 
-1. Review the **Data protection** and **Encryption** tab choices. 
+1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy.
+
+1. Review the **Encryption** tab. Notice the additional security options. 
 
 1. Select **Review**, wait for the validation process to complete and then click **Create**.
 
@@ -65,13 +66,15 @@ In this task, you will create and configure a storage account.
 
 1. Notice in the **Data storage** section, this storage account is for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Data management** section, view the **Redundancy** blade. Notice information about primary and secondary regions. 
+1. In the **Data management** section, view the **Redundancy** blade. Notice information about your primary and secondary data regions. 
 
-## Task 3: Manage blob storage
+## Task 2: Manage blob storage
 
-In this task, you will create a blob container and upload a blob into it. Blob containers are directory-like structures that store blobs (unstructured data) in the storage account. You will interact with the blob container and blob object that you create later in the lab.
+In this task, you will create a blob container and upload a blob into it. Blob containers are directory-like structures that store blobs (unstructured data) in the storage account. 
 
-1. On the Storage account blade, in the **Data storage** section, click **Containers**.
+1. Continue working with your storage account.
+
+1. In the **Data storage** section, click **Containers**. 
 
 1. Click **+ Container** and create a container with the following settings:
 
@@ -84,20 +87,21 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
 1. In the list of containers, click **data** and then click **Upload**.
 
-1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**.
+1. On the **Upload blob** blade, expand the **Advanced** section.
 
-1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
+   >**Note**: Locate a file to upload. This can be any type of file, but a small file is best. 
 
     | Setting | Value |
     | --- | --- |
+    | Upload file | add the file you have selected to upload |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
-    | Access tier | **Hot** |
-    | Upload to folder | **licenses** |
+    | Access tier | **Hot**  (notice the other options) |
+    | Upload to folder | **securitytest** |
 
-    > **Note**: Access tier can be set for individual blobs.
+    > **Note**: Access tiers can be set for individual blobs.
 
-    ![image](./media/az104-lab07-upload-blob.png)
+    ![image](../media/az104-lab07-upload-blob.png)
 
 1. Click **Upload**.
 
