@@ -26,34 +26,11 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Tasks
 
-+ Task 1: Create a resource group. 
-+ Task 2: Create and configure Azure Storage accounts
-+ Task 3: Manage blob storage
-+ Task 4: Manage authentication and authorization for Azure Storage
-+ Task 5: Create and configure an Azure Files shares
-+ Task 6: Manage network access for Azure Storage
-## Task 1: Create a resource group
+## Task 1: Create and configure Azure Storage accounts
 
-### Create a resource group for all the resources in this lab. 
+In this task, you will create and configure an Azure Storage account. Azure storage accounts can be used for blob, file, queue, and table storage. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
-
-1. Search for and select **Resource groups**, then select **+ Create**.  
-
-1. Create the resource group with these settings. 
-
-	| **Tab**         | **Option**                                 | **Value**            |
-	| --------------- | ------------------------------------------ | -------------------- |
-	| Basics          | Resource group                             | `az104-rg7` |
-	|                 | Region                                     | (US) **East US**     |
-	| Tags            | No changes required                        |                      |
-   
-1. When finished select **Review + create** and then **Create**.
-
-## Task 2: Create and configure Azure Storage accounts
-
-In this task, you will create and configure an Azure Storage account. Azure storage accounts can be used for blob, file, queue, and table storage. You will use this storage account with the virtual machine that you created in the previous task.
-
+1. 
 1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
