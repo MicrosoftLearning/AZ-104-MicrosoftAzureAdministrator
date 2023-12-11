@@ -52,9 +52,9 @@ In this task, you will create and configure a storage account.
 
 1. On the **Advanced** tab, review the available options, accept the defaults.
 
-1. On the **Networking** tab, review the available options, select **Private (no anonymous access)**.
+1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
 
-1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Accept the defaults
+1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults.
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
@@ -62,27 +62,33 @@ In this task, you will create and configure a storage account.
 
 1. Once the storage account deploys, **Go to resource**.
 
-1. Review the **Overview** blade and the additional configurations that can be changed.
+1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. Notice in the **Data storage** section, this storage account can be used for Blob containers, File shares, Queues, and Tables.
+1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
 
++ Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
++ Check the box for **Add your client IP address.**
++ Be sure to **Save** your changes. 
+  
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add rule**.
 
 + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
-+ On the **Base blobs** tab, if based blobs were last modified more than `30 days` ago then **move to cool storage**.
-+ Notice you can configure other conditions. Select **Add** when you are ready to create the rule. 
+
++ On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**.
+
++ Notice you can configure other conditions. Select **Add** when you are done exploring.
 
     ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
 
 ## Task 2: Manage blob storage
 
-In this task, you will create a blob container and upload a blob into it. Blob containers are directory-like structures that store blobs (unstructured data) in the storage account. 
-
-1. Continue working with your storage account.
+In this task, you will create a blob container and upload a blob. Blob containers are directory-like structures that store unstructured data.
 
 ### Create a blob container and a time-based retention policy
+
+1. Continue in the Azure portal, working with your storage account.
 
 1. In the **Data storage** section, click **Containers**. 
 
@@ -91,24 +97,24 @@ In this task, you will create a blob container and upload a blob into it. Blob c
     | Setting | Value |
     | --- | --- |
     | Name | `data`  |
-    | Public access level | **Private (no anonymous access)** |
+    | Public access level | Notice the access level is set to private |
 
     ![image](../media/az104-lab07-create-container.png)
 
-1. Select your container and in the **Sectings** section, select **Access Policy**.
+1. Select your container and in the **Settings** section, select **Access Policy**.
 
 1. In the **Immutable blob storage** area, select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
     | Policy type | **Time-based retention**  |
-    | Set retention period for | `90` days |
+    | Set retention period for | `180` days |
 
 1. Select **Save**.
 
 ### Manage blob uploads
 
-1. Select your **data** container and then click **Upload**.
+1. return to the containers page, select your **data** container and then click **Upload**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
@@ -116,11 +122,12 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
     | Setting | Value |
     | --- | --- |
-    | browse for files | add the file you have selected to upload |
+    | Browse for files | add the file you have selected to upload |
     | Blob type | **Block blob** |
     | Block size | **4 MB** |
     | Access tier | **Hot**  (notice the other options) |
-    | Upload to folder | **securitytest** |
+    | Upload to folder | `securitytest` |
+    | Encryption scope | Use existing default container scope |
 
     > **Note**: Access tiers can be set for individual blobs.
 
@@ -164,11 +171,13 @@ In this task, you will create and configure Azure Files shares.
 
 ### Create the files share and upload a file
 
-1. In the Azure portal, navigate back to the blade of the **data** storage account, in the **Data storage** section, click **File shares**.
+1. In the Azure portal, navigate back to your storage account, in the **Data storage** section, click **File shares**.
 
 1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. Review the other settings on this tab. 
 
-1. Move to the **Backup** tab, and ensure **Enable Backup** is **not** checked.
+1. Notice the **Tier** options. Keep the default **Transaction optimized**.
+   
+1. Move to the **Backup** tab, and ensure **Enable Backup** is **not** checked. We are diabling backup to simplify the lab configuration.
 
 1. Click **Review and create**, and then **Create**. Wait for the file share to deploy.
 
@@ -176,11 +185,13 @@ In this task, you will create and configure Azure Files shares.
 
 ### Explore Storage Browser and upload a file.
 
-1. Return to your storage account, and select **Storage Browser**.
+1. Return to your storage account, and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
 
 1. Select **File shares**, and verify your **share1** directory is present. Notice you can **+ Add directory**.
 
-1. Select your **share1** directory and **Upload** a file of your choosing.
+1. Select your **share1** directory and notice you can **+Add directory**. This lets you create a folder structure.
+
+1. **Upload** a file of your choosing.
 
 1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
@@ -190,7 +201,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the poratal, search for and select **Virtual networks**.
 
-1. Select **Create**. Select your resource group. and give the virtual network a **name**.
+1. Select **Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
 
 1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
@@ -201,20 +212,18 @@ In this task, you will create and configure Azure Files shares.
     + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
     + Do not make any other changes.    
     + Be sure to **Save** your changes. 
-   
-    >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
-1. Return to your **data** storage account.
+1. Return to your storage account.
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
-1. Change the **Public network access** to **Enabled from selected virtual networks and IP addresses**.
-
-1. In the **Virtual networks** section, select **Add existing virtual network**.
-
 1. Select the new virtual network and subnet, select **Add**.
 
+1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
+
 1. Be sure to **Save** your changes.
+
+    >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
 1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
