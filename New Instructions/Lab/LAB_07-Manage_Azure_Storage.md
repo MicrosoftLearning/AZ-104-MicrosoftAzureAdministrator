@@ -22,13 +22,13 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture diagram
 
-![image](../media/az104-lab07-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab07-architecture-diagram.png)
 
 ## Tasks
 
 + Task 1: Create and configure a storage account. 
-+ Task 2: Implement secure blob storage.
-+ Task 3: Provide limited access to blob storage. 
++ Task 2: Create and configure secure blob storage.
++ Task 3: Create and configure secure Azure file storage.
 
 ## Task 1: Create and configure the private storage account. 
 
@@ -99,7 +99,7 @@ In this task, you will create a blob container and upload a blob. Blob container
     | Name | `data`  |
     | Public access level | Notice the access level is set to private |
 
-    ![image](../media/az104-lab07-create-container.png)
+    ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
 1. Select your container and in the **Settings** section, select **Access Policy**.
 
