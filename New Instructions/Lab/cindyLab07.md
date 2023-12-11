@@ -160,11 +160,11 @@ In this task, you will create a blob container and upload a blob into it. Blob c
 
 ## Task 5: Create and configure an Azure Files shares
 
-In this task, you will create and configure Azure Files shares. Azure File Shares allow you to interact with Azure storage using either SMB or NFS protocols. You will then map a network drive from the VM that you deployed to the file share that you create.
+In this task, you will create and configure Azure Files shares. 
 
-> **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
+### Create the files share and upload a file
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the **data** storage account, in the **Data storage** section, click **File shares**.
 
 1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. Review the other settings on this tab. 
 
@@ -172,66 +172,67 @@ In this task, you will create and configure Azure Files shares. Azure File Share
 
 1. Click **Review and create**, and then **Create**. Wait for the file share to deploy.
 
-    ![image](./media/az104-lab07-create-share.png)
+    ![Screenshot of the create file share page.](../media/az104-lab07-create-share.png)
 
-1. Click the newly created file share and note the information available on the **share1** blade.
+### Explore Storage Browser and upload a file.
 
-1. Click **Browse** and note that there are no files or folders in the new file share. Click **Connect**.
+1. Return to your storage account, and select **Storage Browser**.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. Select **File shares**, and verify your **share1** directory is present. Notice you can **+ Add directory**.
 
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-vm1**.
+1. Select your **share1** directory and **Upload** a file of your choosing.
 
-1. On the **az104-vm1** blade, in the **Operations** section, click **Run command**.
+1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
-1. On the **az104-vm1** - Run command** blade, click **RunPowerShellScript**.
+    >**Note**: You are able to view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
-1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
+### Restrict network access to the storage account
 
-    ![image](./media/az104-lab07-run-command.png)
+1. In the poratal, search for and select **Virtual networks**.
 
-1. Verify that the script completed successfully.
+1. Select **Create**. Select your resource group. and give the virtual network a **name**.
 
-1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
+1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
-   ```powershell
-   New-Item -Type Directory -Path 'Z:\folder1'
+1. Wait for the resource to deploy, and then select **Go to resource**.
 
-   New-Item -Type File -Path 'Z:\folder1\file1.txt'
-   ```
+1. In the **Settings** section, select the **Subnets** blade.
+    + Select the **default** subnet.
+    + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
+    + Do not make any other changes.    
+    + Be sure to **Save** your changes. 
+   
+    >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
-1. Verify that the script completed successfully.
+1. Return to your **data** storage account.
 
-1. Navigate back to the **share1 \| Browse** file share blade, click **Refresh**, and verify that the **folder1** appears in the list of folders.
+1. In the **Security + networking** section, select the **Networking** blade.
 
-1. Click **folder1** and verify that **file1.txt** appears in the list of files.
+1. Change the **Public network access** to **Enabled from selected virtual networks and IP addresses**.
 
-    ![image](./media/az104-lab07-file-browse.png)
+1. In the **Virtual networks** section, select **Add existing virtual network**.
 
-## Task 6: Manage network access for Azure Storage
+1. Select the new virtual network and subnet, select **Add**.
 
-In this task, you will configure network access for Azure Storage. Earlier in this lab when you created the storage account, it was configured to allow connections from any public IP address. In this lab, you will restrict the network access for the storage account to your specific IP address.
+1. Be sure to **Save** your changes.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking**.
+1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
-1. From the **Firewalls and virtual networks** tab, click the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
+    >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
-    > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
+## Review the main points of the lab
 
-1. Click the checkbox **Add your client IP address** and select **Save**.
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-    ![image](./media/az104-lab07-storage-networking.png)
++ An Azure storage account contains all of your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS.
++ Azure storage provides several redundancy models including Locally redundant storage (LRS), Zone-redundant storage (ZRS), and Geo-redundant storage (GRS). 
++ Azure blob storage allows you to store large amounts of unstructured data on Microsoft's data storage platform. Blob stands for Binary Large Object, which includes objects such as images and multimedia files.
++ Azure file Storage provides shared storage for structured data. The data can be organized in folders.
++ Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies an be time-based or legal-hold.
 
-1. Open another browser window by using InPrivate mode and navigate to the blob SAS URL you generated in the previous task.
 
-    > **Note**: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
+## Cleanup your resources
 
-1. You should be presented with the content of **The MIT License (MIT)** page.
+If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
 
-    > **Note**: This is expected, since you are connecting from your client IP address.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
-
-## Review
-
-Congratulations! You have successfully provisioned an Azure virtual machine and storage account, then configured the storage account for blob and file storage.
