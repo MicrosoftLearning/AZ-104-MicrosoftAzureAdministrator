@@ -40,9 +40,9 @@ There are several interactive lab simulations that you might find useful for thi
 
 In this task, you will create an Azure web app. Azure offers Azure App Services, which is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure Web Apps, one type of Azure App Services offerings, can be used to run websites for most runtime environments, such as PHP, Java, .NET, and more. If you need support for more than one runtime environment, you can use App Services with Docker containers. The SKU that you select determines the amount of compute, storage, and features that you receive with the web app.
 
-1. Sign in to the [**Azure portal**](http://portal.azure.com).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. In the Azure portal, search for and select `App services`, and, on the **App Services** blade, click **+ Create**.
+1. Search for and select `App services`, and, on the **App Services** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
