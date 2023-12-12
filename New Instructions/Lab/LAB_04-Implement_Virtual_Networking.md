@@ -18,27 +18,13 @@ The **ManufacturingVnet** virtual network is deployed in the **West Europe** reg
 
 There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-**[Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204)**. Create a virtual networks with two virtual machines. Demonstrate the virtual machines can communicate. 
++ [Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204). Create a virtual networks with two virtual machines. Demonstrate the virtual machines can communicate. 
 
-**[Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure).** Create a resource group, and create virtual networks with subnets.  
++ [Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure). Create a resource group, and create virtual networks with subnets.  
 
-**[Implement virtual networking](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208).** Create and configure a virtual network, deploy virtual machines, configure network security groups, and configure Azure DNS.
-
-## Tasks
-
-+ Task 1: Create a resource group.
-+ Task 2: Create the CoreServicesVnet virtual network and subnets.
-+ Task 3: Create the ManufacturingVnet virtual network and subnets.
-+ Task 4: Configure communication between an Application Security Group and a Network Security Group. 
++ [Implement virtual networking](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208). Create and configure a virtual network, deploy virtual machines, configure network security groups, and configure Azure DNS.
 
 ## Architecture diagram
-
-| **Virtual Network** | **VNet address and region**   |  **Subnet**                | **Subnet address**    |
-| ------------------- | ------------ | --------------------------------- | ------------------------- | 
-| CoreServicesVnet    | 10.20.0.0/16 East US      | SharedServicesSubnet      | 10.20.10.0/24 |
-|                     |              		  | DatabaseSubnet            | 10.20.20.0/24 |
-| ManufacturingVnet   | 10.30.0.0/16  West Europe | SensorSubnet1             | 10.30.20.0/24 |
-|                     |                           | SensorSubnet2             | 10.30.21.0/24 |
 
 ![Network layout](../media/az104-lab04-diagram.png)
 
@@ -46,6 +32,12 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 >**Did you know?**: It is a good practice to avoid overlapping IP address ranges to reduce issues and simplify troubleshooting. Overlapping is a concern across the entire network, whether in the cloud or on-premises. Many organizations design an enterprise-wide IP addressing scheme to avoid overlapping and plan for future growth.
 
+## Tasks
+
++ Task 1: Create a resource group.
++ Task 2: Create the CoreServicesVnet virtual network and subnets.
++ Task 3: Create the ManufacturingVnet virtual network and subnets.
++ Task 4: Configure communication between an Application Security Group and a Network Security Group. 
 
 
 ## Task 1: Create a resource group
@@ -282,4 +274,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource. This will ensure resources are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
