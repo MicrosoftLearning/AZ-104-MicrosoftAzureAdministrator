@@ -146,6 +146,19 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
     >**Note**: In a production environment, organizations often select **Rules Based** and configure rules around specific metrics or Application Insights components that trigger autoscaling. 
 
-## Review
+## Review the main points of the lab
 
-Congratulations! You have successfully deployed an Azure Web App, created a staging deployment slot, configured continuous deployment to the slot, tested and swapped the slot to production, and then configured autoscaling.
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ xx
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
+    
