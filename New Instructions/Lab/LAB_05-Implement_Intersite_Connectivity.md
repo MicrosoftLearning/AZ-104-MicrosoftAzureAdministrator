@@ -23,6 +23,10 @@ There are several interactive lab simulations that you might find useful for thi
 + [Connect two Azure virtual networks using global virtual network peering](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering). Test the connection between two virtual machines in different virtual networks. Create a virtual network peering and retest.
 + [Implement intersite connectivity](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209). Run a template to create a virtual network infrastructure with several virtual machines. Configure virtual network peerings and test the connections. 
 
+## Architecture diagram
+
+![Lab 05 architecture diagrm](../media/az104-lab05-architecture-diagram.png)
+
 ## Tasks
 
 + Task 1: Create a core services virtual machine and virtual network.
@@ -31,10 +35,6 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 4: Create VNet peerings between the virtual networks. 
 + Task 5: Retest the connection between the virtual machines. 
  
-
-## Architecture diagram
-
-![Lab 05 architecture diagrm](../media/az104-lab05-architecture-diagram.png)
 
 ## Task 1:  Create a core services virtual machine and virtual network.
 
