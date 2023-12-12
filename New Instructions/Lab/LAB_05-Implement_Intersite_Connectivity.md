@@ -134,7 +134,7 @@ In this task, you test the connection between the virtual machines in different 
    
 ### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
-1. In the portal, select for and select the `**ManufacturingVM**` virtual machine.
+1. In the portal, select for and select the `ManufacturingVM` virtual machine.
 
 1. In the **Operations** section, select the **Run command** blade.
 
