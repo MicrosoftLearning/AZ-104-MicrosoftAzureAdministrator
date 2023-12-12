@@ -26,7 +26,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture diagram
 
-![Diagram of the tasks.](./media/az104-lab09a-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab09a-architecture-diagram.png)
 
 ## Tasks
 
@@ -107,15 +107,11 @@ In this task, you will configure web app deployment settings. App Services can b
 
 1. Select **Save**.
 
-    ![image](./media/az104-lab09a-git-password.png)
-
 1. From the staging slot, select **Overview**.
 
 1. Select the **Default domain** link, and open the URL in a new tab. 
 
 1. Verify that the staging slot displays **Hello World**.
-
-    ![image](./media/az104-lab09a-hello-world.png)
 
 ## Task 4: Swap the staging slots
 
@@ -126,8 +122,6 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
-
-    ![image](./media/az104-lab09a-swap-slots.png)
 
 1. Click **Overview** on the production slot blade of the web app and then click the **Default domain** link to display the web site home page in a new browser tab.
 
@@ -145,7 +139,7 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
 1. In the **Maximum burst field**, select **2**.
 
-    ![image](./media/az104-lab09a-autoscale.png)
+    ![image](../media/az104-lab09a-autoscale.png)
 
 1. Select **Save**.
 
