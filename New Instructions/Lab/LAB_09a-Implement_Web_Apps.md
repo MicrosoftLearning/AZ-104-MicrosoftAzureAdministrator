@@ -8,9 +8,9 @@ lab:
 
 
 ## Lab requirements
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
 ## Estimated timing: 30 minutes
-
 
 ## Lab scenario
 
@@ -18,7 +18,11 @@ Your organization is interested in Azure Web apps for hosting your organization'
 
 ## Interactive lab simulation
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
+    + [Create a web app](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202). Create a web app that runs a Docker container.
+    
+    + [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)**. Create an Azure web app, manage the deployment, and scale the app. 
 
 ## Architecture diagram
 
@@ -31,14 +35,6 @@ Your organization is interested in Azure Web apps for hosting your organization'
 + Task 3: Configure web app deployment settings
 + Task 4: Swap the staging slots
 + Task 5: Configure and test autoscaling of the Azure web app
-
-
-
-
-
-### Instructions
-
-## Exercise 1
 
 ## Task 1: Create an Azure web app
 
