@@ -5,17 +5,26 @@ lab:
 ---
 
 # Lab 09a - Implement Web Apps
-# Student lab manual
+
+
+## Lab requirements
+
+## Estimated timing: 30 minutes
+
 
 ## Lab scenario
 
 Your organization is interested in Azure Web apps for hosting your organization's web sites. The web sites are currently hosted in the company's on-premises data centers. The web sites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will need replacement in the near future. Your organization wants to complete testing to facilitate a move to Azure prior to the end-of-life date.
 
+## Interactive lab simulation
+
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
-## Objectives
+## Architecture diagram
 
-In this lab, you will:
+![Diagram of the tasks.](./media/az104-lab09a-architecture-diagram.png)
+
+## Tasks
 
 + Task 1: Create an Azure web app
 + Task 2: Create a staging deployment slot
@@ -23,11 +32,9 @@ In this lab, you will:
 + Task 4: Swap the staging slots
 + Task 5: Configure and test autoscaling of the Azure web app
 
-## Estimated timing: 30 minutes
 
-## Architecture diagram
 
-![image](./media/az104-lab09a-architecture-diagram.png)
+
 
 ### Instructions
 
