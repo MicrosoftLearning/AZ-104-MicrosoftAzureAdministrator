@@ -20,9 +20,9 @@ Your organization is interested in Azure Web apps for hosting your organization'
 
 There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-    + [Create a web app](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202). Create a web app that runs a Docker container.
++ [Create a web app](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202). Create a web app that runs a Docker container.
     
-    + [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)**. Create an Azure web app, manage the deployment, and scale the app. 
++ [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)**. Create an Azure web app, manage the deployment, and scale the app. 
 
 ## Architecture diagram
 
@@ -49,7 +49,7 @@ In this task, you will create an Azure web app. Azure offers Azure App Services,
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | `az104-rg1` (If necessary, select **Create new**) |
+    | Resource group | `az104-9a` (If necessary, select **Create new**) |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 8.2** |
