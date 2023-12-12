@@ -42,7 +42,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. Search for and select `**Virtual Machines**`.
+1. Search for and select `Virtual Machines`.
 
 1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
 
@@ -96,7 +96,7 @@ In this task, we create a manufacturing services virtual network with a virtual 
     | Setting | Value | 
     | --- | --- |
     | Subscription |  *your subscription* |
-    | Resource group |  `az104-rg1` (If necessary, select **Create new**.)
+    | Resource group |  `az104-rg5` |
     | Virtual machine name |    `ManufacturingVM` |
     | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
