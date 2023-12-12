@@ -18,7 +18,7 @@ Your organization is interested in Azure Web apps for hosting your organization'
 
 ## Interactive lab simulations
 
-There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
 + [Create a web app](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202). Create a web app that runs a Docker container.
     
@@ -42,7 +42,9 @@ In this task, you will create an Azure web app. Azure offers Azure App Services,
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. Search for and select `App services`, and, on the **App Services** blade, click **+ Create**.
+1. Search for and select `App services`.
+
+1. Select **+ Create** and then **Web app**. Notice the other choices. 
 
 1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
@@ -55,9 +57,10 @@ In this task, you will create an Azure web app. Azure offers Azure App Services,
     | Runtime stack | **PHP 8.2** |
     | Operating system | **Linux** |
     | Region | **East US** |
-    | Pricing plans | accept the default configuration |
+    | Pricing plans | accept the defaults |
+    | Zone redundancy | accept the defaults |
 
- 1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
+ 1. Click **Review + create**, and then **Create**.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -108,7 +111,7 @@ In this task, you will configure web app deployment settings. App Services can b
 
 1. From the staging slot, select **Overview**.
 
-1. Locate the default domain for the slot and open the URL in a new tab. It should be `yourappservice-staging.azurewebsites.net`.
+1. Select the **Default domain** link, and open the URL in a new tab. 
 
 1. Verify that the staging slot displays **Hello World**.
 
@@ -128,6 +131,8 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Click **Overview** on the production slot blade of the web app and then click the **Default domain** link to display the web site home page in a new browser tab.
 
+    >**Note:** Copy the Default domain **URL** you will need it for load testing in the next task. 
+
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
 ## Task 5: Configure and test autoscaling of the Azure web app
@@ -144,13 +149,37 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
 1. Select **Save**.
 
-    >**Note**: In a production environment, organizations often select **Rules Based** and configure rules around specific metrics or Application Insights components that trigger autoscaling. 
+    >**Note**: In a production environment, organizations often select **Rules Based** and configure rules around specific metrics or Application Insights components that trigger autoscaling.
 
+1. On the blade displaying the production slot of the web app, in the **Settings** section, select **Diagnose and solve problems**.
+
+1. In the **Load Test your App** box, select **Create Load Test**.
+
+    + Select **+ Create** and give your load test a **name**.  The name must be unique.
+    + Select **Review + create** and then **Create**.
+
+1. Wait for the load test to create, and then select **Go to resource**.
+
+1. From the **Overview** | **Add HTTP requests**, select **Create**.
+
+1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
+
+1. Select **Review + create** and **Create**.
+
+    >**Note:** It may take a couple of minutes to create the test. 
+
+1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
+
+1. Select **Stop** to complete the test run.
+   
 ## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ xx
++ Azure App Services lets you quickly build, deploy, and scale web apps.
++ App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
++ Deployment slots allow you to create separate environments for deploying and testing your web app.
++ You can manually or automatically scale a web app to handle additional demand. 
 
 ## Cleanup your resources
 
