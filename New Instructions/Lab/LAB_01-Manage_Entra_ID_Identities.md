@@ -24,6 +24,9 @@ There are a couple of interactive lab simulations that you might find useful for
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
+## Architecture diagram
+![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
+
 ## Tasks
 
 + Task 1: Familiarize yourself with the Azure portal.
@@ -33,9 +36,6 @@ There are a couple of interactive lab simulations that you might find useful for
 + Task 5: Familiarize yourself with the Cloud Shell.
 + Task 6: Practice with Azure PowerShell.
 + Task 7: Practice with Bash.
-
-## Architecture diagram
-![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
 
 ## Task 1: Familiarize yourself with the Azure portal. 
 
@@ -239,5 +239,11 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
 
