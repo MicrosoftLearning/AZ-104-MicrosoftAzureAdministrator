@@ -31,17 +31,16 @@ There are some interactive lab simulations that you might find useful for this t
 
 + [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group, and create and assign a custom RBAC role.
 
+## Architecture diagram
+
+![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
+
 ## Tasks
 
 + Task 1: Implement management groups.
 + Task 2: Review and assign a built-in Azure role.
 + Task 3: Create and assign a custom RBAC roles. 
 + Task 4: Monitor role assignments with the Activity Log.
-
-## Architecture diagram
-
-![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
-
 
 ## Task 1: Implement Management Groups
 
@@ -203,6 +202,12 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
 
 
