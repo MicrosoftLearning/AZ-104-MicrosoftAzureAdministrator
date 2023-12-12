@@ -16,13 +16,13 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization is interested in Azure Web apps for hosting your organization's web sites. The web sites are currently hosted in the company's on-premises data centers. The web sites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will need replacement in the near future. Your organization wants to complete testing to facilitate a move to Azure prior to the end-of-life date.
 
-## Interactive lab simulation
+## Interactive lab simulations
 
 There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
 + [Create a web app](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%202). Create a web app that runs a Docker container.
     
-+ [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013)**. Create an Azure web app, manage the deployment, and scale the app. 
++ [Implement Azure web apps](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2013). Create an Azure web app, manage the deployment, and scale the app. 
 
 ## Architecture diagram
 
