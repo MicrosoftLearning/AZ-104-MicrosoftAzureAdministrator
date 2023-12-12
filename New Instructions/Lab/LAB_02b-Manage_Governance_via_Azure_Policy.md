@@ -30,15 +30,15 @@ There are several interactive lab simulations that you might find useful for thi
 
 + [Manage governance via Azure policy](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203). Create and assign tags via the Azure portal. Create an Azure policy that requires tagging. Remediate non-compliant resources.
 
+## Architecture diagram
+
+![Diagram of the task architecture.](../media/az104-lab02b-architecture-diagram.png)
+
 ## Tasks
 
 + Task 1: Create and assign tags via the Azure portal.
 + Task 2: Enforce tagging via an Azure Policy.
 + Task 3: Apply tagging via an Azure Policy.
-
-## Architecture diagram
-
-![Diagram of the task architecture.](../media/az104-lab02b-architecture-diagram.png)
 
 ## Task 1: Assign tags via the Azure portal
 
@@ -216,4 +216,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resource group. This will ensure resources are freed up and cost is minimized.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
