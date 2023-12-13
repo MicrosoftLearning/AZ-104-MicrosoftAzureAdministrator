@@ -152,17 +152,17 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
 
-1. On the local drive, locate the parameters JSON file.
-
-1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
-
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
     ```powershell
     dir
     ```
+
+1. In the Cloud Shell, select the **Editor** icon and navigate to the parameters JSON file.
+
+1. Make a change. For example, change the disk name to **az104-disk2**. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -179,11 +179,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
 
-1. On the local drive, locate the parameters JSON file.
-
-1. Edit the file and change the disk name. For example, change the disk name to **az104-disk2**.
-
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
+1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
@@ -191,7 +187,11 @@ In this task, you verify that the deployment has finished successfuly. All prior
     dir
     ```
 
->**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+1. In the Cloud Shell, select the **Editor** icon and navigate to the parameters JSON file.
+
+1. Make a change. For example, change the disk name to **az104-disk2**. 
+
+    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **az deployment group create**.
 
