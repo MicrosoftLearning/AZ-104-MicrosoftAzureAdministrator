@@ -14,11 +14,11 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Interactive lab simulation
 
-There are a couple of interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-[Create a virtual machine with a template](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209). Deploy a virtual machine with a QuickStart template. 
-
-[Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205). Review, create, and deploy a managed disks with a template.
++ [Create a virtual machine with a template](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209). Deploy a virtual machine with a QuickStart template.
+  
++ [Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205). Review, create, and deploy a managed disks with a template.
 
 ## Lab scenario
 Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
@@ -32,8 +32,8 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 + Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
 + Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
-+ Task 4: Experiment with Azure PowerShell (optional).
-+ Task 5: Experiment with the CLI (optional). 
++ Task 4: Experiment with Azure PowerShell (scripting option 1).
++ Task 5: Experiment with the CLI (scripting option 2). 
 
 ## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 
@@ -144,7 +144,9 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 1. Notice your managed disk was created.
 
-## Task 4: Experiment with using Azure PowerShell to deploy a template (optional)
+    >**Note:** You can also deploy templates from the command line. Task 4, option 1, shows how to use PowerShell. Task 5, option 2, shows how to use the CLI. 
+
+## Task 4: Experiment with using Azure PowerShell to deploy a template (option 1)
 
 1. Open the Cloud Shell, and select **PowerShell**.
 
@@ -161,7 +163,8 @@ In this task, you verify that the deployment has finished successfuly. All prior
     ```powershell
     dir
     ```
->**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+
+    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
@@ -170,7 +173,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
    
-## Task 5: Experiment with using the CLI to deploy a template (optional)
+## Task 5: Experiment with using the CLI to deploy a template (option 2)
 
 1. Open the Cloud Shell, and select **Bash**.
 
