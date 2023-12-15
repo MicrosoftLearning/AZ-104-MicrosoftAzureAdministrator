@@ -40,20 +40,19 @@ In this task, you will create a new container instance for the web application. 
 
 1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. In the Azure portal, search for locate `Container instances` and then, on the **Container instances** blade, click **+ Create**.
+1. In the Azure portal, search for and select `Container instances` and then, on the **Container instances** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg1` (If necessary, select **Create new**) |
+    | Resource group | `az104-rg9b` (If necessary, select **Create new**) |
     | Container name | `az104-c1` |
     | Region | **East US** (or a region available near you)|
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
- 
 1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -62,9 +61,11 @@ In this task, you will create a new container instance for the web application. 
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes.
 
-    >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
+ 1. Click **Review + Create**, ensure that the validation passed and then select **Create**.
+
+    >**Note**: Wait for the deployment to complete. This should take 2-3 minutes.
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
 
@@ -125,7 +126,9 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
 
-## 
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 ## Cleanup your resources
 
