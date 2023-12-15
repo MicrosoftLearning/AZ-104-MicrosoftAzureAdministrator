@@ -131,7 +131,7 @@ By default, the Azure container app that you create will accept traffic on port 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud. ACI doesn't require you to provision or manage any underlying infrastructure. The service supports both Linux containers and Windows containers.
-+ Azure Container Apps (ACA) is a fully managed serverless container service that scales dynamically based on HTTP traffic or events.
++ Azure Container Apps (ACA) is a fully managed serverless container service that scales dynamically based on HTTP traffic or events. ACA xxxxxx. 
 + Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. Workloads on ACA are usually long-running processes like a Web app.
 
 ## Cleanup your resources
