@@ -18,21 +18,21 @@ Your organization is building out a new lab environment for pre-production testi
 
 ## Interactive lab simulation
 
-There are a couple of interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
 + [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a suport request, technical or billing. 
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
 ## Architecture diagram
-![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
+![Diagram of the lab 01 architecture.](../media/az104-lab01-user-and-groups2.png)
 
 ## Tasks
 
 + Task 1: Familiarize yourself with the Azure portal.
 + Task 2: Create a resource group.
-+ Task 3: Familiarize yourself with user accounts and group membership.
-+ Task 4: Create security groups with assigned or dynamic membership.
++ Task 3: Familiarize yourself with user accounts.
++ Task 4: Create groups and add members.
 + Task 5: Familiarize yourself with the Cloud Shell.
 + Task 6: Practice with Azure PowerShell.
 + Task 7: Practice with Bash.
@@ -75,9 +75,9 @@ In this task, you create a new resource group. A resource group is a grouping of
 
 1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
 
-    ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
+    ![Screenshot of the resource group list.](../media/az104-lab01-create-resource-group.png)
 
-## Task 2: Familiarize yourself with user accounts and group membership. 
+## Task 2: Familiarize yourself with user accounts.
 
 In this task, you familiarize yourself with user accounts and profiles. You also view group memberships.
 
@@ -91,15 +91,15 @@ In this task, you familiarize yourself with user accounts and profiles. You also
 
 1. Select the **Properties** tab and review all the profile information that can be provided for a user account. 
 
-1. In the **Manage** section, select **Groups**. If you are part of a group, select the group. If you are not part of agroup, select any group. 
 
-1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
-## Task 4: Create groups with assigned and dynamic membership.
+## Task 4: Create groups and add members.
 
 In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
 1. In the Azure portal, search for and select **Groups**.
+
+1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
 1. Select **+ New group** and create a new group. 
 
@@ -112,7 +112,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
     >**Note**: Your **Membership type** drop-down list might be grayed out. This is where you can switch from an assigned group to a dynamic group. This requires an Entra ID Premium P1 or P2 license.
 
-    ![Screenshot of create assigned group.](../media/az104-lab1-create-assigned-group.png)
+    ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
 1. Click **No members selected**.
 
