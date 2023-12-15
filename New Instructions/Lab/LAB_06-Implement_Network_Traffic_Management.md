@@ -87,7 +87,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Type | **Public** |
     | Tier | **Regional** |
     
-     ![image](./media/az104-lab06-create-lb1.png)
+     ![Screenshot of the create load balancer page.](./media/az104-lab06-create-lb1.png)
 
 1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings:  
      
@@ -194,7 +194,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Virtual network | **az104-06-vnet01** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
-    ![image](./media/az104-lab06-create-appgw.png)
+    ![Screenshot of the create app gateway page.](./media/az104-lab06-create-appgw.png)
 
 1. Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**. 
 
@@ -228,7 +228,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Port | `80` |
     | Listener type | **Basic** |
 
-    ![image](./media/az104-lab06-appgw-rule.png)
+    ![Screenshot of the create app gateway rule page.](./media/az104-lab06-appgw-rule.png)
 
 1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). When completed click **Add** (twice).  
 
