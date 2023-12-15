@@ -79,7 +79,7 @@ In this task, you will review the deployment of the container instance. By defau
 
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
-     ![image](./media/az104-lab09b-aci-overview.png)
+     ![Screenshot of the ACI overview page in the portal.](../media/az104-lab09b-aci-overview.png)
 
 1. Verify that the **Welcome to Azure Container Instance** page is displayed.
 
@@ -122,13 +122,17 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select the link next to *Application URL* to view your application.
 
-    ![image](./media/az104-lab09b-aca-overview.png)
+    ![Screenshot of the ACA overview page in the portal.](../media/az104-lab09b-aca-overview.png)
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
 
 ## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud. ACI doesn't require you to provision or manage any underlying infrastructure. The service supports both Linux containers and Windows containers.
++ Azure Container Apps (ACA) is a fully managed serverless container service that scales dynamically based on HTTP traffic or events.
++ Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. Workloads on ACA are usually long-running processes like a Web app.
 
 ## Cleanup your resources
 
