@@ -259,7 +259,16 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-##
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Load Balancer is an excellent choice for distributing network traffic across multiple virtual machines at the transport layer (OSI layer 4 - TCP and UDP).
++ Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
++ The Basic load balancer is for small-scale applications that don't need high availability or redundancy. The Standard load balancer is for high performance and ultra-low latency.
++ Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications. 
++ An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. 
+
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
