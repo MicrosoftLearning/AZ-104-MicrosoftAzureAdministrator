@@ -7,6 +7,7 @@ lab:
 # Lab 09b - Implement Azure Containers
 
 ## Lab requirements
+
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
 ## Estimated timing: 30 minutes
@@ -24,7 +25,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Architecture diagram
 
-![image](./media/az104-lab09b-architecture-diagram.png)
+![Diagram of the tasks.](./media/az104-lab09b-architecture-diagram.png)
 
 ## Tasks
 
