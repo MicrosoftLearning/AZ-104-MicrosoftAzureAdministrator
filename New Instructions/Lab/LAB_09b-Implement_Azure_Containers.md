@@ -34,19 +34,11 @@ There are interactive lab simulations that you might find useful for this topic.
 - Task 3: Create an Azure Container App and environment
 - Task 4: Deploy and test the container app
 
-
-
-
-
-### Instructions
-
-## Exercise 1
-
 ## Task 1: Deploy an Azure Container Instance using a Docker image
 
 In this task, you will create a new container instance for the web application. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for a container image.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. In the Azure portal, search for locate `Container instances` and then, on the **Container instances** blade, click **+ Create**.
 
@@ -133,7 +125,14 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
 
+## 
 
-## Review
+## Cleanup your resources
 
-Congratulations! You have successfully deployed an Azure Container Instance that uses a Docker image to your subscription, then verified that the container was running and accessible over the internet. You also deployed an Azure Container App and verified that the container was running and accessible.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
