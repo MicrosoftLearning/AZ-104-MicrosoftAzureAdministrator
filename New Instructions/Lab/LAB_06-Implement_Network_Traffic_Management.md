@@ -5,32 +5,34 @@ lab:
 ---
 
 # Lab 06 - Implement Traffic Management
-# Student lab manual
+
+## Lab requirements
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
 Your organization recently finished testing managing network traffic for Azure virtual machines in a hub and spoke network topology. Now, you want to test traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-In this lab, you will:
++ [Create and configure and Azure load balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer). Create a virtual network, backend servers, load balancer, and then test the load balancer. 
++ [Deploy Azure Application Gateway](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway). Create an application gateway, create virtual machines, create the backend pool, and test the gateway. 
++ [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
+
+## Tasks
 
 + Task 1: Provision the lab environment
 + Task 2: Implement Azure Load Balancer
 + Task 3: Implement Azure Application Gateway
 
-## Estimated timing: 30 minutes
-
 ## Architecture diagram
 
-![image](./media/az104-lab06-architecture-diagram.png)
-
-
-# Instructions
-
-## Exercise 1
+![Digram of the lab tasks.](./media/az104-lab06-architecture-diagram.png)
 
 ## Task 1: Provision the lab environment
 
@@ -38,9 +40,9 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. If necessary, download the **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** lab files to your computer.
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
-1. From the Azure portal, search for and select `Deploy a custom template`.
+1. Search for and select `Deploy a custom template`.
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
@@ -83,7 +85,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Region | The **same** region that you deployed the VMs to |
     | SKU  | **Standard** |
     | Type | **Public** |
-	| Tier | **Regional** |
+    | Tier | **Regional** |
     
      ![image](./media/az104-lab06-create-lb1.png)
 
@@ -257,7 +259,13 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-    
-## Review
+##
+## Cleanup your resources
 
-Congratulations! In this lab you have successfully used a template to deploy a virtual network, a network security group, and two virtual machines. Then, you successfully deployed and configured a load balancer and appliation gateway as an ingress solution for the VMs.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
