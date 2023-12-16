@@ -10,7 +10,7 @@ lab:
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
-## Estimated timing: 30 minutes
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
@@ -217,8 +217,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-appgwbe` |
     | Add backend pool without targets | **No** |
-    | IP address or FQDN | **10.60.0.4** | 
-    | IP address or FQDN | **10.60.1.4** |
+    | IP address or FQDN | **10.62.0.4** | 
+    | IP address or FQDN | **10.63.0.4** |
 
     > **Note**: The targets represent the private IP addresses of virtual machines **az104-vm0** and **az104-vm1**.
 
