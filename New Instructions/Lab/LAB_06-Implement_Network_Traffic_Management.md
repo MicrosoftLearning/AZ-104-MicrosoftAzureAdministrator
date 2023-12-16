@@ -161,6 +161,10 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. 
 
+## Architecture diagram
+
+![Diagram of the lab tasks.](../media/az104-lab06gw-architecture-diagram.png)
+
 1. In the Azure portal, search and select `Virtual networks`.
 
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet1**.
