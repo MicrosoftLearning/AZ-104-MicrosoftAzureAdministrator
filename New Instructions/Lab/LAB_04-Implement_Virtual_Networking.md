@@ -26,7 +26,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture diagram
 
-![Network layout](../media/az104-lab04-diagram.png)
+![Network layout](../media/az104-lab04-arch-diagram.png)
 
 These virtual networks and subnets are structured in a way that accommodates existing resources yet allows for the projected growth. Let's create these virtual networks and subnets to lay the foundation for our networking infrastructure.
 
