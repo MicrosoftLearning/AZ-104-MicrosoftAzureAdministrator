@@ -126,9 +126,9 @@ In this task, we create a manufacturing services virtual network with a virtual 
 
 In this task, you test the connection between the virtual machines in different virtual networks.
 
-### Verify the private IP address fo the CoreServicesVM
+### Verify the private IP address of the CoreServicesVM
 
-1. From the Azure portal, search for and select the `**CoreServicesVM**` virtual machine.
+1. From the Azure portal, search for and select the `CoreServicesVM` virtual machine.
 
 1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
    
@@ -141,7 +141,7 @@ In this task, you test the connection between the virtual machines in different 
 1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
    ```Powershell
-    Test-NetConnection <CoreServicesVM private IP address> -port 3389```
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389
    ```
    
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
@@ -199,7 +199,9 @@ In this task, you verify the virtual machines in different virtual networks can 
 
 1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-     ```Test-NetConnection 10.0.0.4 -port 3389```
+      ```Powershell
+     Test-NetConnection <CoreServicesVM private IP address> -port 3389
+      ```
 
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational icon *Script execution in progress.*
     
