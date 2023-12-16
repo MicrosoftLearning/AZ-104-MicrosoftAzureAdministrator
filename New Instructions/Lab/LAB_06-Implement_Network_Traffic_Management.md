@@ -30,13 +30,11 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 2: Implement Azure Load Balancer
 + Task 3: Implement Azure Application Gateway
 
-## Architecture diagram
 
-![Diagram of the lab tasks.](../media/az104-lab06-architecture-diagram.png)
 
 ## Task 1: Provision the lab environment
 
-In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines along with associated virtual network interface cards. The VMs will reside in a hub virtual network named **az104-vnet01**.
+In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines along with associated virtual network interface cards. The VMs will reside in a hub virtual network named **az104-vnet1**.
 
 1. If necessary, download the **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** lab files to your computer.
 
@@ -57,7 +55,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg1` (If necessary, select **Create new**)
+    | Resource group| `az104-rg6` (If necessary, select **Create new**)
     | Region        | **East US**   |
     | VM Size       | **Standard DS2 v3** |
     | Admin Username| `localadmin` |
@@ -73,6 +71,10 @@ In this task, you will use a template to deploy one virtual network, one network
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
 
+## Architecture diagram
+
+![Diagram of the lab tasks.](../media/az104-lab06lb-architecture-diagram.png)
+
 1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
@@ -80,9 +82,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | **az104-rg1** |
+    | Resource group | **az104-rg6** |
     | Name | `az104-lb` |
-    | Region | The **same** region that you deployed the VMs to |
+    | Region | The **same** region that you deployed the VMs |
     | SKU  | **Standard** |
     | Type | **Public** |
     | Tier | **Regional** |
@@ -113,10 +115,10 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | `az104-be` |
-    | Virtual network | **az104-06-vnet01** |
-	| Backend Pool Configuration | **NIC** | 
+    | Virtual network | **az104-06-vnet1** |
+    | Backend Pool Configuration | **NIC** | 
     | IP Version | **IPv4** |
-	| Click **Add** to add a virtual machine |  |
+    | Click **Add** to add a virtual machine |  |
     | az104-vm0 | **check the box** |
     | az104-vm1 | **check the box** |
 
@@ -127,11 +129,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Name | `az104-lbrule` |
     | IP Version | **IPv4** |
     | Frontend IP Address | **az104-fe** |
-    | Backend pool | **az104-be** |    
-	| Protocol | **TCP** |
+    | Backend pool | **az104-be** |
+    | Protocol | **TCP** |
     | Port | `80` |
     | Backend port | `80` |
-	| Health probe | **Create new** |
+    | Health probe | **Create new** |
     | Name | `az104-hp` |
     | Protocol | **TCP** |
     | Port | `80` |
@@ -141,7 +143,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Idle timeout (minutes) | `4` |
     | TCP reset | **Disabled** |
     | Floating IP | **Disabled** |
-	| Outbound source network address translation (SNAT) | **Recommended** |
+    | Outbound source network address translation (SNAT) | **Recommended** |
 
 1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**. 
 
@@ -161,9 +163,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet01**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet1**.
 
-1. On the  **az104-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the  **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values):
 
@@ -191,7 +193,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 	| Instance count | `2` |
 	| Availability zone | **None** |
     | HTTP2 | **Disabled** |
-    | Virtual network | **az104-06-vnet01** |
+    | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
     ![Screenshot of the create app gateway page.](../media/az104-lab06-create-appgw.png)
