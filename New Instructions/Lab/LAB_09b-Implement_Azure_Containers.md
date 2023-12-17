@@ -45,7 +45,7 @@ In this task, you will create a new container instance for the web application. 
     | Setting | Value |
     | ---- | ---- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg9b` (If necessary, select **Create new**) |
+    | Resource group | `az104-rg9` (If necessary, select **Create new**) |
     | Container name | `az104-c1` |
     | Region | **East US** (or a region available near you)|
     | Image Source | **Quickstart images** |
@@ -105,7 +105,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Setting | Action |
     |---|---|
     | Subscription | Select your Azure subscription |
-    | Resource group | `az104-rg1` |
+    | Resource group | `az104-rg9` |
     | Container app name |  `my-app` |
     | Region    | **East US** (Or a region available near you) |
     | Container Apps Environment | Leave default |
@@ -118,7 +118,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. Select **Create**.
 
-    A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
+    >**Note:** A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
  
 ## Task 4: Test and verify deployment of the container app
 By default, the Azure container app that you create will accept traffic on port 80 using the sample Hello World application. Azure Container Apps will provide a DNS name for the application. Copy and navigate to this URL to ensure that the application is up and running.
