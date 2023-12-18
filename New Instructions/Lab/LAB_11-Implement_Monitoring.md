@@ -5,17 +5,26 @@ lab:
 ---
 
 # Lab 11 - Implement Monitoring
-# Student lab manual
+
+## Lab requirements
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
-Your organization is planning to deploy a large number of virtual machines in Azure. To ensure that the IT team is ready to support the virtual machines, you decide to evaluate solutions that provide performance and configuration insight into VMs. As part of this evaluation, you plan to examine the capabilities of Azure Monitor, including Log Analytics.
+Your organization is xxxx As part of this evaluation, you plan to examine the capabilities of Azure Monitor, including Log Analytics.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
++ [Implement monitoring](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2017). Create a Log Analytics workspace and Azure-automation solutions. Review monitoring and diagnostic settings for virtual machines. Review Azure Monitor and Log Analytics functionality. 
 
-In this lab, you will:
+## Architecture diagram
+
+![image](./media/az104-lab11-architecture-diagram.png)
+
+## Tasks
 
 + Task 1: Provision the lab environment
 + Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
@@ -23,16 +32,6 @@ In this lab, you will:
 + Task 4: Review default monitoring settings of Azure virtual machines
 + Task 5: Configure Azure virtual machine diagnostic settings
 + Task 6: Review Azure Log Analytics functionality
-
-## Estimated timing: 30 minutes
-
-## Architecture diagram
-
-![image](./media/az104-lab11-architecture-diagram.png)
-
-### Instructions
-
-## Exercise 1
 
 ## Task 1: Provision the lab environment
 
@@ -72,6 +71,32 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **Review + Create**, then select **Create**.
 
+## Task 3: Create and configure an Azure Log Analytics workspace 
+
+In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions. Log Analytics is a logging and monitoring repository that captures metrics, diagnostics, and logging data in a central location. You can then use automation or Kusto Query Language (KQL) queries to work with the captured data.
+
+   >**Did you know?** Kusto Query Language (KQL) is a powerful tool to explore your data and discover patterns, identify anomalies and outliers, create statistical modeling, and more.
+
+1. In the Azure portal, search for and select `Log Analytics workspaces` and, on the **Log Analytics workspaces** blade, click **+ Create**.
+
+1. On the **Basics** tab of the **Create Log Analytics workspace** blade, enter the following settings, click **Review + Create** and then click **Create**:
+
+    | Settings | Value |
+    | --- | --- |
+    | Subscription | the name of your Azure subscription |
+    | Resource group | **az104-rg11** |
+    | Log Analytics Workspace | `az104-law1` |
+    | Region | **East US** (Ensure that this is the same region that you deployed the VM in from Task 1) |
+
+    >**Note**: Wait for the deployment to complete. The deployment should take approximately 1 minute.
+
+
+
+
+
+
+
+
 ## Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 In this task, you will ensure that the Insights and AlertsManagement resource providers are registered for the subscription. Resource providers are the underlying features that enable a service on a subscription. Most resource providers will automatically register when you deploy the first resource that is associated with that provider. However, registering the service first avoids any deployment errors that might occur from the provider not being registered.
 
@@ -87,24 +112,6 @@ In this task, you will ensure that the Insights and AlertsManagement resource pr
 
 1. Repeat these steps for the `Microsoft.AlertsManagement` resource provider and ensure that it is registered.
 
-## Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
-
-In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions. Log Analytics is a logging and monitoring repository that captures metrics, diagnostics, and logging data in a central location. You can then use automation or Kusto Query Language (KQL) queries to work with the captured data.
-
-   >**Did you know?** Kusto Query Language (KQL) is a powerful tool to explore your data and discover patterns, identify anomalies and outliers, create statistical modeling, and more.
-
-1. In the Azure portal, search for and select `Log Analytics workspaces` and, on the **Log Analytics workspaces** blade, click **+ Create**.
-
-1. On the **Basics** tab of the **Create Log Analytics workspace** blade, enter the following settings, click **Review + Create** and then click **Create**:
-
-    | Settings | Value |
-    | --- | --- |
-    | Subscription | the name of your Azure subscription |
-    | Resource group | **az104-rg1** |
-    | Log Analytics Workspace | `az104-law1` |
-    | Region | **East US** (Ensure that this is the same region that you deployed the VM in from Task 1) |
-
-    >**Note**: Wait for the deployment to complete. The deployment should take approximately 1 minute.
 
 1. In the Azure portal, search for and select `Automation Accounts`, and on the **Automation Accounts** blade, click **+ Create**.
 
