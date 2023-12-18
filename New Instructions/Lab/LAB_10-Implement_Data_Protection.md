@@ -4,18 +4,19 @@ lab:
     module: 'Administer Data Protection'
 ---
 
-# Lab 10 - Backup virtual machines
-# Student lab manual
+# Lab 10 - Implement Data Protection
 
 ## Lab scenario
 
-Your organization is evaluating Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, they want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
+Your organization is evaluating Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and Azure file shares. In addition, they want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
+There is an interactive lab simulation that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-In this lab, you will:
++ **[Backup virtual machines and on-premises files.](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)**. Create a recovery services vault and implement an Azure virtual machine backup. Implement on-premises file and folder backup using the Microsoft Azure Recovery Services agent. On-premises backups is outside the scope of this lab, but might be helpful to view those steps. 
+
+## Tasks
 
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
@@ -27,8 +28,6 @@ In this lab, you will:
 ## Architecture diagram
 
 ![image](./media/az104-lab10-architecture-diagram.png)
-
-### Instructions
 
 ## Exercise 1
 
@@ -121,8 +120,8 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     | Settings | Value |
     | --- | --- |
-    | Where is your workload running? | **Azure** |
-    | What do you want to backup? | **Virtual machine** |
+    | Where is your workload running? | **Azure** (notice your other options) |
+    | What do you want to backup? | **Virtual machine** (notice your other options |
 
 1. On the **Backup Goal** blade, click **Backup**.
 
