@@ -6,11 +6,17 @@ lab:
 
 # Lab 10 - Implement Data Protection
 
+## Lab requirements
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+
+## Estimated timing: 40 minutes
+
 ## Lab scenario
 
-Your organization is evaluating Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and Azure file shares. In addition, they want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
+Your organization is evaluating Azure Recovery Services for backup and restore of files hosted on Azure virtual machines. They want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
-## Interactive lab simulations
+## Interactive lab simulation
 
 There is an interactive lab simulation that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
@@ -21,7 +27,7 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
-+ Task 4: Implement Azure Site Recovery
++ Task 4: Implement Azure Site Recovery for virtual machines
 
 ## Estimated timing: 40 minutes
 
@@ -62,8 +68,6 @@ In this task, you will use a template to deploy two virtual machines. The two VM
     | Region        | **East US**   |
     | Username      | `Student`   |
     | Password      | Provide a complex password |
-    
-    ![image](./media/az104-lab10-deploy-vm.png)
 
 1. Select **Review + Create**, then select **Create**.
 
@@ -84,7 +88,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-    ![image](./media/az104-lab10-create-rsv.png)
+    ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
 1. Click **Review + Create**, ensure that the validation passed and click **Create**.
 
@@ -135,7 +139,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Timezone | the name of your local time zone |
     | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
-    ![image](./media/az104-lab10-backup-policy.png)
+    ![Screenshot of the backup policy page.](../media/az104-lab10-backup-policy.png)
 
 1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
 
