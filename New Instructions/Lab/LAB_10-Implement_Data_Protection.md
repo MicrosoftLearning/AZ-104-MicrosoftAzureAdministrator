@@ -21,15 +21,13 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
-+ Task 4: Implement File and Folder backup
++ Task 4: Implement Azure Site Recovery
 
-## Estimated timing: 30 minutes
+## Estimated timing: 40 minutes
 
 ## Architecture diagram
 
-![image](./media/az104-lab10-architecture-diagram.png)
-
-## Exercise 1
+![Diagram of the architecture tasks.](./media/az104-lab10-architecture-diagram.png)
 
 ## Task 1: Provision the lab environment
 
@@ -80,7 +78,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | **az104-rg1** |
+    | Resource group | **az104-rg10** |
     | Vault Name | `az104-vault1` |
     | Region | **East US** (or the region that you used in the previous task to deploy the VMs) | 
 
@@ -153,109 +151,57 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-## Task 4: Implement File and Folder backup
+## Task 4: Implement Azure Site Recovery
 
-In this task, you will implement file and folder backup by using Azure Recovery Services. Recovery Services vaults can perform backups for virtual machines, file shares, SQL servers, and SAP HANA instances running in Azure. Additionally, it can backup several servers and applications running in on-premises environments or other clouds.
+In this task, 
 
-1. In the Azure portal, search for and select **Virtual machines**, and on the **Virtual machines** blade, click **az104-10-vm1**.
+1. Search for and select your Recovery Services Vault, **az104-vault1**.
 
-1. On the **az104-10-vm1** blade, click **Connect**, in the drop-down menu, click **Connect**
+1. From the **Overview** blade, select **Enable Site Recovery**.
 
-1. On the **Connect** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+1. Review your options then select in the **Azure Virtual Machines** section **Enable replication**.
 
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store and on Linux computers you can use an open source RDP client software. You can ignore any warning prompts when connecting to the target virtual machines.
+1. On the **Source** tab, configure the settings.
 
- 1. When prompted, sign in by using the **Student** username and the password you created during Task 1.
+    | Setting | Value |
+    | ---- | ---- |
+    | Region| **East US** (read the notification about repliation in the same region) |
+    | Resource group | **az104-rg10** |
+    | Virtual machine deployment model | **No** |
+    | Disaster recovery between availability zones | **No** |
 
-1. In the Azure portal, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults**, click **az104-vault1**.
+1. Select **Next** and on the **Virtual machines** tab select **az104-10-vm0**.
 
-1. On the **az104-vault1** Recovery Services vault blade, click **+ Backup**.
+1. Select **Next** and move to the **Replication settings** tab. Notice the target location and failover network information. These resources will be automatically created. Take the defaults and select **Next**.
 
-1. On the **Backup Goal** blade, specify the following settings:
+1. On the **Manage** tab, review the parameters.
 
-    | Settings | Value |
-    | --- | --- |
-    | Where is your workload running? | **On-premises** |
-    | What do you want to backup? | **Files and folders** |
+    | Setting | Value |
+    | ---- | ---- |
+    | Replication policy | **24-hour-retention-policy** (this can be changed from 0 to 15 days) |
+    | Update settings **allow ASR to manage** |
 
-    >**Note**: Even though the virtual machine you are using in this task is running in Azure, you can leverage Recovery Services to evaluate the backup capabilities applicable to any on-premises computer running Windows Server operating system.
+1. Select **Next** and then **Enable replication**.
 
- 1. On the **Backup Goal** blade, click **Prepare infrastructure**.
+    >**Note**: Enabling replication can take a couple of minutes. Watch the notification messages in the upper right of the portal. 
 
-1. On the **Prepare infrastructure** blade, click the **Download Agent for Windows Server or Windows Client** link.
+1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-vault1**.
 
-1. After the downlaod completes, open the file to start installation of **MARSAgentInstaller.exe** with the default settings.
+1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is protected and healthy.
 
-    >**Note**: On the **Microsoft Update Opt-In** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, select the **I do not want to use Microsoft Update** installation option.
+    **Note:** If you view the virtual machine, in the **Disaster recovery** section the secondary region will be shown. 
 
-1. On the **Installation** page of the **Microsoft Azure Recovery Services Agent Setup Wizard**, click **Proceed to Registration**. This will start **Register Server Wizard**.
-
-1. Switch to the web browser window displaying the Azure portal, on the **Prepare infrastructure** blade, select the checkbox **Already downloaded or using the latest Recovery Server Agent**, and click **Download**.
-
-1. When prompted, whether to open or save the vault credentials file, click **Save**. This will save the vault credentials file to the local Downloads folder.
-
-1. Switch back to the **Register Server Wizard** window and, on the **Vault Identification** page, click **Browse**.
-
-1. In the **Select Vault Credentials** dialog box, browse to the **Downloads** folder, click the vault credentials file you downloaded, and click **Open**.
-
-1. Back on the **Vault Identification** page, click **Next**.
-
-1. Ensure **Save passphrase securely to Azure Key Vault** is not checked. 
-
-1. On the **Encryption Setting** page of the **Register Server Wizard**, click **Generate Passphrase**.
-
-1. On the **Encryption Setting** page of the **Register Server Wizard**, click the **Browse** button next to the **Enter a location to save the passphrase**.
-
-1. In the **Browse For Folder** dialog box, select the **Documents** folder and click **OK**.
-
-    >**Note**: In a production environment, you should store the passphrase file in a secure location outside of the server being backed up.
-
-1. Click **Finish**, review the **Microsoft Azure Backup** warning and click **Yes**, and wait for the registration to complete.
+##
 
 
+## Cleanup your resources
 
-1. On the **Server Registration** page of the **Register Server Wizard**, review the warning regarding the location of the passphrase file, ensure that the **Launch Microsoft Azure Recovery Services Agent** checkbox is selected and click **Close**. This will automatically open the **Microsoft Azure Backup** console.
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-1. In the **Microsoft Azure Backup** console, in the **Actions** pane, click **Schedule Backup**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 
-1. In the **Schedule Backup Wizard**, on the **Getting started** page, click **Next**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 
-1. On the **Select Items to Backup** page, click **Add Items**.
++ Using the CLI, `az group delete --name resourceGroupName`.
 
-1. In the **Select Items** dialog box, expand **C:\\Windows\\System32\\drivers\\etc\\**, select **hosts**, and then click **OK**:
-
-    >**Note**: For this task, we are selecting a single file. In a production environment, you will select all of the critical files and data you need to be back up.
-
-1. On the **Select Items to Backup** page, click **Next**.
-
-1. On the **Specify Backup Schedule** page, ensure that the **Day** option is selected, in the first drop-down list box below the **At following times (Maximum allowed is three times a day)** box, select **4:30 AM**, and then click **Next**.
-
-1. On the **Select Retention Policy** page, accept the defaults, and then click **Next**.
-
-1. On the **Choose Initial Backup type** page, accept the defaults, and then click **Next**.
-
-1. On the **Confirmation** page, click **Finish**. When the backup schedule is created, click **Close**.
-
-1. In the **Microsoft Azure Backup** console, in the Actions pane, click **Back Up Now**.
-
-    >**Note**: The option to run a backup on demand becomes available once you create a scheduled backup.
-
-1. In the Back Up Now Wizard, on the **Select Backup Item** page, ensure that the **Files and Folders** option is selected and click **Next**.
-
-1. On the **Retain Backup Till** page, accept the default setting and click **Next**.
-
-1. On the **Confirmation** page, click **Back Up**.
-
-1. When the backup is complete, click **Close**, and then close Microsoft Azure Backup.
-
-1. Switch to the web browser window displaying the Azure portal, navigate back to the **Recovery Services vault** blade, in the **Protected items** section, and click **Backup items**.
-
-1. On the **az104-vault1 - Backup items** blade, click **Azure Backup Agent**.
-
-1. On the **Backup Items (Azure Backup Agent)** blade, verify that there is an entry referencing the **C:\\** drive of **az104-10-vm1.**.
-
-    ![image](./media/az104-lab10-backup-success.png)
-
-## Review
-
-Congratulations! You have successfully created two VMs, one used as an Azure VM and one simulating an on-premises VM. You also created a Recovery Services vault, configured the native VM backup for the first VM, and then you configured the Microsoft Azure backup agent to perform file and folder level backups of the other VM.
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
