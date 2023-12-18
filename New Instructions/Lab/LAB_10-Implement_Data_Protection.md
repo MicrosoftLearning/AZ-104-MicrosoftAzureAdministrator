@@ -191,8 +191,20 @@ In this task,
 
     **Note:** If you view the virtual machine, in the **Disaster recovery** section the secondary region will be shown. 
 
-##
 
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ The Azure Backup service provides simple, secure, and cost-effective solutions to back up your data and recover it from the Microsoft Azure cloud.
+
++ Azure Backup can back up on-premises and cloud resources including virtual machines and file shares.
+
++ A Recovery Services vaults store your backup data and minimize management overhead.
+
++ Azure Backup policies configure the frequency of backups and the retention period for recovery points. 
+
++ Azure Site Recovery is a VM-specific disaster recovery service.
 
 ## Cleanup your resources
 
