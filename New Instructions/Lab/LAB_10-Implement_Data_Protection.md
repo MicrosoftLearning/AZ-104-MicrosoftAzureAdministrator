@@ -200,11 +200,11 @@ In this task,
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ The Azure Backup service provides simple, secure, and cost-effective solutions to back up your data and recover it from the Microsoft Azure cloud.
++ The Azure Backup service provides simple, secure, and cost-effective solution to back up and recover your data.
 
-+ Azure Backup can back up on-premises and cloud resources including virtual machines and file shares.
-
-+ A Recovery Services vaults store your backup data and minimize management overhead.
++ Azure Backup can protect on-premises and cloud resources including virtual machines and file shares.
+s
++ A Recovery Services vault store your backup data and minimizes management overhead.
 
 + Azure Backup policies configure the frequency of backups and the retention period for recovery points. 
 
@@ -220,4 +220,4 @@ If you are working with your own subscription take a minute to delete the lab re
 
 + Using the CLI, `az group delete --name resourceGroupName`.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+
