@@ -113,12 +113,12 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | **VM was deleted** |
 
-1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**.
+1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. 
 
 1. Select **Review + create** to validate your input.
 
 1. Select **Create**.
-
+ 
 1. The **Create an alert rule** pane reappears. Select the **Next: Details** button and enter the following values for each setting.
 
     | Setting | Value |
@@ -136,17 +136,15 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
     - When the alert is activated
     - When the alert is triggered
 
-
-
 ## Task 3: Trigger the alert
 
-To trigger an alert, you need to delete the virtual machine provisioned in the lab. 
+To trigger an alert, delete the virtual machine in the resource group.
 
 >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
 
 1. On the Azure portal menu or from the **Home** page, select **Virtual machines**.
 
-1. Check the box for the **vm1** virtual machine.
+1. Check the box for the **az104-vm0** virtual machine.
 
 1. Select **Delete** from the menu bar.
 
