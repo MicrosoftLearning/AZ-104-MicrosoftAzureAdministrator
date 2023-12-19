@@ -152,7 +152,7 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
     - When the alert is activated
     - When the alert is triggered
 
-## Task 3: Trigger the alert
+## Task 4: Trigger the alert
 
 To trigger an alert, delete the virtual machine in the resource group.
 
@@ -178,7 +178,7 @@ To trigger an alert, delete the virtual machine in the resource group.
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
-## Task 4: Add an alert processing rule to the alert
+## Task 5: Add an alert processing rule to the alert
 
 We're going to schedule a one-time, overnight, planned maintenance. It starts in the evening and continues until the next morning.
 
@@ -214,7 +214,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-## Task 5: Use Log Analytics to locate the alert
+## Task 6: Use Log Analytics to locate the alert
 
 
 ## Review the main points of the lab
