@@ -134,11 +134,13 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
     - When the alert is activated
     - When the alert is triggered
 
-    >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
+
 
 ## Task 3: Trigger the alert
 
-To trigger an alert, you need to delete the Linux VM that you created in the previous exercise.
+To trigger an alert, you need to delete the virtual machine provisioned in the lab. 
+
+    >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
 
 1. On the Azure portal menu or from the **Home** page, select **Virtual machines**.
 
@@ -165,10 +167,15 @@ To trigger an alert, you need to delete the Linux VM that you created in the pre
 We're going to schedule a one-time, overnight, planned maintenance. It starts in the evening and continues until the next morning.
 
 1. In the Azure portal resource menu, select **Monitor**, select **Alerts** in the menu on the left, and select **Alert processing rules** in the menu bar.
+   
 1. Select **+ Create**.
+   
 1. Check the box for your sandbox resource group as the scope of the alert processing rule, then select **Apply**.
+   
 1. Select **Next: Rule settings**, then select **Suppress notifications**.
+   
 1. Select **Next: Scheduling**.
+   
 1. By default, the rule works all the time, unless you disable it. We're going to define the rule to suppress notifications for a one-time overnight planned maintenance.
 Enter these settings for the scheduling of the alert processing rule:
 
@@ -198,7 +205,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-
++ 
 
 ## Cleanup your resources
 
