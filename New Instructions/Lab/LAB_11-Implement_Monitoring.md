@@ -142,7 +142,7 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
 
 To trigger an alert, you need to delete the virtual machine provisioned in the lab. 
 
-    >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
+>**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
 
 1. On the Azure portal menu or from the **Home** page, select **Virtual machines**.
 
