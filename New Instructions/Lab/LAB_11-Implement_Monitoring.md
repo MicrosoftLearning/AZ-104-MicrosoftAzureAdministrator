@@ -10,7 +10,7 @@ lab:
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
-## Estimated timing: 30 minutes
+## Estimated timing: 40 minutes
 
 ## Lab scenario
 
@@ -22,16 +22,13 @@ Your organization is xxxx As part of this evaluation, you plan to examine the ca
 
 ## Architecture diagram
 
-![image](./media/az104-lab11-architecture-diagram.png)
+![Diagram of the architecture tasks](./media/az104-lab11-architecture-diagram.png)
 
 ## Tasks
 
 + Task 1: Provision the lab environment
-+ Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-+ Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
-+ Task 4: Review default monitoring settings of Azure virtual machines
-+ Task 5: Configure Azure virtual machine diagnostic settings
-+ Task 6: Review Azure Log Analytics functionality
++ Task 2: Create the Azure activity log monitor
++ Task 3: Trigger the alert
 
 ## Task 1: Provision the lab environment
 
@@ -62,7 +59,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg1` (If necessary, select **Create new**)
+    | Resource group| `az104-rg11` (If necessary, select **Create new**)
     | Region        | **East US**   |
     | Username      | `Student`   |
     | Password      | Provide a complex password |
@@ -70,173 +67,128 @@ In this task, you will deploy a virtual machine that will be used to test monito
     ![image](./media/az104-lab11-deploy-vm.png)
 
 1. Select **Review + Create**, then select **Create**.
+   
+## Task 2: Create the Azure activity log monitor
 
-## Task 3: Create and configure an Azure Log Analytics workspace 
+1. On the Azure portal search for and select **Monitor**. 
 
-In this task, you will create and configure an Azure Log Analytics workspace and Azure Automation-based solutions. Log Analytics is a logging and monitoring repository that captures metrics, diagnostics, and logging data in a central location. You can then use automation or Kusto Query Language (KQL) queries to work with the captured data.
+1. In the Monitor menu, select **Alerts**. 
 
-   >**Did you know?** Kusto Query Language (KQL) is a powerful tool to explore your data and discover patterns, identify anomalies and outliers, create statistical modeling, and more.
+1. Select **Create +** and select **Alert rule**. The **Create an alert rule** pane appears with the **Scope** section open and the **Select a resource** pane open on the right.
 
-1. In the Azure portal, search for and select `Log Analytics workspaces` and, on the **Log Analytics workspaces** blade, click **+ Create**.
+1. In the **Select a resource** pane, the **Filter by subscription** field should already be populated. In the **Filter by resource type** dropdown list, search for and select **Virtual machines**.
 
-1. On the **Basics** tab of the **Create Log Analytics workspace** blade, enter the following settings, click **Review + Create** and then click **Create**:
+1. You want an alert when any virtual machine in your resource group is deleted. Select the box for the **az104-rg11** resource group, then select **Apply**.
 
-    | Settings | Value |
-    | --- | --- |
-    | Subscription | the name of your Azure subscription |
+1. Select the **Condition** tab and then select the **See all signals** link.
+
+1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Select **Apply**
+
+1. You want to receive alerts of all types, so leave **Alert logic** settings at their default of **All selected**. Leave the **Create an alert rule** pane open for the next section.
+
+## Task 3: Add an email alert action
+
+For the previous Azure Monitor alert, you didn't add any actions. You just viewed triggered alerts in the Azure portal. Actions let you send an email for notifications, to trigger an Azure function, or to call a webhook. In this exercise, we're adding an email alert when VMs are deleted.
+
+1. On the **Create an alert rule** pane, select the **Next: Actions** button, and select **Create action group**. 
+
+1. On the **Basics** tab, enter the following values for each setting.
+
+    | Setting | Value |
+    |---------|---------|
+    | **Project details** |
+    | Subscription | your subscription |
     | Resource group | **az104-rg11** |
-    | Log Analytics Workspace | `az104-law1` |
-    | Region | **East US** (Ensure that this is the same region that you deployed the VM in from Task 1) |
+    | Region | **Global** (default) |
+    | **Instance details** |
+    | Action group name | **Alert the operations team** |
+    | Display name | **AlertOpsTeam** |
 
-    >**Note**: Wait for the deployment to complete. The deployment should take approximately 1 minute.
+1. Select **Next: Notifications**, and enter the following values for each setting.
 
+    | Setting | Value |
+    |---------|---------|
+    | Notification type | Select **Email/SMS message/Push/Voice** |
+    | Name | **VM was deleted** |
 
+1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**.
 
+1. Select **Review + create** to validate your input.
 
+1. Select **Create**.
 
+1. The **Create an alert rule** pane reappears. Select the **Next: Details** button and enter the following values for each setting.
 
+    | Setting | Value |
+    |---------|---------|
+    | Alert rule name | **VM was deleted** |
+    | Description | **A VM in your resource group was deleted** |
 
+1. Expand the **Advanced options** section and confirm that **Enable alert rule upon creation** is selected.
 
-## Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
-In this task, you will ensure that the Insights and AlertsManagement resource providers are registered for the subscription. Resource providers are the underlying features that enable a service on a subscription. Most resource providers will automatically register when you deploy the first resource that is associated with that provider. However, registering the service first avoids any deployment errors that might occur from the provider not being registered.
+1. Select **Review + create** to validate your input, then select **Create**.
 
-1. From the Azure portal, search for and select `Subscriptions`.
+    >**Note:** Recipients added to the configured action group (operations team) receive a notification:
 
-1. In the list of subscription, click the name of your subscription.
+    - When they're added to the action group
+    - When the alert is activated
+    - When the alert is triggered
 
-1. On the subscrition page, in the Settings section, select **Resource Providers**.
+    >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
 
-1. In the resource provider filter, search for `Microsoft.Insights`.
+## Task 3: Trigger the alert
 
-1. Ensure that the **Microsoft.Insights** provider is registered. If it is not registered, select the provider and then select **Register**.
+To trigger an alert, you need to delete the Linux VM that you created in the previous exercise.
 
-1. Repeat these steps for the `Microsoft.AlertsManagement` resource provider and ensure that it is registered.
+1. On the Azure portal menu or from the **Home** page, select **Virtual machines**.
 
+1. Check the box for the **vm1** virtual machine.
 
-1. In the Azure portal, search for and select `Automation Accounts`, and on the **Automation Accounts** blade, click **+ Create**.
+1. Select **Delete** from the menu bar.
 
-1. On the **Create an Automation Account** blade, specify the following settings, and click **Review + Create** upon validation click **Create**:
+1. Type "yes" in the **Confirm delete** field, then select **Delete**.
 
-    >**IMPORTANT**: Make sure that you specify the Azure region based on the [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings). For example, if you deployed Log Analytics to **East US**, then you must deploy the Automation Account to **East US 2**. 
+1. In the title bar, select the **Notifications** icon and wait until **vm1** is successfully deleted.
 
-    | Settings | Value |
-    | --- | --- |
-    | Automation account name | `az104-aa1` |
-    | Subscription | the name of your Azure subscription  |
-    | Resource group | **az104-rg1** |
-    | Region | the name of the Azure region determined based on [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings) |
+1. You should have received a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
 
-    
+    ![Screenshot of alert email.](../media/az104-alert-email.png)
 
-    >**Note**: Wait for the deployment to complete. The deployment should take approximately 2 minutes.
+1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
-1. Click **Go to resource**.
+1. You should have three verbose alerts that were generated by deleting **vm1**.
 
-1. On the Automation account blade, in the **Configuration Management** section, click **Inventory**.
+    ![Screenshot that shows all alerts with Name, Severity, Alert condition, User response and Fired time.](../media/7-vm-rg-deleted-alert.png)
 
-1. In the **Inventory** pane, in the **Log Analytics workspace** drop-down list, select the Log Analytics workspace you created earlier in this task and click **Enable**.
+1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
-    >**Note**: Wait for the installation of the corresponding Log Analytics solution to complete. This might take about 3 minutes.
+## Add an alert processing rule to the alert
 
-    >**Note**: This automatically installs the **Change tracking** solution as well.
+We're going to schedule a one-time, overnight, planned maintenance. It starts in the evening and continues until the next morning.
 
-    ![image](./media/az104-lab11-inventory.png)
+1. In the Azure portal resource menu, select **Monitor**, select **Alerts** in the menu on the left, and select **Alert processing rules** in the menu bar.
+1. Select **+ Create**.
+1. Check the box for your sandbox resource group as the scope of the alert processing rule, then select **Apply**.
+1. Select **Next: Rule settings**, then select **Suppress notifications**.
+1. Select **Next: Scheduling**.
+1. By default, the rule works all the time, unless you disable it. We're going to define the rule to suppress notifications for a one-time overnight planned maintenance.
+Enter these settings for the scheduling of the alert processing rule:
 
-1. On the Automation account blade, in the **Update Management** section, click **Update management** and click **Enable**.
+    | Setting | Value |
+    |---------|---------|
+    |Apply the rule |At a specific time|
+    |Start|Enter today's date at 10pm.|
+    |End|Enter tomorrow's date at 7am.|
+    |Time zone|Select the local timezone.|
 
-    >**Note**: Wait for the installation to complete. This might take about 5 minutes.
+    :::image type="content" source="../media/8-alert-processing-rule-schedule.png" alt-text="Screenshot of the scheduling section of an alert processing rule." lightbox="../media/8-alert-processing-rule-schedule.png":::
 
-## Task 4: Review default monitoring settings of Azure virtual machines
+1. Select **Next: Details** and enter these settings:
 
-In this task, you will review default monitoring settings of Azure virtual machines. By default, metrics collected by the Azure platform are made available through Azure Monitor and the Metrics blade of a virtual machine. Common VM performance indicators can be charted by using this feature.
+    | Setting | Value |
+    |---------|---------|
+    |Resource group |Select your sandbox resource group. |
+    |Rule name|**Planned Maintenance**|
+    |Description|**Suppress notifications during planned maintenance.**|
 
-1. In the Azure portal, search for and select `Virtual machines`, and on the **Virtual machines** blade, click **az104-vm0**.
-
-1. On the **az104-vm0** blade, in the **Monitoring** section, click **Metrics**.
-
-1. On the **az104-vm0 \| Metrics** blade, on the default chart, note that the only available **Metrics Namespace** is **Virtual Machine Host**.
-
-    >**Note**: This is expected, since no guest-level diagnostic settings have been configured yet. You do have, however, the option of enabling guest memory metrics directly from the **Metrics Namespace** drop down-list. You will enable it later in this exercise.
-
-1. In the **Metric** drop-down list, review the list of available metrics.
-
-    >**Note**: The list includes a range of CPU, disk, and network-related metrics that can be collected from the virtual machine host, without having access into guest-level metrics.
-
-1. In the **Metric** drop-down list, select **Percentage CPU**, in the **Aggregation** drop-down list, select **Avg**, and review the resulting chart.
-
-    ![image](./media/az104-lab11-cpu-metrics.png)
-
-## Task 5: Configure Azure virtual machine diagnostic settings
-
-In this task, you will configure Azure virtual machine diagnostic settings. Diagnostic settings allow you to capture more logging and monitoring data, and send that data to a location to store. This could be a storage account if you are using a third-party logging solution, or as in this task, a Log Analytics workspace that will centralize the log data.
-
-1. On the **az104-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
-
-1. On the **Overview** tab of the **az104-vm0 \| Diagnostic settings** blade, select the storage account in your resource group, and then click **Enable guest-level monitoring**.
-
-    >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
-
-1. Switch to the **Performance counters** tab of the **az104-vm0 \| Diagnostic settings** blade and review the available counters.
-
-    >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom** view for more detailed listing.
-
-1. Switch to the **Logs** tab of the **az104-vm0 \| Diagnostic settings** blade and review the available event log collection options.
-
-    >**Note**: By default, log collection includes critical, error, and warning entries from the application Log and system log, as well as audit failure entries from the security log. You can switch to the **Custom** view for more detailed configuration settings.
-
-1. On the **az104-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
-
-1. On the **Monitoring configuration** page, select **Configure**.  
-
-    >**Note**: Do not wait for the operation to be completed, but instead proceed to the next step. The operation should take approximately 5 minutes.
-
-1. On the **az104-vm0 \| Logs** blade, in the **Monitoring** section, click **Metrics**.
-
-1. On the **az104-vm0 \| Metrics** blade, on the default chart, note that the **Metrics Namespace** drop-down list includes two entries: **Virtual Machine Host** and  **Guest (classic)**.
-
-    >**Note**: This is expected, since you enabled guest-level diagnostic settings. You also have the option to **Enable new guest memory metrics**.
-
-1. In the **Metrics Namespace** drop-down list, select  the **Guest (classic)** entry.
-
-1. In the **Metric** drop-down list, review the list of available metrics.
-
-    >**Note**: The list includes additional guest-level metrics not available when relying on the host-level monitoring only.
-
-1. In the **Metric** drop-down list, select **Memory\\Available Bytes**, in the **Aggregation** drop-down list, select **Max**, and review the resulting chart.
-
-## Task 6: Review Azure Log Analytics functionality
-In this task, you will use Azure Monitor to query the data captured from the virtual machine.
-
-1. In the Azure portal, search for and select `Monitor` blade, click **Logs**.
-
-    >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics. If you still see an **Enable** button, wait for the previous deployment to finish.
-
-1. If necessary, click **Select scope**, on the **Select a scope** blade, expand your subscription, expand resource group **az104-rg1**, then select **az104-vm0**, and click **Apply**.
-
-1. In the query window, paste the following query, click **Run**, and review the resulting chart:
-
-   ```sh
-   // Virtual Machine available memory
-   // Chart the VM's available memory over the last hour.
-   InsightsMetrics
-   | where TimeGenerated > ago(1h)
-   | where Name == "AvailableMB"
-   | project TimeGenerated, Name, Val
-   | render timechart
-   ```
-
-    > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
-
-    ![image](./media/az104-lab11-monitor.png)
-
-1. Click **Queries** in the toolbar, 
-
-    >**Note**: Depending on your screen resolution, **Queries** might be hidden behind an elipses.
-
-1. Clear any existing filters. Using the query search, search for `Track VM Availability using Heartbeat` then select **Run**.
-
-1. Select the **Results** tab of the query and review the results of the query.
-
-## Review
-
-Congratulations! In this lab, you have successfully deployed a virtual machine, Log Analytics workspace, and an automation account. You then configured the diagnostic settings of the VM to ensure that logs are captured in the Log Analytics workspace, and queried the workspace with Azure Monitor to visualize the performance data of the VM.
+1. Select **Review + create** to validate your input, then select **Create**.
