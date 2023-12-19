@@ -69,6 +69,22 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Password      | Provide a complex password |
     
 1. Select **Review + Create**, then select **Create**.
+
+1. Wait for the deployment to finish, then click **Go to resource group**.
+
+1. Review what resources were deployed including a virtual machine and virtual network.
+
+    >**Note:** Later in the lab we will be using Azure Monitor so take a minute to install the virtual machine agent
+
+1. In the portal, search for and select **Monitor**.
+
+1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
+
+1. Select **VM Insights View**, and then select **Configure Insights**.
+
+1. Select your virtual machine, and then **Enable**.
+
+1. It will take a few minutes for the agent to install and configure, proceed to the next step. 
    
 ## Task 2: Create the Azure activity log monitor
 
