@@ -152,7 +152,7 @@ To trigger an alert, you need to delete the Linux VM that you created in the pre
 
 1. You should have received a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
 
-    ![Screenshot of alert email.](../media/az104-11-alert-email.png)
+    ![Screenshot of alert email.](../media/az104-lab11-alert-email.png)
 
 1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
@@ -179,7 +179,7 @@ Enter these settings for the scheduling of the alert processing rule:
     |End|Enter tomorrow's date at 7am.|
     |Time zone|Select the local timezone.|
 
-    ![Screenshot of the scheduling section of an alert processing rule](../media/az104-11-alert-processing-rule-schedule.png")
+    ![Screenshot of the scheduling section of an alert processing rule](../media/az104-lab11-alert-processing-rule-schedule.png)
 
 1. Select **Next: Details** and enter these settings:
 
