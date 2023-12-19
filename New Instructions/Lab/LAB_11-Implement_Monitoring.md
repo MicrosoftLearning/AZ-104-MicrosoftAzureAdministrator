@@ -30,7 +30,7 @@ Your organization is xxxx As part of this evaluation, you plan to examine the ca
 + Task 2: Create the Azure activity log monitor
 + Task 3: Trigger the alert
 + Task 4: Add an alert processing rule to the alert
-+ Task 5:  
++ Task 5: Use Log Analytics to locate the alert
 
 ## Task 1: Provision the lab environment
 
@@ -190,3 +190,21 @@ Enter these settings for the scheduling of the alert processing rule:
     |Description|**Suppress notifications during planned maintenance.**|
 
 1. Select **Review + create** to validate your input, then select **Create**.
+
+## Task 5: Use Log Analytics to locate the alert
+
+
+
+
+
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
+
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
