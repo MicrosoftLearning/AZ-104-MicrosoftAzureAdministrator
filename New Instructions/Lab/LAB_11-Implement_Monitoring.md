@@ -28,11 +28,11 @@ There is an interactive lab simulations that you might find useful for this topi
 
 ## Tasks
 
-+ Task 1: Provision the lab environment
-+ Task 2: Create the Azure activity log monitor
-+ Task 3: Trigger the alert
-+ Task 4: Add an alert processing rule to the alert
-+ Task 5: Use Log Analytics to locate the alert
++ Task 1: Provision the lab environment.
++ Task 2: Create the Azure activity log monitor.
++ Task 3: Trigger the alert.
++ Task 4: Add an alert processing rule to the alert.
++ Task 5: Use Log Analytics to locate the alert.
 
 ## Task 1: Provision the lab environment
 
