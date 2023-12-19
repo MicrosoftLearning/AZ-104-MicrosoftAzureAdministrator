@@ -194,6 +194,9 @@ Enter these settings for the scheduling of the alert processing rule:
 ## Task 5: Use Log Analytics to locate the alert
 
 
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 
 
