@@ -219,4 +219,3 @@ If you are working with your own subscription take a minute to delete the lab re
 
 + Using the CLI, `az group delete --name resourceGroupName`.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
