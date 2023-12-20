@@ -32,7 +32,7 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 2: Create the Azure activity log alert.
 + Task 3: Trigger the alert.
 + Task 4: Add an alert rule.
-+ Task 5: Use Azure Monitor and KQL queries.
++ Task 5: Use Azure Monitor log queries.
 
 ## Task 1: Provision the lab environment
 
@@ -214,7 +214,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-## Task 6: Use Azure Monitor and KQL queries
+## Task 6: Use Azure Monitor log queries
 
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
@@ -238,7 +238,6 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
     > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
 
-    ![image](./media/az104-lab11-monitor.png)
 
 1. Click **Queries** in the toolbar, 
 
