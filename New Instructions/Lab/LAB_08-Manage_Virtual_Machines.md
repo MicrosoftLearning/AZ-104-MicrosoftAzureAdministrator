@@ -258,9 +258,11 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Notice the **Scale mode** can be **Scale based on metrics** or **Scale to a specific instance count**. In scale sets with a small number of VM instances, increasing or decresing the instance count may be best. In scale sets with a large number of VM instances, scaling based on metrics may be more appropriate.
 
-1. Select the button to **Custom autoscale**. 
+1. Select the button to **Custom autoscale**. Then select **Add a rule**. 
 
-1. Let's create a rule that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
+### Scale out rule
+
+1. Let's create a scale out rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
 
     | Setting | Value |
     | --- | --- |
@@ -277,33 +279,34 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
+### Scale in rule
 
+1. During evening or weekends, demand may decrease so it is important to create a scale in rule.
 
+1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances is decreased when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%. Adjust the settings, then select **Add**.
 
+    | Setting | Value |
+    | --- | --- |
+    | Operator | **Less than** |
+    | Threshold | **30** |
+    | Operation | **decrease percent by** (review your other choices) |
+    | Instance count | **20** |
 
+### Set the instance limits
 
+1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances, or scale in beyond the minimum of instances.
 
+1. **Instance limits** are shown on the **Scaling** page after the rules. 
 
+    | Setting | Value |
+    | --- | --- |
+    | Minimum | **2** |
+    | Maximum | **10** |
+    | Default | **2** |
 
-1. In the **Settings** section, click **Size**.
+1. Be sure to **Save** your changes
 
-1. In the list of available sizes, select **DS1_v2**. 
-
-1. Click **Resize**, and then click **Resize** again.
-
-    ![Screenshot of the vmss resize.](../media/az104-lab08-vmss-resize.png)
-
-1. Select **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
-
-1. In the list of instances, click the entry representing the first instance and, on the scale set instance blade, note its **Location** (it should be one of the zones in the target Azure region into which you deployed the Azure virtual machine scale set).
-
-1. Return to the **vmss1 - Instances** blade, click the entry representing the second instance and, on the scale set instance blade, note its **Location** (it should be one of the other two zones in the target Azure region into which you deployed the Azure virtual machine scale set).
-
-1. From **vmss1**, select **Configuration**.
-
-1. On the Configuration page, for **Enable overprovisioning**, select **On**.
-
-1. Select **Apply**.
+1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances. 
 
 ## Review the main points of the lab
 
