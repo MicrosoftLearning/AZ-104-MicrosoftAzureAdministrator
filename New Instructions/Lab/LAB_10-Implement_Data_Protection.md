@@ -41,7 +41,7 @@ In this task, you will use a template to deploy a virtual machine. The VM will b
 
 1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** lab files to your computer.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. From the Azure portal, search for and select `Deploy a custom template`.
 
