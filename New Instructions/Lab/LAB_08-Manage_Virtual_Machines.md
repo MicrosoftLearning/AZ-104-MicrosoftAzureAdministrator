@@ -21,11 +21,9 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Create a virtual machine with PowerShell](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010). Use Azure PowerShell to deploy a virtual machine. Review Azure Advisor recommendations. 
 + [Create a virtual machine with the CLI](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011). Use the CLI to deploy a virtual machine. Review Azure Advisor recommendations. 
 
-## Exercise 1: Azure Virtual Machines
+## Exercise 1: Azure Virtual Machines Architecture Diagram
 
-## Architecture diagram
-
-![Diagram of the architecture tasks.](./media/az104-lab08-architecture-diagram.png)
+![Diagram of the architecture tasks.](../media/az104-lab08vm-architecture-diagram.png)
 
 ## Tasks
 
@@ -137,14 +135,16 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
 1. Verify the disk is now **Standard HDD**.
 
-## Exercise 2: Azure Virtual Machine Scale Sets
+## Exercise 2: Azure Virtual Machine Scale Sets Architecture Diagram
+
+![Diagram of the architecture tasks.](../media/az104-lab08vmms-architecture-diagram.png)
 
 ## Tasks
 
-+ Task 1: Scale compute and storage for Azure virtual machine scale sets
-+ Task 2: Configure Azure virtual machine diagnostic settings
++ Task 1: Implement Azure Virtual Machine Scale Sets
++ Task 2: Scale Azure Virtual Machine Scale Sets
 
-## Task 1: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
+## Task 1: Implement Azure Virtual Machine Scale Sets
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. With individual VMs, you would need other automation to deploy and configure additional VMs if your application needs additional compute. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to automatically scale up or down the number of VMs in the set.
 
@@ -248,11 +248,11 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take appoximately 5 minutes.
 
 
-## Task 2: Scale compute and storage for Azure virtual machine scale sets
+## Task 2: Scale Azure Virtual Machine Scale Sets
 
-In this task, you will change the size of virtual machine scale set, and then upgrade the instances of the scale set to force them to the new size. You will also manage the configuration of the scale set to enable overprovisioning. This allows the service to spin up additional instances until the number of desired instances are achieved, and delete any extras, speeding up the overall deployment time.
+In this task, you scale the virtual machine scale set using a xxxxx . 
 
-1. In the Azure portal, search for and select `Virtual machine scale sets` and select the **vmss1** scale set
+1. Search for and select the **vmss1** scale set.
 
 1. In the **Settings** section, click **Size**.
 
