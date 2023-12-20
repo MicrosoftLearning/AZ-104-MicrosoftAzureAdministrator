@@ -29,7 +29,7 @@ There is an interactive lab simulation that you might find useful for this topic
 ## Tasks
 
 + Task 1: Provision the lab environment.
-+ Task 2: Create the Azure activity log monitor.
++ Task 2: Create the Azure activity log alert.
 + Task 3: Trigger the alert.
 + Task 4: Add an alert processing rule to the alert.
 + Task 5: Use Log Analytics to locate the alert.
@@ -82,11 +82,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **VM Insights View**, and then select **Configure Insights**.
 
-1. Select your virtual machine, and then **Enable**.
+1. Select your virtual machine, and then **Enable** (twice).
 
 1. It will take a few minutes for the agent to install and configure, proceed to the next step. 
    
-## Task 2: Create the Azure activity log monitor
+## Task 2: Create the Azure activity log alert
 
 1. On the Azure portal search for and select **Monitor**. 
 
@@ -214,12 +214,31 @@ Enter these settings for the scheduling of the alert processing rule:
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-## Task 6: Use Log Analytics to locate the alert
+## Task 6: Use Azure Monitor to query the logs
 
+1. In the portal, search for and select `Monitor`.
+
+1. Select **Logs** and notice, in the query window, queries can be run against Application Insights, Log Anaylytics Workspaces, and Virtual Machines.
+
+1. Select **Virtual machines**, and then in the **Count hearbeats** box select **Load to Editor**.
+
+1. Review the KQL query structure. Notice this query is on the **Heartbeat** table. Other **Table** choices are shown in the right pane.
+
+1. Click on **Time range** and notice you can adjust the time range manually.
+
+1. Click **Run** to execute the query. Depending on the virtul machine usage, you may not find any records.
 
 ## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Alerts help you detect and address issues before users notice there might be a problem with your infrastructure or application.
+
++ You can alert on any metric or log data source in the Azure Monitor data platform.
+
++ An alert rule monitors your data and captures a signal that indicates something is happening on the specified resource.
+
++ An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be initiated and sent to an action group. 
 
 + 
 
