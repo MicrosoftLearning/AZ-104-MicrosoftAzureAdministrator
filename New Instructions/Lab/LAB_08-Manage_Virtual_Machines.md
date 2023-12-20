@@ -250,9 +250,40 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 ## Task 2: Scale Azure Virtual Machine Scale Sets
 
-In this task, you scale the virtual machine scale set using a xxxxx . 
+In this task, you scale the virtual machine scale set using a custom scale rule.
 
-1. Search for and select the **vmss1** scale set.
+1. Select **Go to resource** or search for and select the **vmss1** scale set.
+
+1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
+
+1. Notice the **Scale mode** can be **Scale based on metrics** or **Scale to a specific instance count**. In scale sets with a small number of VM instances, increasing or decresing the instance count may be best. In scale sets with a large number of VM instances, scaling based on metrics may be more appropriate.
+
+1. Select the button to **Custom autoscale**. 
+
+1. Let's create a rule that increases the number of VM instances in a scale set when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Metric source | **Current resource (vmss1)** |
+    | Metric namespace | **Virtual Machine Host** |
+    | Metric name | **Percentage CPU** (review your other choices) |
+    | Operator | **Greater than** |
+    | Metric threshold to trigger scale action | **70** |
+    | Duration (minutes) | **10** |
+    | Time grain statistic | **Average** |
+    | Operation | **Increase percent by** (review other choices) |
+    | Cool down (minutes) | **5** |
+    | Percentage | **20** |
+    
+    ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
+
+
+
+
+
+
+
+
 
 1. In the **Settings** section, click **Size**.
 
