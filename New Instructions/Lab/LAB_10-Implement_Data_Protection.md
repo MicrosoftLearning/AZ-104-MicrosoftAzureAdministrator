@@ -8,7 +8,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the regions, but the steps are written using East US and West US.
 
 ## Estimated timing: 40 minutes
 
@@ -37,7 +37,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Task 1: Provision the lab environment
 
-In this task, you will use a template to deploy two virtual machines. The two VMs will be used to test different backup scenarios.
+In this task, you will use a template to deploy a virtual machine. The VM will be used to test different backup scenarios.
 
 1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** lab files to your computer.
 
@@ -64,7 +64,7 @@ In this task, you will use a template to deploy two virtual machines. The two VM
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg1` (If necessary, select **Create new**)
+    | Resource group| `az104-rg10` (If necessary, select **Create new**)
     | Region        | **East US**   |
     | Username      | `Student`   |
     | Password      | Provide a complex password |
@@ -73,7 +73,7 @@ In this task, you will use a template to deploy two virtual machines. The two VM
 
 ## Task 2: Create a Recovery Services vault
 
-In this task, you will create a Recovery Services vault. A Recovery Services vault provides the backup services for Azure VMs. To minimize latency and costs, you decide to put the Recovery Services vault in the same region as the VMs that you are backing up.
+In this task, you will create a Recovery Services vault. A Recovery Services vault provides the backup services for Azure VMs.
 
 1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
 
@@ -82,11 +82,11 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | **az104-rg10** |
+    | Resource group | **az104-rg10vault** (if necessary, select Create new) |
     | Vault Name | `az104-vault1` |
-    | Region | **East US** (or the region that you used in the previous task to deploy the VMs) | 
+    | Region | **West US** (or a region that you did not use in the previous task to deploy the VMs) |
 
-    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
+    >**Note**: Make sure that you specify a different region into which you deployed virtual machines in the previous task.
 
     ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
@@ -161,7 +161,7 @@ In this task,
 
 1. Search for and select your Recovery Services Vault, **az104-vault1**.
 
-1. From the **Overview** blade, select **Enable Site Recovery**.
+1. From the **Overview** blade, select **+ Enable Site Recovery**.
 
 1. Review your options then select in the **Azure Virtual Machines** section **Enable replication**.
 
@@ -169,9 +169,9 @@ In this task,
 
     | Setting | Value |
     | ---- | ---- |
-    | Region| **East US** (read the notification about repliation in the same region) |
+    | Region| **East US** (read the notification about replication in the same region) |
     | Resource group | **az104-rg10** |
-    | Virtual machine deployment model | **No** |
+    | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
 
 1. Select **Next** and on the **Virtual machines** tab select **az104-10-vm0**.
@@ -183,17 +183,17 @@ In this task,
     | Setting | Value |
     | ---- | ---- |
     | Replication policy | **24-hour-retention-policy** (this can be changed from 0 to 15 days) |
-    | Update settings **allow ASR to manage** |
+    | Update settings | **Allow ASR to manage** |
 
 1. Select **Next** and then **Enable replication**.
 
-    >**Note**: Enabling replication can take a couple of minutes. Watch the notification messages in the upper right of the portal. 
+    >**Note**: Enabling replication will approximately 15 minutes. Watch the notification messages in the upper right of the portal.
 
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-vault1**.
 
-1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is protected and healthy.
+1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes. 
 
-    **Note:** If you view the virtual machine, in the **Disaster recovery** section the secondary region will be shown. 
+    **Did you know?** It is a good practice to test the failover of a protected VM. See https://learn.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm for more information.
 
 
 ## Review the main points of the lab
