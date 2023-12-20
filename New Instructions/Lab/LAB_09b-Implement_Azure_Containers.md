@@ -89,10 +89,12 @@ In this task, you will review the deployment of the container instance. By defau
 
 ![Diagram of the tasks.](../media/az104-lab09baca-architecture-diagram.png)
 
-- Task 3: Create an Azure Container App and environment
-- Task 4: Deploy and test the container app
+## Tasks
 
-## Task 3: Create a container app and environment
+- Task 1: Create an Azure Container App and environment
+- Task 2: Deploy and test the container app
+
+## Task 1: Create a container app and environment
 
 Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
@@ -120,7 +122,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
     >**Note:** A page with the message *Deployment is in progress* is displayed.  Once the deployment is successfully completed, you'll see the message: *Your deployment is complete*.
  
-## Task 4: Test and verify deployment of the container app
+## Task 2: Test and verify deployment of the container app
 By default, the Azure container app that you create will accept traffic on port 80 using the sample Hello World application. Azure Container Apps will provide a DNS name for the application. Copy and navigate to this URL to ensure that the application is up and running.
 
 1. Select **Go to resource** to view your new container app.
