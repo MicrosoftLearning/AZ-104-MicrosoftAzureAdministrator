@@ -36,11 +36,11 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 5: Retest the connection between the virtual machines. 
  
 
-## Task 1:  Create a core services virtual machine and virtual network.
+## Task 1:  Create a core services virtual machine and virtual network
 
 In this task, we create a core services virtual network with a virtual machine. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select `Virtual Machines`.
 
@@ -83,7 +83,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
     >**Note:** Did you notice in this task you created the virtual network when you created the virtual machine? 
 
-## Task 2: Create a manufacturing services virtual machine and virtual network.
+## Task 2: Create a manufacturing services virtual machine and virtual network
 
 In this task, we create a manufacturing services virtual network with a virtual machine. 
 
@@ -122,7 +122,7 @@ In this task, we create a manufacturing services virtual network with a virtual 
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Test the connection between the virtual machines. 
+## Task 3: Test the connection between the virtual machines
 
 In this task, you test the connection between the virtual machines in different virtual networks.
 
@@ -155,7 +155,7 @@ In this task, you test the connection between the virtual machines in different 
 
 In this task, you create virtual network peerings to enable communications between VNets.
 
-1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
+1. In the Azure portal, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
@@ -189,7 +189,7 @@ In this task, you create virtual network peerings to enable communications betwe
 1. Switch to the **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
 
  
-## Task 5: Test the connection between the VMs.
+## Task 5: Test the connection between the VMs
 
 In this task, you verify the virtual machines in different virtual networks can communicate with each other.
 
