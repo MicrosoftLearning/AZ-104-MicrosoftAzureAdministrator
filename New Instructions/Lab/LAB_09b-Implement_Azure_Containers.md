@@ -36,7 +36,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will create a new container instance for the web application. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for a container image.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. In the Azure portal, search for and select `Container instances` and then, on the **Container instances** blade, click **+ Create**.
 
