@@ -37,7 +37,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availabiliy zones.
 
-1. Sign in to the Azure portal - `http://portal.azure.com`.
+1. Sign in to the Azure portal - `https://portal.azure.com`.
 
 1. Search for and select `Virtual machines` and, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**.
 
