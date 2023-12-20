@@ -65,7 +65,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
 
-    ![image](./media/az104-lab08-create-vm.png)
+    ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -106,7 +106,7 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-    ![Screenshot fo resize the virtual machine.](../media/az104-lab08-resize-vm.png)
+    ![Screenshot of the resize the virtual machine.](../media/az104-lab08-resize-vm.png)
 
 1. On the **az104-vm1** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
