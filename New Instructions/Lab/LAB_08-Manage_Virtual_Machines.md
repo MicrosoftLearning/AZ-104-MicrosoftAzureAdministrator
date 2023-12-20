@@ -287,7 +287,14 @@ In this task, you will change the size of virtual machine scale set, and then up
 
 1. Select **Apply**.
 
-## 
+## Review the main points of the lab
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Virtual Machine Scale Sets let you create and manage a group of load balanced VMs.
++ The virtual machines in a Virtual Machine Scale Set are created from the same image and configuration. 
++ In a Virtual Machine Scale Set the number of VM instances can automatically increase or decrease in response to demand or a defined schedule.
+
 
 ## Cleanup your resources
 
