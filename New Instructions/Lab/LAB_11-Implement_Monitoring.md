@@ -216,17 +216,37 @@ Enter these settings for the scheduling of the alert processing rule:
 
 ## Task 6: Use Azure Monitor and KQL queries
 
-1. In the portal, search for and select `Monitor`.
+In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-1. Select **Logs** and notice, in the query window, queries can be run against Application Insights, Log Anaylytics Workspaces, and Virtual Machines.
+1. In the Azure portal, search for and select `Monitor` blade, click **Logs**.
 
-1. Select **Virtual machines**, and then in the **Count hearbeats** box select **Load to Editor**.
+    >**Note**: You might need to click **Get Started** if this is the first time you access Log Analytics. If you still see an **Enable** button, wait for the previous deployment to finish.
 
-1. Review the KQL query structure. Notice this query is on the **Heartbeat** table. Other **Table** choices are shown in the right pane.
+1. If necessary, click **Select scope**, on the **Select a scope** blade, expand your subscription, expand resource group **az104-rg1**, then select **az104-vm0**, and click **Apply**.
 
-1. Click on **Time range** and notice you can adjust the time range manually.
+1. In the query window, paste the following query, click **Run**, and review the resulting chart:
 
-1. Click **Run** to execute the query. Depending on the virtul machine usage, you may not find any records.
+   ```sh
+   // Virtual Machine available memory
+   // Chart the VM's available memory over the last hour.
+   InsightsMetrics
+   | where TimeGenerated > ago(1h)
+   | where Name == "AvailableMB"
+   | project TimeGenerated, Name, Val
+   | render timechart
+   ```
+
+    > **Note**: The query should not have any errors (indicated by red blocks on the right scroll bar). If the query will not paste without errors, paste the query code into a text editor such as Notepad, and then copy and paste it into the query window from there.
+
+    ![image](./media/az104-lab11-monitor.png)
+
+1. Click **Queries** in the toolbar, 
+
+    >**Note**: Depending on your screen resolution, **Queries** might be hidden behind an elipses.
+
+1. Clear any existing filters. Using the query search, search for `Track VM Availability using Heartbeat` then select **Run**.
+
+1. Select the **Results** tab of the query and review the results of the query.
 
 ## Review the main points of the lab
 
