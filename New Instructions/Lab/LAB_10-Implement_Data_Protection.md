@@ -200,7 +200,7 @@ In this task,
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ The Azure Backup service provides simple, secure, and cost-effective solution to back up and recover your data.
++ Azure Backup service provides simple, secure, and cost-effective solution to back up and recover your data.
 
 + Azure Backup can protect on-premises and cloud resources including virtual machines and file shares.
 
