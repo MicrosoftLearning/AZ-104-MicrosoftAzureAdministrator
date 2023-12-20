@@ -12,7 +12,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Estimated timing: 30 minutes
 
-## Interactive lab simulation
+## Interactive lab simulations
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
@@ -200,7 +200,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-## Review
+## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
