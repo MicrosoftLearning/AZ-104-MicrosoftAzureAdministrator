@@ -27,16 +27,14 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Tasks
 
-+ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
-+ Task 2: Scale compute and storage for Azure virtual machines
-+ Task 3: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
-+ Task 4: Scale compute and storage for Azure virtual machine scale sets
++ Task 1: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
++ Task 2: Scale compute and storage for Azure virtual machine scale sets
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availabiliy zones.
 
-1. Sign in to the [Azure portal](http://portal.azure.com).
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
 
 1. In the Azure portal, search for and select `Virtual machines` and, on the **Virtual machines** blade, click **+ Create**, click **+ Azure virtual machine**.
 
@@ -287,6 +285,45 @@ In this task, you will change the size of virtual machine scale set, and then up
 
 1. Select **Apply**.
 
+
+## Task 5: Configure Azure virtual machine diagnostic settings
+
+In this task, you will configure Azure virtual machine diagnostic settings. Diagnostic settings allow you to capture more logging and monitoring data, and send that data to a location to store. This could be a storage account if you are using a third-party logging solution, or as in this task, a Log Analytics workspace that will centralize the log data.
+
+1. On the **az104-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
+
+1. On the **Overview** tab of the **az104-vm0 \| Diagnostic settings** blade, select the storage account in your resource group, and then click **Enable guest-level monitoring**.
+
+    >**Note**: Wait for the diagnostic settings extension to be installed. This might take about 3 minutes.
+
+1. Switch to the **Performance counters** tab of the **az104-vm0 \| Diagnostic settings** blade and review the available counters.
+
+    >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom** view for more detailed listing.
+
+1. Switch to the **Logs** tab of the **az104-vm0 \| Diagnostic settings** blade and review the available event log collection options.
+
+    >**Note**: By default, log collection includes critical, error, and warning entries from the application Log and system log, as well as audit failure entries from the security log. You can switch to the **Custom** view for more detailed configuration settings.
+
+1. On the **az104-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
+
+1. On the **Monitoring configuration** page, select **Configure**.  
+
+    >**Note**: Do not wait for the operation to be completed, but instead proceed to the next step. The operation should take approximately 5 minutes.
+
+1. On the **az104-vm0 \| Logs** blade, in the **Monitoring** section, click **Metrics**.
+
+1. On the **az104-vm0 \| Metrics** blade, on the default chart, note that the **Metrics Namespace** drop-down list includes two entries: **Virtual Machine Host** and  **Guest (classic)**.
+
+    >**Note**: This is expected, since you enabled guest-level diagnostic settings. You also have the option to **Enable new guest memory metrics**.
+
+1. In the **Metrics Namespace** drop-down list, select  the **Guest (classic)** entry.
+
+1. In the **Metric** drop-down list, review the list of available metrics.
+
+    >**Note**: The list includes additional guest-level metrics not available when relying on the host-level monitoring only.
+
+1. In the **Metric** drop-down list, select **Memory\\Available Bytes**, in the **Aggregation** drop-down list, select **Max**, and review the resulting chart.
+
 ## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -306,4 +343,4 @@ If you are working with your own subscription take a minute to delete the lab re
 
 + Using the CLI, `az group delete --name resourceGroupName`.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+
