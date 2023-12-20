@@ -23,7 +23,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Exercise 1: Azure Virtual Machines Architecture Diagram
 
-![Diagram of the architecture tasks.](../media/az104-lab08vm-architecture-diagram.png)
+![Diagram of the architecture tasks.](../media/az104-lab08a-architecture-diagram.png)
 
 ## Tasks
 
@@ -137,7 +137,7 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
 ## Exercise 2: Azure Virtual Machine Scale Sets Architecture Diagram
 
-![Diagram of the architecture tasks.](../media/az104-lab08vmms-architecture-diagram.png)
+![Diagram of the architecture tasks.](../media/az104-lab08b-architecture-diagram.png)
 
 ## Tasks
 
