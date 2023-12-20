@@ -82,7 +82,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     | Setting | Value |
     | --- | --- |
-    | Patch orchestration options | **Manual updates** |  
+    | Patch orchestration options | **Azure orchestrated** |  
 
 1. Click **Next: Monitoring >** and, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -94,17 +94,19 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. On the **Review + Create** blade, click **Create**.
 
+    >**Note:** Monitor the **Notification** messages, and wait for the deployment to complete. 
+
 ## Task 2: Manage compute and storage scaling for virtual machines
 
 In this task, you will scale the compute for a virtual machine by adjusting its size to a different SKU. Azure provides flexability in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. In the Azure portal, search for and select `Virtual machines` and, on the **Virtual machines** blade, click **az104-vm1**.
+1. In the Azure portal, search for and select **az104-vm1**.
 
 1. On the **az104-vm1** virtual machine blade, click **Size** and set the virtual machine size to **DS1_v2** and click **Resize**
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-    ![image](./media/az104-lab08-resize-vm.png)
+    ![Screenshot fo resize the virtual machine.](../media/az104-lab08-resize-vm.png)
 
 1. On the **az104-vm1** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
@@ -134,9 +136,7 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
 1. Navigate back to the **az104-vm1** virtual machine, and select **Disks**.
 
-1. Under data disks, select **Attach existing disks**.
-
-1. Select **vm1-disk1** and then select **Apply**.
+1. Verify the disk is now **Standard HDD**. 
    
 ## Task 3: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 
@@ -149,7 +149,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the your Azure subscription  |
-    | Resource group | **az104-rg8** (Create new) |
+    | Resource group | **az104-rg8**  |
     | Virtual machine scale set name | `vmss1` |
     | Region | **East US** (or a region near you) |
     | Availability zone | **Zones 1, 2, 3** |
@@ -164,7 +164,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
-    ![image](./media/az104-lab08-create-vmss.png)
+    ![Screenshot of the create vmss page. ](../media/az104-lab08-create-vmss.png)
 
 1. On the **Spot** tab, accept the defaults and select **Next: Disks >**.
 
@@ -254,9 +254,9 @@ In this task, you will change the size of virtual machine scale set, and then up
 
 1. Click **Resize**, and then click **Resize** again.
 
-    ![image](./media/az104-lab08-vmss-resize.png)
+    ![Screenshot of the vmss resize.](../media/az104-lab08-vmss-resize.png)
 
-1. In the **Settings** section, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. Select **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
 1. In the list of instances, click the entry representing the first instance and, on the scale set instance blade, note its **Location** (it should be one of the zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 
@@ -267,7 +267,6 @@ In this task, you will change the size of virtual machine scale set, and then up
 1. On the Configuration page, for **Enable overprovisioning**, select **On**.
 
 1. Select **Apply**.
-
 
 ## Review the main points of the lab
 
