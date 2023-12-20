@@ -35,13 +35,13 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 4: Create groups and add members.
 + Task 5: Familiarize yourself with the Cloud Shell.
 + Task 6: Practice with Azure PowerShell.
-+ Task 7: Practice with Bash.
++ Task 7: Practice with the Bash shell.
 
-## Task 1: Familiarize yourself with the Azure portal. 
+## Task 1: Familiarize yourself with the Azure portal
 
 In this task, you familiarize yourself with the Azure portal. The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Begin your tour of the Azure portal, by selecting the top left menu icon. 
 
@@ -55,7 +55,7 @@ In this task, you familiarize yourself with the Azure portal. The Azure portal i
 
 1. Lastly, in the top right corner is your user account information.
    
-## Task 2: Create a new resource group.
+## Task 2: Create a new resource group
 
 In this task, you create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you create a resource group. 
     
@@ -93,7 +93,7 @@ In this task, you familiarize yourself with user accounts and profiles. You also
 
 
 
-## Task 4: Create groups and add members.
+## Task 4: Create groups and add members
 
 In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
@@ -120,7 +120,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
 1. Click **Create** to finish creating the group. 
 
-## Task 4: Configure the Cloud Shell.
+## Task 5: Familiazize yourself with the Cloud Shell.
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. 
 
@@ -140,9 +140,9 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environment is created.
 
-    >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
+    >**Note:** Task 6 let's you practice with Azure PowerShell. Task 7 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
-## Task 5: Practice with Azure PowerShell.
+## Task 6: Practice with Azure PowerShell
 
 In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
 
@@ -184,7 +184,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
 
 1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages. 
 
-## Task 6: Practice with the Bash shell. 
+## Task 7: Practice with the Bash shell
 
 In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell.
 
