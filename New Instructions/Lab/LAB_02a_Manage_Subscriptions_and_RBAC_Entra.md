@@ -33,7 +33,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Architecture diagram
 
-![Diagram of lab tasks.](../media/az104-lab2a-architecture.png)
+![Diagram of lab tasks.](../media/az104-lab02a-architecture.png)
 
 ## Tasks
 
@@ -46,7 +46,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented as part of the [Microsoft Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/), and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** at `https://portal.azure.com`.
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
@@ -60,7 +60,7 @@ In this task, you will create and configure management groups. Management groups
     
     + Navigate back to the **Management groups** blade, and select **Refresh**.
 
-1. On the **Management groups** blade, click **+ Create**.
+1. On the **Management groups** blade, select **+ Create**.
 
 1. Create a management group with the following settings. Select **Submit** when you are done. 
 
@@ -81,17 +81,17 @@ In this task, you will assign the VM Contributor role to your user account.
 
 1. Scroll through the role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**.
 
-1. Select **+ Add**, and then **Add role assignment**. 
+1. Select **+ Add**, from drop-down menu, select **Add role assignment**.
 
-1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
+1. On the **Role** tab, search for and select `Virtual Machine Contributor`, and then select **Next**.
+    
+1. On the **Members** tab, select **User, group, or service principal** for **Assign access to**.  
 
-    | Setting | Value |
-    | --- | --- |
-    | Role in the search tab | **Virtual Machine Contributor** |
-    | Assign access to (Under Members pane) | **User, group, or service principal** |
-    | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
+1. On the the **Members** tab, select the **+ Select members** link.  
 
-4. Click **Review + assign** twice to create the role assignment.
+1. On the **Select Members** blade, search for and select your user account, and then select the **Select** button.
+
+1. Select **Review + assign** twice to create the role assignment.
 
     >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
 
@@ -108,13 +108,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Select the **Check access** tab, then in the Create a custom role box, select **Add**.
+1. Select the **Check access** tab, then in the **Create a custom role** box, select **Add**.
 
 1. On the Basics tab of Create a custom role, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.`
 
 1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
 
-    ![Screenshot clone a role.](../media/az104-lab2a-clone-role.png)
+    ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
 
 1. Select the **Permissions** tab, and then select **+ Exclude permissions**.
 
@@ -122,11 +122,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
+1. Select the **Assignable scopes** tab, and then select the **Delete** icon on the row for the subscription.
 
-1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
+1. On the **Assignable scopes** tab, select **Add assignable scopes**.
 
-1. Select the **JSON** tab. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
+1. On the **Add assignable scopes** blade, select the **az104-mg1** management group, then select the **Select** button.
+
+1. Select the **JSON** tab. Review the JSON for the *actions*, *notActions*, and *assignableScopes* that are customized in the role. 
 
 1. Selct **Review + Create**, and then select **Create**.
 
@@ -142,13 +144,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group and display its details.
 
-1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
+1. Select **Access Control (IAM)**, select **+ Add**, from drop-down menu, select **Add role assignment**.
 
-1. On the **Role** tab, search for `Custom Support Request`. 
+1. On the **Role** tab, search for and select `Custom Support Request`, and then select **Next**.
 
-    >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
+1. On the the **Members** tab, select the **+ Select members** link.  
 
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **HelpDesk-user1**.  
+1. On the **Select Members** blade, search for and select **HelpDesk-user1** user account, and then select the **Select** button.
 
 1. Select **Review + assign** twice.
 
@@ -156,7 +158,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
     
 ### Test the Help Desk user account to ensure it has the correct privileges
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the test user account. If prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the **Azure portal** at `https://portal.azure.com`, using the test user account. If prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of clipboard.
 
@@ -164,7 +166,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the Help Desk user cannot see any resources.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ Create a support request**. 
+1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then select **+ Create a support request**. 
 
     >**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
 
@@ -204,7 +206,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then select **Delete**.
 
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 

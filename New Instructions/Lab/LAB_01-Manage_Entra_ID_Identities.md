@@ -22,10 +22,10 @@ There are a couple of interactive lab simulations that you might find useful for
 
 + [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a suport request, technical or billing. 
 
-+ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
++ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
 ## Architecture diagram
-![Diagram of the lab 01 architecture.](../media/az104-lab1-user-and-groups2.png)
+![Diagram of the lab 01 architecture.](../media/az104-lab01-user-and-groups2.png)
 
 ## Tasks
 
@@ -35,13 +35,13 @@ There are a couple of interactive lab simulations that you might find useful for
 + Task 4: Create security groups with assigned or dynamic membership.
 + Task 5: Familiarize yourself with the Cloud Shell.
 + Task 6: Practice with Azure PowerShell.
-+ Task 7: Practice with Bash.
++ Task 7: Practice with the Bash shell.
 
-## Task 1: Familiarize yourself with the Azure portal. 
+## Task 1: Familiarize yourself with the Azure portal 
 
 In this task, you familiarize yourself with the Azure portal. The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** at `https://portal.azure.com`.
 
 1. Begin your tour of the Azure portal, by selecting the top left menu icon. 
 
@@ -55,13 +55,13 @@ In this task, you familiarize yourself with the Azure portal. The Azure portal i
 
 1. Lastly, in the top right corner is your user account information.
    
-## Task 2: Create a new resource group.
+## Task 2: Create a new resource group
 
 In this task, you create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you create a resource group. 
     
 1. In the Azure portal, search for and select **Resource groups**.
    
-1. On the **Resource groups** blade, click **+ Create**, and provide the required information. 
+1. On the **Resource groups** blade, select **+ Create**, and provide the required information. 
 
     | Setting | Value |
     | --- | --- |
@@ -69,15 +69,15 @@ In this task, you create a new resource group. A resource group is a grouping of
     | Resource group name | `az104-rg1` |
     | Location | your region |
     
-1. Click **Review + create** and then click **Create**.
+1. Select **Review + create** and then select **Create**.
 
     >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track progress of the deployment.
 
 1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
 
-    ![Screenshot of the resource group list.](../media/az104-lab1-create-resource-group.png)
+    ![Screenshot of the resource group list.](../media/az104-lab01-create-resource-group.png)
 
-## Task 2: Familiarize yourself with user accounts and group membership. 
+## Task 3: Familiarize yourself with user accounts and group membership
 
 In this task, you familiarize yourself with user accounts and profiles. You also view group memberships.
 
@@ -95,7 +95,7 @@ In this task, you familiarize yourself with user accounts and profiles. You also
 
 1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
-## Task 4: Create groups with assigned and dynamic membership.
+## Task 4: Create groups with assigned and dynamic membership
 
 In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
 
@@ -112,15 +112,15 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
     >**Note**: Your **Membership type** drop-down list might be grayed out. This is where you can switch from an assigned group to a dynamic group. This requires an Entra ID Premium P1 or P2 license.
 
-    ![Screenshot of create assigned group.](../media/az104-lab1-create-assigned-group.png)
+    ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
-1. Click **No members selected**.
+1. Select **No members selected**.
 
 1. From the **Add members** blade, search for your user account. **Select** your user account to add to the group. 
 
-1. Click **Create** to finish creating the group. 
+1. Select **Create** to finish creating the group. 
 
-## Task 4: Configure the Cloud Shell.
+## Task 5: Familiarize yourself with the Cloud Shell
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. 
 
@@ -142,7 +142,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** Task 5 let's you practice with Azure PowerShell. Task 6 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
-## Task 5: Practice with Azure PowerShell.
+## Task 6: Practice with Azure PowerShell
 
 In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
 
@@ -184,7 +184,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
 
 1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages. 
 
-## Task 6: Practice with the Bash shell. 
+## Task 7: Practice with the Bash shell
 
 In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell.
 
@@ -241,7 +241,7 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then select **Delete**.
 
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 

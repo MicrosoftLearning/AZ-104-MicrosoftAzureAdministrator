@@ -35,15 +35,15 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 4: Experiment with Azure PowerShell (scripting option 1).
 + Task 5: Experiment with the CLI (scripting option 2). 
 
-## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
+## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk
 
 In this task, you use the Azure portal to generate an Azure Resource Manager template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** at `https://portal.azure.com`.
 
 1. Search for and select `Disks`.
 
-1. On the Disks page, select **Create**.
+1. On the Disks page, select **+ Create**.
 
 1. On the Create a managed disk page, use the following information to create a disk.
     
@@ -58,13 +58,13 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Size | **32 Gb** | 
     | Performance | **Standard HDD** |
 
-1. Click **Review + Create** *once*. Do **not** actually deploy the resource.
+1. Select **Review + Create** *once*. Do **not** actually deploy the resource.
 
-1. After the validation, click **Download a template for automation** (bottom of the page).
+1. After the validation, select **Download a template for automation** (bottom of the page).
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
-1. Click **Download** and save the template to your computer.
+1. Select **Download** and save the template to your computer.
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
@@ -72,7 +72,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. In the Azure portal, cancel the deployment of the managed disk.
 
-## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
+## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template
 
 In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
 
@@ -82,7 +82,7 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
+1. On the **Edit template** blade, select **Load file** and upload the **template.json** file you downloaded in the previous task.
 
 1. Within the editor pane, remove the following lines. Be sure to remove the closing bracket and comma. 
 
@@ -103,9 +103,9 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. **Save** the changes.
 
-1. Back on the **Custom deployment** blade, click **Edit parameters**. 
+1. Back on the **Custom deployment** blade, select **Edit parameters**. 
 
-1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
+1. On the **Edit parameters** blade, select **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
 
 1. Back on the **Custom deployment** blade, specify the following settings:
 
@@ -128,17 +128,17 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Verify that the deployment completed successfully.
 
-## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
+## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk
 
 In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
-1. In the list of resource groups, click **az104-rg3**.
+1. In the list of resource groups, select **az104-rg3**.
 
-1. On the **az104-rg3** resource group blade, in the **Settings** section, click **Deployments**.
+1. On the **az104-rg3** resource group blade, in the **Settings** section, select **Deployments**.
 
-1. From the **az104-rg3 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. From the **az104-rg3 - Deployments** blade, select the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
 1. In the Azure portal, search for and select **Disks**.
 
@@ -213,7 +213,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then select **Delete**.
 
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 

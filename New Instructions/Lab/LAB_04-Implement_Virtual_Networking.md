@@ -1,3 +1,9 @@
+---
+lab:
+    title: 'Lab 04: Implement Virtual Networking'
+    module: 'Implement Virtual Networking'
+---
+
 # Lab 04 - Implement Virtual Networking
 
 ## Lab requirements
@@ -42,9 +48,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ## Task 1: Create a resource group
 
-### Create a resource group for all the resources in this lab. 
+### Create a resource group for all the resources in this lab
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** at `https://portal.azure.com`.
 
 1. Search for and select **Resource groups**, then select **+ Create**.  
 
@@ -64,7 +70,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Search for and select **Virtual Networks**.
 
-1. Select **Create** on the Virtual networks page, and complete the **Basics** and **IPv4 address space**. 
+1. Select **+ Create** on the Virtual networks page, and complete the **Basics** and **IP addresses**. 
 
 1. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
@@ -78,7 +84,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the subnets area, delete the **default** subnet.
 
-1. Select **+ Add subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
 	| **Subnet**             | **Option**           | **Value**              |
 	| ---------------------- | -------------------- | ---------------------- |
@@ -194,7 +200,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Return to the portal, and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
    
-## Task 4: Configure communication between an Application Security Group and a Network Security Group. 
+## Task 4: Configure communication between an Application Security Group and a Network Security Group
 
 In this task, we create an Appication Security Group and a Network Security Group. The NSG will have inbound security rule that allows traffic from the ASG. 
 
@@ -202,7 +208,7 @@ In this task, we create an Appication Security Group and a Network Security Grou
 
 1. In the Azure portal, search for and select **Application security groups**.
 
-1. Click **Create** and provide the basic information.
+1. Select **+ Create** and provide the basic information.
 
     | Setting | Value |
     | -- | -- |
@@ -211,13 +217,13 @@ In this task, we create an Appication Security Group and a Network Security Grou
     | Name | `asg-web` |
     | Region | **(US) East US**  |
 
-1. Click **Review + create** and then after the validation click **Create**.
+1. Select **Review + create** and then after the validation select **Create**.
 
 ### Create the Network Security Group and associate it with the ASG subnet
 
 1. In the Azure portal, search for and select **Network security groups**.
 
-1. Select **Create** and provide information on the **Basics** tab. 
+1. Select **+ Create** and provide information on the **Basics** tab. 
 
     | Setting | Value |
     | -- | -- |
@@ -226,18 +232,18 @@ In this task, we create an Appication Security Group and a Network Security Grou
     | Name | `myNSGSecure` |
     | Region | **(US) East US**  |
 
-1. Click **Review + create** and then after the validation click **Create**.
+1. Select **Review + create** and then after the validation select **Create**.
 
-1. After the NSG is created, click **Go to resource**.
+1. After the NSG is created, select **Go to resource**.
 
-1. Under **Settings** click **Subnet** and then **Associate**.
+1. Under **Settings** select **Subnet** and then **Associate**.
 
     | Setting | Value |
     | -- | -- |
     | Virtual network | **CoreServicesVnet (az104-rg4)** |
     | Subnet | **SharedServicesSubnet** |
 
-1. Click **OK** to save the association.
+1. Select **OK** to save the association.
 
 ### Configure an inbound security rule
 
@@ -245,7 +251,9 @@ In this task, we create an Appication Security Group and a Network Security Grou
 
 1. Review the default inbound rules. Notice that only other virtual networks and load balancers are allowed access.
 
-1. Click **Add inbound port rule** . Click **Add** when you are done. 
+1. Select **+ Add**.
+
+1. On the **Add inbound port rule** blade, use the following information to add inbound port rule, and then select **Add**.
 
     | Setting | Value |
     | -- | -- |
@@ -276,7 +284,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then select **Delete**.
 
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 

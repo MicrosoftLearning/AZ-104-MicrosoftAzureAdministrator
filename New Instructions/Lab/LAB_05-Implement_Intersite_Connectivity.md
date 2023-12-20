@@ -36,15 +36,15 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 5: Retest the connection between the virtual machines. 
  
 
-## Task 1:  Create a core services virtual machine and virtual network.
+## Task 1:  Create a core services virtual machine and virtual network
 
 In this task, we create a core services virtual network with a virtual machine. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** at `https://portal.azure.com`.
 
 1. Search for and select `Virtual Machines`.
 
-1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
+1. From the virtual machines page, select **+ Create** then select **Azure Virtual Machine**.
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -83,13 +83,13 @@ In this task, we create a core services virtual network with a virtual machine.
 
     >**Note:** Did you notice in this task you created the virtual network when you created the virtual machine? 
 
-## Task 2: Create a manufacturing services virtual machine and virtual network.
+## Task 2: Create a manufacturing services virtual machine and virtual network
 
 In this task, we create a manufacturing services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
-1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
+1. From the virtual machines page, select **+ Create** then select **Azure Virtual Machine**.
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -141,7 +141,7 @@ In this task, you test the connection between the virtual machines in different 
 1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
    ```Powershell
-    Test-NetConnection <CoreServicesVM private IP address> -port 3389```
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389
    ```
    
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
@@ -155,7 +155,7 @@ In this task, you test the connection between the virtual machines in different 
 
 In this task, you create virtual network peerings to enable communications between VNets.
 
-1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
+1. On the Azure portal, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
@@ -167,18 +167,18 @@ In this task, you create virtual network peerings to enable communications betwe
     | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
     | This virtual network                 |                                               |                                       |
     |                                      | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-    |                                      | Allow CoreServiceVNet to access the peered virtual network            | Allow (default)                       |
-    |                                      | Traffic forwarded from remote virtual network | **Allow**                       |
-    |                                      | Virtual network gateway or Route Server       | None (default)                        |
+    |                                      | Allow Allow 'CoreServicesVNet' to access the peered virtual network            | selected (default)                       |
+    |                                      | Allow 'CoreServicesVNet' to receive forwarded traffic from the peered virtual network | selected                       |
+    |                                      | Enable 'CoreServicesVNet' to use the peered virtual networks' remote gateway       | Not selected (default)                        |
     | Remote virtual network               |                                               |                                       |
     |                                      | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
     |                                      | Virtual network deployment model              | **Resource manager**                      |
     |                                      | I know my resource ID                         | Not selected                          |
     |                                      | Subscription                                  | *your subscription*    |
     |                                      | Virtual network                               | **ManufacturingVnet**                     |
-    |                                      | Traffic to remote virtual network             | Allow (default)                       |
-    |                                      | Traffic forwarded from remote virtual network | **Allow**                       |
-    |                                      | Virtual network gateway or Route Server       | None (default)                        |
+    |                                      | Allow 'ManufacturingVNet' to access 'CoreServicesVNet'  | selected (default)                       |
+    |                                      | Allow 'ManufacturingVNet' to receive forwarded traffic from 'CoreServicesVNet' | selected                        |
+    |                                      | Enable 'ManufacturingVNet' to use 'CoreServicesVNet's' remote gateway       | Not selected (default)                        |
 
 1. Review your settings and select **Add**.
 
@@ -189,7 +189,7 @@ In this task, you create virtual network peerings to enable communications betwe
 1. Switch to the **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
 
  
-## Task 5: Test the connection between the VMs.
+## Task 5: Test the connection between the VMs
 
 In this task, you verify the virtual machines in different virtual networks can communicate with each other.
 
@@ -220,7 +220,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then select **Delete**.
 
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 
