@@ -35,11 +35,11 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 4: Experiment with Azure PowerShell (scripting option 1).
 + Task 5: Experiment with the CLI (scripting option 2). 
 
-## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
+## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk
 
 In this task, you use the Azure portal to generate an Azure Resource Manager template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select `Disks`.
 
@@ -72,7 +72,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. In the Azure portal, cancel the deployment of the managed disk.
 
-## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
+## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template
 
 In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
 
@@ -128,7 +128,7 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Verify that the deployment completed successfully.
 
-## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
+## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk
 
 In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
