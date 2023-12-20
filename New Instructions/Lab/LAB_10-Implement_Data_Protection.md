@@ -33,7 +33,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Architecture diagram
 
-![Diagram of the architecture tasks.](./media/az104-lab10-architecture-diagram.png)
+![Diagram of the architecture tasks.](../media/az104-lab10-architecture-diagram.png)
 
 ## Task 1: Provision the lab environment
 
@@ -203,12 +203,15 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + The Azure Backup service provides simple, secure, and cost-effective solution to back up and recover your data.
 
 + Azure Backup can protect on-premises and cloud resources including virtual machines and file shares.
-s
-+ A Recovery Services vault store your backup data and minimizes management overhead.
 
 + Azure Backup policies configure the frequency of backups and the retention period for recovery points. 
 
-+ Azure Site Recovery is a VM-specific disaster recovery service.
++ Azure Site Recovery is a disaster recovery solution that provides protection for your virtual machines and applications.
+
++ Azure Site Recovery replicates your workloads to a secondary site, and in the event of an outage or disaster, you can failover to the secondary site and resume operations with minimal downtime.
+
++ A Recovery Services vault stores your backup data and minimizes management overhead.
+
 
 ## Cleanup your resources
 
