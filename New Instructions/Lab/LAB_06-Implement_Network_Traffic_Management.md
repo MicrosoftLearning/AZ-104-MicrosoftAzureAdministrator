@@ -10,7 +10,7 @@ lab:
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
-## Estimated timing: 50 minutes
+## Estimated timing: 40 minutes
 
 ## Lab scenario
 
