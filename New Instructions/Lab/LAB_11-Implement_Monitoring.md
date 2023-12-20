@@ -40,7 +40,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. If necessary, download the **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** and **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** lab files to your computer.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. From the Azure portal, search for and select `Deploy a custom template`.
 
