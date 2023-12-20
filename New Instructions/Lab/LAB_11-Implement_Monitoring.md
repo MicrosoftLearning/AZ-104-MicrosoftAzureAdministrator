@@ -240,8 +240,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be initiated and sent to an action group. 
 
-+ 
-
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
