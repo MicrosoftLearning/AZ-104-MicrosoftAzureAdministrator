@@ -44,15 +44,15 @@ There are several interactive lab simulations that you might find useful for thi
 
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal. Tags are a critical component of a governance strategy as outlined by the Microsoft Well-Architected Framework and Cloud Adoption Framework. Tags can allow you to quickly identify resource owners, sunset dates, group contacts, and other name/value pairs that your organinzation deems important. For this exercise, you will assign a tag identifying the resource role ('Infra' for 'Infrastructure').
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
       
 1. Search for and select **Resource groups**.
 
-1. From the Resource groups, select **Create**.
+1. From the Resource groups, select **+ Create**.
 
 1. Provide the name `az104-rg2b` and ensure that the Region is set to **East US**.
 
-1. Click **Review + Create**, and then click **Create**.
+1. Select **Review + Create**, and then select **Create**.
 
 1. After the resource group is deployed, select **Go to resource group**, or navigate to the newly created resource group.
 
@@ -75,7 +75,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the Azure portal, search for and select **Policy**. 
 
-1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. It might also help to search for `Require a tag`.
+1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. It might also help to search for `Require a tag`.
 
     ![Screenshot of the policy definition.](../media/az104-lab02b-policytags.png)
 
