@@ -40,11 +40,11 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will create an Azure web app. Azure offers Azure App Services, which is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure Web Apps, one type of Azure App Services offerings, can be used to run websites for most runtime environments, such as PHP, Java, .NET, and more. If you need support for more than one runtime environment, you can use App Services with Docker containers. The SKU that you select determines the amount of compute, storage, and features that you receive with the web app.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select `App services`.
 
-1. Select **+ Create** and then **Web app**. Notice the other choices. 
+1. Select **+ Create**, from drop-down menu, **Web app**. Notice the other choices. 
 
 1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
@@ -95,7 +95,7 @@ In this task, you will create a staging deployment slot. Deployment slots are fe
 
 In this task, you will configure web app deployment settings. App Services can be configured with deployment settings to allow for continuous deployment from your repo of choice, or by using FTPS credentials and other automation. This ensures that the app service has the latest version of the application running.
 
-1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
+1. On the staging deployment slot blade, in the **Settings** section, slect **Configuration**, and then select **General settings**.
 
     >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
     
@@ -135,17 +135,17 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
-1. From the **Scaling section** select **Automatic**.
+1. From the **Scaling** section, select **Automatic**.
 
-1. In the **Maximum burst field**, select **2**.
+1. In the **Maximum burst** field, select **2**.
 
-    ![image](../media/az104-lab09a-autoscale.png)
+    ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
 
 1. Select **Save**.
 
     >**Note**: In a production environment, organizations often select **Rules Based** and configure rules around specific metrics or Application Insights components that trigger autoscaling.
 
-1. On the blade displaying the production slot of the web app, in the **Settings** section, select **Diagnose and solve problems**.
+1. On the blade displaying the production slot of the web app, select **Diagnose and solve problems**.
 
 1. In the **Load Test your App** box, select **Create Load Test**.
 
