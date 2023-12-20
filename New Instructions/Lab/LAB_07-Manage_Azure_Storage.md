@@ -34,11 +34,11 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will create and configure a storage account.
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select **Storage accounts**, and then click **+ Create**.
 
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -72,7 +72,7 @@ In this task, you will create and configure a storage account.
   
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
-1. In the **Data management** section, select **Lifecycle management**, and then select **Add rule**.
+1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
 + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
 
@@ -124,7 +124,7 @@ In this task, you will create a blob container and upload a blob. Blob container
     | --- | --- |
     | Browse for files | add the file you have selected to upload |
     | Blob type | **Block blob** |
-    | Block size | **4 MB** |
+    | Block size | **4 MiB** |
     | Access tier | **Hot**  (notice the other options) |
     | Upload to folder | `securitytest` |
     | Encryption scope | Use existing default container scope |
@@ -179,17 +179,17 @@ In this task, you will create and configure Azure Files shares.
    
 1. Move to the **Backup** tab, and ensure **Enable Backup** is **not** checked. We are diabling backup to simplify the lab configuration.
 
-1. Click **Review and create**, and then **Create**. Wait for the file share to deploy.
+1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
     ![Screenshot of the create file share page.](../media/az104-lab07-create-share.png)
 
-### Explore Storage Browser and upload a file.
+### Explore Storage Browser and upload a file
 
 1. Return to your storage account, and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
 
 1. Select **File shares**, and verify your **share1** directory is present. Notice you can **+ Add directory**.
 
-1. Select your **share1** directory and notice you can **+Add directory**. This lets you create a folder structure.
+1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
 1. **Upload** a file of your choosing.
 
@@ -201,7 +201,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the poratal, search for and select **Virtual networks**.
 
-1. Select **Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
+1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
 
 1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
