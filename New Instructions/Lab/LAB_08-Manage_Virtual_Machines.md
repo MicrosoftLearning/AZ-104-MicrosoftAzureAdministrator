@@ -5,33 +5,32 @@ lab:
 ---
 
 # Lab 08 - Manage Virtual Machines
-# Student lab manual
+
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2012)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-In this lab, you will:
++ [Create a virtual machine in the portal](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%201). Create a virtual machine, connect and install the web server role. 
++ [Deploy a virtual machine with a template](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209). Explore the QuickStart gallery and locate a virtual machine template. Deploy the template and verify the deployment.
++ [Create a virtual machine with PowerShell](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010). Use Azure PowerShell to deploy a virtual machine. Review Azure Advisor recommendations. 
++ [Create a virtual machine with the CLI](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011). Use the CLI to deploy a virtual machine. Review Azure Advisor recommendations. 
+
+## Architecture diagram
+
+![Diagram of the architecture tasks.](./media/az104-lab08-architecture-diagram.png)
+
+## Tasks
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 + Task 2: Scale compute and storage for Azure virtual machines
 + Task 3: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
 + Task 4: Scale compute and storage for Azure virtual machine scale sets
-
-## Estimated timing: 30 minutes
-
-## Architecture diagram
-
-![image](./media/az104-lab08-architecture-diagram.png)
-
-
-### Instructions
-
-## Exercise 1
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
@@ -288,6 +287,16 @@ In this task, you will change the size of virtual machine scale set, and then up
 
 1. Select **Apply**.
 
-## Review
+## 
 
-Congratulations! You have successfully deployed individual virtual machines across availability zones, and then managed the scaling of the compute and storage for a VM. You also created a virtual machine scale set, and managed the networking and configuration of the VMSS.
+## Cleanup your resources
+
+If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
+
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+
++ Using the CLI, `az group delete --name resourceGroupName`.
+
+1. Sign in to the **Azure portal** - `http://portal.azure.com`.
