@@ -46,7 +46,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
 
-1. Sign in to the **Azure portal** - `http://portal.azure.com`.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select **Management groups** to navigate to the **Management groups** blade.
 
@@ -81,7 +81,7 @@ In this task, you will assign the VM Contributor role to your user account.
 
 1. Scroll through the role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**.
 
-1. Select **+ Add**, and then **Add role assignment**. 
+1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
 1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
 
@@ -108,7 +108,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Select the **Check access** tab, then in the Create a custom role box, select **Add**.
+1. Select the **Check access** tab, then in the **Create a custom role** box, select **Add**.
 
 1. On the Basics tab of Create a custom role, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.`
 
@@ -156,7 +156,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
     
 ### Test the Help Desk user account to ensure it has the correct privileges
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the test user account. If prompted to update the password, change the password for the user.
+1. Open an **InPrivate** browser window and sign in to the Azure portal at `https://portal.azure.com` using the test user account. If prompted to update the password, change the password for the user.
 
     >**Note**: Rather than typing the user name, you can paste the content of clipboard.
 
