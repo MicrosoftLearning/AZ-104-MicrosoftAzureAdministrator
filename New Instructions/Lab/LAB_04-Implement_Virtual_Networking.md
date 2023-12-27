@@ -1,6 +1,6 @@
 # Lab 04 - Implement Virtual Networking
 
-## Lab Introduction
+## Lab introduction
 
 This lab is the first of three labs that focus on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
 
