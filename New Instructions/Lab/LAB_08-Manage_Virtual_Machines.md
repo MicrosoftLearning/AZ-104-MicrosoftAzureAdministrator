@@ -36,8 +36,6 @@ There are interactive lab simulations that you might find useful for this topic.
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 + Task 2: Manage compute and storage scaling for virtual machines
-+ Task 3: Create a virtual machine using Azure PowerShell (optional 1)
-+ Task 4: Create a virtual machine using the CLI (optional 2)
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
@@ -150,8 +148,8 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
 ## Tasks
 
-+ Task 1: Implement Azure Virtual Machine Scale Sets
-+ Task 2: Scale Azure Virtual Machine Scale Sets
++ Task 3: Implement Azure Virtual Machine Scale Sets
++ Task 4: Scale Azure Virtual Machine Scale Sets
 
 ## Task 1: Implement Azure Virtual Machine Scale Sets
 
@@ -317,7 +315,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances. 
 
-## Task 3: Create a virtual machine using Azure PowerShell (optional 1)
+## Task 5: Create a virtual machine using Azure PowerShell (optional 1)
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
@@ -355,7 +353,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**. 
 
-## Task 4: Create a virtual machine using the CLI (optional 2)
+## Task 6: Create a virtual machine using the CLI (optional 2)
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
