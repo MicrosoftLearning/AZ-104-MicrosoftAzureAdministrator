@@ -6,7 +6,10 @@ lab:
 
 # Lab 09b - Implement Azure Containers
 
-## Lab requirements
+## Lab introduction
+
+In this lab, you learn how to implement Azure Container Instances and Azure Container Apps. You learn to deploy an Azure Container Instance to display a Hello World app.
+You learn to deploy the default Azure Container App. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
