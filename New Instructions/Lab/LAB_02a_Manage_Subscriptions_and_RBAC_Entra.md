@@ -6,7 +6,9 @@ lab:
 
 # Lab 02a - Manage Subscriptions and RBAC
 
-## Lab requirements
+## Lab Introduction
+
+In this lab, you learn about role-based access control. You learn how to use permissions and scopes to control what actions identities can and cannot perform. You also learn how to make subscription management easier using management groups. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -14,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-In order to simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
+To simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
 
 - Creating a management group that includes all your Azure subscriptions.
 
@@ -29,7 +31,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 + [Manage access with RBAC](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2014). Assign built-in role to a user and monitor the activity logs. 
 
-+ [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group, and create and assign a custom RBAC role.
++ [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group and create and assign a custom RBAC role.
 
 ## Architecture diagram
 
@@ -44,7 +46,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Task 1: Implement Management Groups
 
-In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone on the Help Desk will need to create a support request across all subscriptions. 
+In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the Help Desk will need to create a support request across all subscriptions. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -58,7 +60,7 @@ In this task, you will create and configure management groups. Management groups
     
     + On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
     
-    + Navigate back to the **Management groups** blade, and select **Refresh**.
+    + Navigate back to the **Management groups** blade and select **Refresh**.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -152,7 +154,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **Review + assign** twice.
 
-    >**Note:** At this point, you have a Help Desk user account with custom privleges to create a support ticket. Your next step is to test the account.
+    >**Note:** At this point, you have a Help Desk user account with custom privileges to create a support ticket. Your next step is to test the account.
     
 ### Test the Help Desk user account to ensure it has the correct privileges
 
@@ -182,20 +184,20 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 In this task, you view the activity log to determine if anyone has created a new role. 
 
-1. Return to the **az104-mg1** resource, and select **Activity log**.
+1. Return to the **az104-mg1** resource and select **Activity log**.
 
 2. Select **Add filter**, select **Operation**, and then **Create role assignment**.
 
     ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
 
-3. Verify the Activity log shows the role creation activities. 
+3. Verify the Activity log shows role creation activities. 
 
 ## Review the main points of the lab
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Management groups are used to logically organize subscriptions.
-+ Azure has a large number of built-in roles. You can assign these roles to control access to resources.
++ Azure has many built-in roles. You can assign these roles to control access to resources.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments. 
