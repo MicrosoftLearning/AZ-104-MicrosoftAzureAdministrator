@@ -36,6 +36,8 @@ There are interactive lab simulations that you might find useful for this topic.
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 + Task 2: Manage compute and storage scaling for virtual machines
++ Task 3: Create a virtual machine using Azure PowerShell (optional 1)
++ Task 4: Create a virtual machine using the CLI (optional 2)
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
@@ -314,6 +316,72 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 1. Be sure to **Save** your changes
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances. 
+
+## Task 3: Create a virtual machine using Azure PowerShell (optional 1)
+
+1. Sign in to the Azure portal - `https://portal.azure.com`.
+
+1. Use the menu to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
+
+1. If necessary configure the Cloud Shell. Be sure to select **PowerShell**.
+
+1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
+
+    ```powershell
+    New-AzVm `
+    -ResourceGroupName 'az104-rg8' `
+    -Name 'myPSVM' `
+    -Location 'East US' `
+    -Image 'Win2019Datacenter' `
+    -Zone '1' `
+    -Size 'Standard_D2s_v3' 
+    -Credential '(Get-Credential)' `
+
+1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group. 
+
+    ```powershell
+    Get-AzVM `
+    -ResourceGroupName 'az104-rg8'
+    -Status
+
+1. Verify your new virtual machine is listed and the **Status** is **Running**.
+
+1. Use **Stop-AzVM** to stop your virtual machine. Type **Yes** to confirm. 
+
+    ```
+    Stop-AzVM `
+    -ResourceGroupName 'az104-rg8'
+    -Name 'myPSVM' `
+
+1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**. 
+
+## Task 4: Create a virtual machine using the CLI (optional 2)
+
+1. Sign in to the Azure portal - `https://portal.azure.com`.
+
+1. Use the menu to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
+
+1. If necessary configure the Cloud Shell. Be sure to select **Bash**.
+
+1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create]([https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create)) command reference for all the parameters associated with creating a virtual machine.
+
+
+    ```sh
+    az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys 
+    
+1. Once the command completes, use **az vm show** to verify your machine was created.
+
+    ```sh
+    az vm show --name  myCLIVM --resource-group az104-rg8 --show-details
+
+1. Verify the **powerState** is **VM Running**.
+
+1. Use **az vm deallocate** to stop your virtual machine. Type **Yes** to confirm. 
+
+    ```sh
+    az vm deallocate --resource-group az104-rg8 --name myCLIVM
+
+1. Use **az vm show** to ensure the **powerState** is **VM deallocated**. 
 
 ## Review the main points of the lab
 
