@@ -6,21 +6,20 @@ lab:
 
 # Lab 01 - Manage Microsoft Entra ID Identities
 
-## Lab requirements
+## Lab introduction
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown in **East US**. 
+This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. You also get familiar with basic administrator tools. These tools include the Azure portal, Cloud Shell, Azure PowerShell, and the Command Line Interface (CLI). 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown in East US.
 
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
 
-Your organization is building out a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. In order to allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. You also need to know how to delete users to prevent access after an engineer leaves your organization.
+Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. You also need to know how to delete users to prevent access after an engineer leaves your organization.
 
 ## Interactive lab simulation
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
-
-+ [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a suport request, technical or billing. 
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
@@ -95,7 +94,7 @@ In this task, you familiarize yourself with user accounts and profiles. You also
 
 ## Task 4: Create groups and add members
 
-In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators have to add and remove members manually).
+In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators must add and remove members manually).
 
 1. In the Azure portal, search for and select **Groups**.
 
@@ -120,7 +119,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
 1. Click **Create** to finish creating the group. 
 
-## Task 5: Familiazize yourself with the Cloud Shell.
+## Task 5: Familiarize yourself with the Cloud Shell.
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. 
 
@@ -148,7 +147,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
 
     >**Note:** Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters.
 
-1. Continue working in the Cloud Shell. At anytime use **cls** to clear the command window.
+1. Continue working in the Cloud Shell. At any time use **cls** to clear the command window.
 
 1. Azure PowerShell uses a *Verb*-*Noun* format for cmdlets. For example, the cmdlet to create a new resource group is **New-AzResourceGroup**. To view how to use the cmdlet, run the Get-Help command.
 
@@ -192,7 +191,7 @@ In this task, you create a resource group and an Azure group by using Azure CLI 
 
     >**Note:** Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. 
 
-1. The Azure CLI uses an easy to read syntax for most resource types and working with those resources. For example, to interact with resource groups, the command is **az group**.  
+1. The Azure CLI uses an easy-to-read syntax. For example, to interact with resource groups, the command is **az group**.  
 
    ```sh
    az group --help
