@@ -7,14 +7,17 @@ lab:
 # Lab 09a - Implement Web Apps
 
 
-## Lab requirements
+## Lab introduction
+
+In this lab, you learn about Azure web apps. You learn to configure a web app to display a Hello World application in an external GitHub repository. You learn to create a staging slot and swap with the production slot. You also learn about autoscaling to accommodate demand changes.
+
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
 ## Estimated timing: 30 minutes
 
 ## Lab scenario
 
-Your organization is interested in Azure Web apps for hosting your organization's web sites. The web sites are currently hosted in the company's on-premises data centers. The web sites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will need replacement in the near future. Your organization wants to complete testing to facilitate a move to Azure prior to the end-of-life date.
+Your organization is interested in Azure Web apps for hosting your organization's web sites. The web sites are currently hosted in the company's on-premises data centers. The web sites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need replacement. Your organization wants to complete testing to facilitate a move to Azure prior to the end-of-life date.
 
 ## Interactive lab simulations
 
@@ -95,15 +98,15 @@ In this task, you will create a staging deployment slot. Deployment slots are fe
 
 In this task, you will configure web app deployment settings. App Services can be configured with deployment settings to allow for continuous deployment from your repo of choice, or by using FTPS credentials and other automation. This ensures that the app service has the latest version of the application running.
 
-1. On the staging deployment slot blade, in the **Settings** section, slect **Configuration**, and then select **General settings**.
+1. On the staging deployment slot blade, in the **Settings** section, select **Configuration**, and then select **General settings**.
 
-    >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
+    >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
     
 1. On the **Settings** tab, in the **Source** drop-down list, select **External Git**.
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
 
-1. In the branch field, eneter `master`.
+1. In the branch field, enter `master`.
 
 1. Select **Save**.
 
