@@ -6,7 +6,9 @@ lab:
 
 # Lab 06 - Implement Traffic Management
 
-## Lab requirements
+## Lab introduction
+
+In this lab you learn how to implement and test an internal Load Balancer. You also learn to implement and test an Application Gateway. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
@@ -71,9 +73,14 @@ In this task, you will use a template to deploy one virtual network, one network
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
 
-## Architecture diagram
+
+## Architecture diagram - Load Balancer
+
+>**Note**: Notice the Load Balancer is distributing across two virtual machines in the same virtual network. 
+
 
 ![Diagram of the lab tasks.](../media/az104-lab06lb-architecture-diagram.png)
+
 
 1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
 
@@ -110,7 +117,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Assignment | Static |
     | Routing Preference | **Microsoft network** |
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click  **Next:Inbound rules**. 
+1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click  **Next: Inbound rules**. 
 
     | Setting | Value |
     | --- | --- |
@@ -161,7 +168,10 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. 
 
-## Architecture diagram
+## Architecture diagram - Application Gateway
+
+>**Note**: Notice the Application Gateway is distributing across two virtual machines in the two different virtual networks. 
+
 
 ![Diagram of the lab tasks.](../media/az104-lab06gw-architecture-diagram.png)
 
@@ -236,7 +246,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![Screenshot of the create app gateway rule page.](../media/az104-lab06-appgw-rule.png)
 
-1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). When completed click **Add** (twice).  
+1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). When complete, click **Add** (twice).  
 
     | Setting | Value |
     | --- | --- |
@@ -251,7 +261,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
-    > **Note**: Wait for the Application Gateway instance to be created. This will take appoximately 10 minutes.
+    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 10 minutes.
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-appgw**.
 
