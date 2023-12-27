@@ -6,7 +6,9 @@ lab:
 
 # Lab 03 - Manage Azure resources by using Azure Resource Manager Templates
 
-## Lab requirements
+## Lab introduction
+
+In this lab, you learn how to define your resource infrastructure using Azure Resource Manager templates. Templates ensure consistency and let you create multiple resources at one time. You learn to deploy templates with the Azure portal, Azure PowerShell, or the CLI. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -21,7 +23,8 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205). Review, create, and deploy a managed disks with a template.
 
 ## Lab scenario
-Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look to automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
+
+Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
 
 ## Architecture diagram
 
@@ -58,9 +61,9 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Size | **32 Gb** | 
     | Performance | **Standard HDD** |
 
-1. Click **Review + Create** *once*. Do **not** actually deploy the resource.
+1. Click **Review + Create** *once*. Do **not** deploy the resource.
 
-1. After the validation, click **Download a template for automation** (bottom of the page).
+1. After validation, click **Download a template for automation** (bottom of the page).
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
@@ -74,11 +77,11 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 ## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template
 
-In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you needed to change a parameter or two, you can easily modify the template in the future.
+In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you need to change a parameter or two, you can easily modify the template in the future.
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
-1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are a large number of built-in templates. Selecting any template will provide a short description.
+1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates. Selecting any template will provide a short description.
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
@@ -99,7 +102,7 @@ In this task, you use the template that you created to deploy a new managed disk
    },      
    ```
 
-    >**Note**: These parameters are removed since they are not applicable to the current deployment. In particular, sourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
+    >**Note**: These parameters are removed since they are not applicable to the current deployment. SourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
 
 1. **Save** the changes.
 
@@ -130,7 +133,7 @@ In this task, you use the template that you created to deploy a new managed disk
 
 ## Task 3: Review the Azure Resource Manager template-based deployment of the managed disk
 
-In this task, you verify that the deployment has finished successfuly. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
+In this task, you verify that the deployment has finished successfully. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. In the Azure portal, search for and select **Resource groups**. 
 
@@ -148,7 +151,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
 
 ## Task 4: Experiment with using Azure PowerShell to deploy a template (option 1)
 
-1. Open the Cloud Shell, and select **PowerShell**.
+1. Open the Cloud Shell and select **PowerShell**.
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
 
@@ -175,7 +178,7 @@ In this task, you verify that the deployment has finished successfuly. All prior
    
 ## Task 5: Experiment with using the CLI to deploy a template (option 2)
 
-1. Open the Cloud Shell, and select **Bash**.
+1. Open the Cloud Shell and select **Bash**.
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
 
