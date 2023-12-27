@@ -6,7 +6,9 @@ lab:
 
 # Lab 10 - Implement Data Protection
 
-## Lab requirements
+## Lab introduction    
+
+In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery for virtual machines. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the regions, but the steps are written using East US and West US.
 
@@ -200,7 +202,7 @@ In this task,
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ Azure Backup service provides simple, secure, and cost-effective solution to back up and recover your data.
++ Azure Backup service provides simple, secure, and cost-effective solutions to back up and recover your data.
 
 + Azure Backup can protect on-premises and cloud resources including virtual machines and file shares.
 
