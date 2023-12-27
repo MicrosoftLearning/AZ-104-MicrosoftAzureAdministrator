@@ -33,6 +33,8 @@ There are some interactive lab simulations that you might find useful for this t
 
 + [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group and create and assign a custom RBAC role.
 
++ [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a support request, technical or billing.
+
 ## Architecture diagram
 
 ![Diagram of lab tasks.](../media/az104-lab02a-architecture.png)
