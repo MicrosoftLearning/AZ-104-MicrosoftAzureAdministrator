@@ -6,7 +6,9 @@ lab:
 
 # Lab 05 - Implement Intersite Connectivity
 
-## Lab requirements
+## Lab introduction
+
+In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections. You will also learn about the Network Watcher tool.  
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -14,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario which is also popular for separating production from development or separting one subsidiary from another.
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.
 
 ## Interactive lab simulations
 
@@ -25,7 +27,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture diagram
 
-![Lab 05 architecture diagrm](../media/az104-lab05-architecture-diagram.png)
+![Lab 05 architecture diagram](../media/az104-lab05-architecture-diagram.png)
 
 ## Tasks
 
@@ -186,7 +188,7 @@ In this task, you create virtual network peerings to enable communications betwe
  
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
-1. Switch to the **ManufacturingVnet**, and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
+1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**.
 
  
 ## Task 5: Test the connection between the VMs
@@ -213,7 +215,7 @@ In this task, you verify the virtual machines in different virtual networks can 
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ By default, resources in different virtual networks cannot communicate with other.
++ By default, resources in different virtual networks cannot communicate.
 + Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
 + Peered virtual networks appear as one for connectivity purposes.
 + The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
