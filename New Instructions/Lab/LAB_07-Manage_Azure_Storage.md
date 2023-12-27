@@ -6,11 +6,17 @@ lab:
 
 # Lab 07 - Manage Azure Storage
 
+## Lab introduction
+
+In this lab you learn to create storage accounts for Azure blobs and Azure files. You learn to configure and secure blob containers. You also learn to use Storage Browser to configure and secure Azure file shares. 
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
 
-Your organization is currently storing data in on-premises data stores. The majority of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
+Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
 
 ## Interactive lab simulations
 
@@ -58,9 +64,9 @@ In this task, you will create and configure a storage account.
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
-1. Select **Review**, wait for the validation process to complete and then click **Create**.
+1. Select **Review**, wait for the validation process to complete, and then click **Create**.
 
-1. Once the storage account deploys, **Go to resource**.
+1. Once the storage account is deployed, select **Go to resource**.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
@@ -114,7 +120,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 ### Manage blob uploads
 
-1. return to the containers page, select your **data** container and then click **Upload**.
+1. Return to the containers page, select your **data** container and then click **Upload**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
@@ -133,7 +139,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 1. Click **Upload**.
 
-1. Confirm you have a new folder and your file was uploaded. 
+1. Confirm you have a new folder, and your file was uploaded. 
 
 1. Select your upload file and review the options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
@@ -165,7 +171,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
     > **Note**: You should be able to view the content of the file by downloading it and opening it with Notepad. If you receive a Windows SmartScreen error, continue to the page.
 
-## Task 5: Create and configure an Azure Files shares
+## Task 5: Create and configure an Azure File share
 
 In this task, you will create and configure Azure Files shares. 
 
@@ -177,7 +183,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Notice the **Tier** options. Keep the default **Transaction optimized**.
    
-1. Move to the **Backup** tab, and ensure **Enable Backup** is **not** checked. We are diabling backup to simplify the lab configuration.
+1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are diabling backup to simplify the lab configuration.
 
 1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
@@ -185,9 +191,9 @@ In this task, you will create and configure Azure Files shares.
 
 ### Explore Storage Browser and upload a file
 
-1. Return to your storage account, and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
+1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares**, and verify your **share1** directory is present. Notice you can **+ Add directory**.
+1. Select **File shares** and verify your **share1** directory is present. Notice you can **+ Add directory**.
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
@@ -195,11 +201,11 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
-    >**Note**: You are able to view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
+    >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
 ### Restrict network access to the storage account
 
-1. In the poratal, search for and select **Virtual networks**.
+1. In the portal, search for and select **Virtual networks**.
 
 1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
 
@@ -233,7 +239,7 @@ In this task, you will create and configure Azure Files shares.
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ An Azure storage account contains all of your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS.
++ An Azure storage account contains all your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS.
 + Azure storage provides several redundancy models including Locally redundant storage (LRS), Zone-redundant storage (ZRS), and Geo-redundant storage (GRS). 
 + Azure blob storage allows you to store large amounts of unstructured data on Microsoft's data storage platform. Blob stands for Binary Large Object, which includes objects such as images and multimedia files.
 + Azure file Storage provides shared storage for structured data. The data can be organized in folders.
