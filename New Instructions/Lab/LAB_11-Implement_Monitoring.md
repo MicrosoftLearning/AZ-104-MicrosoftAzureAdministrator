@@ -6,7 +6,9 @@ lab:
 
 # Lab 11 - Implement Monitoring
 
-## Lab requirements
+## Lab introduction
+
+In this lab, you learn about Azure Monitor. You learn to create an alert to be sent to an action group. You trigger the alert and check the activity log.  
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
@@ -122,7 +124,7 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
     | Action group name | **Alert the operations team** |
     | Display name | **AlertOpsTeam** |
 
-1. Select **Next: Notifications**, and enter the following values for each setting.
+1. Select **Next: Notifications** and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
