@@ -6,6 +6,13 @@ lab:
 
 # Lab 08 - Manage Virtual Machines
 
+## Lab introduction
+
+In this lab, you compare manual scaling of virtual machines to automatic scaling of virtual machines. You learn how to configure and resize a single virtual machine. You learn how create a virtual machine scale set and configure autoscaling.
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+
+
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
@@ -40,7 +47,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. On the **Basics** tab of the **Create a virtual machine** blade, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
-    >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to a zone to ensure that the disk and corresponding resources are colocated in the same zone.
+    >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to a zone to ensure that the disk and corresponding resources are located in the same zone.
 
 1. On the Basics tab, use the  following settings to complete the fields (leave others with their default values):
 
@@ -91,11 +98,11 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. On the **Review + Create** blade, click **Create**.
 
-    >**Note:** Monitor the **Notification** messages, and wait for the deployment to complete. 
+    >**Note:** Monitor the **Notification** messages and wait for the deployment to complete. 
 
 ## Task 2: Manage compute and storage scaling for virtual machines
 
-In this task, you will scale the compute for a virtual machine by adjusting its size to a different SKU. Azure provides flexability in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
+In this task, you will scale the compute for a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
 1. In the Azure portal, search for and select **az104-vm1**.
 
@@ -131,7 +138,7 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
     >**Note**: You cannot change the storage type of the disk while it is attached or while the VM is running. 
 
-1. Navigate back to the **az104-vm1** virtual machine, and select **Disks**.
+1. Navigate back to the **az104-vm1** virtual machine and select **Disks**.
 
 1. Verify the disk is now **Standard HDD**.
 
@@ -154,7 +161,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the your Azure subscription  |
+    | Subscription | the name of your Azure subscription  |
     | Resource group | **az104-rg8**  |
     | Virtual machine scale set name | `vmss1` |
     | Region | **East US** (or a region near you) |
@@ -245,7 +252,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 
-    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take appoximately 5 minutes.
+    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
 
 
 ## Task 2: Scale Azure Virtual Machine Scale Sets
@@ -256,13 +263,13 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
 
-1. Notice the **Scale mode** can be **Scale based on metrics** or **Scale to a specific instance count**. In scale sets with a small number of VM instances, increasing or decresing the instance count may be best. In scale sets with a large number of VM instances, scaling based on metrics may be more appropriate.
+1. Notice the **Scale mode** can be **Scale based on metrics** or **Scale to a specific instance count**. In scale sets with a small number of VM instances, increasing or decreasing the instance count may be best. In scale sets with a large number of VM instances, scaling based on metrics may be more appropriate.
 
 1. Select the button to **Custom autoscale**. Then select **Add a rule**. 
 
 ### Scale out rule
 
-1. Let's create a scale out rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
+1. Let's create a scale-out rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
 
     | Setting | Value |
     | --- | --- |
@@ -281,9 +288,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ### Scale in rule
 
-1. During evening or weekends, demand may decrease so it is important to create a scale in rule.
+1. During evenings or weekends, demand may decrease so it is important to create a scale in rule.
 
-1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances is decreased when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%. Adjust the settings, then select **Add**.
+1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances should decrease when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%. Adjust the settings, then select **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -294,7 +301,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ### Set the instance limits
 
-1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances, or scale in beyond the minimum of instances.
+1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances, or scale in beyond the minimum number of instances.
 
 1. **Instance limits** are shown on the **Scaling** page after the rules. 
 
