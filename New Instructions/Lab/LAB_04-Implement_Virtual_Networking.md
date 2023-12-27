@@ -1,6 +1,8 @@
 # Lab 04 - Implement Virtual Networking
 
-## Lab requirements
+## Lab Introduction
+
+This lab is the first of three labs that focus on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US** and **West Europe**. 
 
@@ -20,7 +22,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 + [Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204). Create a virtual networks with two virtual machines. Demonstrate the virtual machines can communicate. 
 
-+ [Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure). Create a resource group, and create virtual networks with subnets.  
++ [Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure). Create a resource group and create virtual networks with subnets.  
 
 + [Implement virtual networking](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%208). Create and configure a virtual network, deploy virtual machines, configure network security groups, and configure Azure DNS.
 
@@ -64,7 +66,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Search for and select **Virtual Networks**.
 
-1. Select **Create** on the Virtual networks page, and complete the **Basics** and **IPv4 addresses**. 
+1. Select **Create** on the Virtual networks page and complete the **Basics** and **IPv4 addresses**. 
 
 1. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
@@ -143,7 +145,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 ### Deploy the template with Azure Powershell (option 1)
 
-1. Open the Cloud Shell, and select **PowerShell**.
+1. Open the Cloud Shell and select **PowerShell**.
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell. Detailed steps are in Lab 03. 
 
@@ -172,7 +174,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 ### Deploy the template with Bash (option 2)
 
 
-1. Open the Cloud Shell, and select **Bash**.
+1. Open the Cloud Shell and select **Bash**.
 
 1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
 
@@ -192,11 +194,11 @@ In this task, you create the ManufacturingVnet virtual network and associated su
     
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. Return to the portal, and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
+1. Return to the portal and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
    
 ## Task 4: Configure communication between an Application Security Group and a Network Security Group 
 
-In this task, we create an Appication Security Group and a Network Security Group. The NSG will have inbound security rule that allows traffic from the ASG. 
+In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. 
 
 ### Create the Application Security Group (ASG)
 
