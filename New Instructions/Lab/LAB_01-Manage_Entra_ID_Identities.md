@@ -139,7 +139,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environment is created.
 
-    >**Note:** Task 6 let's you practice with Azure PowerShell. Task 7 let's you practice with the CLI. You may do both tasks or just the one you are most interested in. 
+    >**Note:** Task 6 lets you practice with Azure PowerShell. Task 7 lets you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
 ## Task 6: Practice with Azure PowerShell
 
