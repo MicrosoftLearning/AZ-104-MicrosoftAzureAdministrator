@@ -35,8 +35,8 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 + Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
 + Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
-+ Task 4: Experiment with Azure PowerShell (scripting option 1).
-+ Task 5: Experiment with the CLI (scripting option 2). 
++ Task 4: Experiment with Azure PowerShell (scripting optional 1).
++ Task 5: Experiment with the CLI (scripting optional 2). 
 
 ## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk
 
@@ -149,7 +149,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
     >**Note:** You can also deploy templates from the command line. Task 4, option 1, shows how to use PowerShell. Task 5, option 2, shows how to use the CLI. 
 
-## Task 4: Experiment with using Azure PowerShell to deploy a template (option 1)
+## Task 4: Experiment with using Azure PowerShell to deploy a template (optional 1)
 
 1. Open the Cloud Shell and select **PowerShell**.
 
@@ -176,7 +176,7 @@ In this task, you verify that the deployment has finished successfully. All prio
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
    
-## Task 5: Experiment with using the CLI to deploy a template (option 2)
+## Task 5: Experiment with using the CLI to deploy a template (optional 2)
 
 1. Open the Cloud Shell and select **Bash**.
 
