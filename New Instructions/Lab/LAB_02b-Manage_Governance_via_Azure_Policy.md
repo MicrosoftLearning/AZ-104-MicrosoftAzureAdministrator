@@ -6,7 +6,9 @@ lab:
 
 # Lab 02b - Manage Governance via Azure Policy
 
-## Lab requirements
+## Lab introduction
+
+In this lab, you learn how to implement your organization’s governance plans. You learn how Azure policies can ensure operational decisions are enforced across the organization. You learn how to use resource tagging to improve reporting. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
