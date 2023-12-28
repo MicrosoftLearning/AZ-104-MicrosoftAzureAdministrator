@@ -290,7 +290,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
-    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 10 minutes.
+    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes.
 
 1. In the Azure portal, search and select **az104-appgw**.
 
