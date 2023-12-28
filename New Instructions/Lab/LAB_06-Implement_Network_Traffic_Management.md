@@ -263,7 +263,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 10 minutes.
 
-1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-appgw**.
+1. In the Azure portal, search and select **az104-appgw**.
 
 1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
 
