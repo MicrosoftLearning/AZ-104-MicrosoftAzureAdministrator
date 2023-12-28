@@ -167,6 +167,32 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
+### Test the connection between vm0 and vm1 
+
+1. From the Azure portal, search for and select `Network Watcher`.
+
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **vm0**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **vm1**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to return. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
+
 ## Task 3: Implement Azure Application Gateway
 
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. 
