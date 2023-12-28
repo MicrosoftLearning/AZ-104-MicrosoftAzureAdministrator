@@ -243,7 +243,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Priority | `10` |
     | Listener name | `az104-listener` |
     | Frontend IP | **Public** |
-    | Protocol | **HTTPS** |
+    | Protocol | **HTTP** |
     | Port | `80` |
     | Listener type | **Basic** |
 
