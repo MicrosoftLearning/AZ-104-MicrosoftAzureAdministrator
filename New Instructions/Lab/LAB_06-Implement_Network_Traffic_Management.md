@@ -31,7 +31,7 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 1: Provision the lab environment
 + Task 2: Implement Azure Load Balancer
 + Task 3: Implement Azure Application Gateway
-+ Task 4: Troubleshoot with Network Watcher
++ Task 4: Test network connectivity by using Network Watcher
 
 
 
@@ -277,8 +277,6 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 1. Refresh the window to verify the message changes to the other virtual machine. 
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
-
-## Task 4: Troubleshoot with Network Watcher
 
 ## Task 4: Test network connectivity by using Network Watcher
 
