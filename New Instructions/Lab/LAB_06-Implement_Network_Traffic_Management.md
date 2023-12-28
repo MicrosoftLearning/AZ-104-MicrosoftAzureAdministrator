@@ -31,6 +31,7 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 1: Provision the lab environment
 + Task 2: Implement Azure Load Balancer
 + Task 3: Implement Azure Application Gateway
++ Task 4: Troubleshoot with Network Watcher
 
 
 
@@ -68,6 +69,8 @@ In this task, you will use a template to deploy one virtual network, one network
 1. Select **Review + Create** and then select **Create**.
 
     >**Note**: Wait for the deployment to finish before moving to the next task. The deployment should complete in approximately 5 minutes.
+    
+    >**Note:** While you wait, search for and select **Network Watcher**. Select the **Topology** blade to get a view of the virtual network infrastructure. Hover over the networks to view subnet and IP addressing information. 
 
 ## Task 2: Implement Azure Load Balancer
 
@@ -181,7 +184,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. On the  **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
-1. Add a subnet with the following settings (leave others with their default values):
+1. Add a subnet with the following settings (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
@@ -190,7 +193,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Click **Save**
 
-    > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
+    > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size. This step could have done during the Application Gateway creation. 
 
 1. In the Azure portal, search and select `Application Gateways` and, on the **Application Gateways** blade, click **+ Create**.
 
@@ -199,7 +202,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | `az104-rg1` |
+    | Resource group | `az104-rg6` |
     | Application gateway name | `az104-appgw` |
     | Region | The **same** Azure region that you used in Task 1 |
     | Tier | **Standard V2** |
@@ -274,6 +277,64 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 1. Refresh the window to verify the message changes to the other virtual machine. 
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
+
+## Task 4: Troubleshoot with Network Watcher
+
+## Task 4: Test network connectivity by using Network Watcher
+
+In this task, you will use Network Watcher in the Azure portal to test connectivity between vritual machines. Network Watcher provides troubleshooting and additional information around *why* connections are failing. Network Watcher contains several tools that can aid in troubleshooting networks.
+
+### Test the connection between vm0 and vm1 
+
+1. From the Azure portal, search for and select `Network Watcher`.
+
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **vm0**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **vm1**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to return. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
+
+### Test the connection between vm2 and vm3 
+
+1. FContinue with the **Network Watcher**.
+
+1. Select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **vm0**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **vm3**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: Notice the **Connectivity test** shows **Unreachable**. This makes sense because the virtual machines are in different virtual networks. 
 
 ## Review the main points of the lab
 
