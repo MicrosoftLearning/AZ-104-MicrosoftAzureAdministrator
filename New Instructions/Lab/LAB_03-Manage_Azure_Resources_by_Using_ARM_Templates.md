@@ -208,17 +208,11 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 In this task, you will use a Bicep file to deploy a storage account to your resource group. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
 
-1. Locate the \AllFiles\03d directory that contains the Bicep template file **azuredeploy.bicep**.
+1. Open a Cloud Shell **Bash** session. If necessary, use the **Advanced** link to configure storage. 
 
-1. Download the Bicep file to the computer that you are using to log into the Azure portal.
+1. Select the **Upload/Download File** icon in the Cloud Shell menu bar. This is represented by a document icon with up and down arrows.
 
-1. If necessary, navigate to the Azure Portal and open a Cloud Shell **Bash** session.
-
-1. Using the Cloud Shell, select the **Upload/Download File** icon in the Cloud Shell menu bar. This is represented by a document icon with up and down arrows.
-
-   ![image](./media/az104-lab03d-updown.png)
-
-1. Select **Upload**. Locate the **azuredeploy.bicep** file and upload it to your Cloud Shell.
+1. Select **Upload**. Locate the \Allfiles\Lab03 directory and select the Bicep template file **azuredeploy.bicep**.
 
 1. To verify that the file has been uploaded, select the double brackets icon in the Cloud Shell menu to open the built-in editor.
 
