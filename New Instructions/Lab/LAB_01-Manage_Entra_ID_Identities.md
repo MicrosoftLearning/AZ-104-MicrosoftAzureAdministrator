@@ -76,7 +76,7 @@ In this task, you create a new resource group. A resource group is a grouping of
 
     ![Screenshot of the resource group list.](../media/az104-lab01-create-resource-group.png)
 
-## Task 2: Familiarize yourself with user accounts.
+## Task 3: Familiarize yourself with user accounts.
 
 In this task, you familiarize yourself with user accounts and profiles. You also view group memberships.
 
