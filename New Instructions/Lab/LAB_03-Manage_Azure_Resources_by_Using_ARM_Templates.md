@@ -12,7 +12,7 @@ In this lab, you learn how to define your resource infrastructure using Azure Re
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 40 minutes
 
 ## Interactive lab simulations
 
@@ -218,22 +218,21 @@ In this task, you will use a Bicep file to deploy a storage account to your reso
 
 1. The file should be listed in the navigation tree on the left. Select it to verify its contents.
 
-   ![image](./media/az104-lab03d-editor.png)
+   ![Screenshot of the bicep file in the cloud shell editor.](../media/az104-lab03d-editor.png)
 
-1. To deploy the Bicep file to the existing **az104-rg1** resource group, run the following:
+1. Take a minute to read through the bicep template file. Notice how the storage (stg) resource is defined. Notice how parameters and allowed values are configured.
+   
+1. To deploy the Bicep file to the **az104-rg3** resource group, run the following:
 
    ```sh
-   az deployment group create --resource-group az104-rg1 --template-file azuredeploy.bicep
+   az deployment group create --resource-group az104-rg3 --template-file azuredeploy.bicep
    ```
 
-1. When prompted for a string value, enter `az104`. The template file will use your string with a randomly generated string to create a unique deployment name.
-
-   ![image](./media/az104-lab03d-bicepdeploy.png)
+1. When prompted for a storage string value, enter `az104`. The template file will use your string with a randomly generated string to create a unique deployment name.
 
 1. Close the Cloud Shell and return to the full Azure Portal. 
 
-1. Search for and select **Storage Accounts**. Verify that a storage account named **az104***** has been created in the **az104-rg1** resource group.
-
+1. Search for and select **Storage Accounts**. Verify that a storage account named **az104** has been created in the **az104-rg3** resource group.
 
 ## Review the main points of the lab
 
