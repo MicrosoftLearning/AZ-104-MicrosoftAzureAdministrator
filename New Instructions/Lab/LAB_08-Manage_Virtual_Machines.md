@@ -12,8 +12,7 @@ In this lab, you compare manual scaling of virtual machines to automatic scaling
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
-
-## Estimated timing: 40 minutes
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
@@ -28,14 +27,21 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Create a virtual machine with PowerShell](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010). Use Azure PowerShell to deploy a virtual machine. Review Azure Advisor recommendations. 
 + [Create a virtual machine with the CLI](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011). Use the CLI to deploy a virtual machine. Review Azure Advisor recommendations. 
 
-## Exercise 1: Azure Virtual Machines Architecture Diagram
-
-![Diagram of the architecture tasks.](../media/az104-lab08a-architecture-diagram.png)
-
 ## Tasks
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 + Task 2: Manage compute and storage scaling for virtual machines
++ Task 3: Implement Azure Virtual Machine Scale Sets
++ Task 4: Scale Azure Virtual Machine Scale Sets
++ Task 5: Create a virtual machine using Azure PowerShell (option 1)
++ Task 6: Create a virtual machine using the CLI (option 2) 
+
+
+
+
+## Tasks 1 and 2: Azure Virtual Machines Architecture Diagram
+
+![Diagram of the architecture tasks.](../media/az104-lab08a-architecture-diagram.png)
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
@@ -142,16 +148,11 @@ In this task, you will scale the compute for a virtual machine by adjusting its 
 
 1. Verify the disk is now **Standard HDD**.
 
-## Exercise 2: Azure Virtual Machine Scale Sets Architecture Diagram
+## Task 3 and 4: Azure Virtual Machine Scale Sets Architecture Diagram
 
 ![Diagram of the architecture tasks.](../media/az104-lab08b-architecture-diagram.png)
 
-## Tasks
-
-+ Task 3: Implement Azure Virtual Machine Scale Sets
-+ Task 4: Scale Azure Virtual Machine Scale Sets
-
-## Task 1: Implement Azure Virtual Machine Scale Sets
+## Task 3: Implement Azure Virtual Machine Scale Sets
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. With individual VMs, you would need other automation to deploy and configure additional VMs if your application needs additional compute. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to automatically scale up or down the number of VMs in the set.
 
@@ -255,7 +256,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
 
 
-## Task 2: Scale Azure Virtual Machine Scale Sets
+## Task 4: Scale Azure Virtual Machine Scale Sets
 
 In this task, you scale the virtual machine scale set using a custom scale rule.
 
@@ -315,7 +316,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances. 
 
-## Task 5: Create a virtual machine using Azure PowerShell (optional 1)
+## Task 5: Create a virtual machine using Azure PowerShell (option 1)
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
@@ -344,16 +345,18 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Verify your new virtual machine is listed and the **Status** is **Running**.
 
-1. Use **Stop-AzVM** to stop your virtual machine. Type **Yes** to confirm. 
+1. Use **Stop-AzVM** to deallocate your virtual machine. Type **Yes** to confirm. 
 
     ```
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8'
     -Name 'myPSVM' `
 
-1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**. 
+1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**.
 
-## Task 6: Create a virtual machine using the CLI (optional 2)
+    >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
+
+## Task 6: Create a virtual machine using the CLI (option 2)
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
@@ -361,7 +364,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. If necessary configure the Cloud Shell. Be sure to select **Bash**.
 
-1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create]([https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create)) command reference for all the parameters associated with creating a virtual machine.
+1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
 
     ```sh
@@ -374,12 +377,14 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Verify the **powerState** is **VM Running**.
 
-1. Use **az vm deallocate** to stop your virtual machine. Type **Yes** to confirm. 
+1. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm. 
 
     ```sh
     az vm deallocate --resource-group az104-rg8 --name myCLIVM
 
-1. Use **az vm show** to ensure the **powerState** is **VM deallocated**. 
+1. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
+
+    >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
 ## Review the main points of the lab
 
