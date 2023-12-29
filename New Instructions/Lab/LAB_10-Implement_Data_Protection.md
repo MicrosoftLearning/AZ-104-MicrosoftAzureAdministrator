@@ -29,7 +29,8 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 1: Provision the lab environment
 + Task 2: Create a Recovery Services vault
 + Task 3: Implement Azure virtual machine-level backup
-+ Task 4: Implement Azure Site Recovery for virtual machines
++ Task 4: Monitor Azure Backup
++ Task 5: Implement Azure Site Recovery for virtual machines
 
 ## Estimated timing: 40 minutes
 
@@ -157,7 +158,62 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
-## Task 4: Implement Azure Site Recovery
+## Task 4: Monitor Azure Backup
+
+In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solution.
+
+1. From the Azure portal, search for and select `Storage accounts`.
+
+1. On the Storage accounts page, select **Create**.
+
+1. Use the following information to define the storage account, then and select **Review**.
+
+    | Settings | Value |
+    | --- | --- | 
+    | Subscription          | *Your subscription*    |
+    | Resource group        | **az104-rg10**        |
+    | Storage account name  | Provide a globally unique name, for example *backupdiag1042024123*    |
+    | Region                | **East US** (or a region near you)    |
+
+1. On the Review tab, select **Create**.
+
+    >**Note**: Wait for the deployment to complete. It should take about a minute.
+
+1. Navigate to the **az104-vault1** Recovery Services vault.
+
+1. On the **az104-vault1** page, select **Diagnostic Settings**.
+
+1. On the Diagnostic Settings page, select **Add diagnostic setting**.
+
+1. On the Diagnotic settings page, name the setting `Logs and Metrics to storage`.
+
+1. Place a checkmark next to the following log and metric catagories:
+
+    - **Azure Backup Reporting Data**
+    - **Addon Azure Backup Job Data**
+    - **Addon Azure Backup Alert Data**
+    - **Azure Site Recovery Jobs**
+    - **Azure Site Recovery Events**
+    - **Health**
+
+1. In the Destination details, place a checkmark next to **Archive to a storage account**.
+
+1. In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
+
+1. Select **Save**.
+
+1. Return to the **az104-vault1** resource page. 
+
+1. On **az104-vault1**, select **Backup jobs**.
+
+1. Locate the backup operation for the **az104-10-vm0** VM, and select **Details**
+
+    >**Note**: Depending on your screen resolution, you might need to scroll right in the backup job table.
+
+1. Review the details of the backup job that you triggered on the VM. What are the two subtasks of the backup job?
+
+
+## Task 5: Implement Azure Site Recovery
 
 In this task, 
 
@@ -195,7 +251,7 @@ In this task,
 
 1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes. 
 
-    **Did you know?** It is a good practice to test the failover of a protected VM. See https://learn.microsoft.com/en-us/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm for more information.
+    **Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
 
 ## Review the main points of the lab
