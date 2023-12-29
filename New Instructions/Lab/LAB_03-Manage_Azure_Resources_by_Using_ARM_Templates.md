@@ -35,8 +35,9 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk.
 + Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template.
 + Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
-+ Task 4: Experiment with Azure PowerShell (scripting option 1).
-+ Task 5: Experiment with the CLI (scripting option 2). 
++ Task 4: Experiment with Azure PowerShell (option 1).
++ Task 5: Experiment with the CLI (option 2).
++ Task 6: Experiment with Azure Bicep (option 3). 
 
 ## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk
 
@@ -202,6 +203,43 @@ In this task, you verify that the deployment has finished successfully. All prio
     az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
+
+## Task 4: Deploy a resource by using Azure Bicep
+
+In this task, you will use a Bicep file to deploy a storage account to your resource group. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
+
+1. Locate the \AllFiles\03d directory that contains the Bicep template file **azuredeploy.bicep**.
+
+1. Download the Bicep file to the computer that you are using to log into the Azure portal.
+
+1. If necessary, navigate to the Azure Portal and open a Cloud Shell **Bash** session.
+
+1. Using the Cloud Shell, select the **Upload/Download File** icon in the Cloud Shell menu bar. This is represented by a document icon with up and down arrows.
+
+   ![image](./media/az104-lab03d-updown.png)
+
+1. Select **Upload**. Locate the **azuredeploy.bicep** file and upload it to your Cloud Shell.
+
+1. To verify that the file has been uploaded, select the double brackets icon in the Cloud Shell menu to open the built-in editor.
+
+1. The file should be listed in the navigation tree on the left. Select it to verify its contents.
+
+   ![image](./media/az104-lab03d-editor.png)
+
+1. To deploy the Bicep file to the existing **az104-rg1** resource group, run the following:
+
+   ```sh
+   az deployment group create --resource-group az104-rg1 --template-file azuredeploy.bicep
+   ```
+
+1. When prompted for a string value, enter `az104`. The template file will use your string with a randomly generated string to create a unique deployment name.
+
+   ![image](./media/az104-lab03d-bicepdeploy.png)
+
+1. Close the Cloud Shell and return to the full Azure Portal. 
+
+1. Search for and select **Storage Accounts**. Verify that a storage account named **az104***** has been created in the **az104-rg1** resource group.
+
 
 ## Review the main points of the lab
 
