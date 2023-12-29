@@ -54,7 +54,7 @@ In this task, you will create an Azure web app. Azure offers Azure App Services,
     | Setting | Value |
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | `az104-9a` (If necessary, select **Create new**) |
+    | Resource group | `az104-rg9` (If necessary, select **Create new**) |
     | Web app name | any globally unique name |
     | Publish | **Code** |
     | Runtime stack | **PHP 8.2** |
