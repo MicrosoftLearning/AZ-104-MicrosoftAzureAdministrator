@@ -8,7 +8,8 @@ lab:
 
 ## Lab introduction
 
-This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. You also get familiar with basic administrator tools. These tools include the Azure portal, Cloud Shell, Azure PowerShell, and the Command Line Interface (CLI). 
+This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. You also get familiar with basic administrator tools. 
+
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown in East US.
 
 ## Estimated timing: 40 minutes
@@ -28,37 +29,24 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Tasks
 
-+ Task 1: Familiarize yourself with the Azure portal.
-+ Task 2: Create a resource group.
-+ Task 3: Create and configure user accounts.
-+ Task 4: Create groups and add members.
-+ Task 5: Familiarize yourself with the Cloud Shell.
-+ Task 6: Practice with Azure PowerShell.
-+ Task 7: Practice with the Bash shell.
++ Task 1: Create a resource group.
++ Task 2: Create and configure user accounts.
++ Task 3: Create groups and add members.
++ Task 4: Familiarize yourself with the Cloud Shell.
++ Task 5: Practice with Azure PowerShell.
++ Task 6: Practice with the Bash shell.
 
-## Task 1: Familiarize yourself with the Azure portal
+## Task 1: Create a resource group
 
-In this task, you familiarize yourself with the Azure portal. The Azure portal is a web-based, unified console that provides an alternative to command-line tools. With the Azure portal, you can manage your Azure subscription using a graphical user interface. You can build, manage, and monitor everything from simple web apps to complex cloud deployments in the portal. 
+In this task, you create a resource group. A resource group is a grouping of related resources. For example, all the resources for a project, a department, or an application. 
+
+>**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Begin your tour of the Azure portal, by selecting the top left menu icon. 
-
-   + Select **Home** to view recent services and resources. You can also create favorites. 
-   + Select **Dashboard** for a customized view. [Dashboards](https://learn.microsoft.com/zure/azure-portal/azure-portal-dashboards) are a focused and organized view of your cloud resources in the Azure portal. Use dashboards as a workspace where you can monitor resources and quickly launch tasks for day-to-day operations.
-   + Select **All services** to view a categorized list of Azure services.
-
-1. You may find it quicker to **Search resources, services, and docs** using the search box in the top center of the portal. The search box provides autocomplete and suggestions for services or resources. For example, try `virt` and notice the suggested matches.
-
-1. On the right side of the top menu bar, select the **Settings** icon. Settings lets you customize the portal appearance.
-
-1. Lastly, in the top right corner is your user account information.
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, type `Quickstart Center` in the top search box. Then a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
    
-## Task 2: Create a new resource group
-
-In this task, you create a new resource group. A resource group is a grouping of related resources (such as all the resources for a project, a department, or an application). For each lab in this course you create a resource group. 
-    
-1. In the Azure portal, search for and select **Resource groups**.
+1. In the Azure portal, search for and select `Resource groups`.
    
 1. On the **Resource groups** blade, click **+ Create**, and provide the required information. 
 
@@ -66,31 +54,27 @@ In this task, you create a new resource group. A resource group is a grouping of
     | --- | --- |
     | Subscription name | your subscription |
     | Resource group name | `az104-rg1` |
-    | Location | your region |
+    | Location | **East US** |
+
+    >**Note:** All the labs use **East US**. Watch the **Select the best region** video in the **Quickstart Center** to learn what to consider when selecting a region.  
     
 1. Click **Review + create** and then click **Create**.
 
     >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track progress of the deployment.
 
-1. Back on the **Resource groups** blade, refresh the page and verify your new resource group appears in the list of resource groups.
+1. Select **Go to resource**, refresh the page and verify your new resource group appears in the list of resource groups.
 
     ![Screenshot of the resource group list.](../media/az104-lab01-create-resource-group.png)
 
-## Task 3: Familiarize yourself with user accounts.
+## Task 2: Create and configure user accounts
 
-In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
+In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Continue in the Azure portal. 
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**.
+1. Search for and select `Microsoft Entra ID`.
 
 1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
-
-1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
-
-1. Click **Edit properties**, and then in the **Settings** tab, set **Usage location** to **United States** and click **Save** to apply the change.
-
-    >**Note**: This is necessary in order to assign an Microsoft Entra ID license to an  account.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
 
