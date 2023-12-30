@@ -94,7 +94,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user with the following settings (leave others with their defaults). Notice all the different types of data that can be included in the user account. 
 
     | Setting | Value |
     | --- | --- |
@@ -105,8 +105,6 @@ In this task, you will create and configure user accounts. User accounts will st
     | Job title (Properties tab) | `Cloud Administrator` |
     | Department (Properties tab) | `IT` |
     | Usage location (Properties tab) | **United States** |
-
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
 ### Task 4: Create groups and add members
 
