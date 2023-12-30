@@ -30,7 +30,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 + Task 1: Familiarize yourself with the Azure portal.
 + Task 2: Create a resource group.
-+ Task 3: Familiarize yourself with user accounts.
++ Task 3: Create and configure user accounts.
 + Task 4: Create groups and add members.
 + Task 5: Familiarize yourself with the Cloud Shell.
 + Task 6: Practice with Azure PowerShell.
@@ -78,21 +78,37 @@ In this task, you create a new resource group. A resource group is a grouping of
 
 ## Task 3: Familiarize yourself with user accounts.
 
-In this task, you familiarize yourself with user accounts and profiles. You also view group memberships.
+In this task, you will create and configure user accounts. User accounts will store all of the user's information such as their name, department, location, and contact information.
 
-1. In the Azure portal, search for and select `Microsoft Entra ID`.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the **Manage** section, select the **Users** blade. 
+1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-1. Select **New user** from the top menu. Notice the selections for **Create new user** and **Invite external user**. Creating users is outside the scope of this lab. 
+1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
-1. **Search** for and select your user account. Your user account information is shown in the upper right corner of the portal. 
+1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
-1. Select the **Properties** tab and review all the profile information that can be provided for a user account. 
+1. Click **Edit properties**, and then in the **Settings** tab, set **Usage location** to **United States** and click **Save** to apply the change.
 
+    >**Note**: This is necessary in order to assign an Microsoft Entra ID license to an  account.
 
+1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
 
-## Task 4: Create groups and add members
+1. Create a new user with the following settings (leave others with their defaults):
+
+    | Setting | Value |
+    | --- | --- |
+    | User principal name | `az104-user1` |
+    | Display name | `az104-user1` |
+    | Auto-generate password | de-select |
+    | Initial password | **Provide a secure password** |
+    | Job title (Properties tab) | `Cloud Administrator` |
+    | Department (Properties tab) | `IT` |
+    | Usage location (Properties tab) | **United States** |
+
+    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+
+### Task 4: Create groups and add members
 
 In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators must add and remove members manually).
 
