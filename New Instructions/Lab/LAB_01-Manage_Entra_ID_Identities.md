@@ -94,7 +94,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators must add and remove members manually).
 
-1. In the Azure portal, search for and select **Groups**.
+1. In the Azure portal, search for and select `Groups`.
 
 1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
@@ -113,7 +113,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
 1. Click **No members selected**.
 
-1. From the **Add members** blade, search for your user account. **Select** your user account to add to the group. 
+1. From the **Add members** blade, search for your user account. **Select** the **az104-user1** and add them to the group. 
 
 1. Click **Create** to finish creating the group. 
 
