@@ -22,7 +22,7 @@ Your organization is building a new lab environment for pre-production testing o
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-+ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)*. Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
++ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
 ## Architecture diagram
 ![Diagram of the lab 01 architecture.](../media/az104-lab01-user-and-groups2.png)
@@ -113,7 +113,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
 1. Click **No members selected**.
 
-1. From the **Add members** blade, search for your user account. **Select** the **az104-user1** and add them to the group. 
+1. From the **Add members** blade, search for and select the **az104-user1** and add them to the group. 
 
 1. Click **Create** to finish creating the group. 
 
