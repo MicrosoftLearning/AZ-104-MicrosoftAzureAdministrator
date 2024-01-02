@@ -84,7 +84,7 @@
     },
     "virtualNetworkResourceGroup": {
       "type": "string",
-      "defaultValue": "az104-10-rg0",
+      "defaultValue": "az104-10-rg10",
       "metadata": {
         "description": "Resource group of the VNet"
       }
