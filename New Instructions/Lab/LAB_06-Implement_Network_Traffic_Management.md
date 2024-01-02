@@ -39,7 +39,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines along with associated virtual network interface cards. The VMs will reside in a hub virtual network named **az104-vnet1**.
 
-1. If necessary, download the **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** lab files to your computer.
+1. If necessary, download the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -49,7 +49,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Labs\\06\\az104-06-vms-loop-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** file and select **Open**.
 
 1. Select **Save**.
 
