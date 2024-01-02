@@ -42,23 +42,27 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will use a template to deploy a virtual machine. The VM will be used to test different backup scenarios.
 
-1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** lab files to your computer.
+1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** lab files.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. From the Azure portal, search for and select `Deploy a custom template`.
+1. Search for and select `Deploy a custom template`.
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Lab10\\az104-10-vms-edge-template.json** file and select **Open**.
+2. 
+   >**Note:** Take a moment to review the template. How many virtual machines and virtual networks are being created? 
 
 1. Select **Save**.
 
 1. On the custom deployment page, select **Edit parameters**.
 
-1. On the edit parameters page, select **Load file**. Locate and select the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** file and select **Open**.
+1. On the edit parameters page, select **Load file**. Locate and select the **\\Allfiles\Lab10\\az104-10-vms-edge-parameters.json** file and select **Open**.
+   
+   >**Note:** Notice you can decide which parameters the administrator can change. In this instance, there is a lot of flexibility to make changes. 
 
 1. Select **Save**.
 
@@ -73,6 +77,8 @@ In this task, you will use a template to deploy a virtual machine. The VM will b
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
+
+    >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
 ## Task 2: Create a Recovery Services vault
 
