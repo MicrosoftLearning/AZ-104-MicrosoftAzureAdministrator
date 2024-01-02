@@ -40,7 +40,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. If necessary, download the **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** and **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** lab files to your computer.
+1. If necessary, download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** and **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -50,7 +50,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Labs11\\az104-11-vm-template.json** file and select **Open**.
 
 1. Select **Save**.
 
@@ -75,8 +75,6 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
 1. Review what resources were deployed including a virtual machine and virtual network.
-
-    >**Note:** Later in the lab we will be using Azure Monitor so take a minute to install the virtual machine agent
 
 1. In the portal, search for and select **Monitor**.
 
