@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab, you learn how to configure and test a public Load Balancer. You also learn how to configure and test an Application Gateway. 
+In this lab, you learn how to configure and test a public Load Balancer and an Application Gateway. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
 
