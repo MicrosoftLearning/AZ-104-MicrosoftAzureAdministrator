@@ -51,6 +51,8 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** file and select **Open**.
 
+   >**Note:** Notice this file includes the Parameters at the top of the file. So, a separate Parameters file is not needed. 
+
 1. Select **Save**.
 
 1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value.
