@@ -321,7 +321,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
-1. Verify that the browser window displays the message **Hello World from az104-vm0** or **Hello World from az104-vm1**.
+1. Verify that the browser window displays the message **Hello World from az104-vm1** or **Hello World from az104-vm2**.
 
 1. Refresh the window to verify the message changes to the other virtual machine. 
 
