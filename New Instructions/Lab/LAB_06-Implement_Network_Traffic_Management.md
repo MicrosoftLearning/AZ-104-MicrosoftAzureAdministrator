@@ -201,8 +201,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 ## Architecture diagram - Application Gateway
 
->**Note**: Notice the Application Gateway is distributing across two virtual machines in the two different virtual networks. 
-
+>**Note**: This Application Gateway is working in the same virtual network as the Load Balancer in the previous tasks. This is not typical in a production environment.
 
 ![Diagram of the lab tasks.](../media/az104-lab06gw-architecture-diagram.png)
 
@@ -221,7 +220,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Click **Save**
 
-    > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size. This step could have done during the Application Gateway creation. 
+    > **Note**: This subnet will be used by the Azure Application Gateway instances. The Application Gateway requires a dedicated subnet of /27 or larger size. 
 
 1. In the Azure portal, search and select `Application Gateways` and, on the **Application Gateways** blade, click **+ Create**.
 
@@ -252,22 +251,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 	| Name | `az104-gwpip` |
 	| Availability zone | **None** |
 
-1. Click **Next: Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
+1. Click **Next: Backends >** and then **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-appgwbe` |
     | Add backend pool without targets | **No** |
-    | IP address or FQDN | **10.62.0.4** | 
-    | IP address or FQDN | **10.63.0.4** |
-
-    > **Note**: The targets represent the private IP addresses of virtual machines **az104-vm0** and **az104-vm1**.
+    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
+    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** | 
 
 1. Click **Next: Configuration >** and then **+ Add a routing rule**. Specify the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Rule name | `az104-rule` |
+    | Rule name | `az104-gwrule` |
     | Priority | `10` |
     | Listener name | `az104-listener` |
     | Frontend IP | **Public** |
@@ -277,20 +274,44 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![Screenshot of the create app gateway rule page.](../media/az104-lab06-appgw-rule.png)
 
-1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). When complete, click **Add** (twice).  
+1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). 
 
     | Setting | Value |
     | --- | --- |
     | Target type | **Backend pool** |
     | Backend target | **az104-appgwbe** |
-	| Backend settings | **Add new** |
+    | Backend settings | **Add new** |
     | Backend settings name | `az104-http` |
     | Backend protocol | **HTTP** |
     | Backend port | `80` |
     | Additional settings | **take the defaults** |
     | Host name | **take the defaults** |
 
-1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
+   >**Note:** Use the informational icons to learn more about **Cookie-based affinity** and **Connection draining**. 
+
+1. Select **Add multiple targets to create a path-based rule**. You will create two rules.
+
+**Rule 1 - routing to the images backend**
+
+    | Setting | Value |
+    | --- | --- |
+    | Path | `images/*` |
+    | Target name | `images` |
+    | Backend settings | **appgw-settings** |
+    | Backend target | `az104-appgw-images` |
+
+**Rule 2 - routing to the videos backend**
+
+    | Setting | Value |
+    | --- | --- |
+    | Path | `video/*` |
+    | Target name | `videos` |
+    | Backend settings | **appgw-settings** |
+    | Backend target | `az104-appgw-videos` |
+
+1. Select **Add** twice then select **Next: Tags >**.
+
+1. Select **Next: Review + create >** and then click **Create**.
 
     > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes.
 
