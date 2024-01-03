@@ -237,7 +237,7 @@ In this task, you will use a Bicep file to deploy a storage account to your reso
 
 
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
