@@ -223,7 +223,7 @@ In this task, you create a resource group and an Azure group by using Azure CLI 
 
 1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages.   
     
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
