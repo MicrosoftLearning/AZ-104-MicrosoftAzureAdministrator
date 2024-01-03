@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization recently finished testing managing network traffic for Azure virtual machines in a hub and spoke network topology. Now, you want to test traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
+Your organization has a public website. 
 
 ## Interactive lab simulations
 
@@ -38,7 +38,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines along with associated virtual network interface cards. The VMs will reside in a hub virtual network named **az104-vnet1**.
 
-1. If necessary, download the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** and **\\Allfiles\\Labs\\06\\az104-06-vms-loop-parameters.json** lab files to your computer.
+1. If necessary, download the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** lab file. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
