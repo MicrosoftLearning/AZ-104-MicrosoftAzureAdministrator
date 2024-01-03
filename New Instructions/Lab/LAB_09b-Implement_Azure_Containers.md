@@ -134,7 +134,7 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
