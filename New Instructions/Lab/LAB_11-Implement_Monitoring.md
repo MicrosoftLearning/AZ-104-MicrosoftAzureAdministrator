@@ -215,8 +215,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. Notice the canned queries that are available. **Run** the **Count heartbeats** query. 
 
-1. In the query window, replace the query and then click **Run**, and review the resulting chart:
-
+1. In the query window, replace the query with this one, and then click **Run**. Review the resulting chart. 
    ```sh
    // Virtual Machine available memory
    // Chart the VM's available memory over the last hour.
@@ -226,6 +225,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
    | project TimeGenerated, Name, Val
    | render timechart
    ```
+   
 1. As you have time, review and run other queries. Notice you can configure an alert rule based on a query. 
 
 ## Review the main points of the lab
