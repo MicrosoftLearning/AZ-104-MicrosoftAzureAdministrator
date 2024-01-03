@@ -208,7 +208,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
 1. Once the new storage account is provisioned, click **Go to resource** button. On the **Overview** blade, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
