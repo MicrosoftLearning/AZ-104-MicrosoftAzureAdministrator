@@ -318,11 +318,11 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
 
-1. Start another browser window and test this URL - `https://<frontend ip address>/image/`.
+1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
 
 1. Verify you are directed to image server (vm1). 
 
-1. Start another browser window and test this URL - `https://<frontend ip address>/video/`.
+1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
 
 1. Verify you are directed to image server (vm2). 
 
