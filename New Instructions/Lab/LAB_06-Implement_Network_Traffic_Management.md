@@ -188,7 +188,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Source port           | *Blank*         |
     | Diagnostic tests      | *Defaults*      |
 
-    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab06-connection-troubleshoot.png)
 
 1. Select **Run diagnostic tests**.
 
@@ -316,22 +316,21 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **az104-appgw**.
 
-1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
-
-1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
-
-1. Verify you are directed to image server (vm1). 
-
-1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
-
-1. Verify you are directed to image server (vm2). 
-
-> **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
-
 1. In the **Application Gateway** select **Backend health**.
 
 1. Ensure both servers in the backend pool display **Healthy**. 
 
+1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
+
+1. Start another browser window and test the URL - `http://<frontend ip address>/image/`.
+
+1. Verify you are directed to image server (vm1). 
+
+1. Start another browser window and test the URL - `http://<frontend ip address>/video/`.
+
+1. Verify you are directed to image server (vm2). 
+
+> **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
 ## Key takeaways
 
