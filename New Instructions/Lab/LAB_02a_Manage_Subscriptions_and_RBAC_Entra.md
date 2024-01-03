@@ -194,7 +194,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 3. Verify the Activity log shows role creation activities. 
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
