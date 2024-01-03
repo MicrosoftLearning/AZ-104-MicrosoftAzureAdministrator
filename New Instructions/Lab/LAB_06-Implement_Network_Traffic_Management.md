@@ -333,7 +333,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 1. Ensure both servers in the backend pool display **Healthy**. 
 
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
