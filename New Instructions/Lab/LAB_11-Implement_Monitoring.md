@@ -8,9 +8,9 @@ lab:
 
 ## Lab introduction
 
-In this lab, you learn about Azure Monitor. You learn to create an alert to be sent to an action group. You trigger the alert and check the activity log.  
+In this lab, you learn about Azure Monitor. You learn to create an alert and send it to an action group. You trigger and test the alert and check the activity log.  
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
 ## Estimated timing: 40 minutes
 
@@ -40,7 +40,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. If necessary, download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** and **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** lab files to your computer.
+1. If necessary, download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -68,9 +68,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
-1. Review what resources were deployed including a virtual machine and virtual network.
+1. Review what resources were deployed. There should be one virtual network with one virtual machine.
 
-**Configure Azure Monitor (this will be used in the last task)**
+**Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
 1. In the portal, search for and select **Monitor**.
 
@@ -102,11 +102,11 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. You want to receive alerts of all types, so leave **Alert logic** settings at their default of **All selected**.
 
-1. Leave the **Create an alert rule** pane open for the next section.
+1. Leave the **Create an alert rule** pane open for the next task.
 
 ## Task 3: Add an email alert action
 
-In this task, if the alert is triggered an email notification will be sent to the operations team. 
+In this task, if the alert is triggered an email notification  sent to the operations team. 
 
 1. On the **Create an alert rule** pane, select the **Next: Actions** button, and select **Create action group**. 
 
@@ -120,7 +120,7 @@ In this task, if the alert is triggered an email notification will be sent to th
     | Region | **Global** (default) |
     | **Instance details** |
     | Action group name | `Alert the operations team` (must be unique in the resource group) |
-    | Display name | `AlertOps Team` |
+    | Display name | `AlertOpsTeam` |
 
 1. Select **Next: Notifications** and enter the following values for each setting.
 
@@ -131,8 +131,7 @@ In this task, if the alert is triggered an email notification will be sent to th
 
 1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. 
 
-
-1. The **Create an alert rule** pane reappears. Select the **Next: Details** button and enter the following values for each setting.
+1. In the **Create an alert rule** pane select the **Next: Details** button and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
@@ -141,15 +140,15 @@ In this task, if the alert is triggered an email notification will be sent to th
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-    >**Note:** You should receive an email notification saying you were added to an action group. 
+    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed. 
 
 ## Task 4: Trigger the alert
 
 In this task, you trigger the alert and confirm a notification is sent. 
 
->**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
+>**Note:** If you delete the virtual machine before the alert rule deploys, the alert rule might not be triggered. 
 
-1. On the Azure portal menu or from the **Home** page, select **Virtual machines**.
+1. In the portal, search for and select **Virtual machines**.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
@@ -163,7 +162,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![Screenshot of alert email.](../media/az104-lab11-alert-email.png)
 
-   >**Note:** It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and return. 
+   >**Note:** It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and then return. 
    
 1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
@@ -173,7 +172,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 ## Task 5: Add an alert rule
 
-In this task, you create an alert rule to suppress notifications during maintenance periods. 
+In this task, you create an alert rule to suppress notifications during a maintenance period. 
 
 1. Continue in the **Alerts** blade, select **Alert processing rules** and then **+ Create**. 
    
@@ -183,14 +182,14 @@ In this task, you create an alert rule to suppress notifications during maintena
    
 1. Select **Next: Scheduling**.
    
-1. By default, the rule works all the time, unless you disable it. We're going to define a rule to suppress notifications during overnight planned maintenance.
+1. By default, the rule works all the time, unless you disable it or configure a schedule. You are going to define a rule to suppress notifications during overnight maintenance.
 Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
     | Apply the rule | At a specific time |
-    | Start | Enter today's date at 10pm. |
-    | End | Enter tomorrow's date at 7am. |
+    | Start | Enter today's date at 10 pm. |
+    | End | Enter tomorrow's date at 7 am. |
     | Time zone | Select the local timezone. |
 
     ![Screenshot of the scheduling section of an alert processing rule](../media/az104-lab11-alert-processing-rule-schedule.png)
@@ -211,11 +210,16 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. In the Azure portal, search for and select `Monitor` blade, click **Logs**.
 
-1. In the **Queries** window, select **Virtual machines** (left pane).
+1. In the **Queries** window, select **Virtual machines** (left pane). If necessary, close the splash screen. 
 
-1. Notice the canned queries that are available. **Run** the **Count heartbeats** query. 
+1. Reveiw the queries that are available. **Run** (hover over the query) the **Count heartbeats** query.
 
-1. In the query window, replace the query with this one, and then click **Run**. Review the resulting chart. 
+1. You should receive a heartbeat count for when the virtual machine was running.
+
+1. Review the query. This query uses the *heartbeat* table. 
+
+1. Replace the query with this one, and then click **Run**. Review the resulting chart.
+   
    ```sh
    // Virtual Machine available memory
    // Chart the VM's available memory over the last hour.
@@ -225,8 +229,9 @@ In this task, you will use Azure Monitor to query the data captured from the vir
    | project TimeGenerated, Name, Val
    | render timechart
    ```
-   
-1. As you have time, review and run other queries. Notice you can configure an alert rule based on a query. 
+1. As you have time, review and run other queries.
+
+    >**Note**: Notice uou can configure an alert rule based on a query. 
 
 ## Key takeaways
 
@@ -238,7 +243,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + An alert rule monitors your data and captures a signal that indicates something is happening on the specified resource.
 
-+ An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be initiated and sent to an action group. 
++ An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
+
++ Action groups include individuals that should be notified of an alert, so they can take action. 
 
 ## Cleanup your resources
 
