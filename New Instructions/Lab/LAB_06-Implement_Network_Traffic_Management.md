@@ -318,13 +318,15 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
 
-1. Start another browser window and navigate to the IP address you identified in the previous step.
+1. Start another browser window and test this URL - `https://<frontend ip address>/image/`.
 
-1. Verify that the browser window displays the message **Hello World from az104-vm1** or **Hello World from az104-vm2**.
+1. Verify you are directed to image server (vm1). 
 
-1. Refresh the window to verify the message changes to the other virtual machine. 
+1. Start another browser window and test this URL - `https://<frontend ip address>/video/`.
 
-    > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
+1. Verify you are directed to image server (vm2). 
+
+> **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
 1. In the **Application Gateway** select **Backend health**.
 
