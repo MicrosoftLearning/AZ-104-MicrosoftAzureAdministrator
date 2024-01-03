@@ -169,7 +169,7 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
 1. Select **Stop** to complete the test run.
    
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
