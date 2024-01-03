@@ -290,7 +290,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Select **Add multiple targets to create a path-based rule**. You will create two rules.
 
-**Rule 1 - routing to the images backend**
+	**Rule - routing to the images backend**
 
     | Setting | Value |
     | --- | --- |
@@ -299,7 +299,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend settings | **appgw-settings** |
     | Backend target | `az104-appgw-images` |
 
-**Rule 2 - routing to the videos backend**
+	**Rule - routing to the videos backend**
 
     | Setting | Value |
     | --- | --- |
