@@ -266,7 +266,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After creating your NSG rule, take a minute to review the default **Outgoing security rules**.
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
