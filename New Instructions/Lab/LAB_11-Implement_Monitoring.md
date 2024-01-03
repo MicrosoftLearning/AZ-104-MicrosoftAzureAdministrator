@@ -54,12 +54,6 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **Save**.
 
-1. On the custom deployment page, select **Edit parameters**.
-
-1. On the edit parameters page, select **Load file**. Locate and select the **\\Allfiles\\Labs\\11\\az104-11-vm-parameters.json** file and select **Open**.
-
-1. Select **Save**.
-
 1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values:
 
     | Setting       | Value         | 
@@ -76,15 +70,19 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Review what resources were deployed including a virtual machine and virtual network.
 
+**Configure Azure Monitor (this will be used in the last task)**
+
 1. In the portal, search for and select **Monitor**.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
-1. Select **VM Insights View**, and then select **Configure Insights**.
+1. Select **View** in the **VM Insights** box, and then select **Configure Insights**.
 
 1. Select your virtual machine, and then **Enable** (twice).
 
-1. It will take a few minutes for the agent to install and configure, proceed to the next step. 
+1. Take the defaults for subscription and data collection rules, then select **Configure**. 
+
+1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
 ## Task 2: Create the Azure activity log alert
 
@@ -94,17 +92,17 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. In the Monitor menu, select **Alerts**. 
 
-1. Select **Create +** and select **Alert rule**. The **Create an alert rule** pane appears with the **Scope** section open and the **Select a resource** pane open on the right.
+1. Select **Create +** and select **Alert rule**. 
 
-1. In the **Select a resource** pane, the **Filter by subscription** field should already be populated. In the **Filter by resource type** dropdown list, search for and select **Virtual machines**.
-
-1. You want an alert when any virtual machine in your resource group is deleted. Select the box for the **az104-rg11** resource group, then select **Apply**.
+1. Select the box for the **az104-rg11** resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
-1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Select **Apply**
+1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Notice the other built-in signals. Select **Apply**
 
-1. You want to receive alerts of all types, so leave **Alert logic** settings at their default of **All selected**. Leave the **Create an alert rule** pane open for the next section.
+1. You want to receive alerts of all types, so leave **Alert logic** settings at their default of **All selected**.
+
+1. Leave the **Create an alert rule** pane open for the next section.
 
 ## Task 3: Add an email alert action
 
@@ -121,8 +119,8 @@ In this task, if the alert is triggered an email notification will be sent to th
     | Resource group | **az104-rg11** |
     | Region | **Global** (default) |
     | **Instance details** |
-    | Action group name | **Alert the operations team** |
-    | Display name | **AlertOpsTeam** |
+    | Action group name | `Alert the operations team` (must be unique in the resource group) |
+    | Display name | `AlertOps Team` |
 
 1. Select **Next: Notifications** and enter the following values for each setting.
 
@@ -133,10 +131,7 @@ In this task, if the alert is triggered an email notification will be sent to th
 
 1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. 
 
-1. Select **Review + create** to validate your input.
 
-1. Select **Create**.
- 
 1. The **Create an alert rule** pane reappears. Select the **Next: Details** button and enter the following values for each setting.
 
     | Setting | Value |
@@ -144,15 +139,9 @@ In this task, if the alert is triggered an email notification will be sent to th
     | Alert rule name | **VM was deleted** |
     | Description | **A VM in your resource group was deleted** |
 
-1. Expand the **Advanced options** section and confirm that **Enable alert rule upon creation** is selected.
-
 1. Select **Review + create** to validate your input, then select **Create**.
 
-    >**Note:** Recipients added to the configured action group (operations team) receive a notification:
-
-    - When they're added to the action group
-    - When the alert is activated
-    - When the alert is triggered
+    >**Note:** You should receive an email notification saying you were added to an action group. 
 
 ## Task 4: Trigger the alert
 
