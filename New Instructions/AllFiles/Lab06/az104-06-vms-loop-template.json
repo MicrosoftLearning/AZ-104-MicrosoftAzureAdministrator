@@ -18,10 +18,6 @@
             "defaultValue": "az104-06-vnet1",
             "type": "String"
         },
-        "virtualNetworks_az104_06_vnet2_name": {
-            "defaultValue": "az104-06-vnet2",
-            "type": "String"
-        },
         "networkInterfaces_az104_06_nic0_name": {
             "defaultValue": "az104-06-nic0",
             "type": "String"
@@ -36,10 +32,6 @@
         },
         "networkSecurityGroups_az104_06_nsg1_name": {
             "defaultValue": "az104-06-nsg1",
-            "type": "String"
-        },
-        "networkSecurityGroups_az104_06_nsg2_name": {
-            "defaultValue": "az104-06-nsg2",
             "type": "String"
         },
         "adminPassword": {
@@ -98,54 +90,6 @@
             }
         },
         {
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "apiVersion": "2023-06-01",
-            "name": "[parameters('networkSecurityGroups_az104_06_nsg2_name')]",
-            "location": "westus",
-            "properties": {
-                "securityRules": [
-                    {
-                        "name": "default-allow-rdp",
-                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_az104_06_nsg2_name'), 'default-allow-rdp')]",
-                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "3389",
-                            "sourceAddressPrefix": "*",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 1000,
-                            "direction": "Inbound",
-                            "sourcePortRanges": [],
-                            "destinationPortRanges": [],
-                            "sourceAddressPrefixes": [],
-                            "destinationAddressPrefixes": []
-                        }
-                    },
-                    {
-                        "name": "default-allow-http",
-                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_az104_06_nsg2_name'), 'default-allow-http')]",
-                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-                        "properties": {
-                            "protocol": "Tcp",
-                            "sourcePortRange": "*",
-                            "destinationPortRange": "80",
-                            "sourceAddressPrefix": "*",
-                            "destinationAddressPrefix": "*",
-                            "access": "Allow",
-                            "priority": 1100,
-                            "direction": "Inbound",
-                            "sourcePortRanges": [],
-                            "destinationPortRanges": [],
-                            "sourceAddressPrefixes": [],
-                            "destinationAddressPrefixes": []
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2023-06-01",
             "name": "[parameters('virtualNetworks_az104_06_vnet1_name')]",
@@ -178,29 +122,12 @@
                             "privateLinkServiceNetworkPolicies": "Enabled"
                         },
                         "type": "Microsoft.Network/virtualNetworks/subnets"
-                    }
-                ],
-                "virtualNetworkPeerings": [],
-                "enableDdosProtection": false
-            }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks",
-            "apiVersion": "2023-06-01",
-            "name": "[parameters('virtualNetworks_az104_06_vnet2_name')]",
-            "location": "westus",
-            "properties": {
-                "addressSpace": {
-                    "addressPrefixes": [
-                        "10.62.0.0/22"
-                    ]
-                },
-                "subnets": [
-                    {
-                        "name": "subnet0",
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]",
+                    },
+					                    {
+                        "name": "subnet2",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet2')]",
                         "properties": {
-                            "addressPrefix": "10.62.0.0/24",
+                            "addressPrefix": "10.60.2.0/24",
                             "delegations": [],
                             "privateEndpointNetworkPolicies": "Disabled",
                             "privateLinkServiceNetworkPolicies": "Enabled"
@@ -396,7 +323,7 @@
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name 'video' -Itemtype 'Directory' && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot\\video\\' -Name 'iisstart.htm' -ItemType 'file' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\video\\iisstart.htm' -Value $('Images from: ' + $env:computername)"
                 },
                 "protectedSettings": {}
             }
@@ -415,7 +342,7 @@
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name 'image' -Itemtype 'Directory' && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot\\image\\' -Name 'iisstart.htm' -ItemType 'file' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\image\\iisstart.htm' -Value $('Images from: ' + $env:computername)"
                 },
                 "protectedSettings": {}
             }
@@ -434,7 +361,7 @@
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name 'video' -Itemtype 'Directory' && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot\\video\\' -Name 'iisstart.htm' -ItemType 'file' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\video\\iisstart.htm' -Value $('Images from: ' + $env:computername)"
                 },
                 "protectedSettings": {}
             }
@@ -461,29 +388,7 @@
                 "destinationAddressPrefixes": []
             }
         },
-        {
-            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg2_name'), '/default-allow-http')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
-            ],
-            "properties": {
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "80",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 1100,
-                "direction": "Inbound",
-                "sourcePortRanges": [],
-                "destinationPortRanges": [],
-                "sourceAddressPrefixes": [],
-                "destinationAddressPrefixes": []
-            }
-        },
-        {
+         {
             "type": "Microsoft.Network/networkSecurityGroups/securityRules",
             "apiVersion": "2023-06-01",
             "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg1_name'), '/default-allow-rdp')]",
@@ -505,29 +410,7 @@
                 "destinationAddressPrefixes": []
             }
         },
-        {
-            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg2_name'), '/default-allow-rdp')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
-            ],
-            "properties": {
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "3389",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 1000,
-                "direction": "Inbound",
-                "sourcePortRanges": [],
-                "destinationPortRanges": [],
-                "sourceAddressPrefixes": [],
-                "destinationAddressPrefixes": []
-            }
-        },
-        {
+             {
             "type": "Microsoft.Network/virtualNetworks/subnets",
             "apiVersion": "2023-06-01",
             "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet0')]",
@@ -544,26 +427,26 @@
         {
             "type": "Microsoft.Network/virtualNetworks/subnets",
             "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('virtualNetworks_az104_06_vnet2_name'), '/subnet0')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet2_name'))]"
-            ],
-            "properties": {
-                "addressPrefix": "10.62.0.0/24",
-                "delegations": [],
-                "privateEndpointNetworkPolicies": "Disabled",
-                "privateLinkServiceNetworkPolicies": "Enabled"
-            }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "2023-06-01",
             "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet1')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
             ],
             "properties": {
                 "addressPrefix": "10.60.1.0/24",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+		        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet2')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "10.60.2.0/24",
                 "delegations": [],
                 "privateEndpointNetworkPolicies": "Disabled",
                 "privateLinkServiceNetworkPolicies": "Enabled"
@@ -659,8 +542,8 @@
             "name": "[parameters('networkInterfaces_az104_06_nic2_name')]",
             "location": "westus",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]",
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet2')]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
             ],
             "kind": "Regular",
             "properties": {
@@ -675,7 +558,7 @@
                             "privateIPAddress": "10.62.0.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet2')]"
                             },
                             "primary": true,
                             "privateIPAddressVersion": "IPv4"
@@ -688,7 +571,7 @@
                 "enableIPForwarding": false,
                 "disableTcpStateTracking": false,
                 "networkSecurityGroup": {
-                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
                 },
                 "nicType": "Standard",
                 "auxiliaryMode": "None",
