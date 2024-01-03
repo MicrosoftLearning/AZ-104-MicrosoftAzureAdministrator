@@ -88,6 +88,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
    
 ## Task 2: Create the Azure activity log alert
 
+In this task, you create an alert for when a virtual machine is deleted. 
+
 1. On the Azure portal search for and select **Monitor**. 
 
 1. In the Monitor menu, select **Alerts**. 
@@ -106,7 +108,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 ## Task 3: Add an email alert action
 
-For the previous Azure Monitor alert, you didn't add any actions. You just viewed triggered alerts in the Azure portal. Actions let you send an email for notifications, to trigger an Azure function, or to call a webhook. In this exercise, we're adding an email alert when VMs are deleted.
+In this task, if the alert is triggered an email notification will be sent to the operations team. 
 
 1. On the **Create an alert rule** pane, select the **Next: Actions** button, and select **Create action group**. 
 
@@ -154,7 +156,7 @@ For the previous Azure Monitor alert, you didn't add any actions. You just viewe
 
 ## Task 4: Trigger the alert
 
-To trigger an alert, delete the virtual machine in the resource group.
+In this task, you trigger the alert and confirm a notification is sent. 
 
 >**Note:** It can take up to five minutes for an activity log alert rule to become active. In this exercise, if you delete the virtual machine before the rule deploys, the alert rule might not be triggered. 
 
@@ -180,27 +182,27 @@ To trigger an alert, delete the virtual machine in the resource group.
 
 ## Task 5: Add an alert rule
 
-We're going to schedule a one-time, overnight, planned maintenance. It starts in the evening and continues until the next morning.
+In this task, you create an alert rule to suppress notifications during maintenance periods. 
 
 1. In the Azure portal resource menu, select **Monitor**, select **Alerts** in the menu on the left, and select **Alert processing rules** in the menu bar.
    
 1. Select **+ Create**.
    
-1. Check the box for your sandbox resource group as the scope of the alert processing rule, then select **Apply**.
+1. Select your **resource group**, then select **Apply**.
    
 1. Select **Next: Rule settings**, then select **Suppress notifications**.
    
 1. Select **Next: Scheduling**.
    
-1. By default, the rule works all the time, unless you disable it. We're going to define the rule to suppress notifications for a one-time overnight planned maintenance.
+1. By default, the rule works all the time, unless you disable it. We're going to define a rule to suppress notifications during overnight planned maintenance.
 Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
-    |Apply the rule |At a specific time|
-    |Start|Enter today's date at 10pm.|
-    |End|Enter tomorrow's date at 7am.|
-    |Time zone|Select the local timezone.|
+    | Apply the rule | At a specific time |
+    | Start | Enter today's date at 10pm. |
+    | End | Enter tomorrow's date at 7am. |
+    | Time zone | Select the local timezone. |
 
     ![Screenshot of the scheduling section of an alert processing rule](../media/az104-lab11-alert-processing-rule-schedule.png)
 
@@ -208,9 +210,9 @@ Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
-    |Resource group |Select your sandbox resource group. |
-    |Rule name|**Planned Maintenance**|
-    |Description|**Suppress notifications during planned maintenance.**|
+    | Resource group | Select your sandbox resource group. |
+    | Rule name | `Planned Maintenance` |
+    | Description | `Suppress notifications during planned maintenance.` |
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
