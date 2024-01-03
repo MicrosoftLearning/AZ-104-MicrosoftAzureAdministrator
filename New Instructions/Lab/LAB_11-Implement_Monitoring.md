@@ -228,7 +228,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
    
 1. As you have time, review and run other queries. Notice you can configure an alert rule based on a query. 
 
-## Review the main points of the lab
+## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
