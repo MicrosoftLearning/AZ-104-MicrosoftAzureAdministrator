@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization has a public website. 
+Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implement and Azure Load Balancer and an Azure Application Gateway. All resources are in the same region. 
 
 ## Interactive lab simulations
 
