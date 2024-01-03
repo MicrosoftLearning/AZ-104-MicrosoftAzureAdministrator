@@ -109,7 +109,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
 
-1. Edit the local **template.json** file in your **Downloads** folder. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
+1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
+
+1. Edit the file using the editor of your choice. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
 
    >**Note:** For this task we are demonstrating how to edit and redeploy a template. If it gets too confusing, the finished template is provided. 
 
@@ -135,66 +137,13 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Be sure to **Save** your changes.
 
-## Make changes to the parameters.json file
+### Deploy the custom template
 
-1. Edit the local **parameters.json** file and change **CoreServicesVnet** to `ManufacturingVnet`.
+1. In the portal, search for and select **Deploy a custom template**.
 
-1. Make sure everything looks correct and **Save** your changes. 
+1. Select **Build your own template in the editor** and then **Load file**.
 
-	>**Note:** You can now deploy the template with either Azure PowerShell (option 1) or the Bash shell (option 2). Your choice, but only do one type of deployment. 
-
-### Deploy the template with Azure Powershell (option 1)
-
-1. Open the Cloud Shell and select **PowerShell**.
-
-1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell. Detailed steps are in Lab 03. 
-
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
-
-1. Verify your files are available in the Cloud Shell storage.
-
-    ```powershell
-    dir
-    ```
-
-1. Deploy the template to the az104-rg4 resource group.
-
-    ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-rg4 -TemplateFile template.json -TemplateParameterFile parameters.json
-    ```
-1. Ensure the command completes and the ProvisioningState is **Succeeded**.
-
-	>**Note:** If you need to make changes to the files, be sure **rm** (remove) the old file before uploading the new one. 
-	
-
-
-1. Before continuing, return to the portal and ensure the **ManufacturingVnet** virtual network and subnets were created. You may need to **Refresh** the virtual networks page. 
-
-
-### Deploy the template with Bash (option 2)
-
-
-1. Open the Cloud Shell and select **Bash**.
-
-1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
-
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each separately.
-
-1. Verify your files are available in the Cloud Shell storage.
-
-    ```bash
-    ls
-    ```
-
-1. Deploy the template to the az104-rg4 resource group.
-
-    ```bash
-    az deployment group create --resource-group az104-rg4 --template-file template.json --parameters parameters.json
-    ```
-    
-1. Ensure the command completes and the ProvisioningState is **Succeeded**.
-
-1. Return to the portal and ensure the **ManufacturingVnet** and associate subnets were created. You may need to **Refresh** the virtual networks page. 
+1. 
    
 ## Task 4: Configure communication between an Application Security Group and a Network Security Group 
 
