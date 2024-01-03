@@ -8,15 +8,15 @@ lab:
 
 ## Lab introduction    
 
-In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery for virtual machines. 
+In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the regions, but the steps are written using East US and West US.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the regions, but the steps are written using **East US** and **West US**.
 
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
 
-Your organization is evaluating Azure Recovery Services for backup and restore of files hosted on Azure virtual machines. They want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
+Your organization is evaluating Azure Recovery Services for backup and restore of Azure virtual machines. The organization wanst to identify methods of protecting data from accidental or malicious data loss.
 
 ## Interactive lab simulation
 
@@ -40,9 +40,9 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Task 1: Provision the lab environment
 
-In this task, you will use a template to deploy a virtual machine. The VM will be used to test different backup scenarios.
+In this task, you will use a template to deploy a virtual machine. The virtual machine will be used to test different backup scenarios.
 
-1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** and **\\Allfiles\\Labs\\10\\az104-10-vms-edge-parameters.json** lab files.
+1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** lab file.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -54,17 +54,11 @@ In this task, you will use a template to deploy a virtual machine. The VM will b
 
 1. Locate and select the **\\Allfiles\\Lab10\\az104-10-vms-edge-template.json** file and select **Open**.
 2. 
-   >**Note:** Take a moment to review the template. How many virtual machines and virtual networks are being created? 
+   >**Note:** Take a moment to review the template. How many virtual machines and virtual networks are being deployed? 
 
 1. Select **Save**.
-
-1. On the custom deployment page, select **Edit parameters**.
-
-1. On the edit parameters page, select **Load file**. Locate and select the **\\Allfiles\Lab10\\az104-10-vms-edge-parameters.json** file and select **Open**.
-   
-   >**Note:** Notice you can decide which parameters the administrator can change. In this instance, there is a lot of flexibility to make changes. 
-
-1. Select **Save**.
+ 
+   >**Note:** Notice this template has a lot ofparameters the administrator can change. 
 
 1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values:
 
@@ -82,7 +76,7 @@ In this task, you will use a template to deploy a virtual machine. The VM will b
 
 ## Task 2: Create a Recovery Services vault
 
-In this task, you will create a Recovery Services vault. A Recovery Services vault provides the backup services for Azure VMs.
+In this task, you will create a Recovery Services vault. A Recovery Services vault provides the backup data for Azure virtual machines.
 
 1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
 
@@ -99,7 +93,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
     ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
-1. Click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
