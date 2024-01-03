@@ -109,7 +109,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
 
-1. Edit the local **template.json** file in the **Downloads** folder. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**. 
+1. Edit the local **template.json** file in your **Downloads** folder. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
+
+   >**Note:** For this task we are demonstrating how to edit and redeploy a template. If it gets too confusing, the finished template is provided. 
 
 ### Make changes for the ManufacturingVnet virtual network
 
@@ -132,8 +134,6 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 1. Read back through the file and ensure everything looks correct.
 
 1. Be sure to **Save** your changes.
-
-	>**Note:** If this is just getting too difficult, the final completed files are in the Lab 04 Downloads folder. 
 
 ## Make changes to the parameters.json file
 
