@@ -238,13 +238,9 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Alerts help you detect and address issues before users notice there might be a problem with your infrastructure or application.
-
 + You can alert on any metric or log data source in the Azure Monitor data platform.
-
 + An alert rule monitors your data and captures a signal that indicates something is happening on the specified resource.
-
 + An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
-
 + Action groups include individuals that should be notified of an alert, so they can take action. 
 
 ## Cleanup your resources
