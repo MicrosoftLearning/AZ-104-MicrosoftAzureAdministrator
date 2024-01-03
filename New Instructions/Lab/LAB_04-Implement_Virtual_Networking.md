@@ -143,7 +143,11 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
-1. 
+1. Select the **templates.json** file with your Manufacturing changes, then select **Save**.
+
+1. Select **Review + create** and then **Create**.
+
+1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network was create. 
    
 ## Task 4: Configure communication between an Application Security Group and a Network Security Group 
 
