@@ -136,11 +136,13 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Did you know?**  If you mostly work with Linux systems, Azure CLI feels more natural. If you mostly work with Windows systems, Azure PowerShell feels more natural. 
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**. 
+1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**.
+
+    >**Note:** As you work with the Cloud Shell a storage accound and file share is required. 
 
     | Settings | Values |
     |  -- | -- |
-    | Resource Group | **Create new resource group** |
+    | Resource Group | **az104-rg1** |
     | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
     | File share (create new) | **shellstorage** |
 
@@ -150,7 +152,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell. You may use Azure PowerShell scripts throughout the course. 
 
-    >**Note:** Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters.
+1.  Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters.
 
 1. Continue working in the Cloud Shell. At any time use **cls** to clear the command window.
 
