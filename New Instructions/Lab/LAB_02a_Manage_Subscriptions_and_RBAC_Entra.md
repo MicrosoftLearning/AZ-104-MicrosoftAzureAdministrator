@@ -43,8 +43,8 @@ There are some interactive lab simulations that you might find useful for this t
 
 + Task 1: Implement management groups.
 + Task 2: Review and assign a built-in Azure role.
-+ Task 3: Create and assign a custom RBAC roles.
-+ Task 4: Assign and test the custom RBAC roles.
++ Task 3: Create a custom RBAC role for the help desk.
++ Task 4: Test the custom role to ensure it has the correct permissions
 + Task 5: Monitor role assignments with the Activity Log.
 
 ## Task 1: Implement Management Groups
@@ -103,11 +103,9 @@ In this task, you will review the built-in roles and assign the VM Contributor r
     >**Note:** This assignment might not actually grant you any additional provileges. If you already have the Owner role, this role includes all privileges associated with the Contributor role.
 
 
-## Task 3: Create custom RBAC roles
+## Task 3: Create a custom RBAC role for the help desk
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization. In this task we will create a new role and remove permissions that are not be necessary.
-
-### Create the custom RBAC role for the Help Desk users
 
 1. In the portal, search for and select the **az104-mg1** management group.
 
@@ -163,7 +161,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
     >**Note:** At this point, you have a Help Desk user account with custom privileges to create a support ticket. Your next step is to test the account.
     
-### Test the Help Desk user account to ensure it has the correct privileges
+## Task 4: Test the custom role to ensure it has the correct permissions
 
 1. Open an **InPrivate** browser window and navigate to the Azure portal at `https://portal.azure.com`.
 
