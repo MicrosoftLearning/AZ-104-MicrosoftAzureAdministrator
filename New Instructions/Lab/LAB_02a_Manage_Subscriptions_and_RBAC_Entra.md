@@ -6,7 +6,7 @@ lab:
 
 # Lab 02a - Manage Subscriptions and RBAC
 
-## Lab Introduction
+## Lab introduction
 
 In this lab, you learn about role-based access control. You learn how to use permissions and scopes to control what actions identities can and cannot perform. You also learn how to make subscription management easier using management groups. 
 
