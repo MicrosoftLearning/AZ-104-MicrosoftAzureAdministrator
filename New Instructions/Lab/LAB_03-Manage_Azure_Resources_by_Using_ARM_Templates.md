@@ -151,7 +151,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
     >**Note:** You can also deploy templates from the command line. Task 4, option 1, shows how to use PowerShell. Task 5, option 2, shows how to use the CLI.
 
-## Task 3: Deploy a resource by using Azure Bicep
+## Task 4: Deploy a resource by using Azure Bicep
 
 In this task, you will use a Bicep file to deploy a storage account to your resource group. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
 
