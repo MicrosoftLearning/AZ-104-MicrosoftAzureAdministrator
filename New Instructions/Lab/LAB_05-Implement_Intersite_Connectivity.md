@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections. You will also learn about the Network Watcher tool.  
+In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections.   
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -225,8 +225,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-
 + Using the CLI, `az group delete --name resourceGroupName`.
 
