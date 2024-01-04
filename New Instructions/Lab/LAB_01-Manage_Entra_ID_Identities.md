@@ -44,7 +44,7 @@ In this task, you create a resource group. A resource group is a grouping of rel
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, type `Quickstart Center` in the top search box. Then a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
    
 1. In the Azure portal, search for and select `Resource groups`.
    
@@ -62,10 +62,6 @@ In this task, you create a resource group. A resource group is a grouping of rel
 
     >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track the progress of the deployment.
 
-1. Select **Go to resource**, refresh the page and verify your new resource group appears in the list of resource groups.
-
-    ![Screenshot of the resource group list.](../media/az104-lab01-create-resource-group.png)
-
 ## Task 2: Create and configure user accounts
 
 In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
@@ -74,10 +70,10 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Search for and select `Microsoft Entra ID`.
 
-1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the pane. 
+1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
 
-   + **Administrative units** let you group users, groups, or devices into a single manageable unit.
-   + **Licenses** lets you do tasks like gte trial or purchase a license, manage the licenses you have, and assign licenses to users and groups.
+   + **Administrative units** lets you group users, groups, or devices into a single manageable unit.
+   + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
    + **Self service password reset** allow your users to manage their password from any device, at any time, from any location.
 
 1. Select **Users**, then in the **New user** drop-down select **Create new user**. Notice the selection to **Invite and external user**. 
@@ -113,7 +109,7 @@ In this task, you create a group account. Group accounts can include user accoun
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
-    >**Note**: Your **Membership type** drop-down list might be grayed out. If you had an Entra ID Premium P1 or P2 license this is where you could select a dynamic group. 
+    >**Note**: Notice the options in the **Membership type** drop-down. An Entra ID Premium P1 or P2 license is required for dynamic membership. 
 
     ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
