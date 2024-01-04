@@ -60,7 +60,7 @@ In this task, you create a resource group. A resource group is a grouping of rel
     
 1. Click **Review + create** and then click **Create**.
 
-    >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track progress of the deployment.
+    >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track the progress of the deployment.
 
 1. Select **Go to resource**, refresh the page and verify your new resource group appears in the list of resource groups.
 
@@ -74,11 +74,15 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Search for and select `Microsoft Entra ID`.
 
-1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
+1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the pane. 
 
-1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
+   + **Administrative units** let you group users, groups, or devices into a single manageable unit.
+   + **Licenses** lets you do tasks like gte trial or purchase a license, manage the licenses you have, and assign licenses to users and groups.
+   + **Self service password reset** allow your users to manage their password from any device, at any time, from any location.
 
-1. Create a new user with the following settings (leave others with their defaults). Notice all the different types of data that can be included in the user account. 
+1. Select **Users**, then in the **New user** drop-down select **Create new user**. Notice the selection to **Invite and external user**. 
+
+1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
 
     | Setting | Value |
     | --- | --- |
@@ -90,13 +94,15 @@ In this task, you will create and configure user accounts. User accounts will st
     | Department (Properties tab) | `IT` |
     | Usage location (Properties tab) | **United States** |
 
+1. Once you have finished reviewing, select **Review + create** and then **Create**.
+
+>**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
+
 ### Task 4: Create groups and add members
 
-In this task, you create a group. Groups are used for user accounts or devices. Some groups have members that are statically assigned. Some groups have members that are dynamically assigned. Dynamic groups update automatically based on the properties of user accounts or devices. Static groups require more administrative overhead (administrators must add and remove members manually).
+In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways member are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or devices. For example, job title. 
 
 1. In the Azure portal, search for and select `Groups`.
-
-1. Notice the group information like **Membership type**, **Source**, and **Type**. Also notice, the number of members in the group. 
 
 1. Select **+ New group** and create a new group. 
 
@@ -107,7 +113,7 @@ In this task, you create a group. Groups are used for user accounts or devices. 
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
-    >**Note**: Your **Membership type** drop-down list might be grayed out. This is where you can switch from an assigned group to a dynamic group. This requires an Entra ID Premium P1 or P2 license.
+    >**Note**: Your **Membership type** drop-down list might be grayed out. If you had an Entra ID Premium P1 or P2 license this is where you could select a dynamic group. 
 
     ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
@@ -115,15 +121,22 @@ In this task, you create a group. Groups are used for user accounts or devices. 
 
 1. From the **Add members** blade, search for and select the **az104-user1** and add them to the group. 
 
-1. Click **Create** to finish creating the group. 
+1. Click **Create** to deploy the group.
+
+1. Take a few more minutes to familiarize yourself with other group settings.
+
+   + **Expiration** lets you configre a group lifetime in days. The group must be renewed by the owner.
+   + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
+
+>**Note:** It is likely you will be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
 ## Task 5: Familiarize yourself with the Cloud Shell.
 
-In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. 
+In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. Bash is used in the next task.
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
     >**Did you know?**  If you mostly work with Linux systems, Azure CLI feels more natural. If you mostly work with Windows systems, Azure PowerShell feels more natural. 
 
@@ -135,13 +148,11 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
     | File share (create new) | **shellstorage** |
 
-    >**Note:** If you are working in a hosted lab environment, you need to configure cloud shell storage each time a new lab environment is created.
-
     >**Note:** Task 6 lets you practice with Azure PowerShell. Task 7 lets you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
 ## Task 6: Practice with Azure PowerShell
 
-In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell.
+In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell. You may use Azure PowerShell scripts throughout the course. 
 
     >**Note:** Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters.
 
@@ -183,7 +194,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
 
 ## Task 7: Practice with the Bash shell
 
-In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell.
+In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell. You may use Azure CLI scripts throughout the course. 
 
 1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**.
 
@@ -239,8 +250,6 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-
 + Using the CLI, `az group delete --name resourceGroupName`.
 
