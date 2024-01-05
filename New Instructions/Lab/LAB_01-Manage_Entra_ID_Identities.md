@@ -152,9 +152,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell. You may use Azure PowerShell scripts throughout the course. 
 
-1.  Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters.
-
-1. Continue working in the Cloud Shell. At any time use **cls** to clear the command window.
+1. Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
 1. Azure PowerShell uses a *Verb*-*Noun* format for cmdlets. For example, the cmdlet to create a new resource group is **New-AzResourceGroup**. To view how to use the cmdlet, run the Get-Help command.
 
