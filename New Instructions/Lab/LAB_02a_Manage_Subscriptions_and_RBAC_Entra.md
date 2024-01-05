@@ -43,7 +43,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 + Task 1: Implement management groups.
 + Task 2: Review and assign a built-in Azure role.
-+ Task 3: Create a custom RBAC role for the help desk.
++ Task 3: Create a custom RBAC role for the Help Desk personnel.
 + Task 4: Test the custom role to ensure it has the correct permissions
 + Task 5: Monitor role assignments with the Activity Log.
 
@@ -109,29 +109,27 @@ In this task, you will review the built-in roles and assign the VM Contributor r
     >**Note:** This task demonstrates how to assign a built-in role.  As a best practice always assign roles to groups not individuals. 
 
 
-## Task 3: Create a custom RBAC role for the help desk
+## Task 3: Create a custom RBAC role for the Help Desk personnel
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization. In this task we will create a new role and remove permissions that are not be necessary.
 
-1. In the portal, search for and select the **az104-mg1** management group.
+1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
-1. Select the **Access control (IAM)** blade, and then the **Check access** tab.
-
- 1. In the **Create a custom role** box, select **Add**.
+1. In the **Create a custom role** box, select **Add**.
 
 1. On the Basics tab of **Create a custom role**, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.` 
 
-1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
+1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
 
     ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
 
-1. Select the **Permissions** tab, and then select **+ Exclude permissions**.
+1. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
 
 1. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want to help desk to be able to have this capability, so it is being removed from the cloned role. 
+    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
 1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
 
@@ -181,11 +179,11 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. in the Summary field and select the **Service and subscription limits (quotas)** issue type. Select **Next**.
 
-    >**Note**: Since the role was assigned to the management group, all subscriptions should be available to the help desk. If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
+    >**Note**: Since the role was assigned to the management group, all subscriptions should be available to the Help Desk. If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
 
 1. Take a few minutes to explore creating a **New support request**, but do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
-    >**Note:** You have now verified a help desk user has the correct permissions. At this point you would create a help desk group and add members. 
+    >**Note:** You have now verified a Help Desk user has the correct permissions.
 
 ## Task 5: Monitor role assignments with the Activity Log
 
