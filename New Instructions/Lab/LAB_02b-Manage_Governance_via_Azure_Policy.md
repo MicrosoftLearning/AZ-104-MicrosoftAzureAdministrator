@@ -85,14 +85,14 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
-1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
+1. Specify the **Scope** by clicking the ellipsis button and selecting the following values. Click **Select** when you are done. 
 
     | Setting | Value |
     | --- | --- |
     | Subscription | *your subscription* |
     | Resource Group | **az-rg2b** |
 
-    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope).
+    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources.
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
@@ -102,7 +102,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Description | `Require Cost Center tag with default value for all resources in the resource group`|
     | Policy enforcement | Enabled |
 
-    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. **Assigned by** is automatically populated based with the user name creating the assignment. 
+    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. 
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
@@ -152,19 +152,17 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
-
-    ![Screenshot of the policy scope page. ](../media/az104-lab02b-policyscope2.png) 
+    | Subscription | your Azure subscription |
+    | Resource Group | `az104-rgb |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select `Inherit a tag from the resource group if missing`.
 
-1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
+1. Select **Add** and then configure the remaining **Basics** properties of the assignment.
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Inherit the Role tag and its Infra value from the resource group if missing**|
-    | Description | **Inherit the Role tag and its Infra value from the resource group if missing**|
+    | Assignment name | `Inherit the Role tag and its Infra value from the resource group if missing` |
+    | Description | `Inherit the Role tag and its Infra value from the resource group if missing` |
     | Policy enforcement | Enabled |
 
 1. Click **Next** twice and set **Parameters** to the following values:
@@ -180,7 +178,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | Create a remediation task | enabled |
     | Policy to remediate | **Inherit a tag from the resource group if missing** |
 
-    >**Note**: This policy definition includes the **Modify** effect.
+    >**Note**: This policy definition includes the **Modify** effect. So, a managed identity is required. 
 
     ![Screenshot of the policy remediation page. ](../media/az104-lab02b-policyremediation.png) 
 
@@ -190,9 +188,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
-1. Navigate back to the blade of the resource group that you created in the first task.
-
-1. On the resource group blade, click **+ Create** and then search for **Storage Account**, and click **+ Create**. 
+1. Search for and select `Storage Account`, and click **+ Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review**:
 
@@ -204,7 +200,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
 1. Once the new storage account is provisioned, click **Go to resource**.
 
-1. On the **Overview** blade, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
+1. On the **Tags** blade, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
 ## Key takeaways
 
