@@ -90,7 +90,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Setting | Value |
     | --- | --- |
     | Subscription | *your subscription* |
-    | Resource Group | **az-rg2b** |
+    | Resource Group | **az-rg2** |
 
     >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources.
 
@@ -125,7 +125,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Resource group | **az104-rg2b** |
+    | Resource group | **az104-rg2** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
 
     >**Note**: You may receive a **Validation failed. Click here for details** error. If so, click the error message to identify the reason for the failure and skip the next step. 
@@ -153,7 +153,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
     | Setting | Value |
     | --- | --- |
     | Subscription | your Azure subscription |
-    | Resource Group | `az104-rgb |
+    | Resource Group | `az104-rg2` |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select `Inherit a tag from the resource group if missing`.
 
