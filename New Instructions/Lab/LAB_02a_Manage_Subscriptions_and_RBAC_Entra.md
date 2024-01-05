@@ -25,7 +25,7 @@ To simplify management of Azure resources in your organization, you have been ta
     - Creating support request tickets
     - Viewing resource groups
 
-## Interactive lab scenario
+## Interactive lab scenarios
 
 There are some interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
@@ -74,7 +74,7 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to management group and scoped to the Help Desk. 
+1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to the management group and scoped to the Help Desk. 
 
 ## Task 2: Review and assign a built-in Azure role
 
@@ -88,11 +88,11 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, specify the following settings and click **Next** after each step:
+1. On the **Add role assignment** blade, specify the following settings. 
 
     | Setting | Value |
     | --- | --- |
-    | Select this role | **Virtual Machine Contributor** |
+    | Select this role | **Virtual Machine Contributor** (Next) |
     | Assign access to (Under Members pane) | **User, group, or service principal** |
     | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
 
@@ -125,9 +125,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want to help desk to be able to have this capability, so it is being removed rom the role. 
-
-1. Select the **Assignable scopes** tab. Select the **Delete** icon on the row for the subscription.
+    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want to help desk to be able to have this capability, so it is being removed from the cloned role. 
 
 1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
 
@@ -135,9 +133,9 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Selct **Review + Create**, and then select **Create**.
 
-    >**Note:** At this point, you have created a custom role. Your next step is to assign the role to a Help Desk user. 
+    >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to a Help Desk. Before we do that, we will test a user. 
 
-Task 4: Assign and test the custom RBAC roles.
+## Task 4: Assign and test the custom RBAC role.
 
 In this task, you add the custom role to a test user and confirm their permissions. 
 
@@ -155,14 +153,12 @@ In this task, you add the custom role to a test user and confirm their permissio
 
     >**Note**: if your custom role is not visible, it can take up to 5 minutes for the custom role to appear after creation. **Refresh** the page. 
 
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **hellpdesk-user1**.  
+1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **helpdesk-user1**.  
 
 1. Select **Review + assign** twice.
 
     >**Note:** At this point, you have a Help Desk user account with custom privileges to create a support ticket. Your next step is to test the account.
     
-## Task 4: Test the custom role to ensure it has the correct permissions
-
 1. Open an **InPrivate** browser window and navigate to the Azure portal at `https://portal.azure.com`.
 
 1. Provide the user principle name for helpdesk-user1. When prompted to update the password, change the password for the user.
@@ -175,9 +171,11 @@ In this task, you add the custom role to a test user and confirm their permissio
 
     >**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
 
-1. In the **InPrivate** browser window, on the **Problem Description/Summary** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
+1. For **Issue type** select **Service and subscription limits**. Notice your other choices.
 
-    >**Note**: Since the role was assigned to the management group, all subscriptions should be available to the help deks. If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
+1. in the Summary field and select the **Service and subscription limits (quotas)** issue type. Select **Next**.
+
+    >**Note**: Since the role was assigned to the management group, all subscriptions should be available to the help desk. If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
 
 1. Take a few minutes to explore creating a **New support request**, but do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
 
