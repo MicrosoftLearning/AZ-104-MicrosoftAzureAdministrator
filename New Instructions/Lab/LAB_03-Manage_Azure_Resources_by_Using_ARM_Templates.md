@@ -37,7 +37,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 + Task 3: Review the Azure Resource Manager template-based deployment of the managed disk.
 + Task 4: Deploy a managed disk by using Azure Bicep.
 + Task 5: Deploy a template with Azure PowerShell (option 1).
-+ Task 5: Deploy a template with the CLI (option 2). 
++ Task 6: Deploy a template with the CLI (option 2). 
 
 
 ## Task 1: Create an Azure Resource Manager template for deployment of an Azure managed disk
@@ -69,7 +69,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
-1. Click **Download** and save the template to your computer.
+1. Click **Download** and save the templates to the local drive.
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
@@ -149,7 +149,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 1. Notice your managed disk was created.
 
-    >**Note:** You can also deploy templates from the command line. Task 4, option 1, shows how to use PowerShell. Task 5, option 2, shows how to use the CLI.
+    >**Note:** You can also deploy templates from the command line. Task 5 shows how to deploy using PowerShell. Task 6 shows how to deploy using the CLI.
 
 ## Task 4: Deploy a resource by using Azure Bicep
 
