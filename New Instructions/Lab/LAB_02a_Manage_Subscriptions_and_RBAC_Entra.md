@@ -74,33 +74,39 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to the management group and scoped to the Help Desk. 
+1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to the management group.
+
+1. **Refresh** the management group page until your new management group displays. 
+
+   >**Note:** Did you notice the root management group? All management groups and subscriptions are part of the root management group.
 
 ## Task 2: Review and assign a built-in Azure role
 
 In this task, you will review the built-in roles and assign the VM Contributor role to your user account. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles).
 
-1. In the portal, search for and the **az104-mg1** management group.
+1. Select the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Scroll through the role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. 
+   >**Note:** Notice the other choices for **Check access**, **Role assignment**, and **Deny assignments**. 
+
+1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. 
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, specify the following settings. 
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**. 
 
-    | Setting | Value |
-    | --- | --- |
-    | Select this role | **Virtual Machine Contributor** (Next) |
-    | Assign access to (Under Members pane) | **User, group, or service principal** |
-    | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
+1. On the **Members** tab, **Select Members**.
 
-4. Click **Review + assign** twice to create the role assignment.
+1. Search for and select *your user account. User account information is shown in the upper right corner of the portal. Click **Select**. 
 
-    >**Note:** The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to.
+1. Click **Review + assign** twice to create the role assignment.
 
-    >**Note:** This assignment might not actually grant you any additional provileges. If you already have the Owner role, this role includes all privileges associated with the Contributor role.
+1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm you have the **Virtual Machine Contributor** role. 
+
+    >**Note:** This assignment might not actually grant you any additional provileges. If you already have the Owner role, this role includes all privileges associated with the VM Contributor role.
+    >
+    >**Note:** This task demonstrates how to assign a built-in role.  As a best practice always assign roles to groups not individuals. 
 
 
 ## Task 3: Create a custom RBAC role for the help desk
