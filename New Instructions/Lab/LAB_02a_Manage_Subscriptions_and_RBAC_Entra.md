@@ -131,11 +131,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
-1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Select**.
+1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Next**.
 
-1. Select the **JSON** tab. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
+1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
-1. Selct **Review + Create**, and then select **Create**.
+1. Select **Review + Create**, and then select **Create**.
 
     >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to a Help Desk. Before we do that, we will test a user. 
 
@@ -145,9 +145,9 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. Please take a minute to identify a test user. If necessary you can **Add** a new user. If you are creating a new user, require the password to be set when they login. 
+    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. If necessary you can **Add** a new user. If you are creating a new user, require the password to be set when they login. 
 
-1. Before continuing ensure you have the **User principal name** for your test account. You will need this to login to the portal. Use the icon to copy this information to the clipboard. 
+1. Before continuing ensure you have the **User principal name** for your test user account. You will need this to login to the portal. You can copy the UPN to the clipboard. 
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group.
 
