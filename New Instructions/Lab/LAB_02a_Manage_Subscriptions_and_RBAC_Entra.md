@@ -53,7 +53,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select **Management groups** to navigate to the **Management groups** blade.
+1. Search for and select `Management groups`.
 
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
@@ -92,7 +92,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
     | Setting | Value |
     | --- | --- |
-    | Role in the search tab | **Virtual Machine Contributor** |
+    | Select this role | **Virtual Machine Contributor** |
     | Assign access to (Under Members pane) | **User, group, or service principal** |
     | Select (+Select Members) | *your user account* (shown in upper right corner of the portal) |
 
@@ -109,11 +109,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the portal, search for and select the **az104-mg1** management group.
 
-1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
+1. Select the **Access control (IAM)** blade, and then the **Check access** tab.
 
-1. Select the **Check access** tab, then in the **Create a custom role** box, select **Add**.
+ 1. In the **Create a custom role** box, select **Add**.
 
-1. On the Basics tab of **reate a custom role**, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.` 
+1. On the Basics tab of **Create a custom role**, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.` 
 
 1. In the Baseline permissions field, select **Clone a role**. In the Role to clone drop-down menu, select **Support Request Contributor**.
 
@@ -143,11 +143,11 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This task requires a user account for testing. For this lab we will use, **az104-user1**. Please take a minute to identify a test user, if necessary **Add** a new user. If you are creating a new user, require the password to be set when they login. 
+    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. Please take a minute to identify a test user. If necessary you can **Add** a new user. If you are creating a new user, require the password to be set when they login. 
 
 1. Before continuing ensure you have the **User principal name** for your test account. You will need this to login to the portal. Use the icon to copy this information to the clipboard. 
 
-1. In the Azure portal, navigate back to the **az104-mg1** management group and display its details.
+1. In the Azure portal, navigate back to the **az104-mg1** management group.
 
 1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
 
@@ -155,7 +155,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
     >**Note**: if your custom role is not visible, it can take up to 5 minutes for the custom role to appear after creation. **Refresh** the page. 
 
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-user1**.  
+1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **hellpdesk-user1**.  
 
 1. Select **Review + assign** twice.
 
@@ -165,7 +165,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. Open an **InPrivate** browser window and navigate to the Azure portal at `https://portal.azure.com`.
 
-1. Provide the user principle name for az104-user1. When prompted to update the password, change the password for the user.
+1. Provide the user principle name for helpdesk-user1. When prompted to update the password, change the password for the user.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the Help Desk user can view resource groups.
 
