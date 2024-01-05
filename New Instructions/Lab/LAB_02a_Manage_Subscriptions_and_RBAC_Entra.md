@@ -143,7 +143,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
 
-    >**Note**: This task requires a user account for testing. For this lab we will use, **HelpDesk-user1**. Please take a minute to identify a test user, if necessary **Add** a new user. If you are creating a new user, require the password to be set when they login. 
+    >**Note**: This task requires a user account for testing. For this lab we will use, **az104-user1**. Please take a minute to identify a test user, if necessary **Add** a new user. If you are creating a new user, require the password to be set when they login. 
 
 1. Before continuing ensure you have the **User principal name** for your test account. You will need this to login to the portal. Use the icon to copy this information to the clipboard. 
 
@@ -155,7 +155,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
     >**Note**: if your custom role is not visible, it can take up to 5 minutes for the custom role to appear after creation. **Refresh** the page. 
 
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **HelpDesk-user1**.  
+1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-user1**.  
 
 1. Select **Review + assign** twice.
 
@@ -165,7 +165,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. Open an **InPrivate** browser window and navigate to the Azure portal at `https://portal.azure.com`.
 
-1. Provide the user principle name for Helpdesk-user1. When prompted to update the password, change the password for the user.
+1. Provide the user principle name for az104-user1. When prompted to update the password, change the password for the user.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the Help Desk user can view resource groups.
 
