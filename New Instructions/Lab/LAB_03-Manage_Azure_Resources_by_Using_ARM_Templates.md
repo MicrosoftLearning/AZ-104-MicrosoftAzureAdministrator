@@ -61,8 +61,9 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Region | **East US** |
     | Availability zone | **No infrastructure redundancy required** | 
     | Source type | **None** |
-    | Size | **32 Gb** | 
     | Performance | **Standard HDD** |
+    | Size | **32 Gib** | 
+
 
 1. Click **Review + Create** *once*. Do **not** deploy the resource.
 
@@ -70,7 +71,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
-1. Click **Download** and save the templates to the local drive.
+1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
@@ -78,13 +79,15 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. In the Azure portal, cancel the deployment of the managed disk.
 
+   >**Note:**  You can export an entire resource group or just specific resources within that resource group.
+
 ## Task 2: Edit an Azure Resource Manager template and then create an Azure managed disk by using the template
 
 In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you need to change a parameter or two, you can easily modify the template in the future.
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
-1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates. Selecting any template will provide a short description.
+1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates as shown in the drop-down menu. 
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
@@ -150,7 +153,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 1. Notice your managed disk was created.
 
-    >**Note:** You can also deploy templates from the command line. Task 5 shows how to deploy using PowerShell. Task 6 shows how to deploy using the CLI.
+    >**Note:** You can also deploy templates from the command line. Task 4 shows how to deploy using PowerShell. Task 5 shows how to deploy using the CLI.
 
 
 ## Task 4. Deploy a template with Azure PowerShell (option 1).
@@ -167,9 +170,9 @@ In this task, you verify that the deployment has finished successfully. All prio
     dir
     ```
 
-1. In the Cloud Shell, select the **Editor** icon and navigate to the parameters JSON file.
+1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk2**. 
+1. Make a change. For example, change the disk name to **az104-disk2**. Use **Ctrl +S** or the top right **More** menu to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -179,6 +182,8 @@ In this task, you verify that the deployment has finished successfully. All prio
     New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
+
+1. You can confirm the disk was created by checking the portal or using the **Get-AzDisk** command. 
    
 ## Task 5: Deploy a template with the CLI (option 2)
 
@@ -191,12 +196,12 @@ In this task, you verify that the deployment has finished successfully. All prio
 1. Verify your files are available in the Cloud Shell storage.
 
     ```sh
-    dir
+    ls
     ```
 
-1. In the Cloud Shell, select the **Editor** icon and navigate to the parameters JSON file.
+1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk2**. 
+1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** or the top right **More** menu to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -207,14 +212,13 @@ In this task, you verify that the deployment has finished successfully. All prio
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-
+1. You can confirm the disk was created by checking the portal or using the **az disk list** command.
+   
 ## Task 6: Deploy a resource by using Azure Bicep
 
 In this task, you will use a Bicep file to deploy a storage account to your resource group. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
 
-1. Open a Cloud Shell **Bash** session. If necessary, use the **Advanced** link to configure storage. 
-
-1. Select the **Upload/Download File** icon in the Cloud Shell menu bar. This is represented by a document icon with up and down arrows.
+1. Open a Cloud Shell **Bash** session. 
 
 1. Select **Upload**. Locate the \Allfiles\Lab03 directory and select the Bicep template file **azuredeploy.bicep**.
 
