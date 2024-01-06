@@ -28,7 +28,7 @@
             "type": "String"
         },
         "networkAccessPolicy": {
-            "type": "String"
+            "type": "Int"
         }
     },
     "resources": [
