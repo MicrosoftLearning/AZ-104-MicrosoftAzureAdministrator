@@ -72,19 +72,19 @@ In this task, you will create and configure a storage account.
 
 1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
 
-+ Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
-+ In the **Firewall** section, check the box for **Add your client IP address.**
-+ Be sure to **Save** your changes. 
+    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
+    + In the **Firewall** section, check the box for **Add your client IP address.**
+    + Be sure to **Save** your changes. 
   
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
-+ **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
-
-+ On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**.
-
-+ Notice you can configure other conditions. Select **Add** when you are done exploring.
+    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
+    
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**.
+    
+    + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
     ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
 
@@ -124,7 +124,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
-   >**Note**: Locate a file to upload. This can be any type of file, but a small file is best. 
+>**Note**: Locate a file to upload. This can be any type of file, but a small file is best. 
 
     | Setting | Value |
     | --- | --- |
@@ -134,8 +134,6 @@ In this task, you will create a blob container and upload a blob. Blob container
     | Access tier | **Hot**  (notice the other options) |
     | Upload to folder | `securitytest` |
     | Encryption scope | Use existing default container scope |
-
-    > **Note**: Access tiers can be set for individual blobs.
 
 1. Click **Upload**.
 
@@ -175,7 +173,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 In this task, you will create and configure Azure Files shares. 
 
-### Create the files share and upload a file
+### Create the file share and upload a file
 
 1. In the Azure portal, navigate back to your storage account, in the **Data storage** section, click **File shares**.
 
