@@ -66,9 +66,9 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth.
 
-1. Search for and select **Virtual Networks**.
+1. Search for and select `Virtual Networks`.
 
-1. Select **Create** on the Virtual networks page and complete the **Basics** and **IPv4 addresses**. 
+1. Select **Create** on the Virtual networks page and complete the **Basics** and **IP addresses** tabs. 
 
 1. Use the information in the following table to create the CoreServicesVnet virtual network.  
 
@@ -77,10 +77,8 @@ The organization plans a large amount of growth for core services. In this task,
 	| Basics       | Resource Group     | **az104-rg4** |
 	|              | Name               | `CoreServicesVnet`     |
 	|              | Region             | (US) **East US**         |
-	| IP Addresses | IPv4 address space | `10.20.0.0/16` (Delete or overwrite the IP address space)     |
+	| IP Addresses | IPv4 address space | `10.20.0.0/16` (separate the entries)    |
 
-
-1. In the subnets area, delete the **default** subnet.
 
 1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
@@ -204,7 +202,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. Select **+ Add**.
 
-1. On the **Add inbound port rule** blade, use the following information to add inbound port rule, and then select **Add**.
+1. On the **Add inbound security rule** blade, use the following information to add inbound port rule, and then select **Add**.
 
     | Setting | Value |
     | -- | -- |
@@ -219,7 +217,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Priority | **100** |
     | Name | **AllowASG** |
 
-1. After creating your NSG rule, take a minute to review the default **Outgoing security rules**.
+1. After creating your NSG rule, take a minute to review the default **Outbound security rules**.
 
 ## Key takeaways
 
