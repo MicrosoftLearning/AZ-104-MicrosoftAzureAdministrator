@@ -38,7 +38,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Create and configure the private storage account. 
 
-In this task, you will create and configure a storage account.
+In this task, you will create and configure a storage account. The storage account will use geo-redundant storage and will not have public access. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -171,7 +171,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 ## Task 5: Create and configure an Azure File share
 
-In this task, you will create and configure Azure Files shares. 
+In this task, you will create and configure Azure Files shares. You will use Storage Browser to manage the file share. 
 
 ### Create the file share and upload a file
 
