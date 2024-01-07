@@ -264,13 +264,16 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
 
-1. Notice the **Scale mode** can be **Scale based on metrics** or **Scale to a specific instance count**. In scale sets with a small number of VM instances, increasing or decreasing the instance count may be best. In scale sets with a large number of VM instances, scaling based on metrics may be more appropriate.
+>**Note:**Notice you can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
-1. Select the button to **Custom autoscale**. Then select **Add a rule**. 
+
 
 ### Scale out rule
 
-1. Let's create a scale-out rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%. Click **Add** after making your selections. 
+1. Select **Custom autoscale**. then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
+   
+1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%.
+
 
     | Setting | Value |
     | --- | --- |
@@ -291,7 +294,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. During evenings or weekends, demand may decrease so it is important to create a scale in rule.
 
-1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances should decrease when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%. Adjust the settings, then select **Add**.
+1. Let's create a rule that decreases the number of VM instances in a scale set. The number of instances should decrease when the average CPU load drops below 30% over a 10-minute period. When the rule triggers, the number of VM instances is decreased by 20%.
+
+1. Select **Add a rule**, adjust the settings, then select **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -316,6 +321,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances. 
 
+>**Note:** If you are interested in using Azure PowerShell for virtual machine creation, try Task 5. If are interested in using the CLI to create virtual machines, try Task 6. 
+
 ## Task 5: Create a virtual machine using Azure PowerShell (option 1)
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
@@ -335,14 +342,16 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -Zone '1' `
     -Size 'Standard_D2s_v3' 
     -Credential '(Get-Credential)' `
-
+    ```
+    
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group. 
 
     ```powershell
     Get-AzVM `
     -ResourceGroupName 'az104-rg8'
     -Status
-
+    ```
+    
 1. Verify your new virtual machine is listed and the **Status** is **Running**.
 
 1. Use **Stop-AzVM** to deallocate your virtual machine. Type **Yes** to confirm. 
@@ -351,7 +360,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8'
     -Name 'myPSVM' `
-
+    ```
+    
 1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**.
 
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
