@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization is evaluating Azure Recovery Services for backup and restore of Azure virtual machines. The organization wanst to identify methods of protecting data from accidental or malicious data loss.
+Your organization is evaluating how to backup and restore Azure virtual machines from accidental or malicious data loss. Additionally, the organization wants to explore using Azure Site Recovery for disaster recovery scenarios. 
 
 ## Interactive lab simulation
 
