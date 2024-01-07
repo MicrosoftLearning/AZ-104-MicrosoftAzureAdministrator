@@ -17,7 +17,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization is interested in Azure Web apps for hosting your organization's web sites. The web sites are currently hosted in the company's on-premises data centers. The web sites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need replacement. Your organization wants to complete testing to facilitate a move to Azure prior to the end-of-life date.
+Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replacemed. Your organization wants to avoid replacing hardware by using Azure to host the websites. 
 
 ## Interactive lab simulations
 
@@ -41,19 +41,19 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Create an Azure web app
 
-In this task, you will create an Azure web app. Azure offers Azure App Services, which is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure Web Apps, one type of Azure App Services offerings, can be used to run websites for most runtime environments, such as PHP, Java, .NET, and more. If you need support for more than one runtime environment, you can use App Services with Docker containers. The SKU that you select determines the amount of compute, storage, and features that you receive with the web app.
+In this task, you create an Azure web app. Azure App Services is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure web apps is part Azure App Services hosting most runtime environments, such as PHP, Java, and .NET. The SKU that you select determines the amount of compute, storage, and features that you receive with the web app.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select `App services`.
 
-1. Select **+ Create**, from drop-down menu, **Web app**. Notice the other choices. 
+1. Select **+ Create**, from drop-down menu, **Web App**. Notice the other choices. 
 
 1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
-    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Subscription | your Azure subscription |
     | Resource group | `az104-rg9` (If necessary, select **Create new**) |
     | Web app name | any globally unique name |
     | Publish | **Code** |
@@ -65,19 +65,19 @@ In this task, you will create an Azure web app. Azure offers Azure App Services,
 
  1. Click **Review + create**, and then **Create**.
 
-    >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
+    >**Note**: Wait until the Web App is created before you proceed to the next task. This should take about a minute.
 
-1. On the deployment blade, click **Go to resource**.
+1. After the deployment, select **Go to resource**.
 
 ## Task 2: Create a staging deployment slot
 
-In this task, you will create a staging deployment slot. Deployment slots are features of certain App Service plans that enable you to perform testing prior to making your app available to the public (or your end users). After you have performed testing, you can swap the slot from development or staging to production. Many organizations use slots to perform pre-production testing. Additionally, many organizations run multiple slots for every application (for example, development, QA, test, and production).
+In this task, you will create a staging deployment slot. Deployment slots enable you to perform testing prior to making your app available to the public (or your end users). After you have performed testing, you can swap the slot from development or staging to production. Many organizations use slots to perform pre-production testing. Additionally, many organizations run multiple slots for every application (for example, development, QA, test, and production).
 
-1. On the blade of the newly deployed web app, click the **Default domain** link to display the default web page in a new browser tab.
+1. On the blade of the newly deployed Web App, click the **Default domain** link to display the default web page in a new browser tab.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the Web App blade, click **Deployment slots**.
 
-    >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
+    >**Note**: The Web App, at this point, has a single deployment slot labeled **PRODUCTION**.
 
 1. Click **+ Add slot**, and add a new slot with the following settings:
 
@@ -88,21 +88,21 @@ In this task, you will create a staging deployment slot. Deployment slots are fe
 
 1. Select **Add**.
 
-1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
+1. Back on the **Deployment slots** blade of the Web App, click the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-## Task 3: Configure web app deployment settings
+## Task 3: Configure Web App deployment settings
 
-In this task, you will configure web app deployment settings. App Services can be configured with deployment settings to allow for continuous deployment from your repo of choice, or by using FTPS credentials and other automation. This ensures that the app service has the latest version of the application running.
+In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment from your repository of choice, or by using FTPS credentials and other automation. This ensures that the app service has the latest version of the application.
 
-1. On the staging deployment slot blade, in the **Settings** section, select **Configuration**, and then select **General settings**.
+1. In the staging slot, select **Deployment Center** and then select **Settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
     
-1. On the **Settings** tab, in the **Source** drop-down list, select **External Git**.
+1.In the **Source** drop-down list, select **External Git**.
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
 
@@ -116,29 +116,31 @@ In this task, you will configure web app deployment settings. App Services can b
 
 1. Verify that the staging slot displays **Hello World**.
 
+>**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
+
 ## Task 4: Swap the staging slots
 
 In this task, you will swap the staging slot with the production slot. Swapping a slot allows you to use the code that you have tested in your staging slot, and move it to production. The Azure portal will also prompt you if you need to move other application settings that you have customized for the slot. Swapping slots is a common task for application teams and application support teams, especially those deploying routine app updates and bug fixes.
 
-1. Navigate back to the blade displaying the production slot of the web app.
+1. Navigate back to the **Deployment slots** blade, and then select **Swap**.
 
-1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
+1. Review the default settings and click **Swap**.
 
-1. On the **Swap** blade, review the default settings and click **Swap**.
+1. On the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
 
-1. Click **Overview** on the production slot blade of the web app and then click the **Default domain** link to display the web site home page in a new browser tab.
+1. Verify the production web page displays the **Hello World!** page.
 
     >**Note:** Copy the Default domain **URL** you will need it for load testing in the next task. 
 
-1. Verify the default web page has been replaced with the **Hello World!** page.
+## Task 5: Configure and test autoscaling of the Azure Web App
 
-## Task 5: Configure and test autoscaling of the Azure web app
+In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases. To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
 
-In this task, you will configure autoscaling of Azure web app. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases.  For most applications, you might know of specific metrics in the app that should cause it to scale. This could be CPU usage, memory, or bandwidth.
+1. In the **Settings** section, select **Scale out (App Service plan)**.
 
-1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
+    >**Note:** Ensure you are working on the production slot not the staging slot.  
 
-1. From the **Scaling** section, select **Automatic**.
+1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
 1. In the **Maximum burst** field, select **2**.
 
@@ -146,9 +148,7 @@ In this task, you will configure autoscaling of Azure web app. Autoscaling enabl
 
 1. Select **Save**.
 
-    >**Note**: In a production environment, organizations often select **Rules Based** and configure rules around specific metrics or Application Insights components that trigger autoscaling.
-
-1. On the blade displaying the production slot of the web app, select **Diagnose and solve problems**.
+1. Select **Diagnose and solve problems** (left pane).
 
 1. In the **Load Test your App** box, select **Create Load Test**.
 
@@ -176,7 +176,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure App Services lets you quickly build, deploy, and scale web apps.
 + App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
 + Deployment slots allow you to create separate environments for deploying and testing your web app.
-+ You can manually or automatically scale a web app to handle additional demand. 
++ You can manually or automatically scale a web app to handle additional demand.
++ A wide variety of diagnostics and testing tools are available. 
 
 ## Cleanup your resources
 
