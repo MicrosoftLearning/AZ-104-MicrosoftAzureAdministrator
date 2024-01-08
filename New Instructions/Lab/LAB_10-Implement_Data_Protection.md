@@ -42,7 +42,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will use a template to deploy a virtual machine. The virtual machine will be used to test different backup scenarios.
 
-1. If necessary, download the **\\Allfiles\\Labs\\10\\az104-10-vms-edge-template.json** lab file.
+1. Download the **\\Allfiles\\Lab10\\az104-10-vms-edge-template.json** lab file.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -53,12 +53,12 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 1. On the edit template page, select **Load file**.
 
 1. Locate and select the **\\Allfiles\\Lab10\\az104-10-vms-edge-template.json** file and select **Open**.
-2. 
+
    >**Note:** Take a moment to review the template. How many virtual machines and virtual networks are being deployed? 
 
 1. Select **Save**.
  
-   >**Note:** Notice this template has a lot ofparameters the administrator can change. 
+   >**Note:** Notice this template has a lot of parameters the administrator can change. 
 
 1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values:
 
