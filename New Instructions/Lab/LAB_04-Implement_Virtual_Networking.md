@@ -78,6 +78,8 @@ The organization plans a large amount of growth for core services. In this task,
 	|                        | Starting address		| `10.20.20.0`        |
 	|						 | Size					| `/24`	|
 
+>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
+
 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
 1. Verify your configuration passed validation, and then select **Create**.
