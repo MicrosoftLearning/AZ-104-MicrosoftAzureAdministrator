@@ -56,6 +56,8 @@ In this task, you will create and configure a storage account. The storage accou
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
+>**Note:** Use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high performance applications. 
+
 1. On the **Advanced** tab, review the available options, accept the defaults.
 
 1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
@@ -107,7 +109,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. Select your container and in the **Settings** section, select **Access Policy**.
+1. Select your container and scroll to the ellipses on the far right, select **Access Policy**.
 
 1. In the **Immutable blob storage** area, select **Add policy**.
 
@@ -149,7 +151,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 ### Configure limited access to the blob storage
 
-1. Return to your uploaded file and select the **Generate SAS** tab. Specify the following settings (leave others with their default values):
+1. Select your uploaded file and then the **Generate SAS** tab. You can also use the ellipses to the far right. Specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
