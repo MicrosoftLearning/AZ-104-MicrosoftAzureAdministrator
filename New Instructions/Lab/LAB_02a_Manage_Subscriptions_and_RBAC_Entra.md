@@ -74,7 +74,7 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` |
     | Management group display name | `az104-mg1` |
 
-1. In this scenario, all subscriptions would now be added to the management group. RBAC would then be applied to the management group.
+1. In this scenario, all the applicable subscriptions would be added to the management group. RBAC and policies can then be scoped to the management group. 
 
 1. **Refresh** the management group page until your new management group displays. 
 
@@ -98,7 +98,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, **Select Members**.
 
-1. Search for and select *your user account. User account information is shown in the upper right corner of the portal. Click **Select**. 
+1. Search for and select your user account. User account information is shown in the upper right corner of the portal. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
