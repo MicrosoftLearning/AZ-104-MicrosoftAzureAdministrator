@@ -241,6 +241,14 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
 + Azure PowerShell and Bash provide a scripted way to create resources. 
 
+## Learn more with self-paced training
+
++ [Manage users and groups in Microsoft Entra ID](https://learn.microsoft.com/training/modules/manage-users-and-groups-in-aad/). Manage users and groups in Microsoft Entra ID. Learn the difference between Microsoft Entra ID and Windows Server Active Directory.
++ [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
++ [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
+
+
+
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
