@@ -243,6 +243,11 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
 + Action groups include individuals that should be notified of an alert, so they can take action. 
 
+## Learn more with self-paced training
+
++ [Improve incident response with alerting on Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/). Respond to incidents and activities in your infrastructure through alerting capabilities in Azure Monitor.
++ [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/). Monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.
+  
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
