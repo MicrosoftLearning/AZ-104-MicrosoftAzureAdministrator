@@ -250,6 +250,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + An Azure Resource Manager template is a JavaScript Object Notation (JSON) file that lets you manage your infrastructure declaratively rather than with scripts.
 + Rather than passing parameters as inline values in your template, you can use a separate JSON file that contains the parameter values.
 + Azure Resource Manager templates can be deployed in a variety of ways including the Azure portal, Azure PowerShell, and CLI.
++ Bicep is an alternative to Azure Resource Manager templates. Bicep uses a declarative syntax to deploy Azure resources. 
+
+Bicep provides concise syntax, reliable type safety, and support for code reuse. Bicep offers a first-class authoring experience for your infrastructure-as-code solutions in Azure.
 
 ## Learn more with self-paced training
 
