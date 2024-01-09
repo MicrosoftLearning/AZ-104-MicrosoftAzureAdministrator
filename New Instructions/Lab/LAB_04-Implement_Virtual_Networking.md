@@ -10,7 +10,7 @@ lab:
 
 This lab is the first of three labs that focus on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US** and **West Europe**. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
 ## Estimated time: 40 minutes
 
@@ -20,7 +20,7 @@ Your global organization plans to implement virtual networks. These networks are
 
 The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network has the largest number of resources. The network has connectivity to on-premises networks through a VPN connection. This network has web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS are located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
-The **ManufacturingVnet** virtual network is deployed in the **West Europe** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and needs an IP address space that it can expand into.
+The **ManufacturingVnet** virtual network is also deployed in the **East US** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and needs an IP address space that it can expand into.
 
 ## Interactive lab simulations
 
@@ -44,31 +44,12 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 ## Tasks
 
-+ Task 1: Create a resource group.
-+ Task 2: Create the CoreServicesVnet virtual network and subnets.
-+ Task 3: Create the ManufacturingVnet virtual network and subnets.
-+ Task 4: Configure communication between an Application Security Group and a Network Security Group. 
++ Task 1: Create the CoreServicesVnet virtual network and subnets.
++ Task 2: Create the ManufacturingVnet virtual network and subnets.
++ Task 3: Configure communication between an Application Security Group and a Network Security Group. 
 
-
-## Task 1: Create a resource group
-
-### Create a resource group for all the resources in this lab. 
-
-1. Sign in to the **Azure portal** - `https://portal.azure.com`.
-
-1. Search for and select **Resource groups**, then select **+ Create**.  
-
-1. Create the resource group with these settings. 
-
-	| **Tab**         | **Option**                                 | **Value**            |
-	| --------------- | ------------------------------------------ | -------------------- |
-	| Basics          | Resource group                             | `az104-rg4` |
-	|                 | Region                                     | (US) **East US**     |
-	| Tags            | No changes required                        |                      |
-   
-1. When finished select **Review + create** and then **Create**.
-   
-## Task 2: Create the CoreServicesVnet virtual network and subnets
+  
+## Task 1: Create the CoreServicesVnet virtual network and subnets
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth.
 
@@ -109,9 +90,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
 
-1. Before proceeding ensure you have two files **template.json** and **parameters.json**. Take a minute to review the files and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
+1. Before proceeding ensure you have the **template.json** file. Take a minute to review the file and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
  
-## Task 3: Create the ManufacturingVnet virtual network and subnets
+## Task 2: Create the ManufacturingVnet virtual network and subnets
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
 
@@ -119,15 +100,13 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Edit the file using the editor of your choice. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
 
-   >**Note:** For this task we are demonstrating how to edit and redeploy a template. If it gets too confusing, the finished template is provided. You could also just build the virtual network in the portal as you did in the previous task. 
+   >**Note:** For this task we are demonstrating how to edit and then redeploy a template. If it gets too confusing, the finished template is provided in the lab files. You could also just build the virtual network in the portal as you did in the previous task. 
 
 ### Make changes for the ManufacturingVnet virtual network
 
->**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. 
+>**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. Consult the architecture diagram if you are not sure. 
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
-
-1. Replace all occurrences of **eastus** with `westeurope`. 
 
 1. Replace all occurrences of **10.20.0.0/16** with `10.30.0.0/16`. 
 
@@ -157,7 +136,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network was create. 
    
-## Task 4: Configure communication between an Application Security Group and a Network Security Group 
+## Task 3: Configure communication between an Application Security Group and a Network Security Group 
 
 In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. 
 
@@ -172,7 +151,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Subscription | *your subscription* |
     | Resource group | **az104-rg4** |
     | Name | `asg-web` |
-    | Region | **West Europe**  |
+    | Region | **East (US)**  |
 
 1. Click **Review + create** and then after the validation click **Create**.
 
