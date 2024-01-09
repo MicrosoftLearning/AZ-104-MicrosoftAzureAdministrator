@@ -222,6 +222,11 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Peered virtual networks appear as one for connectivity purposes.
 + The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
 
+## Learn more with self-paced training
+
++ [Distribute your services across Azure virtual networks and integrate them by using virtual network peering](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/). Use virtual network peering to enable communication across virtual networks in a way that's secure and minimally complex.
+
+
 ## Cleanup your resources
 
 If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
