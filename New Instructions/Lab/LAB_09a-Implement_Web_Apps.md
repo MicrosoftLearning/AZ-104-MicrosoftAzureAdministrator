@@ -41,7 +41,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Create an Azure web app
 
-In this task, you create an Azure web app. Azure App Services is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure web apps is part Azure App Services hosting most runtime environments, such as PHP, Java, and .NET. The SKU that you select determines the amount of compute, storage, and features that you receive with the web app.
+In this task, you create an Azure web app. Azure App Services is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure web apps is part Azure App Services hosting most runtime environments, such as PHP, Java, and .NET. The app service plan that you select determines the web app compute, storage, and features. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
