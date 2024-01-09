@@ -128,7 +128,6 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Name | `az104-be` |
     | Virtual network | **az104-06-vnet1** |
     | Backend Pool Configuration | **NIC** | 
-    | IP Version | **IPv4** |
     | Click **Add** to add a virtual machine |  |
     | az104-vm0 | **check the box** |
     | az104-vm1 | **check the box** |
@@ -294,19 +293,19 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Path | `images/*` |
+    | Path | `/image/*` |
     | Target name | `images` |
-    | Backend settings | **appgw-settings** |
-    | Backend target | `az104-appgw-images` |
+    | Backend settings | **az104-http** |
+    | Backend target | `az104-appgwbe` |
 
 	**Rule - routing to the videos backend**
 
     | Setting | Value |
     | --- | --- |
-    | Path | `video/*` |
+    | Path | `/video/*` |
     | Target name | `videos` |
-    | Backend settings | **appgw-settings** |
-    | Backend target | `az104-appgw-videos` |
+    | Backend settings | **az104-http** |
+    | Backend target | `az104-appgwbe` |
 
 1. Select **Add** twice then select **Next: Tags >**.
 
