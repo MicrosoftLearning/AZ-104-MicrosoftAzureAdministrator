@@ -85,6 +85,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 1. Click **Next: Networking >** take the defaults but do not provide a load balancer. 
    
     | Load balancing options | **None** |
+    | Delete NIC when VM is deleted | **Checked** (default) |
     
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -102,9 +103,12 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. On the **Review + Create** blade, click **Create**.
 
-    >**Note:** Monitor the **Notification** messages.
+    >**Note:** The virtual machine NIC, disk, and public IP address (if configured) are independently created and managed resources.  Be sure to delete them to ensure you don't incur any additional costs.
 
-1. Wait for the deployment to complete, then select **Go to resource**. 
+
+1. Wait for the deployment to complete, then select **Go to resource**.
+   
+   >**Note:** Monitor the **Notification** messages.
 
 ## Task 2: Manage compute and storage scaling for virtual machines
 
@@ -112,9 +116,9 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Continue working with **az104-vm1** virtual machine.
 
-1. On the **az104-vm1** virtual machine blade, click **Size** and set the virtual machine size to **DS1_v2** and click **Resize**
+1. On the **az104-vm1** virtual machine blade, click **Size** and set the virtual machine size to **DS1_v2** and click **Resize**.
 
-    >**Note**: Choose another size if **Standard DS1_v2** is not available.
+    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also knows as vertical scaling, up or down. 
 
     ![Screenshot of the resize the virtual machine.](../media/az104-lab08-resize-vm.png)
 
@@ -154,7 +158,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Task 3: Implement Azure Virtual Machine Scale Sets
 
-In this task, you will deploy an Azure virtual machine scale set across availability zones. With individual VMs, you would need other automation to deploy and configure additional VMs if your application needs additional compute. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to automatically scale up or down the number of VMs in the set.
+In this task, you will deploy an Azure virtual machine scale set across availability zones. With individual VMs, you would need other automation to deploy and configure additional VMs if your application needs additional compute. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out. 
 
 1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
@@ -401,10 +405,12 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Azure virtual machines are on-demand, scalable computing resources.
++ Azure virtual machines provide both vertical and horizontal scaling options. 
 + Configuring Azure virtual machines includes choosing an operating system, size, storage and networking settings. 
 + Azure Virtual Machine Scale Sets let you create and manage a group of load balanced VMs.
 + The virtual machines in a Virtual Machine Scale Set are created from the same image and configuration. 
 + In a Virtual Machine Scale Set the number of VM instances can automatically increase or decrease in response to demand or a defined schedule.
+
 
 ## Learn more with self-paced training
 
