@@ -315,7 +315,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **az104-appgw**.
 
-1. In the **Application Gateway** select **Backend health**.
+1. In the **Application Gateway** resource, in the **Monitoring** section, select **Backend health**.
 
 1. Ensure both servers in the backend pool display **Healthy**. 
 
