@@ -243,6 +243,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure file Storage provides shared storage for structured data. The data can be organized in folders.
 + Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies an be time-based or legal-hold.
 
+## Learn more with self-paced training
+
++ [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
++ [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
 
 ## Cleanup your resources
 
