@@ -119,9 +119,11 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Edit the file using the editor of your choice. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
 
-   >**Note:** For this task we are demonstrating how to edit and redeploy a template. If it gets too confusing, the finished template is provided. 
+   >**Note:** For this task we are demonstrating how to edit and redeploy a template. If it gets too confusing, the finished template is provided. You could also just build the virtual network in the portal as you did in the previous task. 
 
 ### Make changes for the ManufacturingVnet virtual network
+
+>**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. 
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
 
