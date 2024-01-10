@@ -143,8 +143,8 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Settings | Values |
     |  -- | -- |
     | Resource Group | **az104-rg1** |
-    | Storage account (Create a new account a use a globally unique name (ex: cloudshellstoragemystorage)) | **cloudshellxxxxxxx** |
-    | File share (create new) | **shellstorage** |
+    | Storage account (Create new) | **sa-cloudshell** (must be globally unique) |
+    | File share (create new) | **fs-cloudshell** |
 
     >**Note:** Task 6 lets you practice with Azure PowerShell. Task 7 lets you practice with the CLI. You may do both tasks or just the one you are most interested in. 
 
