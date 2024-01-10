@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections.   
+In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections. You will also configure a custom route. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This will require a custom route. 
 
 ## Interactive lab simulations
 
@@ -35,7 +35,8 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 2: Create a manufacturing services virtual machine and virtual network.
 + Task 3: Test the connection between the virtual machines. 
 + Task 4: Create VNet peerings between the virtual networks. 
-+ Task 5: Retest the connection between the virtual machines. 
++ Task 5: Retest the connection between the virtual machines.
++ Task 6: Create a custom route to the manufacturing services virtual machines. 
  
 
 ## Task 1:  Create a core services virtual machine and virtual network
@@ -211,6 +212,45 @@ In this task, you verify the virtual machines in different virtual networks can 
     
 1. The test connection should succeed. 
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
+
+## Task 6: Create a custom route to the manufacturing services virtual machines
+
+In this task, you have contracted with a vendor to maintain the manufacturing servies virtual machines. The vendor needs to be routed from an external firewall the manufacturing machines. The firewall has not been configured but you want to go ahead and configure the route. 
+
+1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | your subscription |
+    | Resource group | `az104-rg5`  |
+    | Region | **East US** |
+    | Name | `rt-Manufacturing` |
+    | Propagate gateway routes | **No** |
+
+1. When finished select **Review + create** and then **Create**.
+
+1. After the route table deploys, select **Go to resource.**.
+
+1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the Manufacturing virtual network. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Route name | `NVAtoManufacturing` |
+    | Destination type | **IP Addresses** |
+    | Destination IP addresses | `172.16.0.0/16` (manufacturing virtual network) |
+    | Next hop type | **Virtual appliance** |
+    | Next hop address | `10.2.0.4` (future NVA) |
+
+1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+
+1. Select **Subnets** and then **Associate**. Complete the configuration.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Virtual network | **ManufacturingVnet** |
+    | Subnet | **Manufacturing** |    
+
+>**Note**: You have created a user defined route to direct traffic from the NVA to a subnet. 
 
 
 ## Review the main points of the lab
