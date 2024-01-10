@@ -76,7 +76,7 @@ In this task, you will create and configure user accounts. User accounts will st
    + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
    + **Self service password reset** allow your users to manage their password from any device, at any time, from any location.
 
-1. Select **Users**, then in the **New user** drop-down select **Create new user**. Notice the selection to **Invite and external user**. 
+1. Select **Users**, then in the **New user** drop-down select **Create new user**. Notice the selection to **Invite an external user**. 
 
 1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
 
