@@ -76,7 +76,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
 ## Task 2: Create a Recovery Services vault
 
-In this task, you will create a Recovery Services vault. A Recovery Services vault provides the backup data for Azure virtual machines.
+In this task, you will create a Recovery Services vault. A Recovery Services vault provides storage for the virtual machine data. 
 
 1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
 
@@ -89,7 +89,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     | Vault Name | `az104-vault1` |
     | Region | **East US** |
 
-    >**Note**: Make sure that you specify a different region into which you deployed virtual machines in the previous task.
+    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
     ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
