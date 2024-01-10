@@ -107,11 +107,13 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
-1. Retiurn to the Recovery Services vault blade, click the **Update** link under **Security Settings** label.
+1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings** label.
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**.
 
 1. Close the **Security Settings** blade and, back on the **az104-vault1** Recovery Services vault blade, click **Overview**.
+
+>**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
 ## Task 3: Implement Azure virtual machine-level backup
 
@@ -240,13 +242,13 @@ In this task,
 
 1. Select **Next** and then **Enable replication**.
 
-    >**Note**: Enabling replication will approximately 15 minutes. Watch the notification messages in the upper right of the portal.
+    >**Note**: Enabling replication will take approximately 15 minutes. Watch the notification messages in the upper right of the portal.
 
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-vault1**.
 
 1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes. 
 
-    **Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
+>**Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
 
 ## Key takeaways
