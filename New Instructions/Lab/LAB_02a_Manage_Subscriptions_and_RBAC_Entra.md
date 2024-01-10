@@ -25,7 +25,7 @@ To simplify management of Azure resources in your organization, you have been ta
     - Creating support request tickets
     - Viewing resource groups
 
-## Interactive lab scenarios
+## Interactive lab simulation
 
 There are some interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
