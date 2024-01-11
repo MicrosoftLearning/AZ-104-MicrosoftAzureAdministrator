@@ -82,8 +82,6 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-   >**Note:** Notice the other choices for **Check access**, **Role assignment**, and **Deny assignments**. 
-
 1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. 
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
@@ -98,20 +96,20 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm you have the **Virtual Machine Contributor** role. 
 
-    >**Note:** This assignment might not actually grant you any additional provileges. If you already have the Owner role, this role includes all privileges associated with the VM Contributor role.
-    >
-    >**Note:** This task demonstrates how to assign a built-in role.  As a best practice always assign roles to groups not individuals. 
+    >**Note:** As a best practice always assign roles to groups not individuals. 
 
+    >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
+    
 
 ## Task 3: Create a custom RBAC role for the Help Desk personnel
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your organization. In this task we will create a new role and remove permissions that are not be necessary.
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary.
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
 1. In the **Create a custom role** box, select **Add**.
 
-1. On the Basics tab of **Create a custom role**, provide the name `Custom Support Request`. In the Description field, enter `A custom contributor role for support requests.` 
+1. On the Basics tab of **Create a custom role**, provide the name `Custom Support Request` (must be unique within the directory). In the Description field, enter `A custom contributor role for support requests.` 
 
 1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
 
@@ -125,23 +123,23 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
-1. Select **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Next**.
+1. Select **Next** and then **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Next**.
 
 1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
 1. Select **Review + Create**, and then select **Create**.
 
-    >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to a Help Desk. Before we do that, we will test a user. 
+    >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to the Help Desk. Before we do that, we will test a user. 
 
 ## Task 4: Assign and test the custom RBAC role.
 
 In this task, you add the custom role to a test user and confirm their permissions. 
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**, then select the **Users** blade.
+1. In the Azure portal, search for and select `Microsoft Entra ID`, then select the **Users** blade.
 
-    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. If necessary you can **Add** a new user. If you are creating a new user, require the password to be set when they login. 
+    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. If necessary you can **Add** a new user. 
 
-1. Before continuing ensure you have the **User principal name** for your test user account. You will need this to login to the portal. You can copy the UPN to the clipboard. 
+1. Locate your test user and ensure you have their **User principal name**. You will need this to login to the portal. You can copy the UPN to the clipboard. 
 
 1. In the Azure portal, navigate back to the **az104-mg1** management group.
 
@@ -161,11 +159,9 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. Provide the user principle name for helpdesk-user1. When prompted to update the password, change the password for the user.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the Help Desk user can view resource groups.
+**All of the following steps should be done in the **InPrivate** browser window.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the Help Desk user cannot see any individual resources.
-
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ Create a support request**. 
+1. Search and select **Help + support** and then click **+ Create a support request**. 
 
     >**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
 
