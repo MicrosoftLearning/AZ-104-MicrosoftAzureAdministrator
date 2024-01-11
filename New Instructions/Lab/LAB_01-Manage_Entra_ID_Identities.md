@@ -146,7 +146,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select **Create** to deploy the group.
 
->**Note:** It is likely you will be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
+>**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
 ## Task 5: Familiarize yourself with the Cloud Shell.
 
@@ -154,9 +154,11 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
+   ![Screenshot of cloud shell icon.](../media/az104-lab01-cloudshell-icon.png)
+
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Did you know?**  If you mostly work with Linux systems, Azure CLI feels more natural. If you mostly work with Windows systems, Azure PowerShell feels more natural. 
+    >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**.
 
@@ -165,23 +167,23 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Settings | Values |
     |  -- | -- |
     | Resource Group | **az104-rg1** |
-    | Storage account (Create new) | **sa-cloudshell** (must be globally unique) |
+    | Storage account (Create new) | `sa-cloudshell` (must be globally unique) |
     | File share (create new) | **fs-cloudshell** |
 
-    >**Note:** Task 6 lets you practice with Azure PowerShell. Task 7 lets you practice with the CLI. You may do both tasks or just the one you are most interested in. 
+    >**Note:** If you would like to practice with **Azure PowerShell**, continue to Task 6. If you want to practice with **Bash (CLI)**, then skip to Task 7. 
 
 ## Task 6: Practice with Azure PowerShell
 
-In this task, you create a resource group and an Azure AD group by using Azure PowerShell session within Cloud Shell. You may use Azure PowerShell scripts throughout the course. 
+In this task, you create a resource group and a group account by using Azure PowerShell session within the Cloud Shell. Azure PowerShell scripts will be provided throughout the course. 
 
-1. Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
+>**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
-1. Azure PowerShell uses a *Verb*-*Noun* format for cmdlets. For example, the cmdlet to create a new resource group is **New-AzResourceGroup**. To view how to use the cmdlet, run the Get-Help command.
+1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new resource group is **New-AzResourceGroup**. To view how to use a command, run the Get-Help command.
 
    ```powershell
    Get-Help New-AzResourceGroup -detailed
    ```
-1. To create a resource group from the PowerShell session within Cloud Shell, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables that you can use in later commands. Ensure you receive a succeeded message. 
+1. To create a resource group, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables. Ensure you receive a succeeded message. 
 
    ```powershell
    $location = 'eastus'
@@ -195,7 +197,7 @@ In this task, you create a resource group and an Azure AD group by using Azure P
    Get-AzResourceGroup -Name $rgName
    ```
 
-1. Now, let's try to create new Azure group.
+1. Now, let's try learn how to create an Azure group.
 
    ```powershell
    Get-Help New-AzureADGroup -detailed
@@ -212,11 +214,11 @@ In this task, you create a resource group and an Azure AD group by using Azure P
 
 ## Task 7: Practice with the Bash shell
 
-In this task, you create a resource group and an Azure group by using Azure CLI session within Cloud Shell. You may use Azure CLI scripts throughout the course. 
+In this task, you create a resource group and an Azure group by using Azure CLI within the Cloud Shell. Azure CLI scripts will be provided throughout the course. 
 
 1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**.
 
-    >**Note:** Use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. 
+>**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **clear** to clear the command window.
 
 1. The Azure CLI uses an easy-to-read syntax. For example, to interact with resource groups, the command is **az group**.  
 
@@ -232,7 +234,7 @@ In this task, you create a resource group and an Azure group by using Azure CLI 
    az group create --name $RGNAME --location $LOCATION
    ```
    
-1. To verify and retrieve properties for the newly created resource group, try the **show** command. 
+1. To verify and retrieve properties for the newly created resource group, use the **show** command. 
 
    ```sh
    az group show --name $RGNAME
@@ -242,7 +244,6 @@ In this task, you create a resource group and an Azure group by using Azure CLI 
     ```sh
     az ad group --help
     ```
-
 1. **Create** the group and **list** the groups to verify.
 
    ```sh
@@ -257,7 +258,7 @@ In this task, you create a resource group and an Azure group by using Azure CLI 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
 + The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
-+ Resource groups are a way of grouping of related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
++ Resource groups are a way of grouping related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
 + There are different types of user accounts in Microsoft Entra ID. Each user account type has a level of access specific to the scope of work expected. 
 + Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
 + The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
@@ -265,7 +266,7 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 
 ## Learn more with self-paced training
 
-+ [Understand Microsoft Entra ID])(https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
++ [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
 + [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
 + [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
 
