@@ -54,22 +54,14 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. Provide the name `az104-rg2b` and ensure that the Region is set to **East US**.
 
-1. Select **Review + Create**, and then select **Create**.
-
-1. After the resource group is deployed, select **Go to resource group**, or navigate to the newly created resource group.
-
-1. On the resource group blade, click **Tags** in the left menu and create a new tag.
-
-1. Create a tag with the following settings.
+1. Select **Next: Tags** and create a new tag.
 
     | Setting | Value |
     | --- | --- |
     | Name | `Cost Center` |
     | Value | `000` |
 
-1. Click **Apply**. You have now added a tag to a resource group. 
-
-    ![Screenshot of the create tag page.](../media/az104-lab02b-manualtag.png)
+1. Select **Review + Create**, and then select **Create**.
 
 ## Task 2: Enforce tagging via an Azure Policy
 
