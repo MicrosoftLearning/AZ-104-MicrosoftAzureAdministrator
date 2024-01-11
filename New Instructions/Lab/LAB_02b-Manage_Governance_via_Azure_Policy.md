@@ -52,7 +52,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. From the Resource groups, select **+ Create**.
 
-1. Provide the name `az104-rg2b` and ensure that the Region is set to **East US**.
+1. Provide the name `az104-rg2` and ensure that the Region is set to **East US**.
 
 1. Select **Next: Tags** and create a new tag.
 
@@ -159,7 +159,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     | Setting | Value |
     | --- | --- |
-    | Tag Name | `Role` |
+    | Tag Name | `Cost Center` |
 
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults):
 
@@ -191,6 +191,8 @@ In this task, we will use a new policy definition to remediate any non-compliant
 1. Once the new storage account is provisioned, click **Go to resource**.
 
 1. On the **Tags** blade, note that the tag **Cost Center** with the value **000** has been automatically assigned to the resource.
+
+>**Did you know?** If you search for and select **Tags** in the portal, you can view the resources with a specific tag. 
 
 ## Key takeaways
 
