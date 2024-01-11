@@ -28,7 +28,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 ## Architecture diagram
 
-![Diagram of the tasks.](../media/az104-lab03b-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab03-architecture.png)
 
 ## Tasks
 
@@ -226,7 +226,7 @@ In this task, you will use a Bicep file to deploy a storage account to your reso
 
 1. The file should be listed in the navigation tree on the left. Select it to verify its contents.
 
-   ![Screenshot of the bicep file in the cloud shell editor.](../media/az104-lab03d-editor.png)
+   ![Screenshot of the bicep file in the cloud shell editor.](../media/az104-lab03-editor.png)
 
 1. Take a minute to read through the bicep template file. Notice how the storage (stg) resource is defined. Notice how parameters and allowed values are configured.
    
