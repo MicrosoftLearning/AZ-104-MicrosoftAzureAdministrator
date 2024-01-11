@@ -27,7 +27,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture diagram
 
-![Lab 05 architecture diagram](../media/az104-lab05-architecture-diagram.png)
+![Lab 05 architecture diagram](../media/az104-lab05-architecture.png)
 
 ## Tasks
 
