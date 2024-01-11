@@ -83,7 +83,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 >**Note**: Notice the Load Balancer is distributing across two virtual machines in the same virtual network. 
 
 
-![Diagram of the lab tasks.](../media/az104-lab06lb-architecture-diagram.png)
+![Diagram of the lab tasks.](../media/az104-lab06-lb-architecture.png)
 
 
 1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
@@ -201,7 +201,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 >**Note**: This Application Gateway is working in the same virtual network as the Load Balancer in the previous tasks. This is not typical in a production environment.
 
-![Diagram of the lab tasks.](../media/az104-lab06gw-architecture-diagram.png)
+![Diagram of the lab tasks.](../media/az104-lab06-gw-architecture.png)
 
 1. In the Azure portal, search and select `Virtual networks`.
 
