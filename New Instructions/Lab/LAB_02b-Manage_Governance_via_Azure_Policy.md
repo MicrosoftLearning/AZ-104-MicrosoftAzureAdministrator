@@ -67,7 +67,7 @@ In this task, you will create and assign a tag to an Azure resource group via th
     | Name | `Role` |
     | Value | `Infra` |
 
-1. Click **Apply**. You have now manually added a tag to a resource group. 
+1. Click **Apply**. You have now added a tag to a resource group. 
 
     ![Screenshot of the create tag page.](../media/az104-lab02b-manualtag.png)
 
@@ -90,9 +90,9 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Setting | Value |
     | --- | --- |
     | Subscription | *your subscription* |
-    | Resource Group | **az-rg2** |
+    | Resource Group | **az104-rg2** |
 
-    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources.
+    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources. In this scenario, we want the tag on all the resources in the resource group.
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
@@ -102,14 +102,14 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Description | `Require Cost Center tag with default value for all resources in the resource group`|
     | Policy enforcement | Enabled |
 
-    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. 
+    >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. Notice you can disable the policy at any time. 
 
 1. Click **Next** twice and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
     | Tag Name | `Cost Center` |
-    | Tag Value | `Default` |
+    | Tag Value | `000` |
 
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -128,13 +128,11 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource group | **az104-rg2** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
 
-    >**Note**: You may receive a **Validation failed. Click here for details** error. If so, click the error message to identify the reason for the failure and skip the next step. 
-
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
     ![Screenshot of the disallowed policy error.](../media/az104-lab02b-policyerror.png) 
 
-    >**Note**: Verify whether the error message states that the resource deployment was disallowed by the policy. 
+    >**Note**: Verify the error message states that the resource deployment was disallowed by the policy. 
 
     >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Cost Center tag with Default value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
 
