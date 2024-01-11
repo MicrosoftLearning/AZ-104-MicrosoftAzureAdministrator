@@ -44,8 +44,7 @@ There are some interactive lab simulations that you might find useful for this t
 + Task 1: Implement management groups.
 + Task 2: Review and assign a built-in Azure role.
 + Task 3: Create a custom RBAC role for the Help Desk personnel.
-+ Task 4: Test the custom role to ensure it has the correct permissions
-+ Task 5: Monitor role assignments with the Activity Log.
++ Task 4: Monitor role assignments with the Activity Log.
 
 ## Task 1: Implement Management Groups
 
@@ -131,51 +130,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to the Help Desk. Before we do that, we will test a user. 
 
-## Task 4: Assign and test the custom RBAC role.
-
-In this task, you add the custom role to a test user and confirm their permissions. 
-
-1. In the Azure portal, search for and select `Microsoft Entra ID`, then select the **Users** blade.
-
-    >**Note**: This task requires a user account for testing. For this lab we will use, **helpdesk-user1**. If necessary you can **Add** a new user. 
-
-1. Locate your test user and ensure you have their **User principal name**. You will need this to login to the portal. You can copy the UPN to the clipboard. 
-
-1. In the Azure portal, navigate back to the **az104-mg1** management group.
-
-1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. 
-
-1. On the **Role** tab, search for `Custom Support Request`. 
-
-    >**Note**: if your custom role is not visible, it can take up to 5 minutes for the custom role to appear after creation. **Refresh** the page. 
-
-1. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **helpdesk-user1**.  
-
-1. Select **Review + assign** twice.
-
-    >**Note:** At this point, you have a Help Desk user account with custom privileges to create a support ticket. Your next step is to test the account.
-    
-1. Open an **InPrivate** browser window and navigate to the Azure portal at `https://portal.azure.com`.
-
-1. Provide the user principle name for helpdesk-user1. When prompted to update the password, change the password for the user.
-
-**All of the following steps should be done in the **InPrivate** browser window.**
-
-1. Search and select **Help + support** and then click **+ Create a support request**. 
-
-    >**Note**: Many organizations opt to provide all of the cloud administrators access to open support cases. This enables administrators to resolve support cases faster.
-
-1. For **Issue type** select **Service and subscription limits**. Notice your other choices.
-
-1. in the Summary field and select the **Service and subscription limits (quotas)** issue type. Select **Next**.
-
-    >**Note**: Since the role was assigned to the management group, all subscriptions should be available to the Help Desk. If you do not see the **Service and subscription limits (quotas)** option, sign out from the Azure portal and sign in back.
-
-1. Take a few minutes to explore creating a **New support request**, but do not continue with creating the support request. Instead, sign out as the Help Desk user from the Azure portal and close the InPrivate browser window.
-
-    >**Note:** You have now verified a Help Desk user has the correct permissions.
-
-## Task 5: Monitor role assignments with the Activity Log
+## Task 4: Monitor role assignments with the Activity Log
 
 In this task, you view the activity log to determine if anyone has created a new role. 
 
