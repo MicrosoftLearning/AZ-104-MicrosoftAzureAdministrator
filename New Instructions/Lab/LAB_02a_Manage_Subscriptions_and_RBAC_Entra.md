@@ -159,7 +159,7 @@ In this task, you add the custom role to a test user and confirm their permissio
 
 1. Provide the user principle name for helpdesk-user1. When prompted to update the password, change the password for the user.
 
-**All of the following steps should be done in the **InPrivate** browser window.
+**All of the following steps should be done in the **InPrivate** browser window.**
 
 1. Search and select **Help + support** and then click **+ Create a support request**. 
 
