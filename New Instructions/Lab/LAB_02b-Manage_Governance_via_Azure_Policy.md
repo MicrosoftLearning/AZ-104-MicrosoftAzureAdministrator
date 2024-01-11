@@ -64,8 +64,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     | Setting | Value |
     | --- | --- |
-    | Name | `Role` |
-    | Value | `Infra` |
+    | Name | `Cost Center` |
+    | Value | `000` |
 
 1. Click **Apply**. You have now added a tag to a resource group. 
 
@@ -159,8 +159,8 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | `Inherit the Role tag and its Infra value from the resource group if missing` |
-    | Description | `Inherit the Role tag and its Infra value from the resource group if missing` |
+    | Assignment name | `Inherit the Role tag and its Cost Center value from the resource group if missing` |
+    | Description | `Inherit the Role tag and its Cost Center value from the resource group if missing` |
     | Policy enforcement | Enabled |
 
 1. Click **Next** twice and set **Parameters** to the following values:
@@ -198,7 +198,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
 1. Once the new storage account is provisioned, click **Go to resource**.
 
-1. On the **Tags** blade, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
+1. On the **Tags** blade, note that the tag **Cost Center** with the value **000** has been automatically assigned to the resource.
 
 ## Key takeaways
 
