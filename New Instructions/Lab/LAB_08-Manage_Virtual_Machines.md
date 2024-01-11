@@ -38,7 +38,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Tasks 1 and 2: Azure Virtual Machines Architecture Diagram
 
-![Diagram of the architecture tasks.](../media/az104-lab08a-architecture-diagram.png)
+![Diagram of the vm architecture tasks.](../media/az104-lab08-vm-architecture.png)
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
@@ -154,7 +154,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Task 3 and 4: Azure Virtual Machine Scale Sets Architecture Diagram
 
-![Diagram of the architecture tasks.](../media/az104-lab08b-architecture-diagram.png)
+![Diagram of the vmss architecture tasks.](../media/az104-lab08-vmss-architecture.png)
 
 ## Task 3: Implement Azure Virtual Machine Scale Sets
 
