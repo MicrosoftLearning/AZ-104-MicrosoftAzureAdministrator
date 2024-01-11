@@ -53,17 +53,13 @@ In this task, you will create and configure management groups. Management groups
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
+1. Search for and select `Microsoft Entra ID`.
+
+1. In the **Manage** blade, select **Properties**.
+
+1. Review the **Access management for Azure resources** area. Ensure you can manage access to all Azure subscriptions and management groups in the tenant.
+   
 1. Search for and select `Management groups`.
-
-1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
-
-    + In the Azure portal, search for and select **Microsoft Entra ID**.
-    
-    + On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
-    
-    + On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
-    
-    + Navigate back to the **Management groups** blade and select **Refresh**.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -71,14 +67,12 @@ In this task, you will create and configure management groups. Management groups
 
     | Setting | Value |
     | --- | --- |
-    | Management group ID | `az104-mg1` |
+    | Management group ID | `az104-mg1` (must be globablly unique) |
     | Management group display name | `az104-mg1` |
 
-1. In this scenario, all the applicable subscriptions would be added to the management group. RBAC and policies can then be scoped to the management group. 
+1. **Refresh** the management group page to ensure your new management group displays. 
 
-1. **Refresh** the management group page until your new management group displays. 
-
-   >**Note:** Did you notice the root management group? All management groups and subscriptions are part of the root management group.
+   >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level.
 
 ## Task 2: Review and assign a built-in Azure role
 
