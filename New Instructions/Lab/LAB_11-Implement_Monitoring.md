@@ -26,7 +26,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Architecture diagram
 
-![Diagram of the architecture tasks](../media/az104-lab11-architecture-diagram.png)
+![Diagram of the architecture tasks](../media/az104-lab11-architecture.png)
 
 ## Tasks
 
