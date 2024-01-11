@@ -35,7 +35,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1 and 2: Azure Container Instances Architecture diagram
 
-![Diagram of the tasks.](../media/az104-lab09baci-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab09b-aci-architecture.png)
 
 ## Task 1: Deploy an Azure Container Instance using a Docker image
 
@@ -92,7 +92,7 @@ In this task, you will review the deployment of the container instance. By defau
 
 ## Tasks 3 and 4: Azure Container Apps Architecture diagram
 
-![Diagram of the tasks.](../media/az104-lab09baca-architecture-diagram.png)
+![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
 
 ## Task 3: Create a container app and environment
 
