@@ -34,7 +34,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Architecture diagram
 
-![Diagram of the task architecture.](../media/az104-lab02b-architecture-diagram.png)
+![Diagram of the task architecture.](../media/az104-lab02b-architecture.png)
 
 ## Tasks
 
