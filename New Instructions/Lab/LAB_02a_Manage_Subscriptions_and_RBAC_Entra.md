@@ -20,10 +20,11 @@ To simplify management of Azure resources in your organization, you have been ta
 
 - Creating a management group that includes all your Azure subscriptions.
 
-- Granting permissions to submit support requests for all subscriptions in the management group to a designated user. That user's permissions should be limited only to: 
+- Granting permissions to submit support requests for all subscriptions in the management group. The permissions should be limited only to: 
 
-    - Creating support request tickets
-    - Viewing resource groups
+    - Create and manage virtual machines
+    - Create support request tickets (do not include adding Azure providers)
+
 
 ## Interactive lab simulation
 
@@ -71,7 +72,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. **Refresh** the management group page to ensure your new management group displays. 
 
-   >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level.
+   >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level. At this point, you would add any subscriptions that should be part of the management group. 
 
 ## Task 2: Review and assign a built-in Azure role
 
@@ -89,17 +90,18 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, **Select Members**.
 
-1. Search for and select your user account. User account information is shown in the upper right corner of the portal. Click **Select**. 
+>**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+
+1. Search for and select the `helpdesk` group. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm you have the **Virtual Machine Contributor** role. 
+1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm the help desk group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
     >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
     
-
 ## Task 3: Create a custom RBAC role for the Help Desk personnel
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary.
@@ -128,7 +130,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **Review + Create**, and then select **Create**.
 
-    >**Note:** At this point, you have created a custom role. Your next step would be to assign the role to the Help Desk. Before we do that, we will test a user. 
+    >**Note:** At this point, you have created a custom role.  
 
 ## Task 4: Monitor role assignments with the Activity Log
 
