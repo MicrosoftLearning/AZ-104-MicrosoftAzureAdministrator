@@ -61,9 +61,10 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Region | **East US** |
     | Availability zone | **No infrastructure redundancy required** | 
     | Source type | **None** |
-    | Performance | **Standard HDD** |
+    | Performance | **Standard HDD** (change size) |
     | Size | **32 Gib** | 
 
+>**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure and used with Azure virtual machines.
 
 1. Click **Review + Create** *once*. Do **not** deploy the resource.
 
