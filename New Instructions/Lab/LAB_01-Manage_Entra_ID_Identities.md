@@ -170,7 +170,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     | Storage account (Create new) | `sa-cloudshell` (must be globally unique) |
     | File share (create new) | **fs-cloudshell** |
 
-    >**Note:** If you would like to practice with **Azure PowerShell**, continue to Task 6. If you want to practice with **Bash (CLI)**, then skip to Task 7. 
+    >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with **Bash (CLI)**, then skip to **Task 7**. 
 
 ## Task 6: Practice with Azure PowerShell
 
