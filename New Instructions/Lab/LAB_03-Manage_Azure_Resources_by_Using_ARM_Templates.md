@@ -119,20 +119,22 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Complete the custom deployment settings:
 
+    >**Did you know?** You can decide which parameters are required. For reference the disk resource definitions are on the [Microsoft.Compute disk page](https://learn.microsoft.com/azure/templates/microsoft.compute/disks?pivots=deployment-language-bicep#property-values).
+
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
     | Resource Group | `az104-rg3` |
-    | Region | **East US** |
+    | Region | `eastus` |
     | Disk Name | `az104-disk1` |
-    | Location | the value of the location parameter you noted in the previous task |
-    | Sku | **Standard_LRS** |
-    | Disk Size Gb | **32** |
-    | Create Option | **empty** |
-    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
-    | Data Access Auth Mode | None |
-    | Network Access Policy | **AllowAll** |
-    | Public Network Access | Disabled |
+    | Location | `None` |
+    | Sku | `Standard_LRS` |
+    | Disk Size Gb | `32` |
+    | Create Option | `Empty` |
+    | Disk Encryption Set Type | `EncryptionAtRestWithPlatformKey` |
+    | Data Access Auth Mode | `None` |
+    | Network Access Policy | `AllowAll` |
+    | Public Network Access | `Disabled` |
 
 1. Select **Review + Create** and then select **Create**.
 
@@ -142,19 +144,17 @@ In this task, you use the template that you created to deploy a new managed disk
 
 In this task, you verify that the deployment has finished successfully. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
-1. In the Azure portal, search for and select **Resource groups**. 
+1. In the Azure portal, search for and select **az104-rg3**.
 
-1. In the list of resource groups, click **az104-rg3**.
+1. Verify your managed disk, **az104-disk1**, was created. 
 
-1. On the **az104-rg3** resource group blade, in the **Settings** section, click **Deployments**.
+1. In the **Settings** section, click **Deployments**.
 
-1. From the **az104-rg3 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
+1. Select a deployment and review the content of the **Input** and **Template** blades.
 
 1. In the Azure portal, search for and select **Disks**.
 
-1. Notice your managed disk was created.
-
-    >**Note:** You can also deploy templates from the command line. Task 4 shows how to deploy using PowerShell. Task 5 shows how to deploy using the CLI.
+    >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**.
 
 
 ## Task 4. Deploy a template with Azure PowerShell (option 1).
