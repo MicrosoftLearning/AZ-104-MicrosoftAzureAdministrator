@@ -106,7 +106,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 ### Make changes for the ManufacturingVnet virtual network
 
->**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. Consult the architecture diagram if you are not sure. 
+>**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. Consult the architecture diagram to verify the details. 
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
 
