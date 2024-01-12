@@ -196,7 +196,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Setting | Value |
     | -- | -- |
     | Source | **any** |
-    | Source port ranges |  ***** |
+    | Source port ranges |  * |
     | Destination | **Application security group** |
     | Destination application security groups | **asg-web** |
     | Service | **Custom** (notice your other choices) |
