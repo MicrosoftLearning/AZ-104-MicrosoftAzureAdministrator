@@ -113,11 +113,11 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. **Save** the changes.
 
-1. Back on the **Custom deployment** blade, click **Edit parameters**. 
+1. Dpn't forget the parameters file, select **Edit parameters**, click **Load file** and upload the **parameters.json**.
 
-1. On the **Edit parameters** blade, click **Load file** and upload the **parameters.json** file you downloaded in the previous task, and **Save** the changes.
+1. Review the file and **Save** your changes. 
 
-1. Back on the **Custom deployment** blade, specify the following settings:
+1. Complete the custom deployment settings:
 
     | Setting | Value |
     | --- |--- |
