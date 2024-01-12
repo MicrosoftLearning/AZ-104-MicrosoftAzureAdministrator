@@ -154,7 +154,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 1. In the Azure portal, search for and select **Disks**.
 
-    >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**.
+    >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**. Please try at least one of the options. Don't forget **Task 6** Bicep deployments. 
 
 
 ## Task 4. Deploy a template with Azure PowerShell (option 1).
