@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-This lab is the first of three labs that focus on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
+This lab is the first of three labs that focuses on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -18,9 +18,9 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your global organization plans to implement virtual networks. These networks are in East US, West Europe, and Southeast Asia. The immediate goal is to accommodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
 
-The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network has the largest number of resources. The network has connectivity to on-premises networks through a VPN connection. This network has web services, databases, and other systems that are key to the operations of the business. Shared services, such as domain controllers and DNS are located here. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
+The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network has the largest number of resources.  A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
-The **ManufacturingVnet** virtual network is also deployed in the **East US** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from, such as temperature, and needs an IP address space that it can expand into.
+The **ManufacturingVnet** virtual network is also deployed in the **East US** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from. 
 
 ## Interactive lab simulations
 
@@ -84,7 +84,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Verify your configuration passed validation, and then select **Create**.
 
-1. Wait for the virtual network to deploy and then select **Go to resource**. 
+1. Wait for the virtual network to deploy and then select **Go to resource**.
+
+1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
 
 1. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
@@ -126,6 +128,16 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Be sure to **Save** your changes.
 
+### Make changes to the parameters file
+
+1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
+
+1. Edit the file using the editor of your choice.
+
+1. Replace the one occurence of **CoreServicesVnet** with `ManufacturingVnet`.
+
+1. **Save** your changes.
+   
 ### Deploy the custom template
 
 1. In the portal, search for and select **Deploy a custom template**.
@@ -136,7 +148,9 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select **Review + create** and then **Create**.
 
-1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network was create. 
+1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
+
+>**Note:** If you have to deploy more than one time you may find some resources were successfully completed and the deployment is failing. There is a finished template in the lab files directory. 
    
 ## Task 3: Configure communication between an Application Security Group and a Network Security Group 
 
