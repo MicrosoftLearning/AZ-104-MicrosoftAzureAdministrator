@@ -84,7 +84,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
 1. You do not need to wait for the resources to be created. Continue on to the next task.
 
-    >**Note:** Did you notice in this task you created the virtual network when you created the virtual machine? 
+    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine?  
 
 ## Task 2: Create a manufacturing services virtual machine and virtual network
 
