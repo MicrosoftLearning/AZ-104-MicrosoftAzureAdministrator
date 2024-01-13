@@ -54,11 +54,11 @@ In this task, we create a core services virtual network with a virtual machine.
     | Setting | Value | 
     | --- | --- |
     | Subscription |  *your subscription* |
-    | Resource group |  `az104-rg5` (If necessary, select **Create new**. Use this group for all your lab resources.)
+    | Resource group |  `az104-rg5` (If necessary, **Create new**. )
     | Virtual machine name |    `CoreServicesVM` |
     | Region | **East US** |
     | Availability options | No infrastructure redundancy required |
-    | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
+    | Image | **Windows Server 2019 Datacenter: x64 Gen2** (notice your other choices) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
@@ -147,9 +147,9 @@ In this task, you test the connection between the virtual machines in different 
     Test-NetConnection <CoreServicesVM private IP address> -port 3389
    ```
    
-1. It may take a couple of minutes for the script to run. The top of the page shows an informational message *Script execution in progress.*
+1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
    
-1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate.
+1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address may be different. 
    
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
@@ -210,12 +210,13 @@ In this task, you verify the virtual machines in different virtual networks can 
 
 1. It may take a couple of minutes for the script to run. The top of the page shows an informational icon *Script execution in progress.*
     
-1. The test connection should succeed. 
+1. The test connection should succeed. Your computer name and remote address may be different.
+   
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
 ## Task 6: Create a custom route to the manufacturing services virtual machines
 
-In this task, you have contracted with a vendor to maintain the manufacturing servies virtual machines. The vendor needs to be routed from an external firewall the manufacturing machines. The firewall has not been configured but you want to go ahead and configure the route. 
+In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from an external firewall to those machines. The firewall has not been configured but you want to go ahead and configure the route.
 
 1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
 
@@ -261,6 +262,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
 + Peered virtual networks appear as one for connectivity purposes.
 + The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
++ System defined routes are automatically created for each subnet in a virtual network.
++ User-defined routes override or add to the default system routes. For example, a user-defined route could enable Azure Virtual Appliances to handle the traffic between a subnet and the internet.
++ Route tables contain the networking map that defines the network traffic from one place to another. 
+
 
 ## Learn more with self-paced training
 
