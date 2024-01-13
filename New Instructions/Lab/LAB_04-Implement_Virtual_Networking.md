@@ -158,7 +158,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### Create the Application Security Group (ASG)
 
-1. In the Azure portal, search for and select **Application security groups**.
+1. In the Azure portal, search for and select `Application security groups`.
 
 1. Click **Create** and provide the basic information.
 
@@ -173,7 +173,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### Create the Network Security Group and associate it with the ASG subnet
 
-1. In the Azure portal, search for and select **Network security groups**.
+1. In the Azure portal, search for and select `Network security groups`.
 
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
@@ -186,9 +186,9 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. Click **Review + create** and then after the validation click **Create**.
 
-1. After the NSG is created, click **Go to resource**.
+1. After the NSG is deployed, click **Go to resource**.
 
-1. Under **Settings** click **Subnet** and then **Associate**.
+1. Under **Settings** click **Subnets** and then **Associate**.
 
     | Setting | Value |
     | -- | -- |
@@ -197,22 +197,22 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. Click **OK** to save the association.
 
-### Configure an inbound security rule
+### Configure an inbound security rule to allow ASG traffic
 
-1. In the **Settings** area, select **Inbound security rules**.
+1. Continue working with your NSG. In the **Settings** area, select **Inbound security rules**.
 
 1. Review the default inbound rules. Notice that only other virtual networks and load balancers are allowed access.
 
 1. Select **+ Add**.
 
-1. On the **Add inbound security rule** blade, use the following information to add inbound port rule, and then select **Add**.
+1. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select **Add**.
 
     | Setting | Value |
     | -- | -- |
-    | Source | **any** |
+    | Source | **Application security group** |
+    | Source application security groups | **asg-web** |
     | Source port ranges |  * |
-    | Destination | **Application security group** |
-    | Destination application security groups | **asg-web** |
+    | Destination | **Any** |
     | Service | **Custom** (notice your other choices) |
     | Destination port ranges | **80,443** |
     | Protocol | **TCP** |
@@ -220,7 +220,26 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Priority | **100** |
     | Name | **AllowASG** |
 
-1. After creating your NSG rule, take a minute to review the default **Outbound security rules**.
+### Configure an outbound NSG rule that denies Internet access
+
+1. After creating your inbound NSG rule, select **Outbound security rules**. 
+
+1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
+
+1. Select **+ Add** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add**.
+
+    | Setting | Value |
+    | -- | -- |
+    | Source | **Any** |
+    | Source port ranges |  * |
+    | Destination | **Service tag** |
+    | Destination service tag | **Internet** |
+    | Service | **Custom** |
+    | Destination port ranges | **8080** |
+    | Protocol | **Any** |
+    | Action | **Deny** |
+    | Priority | **4096** |
+    | Name | **DenyAnyCustom8080Outbound** |
 
 ## Key takeaways
 
