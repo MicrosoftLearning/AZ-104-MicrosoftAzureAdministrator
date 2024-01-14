@@ -50,9 +50,11 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-loop-template.json** file and select **Open**.
 
-   >**Note:** Notice this file includes the Parameters at the top of the file. So, a separate Parameters file is not needed. 
-
 1. Select **Save**.
+
+1. Select **Edit parameters** and load the **\\Allfiles\\Lab06\\az104-06-vms-loop-parameters.json** file.
+
+1. Select **Save**. 
 
 1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value.
 
@@ -60,9 +62,6 @@ In this task, you will use a template to deploy one virtual network, one network
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg6` (If necessary, select **Create new**)
-    | Region        | **East US**   |
-    | VM Size       | **Standard DS2 v3** |
-    | Admin Username| `localadmin` |
     | Password      | Provide a secure password |
 
      >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
