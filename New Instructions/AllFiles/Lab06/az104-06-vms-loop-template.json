@@ -528,7 +528,7 @@
             "name": "[parameters('networkInterfaces_az104_06_nic2_name')]",
             "location": "eastus",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]",
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
             ],
             "kind": "Regular",
@@ -544,7 +544,7 @@
                             "privateIPAddress": "10.62.0.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]"
                             },
                             "primary": true,
                             "privateIPAddressVersion": "IPv4"
