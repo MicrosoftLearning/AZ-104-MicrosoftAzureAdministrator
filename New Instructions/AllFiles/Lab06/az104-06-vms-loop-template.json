@@ -325,6 +325,7 @@
                 },
                 "protectedSettings": {}
             }
+	},
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
@@ -559,6 +560,6 @@
                 "nicType": "Standard",
                 "auxiliaryMode": "None",
                 "auxiliarySku": "None"
-            }
+            }}
     ]
 }
