@@ -123,7 +123,7 @@
                         },
                         "type": "Microsoft.Network/virtualNetworks/subnets"
                     },
-			                    {
+		    {
                         "name": "subnet2",
                         "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
                         "properties": {
@@ -323,8 +323,8 @@
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername && powershell.exe New-Item -Path "c:\inetpub\wwwroot" -Name "image" -Itemtype "Directory" && powershell.exe New-Item -Path "c:\inetpub\wwwroot\video\" -Name "iisstart.htm" -ItemType "file" && powershell.exe
-Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from: ' + $env:computername))"
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path "c:\inetpub\wwwroot" -Name "image" -Itemtype "Directory" && powershell.exe New-Item -Path "c:\inetpub\wwwroot\video\" -Name "iisstart.htm" -ItemType "file" && powershell.exe
+Add-Content -Path 'C:\inetpub\\wwwroot\image\iisstart.htm' -Value $('Images from: ' + $env:computername))"
                 },
                 "protectedSettings": {}
             }
