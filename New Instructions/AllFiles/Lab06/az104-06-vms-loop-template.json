@@ -45,7 +45,7 @@
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkSecurityGroups_az104_06_nsg1_name')]",
-            "location": "westus",
+            "location": "eastus",
             "properties": {
                 "securityRules": [
                     {
@@ -93,7 +93,7 @@
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2023-06-01",
             "name": "[parameters('virtualNetworks_az104_06_vnet1_name')]",
-            "location": "westus",
+            "location": "eastus",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
@@ -132,7 +132,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm0_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic0_name'))]"
             ],
@@ -189,7 +189,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm1_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic1_name'))]"
             ],
@@ -246,7 +246,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm2_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic2_name'))]"
             ],
@@ -302,7 +302,7 @@
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '/customScriptExtension')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm0_name'))]"
             ],
@@ -322,7 +322,7 @@ Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '/customScriptExtension')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm1_name'))]"
             ],
@@ -342,7 +342,7 @@ Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '/customScriptExtension')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm2_name'))]"
             ],
@@ -434,7 +434,7 @@ Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic0_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
@@ -476,7 +476,7 @@ Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic1_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
@@ -518,7 +518,7 @@ Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic2_name')]",
-            "location": "westus",
+            "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
