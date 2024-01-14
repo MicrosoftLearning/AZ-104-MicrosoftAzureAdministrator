@@ -74,7 +74,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
-1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Disks >** , specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -87,23 +87,23 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Load balancing options | **None** |
     | Delete NIC when VM is deleted | **Checked** (default) |
     
-1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Management >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Patch orchestration options | **Azure orchestrated** |  
 
-1. Click **Next: Monitoring >** and, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Disable** |
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
+1. Click **Next: Advanced >**, take the defaults, then click **Review + Create**.
 
-1. On the **Review + Create** blade, click **Create**.
+1. After the validation, click **Create**.
 
-    >**Note:** The virtual machine NIC, disk, and public IP address (if configured) are independently created and managed resources.  Be sure to delete them to ensure you don't incur any additional costs.
+    >**Note:** The virtual machine NIC, disk, and public IP address (if configured) are independently created and managed resources. 
 
 
 1. Wait for the deployment to complete, then select **Go to resource**.
@@ -114,9 +114,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. Continue working with **az104-vm1** virtual machine.
+1. On the **az104-vm1** virtual machine, in the **Settings**blade, select **Size**.
 
-1. On the **az104-vm1** virtual machine blade, click **Size** and set the virtual machine size to **DS1_v2** and click **Resize**.
+1. Set the virtual machine size to **DS1_v2** and click **Resize**. When prompted, confirm the change. 
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also knows as vertical scaling, up or down. 
 
@@ -150,7 +150,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Verify the disk is now **Standard SSD**.
 
->**Note:** You have now create a virtual machine, changed the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process. 
+>**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process. 
 
 ## Task 3 and 4: Azure Virtual Machine Scale Sets Architecture Diagram
 
