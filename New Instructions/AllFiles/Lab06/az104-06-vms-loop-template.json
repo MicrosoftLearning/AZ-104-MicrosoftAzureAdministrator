@@ -325,7 +325,7 @@
                 },
                 "protectedSettings": {}
             }
-        },
+        }
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
@@ -340,7 +340,7 @@
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name "image" -Itemtype 'Directory' && powershell.exe New-Item -Path `c:\\inetpub\\wwwroot\\image` -Name 'iisstart.htm' -ItemType 'file' && powershell.exe
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name 'image' -Itemtype 'Directory' && powershell.exe New-Item -Path `c:\\inetpub\\wwwroot\\image` -Name 'iisstart.htm' -ItemType 'file' && powershell.exe
 Add-Content -Path 'C:\\inetpub\\wwwroot\\image\\iisstart.htm' -Value $('Image from: ' + $env:computername))"
 }
                 "protectedSettings": {}
