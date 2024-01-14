@@ -6,7 +6,7 @@
             "value": "Standard_D2s_v3"
         },
         "adminUsername": {
-            "value": "Student"
+            "value": "localadmin"
         }
     }
 }
