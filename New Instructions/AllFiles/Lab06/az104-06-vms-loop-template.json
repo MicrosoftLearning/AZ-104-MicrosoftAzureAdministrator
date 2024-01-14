@@ -556,10 +556,12 @@
                 },
                 "enableIPForwarding": false,
                 "disableTcpStateTracking": false,
+		"networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
                 },
                 "nicType": "Standard",
                 "auxiliaryMode": "None",
                 "auxiliarySku": "None"
-            }
+            }}
     ]
 }
