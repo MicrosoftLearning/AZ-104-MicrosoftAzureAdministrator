@@ -560,6 +560,5 @@ Add-Content -Path 'C:\\inetpub\\wwwroot\\image\\iisstart.htm' -Value $('Video fr
                 "auxiliaryMode": "None",
                 "auxiliarySku": "None"
             }
-        }
     ]
 }
