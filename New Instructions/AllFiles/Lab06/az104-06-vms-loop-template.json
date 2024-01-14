@@ -529,7 +529,7 @@
             "location": "eastus",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
             ],
             "kind": "Regular",
             "properties": {
