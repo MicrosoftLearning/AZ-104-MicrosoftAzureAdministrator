@@ -56,7 +56,7 @@ In this task, you will create and configure a storage account. The storage accou
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
->**Note:** Use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high performance applications. 
+>**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high performance applications. 
 
 1. On the **Advanced** tab, review the available options, accept the defaults.
 
@@ -92,7 +92,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 ## Task 2: Manage blob storage
 
-In this task, you will create a blob container and upload a blob. Blob containers are directory-like structures that store unstructured data.
+In this task, you will create a blob container and upload an image. Blob containers are directory-like structures that store unstructured data.
 
 ### Create a blob container and a time-based retention policy
 
@@ -126,7 +126,7 @@ In this task, you will create a blob container and upload a blob. Blob container
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
->**Note**: Locate a file to upload. This can be any type of file, but a small file is best. 
+    >**Note**: Locate a file to upload. This can be any type of file, but a small file is best. A sample file can be downloaded from the AllFiles directory. 
 
     | Setting | Value |
     | --- | --- |
