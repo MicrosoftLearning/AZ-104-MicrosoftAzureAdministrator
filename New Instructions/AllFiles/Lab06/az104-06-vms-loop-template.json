@@ -1,79 +1,144 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "vmSize": {
-            "type": "string",
-            "defaultValue": "Standard_D2s_v3",
-            "metadata": {
-                "description": "VM size"
-            }
+        "virtualMachines_az104_06_vm0_name": {
+            "defaultValue": "az104-06-vm0",
+            "type": "String"
         },
-        "vmName": {
-            "type": "string",
-            "defaultValue": "az104-06-vm",
-            "metadata": {
-                "description": "VM name Prefix"
-            }
+        "virtualMachines_az104_06_vm1_name": {
+            "defaultValue": "az104-06-vm1",
+            "type": "String"
         },
-        "vmCount": {
-            "type": "int",
-            "defaultValue": 4,
-            "metadata": {
-                "description": "Number of VMs"
-            }
+        "virtualMachines_az104_06_vm2_name": {
+            "defaultValue": "az104-06-vm2",
+            "type": "String"
         },
-        "adminUsername": {
-            "type": "string",
-            "metadata": {
-                "description": "Admin username"
-            }
+        "virtualNetworks_az104_06_vnet1_name": {
+            "defaultValue": "az104-06-vnet1",
+            "type": "String"
+        },
+        "networkInterfaces_az104_06_nic0_name": {
+            "defaultValue": "az104-06-nic0",
+            "type": "String"
+        },
+        "networkInterfaces_az104_06_nic1_name": {
+            "defaultValue": "az104-06-nic1",
+            "type": "String"
+        },
+        "networkInterfaces_az104_06_nic2_name": {
+            "defaultValue": "az104-06-nic2",
+            "type": "String"
+        },
+        "networkSecurityGroups_az104_06_nsg1_name": {
+            "defaultValue": "az104-06-nsg1",
+            "type": "String"
         },
         "adminPassword": {
-            "type": "securestring",
-            "metadata": {
-                "description": "Admin password"
-            }
+            "defaultValue": null,
+            "type": "securestring"
         }
     },
-    "variables": {
-        "vmExtensionName": "customScriptExtension",
-        "nic": "az104-06-nic",
-        "virtualNetworkNames": "[createArray('az104-06-vnet01','az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
-        "virtualNetworkNamestbc": "[createArray('az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
-        "VNetPrefixes":"[createArray('10.60','10.62','10.63')]",
-        "nsgNames": "[createArray('az104-06-nsg01','az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
-        "nsgNamestbc": "[createArray('az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
-        "subnetName": "subnet",
-        "subnetRefs": "[createArray(0,1,0,0)]",
-        "computeApiVersion": "2018-06-01",
-        "networkApiVersion": "2018-08-01"
-    },
+    "variables": {},
     "resources": [
         {
-            "name": "[concat(parameters('vmName'),copyIndex())]",
-            "copy": {
-                "name": "VMcopy",
-                "count": "[parameters('vmCount')]"
-            },
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('networkSecurityGroups_az104_06_nsg1_name')]",
+            "location": "westus",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "default-allow-rdp",
+                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_az104_06_nsg1_name'), 'default-allow-rdp')]",
+                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                        "properties": {
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "3389",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 1000,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "default-allow-http",
+                        "id": "[resourceId('Microsoft.Network/networkSecurityGroups/securityRules', parameters('networkSecurityGroups_az104_06_nsg1_name'), 'default-allow-http')]",
+                        "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+                        "properties": {
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 1100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            }
+        },
+                {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('virtualNetworks_az104_06_vnet1_name')]",
+            "location": "westus",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.60.0.0/22"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "subnet0",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
+                        "properties": {
+                            "addressPrefix": "10.60.0.0/24",
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    },
+                    {
+                        "name": "subnet1",
+                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
+                        "properties": {
+                            "addressPrefix": "10.60.1.0/24",
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Disabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        },
+                        "type": "Microsoft.Network/virtualNetworks/subnets"
+                    }
+                ],
+                "virtualNetworkPeerings": [],
+                "enableDdosProtection": false
+            }
+        },
+                {
             "type": "Microsoft.Compute/virtualMachines",
-            "apiVersion": "[variables('computeApiVersion')]",
-            "location": "[resourceGroup().location]",
-            "comments": "Creating VMs",
+            "apiVersion": "2023-03-01",
+            "name": "[parameters('virtualMachines_az104_06_vm0_name')]",
+            "location": "westus",
             "dependsOn": [
-                "[concat(variables('nic'),copyIndex())]"
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic0_name'))]"
             ],
             "properties": {
-                "osProfile": {
-                    "computerName": "[concat(parameters('vmName'),copyIndex())]",
-                    "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]",
-                    "windowsConfiguration": {
-                        "provisionVmAgent": "true"
-                    }
-                },
                 "hardwareProfile": {
-                    "vmSize": "[parameters('vmSize')]"
+                    "vmSize": "Standard_D2s_v3"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -83,17 +148,151 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "createOption": "fromImage"
+                        "osType": "Windows",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '_disk1_5e57d096d8d54757b417a168417a69f8')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "deleteOption": "Detach",
+                        "diskSizeGB": 127
                     },
                     "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_az104_06_vm0_name')]",
+                    "adminUsername": "localadmin",
+		    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true,
+                        "patchSettings": {
+                            "patchMode": "AutomaticByOS",
+                            "assessmentMode": "ImageDefault"
+                        },
+                        "enableVMAgentPlatformUpdates": false
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true
                 },
                 "networkProfile": {
                     "networkInterfaces": [
                         {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic0_name'))]",
                             "properties": {
                                 "primary": true
-                            },
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('nic'),copyIndex()))]"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2023-03-01",
+            "name": "[parameters('virtualMachines_az104_06_vm1_name')]",
+            "location": "westus",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic1_name'))]"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2019-Datacenter",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '_disk1_0c60cd0e9f8d43aaaebfa572d1de0319')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "deleteOption": "Detach",
+                        "diskSizeGB": 127
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_az104_06_vm1_name')]",
+                    "adminUsername": "localadmin",
+		    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true,
+                        "patchSettings": {
+                            "patchMode": "AutomaticByOS",
+                            "assessmentMode": "ImageDefault"
+                        },
+                        "enableVMAgentPlatformUpdates": false
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic1_name'))]",
+                            "properties": {
+                                "primary": true
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2023-03-01",
+            "name": "[parameters('virtualMachines_az104_06_vm2_name')]",
+            "location": "westus",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic2_name'))]"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2019-Datacenter",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "osType": "Windows",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '_disk1_58417ddb19d7418886b4b5c42507a7f0')]",
+                        "createOption": "FromImage",
+                        "caching": "ReadWrite",
+                        "deleteOption": "Detach"
+                    },
+                    "dataDisks": []
+                },
+                "osProfile": {
+                    "computerName": "[parameters('virtualMachines_az104_06_vm2_name')]",
+                    "adminUsername": "localadmin",
+		    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "provisionVMAgent": true,
+                        "enableAutomaticUpdates": true,
+                        "patchSettings": {
+                            "patchMode": "AutomaticByOS",
+                            "assessmentMode": "ImageDefault"
+                        },
+                        "enableVMAgentPlatformUpdates": false
+                    },
+                    "secrets": [],
+                    "allowExtensionOperations": true
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic2_name'))]",
+                            "properties": {
+                                "primary": true
+                            }
                         }
                     ]
                 }
@@ -101,137 +300,259 @@
         },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
-            "name": "[concat(concat(parameters('vmName'),copyIndex()), '/', variables('vmExtensionName'))]",
-            "copy": {
-                "name": "Extopy",
-                "count": "[parameters('vmCount')]"
-            },
-            "apiVersion": "[variables('computeApiVersion')]",
-            "location": "[resourceGroup().location]",
+            "apiVersion": "2023-03-01",
+            "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '/customScriptExtension')]",
+            "location": "westus",
             "dependsOn": [
-                "[concat('Microsoft.Compute/virtualMachines/', concat(parameters('vmName'),copyIndex()))]"
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm0_name'))]"
             ],
             "properties": {
+                "autoUpgradeMinorVersion": true,
                 "publisher": "Microsoft.Compute",
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
-                "autoUpgradeMinorVersion": true,
                 "settings": {
-                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
-            }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks",
-            "name": "[variables('virtualNetworkNamestbc')[copyIndex()]]",
-            "copy": {
-                "name": "VnetCopy",
-                "count": "[length(variables('virtualNetworkNamestbc'))]"
-            },
-            "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
-            "comments": "Virtual Network",
-            "properties": {
-                "addressSpace": {
-                    "addressPrefixes": [
-                        "[concat(variables('VNetPrefixes')[copyIndex()],'.0.0/22')]"
-                    ]
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername && powershell.exe New-Item -Path "c:\inetpub\wwwroot" -Name "video" -Itemtype "Directory" && powershell.exe New-Item -Path "c:\inetpub\wwwroot\video\" -Name "iisstart.htm" -ItemType "file" && powershell.exe
+Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from: ' + $env:computername))"
                 },
-                "subnets": [
-                    {
-                        "name": "[concat(variables('subnetName'),'0')]",
-                        "properties": {
-                            "addressPrefix": "[concat(variables('VNetPrefixes')[copyIndex()],'.0.0/24')]"
-                        }
-                    }
-                ]
-                  
+                "protectedSettings": {}
             }
         },
-        {   "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
-            "comments": "Virtual Network Subnet for VNet01",
-            "name": "az104-06-vnet01/subnet1",
-            "properties": {
-                "addressPrefix": "10.60.1.0/24"
-            },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2023-03-01",
+            "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '/customScriptExtension')]",
+            "location": "westus",
             "dependsOn": [
-                "Microsoft.Network/virtualNetworks/az104-06-vnet01"
-            ]
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm1_name'))]"
+            ],
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.7",
+                "settings": {
+                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername && powershell.exe New-Item -Path "c:\inetpub\wwwroot" -Name "video" -Itemtype "Directory" && powershell.exe New-Item -Path "c:\inetpub\wwwroot\video\" -Name "iisstart.htm" -ItemType "file" && powershell.exe
+Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from: ' + $env:computername))"
+},
+                "protectedSettings": {}
+            }
         },
         {
-            "name": "[concat(variables('nic'),copyIndex())]",
-            "copy":{
-                "name": "nicCopy",
-                "count": "[parameters('vmCount')]"
-            },
-            "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
-            "comments": "Primary NIC",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "apiVersion": "2023-03-01",
+            "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '/customScriptExtension')]",
+            "location": "westus",
             "dependsOn": [
-                "[variables('nsgNames')[copyindex()]]",
-                "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkNames')[copyIndex()])]"
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm2_name'))]"
             ],
+            "properties": {
+                "autoUpgradeMinorVersion": true,
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.7",
+                "settings": {
+                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername && powershell.exe New-Item -Path "c:\inetpub\wwwroot" -Name "video" -Itemtype "Directory" && powershell.exe New-Item -Path "c:\inetpub\wwwroot\video\" -Name "iisstart.htm" -ItemType "file" && powershell.exe
+Add-Content -Path 'C:\inetpub\\wwwroot\video\iisstart.htm' -Value $('Images from: ' + $env:computername))"
+                },
+                "protectedSettings": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg1_name'), '/default-allow-http')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+            ],
+            "properties": {
+                "protocol": "Tcp",
+                "sourcePortRange": "*",
+                "destinationPortRange": "80",
+                "sourceAddressPrefix": "*",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 1100,
+                "direction": "Inbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg1_name'), '/default-allow-rdp')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+            ],
+            "properties": {
+                "protocol": "Tcp",
+                "sourcePortRange": "*",
+                "destinationPortRange": "3389",
+                "sourceAddressPrefix": "*",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 1000,
+                "direction": "Inbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet0')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "10.60.0.0/24",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+                {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet1')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
+            ],
+            "properties": {
+                "addressPrefix": "10.60.1.0/24",
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Disabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('networkInterfaces_az104_06_nic0_name')]",
+            "location": "westus",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+            ],
+            "kind": "Regular",
             "properties": {
                 "ipConfigurations": [
                     {
                         "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic0_name')), '/ipConfigurations/ipconfig1')]",
+                        "etag": "W/\"2690d608-0b02-47be-a9c9-38f240a8bfbf\"",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
                         "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "10.60.0.4",
+                            "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkNames')[copyIndex()], concat(variables('subnetName'),variables('subnetRefs')[copyindex()]))]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]"
                             },
-                            "privateIPAllocationMethod": "Dynamic"
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
                         }
                     }
                 ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
                 "networkSecurityGroup": {
-                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgNames')[copyIndex()])]"
-                }
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+                },
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
             }
         },
         {
-            "name": "[variables('nsgNamestbc')[copyIndex()]]",
-            "copy": {
-                "name": "nsgCopy",
-                "count": 3
-            },
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "apiVersion": "[variables('networkApiVersion')]",
-            "location": "[resourceGroup().location]",
-            "comments": "Network Security Group (NSG) for Primary NIC",
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('networkInterfaces_az104_06_nic1_name')]",
+            "location": "westus",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+            ],
+            "kind": "Regular",
             "properties": {
-                "securityRules": [
+                "ipConfigurations": [
                     {
-                        "name": "default-allow-rdp",
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic1_name')), '/ipConfigurations/ipconfig1')]",
+                        "etag": "W/\"a65f582b-ab26-4a99-aa7f-f5ff9c7c6756\"",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
                         "properties": {
-                            "priority": 1000,
-                            "sourceAddressPrefix": "*",
-                            "protocol": "Tcp",
-                            "destinationPortRange": "3389",
-                            "access": "Allow",
-                            "direction": "Inbound",
-                            "sourcePortRange": "*",
-                            "destinationAddressPrefix": "*"
-                        }
-                    },
-                    {
-                        "name": "default-allow-http",
-                        "properties": {
-                            "priority": 1100,
-                            "sourceAddressPrefix": "*",
-                            "protocol": "Tcp",
-                            "destinationPortRange": "80",
-                            "access": "Allow",
-                            "direction": "Inbound",
-                            "sourcePortRange": "*",
-                            "destinationAddressPrefix": "*"
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "10.60.1.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
                         }
                     }
-                ]
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
+                },
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('networkInterfaces_az104_06_nic2_name')]",
+            "location": "westus",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]",
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg2_name'))]"
+            ],
+            "kind": "Regular",
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "[concat(resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic2_name')), '/ipConfigurations/ipconfig1')]",
+                        "etag": "W/\"52827e59-e77e-4722-89a1-e79cee3c4b41\"",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "10.62.0.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet2_name'), 'subnet0')]"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4"
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": []
+                },
+                "enableIPForwarding": false,
+                "disableTcpStateTracking": false,
+                },
+                "nicType": "Standard",
+                "auxiliaryMode": "None",
+                "auxiliarySku": "None"
             }
         }
-    ],
-    "outputs": {}
+    ]
 }
