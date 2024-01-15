@@ -158,7 +158,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Task 3: Implement Azure Virtual Machine Scale Sets
 
-In this task, you will deploy an Azure virtual machine scale set across availability zones. With individual VMs, you would need other automation to deploy and configure additional VMs if your application needs additional compute. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out. 
+In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out. 
 
 1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
@@ -193,13 +193,13 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Setting | Value |
     | --- | --- |
     | Name | `vmss-vnet` |
-    | Address range | `10.82.0.0/20` |
+    | Address range | `10.82.0.0/20` (change what is there) |
     | Subnet name | `subnet0` |
     | Subnet range | `10.82.0.0/24` |
 
 1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
 
-1. On the **Edit network interface** blade, in the **NIC network security group** section, click **Advanced** and click **Create new** under the **Configure network security group** drop-down list.
+1. For **NIC network security group** section, select **Advanced** and then click **Create new** under the **Configure network security group** drop-down list.
 
 1. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
@@ -236,6 +236,8 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Load balancer name | `vmss-lb` |
 
+>**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
+
 1. On the **Scaling** tab, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
     | Setting | Value |
@@ -249,7 +251,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Boot diagnostics | **Disable** |
     
-1. Click **Next : Health >**:
+1. Click **Next : Health >**.
 
 1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
@@ -257,8 +259,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 
-    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes.
-
+    >**Note**: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes. While you wait review the [documentation](https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview).
 
 ## Task 4: Scale Azure Virtual Machine Scale Sets
 
@@ -268,16 +269,13 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
 
->**Note:**Notice you can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
-
-
+>**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
 ### Scale out rule
 
 1. Select **Custom autoscale**. then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
    
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%.
-
 
     | Setting | Value |
     | --- | --- |
@@ -294,6 +292,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
+1. Be sure to **Save** your changes.
+   
 ### Scale in rule
 
 1. During evenings or weekends, demand may decrease so it is important to create a scale in rule.
@@ -306,9 +306,11 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | --- | --- |
     | Operator | **Less than** |
     | Threshold | **30** |
-    | Operation | **decrease percent by** (review your other choices) |
-    | Instance count | **20** |
+    | Operation | **decrease percentage by** (review your other choices) |
+    | Percentage | **20** |
 
+1. Be sure to **Save** your changes.
+   
 ### Set the instance limits
 
 1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances, or scale in beyond the minimum number of instances.
@@ -329,11 +331,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ## Task 5: Create a virtual machine using Azure PowerShell (option 1)
 
-1. Sign in to the Azure portal - `https://portal.azure.com`.
+1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. Use the menu to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
-
-1. If necessary configure the Cloud Shell. Be sure to select **PowerShell**.
+1. Be sure to select **PowerShell**. If necessary use the **Show advanced settings** and configure the shell storage. 
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
@@ -352,7 +352,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     ```powershell
     Get-AzVM `
-    -ResourceGroupName 'az104-rg8'
+    -ResourceGroupName 'az104-rg8' `
     -Status
     ```
     
@@ -362,7 +362,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     ```
     Stop-AzVM `
-    -ResourceGroupName 'az104-rg8'
+    -ResourceGroupName 'az104-rg8' `
     -Name 'myPSVM' `
     ```
     
@@ -372,22 +372,22 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ## Task 6: Create a virtual machine using the CLI (option 2)
 
-1. Sign in to the Azure portal - `https://portal.azure.com`.
+1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. Use the menu to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
-
-1. If necessary configure the Cloud Shell. Be sure to select **Bash**.
+1. Be sure to select **Bash**. If necessary use the **Show advanced settings** and configure the shell storage. 
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
 
     ```sh
-    az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys 
+    az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys
+    ```
     
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
     ```sh
     az vm show --name  myCLIVM --resource-group az104-rg8 --show-details
+    ```
 
 1. Verify the **powerState** is **VM Running**.
 
@@ -395,6 +395,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     ```sh
     az vm deallocate --resource-group az104-rg8 --name myCLIVM
+    ```
 
 1. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
 
