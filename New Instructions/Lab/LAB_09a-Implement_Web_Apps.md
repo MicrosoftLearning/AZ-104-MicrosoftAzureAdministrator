@@ -17,7 +17,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replacemed. Your organization wants to avoid replacing hardware by using Azure to host the websites. 
+Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replaced. Your organization wants to avoid new hardware costs by using Azure to host the websites. 
 
 ## Interactive lab simulations
 
@@ -96,13 +96,13 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 ## Task 3: Configure Web App deployment settings
 
-In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment from your repository of choice, or by using FTPS credentials and other automation. This ensures that the app service has the latest version of the application.
+In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
 1. In the staging slot, select **Deployment Center** and then select **Settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
     
-1.In the **Source** drop-down list, select **External Git**.
+1. In the **Source** drop-down list, select **External Git**. Notice the other choices. 
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
 
