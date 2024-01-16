@@ -42,7 +42,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will use a template to deploy a virtual machine. The virtual machine will be used to test different backup scenarios.
 
-1. Download the **\\Allfiles\\Lab10\\az104-10-vms-edge-template.json** lab file.
+1. Download the **\\Allfiles\\Lab10\\ lab files.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -56,9 +56,13 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
    >**Note:** Take a moment to review the template. We are deploying a virtual network and virtual machine so we can demonstrate backup and recovery. 
 
-1. Select **Save**.
- 
-   >**Note:** Notice this template has a lot of parameters the administrator can change. 
+1. **Save** your changes.
+
+1. Select **Edit parameters** and then **Load file**.
+
+1. Load and select the **\\Allfiles\\Lab10\\az104-10-vms-edge-parameters.json** file.
+
+1. **Save** your changes.
 
 1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values:
 
@@ -67,7 +71,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg10` (If necessary, select **Create new**)
     | Region        | **East US**   |
-    | Username      | `Student`   |
+    | Username      | `localadmin`   |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
@@ -95,7 +99,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
 1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
 
-    >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
+    >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
 1. When the deployment is completed, click **Go to Resource**.
 
@@ -138,7 +142,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     | Setting | Value |
     | ---- | ---- |
-    | Policy name | `az104-policy` |
+    | Policy name | `az104-backup` |
     | Frequency | **Daily** |
     | Time | **12:00 AM** |
     | Timezone | the name of your local time zone |
@@ -152,11 +156,13 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     >**Note**: Wait for the backup to be enabled. This should take approximately 2 minutes.
 
-1. Navigate back to the Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
+1. In the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
 
 1. Select the **View details** link for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
 
-1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
+    >**Note:** Notice the backup is pending.
+    
+1. Select **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
@@ -181,7 +187,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
-1. Navigate to the Recovery Services vault.
+1. Navigate to your Recovery Services vault.
 
 1. Select **Diagnostic Settings** and then select **Add diagnostic setting**.
 
@@ -202,13 +208,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Save**.
 
-1. Return to the Recovery Services vault page and select **Backup jobs**.
+1. Return to your Recovery Services vault, in the **Monitoring** blade select **Backup jobs**.
 
-1. Locate the backup operation for the **az104-10-vm0** VM, and select **Details**
+1. Locate the backup operation for the **az104-10-vm0** virtual machine. 
 
-    >**Note**: Depending on your screen resolution, you might need to scroll right in the backup job table.
-
-1. Review the details of the backup job that you triggered on the VM. 
+1. Review the details of the backup job.
 
 ## Task 5: Implement Azure Site Recovery
 
