@@ -70,8 +70,6 @@ In this task, you will use a template to deploy one virtual network, one network
 
     >**Note**: Wait for the deployment to finish before moving to the next task. The deployment should complete in approximately 5 minutes.
     
-    >**Note:** While you wait, search for and select **Network Watcher**. Select the **Topology** blade to get a view of the virtual network infrastructure. Hover over the networks to view subnet and IP addressing information. 
-
 ## Task 2: Implement Azure Load Balancer
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
