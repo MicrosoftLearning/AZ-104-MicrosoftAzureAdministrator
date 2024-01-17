@@ -92,13 +92,13 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. Select **Create +** and select **Alert rule**. 
 
-1. Select the box for the **az104-rg11** resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
+1. Select the box for the resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
 1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Notice the other built-in signals. Select **Apply**
 
-1. In the **Alert logic** area review the **Event level** selections. Leave the default of **All selected**.
+1. In the **Alert logic** area (scroll down), review the **Event level** selections. Leave the default of **All selected**.
 
 1. Review the **Status** selections. Leave the default of **All selected**.
 
@@ -133,8 +133,6 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. 
 
-1. Select **Review + create** to validate your input, then select **Create**.
-
     >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
 1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
@@ -142,7 +140,7 @@ In this task, if the alert is triggered send an email notification to the operat
     | Setting | Value |
     |---------|---------|
     | Alert rule name | `VM was deleted` |
-    | Description | `A VM in your resource group was deleted` |
+    | Alert rule description | `A VM in your resource group was deleted` |
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
@@ -158,7 +156,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select **Delete** from the menu bar.
 
-1. Check the box for **Apply force delete**. Check the box to acknowledge the deletion, then select **Delete**. 
+1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. 
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -216,7 +214,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. If necessary close the splash screen. 
 
-1. Select a scope, your **resource group**. 
+1. Select a scope, your **resource group**. Select **Apply**. 
 
 1. In the **Queries** tab, select **Virtual machines** (left pane). 
 
@@ -228,7 +226,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. Replace the query with this one, and then click **Run**. Review the resulting chart.
 
-   ```sh
+   ```bash
    // Virtual Machine available memory
    // Chart the VM's available memory over the last hour.
    InsightsMetrics \
