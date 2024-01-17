@@ -160,6 +160,8 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip0**.
 
+>**Note:** If you receive an error, *domain name is already in use*, this is a known issue. You will need to locate the public ip address and associate it to the NIC separately. 
+
 1. Select **Save**.
 
 1. Navigate back to the **az104-04-vnet1** blade.
@@ -173,6 +175,8 @@ In this task, you will configure static assignment of public and private IP addr
 1. Ensure the **Allocation** is **Static**.
 
 1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip1**.
+
+>**Note:** If you receive an error, *domain name is already in use*, this is a known issue. You will need to locate the public ip address and associate it to the NIC separately. 
 
 1. Select **Save**.
    
