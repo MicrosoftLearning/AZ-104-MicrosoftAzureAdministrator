@@ -37,11 +37,11 @@ In this task, you will deploy Azure virtual machines into different availability
     | Region | same location of resource group |
     | Availability options | **Availability zone** |
     | Availability zone | **Zones 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen1/Gen2** |
+    | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s v3** |
     | Username | **Student** |
-    | Password | **Provide a secure password** |
+    | Password | **Provide a secure password, minimum 12 characters** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
 
@@ -76,7 +76,7 @@ In this task, you will deploy Azure virtual machines into different availability
     | NIC network security group | **basic** |
     | Public inbound Ports | **None** |
     | Accelerated networking | **Unchecked**
-    | Place this virtual machine behind an existing load balancing solution? | **Unchecked** |
+    | Load balancing options | **None** |
  
 1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
@@ -224,6 +224,8 @@ In this task, you will install the Windows Server Web Server role on the two Azu
 
     >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete the execution of the cmdlet
 
+    >**Note**: The **-URI** parameter is the **Private IP address** of the VM. Navigate to the **az104-08-vm0** blade, in the **Networking** section, and click **Network settings**
+
     >**Note**: You can also connect to **az104-08-vm0** and run `Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing` to access the website hosted on **az104-08-vm1**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -245,7 +247,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values) and then click on **Save (4)**:
+1. Create a managed disk with the following settings (leave others with their default values) and then click on **Apply (4)**:
 
     | Setting | Value |
     | --- | --- |
@@ -257,15 +259,13 @@ In this task, you will scale compute for Azure virtual machines by changing thei
       
 1. Back on the **az104-08-vm0 - Disks** blade, Under **Data disks** click **+ Create and attach a new disk**.
 
-1. Create a managed disk with the following settings (leave others with their default values):
+1. Create a managed disk with the following settings (leave others with their default values) and click **Apply**:
 
     | Setting | Value |
     | --- | --- |
     | Disk name | **az104-08-vm0-datadisk-1** |
     | Storage type | **Premium SSD** |
     | Size (GiB)| **1024 GiB** |
-
-1. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
 
 1. On the **az104-08-vm0** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
 
@@ -304,7 +304,7 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
     >**Note**: This section of the template defines the same Azure virtual machine size as the one you specified for the first virtual machine via the Azure portal.
 
-1. On the **Edit template** blade, in the section displaying the content of the template, replace line **51** (`"dataDisks": [ ]` line) with the following code :
+1. On the **Edit template** blade, in the section displaying the content of the template, replace line **54** (`"dataDisks": [ ]` line) with the following code :
 
    ```json
    "dataDisks": [
@@ -568,13 +568,13 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Setting | Value |
     | --- |--- |
     | Metric source | **Current resource (az10480vmss0)** |
-    | Time aggregation | **Average** |
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Network In Total** |
     | Operator | **Greater than** |
     | Metric threshold to trigger scale action | **10** |
     | Duration (in minutes) | **1** |
     | Time grain statistic | **Average** |
+    | Time aggregation | **Average** |
     | Operation | **Increase count by** |
     | Instance count | **1** |
     | Cool down (minutes) | **5** |
