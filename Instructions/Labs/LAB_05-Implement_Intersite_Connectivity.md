@@ -95,13 +95,13 @@ In this task, you will configure local and global peering between the virtual ne
     | Setting | Value|
     | --- | --- |
     | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box are checked** |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
 
      ![Image](./Images/peering.png)
    
