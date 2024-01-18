@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Create custom RBAC roles 
 + Task 3: Assign RBAC roles
 
-## Estimated timing: 30 minutes
+## Estimated timing: 60 minutes
 
 ## Architecture diagram
 
