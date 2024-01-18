@@ -101,7 +101,7 @@ In this task, you will configure local and global peering between the virtual ne
     | I know my resource ID | unselected |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure all the boxes are checked** |
+    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure only the first three boxes are checked** |
 
      ![Image](./Images/peering.png)
    
