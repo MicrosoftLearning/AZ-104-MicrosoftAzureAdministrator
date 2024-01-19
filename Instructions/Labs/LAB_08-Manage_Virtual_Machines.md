@@ -629,7 +629,9 @@ In this task, you will change the size of virtual machine scale set instances, c
     | Storage type | **Standard HDD** |
     | Size (GiB) | **32** |
 
-1. Save the change, in the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. Apply the change.
+
+1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note**: The disk attached in the previous step is a raw disk. Before it can be used, it is necessary to create a partition, create a filesystem, and mount it. To accomplish this, you will use the Azure virtual machine Custom Script extension. First, you will need to remove the existing Custom Script Extension.
 
