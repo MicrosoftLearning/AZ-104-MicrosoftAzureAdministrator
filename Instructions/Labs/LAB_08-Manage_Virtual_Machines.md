@@ -222,11 +222,11 @@ In this task, you will install the Windows Server Web Server role on the two Azu
    Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
    ```
 
-    >**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
+>**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
 
-    >**Note**: The -URI parameter is the Private IP address of the VM. Navigate to the az104-08-vm1 blade, in the Networking section, and click Network settings
+>**Note**: The -URI parameter is the Private IP address of the VM. Navigate to the az104-08-vm1 blade, in the Networking section, and click Network settings
 
-    >**Note**: You can also connect to **az104-08-vm0** and run Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing to access the web site hosted on **az104-08-vm1**.
+>**Note**: You can also connect to **az104-08-vm0** and run Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing to access the web site hosted on **az104-08-vm1**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
