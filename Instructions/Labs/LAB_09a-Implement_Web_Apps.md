@@ -158,7 +158,7 @@ In this task, you will deploy code to the staging deployment slot.
 1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
 
    ```powershell
-   git push [deployment_user_name] master
+   git push https://<deployment-username>:<deployment-password>@<app-name>-staging.scm.azurewebsites.net/<app-name>.git master
    ```
 
 1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
