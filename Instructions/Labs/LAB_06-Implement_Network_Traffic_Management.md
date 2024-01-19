@@ -172,6 +172,10 @@ In this task, you will configure local peering between the virtual networks you 
     | Allow az104-06-vnet3 to access az104-06-vnet01 | **Ensure the box is checked (default)** |
     | Allow az104-06-vnet3 to receive forwarded traffic from az104-06-vnet01 | **Ensure the box is checked** |
 
+    >**Note**: Wait for the operation to complete.
+
+    >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet2 and the other from az104-06-vnet2 to az104-06-vnet01.
+
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
