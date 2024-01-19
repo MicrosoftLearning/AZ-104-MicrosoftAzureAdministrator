@@ -244,7 +244,9 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Backup tab, uncheck **Enable backup** option and then click on **Create**.
 
-1. Click the newly created file share and click **Connect**.
+1. Click the newly created file share and note the information available on the **az104-07-share** blade.
+
+1. Click **Browse** and note that there are no files or folders in the new file share. Click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**.
 
@@ -270,7 +272,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Verify that the script was completed successfully.
 
-1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
+1. Navigate back to the **az104-07-share \| Browse** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
     
