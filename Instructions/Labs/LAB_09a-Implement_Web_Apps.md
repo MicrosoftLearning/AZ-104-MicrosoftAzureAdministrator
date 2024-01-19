@@ -197,7 +197,7 @@ In this task, you will configure and test autoscaling of the Azure web app.
 
 1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
-1. From the **Scaling section** select the **Rule Based** option, then click on the **Manage rules based scaling** link.
+1. From the **Scaling section** select the **Rules Based** option, then click on the **Manage rules based scaling** link.
 
 1. Click **Custom autoscale**.
 
