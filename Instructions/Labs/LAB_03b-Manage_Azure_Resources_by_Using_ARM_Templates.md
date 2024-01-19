@@ -97,7 +97,7 @@ In this task, you will create an Azure disk resource by using an Azure Resource 
     | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
     | Data Access Auth Mode | **None** |
     | Network Access Policy | **AllowAll** |
-    | Public Network Access | **Enabled** |    
+    | Public Network Access | **Disabled** |    
 
 1. Select **Review + Create** and then select **Create**.
 
