@@ -260,7 +260,7 @@ In this task, you will configure and test autoscaling of the Azure web app.
 
 1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
 
-1. Select the **Run history** tab, and check the **Observed resource instance count**.
+1. Select Autoscale Settings, select the **Run history tab**. Under Show data for last, select 1 hour and check the Observed resource instance count.
 
     ![image](../media/9a-13.png)
 
