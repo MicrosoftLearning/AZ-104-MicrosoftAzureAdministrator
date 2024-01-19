@@ -178,7 +178,9 @@ In this task, you will configure the static assignment of public and private IP 
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. In the **Public IP address settings** section, select the checkbox **Associate public** IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+1. On the **Edit IP configuration** blade, select Allocation **Static**, leave the default value of **IP address** set to **10.40.1.4**. In the **Public IP address settings** section, select the checkbox **Associate public** **IP address**, on Public IP address dropdown select **az104-04-pip1** and click **Save**.
+
+   >**Note:** If you receive an error, **domain name is already in use**, this is a known issue. You will need to locate the public ip address and associate it to the NIC separately.
   
 1. Back on the **ipconfig1** blade, save the changes.
 
