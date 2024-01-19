@@ -239,11 +239,11 @@ In this task, you will scale compute for Azure virtual machines by changing thei
 
 1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
 
-1. On the **az104-08-vm0** virtual machine blade, click **Size (1)** under the **Settings** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**.
+1. On the **az104-08-vm0** virtual machine blade, click **Size (1)** under the **Availability + scale** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**.
 
     >**Note**: Choose another size if **Standard DS1_v2** is not available.
 
-   ![](../Labs/Images/resize.png) 
+   ![](../Labs/Images/resize1.png) 
 
 1. On the **az104-08-vm0** virtual machine blade, click **Disks**, Under **Data disks** click **+ Create and attach a new disk**.
 
