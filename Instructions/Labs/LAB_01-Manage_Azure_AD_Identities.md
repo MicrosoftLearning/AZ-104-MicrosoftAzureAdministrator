@@ -312,7 +312,10 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Switch back to your default Entra ID tenant **otuxxxxx@onmicrosoft.com** by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Return to the first tenant that you created earlier **otuxxxxx@onmicrosoft.com**.
+1. Select **Overview** in the navigation pane.
+1. Click **Manage tenants**.
+1. Check the box next to the first tenant you created earlier, then select **Switch**.
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
