@@ -394,7 +394,7 @@ In this task, you will deploy the Azure virtual machine scale set across availab
     | Resource group | select the existing resource group **az104-08-rg02** |
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | Select one of the regions that support availability zones and where you can provision Azure virtual machines different from the one you used to deploy virtual machines earlier in this lab |
-    | Availability zone | **Zones 1, 2, 3** |
+    | Availability zone | **Zones 1, 2** |
     | Orchestration mode | **Uniform** |
     | Image | **Windows Server 2019 Datacenter - Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
