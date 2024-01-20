@@ -160,6 +160,11 @@ In this task, you will deploy code to the staging deployment slot.
    ```powershell
    git push https://<deployment-username>:<deployment-password>@<app-name>-staging.scm.azurewebsites.net/<app-name>.git master
    ```
+>**Note**: Incase the above command fails use the below command :
+
+  ```powershell
+  git push [deployment_user_name] master
+  ```
 
 1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
 
