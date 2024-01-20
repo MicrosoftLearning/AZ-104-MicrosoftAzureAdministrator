@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Lab 09b: Implement Azure Containers'
+    title: 'Lab 09b: Implement Azure Container Instances'
     module: 'Administer PaaS Compute Options'
 ---
 
-# Lab 09b - Implement Azure Containers
+# Lab 09b - Implement Azure Container Instances
 
 ## Lab introduction
 
