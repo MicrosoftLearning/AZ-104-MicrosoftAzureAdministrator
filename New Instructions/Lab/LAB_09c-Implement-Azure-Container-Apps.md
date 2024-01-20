@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Instances and Docker. Additionally, you want to deploy and test an Azure container app.
+Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Apps.
 
 ## Interactive lab simulations
 
