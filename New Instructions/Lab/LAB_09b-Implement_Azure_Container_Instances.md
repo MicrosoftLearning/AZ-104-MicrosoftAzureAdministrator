@@ -8,8 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab, you learn how to implement Azure Container Instances and Azure Container Apps. You learn to deploy an Azure Container Instance to display a Hello World app.
-You learn to deploy the default Azure Container App. 
+In this lab, you learn how to implement and deploy Azure Container Instances.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -17,8 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Instances and Docker. Additionally, you want to deploy and test an Azure container app.
-
+Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Instances and Docker. 
 ## Interactive lab simulations
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
