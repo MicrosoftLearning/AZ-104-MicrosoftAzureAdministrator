@@ -10,13 +10,13 @@ lab:
 
 In this lab, you learn how to configure and test a public Load Balancer and an Application Gateway. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
 ## Estimated timing: 40 minutes
 
 ## Lab scenario
 
-Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implement and Azure Load Balancer and an Azure Application Gateway. All resources are in the same region. 
+Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing and Azure Load Balancer and an Azure Application Gateway. All resources are in the same region. 
 
 ## Interactive lab simulations
 
@@ -70,6 +70,8 @@ In this task, you will use a template to deploy one virtual network, one network
 
     >**Note**: Wait for the deployment to finish before moving to the next task. The deployment should complete in approximately 5 minutes.
     
+    >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtua machine. 
+    
 ## Task 2: Implement Azure Load Balancer
 
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
@@ -105,7 +107,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | `az104-fe` |
     | IP type | IP address |
-    | Public IP address | Select **Create new**|
+    | Public IP address | Select **Create new** (use the instructions in the next step) |
     | Gateway Load Balancer | None |
     
 1. On the **Add a public IP address** popup, use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**. 
@@ -129,13 +131,21 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | az104-vm0 | **check the box** |
     | az104-vm1 | **check the box** |
 
-1. On the **Inbound rules** tab, click **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When completed click **Add**.
+1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**. 
+
+1. Wait for the load balancer to deploy then click **Go to resource**.
+
+**Add an inbound rule and test**
+
+1. In the **Settings** blade, select **Load balancing rules**.
+   
+1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When completed click **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-lbrule` |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **az104-fe** |
+    | Frontend IP Address | **az104-pip** |
     | Backend pool | **az104-be** |
     | Protocol | **TCP** |
     | Port | `80` |
@@ -151,10 +161,6 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | TCP reset | **Disabled** |
     | Floating IP | **Disabled** |
     | Outbound source network address translation (SNAT) | **Recommended** |
-
-1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**. 
-
-1. Wait for the load balancer to deploy then click **Go to resource**.  
 
 1. Select **Frontend IP configuration** from the Load Balancer resource page. Copy the public IP address.
 
