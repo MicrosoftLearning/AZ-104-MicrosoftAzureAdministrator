@@ -84,7 +84,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
 1. You do not need to wait for the resources to be created. Continue on to the next task.
 
-    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine?  
+    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add resources. 
 
 ## Task 2: Create a manufacturing services virtual machine and virtual network
 
@@ -139,17 +139,17 @@ In this task, you test the connection between the virtual machines in different 
 
 1. Switch to the `ManufacturingVM` virtual machine.
 
-1. In the **Operations** section, select the **Run command** blade.
+1. In the **Operations** blade, select the **Run command** blade.
 
 1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-   ```Powershell
+    ```Powershell
     Test-NetConnection <CoreServicesVM private IP address> -port 3389
-   ```
+
    
 1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
    
-1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address may be different. 
+1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address in this graphic may be different. 
    
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
@@ -158,7 +158,7 @@ In this task, you test the connection between the virtual machines in different 
 
 In this task, you create virtual network peerings to enable communications between VNets.
 
-1. In the Azure portal, select **Virtual Networks**, and then select **CoreServicesVnet**.
+1. In the Azure portal, select for and select the `CoreServicesVnet` virtual network.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
@@ -198,7 +198,7 @@ In this task, you create virtual network peerings to enable communications betwe
 
 In this task, you verify the virtual machines in different virtual networks can communicate with each other.
 
-1. Search for and select the **ManufacturingVM**.
+1. Search for and select the `ManufacturingVM`.
 
 1. In the **Operations** section, select the **Run command** blade.
 
@@ -230,7 +230,7 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
 
 1. When finished select **Review + create** and then **Create**.
 
-1. After the route table deploys, select **Go to resource.**.
+1. After the route table deploys, select **Go to resource**.
 
 1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the Manufacturing virtual network. 
 
@@ -239,7 +239,7 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
     | Route name | `NVAtoManufacturing` |
     | Destination type | **IP Addresses** |
     | Destination IP addresses | `172.16.0.0/16` (manufacturing virtual network) |
-    | Next hop type | **Virtual appliance** |
+    | Next hop type | **Virtual appliance** (notice your other choices) |
     | Next hop address | `10.2.0.4` (future NVA) |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
