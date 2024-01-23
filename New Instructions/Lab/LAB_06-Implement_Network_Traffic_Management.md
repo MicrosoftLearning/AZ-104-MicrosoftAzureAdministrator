@@ -326,11 +326,11 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Start another browser window and test the URL - `http://<frontend ip address>/image/`.
 
-1. Verify you are directed to image server (vm1). 
+1. Verify you are directed to the image server (vm1). 
 
 1. Start another browser window and test the URL - `http://<frontend ip address>/video/`.
 
-1. Verify you are directed to image server (vm2). 
+1. Verify you are directed to the video server (vm2). 
 
 > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
