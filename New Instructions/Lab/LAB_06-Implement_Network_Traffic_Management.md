@@ -60,7 +60,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
     | Setting       | Value         | 
     | ---           | ---           |
-    | Subscription  | Your Azure subscription |
+    | Subscription  | your Azure subscription |
     | Resource group| `az104-rg6` (If necessary, select **Create new**)
     | Password      | Provide a secure password |
 
@@ -91,7 +91,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of your Azure subscription |
+    | Subscription | your Azure subscription |
     | Resource group | **az104-rg6** |
     | Name | `az104-lb` |
     | Region | The **same** region that you deployed the VMs |
@@ -204,7 +204,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Subscription | your Azure subscription |
     | Resource group | `az104-rg6` |
     | Application gateway name | `az104-appgw` |
     | Region | The **same** Azure region that you used in Task 1 |
@@ -250,7 +250,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![Screenshot of the create app gateway rule page.](../media/az104-lab06-appgw-rule.png)
 
-1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). 
+1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). Select **Add** when you are done. 
 
     | Setting | Value |
     | --- | --- |
@@ -265,7 +265,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
    >**Note:** Use the informational icons to learn more about **Cookie-based affinity** and **Connection draining**. 
 
-1. Select **Add multiple targets to create a path-based rule**. You will create two rules.
+1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
 
 	**Rule - routing to the images backend**
 
@@ -289,9 +289,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Select **Next: Review + create >** and then click **Create**.
 
-    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes.
+    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes. If you don't want to wait, continue to the next task and then return after the application gateway deploys. 
 
-1. In the Azure portal, search and select **az104-appgw**.
+1. After the application gateway deploys, search for and select **az104-appgw**.
 
 1. In the **Application Gateway** resource, in the **Monitoring** section, select **Backend health**.
 
