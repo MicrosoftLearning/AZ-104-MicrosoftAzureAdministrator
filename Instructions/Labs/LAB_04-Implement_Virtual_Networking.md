@@ -52,9 +52,9 @@ In this task, you will create a virtual network with multiple subnets by using t
     | Name | **az104-04-vnet1** |
     | Region | the name of any Azure region available in the subscription you will use in this lab |
 
-1. Click **Next : IP Addresses**. The **Starting address** is **10.40.0.0**. The **Address space size** is **/20**. Be sure to click **Add**. 
+1. Click **Next : IP Addresses**. The **Starting address** is **10.40.0.0**. The **Address space size** is **/20**. 
 
-1. Click **+ Add subnet** enter the following values then click **Add**.
+1. Click **+ Add subnet**. Delete the existing **default** subnet. Enter the following values then click **Add**. 
 
     | Setting | Value |
     | --- | --- |
