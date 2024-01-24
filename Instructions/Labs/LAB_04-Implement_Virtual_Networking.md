@@ -160,7 +160,14 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. Select **Associate public IP address** and in the **Public IP address** drop-down select **az104-04-pip0**.
 
->**Note:** If you receive an error, *domain name is already in use*, this is a known issue. You will need to locate the public ip address and associate it to the NIC separately. 
+    >**Note:** If you receive an error, *domain name is already in use*, this is a known issue. You will need to locate the public ip address and associate it to the NIC separately.
+    >
+    > + Go to **Public IP addresses**
+    > + Click **az104-04-pip0**
+    > + In the **Overview** pane click **Associate IP**
+    > + Set **Resource type** to **Network interface**
+    > + Set **Network interface** to **az104-04-nic0**
+    > + Repeat for **az104-04-pip1** and **az104-04-nic1**
 
 1. Select **Save**.
 
