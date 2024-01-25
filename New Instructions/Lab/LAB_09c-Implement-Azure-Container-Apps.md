@@ -22,16 +22,16 @@ Your organization has a web application that runs on a virtual machine in your o
 
 There are no interactive lab simulations for this topic. 
 
-## Tasks
+## Job skills
 
-- Task 1: Create an Azure Container App and environment
-- Task 2: Deploy and test the container app
+- Task 1: Create and configure an Azure Container App and environment
+- Task 2: Test and verify deployment of the Azure Container App
 
 ## Architecture diagram
 
 ![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
 
-## Task 1: Create a container app and environment
+## Task 1: Create and configure an Azure Container App and environment
 
 Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
