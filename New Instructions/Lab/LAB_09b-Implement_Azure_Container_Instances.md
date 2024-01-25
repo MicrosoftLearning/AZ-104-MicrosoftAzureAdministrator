@@ -27,7 +27,7 @@ There are interactive lab simulations that you might find useful for this topic.
 ## Job skills
 
 - Task 1: Deploy an Azure Container Instance using a Docker image.
-- Task 2: Test the Azure Container Instance.
+- Task 2: Test an Azure Container Instance.
 
 ## Architecture diagram
 
