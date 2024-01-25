@@ -30,12 +30,12 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Job skills
 
-+ Task 1: Use a template to provision an infrastructure
-+ Task 2: Create an alert
-+ Task 3: Configure action group notifications
-+ Task 4: Trigger an alert and confirm it is working
-+ Task 5: Configure an alert processing rule
-+ Task 6: Use Azure Monitor log queries
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Create an alert.
++ Task 3: Configure action group notifications.
++ Task 4: Trigger an alert and confirm it is working.
++ Task 5: Configure an alert processing rule.
++ Task 6: Use Azure Monitor log queries.
 
 ## Task 1: Use a template to provision an infrastructure
 
