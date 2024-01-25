@@ -30,7 +30,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ![Diagram of the tasks.](../media/az104-lab07-architecture.png)
 
-## Tasks
+## Job skills
 
 + Task 1: Create and configure a storage account. 
 + Task 2: Create and configure secure blob storage.
