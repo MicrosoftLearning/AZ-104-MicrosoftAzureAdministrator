@@ -24,8 +24,8 @@ There are no interactive lab simulations for this topic.
 
 ## Job skills
 
-- Task 1: Create and configure an Azure Container App and environment
-- Task 2: Test and verify deployment of the Azure Container App
+- Task 1: Create and configure an Azure Container App and environment.
+- Task 2: Test and verify deployment of the Azure Container App.
 
 ## Architecture diagram
 
