@@ -27,11 +27,11 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Create a virtual machine with PowerShell](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2010). Use Azure PowerShell to deploy a virtual machine. Review Azure Advisor recommendations. 
 + [Create a virtual machine with the CLI](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2011). Use the CLI to deploy a virtual machine. Review Azure Advisor recommendations. 
 
-## Tasks
+## Job skills
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 + Task 2: Manage compute and storage scaling for virtual machines
-+ Task 3: Implement Azure Virtual Machine Scale Sets
++ Task 3: Create and configure Azure Virtual Machine Scale Sets
 + Task 4: Scale Azure Virtual Machine Scale Sets
 + Task 5: Create a virtual machine using Azure PowerShell (option 1)
 + Task 6: Create a virtual machine using the CLI (option 2) 
@@ -156,7 +156,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ![Diagram of the vmss architecture tasks.](../media/az104-lab08-vmss-architecture.png)
 
-## Task 3: Implement Azure Virtual Machine Scale Sets
+## Task 3: Create and configure Azure Virtual Machine Scale Sets
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out. 
 
