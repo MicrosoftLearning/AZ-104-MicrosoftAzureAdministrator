@@ -26,11 +26,11 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Job skills
 
-+ Task 1: Use a template to provision an infrastructure
-+ Task 2: Create and configure a Recovery Services vault
-+ Task 3: Configure Azure virtual machine-level backup
-+ Task 4: Monitor Azure Backup
-+ Task 5: Implement Azure Site Recovery for virtual machines
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Create and configure a Recovery Services vault.
++ Task 3: Configure Azure virtual machine-level backup.
++ Task 4: Monitor Azure Backup.
++ Task 5: Implement Azure Site Recovery for virtual machines.
 
 ## Estimated timing: 40 minutes
 
