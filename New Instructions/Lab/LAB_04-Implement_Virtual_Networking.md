@@ -42,16 +42,16 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 >**Did you know?**: It is a good practice to avoid overlapping IP address ranges to reduce issues and simplify troubleshooting. Overlapping is a concern across the entire network, whether in the cloud or on-premises. Many organizations design an enterprise-wide IP addressing scheme to avoid overlapping and plan for future growth.
 
-## Tasks
+## Job skills
 
-+ Task 1: Create the CoreServicesVnet virtual network and subnets.
-+ Task 2: Create the ManufacturingVnet virtual network and subnets.
-+ Task 3: Configure communication between an Application Security Group and a Network Security Group. 
++ Task 1: Create a virtual network with subnets using the portal.
++ Task 2: Create a virtual network and subnets using a template.
++ Task 3: Create and configure communication between an Application Security Group and a Network Security Group. 
 
   
-## Task 1: Create the CoreServicesVnet virtual network and subnets
+## Task 1: Create a virtual network with subnets using the portal
 
-The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth.
+The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
 1. Search for and select `Virtual Networks`.
 
@@ -61,7 +61,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 	| **Tab**      | **Option**         | **Value**            |
 	| ------------ | ------------------ | -------------------- |
-	| Basics       | Resource Group     | **az104-rg4** |
+	| Basics       | Resource Group     | `az104-rg4` (if necessary, create new) |
 	|              | Name               | `CoreServicesVnet`     |
 	|              | Region             | (US) **East US**         |
 	| IP Addresses | IPv4 address space | `10.20.0.0/16` (separate the entries)    |
@@ -96,9 +96,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Before proceeding ensure you have the **template.json** file. Take a minute to review the file and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
  
-## Task 2: Create the ManufacturingVnet virtual network and subnets
+## Task 2: Create a virtual network and subnets using a template
 
-In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth.
+In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
 1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
 
@@ -152,9 +152,9 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 >**Note:** If you have to deploy more than one time you may find some resources were successfully completed and the deployment is failing. There is a finished template in the lab files directory. 
    
-## Task 3: Configure communication between an Application Security Group and a Network Security Group 
+## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
-In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. 
+In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. The NSG will also have an outbound rule that denies access to the internet. 
 
 ### Create the Application Security Group (ASG)
 
