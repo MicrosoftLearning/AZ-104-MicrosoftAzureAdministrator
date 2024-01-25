@@ -36,7 +36,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ![Diagram of the task architecture.](../media/az104-lab02b-architecture.png)
 
-## Tasks
+## Job skills
 
 + Task 1: Create and assign tags via the Azure portal.
 + Task 2: Enforce tagging via an Azure Policy.
