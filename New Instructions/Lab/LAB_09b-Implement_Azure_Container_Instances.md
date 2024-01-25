@@ -26,8 +26,9 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Job skills
 
-- Task 1: Deploy an Azure Container Instance using a Docker image.
-- Task 2: Test an Azure Container Instance.
+- Task 1: Deploy an Azure Container Instance using a Docker image
+- Task 2: Test and verify deployment of an Azure Container Instance
+
 
 ## Architecture diagram
 
@@ -68,7 +69,7 @@ In this task, you will create a simple web application using a Docker image. Doc
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view the code, browse the \\app folder.
 
-## Task 2: Test the Azure Container Instance 
+## Task 2: Test and verify deployment of an Azure Container Instance 
 
 In this task, you review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, you can navigate to the container using the DNS name that you provided in the previous task.
 
