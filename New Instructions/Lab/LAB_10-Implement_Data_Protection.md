@@ -24,11 +24,11 @@ There is an interactive lab simulation that you might find useful for this topic
 
 + **[Backup virtual machines and on-premises files.](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)**. Create a recovery services vault and implement an Azure virtual machine backup. Implement on-premises file and folder backup using the Microsoft Azure Recovery Services agent. On-premises backups is outside the scope of this lab, but might be helpful to view those steps. 
 
-## Tasks
+## Job skills
 
-+ Task 1: Provision the lab environment
-+ Task 2: Create a Recovery Services vault
-+ Task 3: Implement Azure virtual machine-level backup
++ Task 1: Use a template to provision an infrastructure
++ Task 2: Create and configure a Recovery Services vault
++ Task 3: Configure Azure virtual machine-level backup
 + Task 4: Monitor Azure Backup
 + Task 5: Implement Azure Site Recovery for virtual machines
 
@@ -38,7 +38,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ![Diagram of the architecture tasks.](../media/az104-lab10-architecture.png)
 
-## Task 1: Provision the lab environment
+## Task 1: Use a template to provision an infrastructure
 
 In this task, you will use a template to deploy a virtual machine. The virtual machine will be used to test different backup scenarios.
 
@@ -78,7 +78,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
-## Task 2: Create a Recovery Services vault
+## Task 2: Create and configure a Recovery Services vault
 
 In this task, you will create a Recovery Services vault. A Recovery Services vault provides storage for the virtual machine data. 
 
@@ -119,7 +119,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
-## Task 3: Implement Azure virtual machine-level backup
+## Task 3: Configure Azure virtual machine-level backup
 
 In this task, you will implement Azure virtual-machine level backup. As part of a VM backup, you will need to define the backup and retention policy that applies to the backup. Different VMs can have different backup and retention policies assigned to them.
 
@@ -214,9 +214,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Review the details of the backup job.
 
-## Task 5: Implement Azure Site Recovery
+## Task 5: Implement Azure Site Recovery for virtual machines
 
-In this task, 
+In this task, you configure Azure Site Recovery to replicate virtual machines. 
 
 1. Search for and select your Recovery Services Vault, **az104-vault1**.
 
