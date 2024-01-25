@@ -24,10 +24,10 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Deploy Azure Container Instances](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203). Create, configure, and deploy a Docker container with Azure Container Instances. 
 + [Implement Azure Container Instances](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014).  Deploy a Docker image using Azure Container Instances. 
 
-## Tasks
+## Job skills
 
-- Task 1: Deploy an Azure Container Instance using a Docker image
-- Task 2: Review the functionality of the Azure Container Instance
+- Task 1: Deploy an Azure Container Instance using a Docker image.
+- Task 2: Test the Azure Container Instance.
 
 ## Architecture diagram
 
@@ -35,7 +35,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Deploy an Azure Container Instance using a Docker image
 
-In this task, you will create a new container instance for the web application. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for a container image.
+In this task, you will create a simple web application using a Docker image. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for the container image.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -68,9 +68,9 @@ In this task, you will create a new container instance for the web application. 
 
     >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view the code, browse the \\app folder.
 
-## Task 2: Review the functionality of the Azure Container Instance
+## Task 2: Test the Azure Container Instance 
 
-In this task, you will review the deployment of the container instance. By default, the Azure Container Instance will be accessible over port 80. After the instance has been deployed, you can navigate to the container using the DNS name that you provided in the previous task.
+In this task, you review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, you can navigate to the container using the DNS name that you provided in the previous task.
 
 1. On the deployment blade, click the **Go to resource** link.
 
