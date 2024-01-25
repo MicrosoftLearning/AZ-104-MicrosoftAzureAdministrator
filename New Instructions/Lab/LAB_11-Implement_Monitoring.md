@@ -28,15 +28,16 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ![Diagram of the architecture tasks](../media/az104-lab11-architecture.png)
 
-## Tasks
+## Job skills
 
-+ Task 1: Provision the lab environment.
-+ Task 2: Create an alert.
-+ Task 3: Trigger the alert.
-+ Task 4: Add an alert processing rule.
-+ Task 5: Use Azure Monitor log queries.
++ Task 1: Use a template to provision an infrastructure
++ Task 2: Create an alert
++ Task 3: Configure action group notifications
++ Task 4: Trigger an alert and confirm it is working
++ Task 5: Configure an alert processing rule
++ Task 6: Use Azure Monitor log queries
 
-## Task 1: Provision the lab environment
+## Task 1: Use a template to provision an infrastructure
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
@@ -104,7 +105,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. Leave the **Create an alert rule** pane open for the next task.
 
-## Task 3: Add an email alert action
+## Task 3: Configure action group notifications
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
@@ -144,7 +145,7 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-## Task 4: Trigger the alert
+## Task 4: Trigger an alert and confirm it is working
 
 In this task, you trigger the alert and confirm a notification is sent. 
 
@@ -172,7 +173,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
-## Task 5: Add an alert processing rule
+## Task 5: Configure an alert processing rule
 
 In this task, you create an alert rule to suppress notifications during a maintenance period. 
 
