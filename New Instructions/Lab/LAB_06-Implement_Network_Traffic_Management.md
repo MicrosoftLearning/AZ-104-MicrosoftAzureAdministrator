@@ -26,17 +26,17 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Deploy Azure Application Gateway](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway). Create an application gateway, create virtual machines, create the backend pool, and test the gateway. 
 + [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
 
-## Tasks
+## Job skills
 
-+ Task 1: Provision the lab environment
-+ Task 2: Implement Azure Load Balancer
-+ Task 3: Implement Azure Application Gateway
-+ Task 4: Implement Network Watcher
++ Task 1: Use a template to provision an infrastructure. 
++ Task 2: Configure an Azure Load Balancer.
++ Task 3: Configure an Azure Application Gateway.
++ Task 4: Use Network Watcher to troubleshoot connections.
 
 
-## Task 1: Provision the lab environment
+## Task 1: Use a template to provision an infrastructure
 
-In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines along with associated virtual network interface cards. The VMs will reside in a hub virtual network named **az104-vnet1**.
+In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
 1. Download the **\\Allfiles\\Lab06** lab files (template and parameters). 
 
@@ -72,9 +72,9 @@ In this task, you will use a template to deploy one virtual network, one network
     
     >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtua machine. 
     
-## Task 2: Implement Azure Load Balancer
+## Task 2: Configure an Azure Load Balancer
 
-In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
+In this task, you implement an Azure Load Balancer in front of the two Azure virtual machines in the virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
 
 
 ## Architecture diagram - Load Balancer
@@ -171,9 +171,9 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
 
-## Task 3: Implement Azure Application Gateway
+## Task 3: Configurean  Azure Application Gateway
 
-In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway will route images to one virtual machine and videos to the other virtual machine. 
+In this task, you implement an Azure Application Gateway in front of two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway routes images to one virtual machine and videos to the other virtual machine. 
 
 ## Architecture diagram - Application Gateway
 
@@ -309,7 +309,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-## Task 4: Implement Network Watcher
+## Task 4: Use Network Watcher to troubleshoot connnections
 
 1. From the Azure portal, search for and select `Network Watcher`.
 
