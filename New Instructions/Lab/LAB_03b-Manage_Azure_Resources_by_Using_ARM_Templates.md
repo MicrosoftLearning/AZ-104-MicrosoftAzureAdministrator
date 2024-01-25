@@ -30,7 +30,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 ![Diagram of the tasks.](../media/az104-lab03-architecture.png)
 
-## Tasks
+## Job skills
 
 + Task 1: Create an Azure Resource Manager template.
 + Task 2: Edit an Azure Resource Manager template and redeploy the template.
