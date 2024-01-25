@@ -27,7 +27,7 @@ There are interactive lab simulations that you might find useful for this topic.
 ## Architecture diagram
 ![Diagram of the lab 01 architecture.](../media/az104-lab01-architecture.png)
 
-## Tasks
+## Job skills
 
 + Task 1: Create a resource group.
 + Task 2: Create and configure user accounts.
