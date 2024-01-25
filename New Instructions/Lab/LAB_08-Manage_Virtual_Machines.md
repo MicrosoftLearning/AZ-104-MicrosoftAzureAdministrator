@@ -29,12 +29,12 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Job skills
 
-+ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
-+ Task 2: Manage compute and storage scaling for virtual machines
-+ Task 3: Create and configure Azure Virtual Machine Scale Sets
-+ Task 4: Scale Azure Virtual Machine Scale Sets
-+ Task 5: Create a virtual machine using Azure PowerShell (option 1)
-+ Task 6: Create a virtual machine using the CLI (option 2) 
++ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
++ Task 2: Manage compute and storage scaling for virtual machines.
++ Task 3: Create and configure Azure Virtual Machine Scale Sets.
++ Task 4: Scale Azure Virtual Machine Scale Sets.
++ Task 5: Create a virtual machine using Azure PowerShell (option 1).
++ Task 6: Create a virtual machine using the CLI (option 2).
 
 ## Tasks 1 and 2: Azure Virtual Machines Architecture Diagram
 
