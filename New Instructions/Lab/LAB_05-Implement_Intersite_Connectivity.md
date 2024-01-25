@@ -41,7 +41,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Task 1:  Create a core services virtual machine and virtual network
 
-In this task, we create a core services virtual network with a virtual machine. 
+In this task, you create a core services virtual network with a virtual machine. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -88,7 +88,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
 ## Task 2: Create a virtual machine in a different virtual network
 
-In this task, we create a manufacturing services virtual network with a virtual machine. 
+In this task, you create a manufacturing services virtual network with a virtual machine. 
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
@@ -156,7 +156,7 @@ In this task, you test the connection between the virtual machines in different 
  
 ## Task 4: Configure virtual network peerings between virtual networks
 
-In this task, you create virtual network peerings to enable communications between VNets.
+In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
 
 1. In the Azure portal, select for and select the `CoreServicesVnet` virtual network.
 
@@ -196,7 +196,7 @@ In this task, you create virtual network peerings to enable communications betwe
  
 ## Task 5: Test the connection between peered virtual networks.
 
-In this task, you verify the virtual machines in different virtual networks can communicate with each other.
+In this task, you verify that resources in peered virtual networks can communicate with each other.
 
 1. Search for and select the `ManufacturingVM`.
 
