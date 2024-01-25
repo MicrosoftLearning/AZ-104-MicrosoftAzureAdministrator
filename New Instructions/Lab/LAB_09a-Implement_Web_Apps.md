@@ -31,15 +31,15 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ![Diagram of the tasks.](../media/az104-lab09a-architecture.png)
 
-## Tasks
+## Job skills
 
-+ Task 1: Create an Azure web app
-+ Task 2: Create a staging deployment slot
-+ Task 3: Configure web app deployment settings
-+ Task 4: Swap the staging slots
-+ Task 5: Configure and test autoscaling of the Azure web app
++ Task 1: Create and configure an Azure web app.
++ Task 2: Create and configure a deployment slot.
++ Task 3: Configure web app deployment settings.
++ Task 4: Swap deployment slots.
++ Task 5: Configure and test autoscaling of the Azure web app.
 
-## Task 1: Create an Azure web app
+## Task 1: Create and configure an Azure web app
 
 In this task, you create an Azure web app. Azure App Services is a Platform As a Service (PAAS) solution for web, mobile, and other web-based applications. Azure web apps is part Azure App Services hosting most runtime environments, such as PHP, Java, and .NET. The app service plan that you select determines the web app compute, storage, and features. 
 
@@ -69,7 +69,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
 1. After the deployment, select **Go to resource**.
 
-## Task 2: Create a staging deployment slot
+## Task 2: Create and configure a deployment slot
 
 In this task, you will create a staging deployment slot. Deployment slots enable you to perform testing prior to making your app available to the public (or your end users). After you have performed testing, you can swap the slot from development or staging to production. Many organizations use slots to perform pre-production testing. Additionally, many organizations run multiple slots for every application (for example, development, QA, test, and production).
 
@@ -118,7 +118,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
-## Task 4: Swap the staging slots
+## Task 4: Swap deployment slots
 
 In this task, you will swap the staging slot with the production slot. Swapping a slot allows you to use the code that you have tested in your staging slot, and move it to production. The Azure portal will also prompt you if you need to move other application settings that you have customized for the slot. Swapping slots is a common task for application teams and application support teams, especially those deploying routine app updates and bug fixes.
 
