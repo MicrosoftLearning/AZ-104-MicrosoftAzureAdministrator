@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab you will explore communication between virtual networks. You will implement virtual network peering and run remote commands to test connections. You will also configure a custom route. 
+In this lab you explore communication between virtual networks. You implement virtual network peering and run remote commands to test connections. You also configure a custom route. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This will require a custom route. 
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This require a custom route. 
 
 ## Interactive lab simulations
 
@@ -29,14 +29,14 @@ There are several interactive lab simulations that you might find useful for thi
 
 ![Lab 05 architecture diagram](../media/az104-lab05-architecture.png)
 
-## Tasks
+## Job skills
 
-+ Task 1: Create a core services virtual machine and virtual network.
-+ Task 2: Create a manufacturing services virtual machine and virtual network.
-+ Task 3: Test the connection between the virtual machines. 
-+ Task 4: Create VNet peerings between the virtual networks. 
-+ Task 5: Retest the connection between the virtual machines.
-+ Task 6: Create a custom route to the manufacturing services virtual machines. 
++ Task 1: Create a virtual machine in a virtual network.
++ Task 2: Create a virtual machine in a different virtual network.
++ Task 3: Test the connection between virtual machines in virtual networks. 
++ Task 4: Configure virtual network peerings between different virtual networks.
++ Task 5: Test the connection between peered virtual networks.
++ Task 6: Create a custom route.
  
 
 ## Task 1:  Create a core services virtual machine and virtual network
@@ -86,7 +86,7 @@ In this task, we create a core services virtual network with a virtual machine.
 
     >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add resources. 
 
-## Task 2: Create a manufacturing services virtual machine and virtual network
+## Task 2: Create a virtual machine in a different virtual network
 
 In this task, we create a manufacturing services virtual network with a virtual machine. 
 
@@ -125,7 +125,7 @@ In this task, we create a manufacturing services virtual network with a virtual 
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Test the connection between the virtual machines
+## Task 3: Test the connection between virtual machines in different virtual networks.
 
 In this task, you test the connection between the virtual machines in different virtual networks. Before continuing ensure both virtual machines have been deployed and are running. 
 
@@ -154,7 +154,7 @@ In this task, you test the connection between the virtual machines in different 
    ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
  
-## Task 4: Create VNet peerings between the virtual networks
+## Task 4: Configure virtual network peerings between virtual networks
 
 In this task, you create virtual network peerings to enable communications between VNets.
 
@@ -194,7 +194,7 @@ In this task, you create virtual network peerings to enable communications betwe
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
  
-## Task 5: Test the connection between the VMs
+## Task 5: Test the connection between peered virtual networks.
 
 In this task, you verify the virtual machines in different virtual networks can communicate with each other.
 
@@ -214,7 +214,7 @@ In this task, you verify the virtual machines in different virtual networks can 
    
    ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
 
-## Task 6: Create a custom route to the manufacturing services virtual machines
+## Task 6: Create a custom route 
 
 In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from an external firewall to those machines. The firewall has not been configured but you want to go ahead and configure the route.
 
@@ -274,7 +274,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+If you are working with your own subscription take a minute to delete the lab resources. This ensures resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
