@@ -31,10 +31,10 @@ There are interactive lab simulations that you might find useful for this topic.
 
 + Task 1: Create a resource group.
 + Task 2: Create and configure user accounts.
-+ Task 3: Create groups and add members.
-+ Task 4: Familiarize yourself with the Cloud Shell.
-+ Task 5: Practice with Azure PowerShell.
-+ Task 6: Practice with the Bash shell.
++ Task 3: Create group accounts and add members.
++ Task 4: Use the Cloud Shell.
++ Task 5: Use Azure PowerShell.
++ Task 6: Use the Bash shell.
 
 ## Task 1: Create a resource group
 
@@ -112,7 +112,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
 
-### Task 4: Create groups and add members
+### Task 4: Create group accounts and add members
 
 In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways member are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or devices. For example, job title. 
 
@@ -148,7 +148,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
 >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
-## Task 5: Familiarize yourself with the Cloud Shell.
+## Task 5: Use the Cloud Shell.
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
 
@@ -172,7 +172,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with **Bash (CLI)**, then skip to **Task 7**. 
 
-## Task 6: Practice with Azure PowerShell
+## Task 6: Use Azure PowerShell
 
 In this task, you create a resource group and a group account by using Azure PowerShell session within the Cloud Shell. Azure PowerShell scripts will be provided throughout the course. 
 
@@ -212,7 +212,7 @@ In this task, you create a resource group and a group account by using Azure Pow
 
 1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages. 
 
-## Task 7: Practice with the Bash shell
+## Task 7: Use the Bash shell
 
 In this task, you create a resource group and an Azure group by using Azure CLI within the Cloud Shell. Azure CLI scripts will be provided throughout the course. 
 
