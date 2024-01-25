@@ -55,7 +55,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
     >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
  
-## Task 2: Test and verify deployment of the container app
+## Task 2: Test and verify deployment of the Azure Container App
 
 By default, the Azure container app that you create will accept traffic on port 80 using the sample Hello World application. Azure Container Apps will provide a DNS name for the application. Copy and navigate to this URL to ensure that the application is up and running.
 
