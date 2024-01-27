@@ -24,7 +24,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Lab scenario
 
-Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks.
+Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks. You have been introduced to Azure Powershell and the CLI. This lab now focuses on templates. 
 
 ## Architecture diagram
 
