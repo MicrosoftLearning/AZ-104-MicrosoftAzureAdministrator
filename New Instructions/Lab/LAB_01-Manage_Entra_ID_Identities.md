@@ -148,7 +148,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
 >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
-## Task 5: Use the Cloud Shell.
+## Task 5: Use the Cloud Shell
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
 
