@@ -203,7 +203,7 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
 1. **Create** a resource group named `az104-rglock`.
 
-1. In the **Settings** blade of the resource group, select **Locks**.
+1. After the resource group is created, in the **Settings** blade, select **Locks**.
 
 1. Select **Add** and complete the resource lock information. When finished select **Ok**. 
 
