@@ -151,8 +151,8 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | `Inherit the Role tag and its Cost Center value from the resource group if missing` |
-    | Description | `Inherit the Role tag and its Cost Center value from the resource group if missing` |
+    | Assignment name | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
+    | Description | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
     | Policy enforcement | Enabled |
 
 1. Click **Next** twice and set **Parameters** to the following values:
