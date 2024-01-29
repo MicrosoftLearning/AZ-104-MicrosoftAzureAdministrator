@@ -320,9 +320,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Field | Value | 
     | --- | --- |
     | Source type           | **Virtual machine**   |
-    | Virtual machine       | **vm0**    | 
+    | Virtual machine       | **az104-06-vm0**    | 
     | Destination type      | **Virtual machine**   |
-    | Virtual machine       | **vm1**   | 
+    | Virtual machine       | **az104-06-vm1**   | 
     | Preferred IP Version  | **Both**              | 
     | Protocol              | **TCP**               |
     | Destination port      | `3389`                |  
