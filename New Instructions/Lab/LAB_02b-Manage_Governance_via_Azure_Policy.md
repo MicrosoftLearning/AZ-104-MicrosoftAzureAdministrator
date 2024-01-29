@@ -220,7 +220,7 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
 1. You should receive a notification denying the deletion. 
 
-    ![Screenshot of the failure to delete message.](../media/az104-lab02b-failretodelete.png) 
+    ![Screenshot of the failure to delete message.](../media/az104-lab02b-failuretodelete.png) 
 
 
 ## Key takeaways
