@@ -114,7 +114,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
      
     | Setting | Value |
     | --- | --- |
-    | Name | `az104-pip` |
+    | Name | `az104-lbpip` |
     | SKU | Standard |
     | Tier | Regional |
     | Assignment | Static |
