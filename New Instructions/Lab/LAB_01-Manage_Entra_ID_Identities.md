@@ -178,7 +178,7 @@ In this task, you use Azure PowerShell to create a group account and add a membe
 
 >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
-1. Take a minute to bookmark the [Azure PowerShell reference](https://learn.microsoft.com/powershell/module/az.resources/?view=azps-11.2.0) page. 
+1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. 
 
 1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new group account is **New-AzureADGroup**. To view how to use a command, run the Get-Help command.
 
@@ -201,13 +201,13 @@ In this task, you use Azure PowerShell to create a group account and add a membe
     Get-AzureADGroup
     ```
 
-1. Use **Get-AzureADUser** confirm that the **az104-user1** account exists. Make note of the **UserprincipalName**, you will need it in a future step. 
+1. Use **Get-AzureADUser** to confirm that the **az104-user1** account exists. Make note of the **UserprincipalName**, you will need it in a future step. 
 
     ```powershell
     Get-AzureADUser
     ```
 
-1. Use **Add-AzADGroupMember** to add the az104-user1 account to the MyPSgroup. The DisplayName and the UserPrincipalName must be in quotes. Note the warning, but continue. 
+1. Use **Add-AzADGroupMember** to add the **az104-user1** account to the **MyPSgroup**. The DisplayName and the UserPrincipalName must be in quotes. Note the warning, but continue. 
 
     ```powershell
     Add-AzADGroupMember -memberuserprincipalname "az104-user1@xxxxxx.onmicrosoft.com" -targetgroupdisplayname "MyPSgroup"
@@ -228,38 +228,49 @@ In this task, you use Azure CLI to create a group account and add a member. Azur
 
 >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **clear** to clear the command window.
 
-1. The Azure CLI uses an easy-to-read syntax. For example, to interact with resource groups, the command is **az group**.  
+1. Take a minute to bookmark the [Azure CLI documentation](https://learn.microsoft.com/cli/azure/) page. 
+
+1. The Azure CLI syntax follows a simple *reference name - command - parameter - parameter value* pattern. Use **az** to view the base commands.
 
    ```sh
-   az group --help
+   az
    ```
 
-1. The **create** option looks promising. Note the capitalized names create variables that you can reference in subsequent commands. 
-
-   ```sh
-   RGNAME='az104-rg1-cli'
-   LOCATION='eastus'
-   az group create --name $RGNAME --location $LOCATION
-   ```
-   
-1. To verify and retrieve properties for the newly created resource group, use the **show** command. 
-
-   ```sh
-   az group show --name $RGNAME
-   ```
-1. Now, let's use help to learn more about creating an Azure group.
+1. Use **az ad** to get more specific commands for managing Azure Active Directory Graph entities.
 
     ```sh
-    az ad group --help
+    az ad
     ```
-1. **Create** the group and **list** the groups to verify.
+
+1. Use **az ad group** to create a new group account called **MyCLIgroup**. 
 
    ```sh
    az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
-   az ad group list
    ```
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages.   
+1. Use **az group list** to confirm your group was created. 
+
+    ```sh
+    az ad group list --output table
+    ```
+
+1. Use **az ad user list** to confirm that the **az104-user1** account exists. The user account information should be returned. Make note of the **id**, you will need it in the next step. 
+
+    ```sh
+    az ad user list --display-name az104-user1
+    ```
+
+1. Use **az ad group member add** to add the **az104-user1** member to the **MyCLIgroup**. 
+
+    ```sh
+    az ad group member add --group MyCLIgroup --member-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    ```
+
+1. Use **az ad group member list** to verify the az104-user1 member was added to the group. 
+
+    ```sh
+    az ad group member list --group MyCLIgroup
+    ```
     
 ## Key takeaways
 
@@ -277,8 +288,6 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
 + [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
 + [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
-
-
 
 ## Cleanup your resources
 
