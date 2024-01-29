@@ -128,8 +128,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Virtual network | **az104-06-vnet1** |
     | Backend Pool Configuration | **NIC** | 
     | Click **Add** to add a virtual machine |  |
-    | az104-vm0 | **check the box** |
-    | az104-vm1 | **check the box** |
+    | az104-06-vm0 | **check the box** |
+    | az104-06-vm1 | **check the box** |
 
 1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**. 
 
@@ -145,7 +145,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | --- | --- |
     | Name | `az104-lbrule` |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **az104-pip** |
+    | Frontend IP Address | **az104-fe** |
     | Backend pool | **az104-be** |
     | Protocol | **TCP** |
     | Port | `80` |
