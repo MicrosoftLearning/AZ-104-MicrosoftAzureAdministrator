@@ -67,7 +67,7 @@ In this task, you will create and configure management groups. Management groups
 
     | Setting | Value |
     | --- | --- |
-    | Management group ID | `az104-mg1` (must be globablly unique) |
+    | Management group ID | `az104-mg1` (must be unique in the directory) |
     | Management group display name | `az104-mg1` |
 
 1. **Refresh** the management group page to ensure your new management group displays. 
