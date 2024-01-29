@@ -174,7 +174,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 ## Task 6: Use Azure PowerShell
 
-In this task, you create a resource group and a group account by using Azure PowerShell session within the Cloud Shell. Azure PowerShell scripts will be provided throughout the course. 
+In this task, you use Azure PowerShell to create a group account and add a member. Azure PowerShell scripts will be used throughout the course. 
 
 >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
@@ -222,7 +222,7 @@ In this task, you create a resource group and a group account by using Azure Pow
 
 ## Task 7: Use the Bash shell
 
-In this task, you create a resource group and an Azure group by using Azure CLI within the Cloud Shell. Azure CLI scripts will be provided throughout the course. 
+In this task, you use Azure CLI to create a group account and add a member. Azure CLI scripts will be provided throughout the course. 
 
 1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**.
 
