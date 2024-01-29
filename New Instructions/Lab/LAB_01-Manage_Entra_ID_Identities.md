@@ -178,39 +178,47 @@ In this task, you create a resource group and a group account by using Azure Pow
 
 >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
-1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new resource group is **New-AzResourceGroup**. To view how to use a command, run the Get-Help command.
+1. Take a minute to bookmark the [Azure PowerShell reference](https://learn.microsoft.com/powershell/module/az.resources/?view=azps-11.2.0) page. 
 
-   ```powershell
-   Get-Help New-AzResourceGroup -detailed
-   ```
-1. To create a resource group, run the following commands. Note that the commands starting with a dollar sign ($) are creating variables. Ensure you receive a succeeded message. 
-
-   ```powershell
-   $location = 'eastus'
-   $rgName = 'az104-rg-ps'
-   New-AzResourceGroup -Name $rgName -Location $location
-   ```
-
-1. To retrieve properties of the newly created resource group, run the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name $rgName
-   ```
-
-1. Now, let's try learn how to create an Azure group.
+1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new group account is **New-AzureADGroup**. To view how to use a command, run the Get-Help command.
 
    ```powershell
    Get-Help New-AzureADGroup -detailed
    ```
 
-1. Using the example in the Help, try these commands. Notice you must first connect to Azure AD.
+1. Using the example in the Help, try these commands. Notice you must first connect to Azure AD. Notice that the commands starting with a dollar sign ($) are creating variables. 
 
    ```powershell
+   $displayName = "MyPSgroup"
+   $mailNickName = "MyPSgroup"
    Connect-AzureAD 
-   New-AzureADGroup -DisplayName "MyPSgroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "MyPSgroup"
+   New-AzureADGroup -DisplayName $displayName -MailEnabled $false -SecurityEnabled $true -MailNickName $mailNickName
    ```
+   
+1. Use **Get-AzureADGroup** to confirm your group was created. Make note of the **DisplayName**, you will need it a future step. 
 
-1. Return to the Azure portal. Confirm you have a new resource group and a new Azure group. You may need to Refresh the pages. 
+    ```powershell
+    Get-AzureADGroup
+    ```
+
+1. Use **Get-AzureADUser** confirm that the **az104-user1** account exists. Make note of the **UserprincipalName**, you will need it in a future step. 
+
+    ```powershell
+    Get-AzureADUser
+    ```
+
+1. Use **Add-AzADGroupMember** to add the az104-user1 account to the MyPSgroup. The DisplayName and the UserPrincipalName must be in quotes. Note the warning, but continue. 
+
+    ```powershell
+    Add-AzADGroupMember -memberuserprincipalname "az104-user1@xxxxxx.onmicrosoft.com" -targetgroupdisplayname "MyPSgroup"
+    ```
+
+1. Use **Get-AzADGroupMember** to verify the user was added to the group. Note the warning, but continue. 
+
+    ```powershell
+    Get-AzADGroupMember -GroupDisplayName "MyPSgroup"
+    ```
+
 
 ## Task 7: Use the Bash shell
 
