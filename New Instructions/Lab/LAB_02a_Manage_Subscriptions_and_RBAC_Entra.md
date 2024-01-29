@@ -76,7 +76,7 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
-In this task, you will review the built-in roles and assign the VM Contributor role to your user account. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles).
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles).
 
 1. Select the **az104-mg1** management group.
 
@@ -96,7 +96,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm the help desk group has the **Virtual Machine Contributor** role. 
+1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
