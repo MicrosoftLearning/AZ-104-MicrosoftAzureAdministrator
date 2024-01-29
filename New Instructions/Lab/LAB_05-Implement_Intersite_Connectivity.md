@@ -216,7 +216,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 ## Task 6: Create a custom route 
 
-In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from an external firewall to those machines. The firewall has not been configured but you want to go ahead and configure the route.
+In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from the Core Services virtual machine to the Manufacturing virtual machine. 
 
 1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
 
@@ -236,7 +236,7 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
 
     | Setting | Value | 
     | --- | --- |
-    | Route name | `NVAtoManufacturing` |
+    | Route name | `CoreServicestoManufacturing` |
     | Destination type | **IP Addresses** |
     | Destination IP addresses | `172.16.0.0/16` (manufacturing virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
