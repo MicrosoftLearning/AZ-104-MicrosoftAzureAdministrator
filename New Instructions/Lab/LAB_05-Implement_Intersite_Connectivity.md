@@ -145,6 +145,7 @@ In this task, you test the connection between the virtual machines in different 
 
     ```Powershell
     Test-NetConnection <CoreServicesVM private IP address> -port 3389
+    ```
 
    
 1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
@@ -248,8 +249,8 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **ManufacturingVnet** |
-    | Subnet | **Manufacturing** |    
+    | Virtual network | **CoreServicesVnet** |
+    | Subnet | **Core** |    
 
 >**Note**: You have created a user defined route to direct traffic from the NVA to a subnet. 
 
