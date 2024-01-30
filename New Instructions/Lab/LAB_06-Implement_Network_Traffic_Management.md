@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing and Azure Load Balancer and an Azure Application Gateway. All resources are in the same region. 
+Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing an Azure Load Balancer and an Azure Application Gateway. All resources are in the same region. 
 
 ## Interactive lab simulations
 
@@ -61,16 +61,16 @@ In this task, you will use a template to deploy one virtual network, one network
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group| `az104-rg6` (If necessary, select **Create new**)
+    | Resource group | `az104-rg6` (If necessary, select **Create new**) |
     | Password      | Provide a secure password |
 
      >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
 
 1. Select **Review + Create** and then select **Create**.
 
-    >**Note**: Wait for the deployment to finish before moving to the next task. The deployment should complete in approximately 5 minutes.
+    >**Note**: Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
     
-    >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtua machine. 
+    >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtual machine. 
     
 ## Task 2: Configure an Azure Load Balancer
 
@@ -87,7 +87,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
+1. Create a load balancer with the following settings (leave others with their default values) then click **Next: Frontend IP configuration**:
 
     | Setting | Value |
     | --- | --- |
@@ -120,7 +120,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Assignment | Static |
     | Routing Preference | **Microsoft network** |
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click  **Next: Inbound rules**. 
+1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**. 
 
     | Setting | Value |
     | --- | --- |
@@ -139,7 +139,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. In the **Settings** blade, select **Load balancing rules**.
    
-1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When completed click **Save**.
+1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When finished click **Save**.
 
     | Setting | Value |
     | --- | --- |
@@ -171,7 +171,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
 
-## Task 3: Configure an  Azure Application Gateway
+## Task 3: Configure an Azure Application Gateway
 
 In this task, you implement an Azure Application Gateway in front of two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway routes images to one virtual machine and videos to the other virtual machine. 
 
@@ -185,7 +185,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet1**.
 
-1. On the  **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values).
 
@@ -297,7 +297,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-## Task 4: Use Network Watcher to troubleshoot connnections
+## Task 4: Use Network Watcher to troubleshoot connections
 
 1. From the Azure portal, search for and select `Network Watcher`.
 
@@ -321,7 +321,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. Select **Run diagnostic tests**.
 
-    >**Note**: It may take a couple of minutes for the results to return. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
 
 ## Key takeaways
 
@@ -331,7 +331,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
 + The Basic load balancer is for small-scale applications that don't need high availability or redundancy. The Standard load balancer is for high performance and ultra-low latency.
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
-+ The Application Gateway Standard tier offers all of the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
++ The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers. 
 
 ## Learn more with self-paced training
@@ -341,7 +341,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + [Configure monitoring for virtual networks](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/). Understand how to use Azure Network Watcher Connection Monitor, flow logs, NSG diagnostics, and packet capture to monitor connectivity across your Azure IaaS network resources.
 ## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+If you are working with your own subscription, take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
