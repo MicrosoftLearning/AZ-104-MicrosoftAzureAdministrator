@@ -210,7 +210,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Region | The **same** Azure region that you used in Task 1 |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
-	| Instance count | `2` |
+	| Minimum instance count | `2` |
 	| Availability zone | **None** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
@@ -252,6 +252,26 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Add backend pool without targets | **No** |
     | Virtual machine | **az104-rg6-nic2 (10.60.0.4)** |
 
+1. Select **Next: Configuration** and then **Add routing rules**. Complete the information. Then select **Add**. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Rule name | `az104-gwrule` |
+    | Priority | `10` |
+    | Listener name | `az104-listener` |
+    | Frontend IP | **Public** |
+    | Protocol | **HTTP** |
+    | Port | `80` |
+    | Listener type | **Basic** |
+
+1. Move to the **Backend targets** tab. Select **Add** after completing the basic information. 
+
+   | Setting | Value |
+    | --- | --- |
+    | Backend target | `az104-appgwbe` |
+    | Backend settings | `az104-http` (create new) |
+
+   >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**. 
 
 1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
 
@@ -273,7 +293,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Backend settings | **az104-http** |
     | Backend target | `az104-videobe` |
 
-1. Select **Add** twice then select **Next: Tags >**.
+1. Select **Add** twice then select **Next: Tags >**. No changes are needed.
 
 1. Select **Next: Review + create >** and then click **Create**.
 
@@ -285,13 +305,13 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. Ensure both servers in the backend pool display **Healthy**. 
 
-1. On the **az104-appgw** Application Gateway blade, copy the value of the **Frontend public IP address**.
+1. On the **Overview** blade, copy the value of the **Frontend public IP address**.
 
-1. Start another browser window and test the URL - `http://<frontend ip address>/image/`.
+1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
 
 1. Verify you are directed to the image server (vm1). 
 
-1. Start another browser window and test the URL - `http://<frontend ip address>/video/`.
+1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
 
 1. Verify you are directed to the video server (vm2). 
 
