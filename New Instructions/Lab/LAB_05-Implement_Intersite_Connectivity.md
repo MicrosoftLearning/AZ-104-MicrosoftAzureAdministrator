@@ -33,10 +33,9 @@ There are several interactive lab simulations that you might find useful for thi
 
 + Task 1: Create a virtual machine in a virtual network.
 + Task 2: Create a virtual machine in a different virtual network.
-+ Task 3: Test the connection between virtual machines in virtual networks. 
++ Task 3: Test the connection between virtual machines in virtual networks using PowerShell. 
 + Task 4: Configure virtual network peerings between different virtual networks.
-+ Task 5: Test the connection between peered virtual networks.
-+ Task 6: Create a custom route.
++ Task 5: Test the connection between peered virtual networks using Network Watcher. 
  
 
 ## Task 1:  Create a core services virtual machine and virtual network
@@ -125,7 +124,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Test the connection between virtual machines in different virtual networks.
+## Task 3: Test the connection between virtual machines in different virtual networks using PowerShell
 
 In this task, you test the connection between the virtual machines in different virtual networks. Before continuing ensure both virtual machines have been deployed and are running. 
 
@@ -195,64 +194,12 @@ In this task, you create a virtual network peering to enable communications betw
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
  
-## Task 5: Test the connection between peered virtual networks.
+## Task 5: Test the connection between peered virtual networks using Network Watcher
 
-In this task, you verify that resources in peered virtual networks can communicate with each other.
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. 
 
-1. Search for and select the `ManufacturingVM`.
 
-1. In the **Operations** section, select the **Run command** blade.
 
-1. Select **RunPowerShellScript** and add the Test-NetConnection command. Be sure to use the private IP address of the **CoreServicesVM**.
-
-      ```Powershell
-     Test-NetConnection <CoreServicesVM private IP address> -port 3389
-      ```
-
-1. It may take a couple of minutes for the script to run. The top of the page shows an informational icon *Script execution in progress.*
-    
-1. The test connection should succeed. Your computer name and remote address may be different.
-   
-   ![Powershell window with Test-NetConnection succeeded](../media/az104-lab05-success.png)
-
-## Task 6: Create a custom route 
-
-In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from the Core Services virtual machine to the Manufacturing virtual machine. 
-
-1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
-
-    | Setting | Value | 
-    | --- | --- |
-    | Subscription | your subscription |
-    | Resource group | `az104-rg5`  |
-    | Region | **East US** |
-    | Name | `rt-Manufacturing` |
-    | Propagate gateway routes | **No** |
-
-1. When finished select **Review + create** and then **Create**.
-
-1. After the route table deploys, select **Go to resource**.
-
-1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the Manufacturing virtual network. 
-
-    | Setting | Value | 
-    | --- | --- |
-    | Route name | `CoreServicestoManufacturing` |
-    | Destination type | **IP Addresses** |
-    | Destination IP addresses | `172.16.0.0/16` (manufacturing virtual network) |
-    | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.2.0.4` (future NVA) |
-
-1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
-
-1. Select **Subnets** and then **Associate**. Complete the configuration.
-
-    | Setting | Value | 
-    | --- | --- |
-    | Virtual network | **CoreServicesVnet** |
-    | Subnet | **Core** |    
-
->**Note**: You have created a user defined route to direct traffic from Core Services to the new NVA.  
 
 
 ## Review the main points of the lab
