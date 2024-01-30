@@ -252,7 +252,7 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
     | Virtual network | **CoreServicesVnet** |
     | Subnet | **Core** |    
 
->**Note**: You have created a user defined route to direct traffic from the NVA to a subnet. 
+>**Note**: You have created a user defined route to direct traffic from Core Services to the new NVA.  
 
 
 ## Review the main points of the lab
