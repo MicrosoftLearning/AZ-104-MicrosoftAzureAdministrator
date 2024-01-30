@@ -218,7 +218,7 @@ In this task, you verify that resources in peered virtual networks can communica
     | Source port           | *Blank*         |
     | Diagnostic tests      | *Defaults*      |
 
-    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab06-connection-troubleshoot.png)
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
 
 1. Select **Run diagnostic tests**.
 
