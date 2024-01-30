@@ -33,9 +33,10 @@ There are several interactive lab simulations that you might find useful for thi
 
 + Task 1: Create a virtual machine in a virtual network.
 + Task 2: Create a virtual machine in a different virtual network.
-+ Task 3: Test the connection between virtual machines in virtual networks using PowerShell. 
++ Task 3: Use Azure PowerShell to test the connection between virtual machines 
 + Task 4: Configure virtual network peerings between different virtual networks.
-+ Task 5: Test the connection between peered virtual networks using Network Watcher. 
++ Task 5: Use Azure PowerShell to test the connection between virtual machines 
+
  
 
 ## Task 1:  Create a core services virtual machine and virtual network
@@ -124,7 +125,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Use PowerShell to test the connection between virtual machines
+## Task 3: Use Azure PowerShell to test the connection between virtual machines
 
 In this task, you test the connection between the virtual machines in different virtual networks. Before continuing ensure both virtual machines have been deployed and are running. 
 
@@ -194,7 +195,8 @@ In this task, you create a virtual network peering to enable communications betw
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
  
-## Task 5: Use Network Watcher to test the connection between virtual machines
+## Task 5: Use Network Watcher to test the connection between virtual machines 
+
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. 
 
