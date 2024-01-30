@@ -227,43 +227,31 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 	| Name | `az104-gwpip` |
 	| Availability zone | **None** |
 
-1. Click **Next: Backends >** and then **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
+1. Click **Next: Backends >** and then **Add a backend pool**. This is the backend pool for **Homepage**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-appgwbe` |
     | Add backend pool without targets | **No** |
     | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
-    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** | 
+    | Virtual machine | **az104-rg6-nic2 (10.60.0.4)** | 
 
-1. Click **Next: Configuration >** and then **+ Add a routing rule**. Specify the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Rule name | `az104-gwrule` |
-    | Priority | `10` |
-    | Listener name | `az104-listener` |
-    | Frontend IP | **Public** |
-    | Protocol | **HTTP** |
-    | Port | `80` |
-    | Listener type | **Basic** |
-
-    ![Screenshot of the create app gateway rule page.](../media/az104-lab06-appgw-rule.png)
-
-1. Switch to the **Backend targets** tab and specify the following settings (leave others with their default values). Select **Add** when you are done. 
+1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
-    | Target type | **Backend pool** |
-    | Backend target | **az104-appgwbe** |
-    | Backend settings | **Add new** |
-    | Backend settings name | `az104-http` |
-    | Backend protocol | **HTTP** |
-    | Backend port | `80` |
-    | Additional settings | **take the defaults** |
-    | Host name | **take the defaults** |
+    | Name | `az104-imagebe` |
+    | Add backend pool without targets | **No** |
+    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
 
-   >**Note:** Use the informational icons to learn more about **Cookie-based affinity** and **Connection draining**. 
+1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | `az104-videobe` |
+    | Add backend pool without targets | **No** |
+    | Virtual machine | **az104-rg6-nic2 (10.60.0.4)** |
+
 
 1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
 
@@ -274,7 +262,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Path | `/image/*` |
     | Target name | `images` |
     | Backend settings | **az104-http** |
-    | Backend target | `az104-appgwbe` |
+    | Backend target | `az104-imagebe` |
 
 	**Rule - routing to the videos backend**
 
@@ -283,7 +271,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Path | `/video/*` |
     | Target name | `videos` |
     | Backend settings | **az104-http** |
-    | Backend target | `az104-appgwbe` |
+    | Backend target | `az104-videobe` |
 
 1. Select **Add** twice then select **Next: Tags >**.
 
