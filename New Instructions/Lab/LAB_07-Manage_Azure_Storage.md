@@ -56,7 +56,7 @@ In this task, you will create and configure a storage account. The storage accou
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
->**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high performance applications. 
+>**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
 1. On the **Advanced** tab, review the available options, accept the defaults.
 
@@ -184,7 +184,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Notice the **Tier** options. Keep the default **Transaction optimized**.
    
-1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are diabling backup to simplify the lab configuration.
+1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are disabling backup to simplify the lab configuration.
 
 1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
