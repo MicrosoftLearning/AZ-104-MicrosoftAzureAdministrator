@@ -124,7 +124,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Test the connection between virtual machines in different virtual networks using PowerShell
+## Task 3: Use PowerShell to test the connection between virtual machines
 
 In this task, you test the connection between the virtual machines in different virtual networks. Before continuing ensure both virtual machines have been deployed and are running. 
 
@@ -194,11 +194,33 @@ In this task, you create a virtual network peering to enable communications betw
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
  
-## Task 5: Test the connection between peered virtual networks using Network Watcher
+## Task 5: Use Network Watcher to test the connection between virtual machines
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. 
 
+1. From the Azure portal, search for and select `Network Watcher`.
 
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **CoreServicesVM**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **ManufacturingVM**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab06-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
 
 
 
