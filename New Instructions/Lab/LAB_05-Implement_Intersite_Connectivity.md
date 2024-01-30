@@ -234,9 +234,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
 + Peered virtual networks appear as one for connectivity purposes.
 + The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
-+ System defined routes are automatically created for each subnet in a virtual network.
-+ User-defined routes override or add to the default system routes. For example, a user-defined route could enable Azure Virtual Appliances to handle the traffic between a subnet and the internet.
-+ Route tables contain the networking map that defines the network traffic from one place to another. 
++ System defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
++ Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
 
 
 ## Learn more with self-paced training
