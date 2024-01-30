@@ -171,7 +171,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
 
-## Task 3: Configurean  Azure Application Gateway
+## Task 3: Configure an  Azure Application Gateway
 
 In this task, you implement an Azure Application Gateway in front of two Azure virtual machines. An Application Gateway provides layer 7 load balancing, Web Application Firewall (WAF), SSL termination, and end-to-end encryption to the resources defined in the backend pool. The Application Gateway routes images to one virtual machine and videos to the other virtual machine. 
 
