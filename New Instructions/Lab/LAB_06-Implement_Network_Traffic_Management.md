@@ -31,7 +31,6 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 1: Use a template to provision an infrastructure. 
 + Task 2: Configure an Azure Load Balancer.
 + Task 3: Configure an Azure Application Gateway.
-+ Task 4: Use Network Watcher to troubleshoot connections.
 
 
 ## Task 1: Use a template to provision an infrastructure
@@ -317,31 +316,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-## Task 4: Use Network Watcher to troubleshoot connections
 
-1. From the Azure portal, search for and select `Network Watcher`.
-
-1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
-
-1. Use the following information to complete the fields on the **Connection troubleshoot** page.
-
-    | Field | Value | 
-    | --- | --- |
-    | Source type           | **Virtual machine**   |
-    | Virtual machine       | **az104-06-vm0**    | 
-    | Destination type      | **Virtual machine**   |
-    | Virtual machine       | **az104-06-vm1**   | 
-    | Preferred IP Version  | **Both**              | 
-    | Protocol              | **TCP**               |
-    | Destination port      | `3389`                |  
-    | Source port           | *Blank*         |
-    | Diagnostic tests      | *Defaults*      |
-
-    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab06-connection-troubleshoot.png)
-
-1. Select **Run diagnostic tests**.
-
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
 
 ## Key takeaways
 
