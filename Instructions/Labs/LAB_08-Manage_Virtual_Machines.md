@@ -494,7 +494,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
     >**Note**: Wait for the installation of the extension to complete before proceeding to the next step.
 
-1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. In the **Overview** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note**: Wait for the upgrade to complete before proceeding to the next step.
 
