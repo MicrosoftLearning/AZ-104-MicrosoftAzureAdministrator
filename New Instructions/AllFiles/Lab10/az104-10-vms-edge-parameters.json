@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "adminUsername": {
-            "value": "Student"
+            "value": "localadmin"
         },
         "vmNamePrefix": {
             "value": "az104-10-vm"
