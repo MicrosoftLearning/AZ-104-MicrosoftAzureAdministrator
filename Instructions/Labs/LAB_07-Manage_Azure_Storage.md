@@ -203,9 +203,9 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
 
-1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
+1. Click the **Switch to the Microsoft Entra User Account** link next to the **Authentication method** label.
 
-    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
+    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Microsoft Entra"*). It is expected.  
 
     > **Note**: At this point, you do not have permissions to change the Authentication method.
 
@@ -221,7 +221,7 @@ In this task, you will configure authentication and authorization for Azure Stor
     | Assign access to | **User, group, or service principal** |
     | Members | the name of your user account |
 
-1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
+1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Microsoft Entra User Account).
 
     > **Note**: It might take about 5 minutes for the change to take effect.
 
