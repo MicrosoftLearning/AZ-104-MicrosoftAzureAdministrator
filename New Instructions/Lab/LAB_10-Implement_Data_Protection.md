@@ -229,7 +229,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription | the name of your Azure subscription |
     | Resource group | `az104-rg-region2` (if necessary, select **Create new**) |
     | Vault Name | `az104-rsv-region2` |
-    | Region | **West US** |
+    | Region | **West US 2** |
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
 
@@ -247,7 +247,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     | Setting | Value |
     | ---- | ---- |
-    | Region| **East US**  |
+    | Region| **East US 2**  |
     | Resource group | **az104-rg-region1**  |
     | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
