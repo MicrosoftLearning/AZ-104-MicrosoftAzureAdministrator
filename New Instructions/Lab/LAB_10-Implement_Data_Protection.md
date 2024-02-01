@@ -69,7 +69,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg10` (If necessary, select **Create new**)
+    | Resource group| `az104-rg-region1` (If necessary, select **Create new**)
     | Region        | **East US**   |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
@@ -220,6 +220,25 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 ## Task 5: Implement Azure Site Recovery for virtual machines
 
+1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
+
+1. On the **Create Recovery Services vault** blade, specify the following settings:
+
+    | Settings | Value |
+    | --- | --- |
+    | Subscription | the name of your Azure subscription |
+    | Resource group | `az104-rg-region2` (if necessary, select **Create new**) |
+    | Vault Name | `az104-rsv-region2` |
+    | Region | **East US** |
+
+    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
+
+    ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
+
+1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
+
+    >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
+
 In this task, you configure Azure Site Recovery to replicate virtual machines. 
 
 1. Create a **Recovery Services Vault**, **az104-rsv-region2**, in **West US**. 
@@ -237,7 +256,7 @@ In this task, you configure Azure Site Recovery to replicate virtual machines.
     | Setting | Value |
     | ---- | ---- |
     | Region| **West US** (read the notification about replication in the same region) |
-    | Resource group | **az104-rg-region2** (if necessary, create new) |
+    | Resource group | **az104-rg-region2**  |
     | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
 
