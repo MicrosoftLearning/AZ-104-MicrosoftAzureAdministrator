@@ -256,14 +256,25 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the **Basics** tab, notice the **Target region**.
 
-1. Move to the **Advanced** tab. Review the selections that have been made for you. Be sure to **view details**. Do not make any changes.
+1. Move to the **Advanced** tab. Resource selections have been made for you. It is important to review them. 
+
+1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
+
+1. In **Storage settings** select **Show details**.
+
+    | Setting | Value |
+    | ---- | ---- |
+    | Chrun for the vm | **Normal churn**  |
+    | Cache storage account | **(new) xxx**  |
+
+   >**Note:** It is important that both of these settings be populated or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
+
+1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
 1. Select **Review + Start replication** and then **Enable replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
-    >**Note:** If you receive a validation error (Failed) when you select **Enable replication** check the **Advanced** tab. **View details** in the storage caching area. Ensure a each drop-down has a value. If not, refresh the page. Sometimes it takes a minute for the caching to established. Try the replication again, once the storage values are populated. 
-
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-rsv-region2**. You may need to **Refresh** the page. 
 
 1. In the **Protected items** section, select **Replicated items**.
