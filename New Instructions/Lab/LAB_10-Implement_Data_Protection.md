@@ -247,7 +247,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     | Setting | Value |
     | ---- | ---- |
-    | Region| **East US 2**  |
+    | Region| **East US**  |
     | Resource group | **az104-rg-region1**  |
     | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
@@ -260,7 +260,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Review + Start replication** and then **Enable replication**.
 
-    >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page. 
+    >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
+    
+    >**Note:** If you receive a validation error (Failed) when you select **Enable replication** check the **Advanced** tab. **View details** in the storage caching area. Ensure a each drop-down has a value. If not, refresh the page. Sometimes it takes a minute for the caching to established. Try the replication again, once the storage values are populated. 
 
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-rsv-region2**. You may need to **Refresh** the page. 
 
