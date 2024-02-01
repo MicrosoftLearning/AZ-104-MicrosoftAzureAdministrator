@@ -12,7 +12,7 @@ In this lab, you learn about backup and recovery of Azure virtual machines. You 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the regions, but the steps are written using **East US** and **West US**.
 
-## Estimated timing: 40 minutes
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
