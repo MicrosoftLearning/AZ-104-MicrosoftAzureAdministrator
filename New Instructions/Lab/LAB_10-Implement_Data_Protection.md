@@ -30,7 +30,7 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 2: Create and configure a Recovery Services vault.
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
-+ Task 5: Implement Azure Site Recovery for virtual machines.
++ Task 5: Enable virtual machine replication. 
 
 ## Estimated timing: 40 minutes
 
@@ -218,7 +218,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Review the details of the backup job.
 
-## Task 5: Implement Azure Site Recovery for virtual machines
+## Task 5: Enable virtual machine replication
 
 1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
 
