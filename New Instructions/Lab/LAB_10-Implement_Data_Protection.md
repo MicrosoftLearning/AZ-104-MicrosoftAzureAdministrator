@@ -184,8 +184,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | --- | --- | 
     | Subscription          | *Your subscription*    |
     | Resource group        | **az104-rg-region1**        |
-    | Storage account name  | Provide a globally unique name, for example *backupdiag1042024123*    |
-    | Region                | **East US** (or a region near you)    |
+    | Storage account name  | Provide a globally unique name   |
+    | Region                | **East US**   |
 
 1. On the Review tab, select **Create**.
 
@@ -229,11 +229,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription | the name of your Azure subscription |
     | Resource group | `az104-rg-region2` (if necessary, select **Create new**) |
     | Vault Name | `az104-rsv-region2` |
-    | Region | **West US 2** |
+    | Region | **West US** |
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
-
-    ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
 1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
 
@@ -241,7 +239,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Search for and select the `az104-10-vm0` virtual machine.
 
-1. In the **Backup + disaster recovery** blade, select **Disaster recovery**. 
+1. In the **Operations** blade, select **Disaster recovery**. 
 
 1. Select **Enable replication**.
 
@@ -256,23 +254,24 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Next** and on the **Virtual machines** tab select **az104-10-vm0**.
 
-1. Select **Next** and move to the **Replication settings** tab. Notice the target location and failover network information. These resources will be automatically created. Take the defaults and select **Next**.
+1. On the **Basics** tab, notice the **Target region**.
 
-1. On the **Manage** tab, review the parameters.
+1. Move to the **Advanced** tab. Review the selections that have been made for you. Be sure to **view details**. Do not make any changes.
 
-    | Setting | Value |
-    | ---- | ---- |
-    | Replication policy | **24-hour-retention-policy** (this can be changed from 0 to 15 days) |
-    | Update settings | **Allow ASR to manage** |
+1. Select **Review + Start replication** and then **Enable replication**.
 
-1. Select **Next** and then **Enable replication**.
+    >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page. 
 
-    >**Note**: Enabling replication will take approximately 15 minutes. Watch the notification messages in the upper right of the portal.
+1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-rsv-region2**. You may need to **Refresh** the page. 
 
-1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-vault1**.
+1. In the **Protected items** section, select **Replicated items**.
 
-1. In the **Protected items** section, select **Replicated items**. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes. 
+1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
 
+   ![Screenshot of the replicated items page.](../media/az104-lab10-replicated-items.png)
+
+1. Select the virtual machine to view more details.
+   
 >**Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
 
