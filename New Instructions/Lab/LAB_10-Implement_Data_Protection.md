@@ -71,7 +71,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg-region1` (If necessary, select **Create new**)
     | Region        | **East US**   |
-    | Username      | `localadmin`   |
+    | Username      | **localadmin**   |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
@@ -89,7 +89,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg-region1` (if necessary, select Create new) |
+    | Resource group | `az104-rg-region1`  |
     | Vault Name | `az104-rsv-region1` |
     | Region | **East US** |
 
@@ -117,7 +117,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
-1. Select **Cancel** and then on the **az104-vault1** Recovery Services vault blade, click **Overview**.
+1. Return to the Recovery Services vault blade, select the **Overview** blade.
 
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
@@ -229,23 +229,15 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription | the name of your Azure subscription |
     | Resource group | `az104-rg-region2` (if necessary, select **Create new**) |
     | Vault Name | `az104-rsv-region2` |
-    | Region | **East US** |
+    | Region | **West US** |
 
-    >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
+    >**Note**: Make sure that you specify a **different** region than the virtual machine.
 
     ![Screenshot of the recovery services vault.](../media/az104-lab10-create-rsv.png)
 
 1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
-
-In this task, you configure Azure Site Recovery to replicate virtual machines. 
-
-1. Create a **Recovery Services Vault**, **az104-rsv-region2**, in **West US**. 
-
-    >**Note:** The Recovery Service Vault must be in another region.
-
-1. Select **Review and create**, and then **Create**. Wait for the vault to deploy.
 
 1. Select **Go to resource** and then on the **Overview** blade, select **+ Enable Site Recovery**.
 
@@ -255,8 +247,8 @@ In this task, you configure Azure Site Recovery to replicate virtual machines.
 
     | Setting | Value |
     | ---- | ---- |
-    | Region| **West US** (read the notification about replication in the same region) |
-    | Resource group | **az104-rg-region2**  |
+    | Region| **East US**  |
+    | Resource group | **az104-rg-region1**  |
     | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
 
