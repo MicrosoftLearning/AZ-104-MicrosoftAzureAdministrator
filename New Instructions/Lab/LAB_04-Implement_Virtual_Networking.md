@@ -46,8 +46,8 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 + Task 1: Create a virtual network with subnets using the portal.
 + Task 2: Create a virtual network and subnets using a template.
-+ Task 3: Create and configure communication between an Application Security Group and a Network Security Group. 
-
++ Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
++ Task 4: Configure Azure DNS. 
   
 ## Task 1: Create a virtual network with subnets using the portal
 
@@ -240,6 +240,99 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Action | **Deny** |
     | Priority | **4096** |
     | Name | **DenyAnyCustom8080Outbound** |
+
+
+## Task 4: Configure Azure DNS
+
+In this task, you will create a public and a private DNS zone. 
+
+### Configure a public DNS zone
+
+You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the contoso.xyz domain and resolve www.contoso.xyz to the IP address of your web server or web app.
+
+1. In the portal, search for and select **DNS zones**.
+
+1. Select **+ Create**.
+
+1. On the **Basics** tab of Create private DNS zone, enter the information as listed in the table below:
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Subscription | **Select your subscription** |
+    | Resource group | **az04-rg4** |
+    | Name | **contoso.com** |
+    | Region |**East US** (review the informational icon) |
+
+1. Wait for the DNS zone to deploy and then select **Go to resource**.
+
+1. Select **+ Virtual network links** and then select **+ Add**. 
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Link name | `core-vnet-link` |
+    | Virtual network | `CoreServicesVnet` |
+
+1. Select **OK** and wait for the link to create. 
+
+1. Select the **Overview** blade. Notice four name servers are provided. 
+  
+1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Name | **webapp** |
+    | Type | **A** |
+    | TTL | **1** |
+    | IP address | **10.1.1.4** |
+
+ >**Note:**  In a real-world scenario, you'd enter the IP address for a specific web app machine.
+
+1. Select **OK** and verify **contoso.com** has a record set named **backend**.
+
+### Configure a private DNS zone. 
+
+A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
+
+1. In the portal, search for and select **Private dns zones**.
+
+1. Select **+ Create**.
+
+1. On the **Basics** tab of Create private DNS zone, enter the information as listed in the table below:
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Subscription | **Select your subscription** |
+    | Resource group | **az04-rg4** |
+    | Name | **contoso.com** |
+    | Region |**East US** (review the informational icon) |
+
+1. Wait for the DNS zone to deploy and then select **Go to resource**.
+
+1. Select **+ Virtual network links** and then select **+ Add**. 
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Link name | `manu-vnet-link` |
+    | Virtual network | `ManufacturingVnet` |
+
+1. Select **OK** and wait for the link to create. 
+
+1. From the **Overview** blade select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Name | **database** |
+    | Type | **A** |
+    | TTL | **1** |
+    | IP address | **10.1.1.4** |
+
+ >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine.
+
+1. Select **OK** and verify **contoso.com** has a record set named **backend**.
+
+
+
+
 
 ## Key takeaways
 
