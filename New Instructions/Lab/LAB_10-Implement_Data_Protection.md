@@ -89,8 +89,8 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | **az104-rg10vault** (if necessary, select Create new) |
-    | Vault Name | `az104-vault1` |
+    | Resource group | `az104-rg-region1` (if necessary, select Create new) |
+    | Vault Name | `az104-rsv-region1` |
     | Region | **East US** |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
@@ -110,12 +110,14 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 1. On the **Backup Configuration** blade, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the blade.
 
     >**Note**: This setting can be configured only if there are no existing backup items.
+    
+    >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
 1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**.
+1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
-1. Close the **Security Settings** blade and, back on the **az104-vault1** Recovery Services vault blade, click **Overview**.
+1. Select **Cancel** and then on the **az104-vault1** Recovery Services vault blade, click **Overview**.
 
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
@@ -134,9 +136,11 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Where is your workload running? | **Azure** (notice your other options) |
     | What do you want to backup? | **Virtual machine** (notice your other options |
 
-1. On the **Backup Goal** blade, click **Backup**.
+1. Select **Backup**.
 
-1. On the **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. Notice there a two **Policy sub types**: **Enhanced** and **Standard**. Review the choices and select **Standard**. 
+
+1. In **Backup policy**, select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -146,13 +150,13 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Frequency | **Daily** |
     | Time | **12:00 AM** |
     | Timezone | the name of your local time zone |
-    | Retain instant recovery snapshot(s) for | **2** Days(s) |
+    | Retain instant recovery snapshot(s) for | **12** Days(s) |
 
     ![Screenshot of the backup policy page.](../media/az104-lab10-backup-policy.png)
 
 1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
 
-1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and, back on the **Backup** blade, click **Enable backup**.
+1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and then back on the **Backup** blade, click **Enable backup**.
 
     >**Note**: Wait for the backup to be enabled. This should take approximately 2 minutes.
 
@@ -179,7 +183,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- | 
     | Subscription          | *Your subscription*    |
-    | Resource group        | **az104-rg10**        |
+    | Resource group        | **az104-rg-region1**        |
     | Storage account name  | Provide a globally unique name, for example *backupdiag1042024123*    |
     | Region                | **East US** (or a region near you)    |
 
@@ -187,7 +191,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
-1. Navigate to your Recovery Services vault.
+1. Search and select your Recovery Services vault.
 
 1. Select **Diagnostic Settings** and then select **Add diagnostic setting**.
 
@@ -218,9 +222,13 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 In this task, you configure Azure Site Recovery to replicate virtual machines. 
 
-1. Search for and select your Recovery Services Vault, **az104-vault1**.
+1. Create a **Recovery Services Vault**, **az104-rsv-region2**, in **West US**. 
 
-1. From the **Overview** blade, select **+ Enable Site Recovery**.
+    >**Note:** The Recovery Service Vault must be in another region.
+
+1. Select **Review and create**, and then **Create**. Wait for the vault to deploy.
+
+1. Select **Go to resource** and then on the **Overview** blade, select **+ Enable Site Recovery**.
 
 1. Review your options then select in the **Azure Virtual Machines** section **Enable replication**.
 
@@ -228,8 +236,8 @@ In this task, you configure Azure Site Recovery to replicate virtual machines.
 
     | Setting | Value |
     | ---- | ---- |
-    | Region| **East US** (read the notification about replication in the same region) |
-    | Resource group | **az104-rg10** |
+    | Region| **West US** (read the notification about replication in the same region) |
+    | Resource group | **az104-rg-region2** (if necessary, create new) |
     | Virtual machine deployment model | **Resource Manager** |
     | Disaster recovery between availability zones | **No** |
 
