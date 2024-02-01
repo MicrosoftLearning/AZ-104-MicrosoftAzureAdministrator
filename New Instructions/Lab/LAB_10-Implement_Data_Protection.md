@@ -239,9 +239,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
-1. Select **Go to resource** and then on the **Overview** blade, select **+ Enable Site Recovery**.
+1. Search for and select the `az104-10-vm0` virtual machine.
 
-1. Review your options then select in the **Azure Virtual Machines** section **Enable replication**.
+1. In the **Backup + disaster recovery** blade, select **Disaster recovery**. 
+
+1. Select **Enable replication**.
 
 1. On the **Source** tab, configure the settings.
 
