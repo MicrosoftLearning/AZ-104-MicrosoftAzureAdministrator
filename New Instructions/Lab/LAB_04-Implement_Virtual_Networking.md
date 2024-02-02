@@ -248,46 +248,46 @@ In this task, you will create a public and a private DNS zone.
 
 ### Configure a public DNS zone
 
-You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the contoso.xyz domain and resolve www.contoso.xyz to the IP address of your web server or web app.
+You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
 
 1. In the portal, search for and select **DNS zones**.
 
 1. Select **+ Create**.
 
-1. On the **Basics** tab of Create private DNS zone, enter the information as listed in the table below:
+1. Configure the **Basics** tab.
 
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | **contoso.com** |
+    | Name | `contoso.com` |
     | Region |**East US** (review the informational icon) |
 
+1. Select **Review + create** and then **Create**.
+   
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. Select **+ Virtual network links** and then select **+ Add**. 
-
-    | Property | Value    |
-    |:---------|:---------|
-    | Link name | `core-vnet-link` |
-    | Virtual network | `CoreServicesVnet` |
-
-1. Select **OK** and wait for the link to create. 
-
-1. Select the **Overview** blade. Notice four name servers are provided. 
+1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
 1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **webapp** |
+    | Name | **www** |
     | Type | **A** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
- >**Note:**  In a real-world scenario, you'd enter the IP address for a specific web app machine.
+>**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify **contoso.com** has a record set named **backend**.
+1. Select **OK** and verify **contoso.com** has an A record set named **www**.
+
+1. Open a command prompt, and run the following command:
+
+   ```sh
+   nslookup www.contoso.com <name server name>
+   ```
+1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone. 
 
