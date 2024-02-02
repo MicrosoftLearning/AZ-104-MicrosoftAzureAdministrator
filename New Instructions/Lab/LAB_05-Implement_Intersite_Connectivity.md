@@ -13,10 +13,10 @@ In this lab you explore communication between virtual networks. You implement vi
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
 ## Estimated time: 40 minutes
-
+    
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This require a custom route. 
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This requires a custom route. 
 
 ## Interactive lab simulations
 
@@ -127,7 +127,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 ## Task 3: Use Azure PowerShell to test the connection between virtual machines
 
-In this task, you test the connection between the virtual machines in different virtual networks. Before continuing ensure both virtual machines have been deployed and are running. 
+In this task, you test the connection between the virtual machines in different virtual networks. Before continuing, ensure both virtual machines have been deployed and are running. 
 
 ### Verify the private IP address of the CoreServicesVM
 
