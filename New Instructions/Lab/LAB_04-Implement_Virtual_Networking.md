@@ -104,7 +104,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Edit the file using the editor of your choice. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
 
-   >**Note:** For this task we are demonstrating how to edit and then redeploy a template. If it gets too confusing, the finished template is provided in the lab files. You could also just build the virtual network in the portal as you did in the previous task. 
+>**Note:** For this task we are demonstrating how to edit and then redeploy a template. If it gets too confusing, the finished template is provided in the lab files. You could also just build the virtual network in the portal as you did in the previous task. 
 
 ### Make changes for the ManufacturingVnet virtual network
 
@@ -263,7 +263,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Name | `contoso.com` |
     | Region |**East US** (review the informational icon) |
 
-1. Select **Review + create** and then **Create**.
+1. Select **Review create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -289,11 +289,11 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    ```
 1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
-### Configure a private DNS zone. 
+### Configure a private DNS zone
 
 A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
 
-1. In the portal, search for and select **Private dns zones**.
+1. In the portal, search for and select `Private dns zones`.
 
 1. Select **+ Create**.
 
@@ -303,36 +303,34 @@ A private DNS zone provides name resolution services within virtual networks. A 
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | **contoso.com** |
-    | Region |**East US** (review the informational icon) |
+    | Name | `private.contoso.com` |
+    | Region |**East US** |
 
+1. Select **Review create** and then **Create**.
+   
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
+
+1. Notice on the **Overview** blade there are no name server records. 
 
 1. Select **+ Virtual network links** and then select **+ Add**. 
 
     | Property | Value    |
     |:---------|:---------|
-    | Link name | `manu-vnet-link` |
+    | Link name | `manufacturing-link` |
     | Virtual network | `ManufacturingVnet` |
 
 1. Select **OK** and wait for the link to create. 
 
-1. From the **Overview** blade select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+1. From the **Overview** blade select **+ Record set**. You would now add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **database** |
+    | Name | **sensorvm** |
     | Type | **A** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
  >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine.
-
-1. Select **OK** and verify **contoso.com** has a record set named **backend**.
-
-
-
-
 
 ## Key takeaways
 
