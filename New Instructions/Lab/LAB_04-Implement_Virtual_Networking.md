@@ -244,7 +244,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ## Task 4: Configure public and private Azure DNS zones
 
-In this task, you will create a public and a private DNS zone. 
+In this task, you will create and configure public and private DNS zones. 
 
 ### Configure a public DNS zone
 
