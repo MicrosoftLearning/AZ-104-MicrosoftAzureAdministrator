@@ -12,7 +12,7 @@ This lab is the first of three labs that focuses on virtual networking. In this 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated time: 40 minutes
+## Estimated time: 50 minutes
 
 ## Lab scenario 
 
