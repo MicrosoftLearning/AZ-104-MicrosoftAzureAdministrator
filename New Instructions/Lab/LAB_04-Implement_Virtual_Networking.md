@@ -28,7 +28,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 + [Secure network traffic](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2013). Create a virtual machine, a virtual network, and a network security group. Add network security group rules to allow and disallow traffic.
   
-+ [Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204). Create a virtual networks with two virtual machines. Demonstrate the virtual machines can communicate. 
++ [Create a simple virtual network](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%204). Create a virtual network with two virtual machines. Demonstrate the virtual machines can communicate. 
 
 + [Design and implement a virtual network in Azure](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure). Create a resource group and create virtual networks with subnets.  
 
@@ -94,7 +94,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
 
-1. Before proceeding ensure you have the **template.json** file. Take a minute to review the file and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
+1. Before proceeding, ensure you have the **template.json** file. Take a minute to review the file and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
  
 ## Task 2: Create a virtual network and subnets using a template
 
@@ -108,7 +108,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 ### Make changes for the ManufacturingVnet virtual network
 
->**Note:** Use your editor of choice to make changes to the template files. Many editors have a *change all occurences* feature. Consult the architecture diagram to verify the details. 
+>**Note:** Use your editor of choice to change the template files. Many editors have a *change all occurrences* feature. Consult the architecture diagram to verify the details. 
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
 
@@ -134,7 +134,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Edit the file using the editor of your choice.
 
-1. Replace the one occurence of **CoreServicesVnet** with `ManufacturingVnet`.
+1. Replace the one occurrence of **CoreServicesVnet** with `ManufacturingVnet`.
 
 1. **Save** your changes.
    
@@ -346,6 +346,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ## Learn more with self-paced training
 
 + [Introduction to Azure Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). Design and implement core Azure Networking infrastructure such as virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
++ [Design an IP addressing scheme](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/). Identify the private and public IP addressing capabilities of Azure and on-premises virtual networks.
 + [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
 + [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
   
