@@ -167,7 +167,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Subscription | *your subscription* |
     | Resource group | **az104-rg4** |
     | Name | `asg-web` |
-    | Region | **East (US)**  |
+    | Region | **East US**  |
 
 1. Click **Review + create** and then after the validation click **Create**.
 
@@ -182,7 +182,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Subscription | *your subscription* |
     | Resource group | **az104-rg4** |
     | Name | `myNSGSecure` |
-    | Region | **(US) East US**  |
+    | Region | **East US**  |
 
 1. Click **Review + create** and then after the validation click **Create**.
 
