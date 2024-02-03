@@ -49,7 +49,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. On the Disks page, select **Create**.
 
-1. On the Create a managed disk page, use the following information to create a disk.
+1. On the **Create a managed disk** page, configure the disk and then select **Ok**. 
     
     | Setting | Value |
     | --- | --- |
@@ -62,11 +62,11 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Performance | **Standard HDD** (change size) |
     | Size | **32 Gib** | 
 
->**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure and used with Azure virtual machines.
+    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure and used with Azure virtual machines.
 
 1. Click **Review + Create** *once*. Do **not** deploy the resource.
 
-1. After validation, click **Download a template for automation** (bottom of the page).
+1. After validation, select **Download a template for automation** (bottom of the page).
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
@@ -111,7 +111,7 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. **Save** the changes.
 
-1. Dpn't forget the parameters file, select **Edit parameters**, click **Load file** and upload the **parameters.json**.
+1. Dpn't forget the parameters file, select **Edit parameters**, click **Load file** and upload the **parameters.json**. If you like, you can remove the **sourceResourceId** and **hyperVGeneration** parameters. 
 
 1. Review the file and **Save** your changes. 
 
@@ -123,15 +123,15 @@ In this task, you use the template that you created to deploy a new managed disk
     | --- |--- |
     | Subscription | *your subscription* |
     | Resource Group | `az104-rg3` |
-    | Region | `eastus` |
+    | Region | **(US) East US)** |
     | Disk Name | `az104-disk1` |
-    | Location | `None` |
+    | Location | **eastus** |
     | Sku | `Standard_LRS` |
-    | Disk Size Gb | `32` |
-    | Create Option | `Empty` |
-    | Disk Encryption Set Type | `EncryptionAtRestWithPlatformKey` |
-    | Data Access Auth Mode | `None` |
-    | Network Access Policy | `AllowAll` |
+    | Disk Size Gb | **32** |
+    | Create Option | **Empty** |
+    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
+    | Data Access Auth Mode | **None** |
+    | Network Access Policy | **AllowAll** |
     | Public Network Access | `Disabled` |
 
 1. Select **Review + Create** and then select **Create**.
@@ -149,8 +149,6 @@ In this task, you verify that the deployment has finished successfully. All prio
 1. In the **Settings** section, click **Deployments**.
 
 1. Select a deployment and review the content of the **Input** and **Template** blades.
-
-1. In the Azure portal, search for and select **Disks**.
 
     >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**. Please try at least one of the options. Don't forget **Task 6** Bicep deployments. 
 
@@ -171,7 +169,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk2**. Use **Ctrl +S** or the top right **More** menu to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk2**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -182,7 +180,7 @@ In this task, you verify that the deployment has finished successfully. All prio
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. You can confirm the disk was created by checking the portal or using the **Get-AzDisk** command. 
+1. You can confirm the disk was created by checking the portal or using the `Get-AzDisk` command. 
    
 ## Task 5: Deploy a template with the CLI (option 2)
 
@@ -200,7 +198,7 @@ In this task, you verify that the deployment has finished successfully. All prio
 
 1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** or the top right **More** menu to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -211,7 +209,7 @@ In this task, you verify that the deployment has finished successfully. All prio
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. You can confirm the disk was created by checking the portal or using the **az disk list** command.
+1. You can confirm the disk was created by checking the portal or using the `az disk list` command.
    
 ## Task 6: Deploy a resource by using Azure Bicep
 
@@ -227,19 +225,22 @@ In this task, you will use a Bicep file to deploy a storage account to your reso
 
    ![Screenshot of the bicep file in the cloud shell editor.](../media/az104-lab03-editor.png)
 
-1. Take a minute to read through the bicep template file. Notice how the storage (stg) resource is defined. Notice how parameters and allowed values are configured.
+1. Take a minute to read through the bicep template file. Notice how the storage (stg) account resource is defined. Notice how parameters and allowed values are configured.
    
-1. To deploy the Bicep file to the **az104-rg3** resource group, run the following:
+1. To deploy storage account to the **az104-rg3** resource group, run the following:
 
    ```sh
    az deployment group create --resource-group az104-rg3 --template-file azuredeploy.bicep
    ```
 
-1. When prompted for a storage string value, enter `az104`. The template file will use your string with a randomly generated string to create a unique deployment name.
+1. When prompted for a string value, enter `az104`. The template file will use your value with a randomly generated string to create a unique deployment name.
 
-1. Close the Cloud Shell and return to the full Azure Portal. 
+1. Verify that a storage account (name contains **az104**) has been created.
 
-1. Search for and select **Storage Accounts**. Verify that a storage account named **az104** has been created in the **az104-rg3** resource group.
+   ```sh
+   az storage account list
+   ```
+    >**Note:** You should now have two storage accounts. One for the Cloud Shell and one courtesy of Bicep. You can also view these accounts in the portal. 
 
 ## Key takeaways
 
