@@ -24,10 +24,14 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - update existing resources with resource tags
 
+- use resource locks to protect configured resources
+
 ## Interactive lab simulations
 
 There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
++ [Manage resource locks](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2015). Add a resource lock and test to confirm.
+  
 + [Create an Azure policy](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2017). Create an Azure policy that restricts the location resources can be located. Create a new resource and ensure the policy is enforced. 
 
 + [Manage governance via Azure policy](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203). Create and assign tags via the Azure portal. Create an Azure policy that requires tagging. Remediate non-compliant resources.
@@ -70,11 +74,11 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the Azure portal, search for and select `Policy`. 
 
-1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of [built-in policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies) that are available for you to use. Notice you can also search for a definition.
+1. In the **Authoring** blade, select **Definitions**. Take a moment to browse through the list of [built-in policy definitions](https://learn.microsoft.com/azure/governance/policy/samples/built-in-policies) that are available for you to use. Notice you can also search for a definition.
 
     ![Screenshot of the policy definition.](../media/az104-lab02b-policytags.png)
 
-1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
+1. Click the entry representing the **Require a tag and its value on resources** built-in policy. Take a minute to review the definition. 
 
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
@@ -85,7 +89,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Subscription | *your subscription* |
     | Resource Group | **az104-rg2** |
 
-    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources. In this scenario, we want the tag on all the resources in the resource group.
+    >**Note**: You can assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources. In this scenario, we want the tag on all the resources in the resource group.
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
 
@@ -114,12 +118,14 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. In the portal, search for and select `Storage Account`, and select **+ Create**. 
 
-1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the resource group that the policy was applied to and specify the following settings (leave others with their defaults), click **Review** and then click **Create**:
+1. On the **Basics** tab of the **Create storage account** blade, complete the configuration.
 
     | Setting | Value |
     | --- | --- |
     | Resource group | **az104-rg2** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
+
+1. Select **Review** and then click **Create**:
 
 1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
 
@@ -131,7 +137,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 ## Task 3: Apply tagging via an Azure policy
 
-In this task, we will use a new policy definition to remediate any non-compliant resources. This will use a remediation task as part of the policy to modify existing resources to be compliant with the policy. In this scenario, we will make any child resources of a resource group inherit the **Role** tag that was defined on the resource group.
+In this task, we will use the new policy definition to remediate any non-compliant resources. In this scenario, we will make any child resources of a resource group inherit the **Cost Center** tag that was defined on the resource group.
 
 1. In the Azure portal, search for and select `Policy`. 
 
@@ -177,7 +183,7 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
     >**Note**: To verify that the new policy assignment is in effect, you will create another Azure storage account in the same resource group without explicitly adding the required tag. 
     
-    >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
+    >**Note**: It might take between 5 and 10 minutes for the policy to take effect.
 
 1. Search for and select `Storage Account`, and click **+ Create**. 
 
@@ -193,17 +199,15 @@ In this task, we will use a new policy definition to remediate any non-compliant
 
 1. On the **Tags** blade, note that the tag **Cost Center** with the value **000** has been automatically assigned to the resource.
 
->**Did you know?** If you search for and select **Tags** in the portal, you can view the resources with a specific tag. 
+    >**Did you know?** If you search for and select **Tags** in the portal, you can view the resources with a specific tag. 
 
 ## Task 4: Configure and test resource locks
 
 In this task, you configure and test a resource lock. Locks prevent either deletions or modifications of a resource. 
 
->Note: This task requires a new resource group. This is to avoid interfering with the Azure policies and remediation previously put in place.
-
-1. **Create** a resource group named `az104-rglock`.
-
-1. After the resource group is created, in the **Settings** blade, select **Locks**.
+1. Search for and select your resource group.
+   
+1. In the **Settings** blade, select **Locks**.
 
 1. Select **Add** and complete the resource lock information. When finished select **Ok**. 
 
