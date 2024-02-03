@@ -183,18 +183,18 @@ In this task, you use Azure PowerShell to create a group account and add a membe
 
 1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new group account is **New-AzureADGroup**. To view how to use a command, run the Get-Help command.
 
-   ```powershell
-   Get-Help New-AzureADGroup -detailed
-   ```
+    ```powershell
+    Get-Help New-AzureADGroup -detailed
+    ```
 
 1. Using the example in the Help, try these commands. Notice you must first connect to Azure AD. Notice that the commands starting with a dollar sign ($) are creating variables. 
 
-   ```powershell
-   $displayName = "MyPSgroup"
-   $mailNickName = "MyPSgroup"
-   Connect-AzureAD 
-   New-AzureADGroup -DisplayName $displayName -MailEnabled $false -SecurityEnabled $true -MailNickName $mailNickName
-   ```
+    ```powershell
+    $displayName = "MyPSgroup"
+    $mailNickName = "MyPSgroup"
+    Connect-AzureAD 
+    New-AzureADGroup -DisplayName $displayName -MailEnabled $false -SecurityEnabled $true -MailNickName $mailNickName
+    ```
    
 1. Use **Get-AzureADGroup** to confirm your group was created. Make note of the **DisplayName**, you will need it a future step. 
 
