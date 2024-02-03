@@ -47,7 +47,7 @@ In this task, you create a resource group. A resource group is a grouping of rel
    
 1. In the Azure portal, search for and select `Resource groups`.
 
->**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
+    >**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
    
 1. On the **Resource groups** blade, click **+ Create**, and provide the required information. 
 
@@ -75,7 +75,6 @@ In this task, you will create and configure user accounts. User accounts will st
 
    + **Administrative units** lets you group users, groups, or devices into a single manageable unit.
    + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
-   + **Self service password reset** allow your users to manage their password from any device, at any time, from any location. This feature requires a premium license. 
 
 ### Create a new user
 
@@ -110,20 +109,20 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Select **Review + invite**, and then **Invite**. 
 
->**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
+    >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
 
 ### Task 4: Create group accounts and add members
 
-In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways member are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or devices. For example, job title. 
+In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
 
 1. In the Azure portal, search for and select `Groups`.
 
-1. Take a minute to familiarize yourself group settings in the left pane.
+1. Take a minute to familiarize yourself with the group settings in the left pane.
 
    + **Expiration** lets you configre a group lifetime in days. The group must be renewed by the owner.
    + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
 
-1. Select **+ New group** and create a new group. 
+1. In the **All groups** blade, select **+ New group** and create a new group. 
 
     | Setting | Value |
     | --- | --- |
@@ -146,7 +145,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select **Create** to deploy the group.
 
->**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
+    >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
 ## Task 5: Use the Cloud Shell
 
@@ -160,23 +159,25 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. When completed select **Create storage**.
+1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
 
     >**Note:** As you work with the Cloud Shell a storage accound and file share is required. 
 
     | Settings | Values |
     |  -- | -- |
     | Resource Group | **az104-rg1** |
-    | Storage account (Create new) | `sa-cloudshell` (must be globally unique) |
-    | File share (create new) | **fs-cloudshell** |
+    | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
+    | File share (create new) | `fs-cloudshell` |
 
-    >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with **Bash (CLI)**, then skip to **Task 7**. 
+1. When completed select **Create storage**.
+   
+    >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with the **Bash (CLI)**, then skip to **Task 7**. 
 
 ## Task 6: Use Azure PowerShell
 
 In this task, you use Azure PowerShell to create a group account and add a member. Azure PowerShell scripts will be used throughout the course. 
 
->**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
+    >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
 1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. 
 
@@ -244,9 +245,9 @@ In this task, you use Azure CLI to create a group account and add a member. Azur
 
 1. Use **az ad group** to create a new group account called **MyCLIgroup**. 
 
-   ```sh
-   az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
-   ```
+    ```sh
+    az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
+    ```
 
 1. Use **az group list** to confirm your group was created. 
 
