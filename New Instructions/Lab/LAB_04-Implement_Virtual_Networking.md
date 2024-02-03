@@ -53,19 +53,26 @@ These virtual networks and subnets are structured in a way that accommodates exi
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
+   
 1. Search for and select `Virtual Networks`.
 
-1. Select **Create** on the Virtual networks page and complete the **Basics** and **IP addresses** tabs. 
+1. Select **Create** on the Virtual networks page.
 
-1. Use the information in the following table to create the CoreServicesVnet virtual network.  
+1. Complete the **Basics** tab for the CoreServicesVnet.  
 
-	| **Tab**      | **Option**         | **Value**            |
-	| ------------ | ------------------ | -------------------- |
-	| Basics       | Resource Group     | `az104-rg4` (if necessary, create new) |
-	|              | Name               | `CoreServicesVnet`     |
-	|              | Region             | (US) **East US**         |
-	| IP Addresses | IPv4 address space | `10.20.0.0/16` (separate the entries)    |
+	|  **Option**         | **Value**            |
+	| ------------------ | -------------------- |
+	| Resource Group     | `az104-rg4` (if necessary, create new) |
+	| Name               | `CoreServicesVnet`     |
+	| Region             | (US) **East US**         |
 
+1. Move to the **IP Addresses** tab.
+
+	|  **Option**         | **Value**            |
+	| ------------------ | -------------------- |
+
+	| IPv4 address space | `10.20.0.0/16` (separate the entries)    |
 
 1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
@@ -78,7 +85,7 @@ The organization plans a large amount of growth for core services. In this task,
 	|                        | Starting address		| `10.20.20.0`        |
 	|						 | Size					| `/24`	|
 
->**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
+	>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
 
 1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
 
@@ -94,7 +101,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
 
-1. Before proceeding, ensure you have the **template.json** file. Take a minute to review the file and the information about the CoreServicesVnet. You will use this template to create the ManufacturingVnet in the next task. 
+1. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
  
 ## Task 2: Create a virtual network and subnets using a template
 
@@ -102,13 +109,9 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
 
-1. Edit the file using the editor of your choice. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**.
-
->**Note:** For this task we are demonstrating how to edit and then redeploy a template. If it gets too confusing, the finished template is provided in the lab files. You could also just build the virtual network in the portal as you did in the previous task. 
+1. Edit the file using the editor of your choice. Many editors have a *change all occurrences* feature. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**. Consult the architecture diagram to verify the details. 
 
 ### Make changes for the ManufacturingVnet virtual network
-
->**Note:** Use your editor of choice to change the template files. Many editors have a *change all occurrences* feature. Consult the architecture diagram to verify the details. 
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
 
@@ -127,6 +130,8 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 1. Read back through the file and ensure everything looks correct.
 
 1. Be sure to **Save** your changes.
+
+>**Note:** There is a completed template files in the lab files directory. 
 
 ### Make changes to the parameters file
 
@@ -150,7 +155,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
 
->**Note:** If you have to deploy more than one time you may find some resources were successfully completed and the deployment is failing. There is a finished template in the lab files directory. 
+>**Note:** If you have to deploy more than one time you may find some resources were successfully completed and the deployment is failing. You can manually remove those resources and try again. 
    
 ## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
@@ -218,7 +223,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Protocol | **TCP** |
     | Action | **Allow** |
     | Priority | **100** |
-    | Name | **AllowASG** |
+    | Name | `AllowASG` |
 
 ### Configure an outbound NSG rule that denies Internet access
 
@@ -250,7 +255,7 @@ In this task, you will create and configure public and private DNS zones.
 
 You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
 
-1. In the portal, search for and select **DNS zones**.
+1. In the portal, search for and select `DNS zones`.
 
 1. Select **+ Create**.
 
@@ -260,7 +265,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | `contoso.com` |
+    | Name | `contoso.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
 1. Select **Review create** and then **Create**.
@@ -303,7 +308,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | `private.contoso.com` |
+    | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region |**East US** |
 
 1. Select **Review create** and then **Create**.
