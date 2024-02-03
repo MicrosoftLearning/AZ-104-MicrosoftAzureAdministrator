@@ -86,17 +86,19 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**. 
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**.
+
+    >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
 
 1. On the **Members** tab, **Select Members**.
 
->**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
 
 1. Search for and select the `helpdesk` group. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Return to your management group. Select **Access control (IAM)**. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
+1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
@@ -110,7 +112,12 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the **Create a custom role** box, select **Add**.
 
-1. On the Basics tab of **Create a custom role**, provide the name `Custom Support Request` (must be unique within the directory). In the Description field, enter `A custom contributor role for support requests.` 
+1. On the Basics tab complete the configuration.
+
+    | Setting | Value |
+    | --- | --- |
+    | Custom role name | `Custom Support Request` |
+    | Description | ``A custom contributor role for support requests.` |
 
 1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
 
@@ -124,7 +131,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
-1. Select **Next** and then **+ Add assignable scopes**. Select the **az104-mg1** management group, then click **Next**.
+1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
 
 1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
@@ -138,17 +145,16 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. Return to the portal and in the **az104-mg1** resource select **Activity log**.
 
-2. Select **Add filter**, select **Operation**, and then **Create role assignment**.
+2. Review the activites for role assignments. The activity log can be filtered for specific operations. 
 
     ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
-
-3. Verify the Activity log shows role creation activities. 
 
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
 + Management groups are used to logically organize subscriptions.
++ The built-in root management group includes all the management groups and subscriptions.
 + Azure has many built-in roles. You can assign these roles to control access to resources.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
