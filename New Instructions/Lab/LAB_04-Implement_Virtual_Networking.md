@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-This lab is the first of three labs that focuses on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You also learn how to protect your network with network security groups and application security groups. 
+This lab is the first of three labs that focuses on virtual networking. In this lab, you learn the basics of virtual networking and subnetting. You learn how to protect your network with network security groups and application security groups. You also learn about DNS zones and records. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -16,11 +16,11 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario 
 
-Your global organization plans to implement virtual networks. These networks are in East US, West Europe, and Southeast Asia. The immediate goal is to accommodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
+Your global organization plans to implement virtual networks. The immediate goal is to accommodate all the existing resources. However, the organization is in a growth phase and wants to ensure there is additional capacity for the growth.
 
-The **CoreServicesVnet** virtual network is deployed in the **East US** region. This virtual network has the largest number of resources.  A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
+The **CoreServicesVnet** virtual networkhas the largest number of resources. A large amount of growth is anticipated, so a large address space is necessary for this virtual network.
 
-The **ManufacturingVnet** virtual network is also deployed in the **East US** region, near the location of your organization's manufacturing facilities. This virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from. 
+The **ManufacturingVnet** virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from. 
 
 ## Interactive lab simulations
 
