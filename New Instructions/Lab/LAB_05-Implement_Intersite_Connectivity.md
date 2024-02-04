@@ -33,9 +33,9 @@ There are several interactive lab simulations that you might find useful for thi
 
 + Task 1: Create a virtual machine in a virtual network.
 + Task 2: Create a virtual machine in a different virtual network.
-+ Task 3: Use Azure PowerShell to test the connection between virtual machines 
++ Task 3: Use Network Watcher to test the connection between virtual machines. 
 + Task 4: Configure virtual network peerings between different virtual networks.
-+ Task 5: Use Network Watcher to test the connection between virtual machines. 
++ Task 5: Use Azure PowerShell to test the connection between virtual machines. 
 
 ## Task 1:  Create a core services virtual machine and virtual network
 
@@ -125,34 +125,34 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 3: Use Azure PowerShell to test the connection between virtual machines
+## Task 5: Use Network Watcher to test the connection between virtual machines 
 
-In this task, you test the connection between the virtual machines in different virtual networks. Before continuing, ensure both virtual machines have been deployed and are running. 
 
-### Verify the private IP address of the CoreServicesVM
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
 
-1. From the Azure portal, search for and select the `CoreServicesVM` virtual machine.
+1. From the Azure portal, search for and select `Network Watcher`.
 
-1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
-   
-### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
 
-1. Switch to the `ManufacturingVM` virtual machine.
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
 
-1. In the **Operations** blade, select the **Run command** blade.
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **CoreServicesVM**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **ManufacturingVM**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
 
-1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
 
-    ```Powershell
-    Test-NetConnection <CoreServicesVM private IP address> -port 3389
-    ```
+1. Select **Run diagnostic tests**.
 
-   
-1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
-   
-1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address in this graphic may be different. 
-   
-   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
 
  
 ## Task 4: Configure virtual network peerings between virtual networks
@@ -195,35 +195,37 @@ In this task, you create a virtual network peering to enable communications betw
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
  
-## Task 5: Use Network Watcher to test the connection between virtual machines 
 
+## Task 5: Use Azure PowerShell to test the connection between virtual machines
 
-In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. 
+In this task, you retest the connection between the virtual machines in different virtual networks. 
 
-1. From the Azure portal, search for and select `Network Watcher`.
+>**Note:** You can use Network Watcher as you did in Task 3. Or for something different try Azure PowerShell.
 
-1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+### Verify the private IP address of the CoreServicesVM
 
-1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+1. From the Azure portal, search for and select the `CoreServicesVM` virtual machine.
 
-    | Field | Value | 
-    | --- | --- |
-    | Source type           | **Virtual machine**   |
-    | Virtual machine       | **CoreServicesVM**    | 
-    | Destination type      | **Virtual machine**   |
-    | Virtual machine       | **ManufacturingVM**   | 
-    | Preferred IP Version  | **Both**              | 
-    | Protocol              | **TCP**               |
-    | Destination port      | `3389`                |  
-    | Source port           | *Blank*         |
-    | Diagnostic tests      | *Defaults*      |
+1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
+   
+### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
-    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+1. Switch to the `ManufacturingVM` virtual machine.
 
-1. Select **Run diagnostic tests**.
+1. In the **Operations** blade, select the **Run command** blade.
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Reachable**. This makes sense because the virtual machines are in the same virtual network. 
+1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
+    ```Powershell
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389
+    ```
+
+   
+1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
+   
+1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address in this graphic may be different. 
+   
+   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
 
 
 ## Review the main points of the lab
