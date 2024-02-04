@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Lab scenario
 
-Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, implement a Virtual Machine Scale Set and explore autoscaling.
+Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
 ## Interactive lab simulations
 
@@ -42,7 +42,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal
 
-In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availabiliy zones.
+In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
@@ -66,7 +66,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
     | Size | **Standard D2s v3** |
-    | Authentication type | **Password** |
     | Username | `localadmin` |
     | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
@@ -86,8 +85,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     | Setting | Value |
     | --- | --- |
-    | Load balancing options | **None** |
     | Delete public IP and NIC when VM is deleted | **Checked** |
+    | Load balancing options | **None** |
+
 
 1. Click **Next: Management >** and specify the following settings (leave others with their default values):
 
@@ -105,7 +105,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. After the validation, click **Create**.
 
-    >**Note:** The virtual machine NIC, disk, and public IP address (if configured) are independently created and managed resources.
+    >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
 1. Wait for the deployment to complete, then select **Go to resource**.
 
@@ -141,7 +141,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
 
-    >**Note:** The **Overview** blade provides performance and usage information for the disk.
+    >**Note:** The **Overview** blade also provides performance and usage information for the disk.
 
 1. In the **Settings** blade, select **Size + performance**.
 
@@ -170,7 +170,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Subscription | the name of your Azure subscription  |
     | Resource group | **az104-rg8**  |
     | Virtual machine scale set name | `vmss1` |
-    | Region | **East US** (or a region near you) |
+    | Region | **(US)East US** |
     | Availability zone | **Zones 1, 2, 3** |
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
@@ -189,7 +189,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** tab, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
+1. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
