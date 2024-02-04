@@ -303,7 +303,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. Select **Next: Review + create >** and then click **Create**.
 
-    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes. If you don't want to wait, continue to the next task and then return after the application gateway deploys. 
+    > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes. While you wait consider reviewing some of the self-paced training links at the end of this page. 
 
 1. After the application gateway deploys, search for and select **az104-appgw**.
 
@@ -340,7 +340,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
 + [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
-+ [Configure monitoring for virtual networks](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/). Understand how to use Azure Network Watcher Connection Monitor, flow logs, NSG diagnostics, and packet capture to monitor connectivity across your Azure IaaS network resources.
+
 ## Cleanup your resources
 
 If you are working with your own subscription, take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
