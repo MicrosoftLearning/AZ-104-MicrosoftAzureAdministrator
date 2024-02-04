@@ -234,6 +234,11 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
+
+![Screenshot unauthorized access.](../media/az104-lab07-notauthorized.png)
+
+
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
