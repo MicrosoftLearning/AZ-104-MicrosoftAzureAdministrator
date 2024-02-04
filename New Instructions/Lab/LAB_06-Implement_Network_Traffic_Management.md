@@ -12,7 +12,7 @@ In this lab, you learn how to configure and test a public Load Balancer and an A
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 40 minutes
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
@@ -63,7 +63,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Resource group | `az104-rg6` (If necessary, select **Create new**) |
     | Password      | Provide a secure password |
 
-     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
+	>**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
 
 1. Select **Review + Create** and then select **Create**.
 
@@ -106,8 +106,9 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | --- | --- |
     | Name | `az104-fe` |
     | IP type | IP address |
-    | Public IP address | Select **Create new** (use the instructions in the next step) |
     | Gateway Load Balancer | None |
+    | Public IP address | Select **Create new** (use the instructions in the next step) |
+
     
 1. On the **Add a public IP address** popup, use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**. 
      
@@ -118,6 +119,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Tier | Regional |
     | Assignment | Static |
     | Routing Preference | **Microsoft network** |
+
+	>**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
 1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**. 
 
@@ -134,12 +137,14 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. Wait for the load balancer to deploy then click **Go to resource**.
 
-**Add an inbound rule and test**
+**Add a rule to determine how incoming traffic is distributed**
 
 1. In the **Settings** blade, select **Load balancing rules**.
    
 1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When finished click **Save**.
 
+   >**Note:** As you configure the rule use the informational icons to learn about the setting.
+   
     | Setting | Value |
     | --- | --- |
     | Name | `az104-lbrule` |
@@ -161,7 +166,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Floating IP | **Disabled** |
     | Outbound source network address translation (SNAT) | **Recommended** |
 
-1. Select **Frontend IP configuration** from the Load Balancer resource page. Copy the public IP address.
+1. Select **Frontend IP configuration** from the Load Balancer page. Copy the public IP address.
 
 1. Open another browser tab and navigate to the IP address. Verify that the browser window displays the message **Hello World from az104-06-vm0** or **Hello World from az104-06-vm1**.
 
@@ -176,7 +181,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 ## Architecture diagram - Application Gateway
 
->**Note**: This Application Gateway is working in the same virtual network as the Load Balancer in the previous tasks. This is not typical in a production environment.
+>**Note**: This Application Gateway is working in the same virtual network as the Load Balancer. This may not typical in a production environment.
 
 ![Diagram of the lab tasks.](../media/az104-lab06-gw-architecture.png)
 
@@ -195,7 +200,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. Click **Save**
 
-    > **Note**: This subnet will be used by the Azure Application Gateway instances. The Application Gateway requires a dedicated subnet of /27 or larger size. 
+    > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size. 
 
 1. In the Azure portal, search and select `Application Gateways` and, on the **Application Gateways** blade, click **+ Create**.
 
@@ -226,7 +231,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 	| Name | `az104-gwpip` |
 	| Availability zone | **None** |
 
-1. Click **Next: Backends >** and then **Add a backend pool**. This is the backend pool for **Homepage**. Specify the following settings (leave others with their default values). When completed click **Add**.
+	>**Note:** The Application Gateway can have both a public and private IP address.
+ >
+1. Click **Next: Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -251,7 +258,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Add backend pool without targets | **No** |
     | Virtual machine | **az104-rg6-nic2 (10.60.0.4)** |
 
-1. Select **Next: Configuration** and then **Add routing rules**. Complete the information. Then select **Add**. 
+1. Select **Next: Configuration** and then **Add routing rules**. Complete the information. 
 
     | Setting | Value |
     | --- | --- |
