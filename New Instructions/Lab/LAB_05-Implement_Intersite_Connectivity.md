@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab you explore communication between virtual networks. You implement virtual network peering and run remote commands to test connections. You also configure a custom route. 
+In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -16,7 +16,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
     
 ## Lab scenario 
 
-Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another. Additionally, the vendor maintaining the manufacturing machines needs access through the firewall. This requires a custom route. 
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.  
 
 ## Interactive lab simulations
 
@@ -37,8 +37,6 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 4: Configure virtual network peerings between different virtual networks.
 + Task 5: Use Network Watcher to test the connection between virtual machines. 
 
- 
-
 ## Task 1:  Create a core services virtual machine and virtual network
 
 In this task, you create a core services virtual network with a virtual machine. 
@@ -56,8 +54,9 @@ In this task, you create a core services virtual network with a virtual machine.
     | Subscription |  *your subscription* |
     | Resource group |  `az104-rg5` (If necessary, **Create new**. )
     | Virtual machine name |    `CoreServicesVM` |
-    | Region | **East US** |
+    | Region | **(US) East US** |
     | Availability options | No infrastructure redundancy required |
+    | Security type | **Standard** |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** (notice your other choices) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
@@ -69,12 +68,12 @@ In this task, you create a core services virtual network with a virtual machine.
 
 1. On the **Networking** tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing address range.
+1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing information.
 
     | Setting | Value | 
     | --- | --- |
     | Name | `CoreServicesVNet` (Create new) |
-    | Address space | `10.0.0.0/16`  |
+    | Address range | `10.0.0.0/16`  |
     | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
 
@@ -84,7 +83,7 @@ In this task, you create a core services virtual network with a virtual machine.
 
 1. You do not need to wait for the resources to be created. Continue on to the next task.
 
-    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add resources. 
+    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add the virtual machines. 
 
 ## Task 2: Create a virtual machine in a different virtual network
 
@@ -101,7 +100,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Subscription |  *your subscription* |
     | Resource group |  `az104-rg5` |
     | Virtual machine name |    `ManufacturingVM` |
-    | Region | **East US** |
+    | Region | **(US) East US** |
+    | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
@@ -117,7 +117,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Setting | Value | 
     | --- | --- |
     | Name | `ManufacturingVNet` |
-    | Address space | `172.16.0.0/16`  |
+    | Address range | `172.16.0.0/16`  |
     | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
 
@@ -167,24 +167,24 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. Use the information in the following table to create the peering.
 
-    | **Section**                          | **Option**                                    | **Value**                             |
-    | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-    | This virtual network                 |                                               |                                       |
-    |                                      | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-    |                                      | Allow Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
-    |                                      | Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
-    |                                      | Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-    |                                      | Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
-    | Remote virtual network               |                                               |                                       |
-    |                                      | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
-    |                                      | Virtual network deployment model              | **Resource manager**                      |
-    |                                      | I know my resource ID                         | Not selected                          |
-    |                                      | Subscription                                  | *your subscription*    |
-    |                                      | Virtual network                               | **ManufacturingVnet**                     |
-    |                                      | Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
-    |                                      | Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
-   |                                      | Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-    |                                      | Enable ManufacturingVNet to use CoreServicesVNet's remote gateway       | Not selected (default)                        |
+| **Parameter**                                    | **Value**                             |
+| --------------------------------------------- | ------------------------------------- |
+| **This virtual network**                                       |                                       |
+| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
+| Allow Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
+| Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
+| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
+| Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
+| **Remote virtual network**                                   |                                       |
+| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
+| Virtual network deployment model              | **Resource manager**                      |
+| I know my resource ID                         | Not selected                          |
+| Subscription                                  | *your subscription*    |
+| Virtual network                               | **ManufacturingVnet**                     |
+| Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
+| Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
+| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
+| Enable ManufacturingVNet to use CoreServicesVNet's remote gateway       | Not selected (default)                        |
 
 1. Review your settings and select **Add**.
 
