@@ -10,9 +10,9 @@ lab:
 
 In this lab you learn to create storage accounts for Azure blobs and Azure files. You learn to configure and secure blob containers. You also learn to use Storage Browser to configure and secure Azure file shares. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using East US.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 40 minutes
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
@@ -42,7 +42,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select **Storage accounts**, and then click **+ Create**.
+1. Search for and select `Storage accounts`, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
@@ -51,14 +51,14 @@ In this task, you will create and configure a storage account. The storage accou
     | Subscription          | the name of your Azure subscription  |
     | Resource group        | **az104-rg7** (create new) |
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
-    | Region                | **East US**  |
+    | Region                | **(US) East US**  |
     | Performance           | **Standard** (notice the Premium option) |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
 >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. On the **Advanced** tab, review the available options, accept the defaults.
+1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
 1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
 
@@ -84,7 +84,7 @@ In this task, you will create and configure a storage account. The storage accou
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**.
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
     
     + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
@@ -109,7 +109,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. Select your container and scroll to the ellipses on the far right, select **Access Policy**.
+1. On your container, scroll to to the ellipses on the far right, select **Access Policy**.
 
 1. In the **Immutable blob storage** area, select **Add policy**.
 
@@ -170,7 +170,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Open another InPrivate browser window and navigate to the Blob SAS URL you copied in the previous step.
 
-    > **Note**: You should be able to view the content of the file. 
+    >**Note**: You should be able to view the content of the file. 
 
 ## Task 5: Create and configure an Azure File share
 
@@ -194,7 +194,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your **share1** directory is present. Notice you can **+ Add directory**.
+1. Select **File shares** and verify your **share1** directory is present.
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
@@ -222,7 +222,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
-1. Select add existing virtual network and select **vnet1** and **default** subnet, select **Add**.
+1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
 
 1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
