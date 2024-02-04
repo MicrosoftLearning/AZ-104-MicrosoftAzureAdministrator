@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to creeate, configure and resize a single virtual machine. You learn how create a virtual machine scale set and configure autoscaling.
+In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure and resize a single virtual machine. You learn how create a virtual machine scale set and configure autoscaling.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -135,7 +135,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Click **Apply**.
 
-1. After the disk has been created, click **Detach** (if necessary scroll to the right to view the detach icon), and then click **Apply**.
+1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
     >**Note**: Detaching removes the disk from the VM, but keeps it in storage for later use..
 
@@ -151,7 +151,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Verify the disk is now **Standard SSD**.
 
->**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
+    >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
 ## Task 3 and 4: Azure Virtual Machine Scale Sets Architecture Diagram
 
@@ -237,7 +237,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Load balancer name | `vmss-lb` |
 
->**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
+    >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
 
 1. On the **Scaling** tab, specify the following settings (leave others with their default values) and click **Next : Management >**:
 
@@ -314,7 +314,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ### Set the instance limits
 
-1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances, or scale in beyond the minimum number of instances.
+1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances or scale in beyond the minimum number of instances.
 
 1. **Instance limits** are shown on the **Scaling** page after the rules.
 
@@ -328,13 +328,13 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances.
 
->**Note:** If you are interested in using Azure PowerShell for virtual machine creation, try Task 5. If you are interested in using the CLI to create virtual machines, try Task 6.
+    >**Note:** If you are interested in using Azure PowerShell for virtual machine creation, try Task 5. If you are interested in using the CLI to create virtual machines, try Task 6.
 
 ## Task 5: Create a virtual machine using Azure PowerShell (option 1)
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. Be sure to select **PowerShell**. If necessary use the **Show advanced settings** and configure the shell storage.
+1. Be sure to select **PowerShell**. If necessary, use the **Show advanced settings** and configure the shell storage.
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
@@ -375,7 +375,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. Be sure to select **Bash**. If necessary use the **Show advanced settings** and configure the shell storage.
+1. Be sure to select **Bash**. If necessary, use the **Show advanced settings** and configure the shell storage.
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
