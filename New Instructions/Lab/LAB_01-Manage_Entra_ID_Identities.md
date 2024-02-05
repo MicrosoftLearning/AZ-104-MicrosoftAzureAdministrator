@@ -29,41 +29,13 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Job skills
 
-+ Task 1: Create a resource group.
-+ Task 2: Create and configure user accounts.
-+ Task 3: Create group accounts and add members.
-+ Task 4: Use the Cloud Shell.
-+ Task 5: Use Azure PowerShell.
-+ Task 6: Use the Bash shell.
++ Task 1: Create and configure user accounts.
++ Task 2: Create group accounts and add members.
++ Task 3: Use the Cloud Shell.
++ Task 4: Use Azure PowerShell.
++ Task 5: Use the Bash shell.
 
-## Task 1: Create a resource group
-
-In this task, you create a resource group. A resource group is a grouping of related resources. For example, all the resources for a project, a department, or an application. 
-
-
-1. Sign in to the **Azure portal** - `https://portal.azure.com`.
-
-    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
-   
-1. In the Azure portal, search for and select `Resource groups`.
-
-    >**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
-   
-1. On the **Resource groups** blade, click **+ Create**, and provide the required information. 
-
-    | Setting | Value |
-    | --- | --- |
-    | Subscription name | your subscription |
-    | Resource group name | `az104-rg1` |
-    | Location | **East US** |
-
->**Did you know?** The **Quickstart Center** has a video on how to **Select the best region**.
-    
-1. Click **Review + create** and then click **Create**.
-
-    >**Note**: Wait for the resource group to deploy. Use the **Notification** icon (top right) to track the progress of the deployment.
-
-## Task 2: Create and configure user accounts
+## Task 1: Create and configure user accounts
 
 In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
 
@@ -111,7 +83,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
     >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
 
-### Task 4: Create group accounts and add members
+### Task 2: Create group accounts and add members
 
 In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
 
@@ -147,7 +119,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
     >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
-## Task 5: Use the Cloud Shell
+## Task 3: Use the Cloud Shell
 
 In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
 
@@ -173,7 +145,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
    
     >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with the **Bash (CLI)**, then skip to **Task 7**. 
 
-## Task 6: Use Azure PowerShell
+## Task 4: Use Azure PowerShell
 
 In this task, you use Azure PowerShell to create a group account and add a member. Azure PowerShell scripts will be used throughout the course. 
 
@@ -221,7 +193,7 @@ In this task, you use Azure PowerShell to create a group account and add a membe
     ```
 
 
-## Task 7: Use the Bash shell
+## Task 5: Use the Bash shell
 
 In this task, you use Azure CLI to create a group account and add a member. Azure CLI scripts will be provided throughout the course. 
 
@@ -278,7 +250,6 @@ In this task, you use Azure CLI to create a group account and add a member. Azur
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
 + The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
-+ Resource groups are a way of grouping related resources,. You can use a resource group for a project, a department, or an application. This makes it easy to manage and monitor a group of related resources. 
 + There are different types of user accounts in Microsoft Entra ID. Each user account type has a level of access specific to the scope of work expected. 
 + Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
 + The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
