@@ -57,7 +57,7 @@ In this task, you create a resource group. A resource group is a grouping of rel
     | Resource group name | `az104-rg1` |
     | Location | **East US** |
 
-    >**Did you know?** The **Quickstart Center** has a video on how to **Select the best region**.
+>**Did you know?** The **Quickstart Center** has a video on how to **Select the best region**.
     
 1. Click **Review + create** and then click **Create**.
 
