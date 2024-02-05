@@ -153,45 +153,38 @@ In this task, you use Azure PowerShell to create a group account and add a membe
 
 >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
-1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. 
+1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. For this task, you may also need the [Microsoft Graph](https://learn.microsoft.com/graph/) documentation. 
 
-1. Azure PowerShell uses a *Verb*-*Noun* format for commands. For example, the command to create a new group account is **New-AzureADGroup**. To view how to use a command, run the Get-Help command.
+1. PowerShell commands are organized in modules. Verify the Microsoft Graph PowerShell module is installed.
 
     ```powershell
-    Get-Help New-AzureADGroup -detailed
+    Get-Module -Name "*graph*"
+    ```
+    
+1. If the Microsoft.Graph.Groups module was not listed, then install the module.
+
+    ```powershell
+    Install-module Microsoft.Graph
     ```
 
-1. Using the example in the Help, try these commands. Notice you must first connect to Azure AD. Notice that the commands starting with a dollar sign ($) are creating variables. 
+1. Before you can start managing groups using Microsoft Graph PowerShell cmdlets, you must connect your PowerShell session to the directory you want to manage.
 
     ```powershell
-    $displayName = "MyPSgroup"
-    $mailNickName = "MyPSgroup"
-    Connect-AzureAD 
-    New-AzureADGroup -DisplayName $displayName -MailEnabled $false -SecurityEnabled $true -MailNickName $mailNickName
-    ```
-   
-1. Use **Get-AzureADGroup** to confirm your group was created. Make note of the **DisplayName**, you will need it a future step. 
-
-    ```powershell
-    Get-AzureADGroup
+    Connect-MgGraph -Scopes "Group.ReadWrite.All"
     ```
 
-1. Use **Get-AzureADUser** to confirm that the **az104-user1** account exists. Make note of the **UserprincipalName**, you will need it in a future step. 
+1. The cmdlet prompts you for the credentials you want to use to access your directory. Follow the instructions to provide the code using your user account. You should receive a successful message. 
+
+1. Use **New-MgGroup** to create a new group. 
 
     ```powershell
-    Get-AzureADUser
+    New-MgGroup -DisplayName 'MyPSGroup' -MailEnabled:$False  -MailNickName 'PS group' -SecurityEnabled
     ```
 
-1. Use **Add-AzADGroupMember** to add the **az104-user1** account to the **MyPSgroup**. The DisplayName and the UserPrincipalName must be in quotes. Note the warning, but continue. 
+1. Use **Get-MgGroup** to ensure your group was created. 
 
     ```powershell
-    Add-AzADGroupMember -memberuserprincipalname "az104-user1@xxxxxx.onmicrosoft.com" -targetgroupdisplayname "MyPSgroup"
-    ```
-
-1. Use **Get-AzADGroupMember** to verify the user was added to the group. Note the warning, but continue. 
-
-    ```powershell
-    Get-AzADGroupMember -GroupDisplayName "MyPSgroup"
+    Get-MgGroup -Filter "DisplayName eq 'MyPSGroup'"
     ```
 
 
