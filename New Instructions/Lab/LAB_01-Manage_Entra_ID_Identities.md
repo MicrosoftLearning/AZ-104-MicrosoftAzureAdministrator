@@ -39,7 +39,9 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
 
-1. Continue in the Azure portal. 
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
+
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
 
 1. Search for and select `Microsoft Entra ID`.
 
