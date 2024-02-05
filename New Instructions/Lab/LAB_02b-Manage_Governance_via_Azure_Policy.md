@@ -57,7 +57,13 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. From the Resource groups, select **+ Create**.
 
-1. Provide the name `az104-rg2` and ensure that the Region is set to **East US**.
+    | Setting | Value |
+    | --- | --- |
+    | Subscription name | your subscription |
+    | Resource group name | `az104-rg2` |
+    | Location | **East US** |
+
+    >**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
 
 1. Select **Next: Tags** and create a new tag.
 
