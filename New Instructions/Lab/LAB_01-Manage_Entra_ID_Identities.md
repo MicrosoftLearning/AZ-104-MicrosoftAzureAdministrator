@@ -131,7 +131,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+   >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
 
@@ -151,7 +151,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 In this task, you use Azure PowerShell to create a group account and add a member. Azure PowerShell scripts will be used throughout the course. 
 
-    >**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
+>**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
 
 1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. 
 
@@ -207,9 +207,9 @@ In this task, you use Azure CLI to create a group account and add a member. Azur
 
 1. The Azure CLI syntax follows a simple *reference name - command - parameter - parameter value* pattern. Use **az** to view the base commands.
 
-   ```sh
-   az
-   ```
+    ```sh
+    az
+    ```
 
 1. Use **az ad** to get more specific commands for managing Azure Active Directory Graph entities.
 
