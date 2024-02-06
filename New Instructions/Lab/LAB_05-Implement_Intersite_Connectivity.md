@@ -36,7 +36,8 @@ There are several interactive lab simulations that you might find useful for thi
 + Task 2: Create a virtual machine in a different virtual network.
 + Task 3: Use Network Watcher to test the connection between virtual machines. 
 + Task 4: Configure virtual network peerings between different virtual networks.
-+ Task 5: Use Azure PowerShell to test the connection between virtual machines. 
++ Task 5: Use Azure PowerShell to test the connection between virtual machines.
++ Task 6: Create a custom route. 
 
 ## Task 1:  Create a core services virtual machine and virtual network
 
@@ -228,9 +229,19 @@ In this task, you retest the connection between the virtual machines in differen
 
 ## Task 6: Create a custom route 
 
-In this task, you use a network virtual appliance (NVA) to help secure and monitor traffic. You want to ensure communication between front-end public servers and internal private servers is always routed through the appliance.
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
 
-1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
+1. Search for select the `CoreServicesVnet`.
+
+1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `perimeter` |
+    | Subnet address range | `10.0.1.0/24`  |
+
+   
+1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
 
     | Setting | Value | 
     | --- | --- |
@@ -240,19 +251,17 @@ In this task, you use a network virtual appliance (NVA) to help secure and monit
     | Name | `rt-CoreServices` |
     | Propagate gateway routes | **No** |
 
-1. When finished select **Review + create** and then **Create**.
-
 1. After the route table deploys, select **Go to resource**.
 
 1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
 
     | Setting | Value | 
     | --- | --- |
-    | Route name | `InternettoCoreServices` |
+    | Route name | `PerimetertoCore` |
     | Destination type | **IP Addresses** |
     | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.0.0.4` (future NVA) |
+    | Next hop address | `10.0.0.7` (future NVA) |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
