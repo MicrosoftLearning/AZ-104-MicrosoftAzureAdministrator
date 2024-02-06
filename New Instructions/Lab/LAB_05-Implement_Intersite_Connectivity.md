@@ -276,11 +276,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + System defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
 + Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
 
-
 ## Learn more with self-paced training
 
 + [Distribute your services across Azure virtual networks and integrate them by using virtual network peering](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/). Use virtual network peering to enable communication across virtual networks in a way that's secure and minimally complex.
-
++ [Manage and control traffic flow in your Azure deployment with routes](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/). Learn how to control Azure virtual network traffic by implementing custom routes.
 
 ## Cleanup your resources
 
