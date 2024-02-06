@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. 
+In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. You will also create a custom route. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
@@ -228,7 +228,7 @@ In this task, you retest the connection between the virtual machines in differen
 
 ## Task 6: Create a custom route 
 
-In this task, you have contracted with a vendor to maintain the manufacturing virtual machines. The vendor needs to be routed from the Core Services virtual machine to the Manufacturing virtual machine. 
+In this task, you use a network virtual appliance (NVA) to help secure and monitor traffic. You want to ensure communication between front-end public servers and internal private servers is always routed through the appliance.
 
 1. In the Azure portal, select **Route tables**, and then select **Create**. Provide the route table parameters.
 
@@ -250,9 +250,9 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
     | --- | --- |
     | Route name | `InternettoCoreServices` |
     | Destination type | **IP Addresses** |
-    | Destination IP addresses | `172.16.0.0/16` (manufacturing virtual network) |
+    | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.2.0.4` (future NVA) |
+    | Next hop address | `10.0.0.4` (future NVA) |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
@@ -263,7 +263,7 @@ In this task, you have contracted with a vendor to maintain the manufacturing vi
     | Virtual network | **CoreServicesVnet** |
     | Subnet | **Core** |    
 
->**Note**: You have created a user defined route to direct traffic from Core Services to the new NVA.  
+>**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
 
 ## Review the main points of the lab
 
