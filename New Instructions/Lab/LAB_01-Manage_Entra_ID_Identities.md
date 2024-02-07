@@ -31,7 +31,7 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 
 + Task 1: Create and configure user accounts.
 + Task 2: Create group accounts with dynamic membership.
-+ Task 3: Create a new tenant.
++ Task 3: Create a new tenant with user and group accounts.
 + Task 4: Invite a guest user. 
 
 ## Key takeaways
