@@ -127,7 +127,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. Select **Review + Create**, and then select **Create**.
 
-## Task 5: Use Network Watcher to test the connection between virtual machines 
+## Task 3: Use Network Watcher to test the connection between virtual machines 
 
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
@@ -225,7 +225,7 @@ In this task, you retest the connection between the virtual machines in differen
    
 1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address in this graphic may be different. 
    
-   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-fail.png)
+   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-success.png)
 
 ## Task 6: Create a custom route 
 
