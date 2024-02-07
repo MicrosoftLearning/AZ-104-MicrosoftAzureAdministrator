@@ -16,7 +16,7 @@ This is the first in a series of labs for Azure Administrators. In this lab, you
 
 Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
 
-## Interactive lab simulation
+## Lab - Interactive lab simulation
 
 This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. An Azure subscription is not required. 
 
