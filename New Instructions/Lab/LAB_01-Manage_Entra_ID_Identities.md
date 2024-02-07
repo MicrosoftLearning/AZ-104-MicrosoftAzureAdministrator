@@ -8,9 +8,7 @@ lab:
 
 ## Lab introduction
 
-This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. You also get familiar with basic administrator tools. 
-
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are shown in **East US**.
+This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
 
 ## Estimated timing: 30 minutes
 
@@ -30,225 +28,16 @@ There are interactive lab simulations that you might find useful for this topic.
 ## Job skills
 
 + Task 1: Create and configure user accounts.
-+ Task 2: Create group accounts and add members.
-+ Task 3: Use the Cloud Shell.
-+ Task 4: Use Azure PowerShell.
-+ Task 5: Use the Bash shell.
++ Task 2: Create group accounts with dynamic membership.
++ Task 3: Create a new tenant.
++ Task 4: Invite a guest user. 
 
-## Task 1: Create and configure user accounts
-
-In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
-
-1. Sign in to the **Azure portal** - `https://portal.azure.com`.
-
-    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
-
-1. Search for and select `Microsoft Entra ID`.
-
-1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
-
-   + **Administrative units** lets you group users, groups, or devices into a single manageable unit.
-   + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
-
-### Create a new user
-
-1. Select **Users**, then in the **New user** drop-down select **Create new user**. 
-
-1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | `az104-user1` |
-    | Display name | `az104-user1` |
-    | Auto-generate password | de-select |
-    | Initial password | **Provide a secure password** |
-    | Job title (Properties tab) | `IT Lab Administrator` |
-    | Department (Properties tab) | `IT` |
-    | Usage location (Properties tab) | **United States** |
-
-1. Once you have finished reviewing, select **Review + create** and then **Create**.
-
-### Invite an external user
-
-1. Select **Users**, then in the **New user** drop-down select **Invite an external user**. 
-
-    | Setting | Value |
-    | --- | --- |
-    | Email | your email address |
-    | Display name | your name |
-    | Send invite message | **check the box** |
-    | Message | **Welcome to Azure and our group project** |
-
-1. Move to the **Properties** tab. Notice the **User type** is **Guest**. Notice the user account information is similar to creating a new user.
-
-1. Select **Review + invite**, and then **Invite**. 
-
-    >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
-
-### Task 2: Create group accounts and add members
-
-In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
-
-1. In the Azure portal, search for and select `Groups`.
-
-1. Take a minute to familiarize yourself with the group settings in the left pane.
-
-   + **Expiration** lets you configre a group lifetime in days. The group must be renewed by the owner.
-   + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
-
-1. In the **All groups** blade, select **+ New group** and create a new group. 
-
-    | Setting | Value |
-    | --- | --- |
-    | Group type | **Security** |
-    | Group name | `IT Lab Administrators` (adjust the name if this one is not available) |
-    | Group description | `Administrators that manage the IT lab` |
-    | Membership type | **Assigned** |
-
-    >**Note**: Notice the other options in the **Membership type** drop-down. An Entra ID Premium P1 or P2 license is required for dynamic membership. 
-
-    ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
-
-1. Select **No owners selected**.
-
-1. In the **Add owners** page, search for and **select** yourself as the owner. Notice you can have more than one owner. 
-   
-1. Select **No members selected**.
-
-1. In the **Add members** pane, search for and **select** the **az104-user1** and add them to the group. 
-
-1. Select **Create** to deploy the group.
-
-    >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
-
-## Task 3: Use the Cloud Shell
-
-In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
-
-1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
-
-   ![Screenshot of cloud shell icon.](../media/az104-lab01-cloudshell-icon.png)
-
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-
-   >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
-
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
-
-    >**Note:** As you work with the Cloud Shell a storage accound and file share is required. 
-
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-rg1** |
-    | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
-    | File share (create new) | `fs-cloudshell` |
-
-1. When completed select **Create storage**.
-   
-    >**Note:** If you would like to practice with **Azure PowerShell**, continue to **Task 6**. If you want to practice with the **Bash (CLI)**, then skip to **Task 7**. 
-
-## Task 4: Use Azure PowerShell
-
-In this task, you use Azure PowerShell to create a group account and add a member. Azure PowerShell scripts will be used throughout the course. 
-
->**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **cls** to clear the command window.
-
-1. Take a minute to bookmark the [Azure PowerShell documentation](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-11.2.0) page. For this task, you may also need the [Microsoft Graph](https://learn.microsoft.com/graph/) documentation. 
-
-1. PowerShell commands are organized in modules. Verify the Microsoft Graph PowerShell module is installed.
-
-    ```powershell
-    Get-Module -Name "*graph*"
-    ```
-    
-1. If the Microsoft.Graph.Groups module was not listed, then install the module.
-
-    ```powershell
-    Install-module Microsoft.Graph
-    ```
-
-1. Before you can start managing groups using Microsoft Graph PowerShell cmdlets, you must connect your PowerShell session to the directory you want to manage.
-
-    ```powershell
-    Connect-MgGraph -Scopes "Group.ReadWrite.All"
-    ```
-
-1. The cmdlet prompts you for the credentials you want to use to access your directory. Follow the instructions to provide the code using your user account. You should receive a successful message. 
-
-1. Use **New-MgGroup** to create a new group. 
-
-    ```powershell
-    New-MgGroup -DisplayName 'MyPSGroup' -MailEnabled:$False  -MailNickName 'PS group' -SecurityEnabled
-    ```
-
-1. Use **Get-MgGroup** to ensure your group was created. 
-
-    ```powershell
-    Get-MgGroup -Filter "DisplayName eq 'MyPSGroup'"
-    ```
-
-
-## Task 5: Use the Bash shell
-
-In this task, you use Azure CLI to create a group account and add a member. Azure CLI scripts will be provided throughout the course. 
-
-1. Continue in the Cloud Shell. Use the drop-down to switch to **Bash**.
-
->**Did you know?** You can use the arrow keys to move through the command history. Use the tab key to autocomplete commands and parameters. At any time use **clear** to clear the command window.
-
-1. Take a minute to bookmark the [Azure CLI documentation](https://learn.microsoft.com/cli/azure/) page. 
-
-1. The Azure CLI syntax follows a simple *reference name - command - parameter - parameter value* pattern. Use **az** to view the base commands.
-
-    ```sh
-    az
-    ```
-
-1. Use **az ad** to get more specific commands for managing Azure Active Directory Graph entities.
-
-    ```sh
-    az ad
-    ```
-
-1. Use **az ad group** to create a new group account called **MyCLIgroup**. 
-
-    ```sh
-    az ad group create --display-name MyCLIgroup --mail-nickname MyCLIgroup
-    ```
-
-1. Use **az group list** to confirm your group was created. 
-
-    ```sh
-    az ad group list --output table
-    ```
-
-1. Use **az ad user list** to confirm that the **az104-user1** account exists. The user account information should be returned. Make note of the **id**, you will need it in the next step. 
-
-    ```sh
-    az ad user list --display-name az104-user1
-    ```
-
-1. Use **az ad group member add** to add the **az104-user1** member to the **MyCLIgroup**. 
-
-    ```sh
-    az ad group member add --group MyCLIgroup --member-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    ```
-
-1. Use **az ad group member list** to verify the az104-user1 member was added to the group. 
-
-    ```sh
-    az ad group member list --group MyCLIgroup
-    ```
-    
 ## Key takeaways
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
-+ The Azure portal is a good way to get started with creating and managing Azure resources. Administrators can customize the portal and share dashboards.
 + There are different types of user accounts in Microsoft Entra ID. Each user account type has a level of access specific to the scope of work expected. 
 + Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
-+ The Cloud Shell is an interactive, authenticated terminal for managing Azure resources. The Cloud Shell provides access to Bash or Azure PowerShell.
-+ Azure PowerShell and Bash provide a scripted way to create resources. 
 
 ## Learn more with self-paced training
 
@@ -256,11 +45,5 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
 + [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
 
-## Cleanup your resources
 
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
 
