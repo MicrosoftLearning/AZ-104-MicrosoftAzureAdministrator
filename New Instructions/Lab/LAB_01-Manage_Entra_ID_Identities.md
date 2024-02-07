@@ -38,7 +38,7 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
-+ There are member user and guest user accounts in Microsoft Entra ID. Each type has a level of access specific to the scope of work expected to be done.
++ Microsoft Entra ID has member users and guest users. Each type has a level of access specific to the scope of work expected to be done.
 + Group accounts group together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be assigned statically or dynamically. 
 + A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
