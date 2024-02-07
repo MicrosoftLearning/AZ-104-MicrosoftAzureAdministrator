@@ -259,9 +259,9 @@ In this task, you want to control network traffic between the perimeter subnet a
     | --- | --- |
     | Route name | `PerimetertoCore` |
     | Destination type | **IP Addresses** |
-    | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
+    | Destination IP addresses | `10.0.1.0/16` (core services virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.0.0.7` (future NVA) |
+    | Next hop address | `10.0.1.7` (future NVA) |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
