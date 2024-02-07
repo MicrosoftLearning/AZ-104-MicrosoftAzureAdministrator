@@ -20,7 +20,7 @@ Your organization is building a new lab environment for pre-production testing o
 
 This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. An Azure subscription is not required. 
 
->**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). The name change to Microsoft Entra ID represents the evolution and unification of the Microsoft Entra product family, and a commitment to simplify secure access experiences for everyone.
+>**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). 
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
