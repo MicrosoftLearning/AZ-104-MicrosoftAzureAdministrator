@@ -14,11 +14,13 @@ This is the first in a series of labs for Azure Administrators. In this lab, you
 
 ## Lab scenario
 
-Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. You also need to know how to delete users to prevent access after an engineer leaves your organization.
+Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
 
 ## Interactive lab simulation
 
-There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. An Azure subscription is not required. 
+
+    >**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). The name change to Microsoft Entra ID represents the evolution and unification of the Microsoft Entra product family, and a commitment to simplify secure access experiences for everyone.
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
@@ -36,8 +38,10 @@ There are interactive lab simulations that you might find useful for this topic.
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
-+ There are different types of user accounts in Microsoft Entra ID. Each user account type has a level of access specific to the scope of work expected. 
-+ Group accounts group together related users or devices. Group membership can be assigned statically or dynamically. 
++ There are member user and guest user accounts in Microsoft Entra ID. Each type has a level of access specific to the scope of work expected to be done.
++ Group accounts group together related users or devices. There are two types of groups including Security and Microsoft 365.
++ Group membership can be assigned statically or dynamically. 
++ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
 
 ## Learn more with self-paced training
 
