@@ -14,7 +14,7 @@ This is the first in a series of labs for Azure Administrators. In this lab, you
 
 ## Lab scenario
 
-Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
+Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
 
 ## Lab - Interactive lab simulation
 
@@ -30,8 +30,8 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 ## Job skills
 
 + Task 1: Create and configure user accounts.
-+ Task 2: Create group accounts with dynamic membership.
-+ Task 3: Create a new tenant with user and group accounts.
++ Task 2: Create groups with dynamic membership.
++ Task 3: Create a new tenant with user and groups.
 + Task 4: Invite a guest user. 
 
 ## Key takeaways
@@ -39,7 +39,7 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
 + Microsoft Entra ID has member users and guest users. Each type has a level of access specific to the scope of work expected to be done.
-+ Group accounts group together related users or devices. There are two types of groups including Security and Microsoft 365.
++ Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be assigned statically or dynamically. 
 + A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
 
