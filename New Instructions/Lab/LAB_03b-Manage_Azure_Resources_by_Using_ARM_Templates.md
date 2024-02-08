@@ -183,9 +183,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. As needed, use the **Settings** icon to adjust the text size and font. 
    
-    >**Note:** If you would like to continue to practice with **Azure PowerShell**, continue to **Task 2**. If you would like to practice with the **Bash (CLI)**, then skip to **Task 3**. 
-
-## Task 4. Deploy a template with Azure PowerShell (option 1).
+## Task 4. Deploy a template with Azure PowerShell 
 
 1. Open the Cloud Shell and select **PowerShell**.
 
@@ -214,13 +212,13 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. You can confirm the disk was created by checking the portal or using the `Get-AzDisk` command. 
    
-## Task 5: Deploy a template with the CLI (option 2)
+## Task 5: Deploy a template with the CLI 
 
-1. Open the Cloud Shell and select **Bash**.
+1. In the **Cloud Shell** select **Bash**.
 
-1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
+    >**Note:** If you completed the previous task your template files should be available. 
 
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
+1. Use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
