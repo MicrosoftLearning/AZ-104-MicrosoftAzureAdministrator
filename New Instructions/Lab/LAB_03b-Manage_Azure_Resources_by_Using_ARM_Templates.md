@@ -34,7 +34,7 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 + Task 1: Create an Azure Resource Manager template.
 + Task 2: Edit an Azure Resource Manager template and redeploy the template.
-+ Task 3: Review an Azure Resource Manager template-based deployment.
++ Task 3: Configure the Cloud Shell. 
 + Task 4: Deploy a template with Azure PowerShell (option 1).
 + Task 5: Deploy a template with the CLI (option 2). 
 + Task 6: Deploy a managed disk by using Azure Bicep.
@@ -136,22 +136,54 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Verify that the deployment completed successfully.
-
-## Task 3: Review an Azure Resource Manager template-based deployment
-
-In this task, you verify that the deployment has finished successfully. All prior deployments are documented in the resource group that the deployment was targeted to. This review shows the details around the time and length of deployment, which can be helpful when troubleshooting. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
-
-1. In the Azure portal, search for and select **az104-rg3**.
-
-1. Verify your managed disk, **az104-disk1**, was created. 
+1. Select **Go to resource**. Verify your managed disk, **az104-disk1**, was created.
 
 1. In the **Settings** section, click **Deployments**.
+
+    >**Note:** All prior deployments details are documented in the resource group. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. Select a deployment and review the content of the **Input** and **Template** blades.
 
     >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**. Please try at least one of the options. Don't forget **Task 6** Bicep deployments. 
 
+
+## Task 3: Use the Cloud Shell
+
+In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
+
+1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
+
+   ![Screenshot of cloud shell icon.](../media/az104-lab01-cloudshell-icon.png)
+
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+
+   >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+
+1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
+
+    >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
+
+    | Settings | Values |
+    |  -- | -- |
+    | Resource Group | **az104-rg3** (Create new) |
+    | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
+    | File share (Create new) | `fs-cloudshell` |
+
+1. When completed select **Create storage**.
+
+1. Take a minute to review the capabilities of the Cloud Shell. 
+
+   ![Screenshot of cloud shell icons.](../media/az104-lab01-cloudshell-header.png)
+
+1. Notice you can switch between **PowerShell** and **Bash**.
+
+1. Notice the **Upload/Download files** capability. 
+
+1. Notice the **Open edition (curly brackets)** capability. 
+
+1. As needed, use the **Settings** icon to adjust the text size and font. 
+   
+    >**Note:** If you would like to continue to practice with **Azure PowerShell**, continue to **Task 2**. If you would like to practice with the **Bash (CLI)**, then skip to **Task 3**. 
 
 ## Task 4. Deploy a template with Azure PowerShell (option 1).
 
