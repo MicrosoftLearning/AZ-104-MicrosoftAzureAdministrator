@@ -188,9 +188,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
-1. Verify your files are available in the Cloud Shell storage.
-
->**Note:** If you completed the previous task your template files should be available. 
+1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 
     ```sh
     ls
@@ -215,8 +213,6 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
      ```sh
      az disk list --output table
      ```
-
-1. You should now have four disks. 
    
 ## Task 6: Deploy a resource by using Azure Bicep
 
@@ -235,26 +231,31 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Make the following changes:
 
    ```sh
-   Change the **managedDiskName** to **Disk4**
+   Change the managedDiskName value to Disk4
    ```
    ```sh
-   Change the **sku name** to **StandardSSD_LRS**
+   Change the sku name value to StandardSSD_LRS
    ```
+
+   ```sh
+   Change the adiskSizeinGiB value to 32
+   ```
+   
 1. Use **Ctrl +S** to save your changes.
 
 1. Deploy the template.
 
-   ```
-   az group deployment create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
-   ```
+    ```
+    az group deployment create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
+    ```
 
 1. Confirm the disk was created.
 
-     ```sh
-     az disk list --output table
-     ```
+    ```sh
+    az disk list --output table
+    ```
 
-    >**Note:** You should now have successfully deploy five managed disks, each in a different way. Nice job!
+    >**Note:** You have successfully deploy five managed disks, each in a different way. Nice job!
 
 ## Key takeaways
 
@@ -271,6 +272,9 @@ Bicep provides concise syntax, reliable type safety, and support for code reuse.
 ## Learn more with self-paced training
 
 + [Deploy Azure infrastructure by using JSON ARM templates](https://learn.microsoft.com/training/modules/create-azure-resource-manager-template-vs-code/). Write JSON Azure Resource Manager templates (ARM templates) by using Visual Studio Code to deploy your infrastructure to Azure consistently and reliably.
++ [Manage Azure resources with Windows PowerShell](https://learn.microsoft.com/training/modules/manage-azure-resources-windows-powershell/)). This module explains how to install the necessary modules for cloud services management and use PowerShell commands to perform simple administrative tasks on cloud resources like Azure virtual machines, Azure subscriptions and Azure storage accounts.
++ [Review the features and tools for Azure Cloud Shell](https://learn.microsoft.com/training/modules/review-features-tools-for-azure-cloud-shell/). Cloud Shell features and tools. 
++ [Introduction to Bash](https://learn.microsoft.com/training/modules/bash-introduction/). Use Bash to manage IT infrastructure.
 + [Build your first Bicep template](https://learn.microsoft.com/training/modules/build-first-bicep-template/). Define Azure resources within a Bicep template. Improve the consistency and reliability of your deployments, reduce the manual effort required, and scale your deployments across environments. Your template will be flexible and reusable by using parameters, variables, expressions, and modules.
 
 ## Cleanup your resources
