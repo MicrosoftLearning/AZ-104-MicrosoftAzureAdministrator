@@ -230,22 +230,31 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Take a minute to read through the bicep template file. Notice how the disk resource is defined. Notice how parameters and allowed values are configured.
+1. Take a minute to read through the bicep template file. Notice how the disk resource is defined. 
    
-1. To deploy storage account to the **az104-rg3** resource group, run the following:
+1. Make the following changes:
 
    ```sh
-   az deployment group create --resource-group az104-rg3 --template-file azuredeploy.bicep
+   Change the **managedDiskName** to **Disk4**
    ```
-
-1. When prompted for a string value, enter `az104`. The template file will use your value with a randomly generated string to create a unique deployment name.
-
-1. Verify that a storage account (name contains **az104**) has been created.
-
    ```sh
-   az storage account list
+   Change the **sku name** to **StandardSSD_LRS**
    ```
-    >**Note:** You should now have two storage accounts. One for the Cloud Shell and one courtesy of Bicep. You can also view these accounts in the portal. 
+1. Use **Ctrl +S** to save your changes.
+
+1. Deploy the template.
+
+   ```
+   az group deployment create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
+   ```
+
+1. Confirm the disk was created.
+
+     ```sh
+     az disk list --output table
+     ```
+
+    >**Note:** You should now have successfully deploy five managed disks, each in a different way. Nice job!
 
 ## Key takeaways
 
