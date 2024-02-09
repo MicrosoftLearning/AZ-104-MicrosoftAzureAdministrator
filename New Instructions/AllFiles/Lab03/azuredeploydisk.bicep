@@ -1,12 +1,12 @@
 @description('Name of the managed disk to be copied')
 param managedDiskName string = 'diskname'
 
-@description('Logical Sector Size. Recommended 4096 unless application requires 512 bytes sector size support')
+@description('Logical Sector Size.)
 @allowed([
   512
   4096
 ])
-param logicalSectorSize int = 4096
+param logicalSectorSize int = 512
 
 @description('Disk size in GiB')
 @minValue(4)
