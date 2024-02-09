@@ -63,19 +63,17 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
     >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure and used with Azure virtual machines.
 
-1. Click **Review + Create** *once*. Do **not** deploy the resource.
+1. Click **Review + Create** then select **Create**.
 
-1. After validation, select **Download a template for automation** (bottom of the page).
+1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
+
+1. In the **Automation** blade, select **Export template**. 
 
 1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
 
 1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
-
-1. Close all **File Explorer** windows.
-
-1. In the Azure portal, cancel the deployment of the managed disk.
 
    >**Note:**  You can export an entire resource group or just specific resources within that resource group.
 
