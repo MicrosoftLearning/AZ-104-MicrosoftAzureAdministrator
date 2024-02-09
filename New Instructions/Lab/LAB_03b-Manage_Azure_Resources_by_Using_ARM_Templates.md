@@ -8,23 +8,23 @@ lab:
 
 ## Lab introduction
 
-In this lab, you learn how to define your resource infrastructure using Azure Resource Manager templates. Templates ensure consistency and let you create multiple resources at one time. You learn to deploy templates with the Azure portal, Azure PowerShell, or the CLI. 
+In this lab, you learn how to automate resource deployments. You learn about Azure Resource Manager templates and Bicep templates. You learn about the different ways of deploying the templates. 
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
-## Estimated timing: 40 minutes
+## Estimated timing: 50 minutes
 
 ## Interactive lab simulations
 
 There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
++ [Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205). Review, create, and deploy a managed disks with a template.
+  
 + [Create a virtual machine with a template](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%209). Deploy a virtual machine with a QuickStart template.
   
-+ [Manage Azure resources by using Azure Resource Manager templates](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%205). Review, create, and deploy a managed disks with a template.
-
 ## Lab scenario
 
-Your team has explored the basic Azure administrative capabilities such as provisioning resources and organizing them based on resource groups. Next, your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency, and as a way to enable administrators to work on more complex or creative tasks. You have been introduced to Azure Powershell and the CLI. This lab now focuses on templates. 
+Your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency.  
 
 ## Architecture diagram
 
