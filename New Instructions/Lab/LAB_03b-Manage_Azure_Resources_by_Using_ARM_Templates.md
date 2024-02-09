@@ -197,11 +197,9 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
    
 ## Task 5: Deploy a template with the CLI 
 
-1. Continue in the **Cloud Shell** select **Bash**.
+1. Continue in the **Cloud Shell** select **Bash**. Verify your files are available in the Cloud Shell storage.
 
-    >**Note:** If you completed the previous task your template files should be available. 
-
-1. Verify your files are available in the Cloud Shell storage.
+>**Note:** If you completed the previous task your template files should be available. 
 
     ```sh
     ls
