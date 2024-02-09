@@ -73,7 +73,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
 
-1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
+1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
    >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
@@ -92,10 +92,13 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 1. Within the editor pane, make these changes.
 
     ```
-    disks_az104_disk1_name: **disks_name** (two places to change)
-    az104_disk1: **az102_disk2** (one place to change)
-   ```
-   
+    Change **disks_az104_disk1_name** to **disk_name** (two places to change)
+    ```
+
+    ```
+    Change **az104_disk1** to **az102_disk2** (one place to change)
+    ```
+
 1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
 
 1. **Save** your changes.
@@ -104,9 +107,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Make this change so it matches the template file.
 
-    ```
-    disks_az104_disk1_name: **disks_name** (one place to change)
-   ```
+    Change **disks_az104_disk1_name** to **disk_name** (one place to change)
 
 1. **Save** your changes. 
 
@@ -121,13 +122,13 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Select **Go to resource**. Verify your managed disk, **az104-disk2**, was created.
+1. Select **Go to resource**. Verify **az104-disk2** was created.
 
-1. On the **Overview** blade, select the resource group, **az104-rg3**.
+1. On the **Overview** blade, select the resource group, **az104-rg3**. You should now have two disks.
    
 1. In the **Settings** section, click **Deployments**.
 
-    >**Note:** All prior deployments details are documented in the resource group. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
+    >**Note:** All deployments details are documented in the resource group. It is a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. Select a deployment and review the content of the **Input** and **Template** blades.
 
@@ -141,7 +142,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-   >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
 
@@ -153,17 +154,16 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
     | File share (Create new) | `fs-cloudshell` |
 
-1. When completed select **Create storage**.
+1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
 
-1. Use the **Upload** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage. 
 
     ```powershell
     dir
     ```
-
-    **Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
+    >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
    
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
@@ -178,11 +178,17 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. You can confirm the disk was created by checking the portal or using the `Get-AzDisk` command. 
+1. Confirm the disk was created.
+
+   ```powershell
+   Get-AzDisk
+   ```
    
 ## Task 5: Deploy a template with the CLI 
 
-1. Continue in the **Cloud Shell** select **Bash**. Verify your files are available in the Cloud Shell storage.
+1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
+
+1. Verify your files are available in the Cloud Shell storage.
 
 >**Note:** If you completed the previous task your template files should be available. 
 
@@ -192,7 +198,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -204,11 +210,17 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. You can confirm the disk was created by checking the portal or using the `az disk list` command.
+1. Confirm the disk was created.
+
+     ```sh
+     az disk list --output table
+     ```
+
+1. You should now have four disks. 
    
 ## Task 6: Deploy a resource by using Azure Bicep
 
-In this task, you will use a Bicep file to deploy a storage account to your resource group. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
+In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
 
 1. Open a Cloud Shell **Bash** session. 
 
