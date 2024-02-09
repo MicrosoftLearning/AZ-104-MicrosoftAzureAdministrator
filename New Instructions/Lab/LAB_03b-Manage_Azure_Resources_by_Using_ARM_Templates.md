@@ -36,7 +36,7 @@ Your team wants to look at ways to automate and simplify resource deployments. Y
 + Task 2: Edit an Azure Resource Manager template and redeploy the template.
 + Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell.
 + Task 4: Deploy a template with the CLI. 
-+ Task 5: Deploy a managed disk by using Azure Bicep.
++ Task 5: Deploy a resource by using Azure Bicep.
 
 ## Task 1: Create an Azure Resource Manager template
 
