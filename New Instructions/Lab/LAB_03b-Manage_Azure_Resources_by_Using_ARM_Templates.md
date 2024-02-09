@@ -222,17 +222,15 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
 
-1. Open a Cloud Shell **Bash** session. 
+1. Continue working in the **Cloud Shell** in a **Bash** session.
 
-1. Select **Upload**. Locate the \Allfiles\Lab03 directory and select the Bicep template file **azuredeploy.bicep**.
+1. Locate and download the **\Allfiles\Lab03\azuredeploydisk.bicep** file.
 
-1. To verify that the file has been uploaded, select the double brackets icon in the Cloud Shell menu to open the built-in editor.
+1. **Upload** the bicep file to the Cloud Shell. 
 
-1. The file should be listed in the navigation tree on the left. Select it to verify its contents.
+1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-   ![Screenshot of the bicep file in the cloud shell editor.](../media/az104-lab03-editor.png)
-
-1. Take a minute to read through the bicep template file. Notice how the storage (stg) account resource is defined. Notice how parameters and allowed values are configured.
+1. Take a minute to read through the bicep template file. Notice how the disk resource is defined. Notice how parameters and allowed values are configured.
    
 1. To deploy storage account to the **az104-rg3** resource group, run the following:
 
