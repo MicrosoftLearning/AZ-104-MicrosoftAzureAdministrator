@@ -1,13 +1,6 @@
 @description('Name of the managed disk to be copied')
 param managedDiskName string = 'diskname'
 
-@description('Logical Sector Size.)
-@allowed([
-  512
-  4096
-])
-param logicalSectorSize int = 512
-
 @description('Disk size in GiB')
 @minValue(4)
 @maxValue(65536)
@@ -35,7 +28,6 @@ resource managedDisk 'Microsoft.Compute/disks@2020-09-30' = {
   properties: {
     creationData: {
       createOption: 'Empty'
-      logicalSectorSize: logicalSectorSize
     }
     diskSizeGB: diskSizeinGiB
     diskIOPSReadWrite: diskIopsReadWrite
