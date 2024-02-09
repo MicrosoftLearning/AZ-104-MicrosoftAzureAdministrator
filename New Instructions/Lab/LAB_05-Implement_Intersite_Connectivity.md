@@ -223,9 +223,9 @@ In this task, you retest the connection between the virtual machines in differen
     ```
 1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
    
-1. The test connection should fail. Virtual machines in different virtual networks should, by default, not be able to communicate. Your computer name and remote address in this graphic may be different. 
+1. The test connection should succeed because peering has been configured. Your computer name and remote address in this graphic may be different. 
    
-   ![PowerShell window with Test-NetConnection failed.](../media/az104-lab05-success.png)
+   ![PowerShell window with Test-NetConnection succeeded.](../media/az104-lab05-success.png)
 
 ## Task 6: Create a custom route 
 
