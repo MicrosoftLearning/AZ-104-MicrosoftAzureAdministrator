@@ -24,7 +24,7 @@ There are interactive lab simulations that you might find useful for this topic.
   
 ## Lab scenario
 
-Your team wants to look at ways to automate and simplify deployments. Organizations often look for automation to reduce administrative overhead, reduce human error or increase consistency.  
+Your team wants to look at ways to automate and simplify resource deployments. Your organization is looking for ways to reduce administrative overhead, reduce human error and increase consistency.  
 
 ## Architecture diagram
 
@@ -40,7 +40,7 @@ Your team wants to look at ways to automate and simplify deployments. Organizati
 
 ## Task 1: Create an Azure Resource Manager template
 
-In this task, you use the Azure portal to generate an Azure Resource Manager template. You can then download the template to use in future deployments. An organization that plans to deploy hundreds or thousands of disks could leverage one or more templates to help automate the deployments. In this task, we will use a template to deploy a managed disk. Managed disks are storage designed to be used with virtual machines. 
+In this task, we will create a managed disk in the Azure portal. Managed disks are storage designed to be used with virtual machines. Once the disk is deployed you will export a template that you can use in other deployments.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -61,7 +61,7 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
     | Performance | **Standard HDD** (change size) |
     | Size | **32 Gib** | 
 
-    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure and used with Azure virtual machines.
+    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
 1. Click **Review + Create** then select **Create**.
 
@@ -69,17 +69,17 @@ In this task, you use the Azure portal to generate an Azure Resource Manager tem
 
 1. In the **Automation** blade, select **Export template**. 
 
-1. Review the information shown in the template. Review both the **Template** and **Parameters** tab.
+1. Take a minute to review the **Template** and **Parameters** files.
 
 1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
 
 1. Extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
-   >**Note:**  You can export an entire resource group or just specific resources within that resource group.
+   >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
 ## Task 2: Edit an Azure Resource Manager template and then redeploy the template
 
-In this task, you use the template that you created to deploy a new managed disk. This task outlines the general process of having template-based deployments so that you can quicky and easily repeat deployments. If you need to change a parameter or two, you can easily modify the template in the future.
+In this task, you use the downloaded template to deploy a new managed disk. This task outlines how to quicky and easily repeat deployments. 
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
@@ -87,66 +87,53 @@ In this task, you use the template that you created to deploy a new managed disk
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
-1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded in the previous task.
+1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded to the local disk.
 
-1. Within the editor pane, remove the following lines. Be sure to remove the closing bracket and comma. 
+1. Within the editor pane, make these changes.
 
-   ```
-    "sourceResourceId": {
-            "type": "string"
-    },
+    ```
+    disks_az104_disk1_name: **disks_name** (two places to change)
+    az104_disk1: **az102_disk2** (one place to change)
    ```
    
+1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
+
+1. **Save** your changes.
+
+1. Dpn't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
+
+1. Make this change so it matches the template file.
+
+    ```
+    disks_az104_disk1_name: **disks_name** (one place to change)
    ```
-      "hyperVGeneration": {
-       "defaultValue": "V1",
-       "type": "String"
-   },      
-   ```
 
-    >**Note**: These parameters are removed since they are not applicable to the current deployment. SourceResourceId, sourceUri, osType, and hyperVGeneration parameters are applicable to creating an Azure disk from an existing VHD file.
-
-1. **Save** the changes.
-
-1. Dpn't forget the parameters file, select **Edit parameters**, click **Load file** and upload the **parameters.json**. If you like, you can remove the **sourceResourceId** and **hyperVGeneration** parameters. 
-
-1. Review the file and **Save** your changes. 
+1. **Save** your changes. 
 
 1. Complete the custom deployment settings:
-
-    >**Did you know?** You can decide which parameters are required. For reference the disk resource definitions are on the [Microsoft.Compute disk page](https://learn.microsoft.com/azure/templates/microsoft.compute/disks?pivots=deployment-language-bicep#property-values).
 
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
     | Resource Group | `az104-rg3` |
     | Region | **(US) East US)** |
-    | Disk Name | `az104-disk1` |
-    | Location | **eastus** |
-    | Sku | `Standard_LRS` |
-    | Disk Size Gb | **32** |
-    | Create Option | **Empty** |
-    | Disk Encryption Set Type | **EncryptionAtRestWithPlatformKey** |
-    | Data Access Auth Mode | **None** |
-    | Network Access Policy | **AllowAll** |
-    | Public Network Access | `Disabled` |
+    | Disk_name | `az104-disk2` |
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Select **Go to resource**. Verify your managed disk, **az104-disk1**, was created.
+1. Select **Go to resource**. Verify your managed disk, **az104-disk2**, was created.
 
+1. On the **Overview** blade, select the resource group, **az104-rg3**.
+   
 1. In the **Settings** section, click **Deployments**.
 
     >**Note:** All prior deployments details are documented in the resource group. It is often a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 1. Select a deployment and review the content of the **Input** and **Template** blades.
 
-    >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**. Please try at least one of the options. Don't forget **Task 6** Bicep deployments. 
-
-
 ## Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell
 
-In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will then use PowerShell to deploy a template. 
+In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. In this task, you use PowerShell to deploy a template. 
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
@@ -162,25 +149,25 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
     | Settings | Values |
     |  -- | -- |
-    | Resource Group | **az104-rg3** (Create new) |
+    | Resource Group | **az104-rg3** |
     | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
     | File share (Create new) | `fs-cloudshell` |
 
 1. When completed select **Create storage**.
 
-1. Ensure **PowerShell** is selected.
+1. Use the **Upload** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
-1. Use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
-
-1. Verify your files are available in the Cloud Shell storage.
+1. Verify your files are available in the Cloud Shell storage. 
 
     ```powershell
     dir
     ```
 
+    **Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
+   
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk2**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
