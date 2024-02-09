@@ -154,7 +154,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. Select **Run diagnostic tests**.
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in the same virtual network. 
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
 
  
 ## Task 4: Configure virtual network peerings between virtual networks
