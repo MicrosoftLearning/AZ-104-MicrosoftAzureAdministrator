@@ -34,10 +34,9 @@ Your team has explored the basic Azure administrative capabilities such as provi
 
 + Task 1: Create an Azure Resource Manager template.
 + Task 2: Edit an Azure Resource Manager template and redeploy the template.
-+ Task 3: Configure the Cloud Shell. 
-+ Task 4: Deploy a template with Azure PowerShell (option 1).
-+ Task 5: Deploy a template with the CLI (option 2). 
-+ Task 6: Deploy a managed disk by using Azure Bicep.
++ Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell.
++ Task 4: Deploy a template with the CLI. 
++ Task 5: Deploy a managed disk by using Azure Bicep.
 
 ## Task 1: Create an Azure Resource Manager template
 
@@ -147,9 +146,9 @@ In this task, you use the template that you created to deploy a new managed disk
     >**Note:** You can also deploy templates from the command line. **Task 4** shows how to deploy using **PowerShell**. **Task 5** shows how to deploy using the **CLI**. Please try at least one of the options. Don't forget **Task 6** Bicep deployments. 
 
 
-## Task 3: Use the Cloud Shell
+## Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell
 
-In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will use this tool often in this course. 
+In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. You will then use PowerShell to deploy a template. 
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. Alternately, you can navigate directly to `https://shell.azure.com`.
 
@@ -157,7 +156,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-   >**Did you know?**  If you mostly work with Linux systems, Bash feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+   >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
 
@@ -171,25 +170,9 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
 
 1. When completed select **Create storage**.
 
-1. Take a minute to review the capabilities of the Cloud Shell. 
+1. Ensure **PowerShell** is selected.
 
-   ![Screenshot of cloud shell icons.](../media/az104-lab01-cloudshell-header.png)
-
-1. Notice you can switch between **PowerShell** and **Bash**.
-
-1. Notice the **Upload/Download files** capability. 
-
-1. Notice the **Open edition (curly brackets)** capability. 
-
-1. As needed, use the **Settings** icon to adjust the text size and font. 
-   
-## Task 4. Deploy a template with Azure PowerShell 
-
-1. Open the Cloud Shell and select **PowerShell**.
-
-1. If necessary, use the **Advanced** settings to create disk storage for the Cloud Shell.
-
-1. In the Cloud Shell, use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
+1. Use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
@@ -197,7 +180,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     dir
     ```
 
-1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
 1. Make a change. For example, change the disk name to **az104-disk2**. Use **Ctrl +S** to save your changes. 
 
@@ -214,11 +197,9 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
    
 ## Task 5: Deploy a template with the CLI 
 
-1. In the **Cloud Shell** select **Bash**.
+1. Continue in the **Cloud Shell** select **Bash**.
 
     >**Note:** If you completed the previous task your template files should be available. 
-
-1. Use the **Upload** icon to upload the template and parameters files. You will need to upload each file separately.
 
 1. Verify your files are available in the Cloud Shell storage.
 
@@ -226,7 +207,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     ls
     ```
 
-1. In the Cloud Shell, select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
 1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
@@ -237,6 +218,7 @@ In this task, you work with the Azure Cloud Shell. Azure Cloud Shell is an inter
     ```sh
     az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
     ```
+    
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
 1. You can confirm the disk was created by checking the portal or using the `az disk list` command.
