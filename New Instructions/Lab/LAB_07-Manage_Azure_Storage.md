@@ -36,7 +36,7 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 2: Create and configure secure blob storage.
 + Task 3: Create and configure secure Azure file storage.
 
-## Task 1: Create and configure the private storage account. 
+## Task 1: Create and configure a storage account. 
 
 In this task, you will create and configure a storage account. The storage account will use geo-redundant storage and will not have public access. 
 
@@ -90,7 +90,7 @@ In this task, you will create and configure a storage account. The storage accou
 
     ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
 
-## Task 2: Manage blob storage
+## Task 2: Create and configure secure blob storage
 
 In this task, you will create a blob container and upload an image. Blob containers are directory-like structures that store unstructured data.
 
@@ -172,7 +172,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
     >**Note**: You should be able to view the content of the file. 
 
-## Task 5: Create and configure an Azure File share
+## Task 3: Create and configure an Azure File storage
 
 In this task, you will create and configure Azure File shares. You will use Storage Browser to manage the file share. 
 
