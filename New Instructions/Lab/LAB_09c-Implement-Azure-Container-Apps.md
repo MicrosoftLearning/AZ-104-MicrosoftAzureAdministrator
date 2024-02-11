@@ -12,7 +12,7 @@ In this lab, you learn how to implement and deploy Azure Container Apps.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 20 minutes
+## Estimated timing: 15 minutes
 
 ## Lab scenario
 
