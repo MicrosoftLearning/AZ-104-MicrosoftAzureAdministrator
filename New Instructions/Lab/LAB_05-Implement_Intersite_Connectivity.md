@@ -196,13 +196,10 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
- 
 
 ## Task 5: Use Azure PowerShell to test the connection between virtual machines
 
 In this task, you retest the connection between the virtual machines in different virtual networks. 
-
->**Note:** You can use Network Watcher as you did in Task 3. Or for something different try Azure PowerShell.
 
 ### Verify the private IP address of the CoreServicesVM
 
@@ -211,6 +208,8 @@ In this task, you retest the connection between the virtual machines in differen
 1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
    
 ### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
+
+>**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
 
 1. Switch to the `ManufacturingVM` virtual machine.
 
@@ -222,6 +221,7 @@ In this task, you retest the connection between the virtual machines in differen
     Test-NetConnection <CoreServicesVM private IP address> -port 3389
     ```
 1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
+
    
 1. The test connection should succeed because peering has been configured. Your computer name and remote address in this graphic may be different. 
    
