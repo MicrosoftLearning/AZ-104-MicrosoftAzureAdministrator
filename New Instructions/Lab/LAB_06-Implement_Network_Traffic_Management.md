@@ -138,7 +138,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values). When finished click **Save**.
 
->**Note:** As you configure the rule use the informational icons to learn about eacg setting.
+>**Note:** As you configure the rule use the informational icons to learn about each setting.
 
     | Setting | Value |
     | --- | --- |
@@ -175,7 +175,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 ## Architecture diagram - Application Gateway
 
->**Note**: This Application Gateway is working in the same virtual network as the Load Balancer. This may not typical in a production environment.
+>**Note**: This Application Gateway is working in the same virtual network as the Load Balancer. This may not be typical in a production environment.
 
 ![Diagram of the lab tasks.](../media/az104-lab06-gw-architecture.png)
 
