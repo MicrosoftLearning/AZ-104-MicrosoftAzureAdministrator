@@ -216,7 +216,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    
 ## Task 6: Deploy a resource by using Azure Bicep
 
-In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates, but are easier to read and work with.
+In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
 
 1. Continue working in the **Cloud Shell** in a **Bash** session.
 
@@ -224,7 +224,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. **Upload** the bicep file to the Cloud Shell. 
 
-1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+1. Select the **Editor** (curly brackets) icon and navigate to the file.
 
 1. Take a minute to read through the bicep template file. Notice how the disk resource is defined. 
    
@@ -243,7 +243,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Use **Ctrl +S** to save your changes.
 
-1. Deploy the template.
+1. Now, deploy the template.
 
     ```
     az group deployment create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
@@ -255,7 +255,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
     az disk list --output table
     ```
 
-    >**Note:** You have successfully deploy five managed disks, each in a different way. Nice job!
+    >**Note:** You have successfully deployed five managed disks, each in a different way. Nice job!
 
 ## Key takeaways
 
