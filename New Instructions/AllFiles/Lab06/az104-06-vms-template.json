@@ -45,7 +45,7 @@
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkSecurityGroups_az104_06_nsg1_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "securityRules": [
                     {
@@ -89,11 +89,11 @@
                 ]
             }
         },
-                {
+        {
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2023-06-01",
             "name": "[parameters('virtualNetworks_az104_06_vnet1_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
@@ -103,7 +103,6 @@
                 "subnets": [
                     {
                         "name": "subnet0",
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
                         "properties": {
                             "addressPrefix": "10.60.0.0/24",
                             "delegations": [],
@@ -114,7 +113,6 @@
                     },
                     {
                         "name": "subnet1",
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
                         "properties": {
                             "addressPrefix": "10.60.1.0/24",
                             "delegations": [],
@@ -123,9 +121,8 @@
                         },
                         "type": "Microsoft.Network/virtualNetworks/subnets"
                     },
-		    {
+                    {
                         "name": "subnet2",
-                        "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
                         "properties": {
                             "addressPrefix": "10.60.2.0/24",
                             "delegations": [],
@@ -139,11 +136,11 @@
                 "enableDdosProtection": false
             }
         },
-                {
+        {
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm0_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic0_name'))]"
             ],
@@ -160,7 +157,7 @@
                     },
                     "osDisk": {
                         "osType": "Windows",
-                        "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '_disk1_5e57d096d8d54757b417a168417a69f8')]",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '_disk1')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "deleteOption": "Detach",
@@ -171,7 +168,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm0_name')]",
                     "adminUsername": "localadmin",
-		    "adminPassword": "[parameters('adminPassword')]",
+                    "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
@@ -200,7 +197,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm1_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic1_name'))]"
             ],
@@ -217,7 +214,7 @@
                     },
                     "osDisk": {
                         "osType": "Windows",
-                        "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '_disk1_0c60cd0e9f8d43aaaebfa572d1de0319')]",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '_disk1')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "deleteOption": "Detach",
@@ -228,7 +225,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm1_name')]",
                     "adminUsername": "localadmin",
-		    "adminPassword": "[parameters('adminPassword')]",
+                    "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
@@ -257,7 +254,7 @@
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2023-03-01",
             "name": "[parameters('virtualMachines_az104_06_vm2_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_az104_06_nic2_name'))]"
             ],
@@ -274,7 +271,7 @@
                     },
                     "osDisk": {
                         "osType": "Windows",
-                        "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '_disk1_58417ddb19d7418886b4b5c42507a7f0')]",
+                        "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '_disk1')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "deleteOption": "Detach"
@@ -284,7 +281,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm2_name')]",
                     "adminUsername": "localadmin",
-		    "adminPassword": "[parameters('adminPassword')]",
+                    "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true,
@@ -313,7 +310,7 @@
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm0_name'), '/customScriptExtension')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm0_name'))]"
             ],
@@ -322,17 +319,17 @@
                 "publisher": "Microsoft.Compute",
                 "type": "CustomScriptExtension",
                 "typeHandlerVersion": "1.7",
-		"settings": {
+                "settings": {
                     "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-		 },
+                },
                 "protectedSettings": {}
             }
-	},
+        },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm1_name'), '/customScriptExtension')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm1_name'))]"
             ],
@@ -343,15 +340,15 @@
                 "typeHandlerVersion": "1.7",
                 "settings": {
                     "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername) && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot' -Name 'image' -Itemtype 'Directory' && powershell.exe New-Item -Path 'c:\\inetpub\\wwwroot\\image\\' -Name 'iisstart.htm' -ItemType 'file' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\image\\iisstart.htm' -Value $('Image from: ' + $env:computername)"
-		},
+                },
                 "protectedSettings": {}
             }
-	    },
+        },
         {
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "apiVersion": "2023-03-01",
             "name": "[concat(parameters('virtualMachines_az104_06_vm2_name'), '/customScriptExtension')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_az104_06_vm2_name'))]"
             ],
@@ -367,84 +364,12 @@
             }
         },
         {
-            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg1_name'), '/default-allow-http')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
-            ],
-            "properties": {
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "80",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 1100,
-                "direction": "Inbound",
-                "sourcePortRanges": [],
-                "destinationPortRanges": [],
-                "sourceAddressPrefixes": [],
-                "destinationAddressPrefixes": []
-            }
-        },
-        {
-            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('networkSecurityGroups_az104_06_nsg1_name'), '/default-allow-rdp')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
-            ],
-            "properties": {
-                "protocol": "Tcp",
-                "sourcePortRange": "*",
-                "destinationPortRange": "3389",
-                "sourceAddressPrefix": "*",
-                "destinationAddressPrefix": "*",
-                "access": "Allow",
-                "priority": 1000,
-                "direction": "Inbound",
-                "sourcePortRanges": [],
-                "destinationPortRanges": [],
-                "sourceAddressPrefixes": [],
-                "destinationAddressPrefixes": []
-            }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet0')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
-            ],
-            "properties": {
-                "addressPrefix": "10.60.0.0/24",
-                "delegations": [],
-                "privateEndpointNetworkPolicies": "Disabled",
-                "privateLinkServiceNetworkPolicies": "Enabled"
-            }
-        },
-                {
-            "type": "Microsoft.Network/virtualNetworks/subnets",
-            "apiVersion": "2023-06-01",
-            "name": "[concat(parameters('virtualNetworks_az104_06_vnet1_name'), '/subnet1')]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_az104_06_vnet1_name'))]"
-            ],
-            "properties": {
-                "addressPrefix": "10.60.1.0/24",
-                "delegations": [],
-                "privateEndpointNetworkPolicies": "Disabled",
-                "privateLinkServiceNetworkPolicies": "Enabled"
-            }
-        },
-        {
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic0_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
+                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworks_az104_06_vnet1_name'))]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
             ],
             "kind": "Regular",
@@ -484,9 +409,9 @@
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic1_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet1')]",
+                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworks_az104_06_vnet1_name'))]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
             ],
             "kind": "Regular",
@@ -526,9 +451,9 @@
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2023-06-01",
             "name": "[parameters('networkInterfaces_az104_06_nic2_name')]",
-            "location": "eastus",
+            "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]",
+                "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworks_az104_06_vnet1_name'))]",
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
             ],
             "kind": "Regular",
@@ -544,7 +469,7 @@
                             "privateIPAddress": "10.62.0.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet0')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_az104_06_vnet1_name'), 'subnet2')]"
                             },
                             "primary": true,
                             "privateIPAddressVersion": "IPv4"
@@ -556,12 +481,13 @@
                 },
                 "enableIPForwarding": false,
                 "disableTcpStateTracking": false,
-		"networkSecurityGroup": {
+                "networkSecurityGroup": {
                     "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_az104_06_nsg1_name'))]"
                 },
                 "nicType": "Standard",
                 "auxiliaryMode": "None",
                 "auxiliarySku": "None"
-            }}
+            }
+        }
     ]
 }
