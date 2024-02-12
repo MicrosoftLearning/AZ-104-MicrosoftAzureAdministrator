@@ -8,7 +8,7 @@ lab:
 
 ## Lab introduction
 
-In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure and resize a single virtual machine. You learn how create a virtual machine scale set and configure autoscaling.
+In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure and resize a single virtual machine. You learn how to create a virtual machine scale set and configure autoscaling.
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
@@ -50,7 +50,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
-    >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to a another zone.
+    >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
 
 1. On the Basics tab, continue completing the configuration:
 
@@ -119,7 +119,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Set the virtual machine size to **DS1_v2** and click **Resize**. When prompted, confirm the change.
 
-    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also knows as vertical scaling, up or down.
+    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also known as vertical scaling, up or down.
 
     ![Screenshot of the resize the virtual machine.](../media/az104-lab08-resize-vm.png)
 
@@ -137,7 +137,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
-    >**Note**: Detaching removes the disk from the VM, but keeps it in storage for later use..
+    >**Note**: Detaching removes the disk from the VM, but keeps it in storage for later use.
 
 1. Search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
 
