@@ -401,6 +401,15 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
+## Cleanup your resources
+
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab.
@@ -418,10 +427,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + [Build a scalable application with Virtual Machine Scale Sets](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/). Enable your application to automatically adjust to changes in load while minimizing costs with Virtual Machine Scale Sets.
 + [Connect to virtual machines through the Azure portal by using Azure Bastion](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/). Deploy Azure Bastion to securely connect to Azure virtual machines directly within the Azure portal to effectively replace an existing jumpbox solution, monitor remote sessions by using diagnostic logs, and manage remote sessions by disconnecting a user session.
   
-## Cleanup your resources
-
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group.
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
