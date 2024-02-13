@@ -116,7 +116,14 @@ In this task, you create a group account. Group accounts can include user accoun
 
     >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
+## Cleanup your resources
 
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+  
 ## Key takeaways
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
