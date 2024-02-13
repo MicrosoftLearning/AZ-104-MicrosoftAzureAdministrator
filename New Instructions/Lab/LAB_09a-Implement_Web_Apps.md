@@ -168,7 +168,17 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
 
 1. Select **Stop** to complete the test run.
-   
+
+## Cleanup your resources
+
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+
+
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -183,12 +193,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
 + [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
-
-## Cleanup your resources
-
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
-    
