@@ -91,13 +91,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Within the editor pane, make these changes.
 
-    ```
-    Change **disks_az104_disk1_name** to **disk_name** (two places to change)
-    ```
-
-    ```
-    Change **az104_disk1** to **az102_disk2** (one place to change)
-    ```
+    + Change **disks_az104_disk1_name** to `disk_name` (two places to change)
+    + Change **az104_disk1** to `az102_disk2` (one place to change)
 
 1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
 
@@ -230,17 +225,10 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-   ```sh
-   Change the managedDiskName value to Disk4
-   ```
-   ```sh
-   Change the sku name value to StandardSSD_LRS
-   ```
+    + Change the **managedDiskName** value to `Disk4`.
+    + Change the **sku name** value to `StandardSSD_LRS`.
+    + Change the **diskSizeinGiB** value to `32`.
 
-   ```sh
-   Change the adiskSizeinGiB value to 32
-   ```
-   
 1. Use **Ctrl +S** to save your changes.
 
 1. Now, deploy the template.
