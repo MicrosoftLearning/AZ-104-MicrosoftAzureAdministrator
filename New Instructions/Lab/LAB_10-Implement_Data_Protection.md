@@ -276,6 +276,14 @@ In this task, you will deploy an Azure storage account. Then you will configure 
    
 >**Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
+## Cleanup your resources
+
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+
 
 ## Key takeaways
 
@@ -292,14 +300,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 + [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
 + [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
-
-
-## Cleanup your resources
-
-If you are working with your own subscription take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
-
-
