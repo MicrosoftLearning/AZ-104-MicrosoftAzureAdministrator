@@ -227,7 +227,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg-region2` (if necessary, select **Create new**) |
+    | Resource group | `az104-rg-region2` (If necessary, select **Create new**) |
     | Vault Name | `az104-rsv-region2` |
     | Region | **West US** |
 
@@ -243,20 +243,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Enable replication**.
 
-1. On the **Source** tab, configure the settings.
-
-    | Setting | Value |
-    | ---- | ---- |
-    | Region| **East US**  |
-    | Resource group | **az104-rg-region1**  |
-    | Virtual machine deployment model | **Resource Manager** |
-    | Disaster recovery between availability zones | **No** |
-
-1. Select **Next** and on the **Virtual machines** tab select **az104-10-vm0**.
-
 1. On the **Basics** tab, notice the **Target region**.
 
-1. Move to the **Advanced** tab. Resource selections have been made for you. It is important to review them. 
+1. Move to the **Advanced settings** tab. Resource selections have been made for you. It is important to review them. 
 
 1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
 
@@ -264,7 +253,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     | Setting | Value |
     | ---- | ---- |
-    | Chrun for the vm | **Normal churn**  |
+    | Churn for the vm | **Normal churn**  |
     | Cache storage account | **(new) xxx**  |
 
    >**Note:** It is important that both of these settings be populated or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
