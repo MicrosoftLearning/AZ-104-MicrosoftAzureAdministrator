@@ -30,9 +30,92 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 ## Job skills
 
 + Task 1: Create and configure user accounts.
-+ Task 2: Create groups with dynamic membership.
-+ Task 3: Create a new tenant with user and groups.
-+ Task 4: Invite a guest user. 
++ Task 2: Create group accounts and add members.
+
+## Task 1: Create and configure user accounts
+
+In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
+
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
+
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
+1. Search for and select `Microsoft Entra ID`.
+
+1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
+
+   + **Administrative units** lets you group users, groups, or devices into a single manageable unit.
+   + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
+
+### Create a new user
+
+1. Select **Users**, then in the **New user** drop-down select **Create new user**. 
+
+1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
+
+    | Setting | Value |
+    | --- | --- |
+    | User principal name | `az104-user1` |
+    | Display name | `az104-user1` |
+    | Auto-generate password | de-select |
+    | Initial password | **Provide a secure password** |
+    | Job title (Properties tab) | `IT Lab Administrator` |
+    | Department (Properties tab) | `IT` |
+    | Usage location (Properties tab) | **United States** |
+
+1. Once you have finished reviewing, select **Review + create** and then **Create**.
+
+### Invite an external user
+
+1. Select **Users**, then in the **New user** drop-down select **Invite an external user**. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Email | your email address |
+    | Display name | your name |
+    | Send invite message | **check the box** |
+    | Message | **Welcome to Azure and our group project** |
+
+1. Move to the **Properties** tab. Notice the **User type** is **Guest**. Notice the user account information is similar to creating a new user.
+
+1. Select **Review + invite**, and then **Invite**. 
+
+    >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
+### Task 2: Create group accounts and add members
+
+In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
+
+1. In the Azure portal, search for and select `Groups`.
+
+1. Take a minute to familiarize yourself with the group settings in the left pane.
+
+   + **Expiration** lets you configre a group lifetime in days. The group must be renewed by the owner.
+   + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
+
+1. In the **All groups** blade, select **+ New group** and create a new group. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Group type | **Security** |
+    | Group name | `IT Lab Administrators` (adjust the name if this one is not available) |
+    | Group description | `Administrators that manage the IT lab` |
+    | Membership type | **Assigned** |
+
+    >**Note**: Notice the other options in the **Membership type** drop-down. An Entra ID Premium P1 or P2 license is required for dynamic membership.
+    
+    ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
+
+1. Select **No owners selected**.
+
+1. In the **Add owners** page, search for and **select** yourself as the owner. Notice you can have more than one owner. 
+
+1. Select **No members selected**.
+
+1. In the **Add members** pane, search for and **select** the **az104-user1** and add them to the group. 
+
+1. Select **Create** to deploy the group.
+
+    >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
+
 
 ## Key takeaways
 
