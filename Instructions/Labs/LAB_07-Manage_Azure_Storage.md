@@ -285,17 +285,17 @@ In this task, you will configure network access for Azure Storage.
 
     > **Note**: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
 
-1. You should be presented with the content of **The MIT License (MIT)** page.
+1. You should be able to download the LICENSE.txt file.
 
     > **Note**: This is expected, since you are connecting from your client IP address.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
 
-1. From the Cloud Shell pane, run the following to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
+1. On the **Run Command Script** blade, run the following in the **PowerShell Script** pane to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
 
    ```powershell
    Invoke-WebRequest -URI '[blob SAS URL]'
@@ -303,8 +303,6 @@ In this task, you will configure network access for Azure Storage.
 1. Verify that the download attempt failed.
 
     > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
-
-1. Close the Cloud Shell pane.
 
 ## Clean up resources
 
