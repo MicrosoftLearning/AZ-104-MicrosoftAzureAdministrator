@@ -38,14 +38,16 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interaface. 
-1. Search for and select `Microsoft Entra ID`.
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interface.
+    
+1. Search for and select `Microsoft Entra ID`. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
 
-1. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
+1. Select the **Overview** blade and then the **Manage tenants** tab. 
 
-   + **Administrative units** lets you group users, groups, or devices into a single manageable unit.
-   + **Licenses** lets you purchase a license, manage the licenses you have, and assign licenses to users and groups.
+    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them.
 
+1. Return to the **Entra ID** page and select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+   
 ### Create a new user
 
 1. Select **Users**, then in the **New user** drop-down select **Create new user**. 
