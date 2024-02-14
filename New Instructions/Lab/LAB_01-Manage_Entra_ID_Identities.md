@@ -103,7 +103,7 @@ In this task, you create a group account. Group accounts can include user accoun
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
-    >**Note**: Notice the other options in the **Membership type** drop-down. An Entra ID Premium P1 or P2 license is required for dynamic membership.
+    >**Note**:An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
     
     ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
