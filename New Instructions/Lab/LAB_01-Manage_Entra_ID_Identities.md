@@ -18,7 +18,7 @@ Your organization is building a new lab environment for pre-production testing o
 
 ## Lab - Interactive lab simulation
 
-This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. An Azure subscription is not required. 
+This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
 >**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). 
 
