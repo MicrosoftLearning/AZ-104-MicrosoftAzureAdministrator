@@ -44,7 +44,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Select the **Overview** blade and then the **Manage tenants** tab. 
 
-    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them.
+    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. Before working with accounts and groups be sure you are in the correct tenant. 
 
 1. Return to the **Entra ID** page and select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
    
