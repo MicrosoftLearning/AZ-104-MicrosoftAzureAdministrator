@@ -44,7 +44,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Select the **Overview** blade and then the **Manage tenants** tab. 
 
-    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. Before working with accounts and groups be sure you are in the correct tenant. 
+    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. 
 
 1. Return to the **Entra ID** page and select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
    
@@ -58,28 +58,38 @@ In this task, you will create and configure user accounts. User accounts will st
     | --- | --- |
     | User principal name | `az104-user1` |
     | Display name | `az104-user1` |
-    | Auto-generate password | de-select |
-    | Initial password | **Provide a secure password** |
+    | Auto-generate password | **checked** |
+    | Account enabled | **checked** |
     | Job title (Properties tab) | `IT Lab Administrator` |
     | Department (Properties tab) | `IT` |
     | Usage location (Properties tab) | **United States** |
 
 1. Once you have finished reviewing, select **Review + create** and then **Create**.
 
+1. Refresh the page and confirm your new user was created. 
+
 ### Invite an external user
 
-1. Select **Users**, then in the **New user** drop-down select **Invite an external user**. 
+1. In the **New user** drop-down select **Invite an external user**. 
 
     | Setting | Value |
     | --- | --- |
     | Email | your email address |
     | Display name | your name |
     | Send invite message | **check the box** |
-    | Message | **Welcome to Azure and our group project** |
+    | Message | `Welcome to Azure and our group project` |
 
-1. Move to the **Properties** tab. Notice the **User type** is **Guest**. Notice the user account information is similar to creating a new user.
+1. Move to the **Properties** tab. Complete the basic information, including these fields. 
 
-1. Select **Review + invite**, and then **Invite**. 
+    | Setting | Value |
+    | --- | --- |
+    | Job title  | `IT Lab Administrator` |
+    | Department  | `IT` |
+    | Usage location (Properties tab) | **United States** |
+
+1. Select **Review + invite**, and then **Invite**.
+
+1. **Refresh** the page and confirm the invited user was created. You should receive the invitation email shortly. 
 
     >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
     
@@ -91,19 +101,19 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Take a minute to familiarize yourself with the group settings in the left pane.
 
-   + **Expiration** lets you configre a group lifetime in days. The group must be renewed by the owner.
+   + **Expiration** lets you configure a group lifetime in days. After that time the group must be renewed by the owner.
    + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
 
-1. In the **All groups** blade, select **+ New group** and create a new group. 
+1. In the **All groups** blade, select **+ New group** and create a new group.     
 
     | Setting | Value |
     | --- | --- |
     | Group type | **Security** |
-    | Group name | `IT Lab Administrators` (must be unique) |
+    | Group name | `IT Lab Administrators` |
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
-    >**Note**:An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
+    >**Note**: An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
     
     ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
@@ -113,12 +123,16 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select **No members selected**.
 
-1. In the **Add members** pane, search for and **select** the **az104-user1** and add them to the group. 
+1. In the **Add members** pane, search for and **select** the **az104-user1** and the guest user you invited. Add both of the users to the group. 
 
 1. Select **Create** to deploy the group.
 
     >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
 
+1. **Refresh** the page and ensure your group was created.
+
+1. Select the new group and review the **Members** and **Owners** information. 
+   
 ## Cleanup your resources
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
@@ -131,10 +145,11 @@ If you are working with **your own subscription** take a minute to delete the la
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
 
-+ Microsoft Entra ID has member users and guest users. Each type has a level of access specific to the scope of work expected to be done.
++ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
++ Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 + Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be assigned statically or dynamically. 
-+ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
+
 
 ## Learn more with self-paced training
 
