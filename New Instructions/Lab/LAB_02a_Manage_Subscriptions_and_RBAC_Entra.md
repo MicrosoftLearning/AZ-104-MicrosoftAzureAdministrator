@@ -26,7 +26,7 @@ To simplify management of Azure resources in your organization, you have been ta
     - Create support request tickets (do not include adding Azure providers)
 
 
-## Interactive lab simulation
+## Interactive lab simulations
 
 There are some interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
@@ -70,23 +70,23 @@ In this task, you will create and configure management groups. Management groups
     | Management group ID | `az104-mg1` (must be unique in the directory) |
     | Management group display name | `az104-mg1` |
 
-1. **Refresh** the management group page to ensure your new management group displays. 
+1. **Refresh** the management group page to ensure your new management group displays. This may take a minute. 
 
-   >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level. At this point, you would add any subscriptions that should be part of the management group. 
+   >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level. After creating a management group, you would add any subscriptions that should be included in the group. 
 
 ## Task 2: Review and assign a built-in Azure role
 
-In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles).
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
 1. Select the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
 
-1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. 
+1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. You will often use *owner*, *contributor*, and *reader*. 
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**.
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
 
@@ -106,7 +106,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
     
 ## Task 3: Create a custom RBAC role
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary.
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
@@ -129,7 +129,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
+    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. You could also selete and add other capabilities to the new role. 
 
 1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
 
@@ -137,13 +137,13 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **Review + Create**, and then select **Create**.
 
-    >**Note:** At this point, you have created a custom role.  
+    >**Note:** At this point, you have created a custom role and assigned it to the management group.  
 
 ## Task 4: Monitor role assignments with the Activity Log
 
 In this task, you view the activity log to determine if anyone has created a new role. 
 
-1. Return to the portal and in the **az104-mg1** resource select **Activity log**.
+1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
 
 1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
 
