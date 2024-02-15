@@ -123,15 +123,15 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select **No members selected**.
 
-1. In the **Add members** pane, search for and **select** the **az104-user1** and the guest user you invited. Add both of the users to the group. 
+1. In the **Add members** pane, search for and **select** the **az104-user1** and the **guest user** you invited. Add both of the users to the group. 
 
 1. Select **Create** to deploy the group.
 
-    >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
-
 1. **Refresh** the page and ensure your group was created.
 
-1. Select the new group and review the **Members** and **Owners** information. 
+1. Select the new group and review the **Members** and **Owners** information.
+
+>**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
    
 ## Cleanup your resources
 
