@@ -99,7 +99,7 @@ In this task, you create a group account. Group accounts can include user accoun
     | Setting | Value |
     | --- | --- |
     | Group type | **Security** |
-    | Group name | `IT Lab Administrators` (adjust the name if this one is not available) |
+    | Group name | `IT Lab Administrators` (must be unique) |
     | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
 
