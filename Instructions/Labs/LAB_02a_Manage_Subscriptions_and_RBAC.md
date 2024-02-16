@@ -3,7 +3,7 @@
 ## Lab scenario
 To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 - Creating a management group that would include all of Contoso's Azure subscriptions
-- Granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
+- Granting permissions to submit support requests for all subscriptions in the management group to a designated Microsoft Entra ID user. That user's permissions should be limited only to: 
     - Creating support request tickets
     - Viewing resource groups
 
@@ -36,7 +36,7 @@ In this task, you will create and configure management groups.
     
     1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
-    1.  On the **Properties** blade of your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+    1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
         ![image](../media/Lab-02a-e1-t1-s3.png)
    
@@ -113,9 +113,9 @@ In this task, you will create a definition of a custom RBAC role.
 
 ### Task 3: Assign RBAC roles
 
-In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
+In this task, you will create a Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**, click on **Users** under the **Manage** section of the left navigation pane, and then click **+ New user**.
 
    ![image](../media/lab2-6.2.png)
   
