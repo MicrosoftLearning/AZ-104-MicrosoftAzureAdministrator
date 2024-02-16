@@ -2,10 +2,10 @@
 
 ## Lab scenario
 To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
-- creating a management group that would include all of Contoso's Azure subscriptions
-- granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
-    - creating support request tickets
-    - viewing resource groups
+- Creating a management group that would include all of Contoso's Azure subscriptions
+- Granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
+    - Creating support request tickets
+    - Viewing resource groups
 
    **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -32,9 +32,9 @@ In this task, you will create and configure management groups.
     
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
-    1. In the Azure portal, search for and select **Azure Active Directory**.
+    1. In the Azure portal, search for and select **Microsoft Entra ID**.
     
-    1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
+    1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
     1.  On the **Properties** blade of your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
