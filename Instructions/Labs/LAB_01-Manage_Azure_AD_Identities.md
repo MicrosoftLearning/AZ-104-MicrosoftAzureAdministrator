@@ -152,7 +152,6 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. From the **Licenses - All products** blade, select the **Microsoft Entra ID P2** entry.
 
-
 1. Click on **+ Assign**.
 
 1. On the Assign license page click on **+ Add Users and Groups** and assign all license options of Microsoft Entra ID P2 to your user account and the two newly created user accounts.
