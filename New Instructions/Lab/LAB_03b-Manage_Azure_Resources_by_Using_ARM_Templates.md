@@ -234,7 +234,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Now, deploy the template.
 
     ```
-    az group deployment create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
+    az deployment group create --resource-group az104-rg3 --template-file azuredeploydisk.bicep
     ```
 
 1. Confirm the disk was created.
