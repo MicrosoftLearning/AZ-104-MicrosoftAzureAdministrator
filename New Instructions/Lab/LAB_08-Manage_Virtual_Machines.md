@@ -140,7 +140,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
-    >**Note**: Detaching removes the disk from the VM, but keeps it in storage for later use.
+    >**Note**: Detaching removes the disk from the VM but keeps it in storage for later use.
 
 1. Search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
 
