@@ -148,7 +148,7 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
 + Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 + Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
-+ Group membership can be assigned statically or dynamically. 
++ Group membership can be statically or dynamically assigned.
 
 
 ## Learn more with self-paced training
