@@ -175,7 +175,7 @@ In this task, you create a virtual network peering to enable communications betw
 | --------------------------------------------- | ------------------------------------- |
 | **This virtual network**                                       |                                       |
 | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| Allow Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
+| Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
 | Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
 | Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
 | Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
