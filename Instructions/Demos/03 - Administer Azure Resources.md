@@ -65,7 +65,7 @@ In this demonstration, we will experiment with Cloud Shell.
 
 1. Notice on the editor top banner, selections for Settings (Text Size and Font) and Upload/Download files.
 
-1. Notice on the ellipses (**\...**) on the far right for **Save**, **Close Editor**, and **Open File**.
+1. Notice on the ellipsis (**\...**) on the far right for **Save**, **Close Editor**, and **Open File**.
 
 1. Experiment as you have time, then **close** the Cloud Editor.
 
