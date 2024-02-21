@@ -22,7 +22,7 @@ Your organization is evaluating how to backup and restore Azure virtual machines
 
 There is an interactive lab simulation that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-+ **[Backup virtual machines and on-premises files.](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)**. Create a recovery services vault and implement an Azure virtual machine backup. Implement on-premises file and folder backup using the Microsoft Azure Recovery Services agent. On-premises backups is outside the scope of this lab, but might be helpful to view those steps. 
++ **[Backup virtual machines and on-premises files.](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)**. Create a recovery services vault and implement an Azure virtual machine backup. Implement on-premises file and folder backup using the Microsoft Azure Recovery Services agent. On-premises backups are outside the scope of this lab but it might be helpful to view those steps. 
 
 ## Job skills
 
@@ -172,7 +172,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
 ## Task 4: Monitor Azure Backup
 
-In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solution.
+In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solutions.
 
 1. From the Azure portal, search for and select `Storage accounts`.
 
@@ -197,7 +197,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Name the setting `Logs and Metrics to storage`.
 
-1. Place a checkmark next to the following log and metric catagories:
+1. Place a checkmark next to the following log and metric categories:
 
     - **Azure Backup Reporting Data**
     - **Addon Azure Backup Job Data**
@@ -256,7 +256,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Churn for the vm | **Normal churn**  |
     | Cache storage account | **(new) xxx**  |
 
-   >**Note:** It is important that both of these settings be populated or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
+   >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
 1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
