@@ -109,7 +109,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. On your container, scroll to to the ellipses on the far right, select **Access Policy**.
+1. On your container, scroll to the ellipsis on the far right, select **Access Policy**.
 
 1. In the **Immutable blob storage** area, select **Add policy**.
 
@@ -192,7 +192,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Explore Storage Browser and upload a file
 
-1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is an portal tool that lets you quickly view all the storage services under your account.
+1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
 1. Select **File shares** and verify your **share1** directory is present.
 
@@ -253,7 +253,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure storage provides several redundancy models including Locally redundant storage (LRS), Zone-redundant storage (ZRS), and Geo-redundant storage (GRS). 
 + Azure blob storage allows you to store large amounts of unstructured data on Microsoft's data storage platform. Blob stands for Binary Large Object, which includes objects such as images and multimedia files.
 + Azure file Storage provides shared storage for structured data. The data can be organized in folders.
-+ Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies an be time-based or legal-hold.
++ Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies can be time-based or legal-hold.
 
 ## Learn more with self-paced training
 
