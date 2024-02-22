@@ -113,7 +113,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     
     >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
-1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings** label.
+1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
@@ -239,7 +239,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Search for and select the `az104-10-vm0` virtual machine.
 
-1. In the **Operations** blade, select **Disaster recovery**. 
+1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
 
 1. Select **Enable replication**.
 
