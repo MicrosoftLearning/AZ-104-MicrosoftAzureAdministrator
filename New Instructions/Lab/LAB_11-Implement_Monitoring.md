@@ -225,12 +225,12 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. Review the query. This query uses the *heartbeat* table. 
 
-1. Replace the query with this one, and then click **Run**. Review the resulting chart.
+1. Replace the query with this one, and then click **Run**. Review the resulting chart. 
 
    ```bash
    // Virtual Machine available memory
-   // Chart the VM's available memory over the last hour.
-   InsightsMetrics \
+   // Chart the VM's available memory over the last hour
+   InsightsMetrics 
    | where TimeGenerated > ago(1h) 
    | where Name == "AvailableMB" 
    | project TimeGenerated, Name, Value 
@@ -239,7 +239,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. As you have time, review and run other queries.
 
-    >**Note**: Notice you can configure an alert rule based on a query. 
+    >**Did you know?**: Once you find a query you like, you can create an alert from it. 
 
 ## Cleanup your resources
 
