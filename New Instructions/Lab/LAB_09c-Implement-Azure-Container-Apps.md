@@ -81,7 +81,8 @@ If you are working with **your own subscription** take a minute to delete the la
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ Azure Container Apps (ACA) is a serverless platform that allows you to maintain less infrastructure and save costs while running containerized applications. Instead of worrying about server configuration, container orchestration, and deployment details, Container Apps provides all the up-to-date server resources required to keep your applications stable and secure.
++ Azure Container Apps (ACA) is a serverless platform that allows you to maintain less infrastructure and save costs while running containerized applications.
++ Container Apps provides server configuration, container orchestration, and deployment details. 
 + Workloads on ACA are usually long-running processes like a Web App.
 
 ## Learn more with self-paced training
