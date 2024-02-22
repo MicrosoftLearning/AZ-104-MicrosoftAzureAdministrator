@@ -118,7 +118,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. On the **az104-vm1** virtual machine, in the **Settings** blade, select **Size**.
+1. On the **az104-vm1** virtual machine, in the **Availability + scale** blade, select **Size**.
 
 1. Set the virtual machine size to **DS1_v2** and click **Resize**. When prompted, confirm the change.
 
