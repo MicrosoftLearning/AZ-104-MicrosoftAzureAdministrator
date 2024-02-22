@@ -224,7 +224,7 @@ In this task, you configure and test a resource lock. Locks prevent either delet
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `rg-lock`. Notice you can copy and paste the resource group name. 
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name. 
 
 1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**.
 
