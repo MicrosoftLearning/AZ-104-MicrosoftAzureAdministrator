@@ -101,7 +101,9 @@ If you are working with **your own subscription** take a minute to delete the la
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-+ Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud. ACI doesn't require you to provision or manage any underlying infrastructure. The service supports both Linux containers and Windows containers.
++ Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud.
++ ACI doesn't require you to provision or manage any underlying infrastructure.
++ ACI supports both Linux containers and Windows containers.
 + Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. 
 
 ## Learn more with self-paced training
