@@ -235,8 +235,10 @@ In this task, you will use Azure Monitor to query the data captured from the vir
     | render timechart
    ```
 
-1. As you have time, review and run other queries. If you aren't getting any results, consider using the [Log Analytics Demo Environment](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial#open-log-analytics). 
+1. As you have time, review and run other queries. 
 
+    >**Did you know?**: If you want to practice with other queries, there is a [Log Analytics Demo Environment](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial#open-log-analytics).
+    
     >**Did you know?**: Once you find a query you like, you can create an alert from it. 
 
 ## Cleanup your resources
