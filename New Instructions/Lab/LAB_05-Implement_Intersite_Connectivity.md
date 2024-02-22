@@ -163,7 +163,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
 In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
 
-1. In the Azure portal, select for and select the `CoreServicesVnet` virtual network.
+1. In the Azure portal, select the `CoreServicesVnet` virtual network.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
