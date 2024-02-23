@@ -16,21 +16,21 @@
     },
     "vmNamePrefix": {
       "type": "string",
-      "defaultValue": "az104-11-vm",
+      "defaultValue": "az104-vm",
       "metadata": {
         "description": "VM name prefix"
       }
     },
     "pipNamePrefix": {
       "type": "string",
-      "defaultValue": "az104-11-pip",
+      "defaultValue": "az104-pip",
       "metadata": {
         "description": "Public IP address name prefix"
       }
     },
     "nicNamePrefix": {
       "type": "string",
-      "defaultValue": "az104-11-nic",
+      "defaultValue": "az104-nic",
       "metadata": {
         "description": "Nic name prefix"
       }
@@ -70,7 +70,7 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "az104-11-vnet",
+      "defaultValue": "az104-vnet",
       "metadata": {
         "description": "Virtual network name"
       }
@@ -84,7 +84,7 @@
     },
     "virtualNetworkResourceGroup": {
       "type": "string",
-      "defaultValue": "az104-11-rg0",
+      "defaultValue": "az104-rg11",
       "metadata": {
         "description": "Resource group of the VNet"
       }
@@ -105,7 +105,7 @@
     },
     "nsgName": {
       "type": "string",
-      "defaultValue": "az104-11-nsg01",
+      "defaultValue": "az104-nsg01",
       "metadata": {
         "description": "Network security group name"
       }
