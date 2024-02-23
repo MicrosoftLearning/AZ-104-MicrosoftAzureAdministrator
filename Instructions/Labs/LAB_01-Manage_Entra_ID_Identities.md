@@ -93,7 +93,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
     >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
     
-### Task 2: Create groups and add members
+## Task 2: Create groups and add members
 
 In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
 
