@@ -179,7 +179,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    Get-AzDisk
    ```
    
-## Task 5: Deploy a template with the CLI 
+## Task 4: Deploy a template with the CLI 
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
@@ -209,7 +209,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
      az disk list --output table
      ```
    
-## Task 6: Deploy a resource by using Azure Bicep
+## Task 5: Deploy a resource by using Azure Bicep
 
 In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
 
