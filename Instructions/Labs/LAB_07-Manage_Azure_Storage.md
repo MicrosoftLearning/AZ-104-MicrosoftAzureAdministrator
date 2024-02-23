@@ -5,334 +5,257 @@ lab:
 ---
 
 # Lab 07 - Manage Azure Storage
-# Student lab manual
+
+## Lab introduction
+
+In this lab you learn to create storage accounts for Azure blobs and Azure files. You learn to configure and secure blob containers. You also learn to use Storage Browser to configure and secure Azure file shares. 
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
+
+## Estimated timing: 50 minutes
 
 ## Lab scenario
 
-You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While majority of these files are not accessed frequently, there are some exceptions. You would like to minimize cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
+Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+## Interactive lab simulations
 
-## Objectives
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
 
-In this lab, you will:
-
-+ Task 1: Provision the lab environment
-+ Task 2: Create and configure Azure Storage accounts
-+ Task 3: Manage blob storage
-+ Task 4: Manage authentication and authorization for Azure Storage
-+ Task 5: Create and configure an Azure Files shares
-+ Task 6: Manage network access for Azure Storage
-
-## Estimated timing: 40 minutes
++ [Create blob storage](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%205). Create a storage account, manage blob storage, and monitor storage activities. 
+  
++ [Manage Azure storage](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011). Create a storage account and review the configuration. Manage blob storage containers. Configure storage networking. 
 
 ## Architecture diagram
 
-![image](../media/lab07.png)
+![Diagram of the tasks.](../media/az104-lab07-architecture.png)
 
+## Job skills
 
-### Instructions
++ Task 1: Create and configure a storage account. 
++ Task 2: Create and configure secure blob storage.
++ Task 3: Create and configure secure Azure file storage.
 
-## Exercise 1
+## Task 1: Create and configure a storage account. 
 
-## Task 1: Provision the lab environment
+In this task, you will create and configure a storage account. The storage account will use geo-redundant storage and will not have public access. 
 
-In this task, you will deploy an Azure virtual machine that you will use later in this lab.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Sign in to the **[Azure portal](https://portal.azure.com)**.
+1. Search for and select `Storage accounts`, and then click **+ Create**.
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+    | Setting | Value |
+    | --- | --- |
+    | Subscription          | the name of your Azure subscription  |
+    | Resource group        | **az104-rg7** (create new) |
+    | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
+    | Region                | **(US) East US**  |
+    | Performance           | **Standard** (notice the Premium option) |
+    | Redundancy            | **Geo-redundant storage** (notice the other options)|
+    | Make read access to data in the event of regional availability | Check the box |
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**.
+>**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **\\Allfiles\\Labs\\07\\az104-07-vm-template.json** and **\\Allfiles\\Labs\\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
+1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
-1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
+1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
 
-    >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`
-    >**Note**: Each command below should be typed separately
+1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults.
 
-    ```powershell
-    $location = '[Azure_region]'
-    ```
+1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
+
+1. Select **Review**, wait for the validation process to complete, and then click **Create**.
+
+1. Once the storage account is deployed, select **Go to resource**.
+
+1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
+
+1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+
+    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
+    + In the **Firewall** section, check the box for **Add your client IP address.**
+    + Be sure to **Save** your changes. 
   
-    ```powershell
-     $rgName = 'az104-07-rg0'
-    ```
+1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
-    ```powershell
-    New-AzResourceGroup -Name $rgName -Location $location
-    ```
+1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
+
+    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
     
-1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
+    
+    + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
-    >**Note**: You will be prompted to provide an Admin password.
+    ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
 
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-07-vm-template.json `
-      -TemplateParameterFile $HOME/az104-07-vm-parameters.json `
-      -AsJob
-   ```
+## Task 2: Create and configure secure blob storage
 
-    >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
+In this task, you will create a blob container and upload an image. Blob containers are directory-like structures that store unstructured data.
 
-    >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
-    > 1. Click on the `{}` button in your CloudShell, select the **az104-07-vm-parameters.json** from the left hand side bar and take a note of the `vmSize` parameter value.
-    > 1. Check the location in which the 'az104-04-rg1' resource group is deployed. You can run `az group show -n az104-04-rg1 --query location` in your CloudShell to get it.
-    > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
-    > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
-    > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
+### Create a blob container and a time-based retention policy
 
-1. Close the Cloud Shell pane.
+1. Continue in the Azure portal, working with your storage account.
 
-## Task 2: Create and configure Azure Storage accounts
+1. In the **Data storage** section, click **Containers**. 
 
-In this task, you will create and configure an Azure Storage account.
-
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
-
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
+1. Click **+ Container** and **Create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a **new** resource group **az104-07-rg1** |
-    | Storage account name | any globally unique name between 3 and 24 in length consisting of letters and digits |
-    | Region | the name of an Azure region where you can create an Azure Storage account  |
-    | Performance | **Standard** |
-    | Redundancy | **Geo-redundant storage (GRS)** |
+    | Name | `data`  |
+    | Public access level | Notice the access level is set to private |
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
+    ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. On the **Networking** tab of the **Create storage account** blade, review the available options, accept the default option **Enable public access from all networks** and click **Next: Data protection >**.
+1. On your container, scroll to the ellipsis (...) on the far right, select **Access Policy**.
 
-1. On the **Data protection** tab of the **Create storage account** blade, review the available options, accept the defaults, click **Review + Create**, wait for the validation process to complete and click **Create**.
-
-    >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
-
-1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
-
-1. On the Storage account blade, in the **Data management** section, click **Redundancy** and note the secondary location. 
-
-1. In the **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change. Note, at this point, the Storage account has only the primary location.
-
-1. On the Storage account blade, in the **Settings** section, select **Configuration**. Set **Blob access tier (default)** to **Cool**, and save the change.
-
-    > **Note**: The cool access tier is optimal for data which is not accessed frequently.
-
-## Task 3: Manage blob storage
-
-In this task, you will create a blob container and upload a blob into it.
-
-1. On the Storage account blade, in the **Data storage** section, click **Containers**.
-
-1. Click **+ Container** and create a container with the following settings:
+1. In the **Immutable blob storage** area, select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-container**  |
-    | Public access level | **Private (no anonymous access)** |
+    | Policy type | **Time-based retention**  |
+    | Set retention period for | `180` days |
 
-1. In the list of containers, click **az104-07-container** and then click **Upload**.
+1. Select **Save**.
 
-1. Browse to **\\Allfiles\\Labs\\07\\LICENSE** on your lab computer and click **Open**.
+### Manage blob uploads
 
-1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
+1. Return to the containers page, select your **data** container and then click **Upload**.
+
+1. On the **Upload blob** blade, expand the **Advanced** section.
+
+    >**Note**: Locate a file to upload. This can be any type of file, but a small file is best. A sample file can be downloaded from the AllFiles directory. 
 
     | Setting | Value |
     | --- | --- |
+    | Browse for files | add the file you have selected to upload |
+    | Select **Advanced** | |
     | Blob type | **Block blob** |
-    | Block size | **4 MB** |
-    | Access tier | **Hot** |
-    | Upload to folder | **licenses** |
-
-    > **Note**: Access tier can be set for individual blobs.
+    | Block size | **4 MiB** |
+    | Access tier | **Hot**  (notice the other options) |
+    | Upload to folder | `securitytest` |
+    | Encryption scope | Use existing default container scope |
 
 1. Click **Upload**.
 
-    > **Note**: Note that the upload automatically created a subfolder named **licenses**.
+1. Confirm you have a new folder, and your file was uploaded. 
 
-1. Back on the **az104-07-container** blade, click **licenses** and then click **LICENSE**.
+1. Select your upload file and review the options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
-1. On the **licenses/LICENSE** blade, review the available options.
-
-    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
-
-## Task 4: Manage authentication and authorization for Azure Storage
-
-In this task, you will configure authentication and authorization for Azure Storage.
-
-1. On the **licenses/LICENSE** blade, on the **Overview** tab, click **Copy to clipboard** button next to the **URL** entry.
-
-1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+1. Copy the file **URL** and paste into a new **Inprivate** browsing window.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
     > **Note**: This is expected, since the container you created has the public access level set to **Private (no anonymous access)**.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the the **Generate SAS** tab.
+### Configure limited access to the blob storage
 
-1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
+1. Select your uploaded file and then on the **Generate SAS** tab. You can also use the ellipsis (...) to the far right. Specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Signing key | **Key 1** |
-    | Permissions | **Read** |
+    | Permissions | **Read** (notice your other choices) |
     | Start date | yesterday's date |
     | Start time | current time |
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    
 
 1. Click **Generate SAS token and URL**.
 
-1. Click **Copy to clipboard** button next to the **Blob SAS URL** entry.
+1. Copy the **Blob SAS URL** entry to the clipboard.
 
-1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+1. Open another InPrivate browser window and navigate to the Blob SAS URL you copied in the previous step.
 
-    > **Note**: You should be able to view the content of the file by downloading it and opening it with Notepad.
+    >**Note**: You should be able to view the content of the file. 
 
-    > **Note**: This is expected, since now your access is authorized based on the newly generated the SAS token.
+## Task 3: Create and configure an Azure File storage
 
-    > **Note**: Save the blob SAS URL. You will need it later in this lab.
+In this task, you will create and configure Azure File shares. You will use Storage Browser to manage the file share. 
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
+### Create the file share and upload a file
 
-1. Click the **Switch to the Microsoft Entra User Account** link next to the **Authentication method** label.
+1. In the Azure portal, navigate back to your storage account, in the **Data storage** section, click **File shares**.
 
-    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Microsoft Entra"*). It is expected.  
+1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. 
 
-    > **Note**: At this point, you do not have permissions to change the Authentication method.
+1. Notice the **Tier** options. Keep the default **Transaction optimized**.
+   
+1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are disabling backup to simplify the lab configuration.
 
-1. On the **az104-07-container** blade, click **Access Control (IAM)**.
+1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
-1. On the **Check access** tab, click **Add role assignment**.
+    ![Screenshot of the create file share page.](../media/az104-lab07-create-share.png)
 
-1. On the **Add role assignment** blade, specify the following settings:
+### Explore Storage Browser and upload a file
 
-    | Setting | Value |
-    | --- | --- |
-    | Role | **Storage Blob Data Owner** |
-    | Assign access to | **User, group, or service principal** |
-    | Members | the name of your user account |
+1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Click **Review + Assign** and then **Review + assign**, and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Microsoft Entra User Account).
+1. Select **File shares** and verify your **share1** directory is present.
 
-    > **Note**: It might take about 5 minutes for the change to take effect.
+1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
-## Task 5: Create and configure an Azure Files shares
+1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
-In this task, you will create and configure Azure Files shares.
+    >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
-> **Note**: Before you start this task, verify that the virtual machine you provisioned in the first task of this lab is running.
+### Restrict network access to the storage account
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
+1. In the portal, search for and select **Virtual networks**.
 
-1. Click **+ File share** and on the **Basics** tab give the file share a name, **az104-07-share**. Review the other settings on this tab. 
+1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
 
-1. Move to the **Backup** tab, and ensure **Enable Backup** is **not** checked.
+1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
-1. Click **Review and create**, and then **Create**. Wait for the file share to deploy. 
+1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
-1. Click the newly created file share and note the information available on the **az104-07-share** blade.
+1. In the **Settings** section, select the **Subnets** blade.
+    + Select the **default** subnet.
+    + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
+    + Do not make any other changes.    
+    + Be sure to **Save** your changes. 
 
-1. Click **Browse** and note that there are no files or folders in the new file share. Click **Connect**.
+1. Return to your storage account.
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. In the **Security + networking** section, select the **Networking** blade.
 
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
+1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
 
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
+1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
-1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**.
+1. Be sure to **Save** your changes.
 
-1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
+    >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
-1. Verify that the script completed successfully.
+1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
-1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
+    >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
-   ```powershell
-   New-Item -Type Directory -Path 'Z:\az104-07-folder'
 
-   New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
-   ```
+![Screenshot unauthorized access.](../media/az104-lab07-notauthorized.png)
 
-1. Verify that the script completed successfully.
+## Cleanup your resources
 
-1. Navigate back to the **az104-07-share \| Browse** file share blade, click **Refresh**, and verify that the **az104-07-folder** appears in the list of folders.
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
 
-## Task 6: Manage network access for Azure Storage
+## Key takeaways
 
-In this task, you will configure network access for Azure Storage.
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks**.
++ An Azure storage account contains all your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS.
++ Azure storage provides several redundancy models including Locally redundant storage (LRS), Zone-redundant storage (ZRS), and Geo-redundant storage (GRS). 
++ Azure blob storage allows you to store large amounts of unstructured data on Microsoft's data storage platform. Blob stands for Binary Large Object, which includes objects such as images and multimedia files.
++ Azure file Storage provides shared storage for structured data. The data can be organized in folders.
++ Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies can be time-based or legal-hold.
 
-1. Click the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
+## Learn more with self-paced training
 
-    > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
-
-1. Click the checkbox **Add your client IP address** and save the change.
-
-1. Open another browser window by using InPrivate mode and navigate to the blob SAS URL you generated in the previous task.
-
-    > **Note**: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
-
-1. You should be able to download the LICENSE.txt file.
-
-    > **Note**: This is expected, since you are connecting from your client IP address.
-
-1. Close the InPrivate mode browser window, return to the browser window showing the **Networking** blade of the Azure Storage account.
-
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
-
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
-
-1. On the **Run Command Script** blade, run the following in the **PowerShell Script** pane to attempt downloading of the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
-
-   ```powershell
-   Invoke-WebRequest -URI '[blob SAS URL]'
-   ```
-1. Verify that the download attempt failed.
-
-    > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected, since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
-
-## Clean up resources
-
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
-
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. You might also try to delete the Resource Group where the resources reside. That is a quick Administrator shortcut. If you have concerns speak to your instructor.
-
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
-
-1. List all resource groups created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-07*'
-   ```
-
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
-
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-07*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-## Review
-
-In this lab, you have:
-
-- Provisioned the lab environment
-- Created and configured Azure Storage accounts
-- Managed blob storage
-- Managed authentication and authorization for Azure Storage
-- Created and configured an Azure Files shares
-- Managed network access for Azure Storage
++ [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
++ [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.

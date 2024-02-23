@@ -5,51 +5,56 @@ lab:
 ---
 
 # Lab 09b - Implement Azure Container Instances
-# Student lab manual
+
+## Lab introduction
+
+In this lab, you learn how to implement and deploy Azure Container Instances.
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
+
+## Estimated timing: 15 minutes
 
 ## Lab scenario
 
-Contoso wants to find a new platform for its virtualized workloads. You identified a number of container images that can be leveraged to accomplish this objective. Since you want to minimize container management, you plan to evaluate the use of Azure Container Instances for deployment of Docker images.
+Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Instances and Docker. 
+## Interactive lab simulations
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
 
-## Objectives
++ [Deploy Azure Container Instances](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203). Create, configure, and deploy a Docker container with Azure Container Instances.
+  
++ [Implement Azure Container Instances](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014).  Deploy a Docker image using Azure Container Instances. 
 
-In this lab, you will:
+## Job skills
 
-- Task 1: Deploy an Azure Container Instance using a Docker image
-- Task 2: Review the functionality of the Azure Container Instance
+- Task 1: Deploy an Azure Container Instance using a Docker image.
+- Task 2: Test and verify deployment of an Azure Container Instance.
 
-## Estimated timing: 20 minutes
 
 ## Architecture diagram
 
-![image](../media/lab09b.png)
-
-### Instructions
-
-## Exercise 1
+![Diagram of the tasks.](../media/az104-lab09b-aci-architecture.png)
 
 ## Task 1: Deploy an Azure Container Instance using a Docker image
 
-In this task, you will create a new container instance for the web application.
+In this task, you will create a simple web application using a Docker image. Docker is a platform that provides the ability to package and run applications in isolated environments called containers. Azure Container Instances provides the compute environment for the container image.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. In the Azure portal, search for locate **Container instances** and then, on the **Container instances** blade, click **+ Create**.
+1. In the Azure portal, search for and select `Container instances` and then, on the **Container instances** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | ---- | ---- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of a new resource group **az104-09b-rg1** |
-    | Container name | **az104-9b-c1** |
-    | Region | the name of a region where you can provision Azure container instances |
+    | Subscription | Select your Azure subscription |
+    | Resource group | `az104-rg9` (If necessary, select **Create new**) |
+    | Container name | `az104-c1` |
+    | Region | **East US** (or a region available near you)|
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
-1. Click **Next: Networking >** and, on the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Networking >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -57,15 +62,17 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Next: Advanced >**, review the settings without making any changes.
 
-    >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
+ 1. Click **Review + Create**, ensure that the validation passed and then select **Create**.
 
-    >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view it, browse the \\app folder.
+    >**Note**: Wait for the deployment to complete. This should take 2-3 minutes.
 
-## Task 2: Review the functionality of the Azure Container Instance
+    >**Note**: While you wait, you may be interested in viewing the [code behind the sample application](https://github.com/Azure-Samples/aci-helloworld). To view the code, browse the \\app folder.
 
-In this task, you will review the deployment of the container instance.
+## Task 2: Test and verify deployment of an Azure Container Instance 
+
+In this task, you review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, you can navigate to the container using the DNS name that you provided in the previous task.
 
 1. On the deployment blade, click the **Go to resource** link.
 
@@ -73,39 +80,34 @@ In this task, you will review the deployment of the container instance.
 
 1. Copy the value of the container instance **FQDN**, open a new browser tab, and navigate to the corresponding URL.
 
-1. Verify that the **Welcome to Azure Container Instance** page is displayed.
+     ![Screenshot of the ACI overview page in the portal.](../media/az104-lab09b-aci-overview.png)
 
-1. Close the new browser tab, back in the Azure portal, in the **Settings** section of the container instance blade, click **Containers**, and then click **Logs**.
+1. Verify that the **Welcome to Azure Container Instance** page is displayed. Refresh the page several times to create some log entries then close the browser tab.  
+
+1. In the **Settings** section of the container instance blade, click **Containers**, and then click **Logs**.
 
 1. Verify that you see the log entries representing the HTTP GET request generated by displaying the application in the browser.
+   
+## Cleanup your resources
 
-## Clean up resources
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
->**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
 
->**Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a long time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
 
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+## Key takeaways
 
-    >**Note**: Cloud Shell storage must be created for these commands to work. 
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
 
-1. List all resource groups created throughout the labs of this module by running the following command:
++ Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud.
++ ACI doesn't require you to provision or manage any underlying infrastructure.
++ ACI supports both Linux containers and Windows containers.
++ Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. 
 
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-09b*'
-   ```
+## Learn more with self-paced training
 
-1. Delete all resource groups you created throughout the labs of this module by running the following command:
++ [Run container images in Azure Container Instances](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/). Learn how Azure Container Instances can help you quickly deploy containers, how to set environment variables, and specify container restart policies.
 
-   ```powershell
-   Get-AzResourceGroup -Name 'az104-09b*' | Remove-AzResourceGroup -Force -AsJob
-   ```
-
-    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
-
-## Review
-
-In this lab, you have:
-
-- Deployed a Docker image by using the Azure Container Instance
-- Reviewed the functionality of the Azure Container Instance
+    

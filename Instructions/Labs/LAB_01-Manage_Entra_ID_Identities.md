@@ -6,292 +6,156 @@ lab:
 
 # Lab 01 - Manage Microsoft Entra ID Identities
 
-# Student lab manual
+## Lab introduction
 
-## Lab scenario
-
-In order to allow Contoso users to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
-
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
-## Objectives
-
-In this lab, you will:
-
-+ Task 1: Create and configure users
-+ Task 2: Create groups with assigned and dynamic membership
-+ Task 3: Create a tenant (Optional - lab environment issue)
-+ Task 4: Manage guest users (Optional - lab environment issue)
+This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
 
 ## Estimated timing: 30 minutes
 
+## Lab scenario
+
+Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and groups. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
+
+## Interactive lab simulation
+
+This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
+>**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). 
+
++ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
+
 ## Architecture diagram
-![image](../media/lab01entra.png)
+![Diagram of the lab 01 architecture.](../media/az104-lab01-architecture.png)
 
-### Instructions
+## Job skills
 
-## Exercise 1
++ Task 1: Create and configure user accounts.
++ Task 2: Create groups and add members.
 
-## Task 1: Create and configure  users
+## Task 1: Create and configure user accounts
 
-In this task, you will create and configure users.
+In this task, you will create and configure user accounts. User accounts will store user data such as name, department, location, and contact information.
 
->**Note**: If you have previously used the Trial license for Microsoft Entra ID on this tenant you will need a new tenant and perform  Task 2 after Task 3 in the new tenant.
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+    >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interface.
+    
+1. Search for and select `Microsoft Entra ID`. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**.
+1. Select the **Overview** blade and then the **Manage tenants** tab. 
 
-1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
+    >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. 
 
-1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
+1. Return to the **Entra ID** page and select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+   
+### Create a new user
 
-1. Click **Edit properties**, and then in the **Settings** tab, set **Usage location** to **United States** and click **Save** to apply the change.
+1. Select **Users**, then in the **New user** drop-down select **Create new user**. 
 
-    >**Note**: This is necessary in order to assign an Microsoft Entra ID P2 license to your user account later in this lab.
-
-1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
 
     | Setting | Value |
     | --- | --- |
-    | User principal name | **az104-01a-aaduser1** |
-    | Display name | **az104-01a-aaduser1** |
-    | Auto-generate password | de-select |
-    | Initial password | **Provide a secure password** |
-    | Job title (Properties tab) | **Cloud Administrator** |
-    | Department (Properties tab) | **IT** |
+    | User principal name | `az104-user1` |
+    | Display name | `az104-user1` |
+    | Auto-generate password | **checked** |
+    | Account enabled | **checked** |
+    | Job title (Properties tab) | `IT Lab Administrator` |
+    | Department (Properties tab) | `IT` |
     | Usage location (Properties tab) | **United States** |
 
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
+1. Once you have finished reviewing, select **Review + create** and then **Create**.
 
-1. In the list of users, click the newly created user account to display its blade.
+1. Refresh the page and confirm your new user was created. 
 
-1. Review the options available in the **Manage** section and note that you can identify the roles assigned to the user account as well as the user account's permissions to Azure resources.
+### Invite an external user
 
-1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
-
-    >**Note**: You also have the option of assigning roles when provisioning a new user.
-
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
-
-    >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
-
-1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
-
-    >**Note**: While this user account can access the tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
-
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
+1. In the **New user** drop-down select **Invite an external user**. 
 
     | Setting | Value |
     | --- | --- |
-    | User principal name | **az104-01a-aaduser2** |
-    | Display name | **az104-01a-aaduser2** |
-    | Auto-generate password | de-select  |
-    | Initial password | **Provide a secure password** |
-    | Job title | **System Administrator** |
-    | Department | **IT** |
-    | Usage location | **United States** |
+    | Email | your email address |
+    | Display name | your name |
+    | Send invite message | **check the box** |
+    | Message | `Welcome to Azure and our group project` |
+
+1. Move to the **Properties** tab. Complete the basic information, including these fields. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Job title  | `IT Lab Administrator` |
+    | Department  | `IT` |
+    | Usage location (Properties tab) | **United States** |
+
+1. Select **Review + invite**, and then **Invite**.
+
+1. **Refresh** the page and confirm the invited user was created. You should receive the invitation email shortly. 
+
+    >**Note:** It is unlikely you will be creating user accounts individually. Do you know how your organization plans to create and manage user accounts?
     
-1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
+### Task 2: Create groups and add members
 
-## Task 2: Create groups with assigned and dynamic membership
+In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
 
-In this task, you will create groups with assigned and dynamic membership.
+1. In the Azure portal, search for and select `Groups`.
 
-1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the tenant and, in the **Manage** section, click **Licenses**.
+1. Take a minute to familiarize yourself with the group settings in the left pane.
 
-    >**Note**: Microsoft Entra ID Premium P1 or P2 licenses are required in order to implement dynamic groups.
+   + **Expiration** lets you configure a group lifetime in days. After that time the group must be renewed by the owner.
+   + **Naming policy** lets you configure blocked words and add a prefix or suffix to group names.
 
-1. In the **Manage** section, click **All products**.
-
-1. Click **+ Try/Buy** and activate the free trial of Microsoft Entra ID Premium P2.
-
-1. Refresh the browser window to verify that the activation was successful. 
-
-    >**Note**: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
-
-1. From the **Licenses - All products** blade, select the **Microsoft Entra ID P2** entry, and assign all license options to your user account and the two newly created user accounts.
-
-1. In the Azure portal, navigate back to the Microsoft Entra ID tenant blade and click **Groups**.
-
-1. Use the **+ New group** button to create a new group with the following settings:
+1. In the **All groups** blade, select **+ New group** and create a new group.     
 
     | Setting | Value |
     | --- | --- |
     | Group type | **Security** |
-    | Group name | **IT Cloud Administrators** |
-    | Group description | **Contoso IT cloud administrators** |
-    | Membership type | **Dynamic User** |
-
-    >**Note**: If the **Membership type** drop-down list is grayed out, wait a few minutes and refresh the browser page.
-
-1. Click **Add dynamic query**.
-
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Property | **jobTitle** |
-    | Operator | **Equals** |
-    | Value | **Cloud Administrator** |
-
-1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
-
-1. Back on the **Groups - All groups** blade of the tenant, click the **+ New group** button and create a new group with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT System Administrators** |
-    | Group description | **Contoso IT system administrators** |
-    | Membership type | **Dynamic User** |
-
-1. Click **Add dynamic query**.
-
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Property | **jobTitle** |
-    | Operator | **Equals** |
-    | Value | **System Administrator** |
-
-1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
-
-1. Back on the **Groups - All groups** blade of the tenant, click the **+ New group** button, and create a new group with the following settings:
-
-    | Setting | Value |
-    | --- | --- |
-    | Group type | **Security** |
-    | Group name | **IT Lab Administrators** |
-    | Group description | **Contoso IT Lab administrators** |
+    | Group name | `IT Lab Administrators` |
+    | Group description | `Administrators that manage the IT lab` |
     | Membership type | **Assigned** |
+
+    >**Note**: An Entra ID Premium P1 or P2 license is required for dynamic membership. If other **Membership types** are available, the options will show up in the drop-down. 
     
-1. Click **No members selected**.
+    ![Screenshot of create assigned group.](../media/az104-lab01-create-assigned-group.png)
 
-1. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
+1. Select **No owners selected**.
 
-1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+1. In the **Add owners** page, search for and **select** yourself as the owner. Notice you can have more than one owner. 
 
-    >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding a whitespace at the end, and **Save** the change.
+1. Select **No members selected**.
 
-1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
+1. In the **Add members** pane, search for and **select** the **az104-user1** and the **guest user** you invited. Add both of the users to the group. 
 
-## Task 3: Create a tenant (Optional - Possible captcha issues, paid subscription required)
+1. Select **Create** to deploy the group.
 
-In this task, you will create a new tenant.
-    
-1. In the Azure portal, search for and select **Microsoft Entra ID**.
+1. **Refresh** the page and ensure your group was created.
 
-    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:
-    - Try the creation a few times.<br>
-    - Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
-    - Open a new **InPrivate** window and using the Azure Portal and try to create the tenant from there.<br>
-     Raise the problem with the trainer, then use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
-    - You can try this task later, but creating a tenant isn't required in other labs. 
+1. Select the new group and review the **Members** and **Owners** information.
 
-1. Click **Manage tenants**, and then on the next screen, click **+ Create**, and specify the following setting:
+>**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
+   
+## Cleanup your resources
 
-    | Setting | Value |
-    | --- | --- |
-    | Directory type | **Microsoft Entra ID** |
-    
-1. Click **Next : Configuration**
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-    | Setting | Value |
-    | --- | --- |
-    | Organization name | **Contoso Lab** |
-    | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter | 
-    | Country/Region | **United States** |
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+  
+## Key takeaways
 
-   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green check mark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+Congratulations on completing the lab. Here are some main takeways for this lab:
 
-1. Click **Review + create** and then click **Create**.
-
-1. Display the blade of the newly created tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
-
-## Task 4: Manage guest users.
-
-In this task, you will create  guest users and grant them access to resources in an Azure subscription.
-
-1. In the Azure portal displaying the Contoso Lab tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
-
-1. Create a new user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | User principal name | **az104-01b-aaduser1** |
-    | Display name | **az104-01b-aaduser1** |
-    | Auto-generate password | de-select  |
-    | Initial password | **Provide a secure password** |
-    | Job title | **System Administrator** |
-    | Department | **IT** |
-
-1. Click on the newly created profile.
-
-    >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
-
-1. Return to the first tenant that you created earlier.
-2. Select **Overview** in the navigation pane.
-3. Click **Manage tenants**.
-4. Check the box next to the first tenant you created earlier, then select **Switch**.
-
-1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
-
-1. Invite a new guest user with the following settings (leave others with their defaults):
-
-    | Setting | Value |
-    | --- | --- |
-    | Email | the User Principal Name you copied earlier in this task |
-    | Display Name (Properties tab)  | **az104-01b-aaduser1** |
-    | Job title (Properties tab) | **Lab Administrator** |
-    | Department (Properties tab) | **IT** |
-    | Usage location (Properties tab) | **United States** |
-
-1. Click **Invite**. 
-
-1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
-
-1. On the **az104-01b-aaduser1 - Profile** blade, click **Groups**.
-
-1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
++ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
++ Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
++ Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
++ Group membership can be statically or dynamically assigned.
 
 
-## Task 5: Clean up resources
+## Learn more with self-paced training
 
-> **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the tenant you created in this lab.
++ [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
++ [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
++ [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
 
- > **Note**:  Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going. 
 
-1. In the **Azure Portal** search for **Microsoft Entra ID** in the search bar. Under **Manage** select **Licenses**. Once at **Licenses** under **Manage** select **All Products** and then select **Microsoft Entra ID Premium P2** item in the list. Proceed by then selecting **Licensed Users**. Select the user accounts **az104-01a-aaduser1** and **az104-01a-aaduser2** to which you assigned licenses in this lab, click **Remove license**, and, when prompted to confirm, click **Yes**.
 
-1. In the Azure portal, navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** guest user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
-
-1. Repeat the same sequence of steps to delete the remaining user accounts you created in this lab.
-
-1. Navigate to the **Groups - All groups** blade, select the groups you created in this lab, click **Delete**, and, when prompted to confirm, click **OK**.
-
-1. In the Azure portal, display the blade of the Contoso Lab tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
-
-1. Navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
-
-1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab tenant, click **Manage tenants** and then on the next screen, select the box next to **Contoso Lab**, click **Delete**, on the **Delete tenant 'Contoso Labs'?** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade, set **Access management for Azure resources** to **Yes** and click **Save**.
-
-1. Navigate back to the **Delete tenant 'Contoso Lab'** blade and click **Refresh**, click **Delete**.
-
-> **Note**: If a tenant has a trial license, then you would have to wait for the trial license expiration before you could delete the tenant. This would not incur any additional cost.
-
-#### Review
-
-In this lab, you have:
-
-- Created and configured users
-- Created groups with assigned and dynamic membership
-- Created a tenant
-- Managed guest users 
