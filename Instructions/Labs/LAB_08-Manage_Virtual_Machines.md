@@ -39,7 +39,7 @@ There are interactive lab simulations that you might find useful for this topic.
 + Task 5: Create a virtual machine using Azure PowerShell (optional 1).
 + Task 6: Create a virtual machine using the CLI (optional 2).
 
-## Tasks 1 and 2: Azure Virtual Machines Architecture Diagram
+## Azure Virtual Machines Architecture Diagram
 
 ![Diagram of the vm architecture tasks.](../media/az104-lab08-vm-architecture.png)
 
@@ -156,7 +156,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
-## Task 3 and 4: Azure Virtual Machine Scale Sets Architecture Diagram
+## Azure Virtual Machine Scale Sets Architecture Diagram
 
 ![Diagram of the vmss architecture tasks.](../media/az104-lab08-vmss-architecture.png)
 
