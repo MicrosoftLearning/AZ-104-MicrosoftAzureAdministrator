@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "adminUsername": {
-            "value": "Student"
+            "value": "localadmin"
         },
         "vmNamePrefix": {
             "value": "az104-10-vm"
@@ -30,7 +30,7 @@
             "value": "10.0.0.0/24"
         },
         "virtualNetworkResourceGroup": {
-            "value": "az104-10-rg0"
+            "value": "az104-10-rg10"
         },
         "subnet0Name": {
             "value": "subnet0"

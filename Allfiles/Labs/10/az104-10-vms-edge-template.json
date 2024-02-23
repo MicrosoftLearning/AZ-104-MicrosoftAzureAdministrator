@@ -84,7 +84,7 @@
     },
     "virtualNetworkResourceGroup": {
       "type": "string",
-      "defaultValue": "az104-10-rg0",
+      "defaultValue": "az104-10-rg10",
       "metadata": {
         "description": "Resource group of the VNet"
       }
@@ -114,7 +114,7 @@
   "variables": {
     "vnetID": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnet0Name'))]",
-    "numberOfInstances": 2,
+    "numberOfInstances": 1,
     "computeAPIVersion": "2018-10-01",
     "networkAPIVersion": "2018-12-01"
   },
@@ -253,28 +253,6 @@
           ]
         }
       }
-    },
-    {
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-        "name": "[concat(parameters('vmNamePrefix'), copyindex(), '/customScriptExtension')]",
-        "apiVersion": "2018-06-01",
-        "location": "[resourceGroup().location]",
-        "copy": {
-          "name": "cSELoop",
-          "count": "[variables('numberOfInstances')]"
-        },
-        "dependsOn": [
-          "[concat(parameters('vmNamePrefix'), copyindex())]"
-        ],
-        "properties": {
-          "publisher": "Microsoft.Compute",
-          "type": "CustomScriptExtension",
-          "typeHandlerVersion": "1.10",
-          "autoUpgradeMinorVersion": true,
-          "Settings": {
-            "commandToExecute": "powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force && powershell.exe Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) && powershell.exe c:\\programdata\\chocolatey\\choco.exe install microsoft-edge -y"
-         }
-        }
     }
   ]
 }
