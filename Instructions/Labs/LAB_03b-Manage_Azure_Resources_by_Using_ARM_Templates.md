@@ -98,7 +98,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. **Save** your changes.
 
-1. Dpn't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
+1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
 
 1. Make this change so it matches the template file.
 
