@@ -160,7 +160,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     ```
     >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
    
-1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
 1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
@@ -189,7 +189,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     ls
     ```
 
-1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
 1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes. 
 
