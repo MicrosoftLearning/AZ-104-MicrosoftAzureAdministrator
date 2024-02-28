@@ -65,6 +65,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
+    | Public inbound ports | **None** |
 
     ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
    
@@ -111,6 +112,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Size | **Standard_DS2_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
+    | Public inbound ports | **None** |
 
 1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
