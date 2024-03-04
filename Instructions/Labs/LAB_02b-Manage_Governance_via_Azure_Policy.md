@@ -131,9 +131,9 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Resource group | **az104-rg2** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
 
-1. Select **Review** and then click **Create**:
+1. Select **Review** and then click **Create**.
 
-1. Once you create the deployment, you should see the **Deployment failed** message in the **Notifications** list of the portal. From the **Notifications** list, navigate to the deployment overview and click the **Deployment failed. Click here for details** message to identify the reason for the failure. 
+1.You should receive a **Validation failed** message. View the message to identify the reason for the failure. 
 
     ![Screenshot of the disallowed policy error.](../media/az104-lab02b-policyerror.png) 
 
