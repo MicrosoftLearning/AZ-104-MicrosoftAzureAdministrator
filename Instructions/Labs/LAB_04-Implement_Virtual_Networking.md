@@ -135,7 +135,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 ### Make changes to the parameters file
 
-1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
+1. Locate the **parameters.json** file exported in the previous task. It should be in your **Downloads** folder.
 
 1. Edit the file using the editor of your choice.
 
