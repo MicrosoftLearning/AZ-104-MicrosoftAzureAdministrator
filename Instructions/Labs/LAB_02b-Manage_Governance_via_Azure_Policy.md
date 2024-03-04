@@ -133,13 +133,11 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Select **Review** and then click **Create**.
 
-1.You should receive a **Validation failed** message. View the message to identify the reason for the failure. 
+1. You should receive a **Validation failed** message. View the message to identify the reason for the failure. Verify the error message states that the resource deployment was disallowed by the policy. 
 
     ![Screenshot of the disallowed policy error.](../media/az104-lab02b-policyerror.png) 
 
-    >**Note**: Verify the error message states that the resource deployment was disallowed by the policy. 
-
-    >**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Cost Center tag with Default value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
+>**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Cost Center tag with Default value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
 
 ## Task 3: Apply tagging via an Azure policy
 
