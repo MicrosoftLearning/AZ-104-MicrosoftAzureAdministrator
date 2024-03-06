@@ -152,7 +152,13 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Navigate back to the **az104-vm1** virtual machine and select **Disks**.
 
+1. In the **Data disk** section, select **Attach existing disks**.
+
+1. In the **Disk name** drop-down, select **VM1-DISK1**. 
+
 1. Verify the disk is now **Standard SSD**.
+
+1. Select **Apply** to save your changes. 
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
