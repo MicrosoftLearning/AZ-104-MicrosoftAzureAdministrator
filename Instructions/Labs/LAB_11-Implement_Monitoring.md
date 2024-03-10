@@ -41,7 +41,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. If necessary, download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** lab files to your computer.
+1. Download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
