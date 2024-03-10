@@ -271,7 +271,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule.
+1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
 
     **Rule - routing to the images backend**
 
@@ -291,7 +291,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Backend settings | **az104-http** |
     | Backend target | `az104-videobe` |
 
-1. Select **Add** twice then select **Next: Tags >**. No changes are needed.
+1. Be sure to **Save** and check your changes, then select **Next: Tags >**. No changes are needed.
 
 1. Select **Next: Review + create >** and then click **Create**.
 
