@@ -146,7 +146,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Settings | Values |
     |  -- | -- |
     | Resource Group | **az104-rg3** |
-    | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
+    | Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
     | File share (Create new) | `fs-cloudshell` |
 
 1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
