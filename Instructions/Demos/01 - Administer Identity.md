@@ -14,8 +14,6 @@ This area does not have a formal demonstration. Consider walking through the int
 
 Alternatively, you could use one of these QuickStarts. 
 
-**Reference**: [Quickstart - Access & create new tenant in Microsoft Entra ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
-
 **Reference**: [Quickstart - Create a group with members and view all groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## Configure User and Group Accounts
