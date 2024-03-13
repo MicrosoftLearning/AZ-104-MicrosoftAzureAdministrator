@@ -179,9 +179,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet1**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values).
 
@@ -207,7 +207,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Minimum instance count | `2` |
-    | Availability zone | **None** |
+    | Availability zone | **Zone 1** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
@@ -271,7 +271,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
+1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
     **Rule - routing to the images backend**
 
