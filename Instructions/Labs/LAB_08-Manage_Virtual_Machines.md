@@ -373,7 +373,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```powershell
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8' `
-    -Name 'myPSVM' `
+    -Name 'myPSVM' 
     ```
 
 1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**.
