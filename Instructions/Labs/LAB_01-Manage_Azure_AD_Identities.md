@@ -90,11 +90,11 @@ In this task, you will create and configure Entra ID users.
 
      ![](../Labs/Images/assignrole.png)
 
-1.  Then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
+1.  Then click **+ Add assignment** button and search and select **User administrator** role and click **Add** to assign role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Entra ID roles when provisioning a new user.
 
-      ![](../Labs/Images/az-104-ex-1-task-1-st-16.png)
+     ![](../Labs/media/lab1-image12.png)
      
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
@@ -133,8 +133,6 @@ In this task, you will create and configure Entra ID users.
     | Usage location | **United States** |
     
 1. Click on **Review + create** and then **Create**.
-
-1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
     >**Note**: If the users are already created then you can skip this task and continue further. 
 
