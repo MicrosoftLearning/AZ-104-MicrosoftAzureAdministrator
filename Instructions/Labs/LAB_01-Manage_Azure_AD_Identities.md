@@ -82,6 +82,8 @@ In this task, you will create and configure Entra ID users.
 
 1. In the list of users, click the newly created user account to display its blade.
 
+   ![](../Labs/media/lab1-image10.png)
+
 1. Review the options available in the **Manage** section and note that you can identify the Entra ID roles assigned to the user account as well as the user account's permissions to Azure resources.
 
 1. In the **Manage** section, click **Assigned roles**.
