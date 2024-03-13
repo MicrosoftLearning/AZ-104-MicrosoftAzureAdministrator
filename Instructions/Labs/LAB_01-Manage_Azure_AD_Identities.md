@@ -24,22 +24,23 @@ In this task, you will create and configure Entra ID users.
 
 1. In the Azure portal, search for Microsoft Entra ID (1) and select **Microsoft Entra ID (2)**.
 
+    ![](../Labs/media/lab1-image1.png)
 
 1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
-   ![](../Labs/media/az-104n1.png)
+   ![](../Labs/media/lab1-image2.png)
 
-1. On the Azure Active Directory blade, in the **Manage** section, click **Users**.
+1. From the **User settings**  blade, in the **Manage** section, click **Users**.
 
-    ![](../Labs/Images/users.png)
+    ![](../Labs/media/lab1-image3.png)
 
 1. Click your user account to display its **Profile** settings. 
 
-     ![](../Labs/Images/odluser.png)
+     ![](../Labs/media/lab1-image4.png)
 
-1. Click **Edit properties**, set **Usage location** to **United States**, and click **Save** to apply the change.
+1. Click **Edit properties** then navigate to **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
 
-     ![](../Labs/Images/editpro.png)
+     ![](../Labs/media/lab1-image5.png)
 
     >**Note**: This is necessary in order to assign a Microsoft Entra ID Premium P2 license to your user account later in this lab.
   
