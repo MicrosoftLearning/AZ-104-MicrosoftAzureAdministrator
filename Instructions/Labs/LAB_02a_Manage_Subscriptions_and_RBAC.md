@@ -63,55 +63,6 @@ In this task, you will create and configure management groups.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
-
-## Task 3: Create a custom RBAC role
-
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
-
-1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
-
-1. In the **Create a custom role** box, select **Add**.
-
-1. On the Basics tab complete the configuration.
-
-    | Setting | Value |
-    | --- | --- |
-    | Custom role name | `Custom Support Request` |
-    | Description | ``A custom contributor role for support requests.` |
-
-1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
-
-    ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
-
-1. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
-
-1. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
-
-1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
-
-    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. You could also selete and add other capabilities to the new role. 
-
-1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
-
-1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
-
-1. Select **Review + Create**, and then select **Create**.
-
-    >**Note:** At this point, you have created a custom role and assigned it to the management group.  
-
-## Task 4: Monitor role assignments with the Activity Log
-
-In this task, you view the activity log to determine if anyone has created a new role. 
-
-1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
-
-1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
-
-    ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
-
-
-
-
 ### Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
