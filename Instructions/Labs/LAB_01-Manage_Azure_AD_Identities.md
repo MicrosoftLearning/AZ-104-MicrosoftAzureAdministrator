@@ -147,14 +147,6 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
 
-1. Select **Microsoft Entra ID P2** from the list and then click on **+ Assign** in the next page
-
-1. On the **Assign license** page click on **+ Add Users and Groups** and assign all license options of Microsoft Entra ID P2 to your user account and the two newly created user accounts.
-
-   ![](../Labs/Images/az-104-ex-1-task-2-st-7.png)     
-   
-1. Click on **Review + assign** and **Assign**.
-
 1. In the Azure portal, navigate back to the Entra ID tenant blade and click **Groups**.
 
     ![](../Labs/Images/grp.png)        
