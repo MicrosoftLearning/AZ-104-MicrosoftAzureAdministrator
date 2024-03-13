@@ -1,7 +1,20 @@
 # Lab 01 - Manage Microsoft Entra ID Identities
 
+## Lab introduction
+
+This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
+
 ## Lab scenario
-To allow Contoso users to authenticate by using Entra ID, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user's job titles. You also need to create a test Entra ID tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
+
+Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and groups. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
+
+## Interactive lab simulation
+
+This lab uses an interactive lab simulation. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
+>**Note:** This simulation is being updated. Microsoft Entra ID is the new name for Azure Active Directory (Azure AD). 
+
++ [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
