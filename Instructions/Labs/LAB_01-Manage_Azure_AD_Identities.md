@@ -100,7 +100,6 @@ In this task, you will create and configure Entra ID users.
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
    
-
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
 
       
@@ -143,7 +142,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
       ![](../Labs/Images/lic.png)    
 
-1. Under **Manage** section click on **All products**. Notice the **Microsoft Entra ID P2** is list and assigned to the odl user.
+1. Under **Manage** section click on **All products**. Notice the **Microsoft Entra ID P2** is listed and assigned to the odl user.
 
     >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
     
