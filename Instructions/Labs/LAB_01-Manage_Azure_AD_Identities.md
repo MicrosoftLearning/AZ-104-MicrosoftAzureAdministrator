@@ -210,12 +210,10 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Group description | **Contoso IT Lab administrators** |
     | Membership type | **Assigned** |
 
-1. Click **No members selected**.
+1. Click **No members selected**. From the **Add members** blade, under **Groups** tab search and select the **IT Cloud Administrators** and **IT System Administrators** groups and click on **Select**, back on the **New Group** blade, click **Create**.
 
-1. From the **Add members** blade, search and select the **IT Cloud Administrators** and **IT System Administrators** groups and, back on the **New Group** blade, click **Create**.
-
-    ![](../Labs/Images/az-104-ex-1-task-2-st-21.png)   
-
+    ![](../Labs/media/lab1-image17.png)
+   
 1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
 
     >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
@@ -265,7 +263,9 @@ In this task, you will create a new Entra ID tenant.
 
 1. In the Azure portal search and select **Microsoft Entra ID**.
     
-1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant or by selecting **settings** button in the Azure portal toolbar and, click on **Switch**.
+1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings** button in the Azure portal toolbar and, click on **Switch**.
+
+     ![](../Labs/media/lab1-image18.png)
 
 ### Task 4: Manage Entra ID, guest users.
 
@@ -301,6 +301,8 @@ In this task, you will create Entra ID guest users and grant them access to reso
 1. Select **Overview** in the navigation pane.
 1. Click **Manage tenants**.
 1. Check the box next to the first tenant , then select **Switch**.
+
+    ![](../Labs/media/lab1-image19.png)
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
