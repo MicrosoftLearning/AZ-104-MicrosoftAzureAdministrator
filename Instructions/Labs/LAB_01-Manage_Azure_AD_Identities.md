@@ -38,9 +38,13 @@ In this task, you will create and configure Entra ID users.
 
      ![](../Labs/media/lab1-image4.png)
 
-1. Click **Edit properties** then navigate to **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
+1. Click **Edit properties**. then navigate to **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
 
      ![](../Labs/media/lab1-image5.png)
+   
+1. Click **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
+
+     ![](../Labs/media/lab1-image6.png)
 
     >**Note**: This is necessary in order to assign a Microsoft Entra ID Premium P2 license to your user account later in this lab.
   
