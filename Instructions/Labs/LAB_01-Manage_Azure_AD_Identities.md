@@ -143,8 +143,14 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
       ![](../Labs/Images/lic.png)    
 
-    >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
+1. Under **Manage** section click on **All products**. Notice the **Microsoft Entra ID P2** is list and assigned to the odl user.
 
+    >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
+    
+    >**Note**: From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+    
+    >**Note**: Please review the document to enhance your understanding of Microsoft Entra ID P2. You can find it at: https://learn.microsoft.com/en-us/entra/fundamentals/licensing
+    
 1. In the Azure portal, navigate back to the Entra ID tenant blade and click **Groups**.
 
     ![](../Labs/Images/grp.png)        
