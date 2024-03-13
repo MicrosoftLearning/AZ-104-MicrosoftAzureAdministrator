@@ -39,7 +39,7 @@ In this task, you will create and configure Entra ID users.
 
     ![](../Labs/media/lab1-image1.png)
 
-1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
+1. On the **Microsoft Entra ID** blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
    ![](../Labs/media/lab1-image2.png)
 
@@ -51,11 +51,11 @@ In this task, you will create and configure Entra ID users.
 
      ![](../Labs/media/lab1-image4.png)
 
-1. Click **Edit properties**. then navigate to **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
+1. Click **Edit properties**. 
 
      ![](../Labs/media/lab1-image5.png)
    
-1. Click **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States**and click **Save** to apply the change.
+1. Click **Settings** tab and make sure that **Usage location** set to **United States**, if not select  **Usage location** to **United States** and click **Save** to apply the change.
 
      ![](../Labs/media/lab1-image6.png)
 
@@ -249,14 +249,10 @@ In this task, you will create a new Entra ID tenant.
     - You can try this task later, but creating a tenant isn't required in other labs. 
 
 1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
-
-   ![](../Labs/Images/crttenant.png)   
    
     | Setting | Value |
     | --- | --- |
     | Select a tenant type | **Microsoft Entra ID** |    
-   
-   ![](../CloudLabs.AI/Images/crttenant1.png)      
     
 1. Click **Next: Configuration** then Click **Review + create (4)**
 
@@ -266,7 +262,6 @@ In this task, you will create a new Entra ID tenant.
     | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter **(2)** | 
     | Country/Region | **United States (3)** |
     
-
     ![](../Labs/Images/crttenant2.png)   
    
      > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
@@ -275,8 +270,8 @@ In this task, you will create a new Entra ID tenant.
 
    ![](../Labs/Images/catche.png)   
 
-   >**Note**: After clicking on **Submit** wait for 2 mintues and proceed with next step.
-
+   >**Note**: After clicking on Submit, please wait for 2 minutes before proceeding to the next step. You may not receive any notifications during this time then after some time procced with next step.
+   
 1. In the Azure portal search and select **Microsoft Entra ID**.
     
 1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings** button in the Azure portal toolbar and, click on **Switch**.
