@@ -261,7 +261,11 @@ In this task, you will create a new Entra ID tenant.
 
    ![](../Labs/Images/catche.png)   
 
-1. Display the blade of the newly created Entra ID tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar and, click on **Switch**.
+   >**Note**: After clicking on **Submit** wait for 2 mintues and proceed with next step.
+
+1. In the Azure portal search and select **Microsoft Entra ID**.
+    
+1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant or by selecting **settings** button in the Azure portal toolbar and, click on **Switch**.
 
 ### Task 4: Manage Entra ID, guest users.
 
@@ -292,10 +296,10 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Return to the first tenant that you created earlier **otuxxxxx@onmicrosoft.com**.
+1. Return to the first tenant that you created earlier **xxxxxxx@onmicrosoft.com**.
 1. Select **Overview** in the navigation pane.
 1. Click **Manage tenants**.
-1. Check the box next to the first tenant you created earlier, then select **Switch**.
+1. Check the box next to the first tenant , then select **Switch**.
 
 1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
 
