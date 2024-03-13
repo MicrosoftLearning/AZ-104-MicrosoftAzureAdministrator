@@ -291,7 +291,8 @@ In this task, you will create Entra ID guest users and grant them access to reso
     | --- | --- |
     | Job title | **System Administrator** |
     | Department | **IT** |
-       
+
+1. Click on **Review + create** and then **Create**.       
 1. Click on the newly created profile.
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
