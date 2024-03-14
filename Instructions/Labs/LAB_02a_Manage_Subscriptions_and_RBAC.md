@@ -1,13 +1,32 @@
 # Lab 02a - Manage Subscriptions and RBAC
 
-## Lab scenario
-To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
-- Creating a management group that would include all of Contoso's Azure subscriptions
-- Granting permissions to submit support requests for all subscriptions in the management group to a designated Microsoft Entra ID user. That user's permissions should be limited only to: 
-    - Creating support request tickets
-    - Viewing resource groups
+## Lab introduction
 
-   **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
+In this lab, you learn about role-based access control. You learn how to use permissions and scopes to control what actions identities can and cannot perform. You also learn how to make subscription management easier using management groups. 
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
+
+
+## Lab scenario
+
+To simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
+
+- Creating a management group that includes all your Azure subscriptions.
+
+- Granting permissions to submit support requests for all subscriptions in the management group. The permissions should be limited only to: 
+
+    - Create and manage virtual machines
+    - Create support request tickets (do not include adding Azure providers)
+
+## Interactive lab simulations
+
+There are some interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Manage access with RBAC](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2014). Assign built-in role to a user and monitor the activity logs. 
+
++ [Manage subscriptions and RBAC](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%202). Implement a management group and create and assign a custom RBAC role.
+
++ [Open a support request](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2022). Review support plan options, then create and monitor a support request, technical or billing.
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -250,7 +269,8 @@ In this task, you view the activity log to determine if anyone has created a new
 1. Select **Refresh** to verify that the subscription has successfully moved to the **Tenant Root management group**.
 
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
-  >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
+
+   >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
 
 1. If you are unable to delete the management group, please reach out to the support team for assistance.
     
@@ -259,5 +279,21 @@ In this lab, you have completed:
 - Implemented Management Groups
 - Created custom RBAC roles 
 - Assigned RBAC roles
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Management groups are used to logically organize subscriptions.
++ The built-in root management group includes all the management groups and subscriptions.
++ Azure has many built-in roles. You can assign these roles to control access to resources.
++ You can create new roles or customize existing roles.
++ Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
++ You can use the Activity Log to monitor role assignments. 
+
+## Learn more with self-paced training
+
++ [Secure your Azure resources with Azure role-based access control (Azure RBAC)](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/). Use Azure RBAC to manage access to resources in Azure.
++ [Create custom roles for Azure resources with role-based access control (RBAC)](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/). Understand the structure of role definitions for access control. Identify the role properties to use that define your custom role permissions. Create an Azure custom role and assign to a user.
 
 ### You have successfully completed the lab
