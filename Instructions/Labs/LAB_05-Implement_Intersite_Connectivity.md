@@ -1,283 +1,304 @@
+---
+lab:
+    title: 'Lab 05: Implement Intersite Connectivity'
+    module: 'Administer Intersite Connectivity'
+---
+
 # Lab 05 - Implement Intersite Connectivity
-## Lab scenario
-Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
 
-## Lab objectives
-In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Configure local and global virtual network peering
-+ Task 3: Test intersite connectivity
+## Lab introduction
 
-## Estimated timing: 30 minutes
+In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. You will also create a custom route. 
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
+
+## Estimated time: 50 minutes
+    
+## Lab scenario 
+
+Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.  
+
+## Interactive lab simulations
+
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Connect two Azure virtual networks using global virtual network peering](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering). Test the connection between two virtual machines in different virtual networks. Create a virtual network peering and retest.
+
++ [Configure monitoring for virtual networks](https://learn.microsoft.com/training/modules/configure-monitoring-virtual-networks/). Understand how to use Azure Network Watcher Connection Monitor, flow logs, NSG diagnostics, and packet capture to monitor connectivity across your Azure IaaS network resources.
+
++ [Implement intersite connectivity](https://mslabs.cloudguides.com/en-us/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%209). Run a template to create a virtual network infrastructure with several virtual machines. Configure virtual network peerings and test the connections. 
 
 ## Architecture diagram
 
- ![image](../media/lab05.png)
+![Lab 05 architecture diagram](../media/az104-lab05-architecture.png)
+
+## Job skills
+
++ Task 1: Create a virtual machine in a virtual network.
++ Task 2: Create a virtual machine in a different virtual network.
++ Task 3: Use Network Watcher to test the connection between virtual machines. 
++ Task 4: Configure virtual network peerings between different virtual networks.
++ Task 5: Use Azure PowerShell to test the connection between virtual machines.
++ Task 6: Create a custom route. 
+
+## Task 1:  Create a core services virtual machine and virtual network
+
+In this task, you create a core services virtual network with a virtual machine. 
+
+1. Sign in to the **Azure portal** - `https://portal.azure.com`.
+
+1. Search for and select `Virtual Machines`.
+
+1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
+
+1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
-## Exercise 1: Configure local and global virtual network peering
-
-### Task 1: Provision the lab environment
-In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
-   
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-    ![Image](./Images/cloudshell.png)
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-1. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/advancesetting.png)
-    
-1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and enter under the **Storage Account (2)** section as **cloudshell<inject key="DeploymentID" enableCopy="false" />**, and under the **File share (3)** section type **none** as shown in the below image.
-
-1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
-
-    ![image](../media/crtstr.png)
-
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
-
-     ![Image](./Images/upload.png)
-
-1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (Replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.
-
-   >**Note**: In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**.
-
-   >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-
-   ```powershell
-   $location1 = '[Azure_region_1]'
-
-   $location2 = '[Azure_region_2]'
-
-   $rgName = 'az104-05-rg0-Deployment-id'
-   ```
-   
-   >**Note**: Provided resource group already exists. Are you sure you want to update it? type N .
-
-1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
-
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
-      -location1 $location1 `
-      -location2 $location2
-   ```
-
-    >**Note**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
-    
-    >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
-
-1. Close the Cloud Shell pane.
-
-### Task 2: Configure local and global virtual network peering
-In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
-
-1. In the Azure portal, search for and select **Virtual networks**.
-
-    ![Image](./Images/selectvnet.png)
-
-1. Review the virtual networks you created in the previous task and verify that the first two are located in the same Azure region and the third one in a different Azure region.
-
-    >**Note**: The template you used for the deployment of the three virtual networks ensures that the IP address ranges of the three virtual networks do not overlap.
-
-1. In the list of virtual networks, click **az104-05-vnet0**.
-     
-      ![Image](./Images/vnet0.png)
-      
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings (1)** and then click **+ Add (2)**.
-
-     ![Image](./Images/addpeering.png)
-
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
-
-    | Setting | Value|
+    | Setting | Value | 
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure only the first three boxes are checked** |
-    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet1** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure only the first three boxes are checked** |
+    | Subscription |  *your subscription* |
+    | Resource group |  `az104-rg5` (If necessary, **Create new**. )
+    | Virtual machine name |    `CoreServicesVM` |
+    | Region | **(US) East US** |
+    | Availability options | No infrastructure redundancy required |
+    | Security type | **Standard** |
+    | Image | **Windows Server 2019 Datacenter: x64 Gen2** (notice your other choices) |
+    | Size | **Standard_DS2_v3** |
+    | Username | `localadmin` | 
+    | Password | **Provide a complex password** |
+    | Public inbound ports | **None** |
 
-     ![Image](./Images/peering.png)
+    ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
    
+1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
-    >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
+1. On the **Networking** tab, for Virtual network, select **Create new**.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing information.
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-  
-    
-   ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
-
-   $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
-
-   $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
-
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet0_to_az104-05-vnet1' -VirtualNetwork $vnet0 -RemoteVirtualNetworkId $vnet1.Id
-
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet0' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet0.Id
-   ``` 
-
-1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
-
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
-
-    | Setting | Value|
+    | Setting | Value | 
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
+    | Name | `CoreServicesVNet` (Create new) |
+    | Address range | `10.0.0.0/16`  |
+    | Subnet Name | `Core` | 
+    | Subnet address range | `10.0.0.0/24` |
 
-    >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
+1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+1. Select **Review + Create**, and then select **Create**.
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-   
-    
-   ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+1. You do not need to wait for the resources to be created. Continue on to the next task.
 
-   $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
+    >**Note:** Did you notice in this task you created the virtual network as you created the virtual machine? You could also create the virtual network infrastructure then add the virtual machines. 
 
-   $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
+## Task 2: Create a virtual machine in a different virtual network
 
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet0_to_az104-05-vnet2' -VirtualNetwork $vnet0 -RemoteVirtualNetworkId $vnet2.Id
+In this task, you create a manufacturing services virtual network with a virtual machine. 
 
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet0' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet0.Id
-   ``` 
+1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
-1. Navigate back to the **Virtual networks** blade and, in the list of virtual networks, click **az104-05-vnet1**.
+1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
 
-1. On the **az104-05-vnet1** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
-
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
-
-    | Setting | Value|
+1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
+ 
+    | Setting | Value | 
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
-    | Remote virtual network: Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
-    | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2** |
-    | Settings to **allow** access, forwarded traffic, and gateway | **Ensure the box is checked** |
+    | Subscription |  *your subscription* |
+    | Resource group |  `az104-rg5` |
+    | Virtual machine name |    `ManufacturingVM` |
+    | Region | **(US) East US** |
+    | Security type | **Standard** |
+    | Availability options | No infrastructure redundancy required |
+    | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
+    | Size | **Standard_DS2_v3** | 
+    | Username | `localadmin` | 
+    | Password | **Provide a complex password** |
+    | Public inbound ports | **None** |
 
-    >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
+1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+1. On the Networking tab, for Virtual network, select **Create new**.
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
-    
-    
-   ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+1. Use the following information to configure the virtual network, and then select **Ok**.  If necessary, remove or replace the existing address range.
 
-   $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `ManufacturingVNet` |
+    | Address range | `172.16.0.0/16`  |
+    | Subnet Name | `Manufacturing` |
+    | Subnet address range | `172.16.0.0/24` |
 
-   $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
+1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+1. Select **Review + Create**, and then select **Create**.
 
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
-   ``` 
+## Task 3: Use Network Watcher to test the connection between virtual machines 
+
+
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
+
+1. From the Azure portal, search for and select `Network Watcher`.
+
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **CoreServicesVM**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **ManufacturingVM**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+    ![Azure Portal showing Connection Troubleshoot settings.](../media/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
+
+ 
+## Task 4: Configure virtual network peerings between virtual networks
+
+In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
+
+1. In the Azure portal, select the `CoreServicesVnet` virtual network.
+
+1. In CoreServicesVnet, under **Settings**, select **Peerings**.
+
+1. On CoreServicesVnet | Peerings, select **+ Add**.
+
+1. Use the information in the following table to create the peering.
+
+| **Parameter**                                    | **Value**                             |
+| --------------------------------------------- | ------------------------------------- |
+| **This virtual network**                                       |                                       |
+| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
+| Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
+| Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
+| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
+| Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
+| **Remote virtual network**                                   |                                       |
+| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
+| Virtual network deployment model              | **Resource manager**                      |
+| I know my resource ID                         | Not selected                          |
+| Subscription                                  | *your subscription*    |
+| Virtual network                               | **ManufacturingVnet**                     |
+| Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
+| Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
+| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
+| Enable ManufacturingVNet to use CoreServicesVNet's remote gateway       | Not selected (default)                        |
+
+1. Review your settings and select **Add**.
+
+    ![Screenshot of peering page.](../media/az104-lab05-peering.png)
+ 
+1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
+
+1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
+
+
+## Task 5: Use Azure PowerShell to test the connection between virtual machines
+
+In this task, you retest the connection between the virtual machines in different virtual networks. 
+
+### Verify the private IP address of the CoreServicesVM
+
+1. From the Azure portal, search for and select the `CoreServicesVM` virtual machine.
+
+1. On the **Overview** blade, in the **Networking** section, record the **Private IP address** of the machine. You need this information to test the connection.
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
+>**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
 
-### Task 3: Test intersite connectivity
+1. Switch to the `ManufacturingVM` virtual machine.
 
-In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
+1. In the **Operations** blade, select the **Run command** blade.
 
-1. In the Azure portal, search for and select **Virtual machines**.
+1. Select **RunPowerShellScript** and run the **Test-NetConnection** command. Be sure to use the private IP address of the **CoreServicesVM**.
 
-     ![Image](./Images/vm.png)
-
-2. In the list of virtual machines, click **az104-05-vm0**.
-
-      ![Image](./Images/vm0.png)
-
-3. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
-
-      ![Image](./Images/connect.png)
-      
-      ![Image](./Images/downloadfile.png)
-      
-      ![Image](./Images/rdp.png)
-
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store,e and on Linux computers, you can use an open-source RDP client software.
-
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
-
-4. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
-
-5. Within the Remote Desktop session to **az104-05-vm0**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
-
-     ![Image](./Images/Virtual%20Networking%20Ex1-t5-p10.png)
-   
-6. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm1** (which has the private IP address of **10.51.0.4**) over TCP port 3389:
-
-   ```powershell
-   Test-NetConnection -ComputerName 10.51.0.4 -Port 3389 -InformationLevel 'Detailed'
-   ```
-
-    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
-
-7. Examine the output of the command and verify that the connection was successful.
-
-8. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**):
-
-   ```powershell
-   Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
-   ```
-
-9. Switch back to the Azure portal on your lab computer and navigate back to the blade of the **Virtual machine**.
-
-10. In the list of virtual machines, click **az104-05-vm1**.
-
-    ![Image](./Images/vm1.png)
-
-11. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
-
-    >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
-
-    >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
-
-12. When prompted, sign in by using the **Student** username and the password **Pa55w.rd1234**.
-
-13. Within the Remote Desktop session to **az104-05-vm1**, right-click the **Start** button and, in the right-click menu, click **Windows PowerShell (Admin)**.
-
-14. In the Windows PowerShell console window, run the following to test connectivity to **az104-05-vm2** (which has the private IP address of **10.52.0.4**) over TCP port 3389:
-
-    ```powershell
-    Test-NetConnection -ComputerName 10.52.0.4 -Port 3389 -InformationLevel 'Detailed'
+    ```Powershell
+    Test-NetConnection <CoreServicesVM private IP address> -port 3389
     ```
+1. It may take a couple of minutes for the script to time out. The top of the page shows an informational message *Script execution in progress.*
 
-    >**Note**: The test uses TCP 3389 since this port is allowed by default by the operating system firewall.
+   
+1. The test connection should succeed because peering has been configured. Your computer name and remote address in this graphic may be different. 
+   
+   ![PowerShell window with Test-NetConnection succeeded.](../media/az104-lab05-success.png)
 
-15. Examine the output of the command and verify that the connection was successful.
+## Task 6: Create a custom route 
 
-### Review
-In this lab, you have completed:
-+ Provisioned the lab environment
-+ Configured local and global virtual network peering
-+ Tested intersite connectivity
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
 
-### You have successfully completed the lab
+1. Search for select the `CoreServicesVnet`.
+
+1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `perimeter` |
+    | Subnet address range | `10.0.1.0/24`  |
+
+   
+1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | your subscription |
+    | Resource group | `az104-rg5`  |
+    | Region | **East US** |
+    | Name | `rt-CoreServices` |
+    | Propagate gateway routes | **No** |
+
+1. After the route table deploys, select **Go to resource**.
+
+1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Route name | `PerimetertoCore` |
+    | Destination type | **IP Addresses** |
+    | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
+    | Next hop type | **Virtual appliance** (notice your other choices) |
+    | Next hop address | `10.0.1.7` (future NVA) |
+
+1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+
+1. Select **Subnets** and then **Associate**. Complete the configuration.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Virtual network | **CoreServicesVnet** |
+    | Subnet | **Core** |    
+
+>**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
+
+## Cleanup your resources
+
+If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
++ Using the CLI, `az group delete --name resourceGroupName`.
+
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ By default, resources in different virtual networks cannot communicate.
++ Virtual network peering enables you to seamlessly connect two or more virtual networks in Azure.
++ Peered virtual networks appear as one for connectivity purposes.
++ The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
++ System defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
++ Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
+
+## Learn more with self-paced training
+
++ [Distribute your services across Azure virtual networks and integrate them by using virtual network peering](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/). Use virtual network peering to enable communication across virtual networks in a way that's secure and minimally complex.
++ [Manage and control traffic flow in your Azure deployment with routes](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/). Learn how to control Azure virtual network traffic by implementing custom routes.
