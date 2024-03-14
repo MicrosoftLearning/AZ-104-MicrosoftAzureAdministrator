@@ -63,40 +63,45 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     **Note**: note what resource group the storage account is in, you'll need it later in the lab.
 
-1. On the resource group blade, click **Tags**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource group**, and then select **Resource group** under services.
 
-    ![image](../media/2b-2.1.png)
-
-1. Create a tag with the following settings and save your change:
+1. On the resource group blade, click **Tags** and create a tag with the following settings and click on **Apply** to save your change:
 
     | Setting | Value |
     | --- | --- |
     | Name | **Role** |
     | Value | **Infra** |
-    
-1. Navigate back to the storage account blade. Review the **Overview** information and note that the new tag was not automatically assigned to the storage account. 
 
+   ![image](./media/l2-image27.png)
+   
 ### Task 2: Enforce tagging via an Azure policy
 In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
 
-1. In the Azure portal, search for and select **Policy**. 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Policy**, and then select **Policy** under services.
 
-1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list. 
+   ![image](./media/l2-image28.png)
 
-1. Click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
+1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list and click on **Apply**.
 
+   ![image](./media/l2-image29.png)
+
+1. In search bar enter **require** and click the entry representing the **Require a tag and its value on resources** built-in policy and review its definition.
+
+    ![image](./media/l2-image30.png)
+   
 1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
 
-    ![image](../media/2b-4.1.png)
+    ![image](./media/l2-image31.png)
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the previous task |
+    | Resource Group | AZ-104T02 |
 
-   ![image](../media/2b-5.1.png)
+   ![image](./media/l2-image32.png)
+   
    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
 1. Configure the **Basics** properties of the assignment by specifying the following settings (leave others with their defaults):
@@ -160,7 +165,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | the name of the resource group containing the Cloud Shell account you identified in the first task |
+    | Resource Group | AZ-104T02 |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing**.
 
