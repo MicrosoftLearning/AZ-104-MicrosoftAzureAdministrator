@@ -35,8 +35,8 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
     | Availability zone | **No infrastructure redundancy required** (5) | 
     | Source type | **None** (6)|
-    | Performance | **Standard HDD** (change size) (7)|
-    | Size | **32 Gib** (8) | 
+    | Size | **32 Gib** (7) |
+    | Performance | **Standard HDD** (change size) (8)|
 
    ![image](../media/az-104i0.2.png)
 
@@ -154,7 +154,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
 
-    ![image](../media/az-104i5.png)
+    ![image](../media/az-104i5.1.png)
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -187,7 +187,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Make a change. For example, change the disk name to **az104-03b-disk4**. Use **Ctrl +S** to save your changes. 
 
-   ![image](../media/az-104i6.png)
+   ![image](../media/az-104i6.1.png)
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
