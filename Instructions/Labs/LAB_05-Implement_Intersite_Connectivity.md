@@ -5,8 +5,9 @@ Contoso has its data centers in Boston, New York, and Seattle offices connected 
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Task 1: Provision the lab environment
-+ Task 2: Configure local and global virtual network peering
-+ Task 3: Test intersite connectivity
++ Task 2: Use Network Watcher to test the connection between virtual machines.
++ Task 3: Configure local and global virtual network peering
++ Task 4: Test intersite connectivity
 
 ## Estimated timing: 30 minutes
 
@@ -70,6 +71,40 @@ In this task, you will deploy three virtual machines, each into a separate virtu
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
 1. Close the Cloud Shell pane.
+
+
+## Task 2: Use Network Watcher to test the connection between virtual machines 
+
+
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
+
+1. From the Azure portal, search for and select `Network Watcher`.
+
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **az104-05-vm0**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **az104-05-vm1**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+
+
+    ![Azure Portal showing Connection Troubleshoot settings.](./Images/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
+
+ 
 
 ### Task 2: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
