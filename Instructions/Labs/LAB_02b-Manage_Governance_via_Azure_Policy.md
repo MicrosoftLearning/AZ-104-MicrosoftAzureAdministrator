@@ -46,6 +46,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource group**, and then select **Resource group** under services.
 
+   ![image](./media/l2-image45.png)
+
 1. On the resource group blade, click **Tags** and create a tag with the following settings and click on **Apply** to save your change:
 
     | Setting | Value |
