@@ -106,7 +106,7 @@ In this task, you verify that resources in peered virtual networks can communica
 
  
 
-### Task 2: Configure local and global virtual network peering
+### Task 3: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -237,7 +237,7 @@ In this task, you will configure local and global peering between the virtual ne
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 3: Test intersite connectivity
+### Task 4: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
