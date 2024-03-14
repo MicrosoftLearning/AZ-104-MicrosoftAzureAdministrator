@@ -49,7 +49,7 @@ In this task, you will create and configure management groups.
    
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
-1. If you have not previously created Management Groups, select **Start using management groups**. On the **Management groups** blade, click **+ Create**.
+1. On the **Management groups** blade, click **+ Create**.
 
 1. On **Create a management** group blade specify the following settings and click **Submit**.
 
@@ -117,7 +117,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
    ![image](./media/l2-image18.png)
 
-1. Select **Review + Create**, and then select **Create**. Select **OK** When **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
+1. Select **Review + Create**, and then select **Create**. Select **OK** when **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group.  
 
@@ -141,7 +141,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
-    ![image](./media/l2-image20.png)
+    ![image](./media/l2-image(20).png)
 
 1. Click **Create**.
    
@@ -243,6 +243,8 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
   >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
 
+1. If you are unable to delete the management group, please reach out to the support team for assistance.
+    
 ### Review
 In this lab, you have completed:
 - Implemented Management Groups
