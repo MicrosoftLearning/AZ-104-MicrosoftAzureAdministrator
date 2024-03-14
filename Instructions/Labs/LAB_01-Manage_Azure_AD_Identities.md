@@ -358,4 +358,20 @@ In this lab, you have completed:
 - Created a Microsoft Entra ID (AD) tenant
 - Managed Entra ID guest users 
 
+## Key takeaways
+
+Congratulations on completing the lab. Here are some main takeways for this lab:
+
++ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
++ Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
++ Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
++ Group membership can be statically or dynamically assigned.
+
+
+## Learn more with self-paced training
+
++ [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
++ [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
++ [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
+
 ### You have successfully completed the lab
