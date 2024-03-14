@@ -310,10 +310,60 @@ In this task, you will test connectivity between virtual machines on the three v
 
 15. Examine the output of the command and verify that the connection was successful.
 
+
+## Task 5: Create a custom route 
+
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
+
+1. Search for select the `az104-05-vnet0`.
+
+1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `perimeter` |
+    | Subnet address range | `10.50.1.0/24`  |
+
+   
+1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | your subscription |
+    | Resource group | `az104-05-rg0-`  |
+    | Region | **East US** |
+    | Name | `az104-05-vm0` |
+    | Propagate gateway routes | **No** |
+
+1. After the route table deploys, select **Go to resource**.
+
+1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Route name | `PerimetertoCore` |
+    | Destination type | **IP Addresses** |
+    | Destination IP addresses | `10.50.0.0/22` (core services virtual network) |
+    | Next hop type | **Virtual appliance** (notice your other choices) |
+    | Next hop address | `10.50.1.7` (future NVA) |
+
+1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+
+1. Select **Subnets** and then **Associate**. Complete the configuration.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Virtual network | **az104-05-vnet0** |
+    | Subnet | **subnet0** |    
+
+>**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
+
 ### Review
 In this lab, you have completed:
 + Provisioned the lab environment
++ Use Network Watcher to test the connection between virtual machines
 + Configured local and global virtual network peering
 + Tested intersite connectivity
++ Create a custom route 
 
 ### You have successfully completed the lab
