@@ -1,13 +1,33 @@
 # Lab 02b - Manage Governance via Azure Policy
 
+## Lab introduction
+
+In this lab, you learn how to implement your organization’s governance plans. You learn how Azure policies can ensure operational decisions are enforced across the organization. You learn how to use resource tagging to improve reporting. 
+
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
+
 ## Lab scenario
-To improve the management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
 
-- tagging resource groups that include only infrastructure resources (such as Cloud Shell storage accounts)
+Your organization's cloud footprint has grown considerably in the last year. During a recent audit, you discovered a substantial number of resources that do not have a defined owner, project, or cost center. In order to improve management of Azure resources in your organization, you decide to implement the following functionality:
 
-- ensuring that only properly tagged infrastructure resources can be added to infrastructure resource groups
+- apply resource tags to attach important metadata to Azure resources
 
-- remediating any non-compliant resources 
+- enforce the use of resource tags for new resources by using Azure policy
+
+- update existing resources with resource tags
+
+- use resource locks to protect configured resources
+
+## Interactive lab simulations
+
+There are several interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required. 
+
++ [Manage resource locks](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2015). Add a resource lock and test to confirm.
+  
++ [Create an Azure policy](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%2017). Create an Azure policy that restricts the location resources can be located. Create a new resource and ensure the policy is enforced. 
+
++ [Manage governance via Azure policy](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%203). Create and assign tags via the Azure portal. Create an Azure policy that requires tagging. Remediate non-compliant resources.
+
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -206,6 +226,31 @@ In this task, we will use a different policy definition to remediate any non-com
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Task 4: Configure and test resource locks
+
+In this task, you configure and test a resource lock. Locks prevent either deletions or modifications of a resource. 
+
+1. Search for and select your resource group.
+   
+1. In the **Settings** blade, select **Locks**.
+
+1. Select **Add** and complete the resource lock information. When finished select **Ok**. 
+
+    | Setting | Value |
+    | --- | --- |
+    | Lock name | `rg-lock` |
+    | Lock type | **delete** (notice the selection for read-only) |
+    
+1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
+
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name. 
+
+1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**.
+
+1. You should receive a notification denying the deletion. 
+
+    ![Screenshot of the failure to delete message.](../media/az104-lab02b-failuretodelete.png) 
 
 ### Review
 In this lab, you have completed:
