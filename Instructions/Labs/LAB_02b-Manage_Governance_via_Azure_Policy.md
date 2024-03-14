@@ -231,11 +231,11 @@ In this task, we will use a different policy definition to remediate any non-com
 
 In this task, you configure and test a resource lock. Locks prevent either deletions or modifications of a resource. 
 
-1. Search for and select your resource group.
+1. Search for and select your resource group **AZ-104T02**.
    
 1. In the **Settings** blade, select **Locks**.
 
-1. Select **Add** and complete the resource lock information. When finished select **Ok**. 
+1. Select **+ Add** and complete the resource lock information. When finished select **Ok**. 
 
     | Setting | Value |
     | --- | --- |
@@ -244,13 +244,19 @@ In this task, you configure and test a resource lock. Locks prevent either delet
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name. 
+   ![image](./media/l2-image62.png)
 
-1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**.
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02`. Notice you can copy and paste the resource group name and click on **Delete**. 
 
+   ![image](./media/l2-image63.png)
+   
 1. You should receive a notification denying the deletion. 
 
-    ![Screenshot of the failure to delete message.](../media/az104-lab02b-failuretodelete.png) 
+    ![image](./media/l2-image64.png)
+
+1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
+
+   ![image](./media/l2-image65.png)
 
 ### Review
 In this lab, you have completed:
@@ -258,4 +264,18 @@ In this lab, you have completed:
 - Enforced tagging via an Azure policy
 - Applied tagging via an Azure policy
 
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure tags are metadata that consists of a key-value pair. Tags describe a particular resource in your environment. In particular, tagging in Azure enables you to label your resources in a logical manne.
++ Azure Policy establishes conventions for resources. Policy definitions describe resource compliance conditions and the effect to take if a condition is met. A condition compares a resource property field or a value to a required value. There are many built-in policy definitions and you can customize the policies. 
++ The Azure Policy remediation task feature is used to bring resources into compliance based on a definition and assignment. Resources that are non-compliant to a modify or deployIfNotExist definition assignment, can be brought into compliance using a remediation task.
++ You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
++ Azure Policy is pre-deployment security practice. RBAC and resource locks are post-deployment security practice. 
+
+## Learn more with self-paced training
+
++ [Design an enterprise governance strategy](https://learn.microsoft.com/training/modules/enterprise-governance/). Use RBAC and Azure Policy to limit access to your Azure solutions, and determine which method is right for your security goals.
+  
 ### You have successfully completed the lab
