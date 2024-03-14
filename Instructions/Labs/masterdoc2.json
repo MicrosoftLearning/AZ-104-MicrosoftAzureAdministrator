@@ -3,13 +3,16 @@
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LabIntro.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LabIntro.md",
         "Order": 1
     },
     {
       "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC.md",
       "Order": 2
     },
+    {
+      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.md",
+      "Order": 3
+    },
   ]
 } ]
-
