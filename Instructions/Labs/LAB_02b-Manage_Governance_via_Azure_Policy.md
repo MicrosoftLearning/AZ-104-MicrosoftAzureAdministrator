@@ -29,9 +29,10 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Create and assign tags via the Azure portal
-+ Task 2: Enforce tagging via an Azure policy
-+ Task 3: Apply tagging via an Azure policy
++ Task 1: Create and assign tags via the Azure portal.
++ Task 2: Enforce tagging via an Azure Policy.
++ Task 3: Apply tagging via an Azure Policy.
++ Task 4: Configure and test resource locks. 
 
 ## Estimated timing: 60 minutes
 
@@ -259,9 +260,11 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
 ### Review
 In this lab, you have completed:
-- Created and assigned tags via the Azure portal
-- Enforced tagging via an Azure policy
-- Applied tagging via an Azure policy
+
+- Create and assign tags via the Azure portal.
+- Enforce tagging via an Azure Policy.
+- Apply tagging via an Azure Policy.
+- Configure and test resource locks. 
 
 ## Key takeaways
 
