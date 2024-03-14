@@ -29,23 +29,23 @@ In this task, you will create and configure management groups.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
 
-    ![image](../media/l2-image1.png) 
+    ![image](./media/l2-image1.png) 
     
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
-    ![image](../media/l2-image2.png) 
+    ![image](./media/l2-image2.png) 
 
     1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-        ![image](../media/l2-image3.png) 
+        ![image](./media/l2-image3.png) 
     
     1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
   
-        ![image](../media/l2-image4.png) 
+        ![image](./media/l2-image4.png) 
     
     1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
-        ![image](../media/l2-image5.png) 
+        ![image](./media/l2-image5.png) 
    
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
@@ -58,23 +58,23 @@ In this task, you will create and configure management groups.
     | Management group ID | **az104-02-mg1** |
     | Management group display name | **az104-02-mg1** |
 
-    ![image](../media/l2-image7.png)
+    ![image](./media/l2-image7.png)
    
 1. In the list of management groups, click the entry representing the newly created management group.
 
-    ![image](../media/l2-image8.png)
+    ![image](./media/l2-image8.png)
  
 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
 
-     ![image](../media/l2-image9.png)
+     ![image](./media/l2-image9.png)
 
 1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
 
-    ![image](../media/l2-image10.png)
+    ![image](./media/l2-image10.png)
 
 1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
-      ![image](../media/l2-image11.png)
+      ![image](./media/l2-image11.png)
    
 ### Task 2: Create custom RBAC roles
 
