@@ -200,34 +200,22 @@ In this task, you view the activity log to determine if anyone has created a new
 
    >**Note**: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**, click **Users**.
-
-1. On the **Users - All users** blade, click **az104-02-aaduser1**.
-
-1. On the **az104-02-aaduser1 - Profile** blade, copy the value of **Object ID** attribute.
-
-1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
-
-1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** user account you copied earlier in this task):
-
-   ```powershell
-   
-    $scope = (Get-AzRoleDefinition -Name 'Support Request Contributor (Custom)').AssignableScopes | Where-Object {$_ -like '*managementgroup*'}
-    
-    Remove-AzRoleAssignment -ObjectId '[object_ID]' -RoleDefinitionName 'Support Request Contributor (Custom)' -Scope $scope
-   ```
-
-1. From the Cloud Shell pane, run the following to remove the custom role definition:
-
-   ```powershell
-   Remove-AzRoleDefinition -Name 'Support Request Contributor (Custom)' -Force
-   ```
-
-1. In the Azure portal, navigate back to the **Users - All users** blade of the **Microsoft Entra ID**, and delete the **az104-02-aaduser1** user account.
 
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
-1. On the **Management groups** blade, select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
+1. On the **Management groups** blade, select **Access control (IAM)** then under **Roles** tab search for **Support Request Contributor (Custom)** under details select **View** link and select **Assignment** tab > **Remove** and select **yes**.
+   
+   ![image](./media/l2-image54.png)
+   
+1. Back on **az104-02-mg1 | Access control (IAM)** Refresh the page on click on  **Support Request Contributor (Custom)** select **ellipsis** and click **Delete**.
+   
+    ![image](./media/l2-image53.png)
+
+1. In the Azure portal, search and select **Management groups**.
+   
+1. On the **Management groups** blade,  select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
+
+    ![image](./media/l2-image54.png)
 
    >**Note**: It is likely that the target management group is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
    
