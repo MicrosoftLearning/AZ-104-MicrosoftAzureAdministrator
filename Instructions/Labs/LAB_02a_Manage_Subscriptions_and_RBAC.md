@@ -145,7 +145,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 1. Click **Create**.
    
-1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**  to display its **details**.
+1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1** to display its **details**.
 
    ![image](./media/l2-image21.png)
 
@@ -205,8 +205,17 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+## Task 4: Monitor role assignments with the Activity Log
 
-### Task 4: Clean up resources
+In this task, you view the activity log to determine if anyone has created a new role. 
+
+1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
+
+1. Select **Quick Insight** > **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments. . 
+
+    ![image](./media/l2-image61.png)
+
+### Task 5: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
