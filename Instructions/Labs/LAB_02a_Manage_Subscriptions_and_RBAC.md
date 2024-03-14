@@ -125,11 +125,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 In this task, you will create a Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**, click on **Users** under the **Manage** section of the left navigation pane, and then click **+ New user**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**, click on **Users** under the **Manage** section of the left navigation pane, and then click **+ New user** > **Create New User**.
 
-   ![image](../media/lab2-6.2.png)
+   ![image](./media/l2-image19.png)
   
-1. Create a new user with the following settings (leave others with their defaults):
+1. Create a new user with the following settings (leave others with their defaults) and click on **Review + Create**
 
     | Setting | Value |
     | --- | --- |
@@ -141,12 +141,19 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
-1. In the Azure portal, navigate back to the **az104-02-mg1** management group and display its **details**.
+    ![image](./media/l2-image20.png)
 
-1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**. On the **Role** tab.
+1. Click **Create**.
+   
+1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**  to display its **details**.
 
-    ![image](../media/lab2-7.1.png) 
-    >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
+   ![image](./media/l2-image21.png)
+
+1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**.
+
+    ![image](./media/l2-image22.png)
+
+   >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
 1. Search for **Support Request Contributor (Custom)**. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
 
