@@ -76,53 +76,40 @@ In this task, you will create and configure management groups.
 
       ![image](./media/l2-image11.png)
    
-### Task 2: Create custom RBAC roles
+## Task 2: Create a custom RBAC role
 
-In this task, you will create a definition of a custom RBAC role.
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
-1. From the lab computer, open the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** in Notepad and review its content:
+1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
-   ```json
-   {
-      "Name": "Support Request Contributor (Custom)",
-      "IsCustom": true,
-      "Description": "Allows to create support requests",
-      "Actions": [
-          "Microsoft.Resources/subscriptions/resourceGroups/read",
-          "Microsoft.Support/*"
-      ],
-      "NotActions": [
-      ],
-      "AssignableScopes": [
-          "/providers/Microsoft.Management/managementGroups/az104-02-mg1",
-          "/subscriptions/SUBSCRIPTION_ID"
-      ]
-   }
-   ```
+1. In the **Create a custom role** box, select **Add**.
 
-    > **Note**: Replace the **`SUBSCRIPTION_ID`** placeholder in the JSON file with the subscription ID you copied into Clipboard and save the change.
+1. On the Basics tab complete the configuration.
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+    | Setting | Value |
+    | --- | --- |
+    | Custom role name | `Custom Support Request` |
+    | Description | ``A custom contributor role for support requests.` |
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
+1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+    ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
 
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Create storage**. 
+1. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
 
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
+1. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu click **Upload**, and upload the file **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\02\\az104-02a-customRoleDefinition.json** into the Cloud Shell home directory.
+1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
-    ![image](../media/lab2-5.1.png)
+    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. You could also selete and add other capabilities to the new role. 
 
-1. From the Cloud Shell pane, run the following to create the custom role definition:
+1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
 
-   ```powershell
-   New-AzRoleDefinition -InputFile $HOME/az104-02a-customRoleDefinition.json
-   ```
+1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
 
-1. Close the Cloud Shell pane.
+1. Select **Review + Create**, and then select **Create**.
+
+    >**Note:** At this point, you have created a custom role and assigned it to the management group.  
 
 ### Task 3: Assign RBAC roles
 
@@ -179,7 +166,18 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Clean up resources
+## Task 4: Monitor role assignments with the Activity Log
+
+In this task, you view the activity log to determine if anyone has created a new role. 
+
+1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
+
+1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
+
+    ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
+   
+
+### Task 5: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
