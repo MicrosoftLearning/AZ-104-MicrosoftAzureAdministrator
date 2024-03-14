@@ -80,34 +80,44 @@ In this task, you will create and configure management groups.
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
-1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
+1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab and in the **Create a custom role** box, select **Add**.
 
-1. In the **Create a custom role** box, select **Add**.
+   ![image](./media/l2-image12.png)
 
-1. On the Basics tab complete the configuration.
+1. On the Basics tab specify the following configuration and select **Next**. 
 
     | Setting | Value |
     | --- | --- |
     | Custom role name | `Custom Support Request` |
-    | Description | ``A custom contributor role for support requests.` |
+    | Description | A custom contributor role for support requests. |
+    | Baseline permissions | select **Clone a role**|
+    | Role to clone drop-down menu | select **Support Request Contributor** |
 
-1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
+     ![image](./media/l2-image13.png)
 
-    ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
+1. On **Permissions** tab, and then select **+ Exclude permissions**.
 
-1. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
-
+   ![image](./media/l2-image14.png)
+   
 1. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
 
-1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
+   ![image](./media/l2-image15.png)
 
+1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add** > **Next**. The role should be updated to include this permission as a *NotAction*.
+
+    ![image](./media/l2-image16.png)
+   
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. You could also selete and add other capabilities to the new role. 
 
 1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
 
-1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
+    ![image](./media/l2-image17.png)
 
-1. Select **Review + Create**, and then select **Create**.
+1. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role.
+
+   ![image](./media/l2-image18.png)
+
+1. Select **Review + Create**, and then select **Create**. Select **OK** When **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group.  
 
