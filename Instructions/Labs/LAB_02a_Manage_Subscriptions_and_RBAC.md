@@ -93,7 +93,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
     | Baseline permissions | select **Clone a role**|
     | Role to clone drop-down menu | select **Support Request Contributor** |
 
-     ![image](./media/l2-image13.png)
+     ![image](./media/l2-image44.png)
 
 1. On **Permissions** tab, and then select **+ Exclude permissions**.
 
@@ -155,9 +155,13 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Search for **Support Request Contributor (Custom)**. Select the **Role** and click **Next**. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
+1. Search and select **Support Request Contributor (Custom)**. Click **Next**.
 
-    ![image](../media/lab2-8.1.png)
+    ![image](./media/l2-image58.png)
+  
+1. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
+
+     ![image](./media/l2-image59.png)
     
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
