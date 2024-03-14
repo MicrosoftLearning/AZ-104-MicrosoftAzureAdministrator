@@ -27,9 +27,13 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Implement Management Groups
-+ Task 2: Create custom RBAC roles 
+
++ Task 1: Implement management groups.
++ Task 2: Create a custom RBAC role
 + Task 3: Assign RBAC roles
++ Task 3: Create a custom RBAC role.
++ Task 4: Monitor role assignments with the Activity Log.
+
 
 ## Estimated timing: 60 minutes
 
@@ -273,9 +277,11 @@ In this task, you view the activity log to determine if anyone has created a new
     
 ### Review
 In this lab, you have completed:
-- Implemented Management Groups
-- Created custom RBAC roles 
-- Assigned RBAC roles
+- Implement management groups.
+- Create a custom RBAC role
+- Assign RBAC roles
+- Create a custom RBAC role.
+- Monitor role assignments with the Activity Log.
 
 ## Key takeaways
 
