@@ -4,9 +4,6 @@
 
 In this lab, you learn about role-based access control. You learn how to use permissions and scopes to control what actions identities can and cannot perform. You also learn how to make subscription management easier using management groups. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
-
-
 ## Lab scenario
 
 To simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
