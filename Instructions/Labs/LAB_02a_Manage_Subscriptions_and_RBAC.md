@@ -164,12 +164,30 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
     >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the az104-02-aaduser1 user can see all resource groups.
+ 
+    ![image](./media/l2-image45.png)
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
+    ![image](./media/l2-image46.png)
+   
+1. In the **InPrivate** browser window, in the Azure portal, select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
 
-1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support** and then click **+ Create a support request**. 
+   ![image](./media/l2-image47.png)
 
-1. In the **InPrivate** browser window, on the **Problem Description/Summary** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
+1. Verify that the az104-02-aaduser1 user cannot see any resources.
+
+    ![image](./media/l2-image48.png)
+   
+1. In the **InPrivate** browser window, in the Azure portal, search and select **Help + support**. 
+   
+   ![image](./media/l2-image50.png)
+
+1. Click **+ Create a support request**.
+
+   ![image](./media/l2-image51.png)
+   
+1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
+    
+    ![image](./media/l2-image53.png)
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
@@ -200,7 +218,6 @@ In this task, you view the activity log to determine if anyone has created a new
 
    >**Note**: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
 
-
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
 1. On the **Management groups** blade, select **Access control (IAM)** then under **Roles** tab search for **Support Request Contributor (Custom)** under details select **View** link and select **Assignment** tab > **Remove** and select **yes**.
@@ -211,11 +228,17 @@ In this task, you view the activity log to determine if anyone has created a new
    
     ![image](./media/l2-image53.png)
 
+1. In the Azure portal, navigate back to the **Users - All users** blade of the **Microsoft Entra ID**, and select  **az104-02-aaduser1** user account click on **Delete**.
+
+    ![image](./media/l2-image57.png)
+   
 1. In the Azure portal, search and select **Management groups**.
    
 1. On the **Management groups** blade,  select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
 
-    ![image](./media/l2-image54.png)
+    ![image](./media/l2-image55.png)
+   
+    ![image](./media/l2-image56.png)
 
    >**Note**: It is likely that the target management group is the **Tenant Root management group**, unless you created a custom management group hierarchy before running this lab.
    
