@@ -4,10 +4,11 @@ Contoso has its data centers in Boston, New York, and Seattle offices connected 
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
++ Task 1: Provision the lab environment.
 + Task 2: Use Network Watcher to test the connection between virtual machines.
-+ Task 3: Configure local and global virtual network peering
-+ Task 4: Test intersite connectivity
++ Task 3: Configure local and global virtual network peering.
++ Task 4: Test intersite connectivity.
++ Task 5: Create a custom route.
 
 ## Estimated timing: 30 minutes
 
