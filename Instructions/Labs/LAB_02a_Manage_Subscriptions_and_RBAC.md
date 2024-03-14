@@ -191,7 +191,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    
 1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
     
-    ![image](./media/l2-image53.png)
+    ![image](./media/l2-image52.png)
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
@@ -205,18 +205,8 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 4: Monitor role assignments with the Activity Log
 
-In this task, you view the activity log to determine if anyone has created a new role. 
-
-1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
-
-1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
-
-    ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
-   
-
-### Task 5: Clean up resources
+### Task 4: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
@@ -225,6 +215,8 @@ In this task, you view the activity log to determine if anyone has created a new
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
 1. On the **Management groups** blade, select **Access control (IAM)** then under **Roles** tab search for **Support Request Contributor (Custom)** under details select **View** link and select **Assignment** tab > **Remove** and select **yes**.
+
+   ![image](./media/l2-image60.png)
    
    ![image](./media/l2-image54.png)
    
