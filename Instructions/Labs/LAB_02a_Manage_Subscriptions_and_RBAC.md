@@ -26,43 +26,56 @@ In this lab, you will complete the following tasks:
 ### Task 1: Implement Management Groups
 In this task, you will create and configure management groups.
 
-1. In the Azure portal search for Management groups, and select **Management groups** to navigate to the **Management groups** blade.
 
-    ![image](../media/lab2-1.1.1.png) 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
+
+    ![image](../media/l2-image1.png) 
     
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
+    ![image](../media/l2-image2.png) 
+
     1. In the Azure portal, search for and select **Microsoft Entra ID**.
+
+        ![image](../media/l2-image3.png) 
     
     1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
+  
+        ![image](../media/l2-image4.png) 
     
     1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
-        ![image](../media/Lab-02a-e1-t1-s3.png)
+        ![image](../media/l2-image5.png) 
    
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
-1. On the **Management groups** blade, click **+ Create**.
+1. If you have not previously created Management Groups, select **Start using management groups**. On the **Management groups** blade, click **+ Create**.
 
-    >**Note**: If you have not previously created Management Groups, select **Start using management groups**
-
-1. Create a management group with the following settings:
+1. On **Create a management** group blade specify the following settings and click **Submit**.
 
     | Setting | Value |
     | --- | --- |
     | Management group ID | **az104-02-mg1** |
     | Management group display name | **az104-02-mg1** |
 
+    ![image](../media/l2-image7.png)
+   
 1. In the list of management groups, click the entry representing the newly created management group.
 
-    ![image](../media/lab2-3.1.png)
+    ![image](../media/l2-image8.png)
  
-1. On the **az104-02-mg1** blade, click **Subscriptions**. 
+1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
 
-1. On the **az104-02-mg1 \| Subscriptions** blade, click **+ Add**, on the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
+     ![image](../media/l2-image9.png)
 
-    >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
 
+    ![image](../media/l2-image10.png)
+
+1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+
+      ![image](../media/l2-image11.png)
+   
 ### Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
