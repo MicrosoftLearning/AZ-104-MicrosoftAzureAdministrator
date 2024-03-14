@@ -1,11 +1,15 @@
 # Lab 3b - Manage Azure resources by Using ARM Templates
+
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
 
 ## Lab objectives
-+ Task 1: Review an ARM template for deployment of an Azure managed disk
-+ Task 2: Create an Azure managed disk by using an ARM template
-+ Task 3: Review the ARM template-based deployment of the managed disk
+
+-  Task 1: Create an Azure Resource Manager template.
+-  Task 2: Edit an Azure Resource Manager template and redeploy the template.
+-  Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell.
+-  Task 4: Deploy a template with the CLI. 
+-  Task 5: Deploy a resource by using Azure Bicep.
 
 ## Estimated timing: 60 minutes
 
@@ -250,9 +254,14 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
+
 In this lab, you have completed:
-- Reviewed an ARM template for deployment of an Azure managed disk
-- Created an Azure managed disk by using an ARM template
-- Reviewed the ARM template-based deployment of the managed disk
+
+- Created an Azure Resource Manager template.
+- Edited an Azure Resource Manager template and redeployed the template
+- Configured the Cloud Shell and deployed a template with Azure PowerShell
+- Deployed a template with the CLI
+- Deployed a resource by using Azure Bicep
+
 
 ### You have successfully completed the lab
