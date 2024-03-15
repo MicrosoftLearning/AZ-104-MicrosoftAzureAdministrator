@@ -253,8 +253,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Protocol | **HTTP** |
     | Port | **80** |
     | Listener type | **Basic** |
-    | Error page url | **No** |
-
+    
 1. Switch to the **Backend targets** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -266,7 +265,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     | Setting | Value |
     | --- | --- |
-    | Backend setting | **az104-06-appgw5-http1** |
+    | Backend settings name | **az104-06-appgw5-http1** |
     | Backend protocol | **HTTP** |
     | Backend port | **80** |
     | Cookie-based affinity | **Disable** |
