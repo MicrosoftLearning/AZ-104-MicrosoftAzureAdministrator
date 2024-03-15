@@ -201,9 +201,11 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade.
 
+    ![](../Labs/media/l6-image18.png)
+
 1. On the **Load balancing | Application Gateway** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create an application gateway** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create an application gateway** blade, specify the following settings (leave others with their default values) and click **Next: Frontends >**
 
     | Setting | Value |
     | --- | --- |
@@ -217,21 +219,21 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Virtual network | **az104-06-vnet01** |
     | Subnet | **subnet-appgw** |
 
-1. Click **Next: Frontends >** and, on the **Frontends** tab of the **Create an application gateway** blade, click **Add new**, and specify the following settings (leave others with their default values):
+1.  On **Frontends** tab, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Frontend IP address type | **Public** |
-    | Public IP address name| **Add new** |
+    | Public IP address | Select **Add new** |
     
-1. Under **Add a Public IP**, Specify the following settings(leave others with their default values):   
+1. On **Add a Public IP**, Specify the following settings(leave others with their default values) and click **Next: Backends >**  
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-pip5** |
+    | Name | **az104-06-pip5** and click on **Ok** |
     
 
-1. Click **Next: Backends >**, on the **Backends** tab of the **Create an application gateway** blade, click **Add a backend pool**, and, on the **Add a backend pool** blade, specify the following settings (leave others with their default values):
+1. On **Backends**, click **Add a backend pool** and on the **Add a backend pool** blade, specify the following settings (leave others with their default values) and click on **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -244,7 +246,23 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
-1. Click **Add**, click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**.
+1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | `az104-imagebe` |
+    | Add backend pool without targets | **No** |
+    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
+
+1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | `az104-videobe` |
+    | Add backend pool without targets | **No** |
+    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
+   
+1. Click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**.
 
 1. On the **Add a routing rule** blade, on the **Listener** tab, specify the following settings:
 
@@ -265,7 +283,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
 
-1. Click **Add new** under to the **Backend setting** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values):
+1. Click **Add new** under to the **Backend setting** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values) and click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -276,6 +294,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
+1. Back on **Add a routing rule** window, 
 1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
 
     **Rule - routing to the images backend**
