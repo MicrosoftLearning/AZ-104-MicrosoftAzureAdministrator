@@ -239,10 +239,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | **az104-06-appgw5-be1** |
     | Add backend pool without targets | **No** |
-    | Target type | **IP address or FQDN** |
-    | Target | **10.62.0.4** |
-    | Target type | **IP address or FQDN** |
-    | Target | **10.63.0.4** |
+    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
+    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
@@ -269,7 +267,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Rule name | **az104-06-appgw5-rl1** |
-    | Priority | **1** |
+    | Priority | **10** |
     | Listener name | **az104-06-appgw5-rl1l1** |
     | Frontend IP | **Public** |
     | Protocol | **HTTP** |
@@ -311,7 +309,14 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
    ![image](../media/az-104(9).png)
 
+1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
 
+1. Verify you are directed to the image server (vm1).
+
+1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
+
+1. Verify you are directed to the video server (vm2).
+   
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (based on the message displayed on the web page).
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
