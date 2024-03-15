@@ -294,27 +294,6 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. Back on **Add a routing rule** window, 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then add the second rule. 
-
-    **Rule - routing to the images backend**
-
-    | Setting | Value |
-    | --- | --- |
-    | Path | `/image/*` |
-    | Target name | `images` |
-    | Backend settings | **az104-http** |
-    | Backend target | `az104-imagebe` |
-
-    **Rule - routing to the videos backend**
-
-    | Setting | Value |
-    | --- | --- |
-    | Path | `/video/*` |
-    | Target name | `videos` |
-    | Backend settings | **az104-http** |
-    | Backend target | `az104-videobe` |
-
    
 1. Click **Add** on the **Add Backend setting** blade. and back on the **Configuration** blade.
 
