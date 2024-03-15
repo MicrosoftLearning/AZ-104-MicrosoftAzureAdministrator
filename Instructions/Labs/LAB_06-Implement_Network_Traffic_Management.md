@@ -180,18 +180,22 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Virtual networks**.
 
+    ![](../Labs/media/l6-image15.png)
+
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet01**.
 
 1. On the  **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
-1. Add a subnet with the following settings (leave others with their default values):
+    ![](../Labs/media/l6-image16.png)
+
+1. Add a subnet with the following settings (leave others with their default values) and click **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Name | **subnet-appgw** |
     | Subnet address range | **10.60.3.224/27** |
 
-1. Click **Save**
+    ![](../Labs/media/l6-image17.png)
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
