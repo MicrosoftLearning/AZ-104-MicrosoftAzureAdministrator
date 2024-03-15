@@ -63,7 +63,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Wait for the virtual network to deploy and then select **Go to resource**.
 
-    ![image](../media/l4i1.png)
+    ![image](../media/l4i4.png)
    
 1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
 
@@ -245,7 +245,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    ```
 1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
 
-  ![image](../media/l4i14.png)
+   ![image](../media/l4i14.png)
 
 ### Configure a private DNS zone
 
