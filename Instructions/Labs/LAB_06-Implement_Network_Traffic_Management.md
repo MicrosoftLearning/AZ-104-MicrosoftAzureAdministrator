@@ -316,8 +316,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend target | `az104-videobe` |
 
    
-
-1. Click **Add** on the **Add Backend setting** blade, and back on the **Add a routing rule** blade, click **Add**.
+1. Click **Add** on the **Add Backend setting** blade. and back on the **Add a routing rule** blade.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
