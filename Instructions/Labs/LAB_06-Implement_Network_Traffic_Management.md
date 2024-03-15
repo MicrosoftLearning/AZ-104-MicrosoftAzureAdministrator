@@ -22,35 +22,47 @@ In this lab, you will complete the following tasks:
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
-1. Download the **\\Allfiles\\Lab06** lab files (template and parameters).
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template**, and then select **Deploy a custom template** under services.
 
-1. Sign in to the **Azure portal** - `https://portal.azure.com`.
-
-1. Search for and select `Deploy a custom template`.
+    ![](../Labs/media/l6-image1.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
+   ![](../Labs/media/l6-image2.png)
+   
 1. On the edit template page, select **Load file**.
 
+   ![](../Labs/media/l6-image3.png)
+   
 1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-template.json** file and select **Open**.
 
+   ![](../Labs/media/l6-image4.png)
+
 1. Select **Save**.
 
+   ![](../Labs/media/l6-image5.png)
+   
 1. Select **Edit parameters** and load the **\\Allfiles\\Lab06\\az104-06-vms-parameters.json** file.
 
+   ![](../Labs/media/l6-image6.png)
+
 1. Select **Save**.
 
-1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value.
+    ![](../Labs/media/l6-image7.png)
+   
+1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value and select **Review + Create**.
 
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group | `az104-rg6` (If necessary, select **Create new**) |
+    | Resource group | **AZ-104T06**) |
     | Password      | Provide a secure password |
 
+     ![](../Labs/media/l6-image8.png)
+   
     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
-
-1. Select **Review + Create** and then select **Create**.
+  
+1. Select **Create**.
 
     >**Note**: Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
 
