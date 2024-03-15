@@ -105,9 +105,11 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip4** |
-    | Availability zone | **No Zone** |
+    | Availability zone | **No Zone** and click **Ok** |
 
-1. Click Next: **Backend pools**, and click **+ Add**.
+1. Back on **Add frontend IP configuration** click on **Add** and **click on Next : Backend pools>**
+
+1. On **Backend pools** tab, and click **+ Add a Backend pools**.
 
 1. Add a backend pool with the following settings (leave others with their default values):
 
@@ -146,6 +148,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Protocol | **TCP** |
     | Port | **80** |
     | Interval | **5** |
+
+    ![](../Labs/media/l6-image13.png)
 
 1. Click **OK** and back on the **Add load balancing rules** blade, click **Add**.
 
