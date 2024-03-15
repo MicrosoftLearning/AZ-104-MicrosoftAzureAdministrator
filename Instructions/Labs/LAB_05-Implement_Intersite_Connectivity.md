@@ -4,9 +4,11 @@ Contoso has its data centers in Boston, New York, and Seattle offices connected 
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Configure local and global virtual network peering
-+ Task 3: Test intersite connectivity
++ Task 1: Provision the lab environment.
++ Task 2: Use Network Watcher to test the connection between virtual machines.
++ Task 3: Configure local and global virtual network peering.
++ Task 4: Test intersite connectivity.
++ Task 5: Create a custom route.
 
 ## Estimated timing: 30 minutes
 
@@ -71,7 +73,41 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-### Task 2: Configure local and global virtual network peering
+
+## Task 2: Use Network Watcher to test the connection between virtual machines 
+
+
+In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
+
+1. From the Azure portal, search for and select `Network Watcher`.
+
+1. From Network Watcher, in the Network diagnostic tools menu, select **Connection troubleshoot**.
+
+1. Use the following information to complete the fields on the **Connection troubleshoot** page.
+
+    | Field | Value | 
+    | --- | --- |
+    | Source type           | **Virtual machine**   |
+    | Virtual machine       | **az104-05-vm0**    | 
+    | Destination type      | **Virtual machine**   |
+    | Virtual machine       | **az104-05-vm1**   | 
+    | Preferred IP Version  | **Both**              | 
+    | Protocol              | **TCP**               |
+    | Destination port      | `3389`                |  
+    | Source port           | *Blank*         |
+    | Diagnostic tests      | *Defaults*      |
+
+
+
+    ![Azure Portal showing Connection Troubleshoot settings.](./Images/az104-lab05-connection-troubleshoot.png)
+
+1. Select **Run diagnostic tests**.
+
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
+
+ 
+
+### Task 3: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
 
 1. In the Azure portal, search for and select **Virtual networks**.
@@ -202,7 +238,7 @@ In this task, you will configure local and global peering between the virtual ne
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
-### Task 3: Test intersite connectivity
+### Task 4: Test intersite connectivity
 
 In this task, you will test connectivity between virtual machines on the three virtual networks that you connected via local and global peering in the previous task.
 
@@ -274,10 +310,60 @@ In this task, you will test connectivity between virtual machines on the three v
 
 15. Examine the output of the command and verify that the connection was successful.
 
+
+## Task 5: Create a custom route 
+
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
+
+1. Search for select the `az104-05-vnet0`.
+
+1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Name | `perimeter` |
+    | Subnet address range | `10.50.1.0/24`  |
+
+   
+1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Subscription | your subscription |
+    | Resource group | `az104-05-rg0-`  |
+    | Region | **East US** |
+    | Name | `az104-05-vm0` |
+    | Propagate gateway routes | **No** |
+
+1. After the route table deploys, select **Go to resource**.
+
+1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+
+    | Setting | Value | 
+    | --- | --- |
+    | Route name | `PerimetertoCore` |
+    | Destination type | **IP Addresses** |
+    | Destination IP addresses | `10.50.0.0/22` (core services virtual network) |
+    | Next hop type | **Virtual appliance** (notice your other choices) |
+    | Next hop address | `10.50.1.7` (future NVA) |
+
+1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+
+1. Select **Subnets** and then **Associate**. Complete the configuration.
+
+    | Setting | Value | 
+    | --- | --- |
+    | Virtual network | **az104-05-vnet0** |
+    | Subnet | **subnet0** |    
+
+>**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
+
 ### Review
 In this lab, you have completed:
 + Provisioned the lab environment
++ Use Network Watcher to test the connection between virtual machines
 + Configured local and global virtual network peering
 + Tested intersite connectivity
++ Create a custom route 
 
 ### You have successfully completed the lab
