@@ -79,7 +79,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
    ![](../Labs/media/l6-image11.png)
 
-1. On **Load balancers | Load balancers** blade, click on **+ Create**.
+1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values):
 
