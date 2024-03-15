@@ -11,59 +11,61 @@ In this lab, you will complete the following tasks:
 + Task 5: Configure Azure DNS for internal name resolution
 + Task 6: Configure Azure DNS for external name resolution
 
-## Estimated timing: 45 minutes
+## Estimated timing: 60  minutes
 
 ## Architecture diagram
-![image](../media/lab04.png)
+
+  ![image](../media/az104-lab04-architecture.png)
 
 ## Exercise 1: Create and configure a virtual network
 
-### Task 1: Create and configure a virtual network
-In this task, you will create a virtual network with multiple subnets by using the Azure portal.
+## Task 1: Create a virtual network with subnets using the portal
 
-1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
+The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
-1. Create a virtual network with the following settings (leave others with their default values):
+1. In the Azure portal, search for and select `Virtual Networks`.
 
-    | Setting | Value |
-    | --- | --- |
-    | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource Group | Select the existing resource group **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Name | **az104-04-vnet1** |
-    | Region | Select **<inject key="Region" enableCopy="false" />** |
+1. Select **Create** on the Virtual networks page.
 
-1. Click **Next: IP Addresses** and enter the following values.
+1. Complete the **Basics** tab with the following details:  
 
-    | Setting | Value |
-    | --- | --- |
-    | IPv4 address space | **10.40.0.0/20** |
+	|  **Option**         | **Value**            |
+	| ------------------ | -------------------- |
+	| Subscription       | Choose the default subscription |(1)
+    | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
+	| Name               | **az104-04-vnet1** (3)|
+	| Region             |  **<inject key="Region" enableCopy="false" />** (4) |
 
-1. Click **+ Add subnet** enter the following values then click **Add**.
+     ![image](../media/l4i1.png)
 
-    | Setting | Value |
-    | --- | --- |
-    | Subnet name | **subnet0** |
-    | Subnet address range | **10.40.0.0/24** |
-    | Subnet size | **/24 (256 addresses)** |
-
-1. Accept the defaults and click **Review + Create**. Let validation occur, and hit **Create** again to submit your deployment.
-
-    >**Note**: Wait for the virtual network to be provisioned. This should take less than a minute.
-
-1. Click on **Go to resource**.
-
-1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
-
-1. Create a subnet with the following settings (leave others with their default values):
+1. Click **Next** and subsequently click on **Next** again to move to the **IP Addresses** tab.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **subnet1** |
-    | Address range (CIDR block) | **10.40.1.0/24** |
-    | Network security group | **None** |
-    | Route table | **None** |
+    | IPv4 address space | **10.20.0.0/16** |
 
-1. Click **Save**
+1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+
+	| **Subnet**             | **Option**           | **Value**              |
+	| ---------------------- | -------------------- | ---------------------- |
+	| SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet` |
+	|                        | Starting address		| `10.20.10.0`          |
+	|						 | Size					| `/24`	|
+	| DatabaseSubnet         | Subnet name          | `DatabaseSubnet`         |
+	|                        | Starting address		| `10.20.20.0`        |
+	|						 | Size					| `/24`	|
+
+	>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
+
+1. Select **Review + create**.
+
+1. Verify your configuration passed validation, and then select **Create**.
+
+1. Wait for the virtual network to deploy and then select **Go to resource**.
+
+    ![image](../media/l4i1.png)
+   
+1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
@@ -71,61 +73,250 @@ In this task, you will create a virtual network with multiple subnets by using t
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 2: Deploy virtual machines into the virtual network
-In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template.
+## Task 2: Create a virtual network and subnets using a template
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
+1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file that will be used for the custom deployment.
 
-2. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. In the portal, search for and select **Deploy a custom template**.
 
-    ![image](../media/AZ-104-strorage-mount.png)
- 
-3. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.
+1. Select **Build your own template in the editor** and then **Load file**.
+
+1. Select the **templates.json** file, then select **Save**.
+
+1. Click on the **Edit Parameters** section and click on **Load File** to upload the parameters fille. Subsequently, click on **Save**
+
+1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group.
     
-4. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give the name as **str<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section give the name as **fs<inject key="DeploymentID" enableCopy="false" />** as shown in the below image.
+   ![image](../media/l4i7.png)
 
-   ![image](../media/AZ-104-labrecent1.0.png)
+1. Select **Review + create** and then **Create**.
 
-3. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
+1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
 
-4. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\04\\az104-04-vms-loop-template.json** and **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\04\\az104-04-vms-loop-parameters.json** into the Cloud Shell home directory.
+## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
-    ![image](../media/AZ-104-uploaddoc.png)
-    
-     >**Note**: You might need to upload each file separately.
-    
+In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. The NSG will also have an outbound rule that denies access to the internet. 
 
-5. From the Cloud Shell pane, run the following to deploy two virtual machines using the template and parameter files you uploaded. Replace **DeploymentID** with **<inject key="DeploymentID" enableCopy="false" />**.
+### Create the Application Security Group (ASG)
 
-    >**Note**: You will be prompted to provide an Admin password. Please enter a **password** **<inject key="AzureAdUserPassword"></inject>** within the powershell pane and hit enter.
-    
-     
+1. In the Azure portal, search for and select `Application security groups`.
+
+1. Click **Create** and provide the basic information.
+
+    | Setting | Value |
+    | -- | -- |
+    | Subscription | *your subscription* (1) |
+    | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**  (2)|
+    | Name | **asg-web** (3) |
+    | Region |  **<inject key="Region" enableCopy="false" />** (4)  |
+
+    ![image](../media/l4i8.png)
+
+1. Click **Review + create** and then after the validation click **Create**.
+
+### Create the Network Security Group and associate it with the ASG subnet
+
+1. In the Azure portal, search for and select `Network security groups`.
+
+1. Select **+ Create** and provide information on the **Basics** tab. 
+
+    | Setting | Value |
+    | -- | -- |
+    | Subscription | *your subscription* |
+    | Resource group |  **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**  |
+    | Name | **myNSGSecure** |
+    | Region | **<inject key="Region" enableCopy="false" />**  |
+
+1. Click **Review + create** and then after the validation click **Create**.
+
+1. After the NSG is deployed, click **Go to resource**.
+
+1. Under **Settings** click **Subnets** and then **Associate**.
+
+    | Setting | Value |
+    | -- | -- |
+    | Virtual network | **az104-04-vnet1** |
+    | Subnet | **SharedServicesSubnet** |
+
+    ![image](../media/l4i9.png)
+
+1. Click **OK** to save the association.
+
+### Configure an inbound security rule to allow ASG traffic
+
+1. Continue working with your NSG. In the **Settings** area, select **Inbound security rules**.
+
+1. Review the default inbound rules. Notice that only other virtual networks and load balancers are allowed access.
+
+1. Select **+ Add**.
+
+1. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select **Add**.
+
+    | Setting | Value |
+    | -- | -- |
+    | Source | **Application security group** (1) |
+    | Source application security groups | **asg-web** (2) |
+    | Source port ranges |  * (3) |
+    | Destination | **Any** (4) |
+    | Service | **Custom** (notice your other choices) (5)|
+    | Destination port ranges | **80,443** (6)|
+    | Protocol | **TCP** (7) |
+    | Action | **Allow** (8) |
+    | Priority | **100** (9) |
+    | Name | `AllowASG` (10) |
+
+    ![image](../media/l4i10.png)
  
-   ```powershell
-   $rgName = 'az104-04-rg1-DeploymentID'
+### Configure an outbound NSG rule that denies Internet access
 
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-04-vms-loop-template.json `
-      -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
-  
-     ```
-  
-   >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
+1. After creating your inbound NSG rule, select **Outbound security rules**. 
 
-   >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
+1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
 
-   >**Note**: If you got an error stating the VM size is not available in the region, follow the following steps:
+1. Select **+ Add** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add**.
+
+    | Setting | Value |
+    | -- | -- |
+    | Source | **Any** |
+    | Source port ranges |  * |
+    | Destination | **Service tag** |
+    | Destination service tag | **Internet** |
+    | Service | **Custom** |
+    | Destination port ranges | **8080** |
+    | Protocol | **Any** |
+    | Action | **Deny** |
+    | Priority | **4096** |
+    | Name | **DenyAnyCustom8080Outbound** |
+
+
+## Task 4: Configure public and private Azure DNS zones
+
+In this task, you will create and configure public and private DNS zones. 
+
+### Configure a public DNS zone
+
+You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
+
+1. In the portal, search for and select `DNS zones`.
+
+1. Select **+ Create**.
+
+1. Configure the **Basics** tab.
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Subscription | **Select your subscription**  (1)|
+    | Resource group |  **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**(2) |
+    | Name | **contoso<inject key="DeploymentID" enableCopy="false" />.com** (3)|
+    | Region | **<inject key="Region" enableCopy="false" />** (4)|
+
+    ![image](../media/l4i11.png)
+
+1. Select **Review create** and then **Create**.
+   
+1. Wait for the DNS zone to deploy and then select **Go to resource**.
+
+1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+
+  ![image](../media/l4i12.png)
+
+1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Name | **www** |
+    | Type | **A** |
+    | TTL | **1** |
+    | IP address | **10.1.1.4** |
+
+>**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
+
+1. Select **OK** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
+
+   ![image](../media/l4i13.png)
+
+1. Open a command prompt, and run the following command:
+   **Replace DID with <inject key="DeploymentID" enableCopy="false" />** and <name server name> with the name server name you copied in the previous step.
  
-   > 1. Click on the `{}` button in your CloudShell, select the **az104-04-vms-loop-parameters.json** from the left-hand sidebar, and take note of the `vmSize` parameter value.
-   > 1. Check the location in which the 'az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />' resource group is deployed. You can run `az group show -n az104-04-rg1-<inject key="DeploymentID" enableCopy="false" /> --query location` in your CloudShell to get it.
-   > 1. Run `az vm list-skus --location <Replace with your location> -o table --query "[? contains(name,'Standard_D2s')].name"` in your CloudShell.
-   > 1. Replace the value of `vmSize` parameter with one of the values returned by the command you just run.
-   > 1. Now redeploy your templates by running the `New-AzResourceGroupDeployment` command again. You can press the up button a few times which would bring the last executed command.
- 
-7. Close the Cloud Shell pane.
+    ```sh
+   nslookup www.contoso<DID>.com <name server name>
+   ```
+1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
+
+  ![image](../media/l4i14.png)
+
+### Configure a private DNS zone
+
+A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
+
+1. In the portal, search for and select `Private dns zones`.
+
+1. Select **+ Create**.
+
+1. On the **Basics** tab of Create private DNS zone, enter the information as listed in the table below:
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Subscription | **Select your subscription** |
+    | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Name | `private.contoso.com` (adjust if you had to rename) |
+    | Region |**East US** |
+
+1. Select **Review create** and then **Create**.
+   
+1. Wait for the DNS zone to deploy and then select **Go to resource**.
+
+1. Notice on the **Overview** blade there are no name server records. 
+
+1. Select **+ Virtual network links** and then select **+ Add**. 
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Link name | `manufacturing-link` |
+    | Virtual network | `ManufacturingVnet` |
+
+1. Select **OK** and wait for the link to create. 
+
+1. From the **Overview** blade select **+ Record set**. You would now add a record for each virtual machine that needs private name-resolution support.
+
+    | Property | Value    |
+    |:---------|:---------|
+    | Name | **sensorvm** |
+    | Type | **A** |
+    | TTL | **1** |
+    | IP address | **10.1.1.4** |
+
+ >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Task 3: Configure private and public IP addresses of Azure VMs
 In this task, you will configure the static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
