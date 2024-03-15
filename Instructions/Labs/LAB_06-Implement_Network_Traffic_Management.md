@@ -46,19 +46,23 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image6.png)
 
+   ![](../Labs/media/l6-image7.png)
+
+   ![](../Labs/media/l6-image8.png)
+
 1. Select **Save**.
 
-    ![](../Labs/media/l6-image7.png)
+    ![](../Labs/media/l6-image9.png)
    
 1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value and select **Review + Create**.
 
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group | **AZ-104T06**) |
+    | Resource group | **az104-06-rg1** |
     | Password      | Provide a secure password |
 
-     ![](../Labs/media/l6-image8.png)
+     ![](../Labs/media/l6-image10.png)
    
     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
   
@@ -71,7 +75,11 @@ In this task, you will use a template to deploy one virtual network, one network
 ### Task 5: Implement Azure Load Balancer
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
-1. In the Azure portal, search and select **Load balancers** and, on the **Load balancers** blade, click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
+
+   ![](../Labs/media/l6-image11.png)
+
+1. On **Load balancers | Load balancers** blade, click on **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values):
 
