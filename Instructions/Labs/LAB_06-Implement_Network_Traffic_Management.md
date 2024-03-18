@@ -72,7 +72,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
     >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtual machine.
 
-### Task 5: Implement Azure Load Balancer
+### Task 2: Implement Azure Load Balancer
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
@@ -116,7 +116,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-lb4-be1** |
-    | Virtual network | **az104-06-vnet01** |
+    | Virtual network | **az104-06-vnet1** |
     | Backend Pool Configuration | **NIC** |
     
 1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
@@ -175,16 +175,16 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 6: Implement Azure Application Gateway
+### Task 3: Implement Azure Application Gateway
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal, search and select **Virtual networks**.
 
     ![](../Labs/media/l6-image15.png)
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet01**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the  **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the  **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
     ![](../Labs/media/l6-image16.png)
 
@@ -216,7 +216,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | HTTP2 | **Disabled** |
-    | Virtual network | **az104-06-vnet01** |
+    | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw** |
 
 1.  On **Frontends** tab, specify the following settings (leave others with their default values):
@@ -300,7 +300,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Path | `/image/*` |
     | Target name | `images` |
-    | Backend settings | **az104-http** |
+    | Backend settings | **az104-06-appgw5-http1** |
     | Backend target | `az104-imagebe` |
 
     **Rule - routing to the videos backend**
@@ -309,7 +309,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Path | `/video/*` |
     | Target name | `videos` |
-    | Backend settings | **az104-http** |
+    | Backend settings | **az104-06-appgw5-http1** |
     | Backend target | `az104-videobe` |
       
 1. Click **Add** on the **Add Backend setting** blade. and back on the **Configuration** blade.
