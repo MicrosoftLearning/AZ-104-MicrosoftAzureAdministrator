@@ -77,15 +77,15 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
-1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file that will be used for the custom deployment.
+1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
 1. In the portal, search for and select **Deploy a custom template**.
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
-1. Select the **templates.json** file, then select **Save**.
+1. Select the **az-104-04template.json** file, then select **Save**.
 
-1. Click on the **Edit Parameters** section and click on **Load File** to upload the parameters fille. Subsequently, click on **Save**
+1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** fille and subsequently, click on **Save**
 
 1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group.
     
