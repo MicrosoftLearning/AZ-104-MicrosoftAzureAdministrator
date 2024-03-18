@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 ## Exercise 1
 
 
-### Task 2: Create and configure Azure Storage accounts
+### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
 1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
@@ -84,8 +84,11 @@ In this task, you will create and configure an Azure Storage account.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 3: Manage blob storage
+### Task 2: Create and configure secure blob storage
+
 In this task, you will create a blob container and upload a blob into it.
+
+## Create a blob container and a time-based retention policy
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers**.
 
@@ -108,6 +111,8 @@ In this task, you will create a blob container and upload a blob into it.
     | Set retention period for | `180` days |
 
 1. Select **Save**.
+
+## Manage blob uploads
 
 1. In the list of containers, select **az104-07-container** and click **Upload** within the **Upload blob** pane, click on **Browse for files**.
 
@@ -151,7 +156,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### 4 Configure limited access to the blob storage
+### Task 3: Configure limited access to the blob storage
 
 1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
 
@@ -165,7 +170,6 @@ In this task, you will create a blob container and upload a blob into it.
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
     
-
 1. Click **Generate SAS token and URL**.
 
 1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
@@ -186,7 +190,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 5: Create and configure an Azure Files shares
+### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares**.
@@ -222,8 +226,6 @@ In this task, you will create and configure Azure Files shares.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
-
 ### Restrict network access to the storage account
 
 1. In the portal, search for and select **Virtual networks**.
@@ -255,8 +257,6 @@ In this task, you will create and configure Azure Files shares.
 1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
-
-
 
 #### Task 6: Manage network access for Azure Storage
 In this task, you will configure network access for Azure Storage.
