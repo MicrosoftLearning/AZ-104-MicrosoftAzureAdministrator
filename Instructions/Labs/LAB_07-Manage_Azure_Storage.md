@@ -149,7 +149,18 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Click **Create**.
 
-1. In the list of containers, select **az104-07-container** and within the **Upload blob** pane, click on **Browse for files**.
+1. On your container, scroll to the ellipsis (...) on the far right, select **Access Policy**.
+
+1. In the **Immutable blob storage** area, select **Add policy**.
+
+    | Setting | Value |
+    | --- | --- |
+    | Policy type | **Time-based retention**  |
+    | Set retention period for | `180` days |
+
+1. Select **Save**.
+
+1. In the list of containers, select **az104-07-container** and click **Upload** within the **Upload blob** pane, click on **Browse for files**.
 
 1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
 
