@@ -302,6 +302,42 @@ In this task, you will create and configure Azure Files shares.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+
+
+### Restrict network access to the storage account
+
+1. In the portal, search for and select **Virtual networks**.
+
+1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
+
+1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
+
+1. Wait for the virtual network to deploy, and then select **Go to resource**.
+
+1. In the **Settings** section, select the **Subnets** blade.
+    + Select the **default** subnet.
+    + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
+    + Do not make any other changes.    
+    + Be sure to **Save** your changes. 
+
+1. Return to your storage account.
+
+1. In the **Security + networking** section, select the **Networking** blade.
+
+1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
+
+1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
+
+1. Be sure to **Save** your changes.
+
+    >**Note:** The storage account should now only be accessed from the virtual network you just created. 
+
+1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
+
+    >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
+
+
+
 #### Task 6: Manage network access for Azure Storage
 In this task, you will configure network access for Azure Storage.
 
