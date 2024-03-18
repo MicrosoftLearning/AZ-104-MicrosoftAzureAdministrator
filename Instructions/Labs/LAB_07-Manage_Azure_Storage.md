@@ -276,7 +276,7 @@ In this task, you will create and configure Azure Files shares.
     + Do not make any other changes.    
     + Be sure to **Save** your changes. 
 
-1. Return to your **Storage account** name **strgaz104t07<inject key="DeploymentID" enableCopy="false" />**
+1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />**
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
@@ -290,7 +290,7 @@ In this task, you will create and configure Azure Files shares.
 
     >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
-1. Return to your **Storage account** name **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** and select the **Storage browser** then expand **Blob containers** and select **az104-07-container** and **Refresh** the page.  
+1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** and select the **Storage browser** then expand **Blob containers** and select **az104-07-container** and **Refresh** the page.  
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
