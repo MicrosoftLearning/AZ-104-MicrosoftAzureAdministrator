@@ -108,7 +108,27 @@ In this task, you will create and configure an Azure Storage account.
 1. Display the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
 
     > **Note**: The cool access tier is optimal for data that is not accessed frequently.
+
+1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
+
+1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+
+    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
+    + In the **Firewall** section, check the box for **Add your client IP address.**
+    + Be sure to **Save** your changes. 
+  
+1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+
+1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
+
+    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
     
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
+    
+    + Notice you can configure other conditions. Select **Add** when you are done exploring.
+
+    ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
