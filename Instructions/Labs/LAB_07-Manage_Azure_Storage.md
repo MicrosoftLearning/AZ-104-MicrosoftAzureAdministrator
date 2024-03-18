@@ -19,57 +19,6 @@ In this lab, you will complete the following tasks:
 
 ## Exercise 1
 
-### Task 1: Provision the lab environment
-In this task, you will deploy an Azure virtual machine that you will use later in this lab.
-   
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-    ![Image](./Images/cloudshell.png)
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-1. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**.         
-     ![image](../media/advancesetting.png)
-    
-1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** (az104-07-rg0/az104-07-rg1) dropdown and give **cloudshell<inject key="DeploymentID" enableCopy="false" />** under the **Storage Account** section, and under the **File share** section type **none** as shown in the below image.
-
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed.
-
-    ![image](../media/crtstr.png)
-
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07\az104-07-vm-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07\\az104-07-vm-parameters.json** into the Cloud Shell home directory.
-
-     ![Image](./Images/upload.png)
-
-1. From the Cloud Shell pane, run the following to create the virtual machine replace the `[Azure_region]` placeholder with the name of an Azure region same as the  Resource group region of az104-07-rg0.
-  
-   ```powershell
-   $location = '[Azure_region]'
-   ```
-   
-   ```powershell
-   $rgName = 'az104-07-rg0'
-   
-   ```
-   
-     >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`. 
-
-1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
-
-    
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-07-vm-template.json `
-      -TemplateParameterFile $HOME/az104-07-vm-parameters.json `
-      -AsJob
-   ```
-  
-  
-    >**Note**: You will be prompted to provide an Admin password. Please enter a valid password within the powershell pane and hit enter.
-   
-    >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
-
-1. Close the Cloud Shell pane.
 
 ### Task 2: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
@@ -184,15 +133,7 @@ In this task, you will create a blob container and upload a blob into it.
 1. On the **licenses/LICENSE** blade, review the available options.
 
     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
-    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-### Task 4: Manage authentication and authorization for Azure Storage
-In this task, you will configure authentication and authorization for Azure Storage.
+     
 
 1. On the **licenses/LICENSE** blade, on the **Overview** tab, click the **Copy to clipboard** button next to the **URL** entry.
 
@@ -203,6 +144,14 @@ In this task, you will configure authentication and authorization for Azure Stor
     > **Note**: This is expected since the container you created has the public access level set to **Private (no anonymous access)**.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### 4 Configure limited access to the blob storage
 
 1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
 
