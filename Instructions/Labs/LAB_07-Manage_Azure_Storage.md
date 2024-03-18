@@ -280,6 +280,8 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
+1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses**. 
+
 1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
 
 1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
