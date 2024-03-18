@@ -210,11 +210,15 @@ In this task, you will create and configure Azure Files shares.
 
 1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your ****az104-07-share**** directory is present.
+1. Select **File shares** and verify your **az104-07-share** directory is present.
 
-1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
+1. Select your **az104-07-share** directory and notice you can **+ Add directory**. This lets you create a folder structure. Provide name **az104-07-folder** and click on **OK**
 
-1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
+1. Open file explorer and create text document named **az104-07-file.txt**.
+
+1. Navigate to File share and select **az104-07-share**.
+
+1. Select **Upload**. Browse to a file **az104-07-file.txt**, and then click **Upload**.
 
     >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
