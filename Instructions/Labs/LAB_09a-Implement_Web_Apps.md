@@ -58,7 +58,7 @@ In this task, you will create a staging deployment slot.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
-1. Click **+ Add slot**, and add a new slot with the following settings:
+1. Click **+ Add slot**, and add a new slot with the following settings then click on **Add**. 
 
     | Setting | Value |
     | --- | ---|
