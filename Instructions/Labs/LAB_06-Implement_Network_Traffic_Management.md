@@ -1,15 +1,25 @@
 # Lab 06 - Implement Traffic Management
+
+## Lab introduction
+
+In this lab, you learn how to configure and test a public Load Balancer and an Application Gateway.
+
 ## Lab scenario
 You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso is considering implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
 
+## Interactive lab simulations
+
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
++ [Create and configure and Azure load balancer](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20an%20Azure%20load%20balancer). Create a virtual network, backend servers, load balancer, and then test the load balancer.
++ [Deploy Azure Application Gateway](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway). Create an application gateway, create virtual machines, create the backend pool, and test the gateway.
++ [Implement traffic management](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2010). Implement complete hub and spoke network including virtual machines, virtual networks, peering, load balancer, and application gateway.
+  
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Configure the hub and spoke network topology
-+ Task 3: Test the transitivity of virtual network peering
-+ Task 4: Configure routing in the hub and spoke topology
-+ Task 5: Implement Azure Load Balancer
-+ Task 6: Implement Azure Application Gateway
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Configure an Azure Load Balancer.
++ Task 3: Configure an Azure Application Gateway.
 
 ## Estimated timing: 60 minutes
 
@@ -347,7 +357,23 @@ In this task, you will implement an Azure Application Gateway in front of the tw
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab.
+
++ Azure Load Balancer is an excellent choice for distributing network traffic across multiple virtual machines at the transport layer (OSI layer 4 - TCP and UDP).
++ Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
++ The Basic load balancer is for small-scale applications that don't need high availability or redundancy. The Standard load balancer is for high performance and ultra-low latency.
++ Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
++ The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
++ An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
+
+## Learn more with self-paced training
+
++ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
++ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
+
 ### Review
 In this lab, you have completed:
 + Provisioned the lab environment
