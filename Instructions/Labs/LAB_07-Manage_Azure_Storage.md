@@ -23,8 +23,12 @@ In this lab, you will complete the following tasks:
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**, and then click **+ Create**.
+1. In the Azure portal, search for and select **Storage accounts**. and then click **+ Create**.
 
+    ![image](./media/l7-image1.png)
+
+1. On **Storage accounts** blade, click **+ Create**.
+   
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -50,11 +54,13 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the same blade **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change. 
 
-    ![](../Labs/Images/TA7-T2-P8.png)
+    ![image](./media/l7-image2.png)
 
-1. In the same blade note that, at this point, the Storage account has only the primary location.
+1. In the same blade note that, at this point, the Storage account has the primary location.
 
-1. Display the **Configuration** blade of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
+1. Select **Configuration** blade under **Settings** section of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
+
+    ![image](./media/l7-image3.png)
 
     > **Note**: The cool access tier is optimal for data that is not accessed frequently.
 
@@ -65,19 +71,21 @@ In this task, you will create and configure an Azure Storage account.
     + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
     + In the **Firewall** section, check the box for **Add your client IP address.**
     + Be sure to **Save** your changes. 
-  
+
+     ![image](./media/l7-image4.png)
+   
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
+  
+      ![image](./media/l7-image5.png)
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
-    
-    + Notice you can configure other conditions. Select **Add** when you are done exploring.
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. Notice you can configure other conditions. Select **Add** when you are done exploring.
 
-    ![Screenshot move to cool rule conditions.](../media/az104-lab07-movetocool.png)
-
+      ![image](./media/l7-image6.png)
+      
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -103,14 +111,17 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. On your container, scroll to the ellipsis (...) on the far right, select **Access Policy**.
 
+     ![image](./media/l7-image9.png)
+
 1. In the **Immutable blob storage** area, select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
     | Policy type | **Time-based retention**  |
     | Set retention period for | `180` days |
-
-1. Select **Save**.
+    | Select **Save** |
+   
+     ![image](./media/l7-image10.png)
 
 ## Manage blob uploads
 
@@ -214,6 +225,8 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select your **az104-07-share** directory and notice you can **+ Add directory**. This lets you create a folder structure. Provide name **az104-07-folder** and click on **OK**
 
+    ![image](./media/l7-image12.png)
+
 1. Open file explorer and create text document named **az104-07-file.txt**.
 
 1. Navigate to File share and select **az104-07-share**.
@@ -261,42 +274,6 @@ In this task, you will create and configure Azure Files shares.
 1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
-
-#### Task 6: Manage network access for Azure Storage
-In this task, you will configure network access for Azure Storage.
-
-1. In the Azure portal, navigate back to the blade of the storage account **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** you created in the second task of this lab and, in the **Security + Networking** section, click **Networking** and then click **Firewalls and virtual networks** tab.
-
-1. Select the **Enabled from selected virtual networks and IP addresses** option and review the configuration settings that become available once this option is enabled.
-
-    > **Note**: You can use these settings to configure direct connectivity between Azure virtual machines on designated subnets of virtual networks and the storage account by using service endpoints.
-
-1. Click the checkbox **Add your client IP address** and save the change.
-
-1. Open another browser window by using InPrivate mode and navigate to the blob SAS URL you generated in the previous task.
-
-     > **Note**: If you did not record the SAS URL from task 4, you should generate a new one with the same configuration. Use Task 4 steps 4-6 as a guide for generating a new blob SAS URL. 
-
-1. You should be presented with the content of **The MIT License (MIT)** page.
-
-    > **Note**: This is expected since you are connecting from the client's IP address.
-
-1. Close the InPrivate mode browser window, and return to the browser window showing the **Networking** blade of the Azure Storage account.
-
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
-
-1. From the Cloud Shell pane, run the following to attempt downloading the LICENSE blob from the **az104-07-container** container of the storage account (replace the `[blob SAS URL]` placeholder with the blob SAS URL you generated in the previous task):
-
-   ```powershell
-   Invoke-WebRequest -URI '[blob SAS URL]'
-   ```
-1. Verify that the download attempt failed.
-
-    > **Note**: You should receive the message stating **AuthorizationFailure: This request is not authorized to perform this operation**. This is expected since you are connecting from the IP address assigned to an Azure VM hosting the Cloud Shell instance.
-
-1. Close the Cloud Shell pane.
 
 ### Review
 In this lab, you have completed:
