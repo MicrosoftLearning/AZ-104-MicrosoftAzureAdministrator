@@ -7,15 +7,15 @@
         "Order": 1
      },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_09a-Implement_Web_Apps.md",
+      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_09a-Implement_Web_Apps.md",
       "Order": 2
     },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.md",
+      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.md",
       "Order": 3
     },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md",
+      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_09c-Implement_Azure_Kubernetes_Service.md",
       "Order": 4
     }
   ]
