@@ -210,7 +210,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your **share1** directory is present.
+1. Select **File shares** and verify your ****az104-07-share**** directory is present.
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
