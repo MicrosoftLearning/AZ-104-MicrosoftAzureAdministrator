@@ -19,7 +19,6 @@ In this lab, you will complete the following tasks:
 
 ## Exercise 1
 
-
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
@@ -96,7 +95,7 @@ In this task, you will create and configure an Azure Storage account.
 
 In this task, you will create a blob container and upload a blob into it.
 
-## Create a blob container and a time-based retention policy
+### Create a blob container and a time-based retention policy
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers**.
 
@@ -205,7 +204,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 3: Create and configure an Azure File storage
+### Task 4: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares**.
