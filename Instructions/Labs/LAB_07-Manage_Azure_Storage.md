@@ -138,6 +138,8 @@ In this task, you will create a blob container and upload a blob into it.
     | Access tier | **Hot** |
     | Upload to folder | **licenses** |
 
+    ![image](./media/l1-image14.png)
+   
     > **Note**: Access tier can be set for individual blobs.
 
 1. Click **Upload**.
@@ -180,12 +182,14 @@ In this task, you will create a blob container and upload a blob into it.
     | Expiry date | tomorrow's date |
     | Expiry time | current time |
     | Allowed IP addresses | leave blank |
-    
+
+    ![image](./media/l1-image13.png)
+   
 1. Click **Generate SAS token and URL**.
 
 1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
 
-    ![](../Labs/Images/sasurl.png)
+    ![image](./media/l1-image15.png)
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
 
