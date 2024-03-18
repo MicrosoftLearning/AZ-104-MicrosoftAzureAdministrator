@@ -179,30 +179,6 @@ In this task, you will create a blob container and upload a blob into it.
     > **Note**: This is expected since now your access is authorized based on the newly generated SAS token.
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
-
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
-
-1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
-
-    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
-
-    > **Note**: At this point, you do not have permission to change the Authentication method.
-
-1. On the **az104-07-container** blade, click **Access Control (IAM)**.
-
-1. In the **+ Add** section, select **Add role assignment**.
-
-1. On the **Add role assignment** blade, specify the following settings and click on **Review + assign**.
-
-    | Setting | Value |
-    | --- | --- |
-    | Role | **Storage Blob Data Owner** |
-    | Assign access to | **User, group, or service principal** |
-    | Select members | the name of your user account |
-
-1. Save the change and return to the **Overview** blade of the **az104-07-container** container and verify that you can change the Authentication method to (Switch to Azure AD User Account).
-
-    > **Note**: It might take about 5 minutes for the change to take effect.
     
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
@@ -226,33 +202,17 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 
-1. Click **Browse** and note that there are no files or folders in the new file share. Click **Connect**.
+### Explore Storage Browser and upload a file
 
-1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**.
+1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Click on the button and you will find a grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
+1. Select **File shares** and verify your **share1** directory is present.
 
-1. In the Azure portal, search for and select **Virtual machines**, and, in the list of virtual machines, click **az104-07-vm0**.
+1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
-1. On the **az104-07-vm0** blade, in the **Operations** section, click **Run command**.
+1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
-1. On the **az104-07-vm0 - Run command** blade, click **RunPowerShellScript**.
-
-1. On the **Run Command Script** blade, paste the script you copied earlier in this task into the **PowerShell Script** pane and click **Run**.
-
-1. Verify that the script was completed successfully.
-
-1. Replace the content of the **PowerShell Script** pane with the following script and click **Run**:
-
-   ```powershell
-   New-Item -Type Directory -Path 'Z:\az104-07-folder'
-   
-   New-Item -Type File -Path 'Z:\az104-07-folder\az-104-07-file.txt'
-   ```
-
-1. Verify that the script was completed successfully.
-
-1. Navigate back to the **az104-07-share \| Browse** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
+    >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
     
