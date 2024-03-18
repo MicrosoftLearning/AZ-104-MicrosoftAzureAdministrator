@@ -76,7 +76,9 @@ In this task, you will create a staging deployment slot.
     | Clone settings from | **Do not clone settings**|
 
     ![image](../media/l9-image6.png)
-   
+
+1. Once you see **Successfully created slot 'staging'** click on **Close**.
+     
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
