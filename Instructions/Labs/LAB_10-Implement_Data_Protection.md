@@ -150,7 +150,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Frequency | **Daily** |
     | Time | **12:00 AM** |
     | Timezone | the name of your local time zone |
-    | Retain instant recovery snapshot(s) for | **12** Days(s) |
+    | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
     ![Screenshot of the backup policy page.](../media/az104-lab10-backup-policy.png)
 
