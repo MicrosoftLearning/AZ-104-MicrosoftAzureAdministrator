@@ -26,18 +26,6 @@ In this lab, you will complete the following tasks:
 ### Task 1: Create an Azure web app
 In this task, you will create an Azure web app.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
-
-1. In the Sign-in window, you will see a login screen, in that enter the following email/username and then click on **Next**. 
-
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-
-1. Now enter the password and click on Sign in.
-   
-   * Password: <inject key="AzureAdUserPassword"></inject>
-  
-1. When prompted to stay signed in, select **Yes**. This takes you to the Microsoft 365 admin center page.
-
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create** and choose **Create Web App**
 
 1. On the **Basics** tab , specify the following settings (leave others with their default values):
