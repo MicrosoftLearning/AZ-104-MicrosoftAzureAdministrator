@@ -195,6 +195,8 @@ In this task, you will swap the staging slot with the production slot.
 
    >**Note**: Kindly Wait till Swap successfully complete.
 
+1. Once you get **Successfully completed swap between slot 'staging' and slot 'production'** click on **Close**.
+   
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
