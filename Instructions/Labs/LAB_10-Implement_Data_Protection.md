@@ -71,9 +71,13 @@ In this task, you will deploy two virtual machines that will be used to test dif
 ### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade, click **+ Create**.
+1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade.
 
-1. On the **Create Recovery Services vault** blade, specify the following settings:
+    ![image](./media/l10-image5.png)
+
+1. Click **+ Create**.
+
+1. On the **Create Recovery Services vault** blade, specify the following settings and click **Review + Create**.
 
     | Settings | Value |
     | --- | --- |
@@ -84,7 +88,9 @@ In this task, you will create a recovery services vault.
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-1. Click **Review + Create**, ensure that the validation has passed, and click **Create**.
+    ![image](./media/l10-image6.png)
+     
+1. Ensure that the validation has passed, and click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
@@ -94,15 +100,19 @@ In this task, you will create a recovery services vault.
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
 
+    ![image](./media/l10-image7.png)
+
 1. On the **Backup Configuration** blade, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the blade.
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
-1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings** label.
+1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link underunder **Security Settings > Soft Delete and security settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For Azure Virtual Machines)** is **Enabled**.
+1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
-1. Close the **Security Settings** blade and, back on the **az104-10-rsv1** Recovery Services vault blade, click **Overview**.
+1. Return to the Recovery Services vault blade, select the **Overview** blade.
+
+>**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
 ### Task 3: Implement Azure virtual machine-level backup
 In this task, you will implement Azure virtual-machine level backup.
