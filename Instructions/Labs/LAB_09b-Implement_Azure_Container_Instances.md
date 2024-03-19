@@ -22,8 +22,6 @@ In this lab, you will complete the following tasks:
 ### Task 1: Deploy an Azure Container Instance using a Docker image
 In this task, you will create a new container instance for the web application.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
-
 1. In the Azure portal, search for locate **Container instances** and then, on the **Container instances** blade, click **+ Create**.
 
 1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
