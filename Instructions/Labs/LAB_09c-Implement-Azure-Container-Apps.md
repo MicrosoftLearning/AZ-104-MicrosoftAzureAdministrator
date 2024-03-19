@@ -27,8 +27,10 @@ There are no interactive lab simulations for this topic.
 
 Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
-1. From the Azure portal, search for and select `Container Apps`.
+1. From the Azure portal, search for and select **Container Apps**.
 
+   ![image](../media/l9-image29.png)
+   
 1. From **Container Apps**, select **Create**.
 
 1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container >**
