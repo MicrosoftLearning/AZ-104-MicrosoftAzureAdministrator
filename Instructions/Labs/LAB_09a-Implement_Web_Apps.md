@@ -120,11 +120,11 @@ In this task, you will configure Web App deployment settings. Deployment setting
 ### Task 4: Swap the staging slots
 In this task, you will swap the staging slot with the production slot.
 
-1. Navigate back to the blade displaying the production slot of the web app.
+1. Navigate to the **App Service**, then proceed to select the web app you previously created, directing you to the blade showcasing the production slot of the web application.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-   ![image](./media/l9-image10.png)
+   ![image](./media/l9-image14.png)
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
@@ -148,28 +148,38 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. In the **Maximum burst** field, select **2**.
 
-    ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
-
 1. Select **Save**.
 
-1. Select **Diagnose and solve problems** (left pane).
+   ![image](./media/l9-image15.png)
+   
+1. Select **Diagnose and solve problems** (left pane) and in the **Load Test your App** box, select **Create Load Test**.
 
-1. In the **Load Test your App** box, select **Create Load Test**.
+    ![image](./media/l9-image16.png)
+
+1. On **Create a load testing resource** blade specify the following:
 
     + Select **+ Create** and give your load test a **name**.  The name must be unique.
     + Select **Review + create** and then **Create**.
 
+     ![image](./media/l9-image17.png)
+   
 1. Wait for the load test to create, and then select **Go to resource**.
 
-1. From the **Overview** | **Add HTTP requests**, select **Create**.
+1. From the **Overview**  of Azure load testing blade, under**Add HTTP requests**, select **Create**.
 
-1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
+    ![image](./media/l9-image18.png)
 
-1. Select **Review + create** and **Create**.
-
+1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://** and  select **Review + create** and **Create**.
+ 
+    ![image](./media/l9-image19.png)
+   
     >**Note:** It may take a couple of minutes to create the test. 
 
 1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
+
+     ![image](./media/l9-image20.png)
+
+      ![image](./media/l9-image21.png)
 
 1. Select **Stop** to complete the test run.
 
