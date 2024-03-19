@@ -31,7 +31,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. From **Container Apps**, select **Create**.
 
-1. Use the following information to fill out the details on the **Basics** tab.*.
+1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container >**
 
     | Setting | Action |
     |---|---|
@@ -41,9 +41,13 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Region    | **East US** (Or a region available near you) |
     | Container Apps Environment | Leave default |
 
-1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**.
+   ![image](../media/l9-image32.png)
+    
+1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**. Select the **Review and create**. 
 
-1. Select the **Review and create** and then **Create**.
+   ![image](../media/l9-image32.png)
+
+1. Select **Create**.
 
     >**Note:** Wait for the container app to deploy. This will take a couple of minutes. 
  
@@ -55,10 +59,11 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select the link next to *Application URL* to view your application.
 
-    ![Screenshot of the ACA overview page in the portal.](../media/az104-lab09b-aca-overview.png)
+   ![image](../media/l9-image30.png)
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
    
+   ![image](../media/l9-image31.png)
 
 ## Key takeaways
 
