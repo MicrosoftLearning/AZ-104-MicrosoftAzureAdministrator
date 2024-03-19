@@ -103,12 +103,16 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 1. Select **Save**.
 
+     ![image](./media/l9-image7.png)
+
 1. From the staging slot, select **Overview**.
 
 1. Select the **Default domain** link, and open the URL in a new tab. 
 
 1. Verify that the staging slot displays **Hello World**.
 
+    ![image](./media/l9-image8.png)
+   
 >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
 ### Task 4: Swap the staging slots
@@ -118,7 +122,7 @@ In this task, you will swap the staging slot with the production slot.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-   ![image](../media/9a-10.png)
+   ![image](./media/l9-image10.png)
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
