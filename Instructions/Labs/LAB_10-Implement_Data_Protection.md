@@ -148,6 +148,8 @@ In this task, you will implement Azure virtual-machine level backup.
 
     >**Note**: Wait for the backup to be enabled. This should take about 2 minutes.
 
+1. Once deployment finish click on **Go to Resouces**.
+   
 1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade, select the View details link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
