@@ -109,9 +109,11 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 1. Select the **Default domain** link, and open the URL in a new tab. 
 
+    ![image](./media/l9-image8.png)
+
 1. Verify that the staging slot displays **Hello World**.
 
-    ![image](./media/l9-image8.png)
+    ![image](./media/l9-image9.png)
    
 >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
