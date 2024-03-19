@@ -60,7 +60,9 @@ In this task, you will create a staging deployment slot.
 1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
 
    ![image](./media/l9-image4.png)
-  
+
+   >**Note**: Please copy the URL and save it in Notepad. You may need this link for Task 5.
+
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
     ![image](./media/l9-image5.png)
@@ -168,7 +170,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     ![image](./media/l9-image18.png)
 
-1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://** and  select **Review + create** and **Create**.
+1. For the **Test URL**, paste your **Default domain** URL which recorded in notepad. Ensure this is properly formatted and begins with **https://** and  select **Review + create** and **Create**.
  
     ![image](./media/l9-image19.png)
    
