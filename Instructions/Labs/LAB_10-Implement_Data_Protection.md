@@ -4,13 +4,11 @@ You have been tasked with evaluating the use of Azure Recovery Services for back
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Create a Recovery Services vault
-+ Task 3: Implement Azure virtual machine-level backup
-+ Task 4: Implement File and Folder backup
-+ Task 5: Perform file recovery by using the Azure Recovery Services agent
-+ Task 6: Perform file recovery by using Azure virtual machine snapshots (optional)
-+ Task 7: Review the Azure Recovery Services soft delete functionality (optional)
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Create and configure a Recovery Services vault.
++ Task 3: Configure Azure virtual machine-level backup.
++ Task 4: Monitor Azure Backup.
++ Task 5: Enable virtual machine replication. 
 
 ## Estimated timing: 50 minutes
 
@@ -275,12 +273,11 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ### Review
 In this lab, you have completed:
-+ Provisioned the lab environment
-+ Created a Recovery Services vault
-+ Implemented Azure virtual machine-level backup
-+ Implemented File and Folder backup
-+ Performed file recovery by using Azure Recovery Services agent
-+ Performed file recovery by using Azure virtual machine snapshots
-+ Reviewed the Azure Recovery Services soft delete functionality
++ Use a template to provision an infrastructure.
++ Create and configure a Recovery Services vault.
++ Configure Azure virtual machine-level backup.
++ Monitor Azure Backup.
++ Enable virtual machine replication. 
+
 
 ### You have successfully completed the lab
