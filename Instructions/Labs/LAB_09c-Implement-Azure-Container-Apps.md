@@ -29,7 +29,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. From the Azure portal, search for and select **Container Apps**.
 
-   ![image](../media/l9-image29.png)
+   ![image](./media/l9-image29.png)
    
 1. From **Container Apps**, select **Create**.
 
@@ -43,11 +43,11 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Region    | **East US** (Or a region available near you) |
     | Container Apps Environment | Leave default |
 
-   ![image](../media/l9-image32.png)
+   ![image](./media/l9-image32.png)
     
 1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**. Select the **Review and create**. 
 
-   ![image](../media/l9-image32.png)
+   ![image](./media/l9-image32.png)
 
 1. Select **Create**.
 
@@ -61,11 +61,11 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select the link next to *Application URL* to view your application.
 
-   ![image](../media/l9-image30.png)
+   ![image](./media/l9-image30.png)
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
    
-   ![image](../media/l9-image31.png)
+   ![image](./media/l9-image31.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
