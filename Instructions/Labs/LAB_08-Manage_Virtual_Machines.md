@@ -4,236 +4,150 @@ You were tasked with identifying different options for deploying and configuring
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-+ Task 2: Configure Azure virtual machines by using virtual machine extensions
-+ Task 3: Scale compute and storage for Azure virtual machines
-+ Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-+ Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
-+ Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
-+ Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
++ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
++ Task 2: Manage compute and storage scaling for virtual machines.
++ Task 3: Create and configure Azure Virtual Machine Scale Sets.
++ Task 4: Scale Azure Virtual Machine Scale Sets.
++ Task 5: Create a virtual machine using Azure PowerShell (optional 1).
++ Task 6: Create a virtual machine using the CLI (optional 2).
 
 ## Estimated timing: 50 minutes
 
 ## Architecture diagram
 
-![](../Labs/Images/lab08.png)
+![](../Labs/Images/az104-lab08-vm-architecture)
 
 ## Exercise 1
 
-### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-In this task, you will deploy Azure virtual machines into different availability zones by using the Azure portal and an Azure Resource Manager template.
+### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal 
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **+ Create (1)** then select **Azure virtual machine (2)**.
+In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-    ![](../Labs/Images/img1lab8.png)
+1. In the Azure portal, search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**. Notice your other choices.
 
+   ![](../Labs/Images/img1lab8.png)
+
+1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
+
+    ![](../Labs/Images/l8i1.png)
+
+   >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
+   
+    
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you will be using in this lab |
-    | Resource group | select the existing resource group **az104-08-rg01** |
-    | Virtual machine name | **az104-08-vm0** |
-    | Region | same location of resource group |
-    | Availability options | **Availability zone** |
-    | Availability zone | **Zones 1** |
-    | Image | **Windows Server 2019 Datacenter - Gen2** |
-    | Azure Spot discount | **Unchecked** |
-    | Size | **Standard D2s v3** |
-    | Username | **Student** |
-    | Password | **Provide a secure password, minimum 12 characters** |
-    | Public inbound ports | **None** |
-    | Would you like to use an existing Windows Server license? | **Unchecked** |
+    | Subscription | the name of the Azure subscription you will be using in this lab  (1)|
+    | Resource group | select the existing resource group **az104-08-rg01** (2) |
+    | Virtual machine name |  `az104-vm1` and `az104-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) (3) |
+    | Region | **<inject key="Region" enableCopy="false" />** (4) |
+    | Availability options | **Availability zone** (5)|
+    | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets)   |
+    | Security type | **Standard** (6) |
+    | Image | **Windows Server 2019 Datacenter - Gen2**  (7)|
+    | Run Azure Spot discount | **Unchecked** (8)|
+    | Size | **Standard D2s v3** (9)|
+    | Username | **Student** (10) |
+    | Password | **Password.1!!** (11) |
+    | Public inbound ports | **None** (12) |
+    | Would you like to use an existing Windows Server license? | **Unchecked**  (13)|
+
+     ![](../Labs/Images/l8i2.png)
+
+     ![](../Labs/Images/l8i3.png)
+
 
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | OS disk type | **Premium SSD** |
+    | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
 
-1. Click **Next: Networking >** and, on the **Networking** tab of the **Create a virtual machine** blade, click **Create new** below the **Virtual network** textbox.
-
-1. On the **Create virtual network** blade, specify the following settings (leave others with their default values) and click on **OK**.
+1.  Click **Next: Networking >** take the defaults but do not provide a load balancer.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-08-rg01-vnet** |
-    | Address range | **10.80.0.0/20** |
-    | Subnet name | **subnet0** |
-    | Subnet range | **10.80.0.0/24** |
-   
-    
-    ![](../media/az104_08-createVN.png)
-   
-
-1.  Back on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Subnet | **subnet0** |
-    | Public IP | **default** |
-    | NIC network security group | **basic** |
-    | Public inbound Ports | **None** |
-    | Accelerated networking | **Unchecked**
+    | Delete public IP and NIC when VM is deleted | **Checked** |
     | Load balancing options | **None** |
- 
-1. Click **Next: Management >** and, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+
+1. Click **Next: Management >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Patch orchestration options | **Manual updates** |
+    | Patch orchestration options | **Azure orchestrated** |  
+   
 
-1. Click **Next: Monitoring >** and, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Boot diagnostics | **Enable with custom storage account** |
-    | Diagnostics storage account | **accept the default value** |
-
-    >**Note**: If necessary, select an existing storage account in the dropdown list or create a new storage account. Record the name of the storage account. You will use it in the next task.
-
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and click **Review + Create**.
-
-1. On the **Review + Create** blade, click **Create**.
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-1. On the deployment blade, click **Template**.
-
-1. Review the template representing the deployment in progress and click **Deploy**.
-
-    >**Note**: You will use this option to deploy the second virtual machine with a matching configuration except for the availability zone.
-
-1. On the **Custom deployment** blade, click **Edit parameter**, replace the **VirtualMachine1Zone** value from **1** to **2** for the resource types, click **Save**, and specify the following settings (leave others with their default values):
+1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Resource group | **az104-08-rg01** |
-    | Network Interface Name 1 | **az104-08-vm1-nic1** |
-    | Public IP Address Name 1 | **az104-08-vm1-ip** |
-    | Virtual Machine Name, Virtual Machine Name1, Virtual Machine Computer Name 1 | **az104-08-vm1** |
-    | Admin Username | **Student** |
-    | Admin Password | **Provide a secure password** |
-    | Enable Hotpatching | **false** |
-    | VirtualMachine1Zone | **2** |
+    | Boot diagnostics | **Disable** |
 
-    >**Note**: You need to modify parameters corresponding to the properties of the distinct resources you are deploying by using the template, including the virtual machine and its network interface.
+1. Click **Next: Advanced >**, take the defaults, then click **Review + Create**.
 
-1. Click **Review + Create**, on the **Review + Create** blade, click **Create**.
+1. After the validation, click **Create**.
 
-    >**Note**: Wait for both deployments to complete before you proceed to the next task. This might take about 5 minutes.
-    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
-### Task 2: Configure Azure virtual machines by using virtual machine extensions
-In this task, you will install the Windows Server Web Server role on the two Azure virtual machines you deployed in the previous task by using the Custom Script virtual machine extension.
+1. Wait for the deployment to complete, then select **Go to resource**.
 
-1. In the Azure portal, search for and select **Storage accounts** and, on the **Storage accounts** blade, click the entry representing the diagnostics storage account you created in **Task 1**.
+   >**Note:** Monitor the **Notification** messages.
 
-1. On the storage account blade, in the **Data Storage** section, click **Containers** and then click **+ Container**.
 
-1. On the **New container** blade, specify the following settings (leave others with their default values) and click **Create**:
+## Task 2: Manage compute and storage scaling for virtual machines
+
+In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
+
+1. On the **az104-vm1** virtual machine, in the **Availability + scale** blade, select **Size** (1).Set the virtual machine size to **DS1_v2** (2) and click **Resize** (3). When prompted, confirm the change.
+
+   ![](../Labs/Images/l8i4.png)
+
+    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also known as vertical scaling, up or down.
+
+1. In the **Settings** area, select **Disks**.
+
+1. Under **Data disks** select **+ Create and attach a new disk** (1). Configure the settings (leave other settings at their default values).
 
     | Setting | Value |
     | --- | --- |
-    | Name | **scripts** |
-    | Public access level | **Private (no anonymous access**) |
+    | Disk name | `vm1-disk1` (2)|
+    | Storage type | **Standard HDD** (3) |
+    | Size (GiB) | `32`(4) |
+    |  Click **Apply** (5) |
 
-1. Back on the storage account blade displaying the list of containers, click **scripts**.
+     ![](../Labs/Images/l8i5.png)
 
-1. On the **scripts** blade, click **Upload**.
+1. After the disk has been created, click **Detach** (if necessary, scroll to the right to view the detach icon), and then click **Apply**.
 
-1. On the **Upload blob** blade, click on **Browse for files**. In the **Open** dialog box, navigate to the **C:\\AllFiles\\AZ-104-MicrosoftAzureAdministrator-Lab-Files\\Allfiles\\Labs\\08** folder, select **az104-08-install_IIS.ps1**, click **Open**, and back on the **Upload blob** blade, click **Upload**, then close **Upload blob** blade.
+   ![](../Labs/Images/l8i6.png)
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm0**.
+     >**Note**: Detaching removes the disk from the VM but keeps it in storage for later use.
 
-1. On the **az104-08-vm0** virtual machine blade, in the **Settings** section, click **Extensions + applications**, and then click **+ Add**.
+1. In the azure portal, search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
 
-1. On the **Install an Extension** blade, search for and select **Custom Script Extension** and then click **Next**.
+    >**Note:** The **Overview** blade also provides performance and usage information for the disk.
 
-    ![](../Labs/Images/cse.png) 
+1. From the left navigation pane, Under the **Settings** blade, select **Size + performance**.
 
-1. From the **Configure Custom Script Extension Extension** blade, click **Browse**.
+1. Set the storage type to **Standard SSD**, and then click **Save**.
 
-1. On the **Storage accounts** blade, click the name of the storage account into which you uploaded the **az104-08-install_IIS.ps1** script, on the **Containers** blade, click **scripts**, on the **scripts** blade, click **az104-08-install_IIS.ps1**, and then click **Select**.
+   ![](../Labs/Images/l8i7.png)
 
-    ![](../Labs/Images/iis.png) 
+1. Navigate back to the **az104-vm1** virtual machine and select **Disks**.
 
-1. Back on the **Configure Custom Script Extension Extension** blade, click **Review+Create** then click **Create**.
+1. In the **Data disk** section, select **Attach existing disks**. and in the **Disk name** drop-down, select **VM1-DISK1**.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-08-vm1**.
+    ![](../Labs/Images/l8i8.png)
 
-1. On the **az104-08-vm1** blade, in the **Automation** section, click **Export template**.
+1. Verify the disk is now **Standard SSD**.
 
-   ![](../Labs/Images/export.png)
+1. Select **Apply** to save your changes. 
 
-1. On the **az104-08-vm1 - Export template** blade, click **Deploy**.
+    >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
-1. On the **Custom deployment** blade, click **Edit template**.
-
-    >**Note**: Disregard the message stating **The resource group is in a location that is not supported by one or more resources in the template. Please choose a different resource group**. This is expected and can be ignored in this case.
-
-1. On the **Edit template** blade, in the section displaying the content of the template, insert the following code starting with line **20** (directly underneath the `"resources": [` line) and replace '[resourceGroup().location]' placeholder in the JSON file with the virtual machine location:
-
-   >**Note**: If you are using a tool that pastes the code in line by line intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into line 20.
-
-   ```json
-   {
-     "type": "Microsoft.Compute/virtualMachines/extensions",
-     "name": "az104-08-vm1/customScriptExtension",
-     "apiVersion": "2018-06-01",
-     "location": "[resourceGroup().location]",
-     "dependsOn": [
-     "az104-08-vm1"
-             ],
-      "properties": {
-      "publisher": "Microsoft.Compute",
-      "type": "CustomScriptExtension",
-      "typeHandlerVersion": "1.7",
-      "autoUpgradeMinorVersion": true,
-      "settings": {
-                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-             }
-        }
-   },
-
-   ```
-
-   >**Note**: This section of the template defines the same Azure virtual machine custom script extension that you deployed earlier to the first virtual machine via Azure PowerShell.
-
-1. Click **Save** and, back on the **Custom template** blade, click **Review + Create** and, on the **Review + Create** blade, click **Create**
-
-    >**Note**: Wait for the template deployment to complete. You can monitor its progress from the **Extensions** blade of the **az104-08-vm0** and **az104-08-vm1** virtual machines. This should take no more than 3 minutes.
-
-1. To verify that the Custom Script extension-based configuration was successful, navigate back on the **az104-08-vm1** blade, in the **Operations** section, click **Run command**, and, in the list of commands, click **RunPowerShellScript**.
-
-20.On the **Run Command Script** blade, type the following and click Run to access the web site hosted on **az104-08-vm1**:
-
-   ```powershell
-   Invoke-WebRequest -URI http://10.80.0.4 -UseBasicParsing
-   ```
-
->**Note**: The **-UseBasicParsing** parameter is necessary to eliminate dependency on Internet Explorer to complete execution of the cmdlet
-
->**Note**: The -URI parameter is the Private IP address of the VM. Navigate to the az104-08-vm1 blade, in the Networking section, and click Network settings
-
->**Note**: You can also connect to **az104-08-vm0** and run Invoke-WebRequest -URI http://10.80.0.5 -UseBasicParsing to access the web site hosted on **az104-08-vm1**.
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
 ### Task 3: Scale compute and storage for Azure virtual machines
 In this task, you will scale compute for Azure virtual machines by changing their size and scale their storage by attaching and configuring their data disks.
 
