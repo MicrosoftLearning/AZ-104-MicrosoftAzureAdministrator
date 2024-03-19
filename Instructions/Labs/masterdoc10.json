@@ -1,14 +1,15 @@
 [ {
-  "Name": "Manage Azure Active Directory Identities",
+  "Name": "Implement Data Protection",
   "Language": "English",
   "Files": [
-    {
+     {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LabIntro.md",
         "Order": 1
      },
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_01-Manage_Azure_AD_Identities.md",
+      "RawFilePath": "https://raw.githubusercontent.com/Sanjanadhananjayaa/AZ-104-MicrosoftAzureAdministrator/stage/Instructions/Labs/LAB_10-Implement_Data_Protection.md",
       "Order": 2
     }
   ]
 } ]
+

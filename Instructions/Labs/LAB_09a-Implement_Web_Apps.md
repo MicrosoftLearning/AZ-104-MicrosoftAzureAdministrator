@@ -7,12 +7,11 @@ You need to evaluate the use of Azure Web apps for hosting Contoso's websites, h
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Create an Azure web app
-+ Task 2: Create a staging deployment slot
-+ Task 3: Configure web app deployment settings
-+ Task 4: Deploy code to the staging deployment slot
-+ Task 5: Swap the staging slots
-+ Task 6: Configure and test autoscaling of the Azure web app
++ Task 1: Create and configure an Azure web app.
++ Task 2: Create and configure a deployment slot.
++ Task 3: Configure web app deployment settings.
++ Task 4: Swap deployment slots.
++ Task 5: Configure and test autoscaling of the Azure web app.
 
 ## Estimated timing: 30 minutes
 
@@ -26,20 +25,14 @@ In this lab, you will complete the following tasks:
 ### Task 1: Create an Azure web app
 In this task, you will create an Azure web app.
 
-1. If you have not yet signed in, please navigate to the [Azure portal](http://portal.azure.com).
+1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade.
 
-1. In the Sign-in window, you will see a login screen, in that enter the following email/username and then click on **Next**. 
+   ![image](./media/l9-image1.png)
 
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+1. Click **+ Create** and choose **Web App**
 
-1. Now enter the password and click on Sign in.
+   ![image](./media/l9-image2.png)
    
-   * Password: <inject key="AzureAdUserPassword"></inject>
-  
-1. When prompted to stay signed in, select **Yes**. This takes you to the Microsoft 365 admin center page.
-
-1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade, click **+ Create** and choose **Create Web App**
-
 1. On the **Basics** tab , specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -53,6 +46,8 @@ In this task, you will create an Azure web app.
     | Region | the name of an Azure region where you can provision Azure web apps |
     | Pricing plans | accept the default configuration |
 
+    ![image](./media/l9-image(3).png)
+   
 1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
@@ -63,20 +58,28 @@ In this task, you will create an Azure web app.
 In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
-  
+
+   ![image](./media/l9-image4.png)
+
+   >**Note**: Please copy the URL and save it in Notepad. You may need this link for Task 5.
+
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
-    ![image](../media/9a-2new.png)
+    ![image](./media/l9-image5.png)
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
-1. Click **+ Add slot**, and add a new slot with the following settings:
+1. Click **+ Add slot**, and add a new slot with the following settings then click on **Add**. 
 
     | Setting | Value |
     | --- | ---|
     | Name | **staging** |
     | Clone settings from | **Do not clone settings**|
 
+    ![image](./media/l9-image6.png)
+
+1. Once you see **Successfully created slot 'staging'** click on **Close**.
+     
 1. Back on the **Deployment slots** blade of the web app, click the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
@@ -85,199 +88,101 @@ In this task, you will create a staging deployment slot.
 
 1. Review the staging slot blade and note that its URL differs from the one assigned to the production slot.
 
-### Task 3: Configure web app deployment settings
-In this task, you will configure web app deployment settings.
+## Task 3: Configure Web App deployment settings
 
-1. On the staging deployment slot blade, in the **Deployment** section, click **Deployment Center** and then select the **Settings** tab.
-   >**Note:** Make sure you are on the staging slot blade (rather than the production slot).
+In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
-   ![image](../media/9a-3new.png)
+1. In the staging slot, select **Deployment Center** and then select **Settings**.
 
-1. On the **Settings** tab, in the **Source** drop-down list, select **Local Git** and click the **Save** button
+    >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
+    
+1. In the **Source** drop-down list, select **External Git**. Notice the other choices. 
 
-1. On the **Deployment Center** blade, copy the **Git Clone Uri** entry to Notepad.
+1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
 
-   ![image](../media/9a-4.png)
+1. In the branch field, enter `master`.
 
-   >**Note:** You will need the Git Clone Uri value in the next task of this lab.
+1. Select **Save**.
 
-1. On the **Deployment Center** blade, select the **Local Git/FTPS credentials** tab, in the **User Scope** section, specify the following settings, and click **Save**.
+     ![image](./media/l9-image7.png)
 
-    | Setting | Value |
-    | --- | ---|
-    | User name | any globally unique name (see note) |
-    | Password | any password that satisfies complexity requirements (see note)|
+1. From the staging slot, select **Overview**.
+
+1. Select the **Default domain** link, and open the URL in a new tab. 
+
+    ![image](./media/l9-image8.png)
+
+1. Verify that the staging slot displays **Hello World**.
+
+    ![image](./media/l9-image9.png)
    
-    
-    ![image](../media/9a-5.png)
+>**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
-    >**Note:** Copy these credentials to Notepad. You will need them later.
-
-    >**Note:** These credentials will be passed through the URI. Do not include any special charaters that affect the interpretation of the URI. For example, @, $, or #. An asterick or plus sign (in the middle of the string) would work.
-
-### Task 4: Deploy code to the staging deployment slot
-In this task, you will deploy code to the staging deployment slot.
-
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
-
-    ![Image](./Images/Virtual%20Networking%20Ex1-t2-p1.png)
-
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-
-    >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/storage.png)
-    
-    >Under **Advanced Settings**, you need to select an existing resource group from the **Resource group** dropdown and give some unique name under the **Storage Account** section, and under the **File share** section type none as shown in the below image.
-
-    ![image](../media/cloudhell01.png)
-
-1. Click **Create storage**, and wait until the Azure Cloud Shell pane is displayed. 
-
-1. From the Cloud Shell pane, run the following to clone the remote repository containing the code for the web app.
-
-   ```powershell
-   git clone https://github.com/Azure-Samples/php-docs-hello-world
-   ```
-
-1. From the Cloud Shell pane, run the following to set the current location to the newly created clone of the local repository containing the sample web app code.
-
-   ```powershell
-   Set-Location -Path $HOME/php-docs-hello-world/
-   ```
-
-1. From the Cloud Shell pane, run the following to add the remote git (make sure to replace the `[deployment_user_name]` `[deployment_user_name_password]` and `[git_clone_uri]` placeholders with the value of the **Deployment Credentials** user name, password and **Git Clone Uri**, respectively, which you identified in previous task):
-
-   ```powershell
-   git remote add [deployment_user_name] https://[deployment_user_name]:[deployment_user_name_password]@[the rest of the Git Clone Uri]
-   ```
-
-    >**Note**: The value following `git remote add` does not have to match the **Deployment Credentials** user name, but has to be unique. Also make sure that the password does not contain '@' symbol.
-    >For example : git remote add stageuser1234 https://stageuser1234:Staging123-@az10409astaging.scm.azurewebsites.net:443/az10409a.git
-
-1. From the Cloud Shell pane, run the following to push the sample web app code from the local repository to the Azure web app staging deployment slot (make sure to replace the `[deployment_user_name]` placeholder with the value of the **Deployment Credentials** user name, which you identified in previous task):
-
-   ```powershell
-   git push https://<deployment-username>:<deployment-password>@<app-name>-staging.scm.azurewebsites.net/<app-name>.git master
-   ```
->**Note**: Incase the above command fails use the below command :
-
-  ```powershell
-  git push [deployment_user_name] master
-  ```
-
-1. If prompted to authenticate, type the `[deployment_user_name]` and the corresponding password (which you set in the previous task).
-
-    ![image](../media/9a-7.png)
-
-1. Close the Cloud Shell pane.
-
-1. On the staging slot blade, click **Overview** and then click on the **Browse** tab to display the default web page in a new browser tab.
-
-    ![image](../media/9a-8.png)
-
-1. Verify that the browser page displays the **Hello World!** message and close the new tab.
-
-    ![image](../media/9a-9new.png)
-
-### Task 5: Swap the staging slots
+### Task 4: Swap the staging slots
 In this task, you will swap the staging slot with the production slot.
 
-1. Navigate back to the blade displaying the production slot of the web app.
+1. Navigate to the **App Service**, then proceed to select the web app you previously created, directing you to the blade showcasing the production slot of the web application.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-   ![image](../media/9a-10.png)
+   ![image](./media/l9-image14.png)
 
 1. On the **Swap** blade, review the default settings and click **Swap**.
 
    >**Note**: Kindly Wait till Swap successfully complete.
 
+1. Once you get **Successfully completed swap between slot 'staging' and slot 'production'** click on **Close**.
+   
 1. Click **Overview** on the production slot blade of the web app and then click the **URL** link to display the web site home page in a new browser tab.
 
 1. Verify the default web page has been replaced with the **Hello World!** page.
 
-### Task 6: Configure and test autoscaling of the Azure web app
-In this task, you will configure and test autoscaling of the Azure web app.
+### Task 5: Configure and test autoscaling of the Azure web app
 
-1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
+In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases. To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
 
-1. From the **Scaling section** select the **Rules Based** option, then click on the **Manage rules based scaling** link.
+1. In the **Settings** section, select **Scale out (App Service plan)**.
 
-1. Click **Custom autoscale**.
+    >**Note:** Ensure you are working on the production slot not the staging slot.  
 
-   ![image](../media/9a-11.png)
+1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
-    >**Note**: You also have the option of scaling the web app manually.
+1. In the **Maximum burst** field, select **2**.
 
-1. Select **Scale based on a metric** and click **+ Add a rule**.
+1. Select **Save**.
 
-1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
+   ![image](./media/l9-image15.png)
+   
+1. Select **Diagnose and solve problems** (left pane) and in the **Load Test your App** box, select **Create Load Test**.
 
-    | Setting | Value |
-    | --- |--- |
-    | Metric source | **Current resource** |
-    | Metric namespace | **standard metrics** |
-    | Metric name | **CPU Percentage** |
-    | Operator | **Greater than** |
-    | Metric threshold to trigger scale action | **10** |
-    | Duration (in minutes) | **1** |
-    | Time grain statistic | **Maximum** |
-    | Time aggregation | **Maximum** |
-    | Operation | **Increase count by** |
-    | Instance count | **1** |
-    | Cool down (minutes) | **5** |
+    ![image](./media/l9-image16.png)
 
-    
-    ![image](../media/9a-12.png)
+1. On **Create a load testing resource** blade specify the following:
 
-    >**Note**: These values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without an extended wait period.
+    + Select **+ Create** and give your load test a **name**.  The name must be unique.
+    + Select **Review + create** and then **Create**.
 
-1. Click **Add** and, back on the App Service plan scaling blade, specify the following settings (leave others with their default values):
+     ![image](./media/l9-image17.png)
+   
+1. Wait for the load test to create, and then select **Go to resource**.
 
-    | Setting | Value |
-    | --- |--- |
-    | Instance limits Minimum | **1** |
-    | Instance limits Maximum | **2** |
-    | Instance limits Default | **1** |
+1. From the **Overview**  of Azure load testing blade, under**Add HTTP requests**, select **Create**.
 
-1. Click **Save**.
+    ![image](./media/l9-image18.png)
 
-    >**Note**: If you got an error complaining about 'microsoft.insights' resource provider not being registered, run `az provider register --namespace 'Microsoft.Insights'` in your cloudshell and retry saving your auto scale rules.
+1. For the **Test URL**, paste your **Default domain** URL which recorded in notepad. Ensure this is properly formatted and begins with **https://** and  select **Review + create** and **Create**.
+ 
+    ![image](./media/l9-image19.png)
+   
+    >**Note:** It may take a couple of minutes to create the test. 
 
-1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+     ![image](./media/l9-image20.png)
 
-1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
+      ![image](./media/l9-image21.png)
 
-   ```powershell
-   $rgName = 'az104-09a-rg1'
-
-   $webapp = Get-AzWebApp -ResourceGroupName $rgName
-   ```
-
-1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
-
-   ```powershell
-   while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
-   ```
-
-1. Minimize the Cloud Shell pane (but do not close it) and, on the web app blade, in the Settings section, click **Scale out (App Service plan)**.
-
-1. Select Autoscale Settings, select the **Run history tab**. Under Show data for last, select 1 hour and check the Observed resource instance count.
-
-    ![image](../media/9a-13.png)
-
-1. Monitor the utilization and the number of instances for a few minutes. 
-
-    >**Note**: You may need to **Refresh** the page.
-
-1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
-
-   ![image](../media/9a-14.png)
-
-1. Close the Cloud Shell pane.
+1. Select **Stop** to complete the test run.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
