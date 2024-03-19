@@ -45,7 +45,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| az104-10-rg1 (If necessary, select **Create new**)
+    | Resource group| az104-10-rg1  |
     | Region        | **East US**   |
     | Password      | Provide a complex password |
 
@@ -67,7 +67,7 @@ In this task, you will create a recovery services vault.
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | Select resource group **az104-10-rg1-<inject key="DeploymentID" enableCopy="false"/>** |
+    | Resource group | Select resource group **az104-10-rg1** |
     | Vault Name | **az104-10-rsv1** |
     | Region | the name of a region which you copied in previous steps |
 
@@ -156,8 +156,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- | 
     | Subscription          | *Your subscription*    |
-    | Resource group        | **az104-rg-region1**        |
-    | Storage account name  | Provide a globally unique name   |
+    | Resource group        | az104-10-rg1       |
+    | Storage account name  | str   |
     | Region                | **East US**   |
 
 1. On the Review tab, select **Create**.
@@ -200,8 +200,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg-region2` (If necessary, select **Create new**) |
-    | Vault Name | `az104-rsv-region2` |
+    | Resource group |az104-10-rg1     |
+    | Vault Name | **az104-10-rsv2**  |
     | Region | **West US** |
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
@@ -227,7 +227,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Setting | Value |
     | ---- | ---- |
     | Churn for the vm | **Normal churn**  |
-    | Cache storage account | **(new) xxx**  |
+    | Cache storage account | **str**  |
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
@@ -237,7 +237,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
-1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-rsv-region2**. You may need to **Refresh** the page. 
+1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-10-rsv2**. You may need to **Refresh** the page. 
 
 1. In the **Protected items** section, select **Replicated items**.
 
