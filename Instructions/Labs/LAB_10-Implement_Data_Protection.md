@@ -46,7 +46,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| az104-10-rg1  |
-    | Region        | **East US**   |
+    | Region        | **<inject key="Region" enableCopy="false"/>**    |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
@@ -69,7 +69,7 @@ In this task, you will create a recovery services vault.
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | Select resource group **az104-10-rg1** |
     | Vault Name | **az104-10-rsv1** |
-    | Region | the name of a region which you copied in previous steps |
+    | Region | **<inject key="Region" enableCopy="false"/>**  |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -158,7 +158,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription          | *Your subscription*    |
     | Resource group        | az104-10-rg1       |
     | Storage account name  | str<inject key="DeploymentID" enableCopy="false"/>   |
-    | Region                | **East US**   |
+    | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
 1. On the Review tab, select **Create**.
 
