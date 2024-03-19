@@ -157,7 +157,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | --- | --- | 
     | Subscription          | *Your subscription*    |
     | Resource group        | az104-10-rg1       |
-    | Storage account name  | str<inject key="DeploymentID" enableCopy="false"/>   |
+    | Storage account name  | storage<inject key="DeploymentID" enableCopy="false"/>   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
 1. On the Review tab, select **Create**.
@@ -227,7 +227,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Setting | Value |
     | ---- | ---- |
     | Churn for the vm | **Normal churn**  |
-    | Cache storage account | **str<inject key="DeploymentID" enableCopy="false"/>**  |
+    | Cache storage account | **storage<inject key="DeploymentID" enableCopy="false"/>**  |
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
