@@ -28,11 +28,11 @@ In this task, you will create an Azure web app.
 
 1. In the Azure portal, search for and select **App services**, and, on the **App Services** blade.
 
-   ![image](../media/l9-image1.png)
+   ![image](./media/l9-image1.png)
 
 1. Click **+ Create** and choose **Create Web App**
 
-   ![image](../media/l9-image2.png)
+   ![image](./media/l9-image2.png)
    
 1. On the **Basics** tab , specify the following settings (leave others with their default values):
 
@@ -47,7 +47,7 @@ In this task, you will create an Azure web app.
     | Region | the name of an Azure region where you can provision Azure web apps |
     | Pricing plans | accept the default configuration |
 
-    ![image](../media/l9-image3.png)
+    ![image](./media/l9-image(3).png)
    
 1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
@@ -60,11 +60,11 @@ In this task, you will create a staging deployment slot.
 
 1. On the blade of the newly deployed web app, click the **Browse** tab to display the default web page in a new browser tab.
 
-   ![image](../media/l9-image4.png)
+   ![image](./media/l9-image4.png)
   
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
-    ![image](../media/l9-image5.png)
+    ![image](./media/l9-image5.png)
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
@@ -75,7 +75,7 @@ In this task, you will create a staging deployment slot.
     | Name | **staging** |
     | Clone settings from | **Do not clone settings**|
 
-    ![image](../media/l9-image6.png)
+    ![image](./media/l9-image6.png)
 
 1. Once you see **Successfully created slot 'staging'** click on **Close**.
      
