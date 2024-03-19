@@ -30,7 +30,7 @@ In this task, you will create an Azure web app.
 
    ![image](./media/l9-image1.png)
 
-1. Click **+ Create** and choose **Create Web App**
+1. Click **+ Create** and choose **Web App**
 
    ![image](./media/l9-image2.png)
    
