@@ -283,15 +283,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Protocol | **HTTP** |
     | Port | **80** |
     | Listener type | **Basic** |
-    
+
+    ![](../Labs/media/l6-image20.png)
+   
 1. Switch to the **Backend targets** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
+    | Backend setting | Click **Add new** |
 
-1. Click **Add new** under to the **Backend setting** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values) and click **Add**.
+    ![](../Labs/media/l6-image21.png)
+   
+1. On the **Add Backend setting** blade, specify the following settings (leave others with their default values) and click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -302,8 +307,12 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
+    ![](../Labs/media/l6-image22.png)
+   
 1. On the **Add a routing rule** blade. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
+     ![](../Labs/media/l6-image23.png)
+   
     **Rule - routing to the images backend**
 
     | Setting | Value |
@@ -313,6 +322,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend settings | **az104-06-appgw5-http1** |
     | Backend target | `az104-imagebe` |
 
+    ![](../Labs/media/l6-image24.png)
+   
     **Rule - routing to the videos backend**
 
     | Setting | Value |
