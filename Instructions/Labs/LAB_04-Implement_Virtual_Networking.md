@@ -4,12 +4,10 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Create and configure a virtual network
-+ Task 2: Deploy virtual machines into the virtual network
-+ Task 3: Configure private and public IP addresses of Azure VMs
-+ Task 4: Configure network security groups
-+ Task 5: Configure Azure DNS for internal name resolution
-+ Task 6: Configure Azure DNS for external name resolution
+- Task 1: Create a virtual network with subnets using the portal.
+- Task 2: Create a virtual network and subnets using a template.
+- Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
+- Task 4: Configure public and private Azure DNS zones
 
 ## Estimated timing: 60  minutes
 
@@ -79,7 +77,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
-1. In the portal, search for and select **Deploy a custom template**.
+1. In the Azure portal, search for and select **Deploy a custom template**.
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
@@ -94,6 +92,12 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 1. Select **Review + create** and then **Create**.
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
@@ -191,6 +195,13 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Name | **DenyAnyCustom8080Outbound** |
 
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ## Task 4: Configure public and private Azure DNS zones
 
 In this task, you will create and configure public and private DNS zones. 
@@ -231,23 +242,23 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
->**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
+     >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
 1. Select **OK** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
 
    ![image](../media/l4i13.png)
 
 1. Open a command prompt, and run the following command:
-   **Replace DID with <inject key="DeploymentID" enableCopy="false" />** and <name server name> with the name server name you copied in the previous step.
+   In the below code, replace [DID] with **<inject key="DeploymentID" enableCopy="false" />** and [name server name] with the **name server name** you copied in the previous step.
  
     ```sh
-   nslookup www.contoso<DID>.com <name server name>
+   nslookup www.contoso[DID].com [name server name]
    ```
 1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
 
-   ![image](../media/l4i14.png)
+  ![image](../media/l4i14.png)
 
-### Configure a private DNS zone
+###  Configure a private DNS zone
 
 A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
 
@@ -270,7 +281,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Select **+ Virtual network links** and then select **+ Add**. 
+1. Select **Virtual network links** from the left navigation pane and then select **+ Add**. 
 
     | Property | Value    |
     |:---------|:---------|
@@ -288,21 +299,14 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
- >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
+    >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
     
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+  
 ### Review
-In this lab, you have completed:
-+ Created and configured a virtual network
-+ Deployed virtual machines into the virtual network
-+ Configured private and public IP addresses of Azure VMs
-+ Configured network security groups
-+ Configured Azure DNS for internal name resolution
-+ Configured Azure DNS for external name resolution
+In this lab, you have completed the following:
+- Created a virtual network with subnets using the portal.
+- Created a virtual network and subnets using a template.
+- Created and configured communication between an Application Security Group and a Network Security Group.
+- Configured public and private Azure DNS zones
 
 ### You have successfully completed the lab
