@@ -137,7 +137,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-lbrule1** |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
+    | Frontend IP Address | select the LoadBalancerFrontEnd from the drop down |
     | Backend pool | **az104-06-lb4-be1** |    
     | Protocol | **TCP** |
     | Port | **80** |
