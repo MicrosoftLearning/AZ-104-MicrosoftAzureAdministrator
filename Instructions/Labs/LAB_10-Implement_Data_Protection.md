@@ -113,7 +113,7 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
-1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. On **Configure backup** in **Backup policy**,  click **Standard** review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -149,7 +149,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **Create**.
 
-1. Use the following information to define the storage account, then and select **Review**.
+1. Use the following information to define the storage account, then and select **Review + Create**.
 
     | Settings | Value |
     | --- | --- | 
@@ -158,7 +158,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Storage account name  | storage<inject key="DeploymentID" enableCopy="false"/>   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
-1. On the Review tab, select **Create**.
+1. On the Review + Create tab, select **Create**.
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
