@@ -91,7 +91,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values):
+1. Create a load balancer with the following settings (leave others with their default values) and click **Next: Frontend IP configuration >** 
 
     | Setting | Value |
     | --- | --- |
@@ -102,7 +102,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard** |
     | Type | **Public** |
     
-1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
+1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
  
     | Setting | Value |
     | --- | --- |
