@@ -302,7 +302,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
+1. On the **Add a routing rule** blade. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
     **Rule - routing to the images backend**
 
