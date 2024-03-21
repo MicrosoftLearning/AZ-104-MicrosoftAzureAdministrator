@@ -159,7 +159,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **Create**.
 
-1. Use the following information to define the storage account, then and select **Review + Create**.
+1. Use the following information to define the storage account and navigate to **Data protection** tab.
 
     | Settings | Value |
     | --- | --- | 
@@ -167,6 +167,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Resource group        | az104-10-rg1       |
     | Storage account name  | storage<inject key="DeploymentID" enableCopy="false"/>   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
+
+1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
 
 1. On the Review + Create tab, select **Create**.
 
