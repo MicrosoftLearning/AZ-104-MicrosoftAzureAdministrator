@@ -170,6 +170,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
 
+    ![image](./media/l10-image20.png)
+
 1. On the Review + Create tab, select **Create**.
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
@@ -258,7 +260,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
 
-   ![Screenshot of the replicated items page.](../media/az104-lab10-replicated-items.png)
+   ![image](./media/l10-image21.png)
 
 1. Select the virtual machine to view more details.
    
