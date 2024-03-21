@@ -87,7 +87,7 @@ In this task, you will create and configure an Azure Storage account.
 
      ![image](./media/l1-image4.png)
    
-1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
