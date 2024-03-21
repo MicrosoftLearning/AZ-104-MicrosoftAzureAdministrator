@@ -153,14 +153,6 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
-1. In the Azure portal, search for and select **Virtual machines** and, on the **Virtual machines** blade, click **az104-vm1**.
-
-1. On the **az104-vm1** virtual machine blade, click **Size (1)** under the **Availability + scale** section and set the virtual machine size to **Standard DS1_v2 (2)**, and click **Resize (3)**.
-
-    >**Note**: Choose another size if **Standard DS1_v2** is not available.
-
-   ![](../Labs/Images/resize1.png) 
-
 ## Task 3: Create and configure Azure Virtual Machine Scale Sets
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
