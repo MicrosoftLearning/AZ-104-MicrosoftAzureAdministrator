@@ -1,4 +1,4 @@
-# Lab 10 - Backup virtual machines
+# Lab 10 - Implement Data Protection
 ## Lab scenario
 You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
 
@@ -8,12 +8,12 @@ In this lab, you will complete the following tasks:
 + Task 2: Create and configure a Recovery Services vault.
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
-+ Task 5: Enable virtual machine replication. 
++ Task 5: Enable virtual machine replication.  
 
 ## Estimated timing: 50 minutes
 
 ## Architecture diagram
-![image](../media/lab10.png)
+![Diagram of the architecture tasks.](./media/az104-lab10-architecture.png)
 
 ## Excercise 1: Backup virtual machines
 
