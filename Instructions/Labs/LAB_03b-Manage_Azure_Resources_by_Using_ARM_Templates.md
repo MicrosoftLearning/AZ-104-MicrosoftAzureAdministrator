@@ -86,8 +86,6 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
       ![image](../media/az-104i2.1.png)
 
-1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
-
 1. **Save** your changes.
 
 1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
@@ -95,6 +93,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 1. Make this change so it matches the template file.
 
     Change **disks_az104_disk1_name** to **disk_name** (one place to change)
+
+     ![image](../media/l321.png)
 
 1. **Save** your changes. 
 
@@ -137,7 +137,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     |  -- | -- |
     | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | File share (Create new) | **None** |
+    | File share (Create new) | **none** |
 
 1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
 
@@ -164,10 +164,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
-   Replace <DID> with **<inject key="DeploymentID" enableCopy="false" />**
+   Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
 
     ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-03b-rg1-<DID> -TemplateFile template.json -TemplateParameterFile parameters.json
+    New-AzResourceGroupDeployment -ResourceGroupName az104-03b-rg1-[DID] -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
@@ -197,10 +197,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. To deploy to a resource group, use **az deployment group create**.
 
-    Replace <DID> with **<inject key="DeploymentID" enableCopy="false" />**
+    Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
 
    ```sh
-    az deployment group create --resource-group az104-03b-rg1-<DID> --template-file template.json --parameters parameters.json
+    az deployment group create --resource-group az104-03b-rg1-[DID] --template-file template.json --parameters parameters.json
     ```    
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
@@ -214,7 +214,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
 
-1. Continue working in the **Cloud Shell** in a **Bash** session.
+1. Close and reopen **Cloud Shell** in a **Bash** session.
 
 1. Locate and download the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
@@ -236,9 +236,9 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Now, deploy the template.
 
-    Replace <DID> with **<inject key="DeploymentID" enableCopy="false" />**
+    Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
     ```
-    az deployment group create --resource-group az104-03b-rg1-<DID> --template-file azuredeploydisk.bicep
+    az deployment group create --resource-group az104-03b-rg1-[DID] --template-file azuredeploydisk.bicep
     ```
 
 1. Confirm the disk was created.
