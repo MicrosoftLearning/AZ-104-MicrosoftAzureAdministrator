@@ -387,11 +387,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ### Review
 In this lab, you have completed:
-+ Provisioned the lab environment
-+ Configured the hub and spoke network topology
-+ Tested transitivity of virtual network peering
-+ Configure routing in the hub and spoke topology
-+ Implement Azure Load Balancer
-+ Implement Azure Application Gateway
++ Use a template to provision an infrastructure.
++ Configure an Azure Load Balancer.
++ Configure an Azure Application Gateway.
 
 ### You have successfully completed the lab
