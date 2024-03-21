@@ -42,7 +42,7 @@ In this task, you will create an Azure web app.
     | Publish | **Code** |
     | Runtime stack | **PHP 8.2** |
     | Operating system | **Linux** |
-    | Region | the name of an Azure region where you can provision Azure web apps |
+    | Region | **<inject key="Region" enableCopy="false"/>** |
     | Pricing plans | accept the default configuration |
 
     ![image](./media/l9-image(3).png)
