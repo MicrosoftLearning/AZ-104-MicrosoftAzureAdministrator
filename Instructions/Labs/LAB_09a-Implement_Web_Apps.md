@@ -165,7 +165,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
    
 1. Wait for the load test to create, and then select **Go to resource**.
 
-1. From the **Overview**  of Azure load testing blade, under**Add HTTP requests**, select **Create**.
+1. From the **Overview**  of Azure load testing blade, under **Add HTTP requests**, select **Create**.
 
     ![image](./media/l9-image18.png)
 
