@@ -52,7 +52,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image5.png)
    
-1. Select **Edit parameters** > **load** and locate and selectthe **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** > **load** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
 
    ![](../Labs/media/l6-image6.png)
 
