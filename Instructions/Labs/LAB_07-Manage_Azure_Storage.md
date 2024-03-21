@@ -36,7 +36,7 @@ In this lab, you will complete the following tasks:
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**. and then click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts**, and then select **Storage accounts** under services.
 
     ![image](./media/l1-image1.png)
 
@@ -49,7 +49,7 @@ In this task, you will create and configure an Azure Storage account.
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of an **existing** resource group **az104-07-rg1** |
     | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | Same region as the Resource group  |
+    | Region | **<inject key="Region" enableCopy="false"/>**  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
