@@ -231,8 +231,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
 
-1. Select **Enable replication**.
-
 1. On the **Basics** tab, notice the **Target region**.
 
 1. Move to the **Advanced settings** tab. Resource selections have been made for you. It is important to review them. 
@@ -250,7 +248,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
-1. Select **Review + Start replication** and then **Enable replication**.
+1. Select **Review + Start replication** and then **start replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
