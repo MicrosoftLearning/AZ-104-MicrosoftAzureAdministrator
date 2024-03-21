@@ -224,7 +224,7 @@ In this task, you will create and configure Azure Files shares.
     | Name | **az104-07-share** |
     | Tier | **transaction optimized** |
 
-1. In the Backup tab, uncheck **Enable backup** option and then click on **Create**.
+1. In the Backup tab, uncheck **Enable backup** option and then click on **Review + Create** > **Create**.
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 
