@@ -194,7 +194,7 @@ In this task, you will create a blob container and upload a blob into it.
    
 1. Click **Generate SAS token and URL**.
 
-1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
+1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry (you need to scroll down).
 
     ![image](./media/l1-image15.png)
 
