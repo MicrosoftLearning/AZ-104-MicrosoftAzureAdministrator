@@ -117,7 +117,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Name | **az104-06-pip4** |
     | Availability zone | **No Zone** and click **Ok** |
 
-1. Back on **Add frontend IP configuration** click on **Add** and **click on Next : Backend pools>**
+1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**
 
 1. On **Backend pools** tab, and click **+ Add a Backend pools**.
 
