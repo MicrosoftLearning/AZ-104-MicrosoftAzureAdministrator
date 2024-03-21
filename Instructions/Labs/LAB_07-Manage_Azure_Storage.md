@@ -126,7 +126,7 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](./media/l1-image9.png)
 
-1. In the **Immutable blob storage** area, select **Add policy**.
+1. On the **Access policy** window under the **Immutable blob storage** area, select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
