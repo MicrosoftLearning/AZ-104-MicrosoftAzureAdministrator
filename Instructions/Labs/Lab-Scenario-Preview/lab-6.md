@@ -5,14 +5,11 @@ You were tasked with testing managing network traffic targeting Azure virtual ma
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Configure the hub and spoke network topology
-+ Task 3: Test transitivity of virtual network peering
-+ Task 4: Configure routing in the hub and spoke topology
-+ Task 5: Implement Azure Load Balancer
-+ Task 6: Implement Azure Application Gateway
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Configure an Azure Load Balancer.
++ Task 3: Configure an Azure Application Gateway.
 
 ## Architecture diagram
-![image](../media/lab06.png)
+![Diagram of the lab tasks.](../media/az104-lab06-lb-architecture.png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/34db3765-6316-4973-aff4-667f86fdfcda) if you want to go through detailed guide prior to launching lab environment.
