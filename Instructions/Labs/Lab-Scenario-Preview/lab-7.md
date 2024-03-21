@@ -5,14 +5,11 @@ You need to evaluate the use of Azure storage for storing files residing current
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Create and configure Azure Storage accounts
-+ Task 3: Manage blob storage
-+ Task 4: Manage authentication and authorization for Azure Storage
-+ Task 5: Create and configure an Azure Files shares
-+ Task 6: Manage network access for Azure Storage
-
++ Task 1: Create and configure a storage account. 
++ Task 2: Create and configure secure blob storage.
++ Task 3: Create and configure secure Azure file storage.
+  
 ## Architecture diagram
-![image](../media/lab07.png)
+![Diagram of the tasks.](../media/az104-lab07-architecture.png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/65605502-713f-426c-85c5-b4709f6a3a4b) if you want to go through detailed guide prior to launching lab environment.
