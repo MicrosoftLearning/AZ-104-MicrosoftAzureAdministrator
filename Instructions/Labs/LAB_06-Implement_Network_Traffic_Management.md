@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 ## Estimated timing: 60 minutes
 
 ## Architecture diagram
-![image](../media/lab06.png)
+![Diagram of the lab tasks.](./media/az104-lab06-lb-architecture.png)
 
 ## Excercise 1: Implement Traffic Management
 
