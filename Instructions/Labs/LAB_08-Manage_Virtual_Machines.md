@@ -263,7 +263,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Boot diagnostics | **Disable** |
 
 1. Click **Next : Health >**.
-
+3
 1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
 1. On the **Advanced** tab, click **Review + create**.
@@ -284,7 +284,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ### Scale out rule
 
-1. Select **Custom autoscale**. then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
+1. Select **Custom autoscale** (1). then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
+
+   ![](../Labs/Images/l8i14.png) 
 
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%.
 
@@ -293,15 +295,16 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Metric source | **Current resource (vmss1)** |
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Percentage CPU** (review your other choices) |
-    | Operator | **Greater than** |
-    | Metric threshold to trigger scale action | **70** |
-    | Duration (minutes) | **10** |
-    | Time grain statistic | **Average** |
-    | Operation | **Increase percent by** (review other choices) |
-    | Cool down (minutes) | **5** |
-    | Percentage | **20** |
 
-    ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
+    | Operator | **Greater than** (1) |
+    | Metric threshold to trigger scale action | **70** (2) |
+    | Duration (minutes) | **10** (3) |
+    | Time grain statistic | **Average** (4) |
+    | Operation | **Increase percent by** (review other choices) (5) |
+    | Cool down (minutes) | **5** (6) |
+    | Percentage | **20** (7) |
+      
+    ![](../Labs/Images/l8i15.png) 
 
 1. Be sure to **Save** your changes.
 
