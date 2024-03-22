@@ -65,7 +65,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 ### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services.
 
     ![image](./media/l10-image5.png)
 
@@ -166,9 +166,9 @@ In this task, you will implement Azure virtual-machine level backup.
 
 In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solutions.
 
-1. From the Azure portal, search for and select `Storage accounts`.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts**, and then select **Storage accounts** under services.
 
-1. On the Storage accounts page, select **Create**.
+1. On the Storage accounts page, select **+ Create**.
 
 1. Use the following information to define the storage account and navigate to **Data protection** tab.
 
@@ -223,7 +223,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 ## Task 5: Enable virtual machine replication
 
-1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services. click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
