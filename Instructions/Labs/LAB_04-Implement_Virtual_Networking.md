@@ -256,7 +256,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    ```
 1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
 
-  ![image](../media/l4i14.png)
+    ![image](../media/l4i14.png)
 
 ###  Configure a private DNS zone
 
