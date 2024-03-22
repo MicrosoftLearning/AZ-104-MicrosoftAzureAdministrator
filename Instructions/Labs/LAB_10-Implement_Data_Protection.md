@@ -232,7 +232,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription | the name of your Azure subscription |
     | Resource group |az104-10-rg1     |
     | Vault Name | **az104-10-rsv2**  |
-    | Region | **West US** |
+    | Region | **West US 3** |
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
 
