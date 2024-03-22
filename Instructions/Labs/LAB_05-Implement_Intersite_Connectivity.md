@@ -47,9 +47,9 @@ In this task, you will deploy three virtual machines, each into a separate virtu
    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
 
    ```powershell
-   $location1 = '[Azure_region_1]'
+   $location1 = 'Azure_region_1'
 
-   $location2 = '[Azure_region_2]'
+   $location2 = 'Azure_region_2'
 
    $rgName = 'az104-05-rg0-Deployment-id'
    ```
@@ -103,9 +103,8 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. Select **Run diagnostic tests**.
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
+    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
 
- 
 
 ### Task 3: Configure local and global virtual network peering
 In this task, you will configure local and global peering between the virtual networks you deployed in the previous tasks.
