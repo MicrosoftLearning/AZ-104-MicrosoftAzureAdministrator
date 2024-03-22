@@ -5,14 +5,12 @@ You need to explore Azure virtual networking capabilities. To start, you plan to
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Create and configure a virtual network
-+ Task 2: Deploy virtual machines into the virtual network
-+ Task 3: Configure private and public IP addresses of Azure VMs
-+ Task 4: Configure network security groups
-+ Task 5: Configure Azure DNS for internal name resolution
-+ Task 6: Configure Azure DNS for external name resolution
+- Task 1: Create a virtual network with subnets using the portal.
+- Task 2: Create a virtual network and subnets using a template.
+- Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
+- Task 4: Configure public and private Azure DNS zones
 
 ## Architecture diagram
-![image](../media/lab04.png)
+![image](../media/l4arch.png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/5bba10f5-69ec-4c1c-a548-21337d2f6b99) if you want to go through detailed guide prior to launching lab environment.
