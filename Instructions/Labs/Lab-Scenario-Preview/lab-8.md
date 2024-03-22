@@ -5,13 +5,13 @@ You were tasked with identifying different options for deploying and configuring
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template
-+ Task 2: Configure Azure virtual machines by using virtual machine extensions
-+ Task 3: Scale compute and storage for Azure virtual machines
-+ Task 4: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-+ Task 5: Deploy zone-resilient Azure virtual machine scale sets by using the Azure portal
-+ Task 6: Configure Azure virtual machine scale sets by using virtual machine extensions
-+ Task 7: Scale compute and storage for Azure virtual machine scale sets (optional)
++ Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
++ Task 2: Manage compute and storage scaling for virtual machines.
++ Task 3: Create and configure Azure Virtual Machine Scale Sets.
++ Task 4: Scale Azure Virtual Machine Scale Sets.
++ Task 5: Create a virtual machine using Azure PowerShell (optional 1).
++ Task 6: Create a virtual machine using the CLI (optional 2).
+
 
 ## Architecture diagram
 ![image](../media/az104-lab08-vm-architecture.png)
