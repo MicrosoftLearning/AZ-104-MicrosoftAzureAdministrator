@@ -153,6 +153,10 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
+## Azure Virtual Machine Scale Sets Architecture Diagram
+
+![](../Labs/Images/az104-lab08-vmss-architecture.png)
+
 ## Task 3: Create and configure Azure Virtual Machine Scale Sets
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
