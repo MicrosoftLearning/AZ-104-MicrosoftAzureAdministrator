@@ -302,6 +302,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Percentage CPU** (review your other choices) |
 
+    | Setting | Value |
+    | --- | --- |
     | Operator | **Greater than** (1) |
     | Metric threshold to trigger scale action | **70** (2) |
     | Duration (minutes) | **10** (3) |
