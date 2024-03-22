@@ -1,6 +1,17 @@
-# Lab 10 - Backup virtual machines
+# Lab 10 - Implement Data Protection
+## Lab introduction    
+
+In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery. 
+
 ## Lab scenario
-You have been tasked with evaluating the use of Azure Recovery Services for backup and restore of files hosted on Azure virtual machines and on-premises computers. In addition, you want to identify methods of protecting data stored in the Recovery Services vault from accidental or malicious data loss.
+
+Your organization is evaluating how to backup and restore Azure virtual machines from accidental or malicious data loss. Additionally, the organization wants to explore using Azure Site Recovery for disaster recovery scenarios. 
+
+## Interactive lab simulation
+
+There is an interactive lab simulation that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
++ **[Backup virtual machines and on-premises files.](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2016)**. Create a recovery services vault and implement an Azure virtual machine backup. Implement on-premises file and folder backup using the Microsoft Azure Recovery Services agent. On-premises backups are outside the scope of this lab but it might be helpful to view those steps. 
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -8,12 +19,12 @@ In this lab, you will complete the following tasks:
 + Task 2: Create and configure a Recovery Services vault.
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
-+ Task 5: Enable virtual machine replication. 
++ Task 5: Enable virtual machine replication.  
 
 ## Estimated timing: 50 minutes
 
 ## Architecture diagram
-![image](../media/lab10.png)
+![Diagram of the architecture tasks.](./media/az104-lab10-architecture.png)
 
 ## Excercise 1: Backup virtual machines
 
@@ -54,7 +65,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 ### Task 2: Create a Recovery Services vault
 In this task, you will create a recovery services vault.
 
-1. Navigate to the **Home** page, search for and select **Recovery Services vaults** and, on the **Recovery Services vaults** blade.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services.
 
     ![image](./media/l10-image5.png)
 
@@ -97,6 +108,14 @@ In this task, you will create a recovery services vault.
 
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ### Task 3: Implement Azure virtual machine-level backup
 In this task, you will implement Azure virtual-machine level backup.
 
@@ -113,6 +132,8 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. On the **Backup Goal** blade, click **Backup**.
 
+1. On **Configure backup** in Policy sub type click **Standard** review the options.
+   
 1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
@@ -145,11 +166,11 @@ In this task, you will implement Azure virtual-machine level backup.
 
 In this task, you will deploy an Azure storage account. Then you will configure the vault to send the logs and metrics to the storage account. This repository can then be used with Log Analytics or other third-party monitoring solutions.
 
-1. From the Azure portal, search for and select `Storage accounts`.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts**, and then select **Storage accounts** under services.
 
-1. On the Storage accounts page, select **Create**.
+1. On the Storage accounts page, select **+ Create**.
 
-1. Use the following information to define the storage account, then and select **Review**.
+1. Use the following information to define the storage account and navigate to **Data protection** tab.
 
     | Settings | Value |
     | --- | --- | 
@@ -158,7 +179,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Storage account name  | storage<inject key="DeploymentID" enableCopy="false"/>   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
-1. On the Review tab, select **Create**.
+1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
+
+    ![image](./media/l10-image20.png)
+
+1. On the Review + Create tab, select **Create**.
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
@@ -189,9 +214,16 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Review the details of the backup job.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ## Task 5: Enable virtual machine replication
 
-1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services. click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
 
@@ -200,7 +232,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Subscription | the name of your Azure subscription |
     | Resource group |az104-10-rg1     |
     | Vault Name | **az104-10-rsv2**  |
-    | Region | **West US** |
+    | Region | **West US 3** |
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
 
@@ -211,8 +243,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 1. Search for and select the `az104-10-vm0` virtual machine.
 
 1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
-
-1. Select **Enable replication**.
 
 1. On the **Basics** tab, notice the **Target region**.
 
@@ -231,7 +261,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
-1. Select **Review + Start replication** and then **Enable replication**.
+1. Select **Review + Start replication** and then **start replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
@@ -241,7 +271,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
 
-   ![Screenshot of the replicated items page.](../media/az104-lab10-replicated-items.png)
+   ![image](./media/l10-image21.png)
 
 1. Select the virtual machine to view more details.
    

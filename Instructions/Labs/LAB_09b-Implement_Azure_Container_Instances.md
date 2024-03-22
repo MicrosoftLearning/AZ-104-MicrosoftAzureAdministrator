@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![image](../media/lab09b.png)
+![Diagram of the tasks.](./media/az104-lab09b-aci-architecture.png)
 
 ## Exercise 1
 
@@ -86,6 +86,19 @@ In this task, you will review the deployment of the container instance.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud.
++ ACI doesn't require you to provision or manage any underlying infrastructure.
++ ACI supports both Linux containers and Windows containers.
++ Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. 
+
+## Learn more with self-paced training
+
++ [Run container images in Azure Container Instances](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/). Learn how Azure Container Instances can help you quickly deploy containers, how to set environment variables, and specify container restart policies.
 
 ### Review
 In this lab, you have completed:

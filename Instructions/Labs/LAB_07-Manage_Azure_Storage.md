@@ -29,14 +29,14 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ![](../Labs/Images/lab07.png)
+  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
 
 ## Exercise 1
 
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
-1. In the Azure portal, search for and select **Storage accounts**. and then click **+ Create**.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts**, and then select **Storage accounts** under services.
 
     ![image](./media/l1-image1.png)
 
@@ -49,7 +49,7 @@ In this task, you will create and configure an Azure Storage account.
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of an **existing** resource group **az104-07-rg1** |
     | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | Same region as the Resource group  |
+    | Region | **<inject key="Region" enableCopy="false"/>**  |
     | Performance | **Standard** |
     | Redundancy | **Geo-redundant storage (GRS)** |
 
@@ -87,7 +87,7 @@ In this task, you will create and configure an Azure Storage account.
 
      ![image](./media/l1-image4.png)
    
-1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
@@ -126,7 +126,7 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](./media/l1-image9.png)
 
-1. In the **Immutable blob storage** area, select **Add policy**.
+1. On the **Access policy** window under the **Immutable blob storage** area, select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
@@ -176,13 +176,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### Task 3: Configure limited access to the blob storage
+### Configure limited access to the blob storage
 
 1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
 
@@ -200,7 +194,7 @@ In this task, you will create a blob container and upload a blob into it.
    
 1. Click **Generate SAS token and URL**.
 
-1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry.
+1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry (you need to scroll down).
 
     ![image](./media/l1-image15.png)
 
@@ -218,7 +212,7 @@ In this task, you will create a blob container and upload a blob into it.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-### Task 4: Create and configure an Azure File storage
+### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares**.
@@ -230,7 +224,7 @@ In this task, you will create and configure Azure Files shares.
     | Name | **az104-07-share** |
     | Tier | **transaction optimized** |
 
-1. In the Backup tab, uncheck **Enable backup** option and then click on **Create**.
+1. In the Backup tab, uncheck **Enable backup** option and then click on **Review + Create** > **Create**.
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 

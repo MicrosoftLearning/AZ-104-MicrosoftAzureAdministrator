@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 ## Estimated timing: 60 minutes
 
 ## Architecture diagram
-![image](../media/lab06.png)
+![Diagram of the lab tasks.](./media/az104-lab06-lb-architecture.png)
 
 ## Excercise 1: Implement Traffic Management
 
@@ -44,7 +44,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image3.png)
    
-1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-template.json** file and select **Open**.
+1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-template.json** file and select **Open**.
 
    ![](../Labs/media/l6-image4.png)
 
@@ -52,7 +52,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image5.png)
    
-1. Select **Edit parameters** > **load** and locate and selectthe **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** > **load** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
 
    ![](../Labs/media/l6-image6.png)
 
@@ -91,18 +91,18 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values):
+1. Create a load balancer with the following settings (leave others with their default values) and click **Next: Frontend IP configuration >** 
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | az104-06-rg1 |
     | Name | **az104-06-lb4** |
-    | Region| name of the Azure region into which you deployed all other resources in this lab |
+    | Region| **<inject key="Region" enableCopy="false"/>** |
     | SKU | **Standard** |
     | Type | **Public** |
     
-1. Click Next: **Frontend IP configuration** >, on the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
+1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
  
     | Setting | Value |
     | --- | --- |
@@ -117,7 +117,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Name | **az104-06-pip4** |
     | Availability zone | **No Zone** and click **Ok** |
 
-1. Back on **Add frontend IP configuration** click on **Add** and **click on Next : Backend pools>**
+1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**
 
 1. On **Backend pools** tab, and click **+ Add a Backend pools**.
 
@@ -129,7 +129,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Virtual network | **az104-06-vnet1** |
     | Backend Pool Configuration | **NIC** |
     
-1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select both the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
+1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select all the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
 
 1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
@@ -137,7 +137,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | --- | --- |
     | Name | **az104-06-lb4-lbrule1** |
     | IP Version | **IPv4** |
-    | Frontend IP Address | **select the LoadBalancerFrontEnd from the drop down**
+    | Frontend IP Address | select the LoadBalancerFrontEnd from the drop down |
     | Backend pool | **az104-06-lb4-be1** |    
     | Protocol | **TCP** |
     | Port | **80** |
@@ -222,7 +222,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | az104-06-rg1 |
     | Application gateway name | **az104-06-appgw5** |
-    | Region | name of the Azure region into which you deployed all other resources in this lab |
+    | Region | **<inject key="Region" enableCopy="false"/>** |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | HTTP2 | **Disabled** |
@@ -283,15 +283,20 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Protocol | **HTTP** |
     | Port | **80** |
     | Listener type | **Basic** |
-    
+
+    ![](../Labs/media/l6-image20.png)
+   
 1. Switch to the **Backend targets** tab of the **Add a routing rule** blade and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Target type | **Backend pool** |
     | Backend target | **az104-06-appgw5-be1** |
+    | Backend setting | Click **Add new** |
 
-1. Click **Add new** under to the **Backend setting** text box, and, on the **Add Backend setting** blade, specify the following settings (leave others with their default values) and click **Add**.
+    ![](../Labs/media/l6-image21.png)
+   
+1. On the **Add Backend setting** blade, specify the following settings (leave others with their default values) and click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -302,8 +307,12 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Connection draining | **Disable** |
     | Request time-out (seconds) | **20** |
 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
+    ![](../Labs/media/l6-image22.png)
+   
+1. On the **Add a routing rule** blade. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
+     ![](../Labs/media/l6-image23.png)
+   
     **Rule - routing to the images backend**
 
     | Setting | Value |
@@ -313,6 +322,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend settings | **az104-06-appgw5-http1** |
     | Backend target | `az104-imagebe` |
 
+    ![](../Labs/media/l6-image24.png)
+   
     **Rule - routing to the videos backend**
 
     | Setting | Value |
@@ -376,11 +387,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ### Review
 In this lab, you have completed:
-+ Provisioned the lab environment
-+ Configured the hub and spoke network topology
-+ Tested transitivity of virtual network peering
-+ Configure routing in the hub and spoke topology
-+ Implement Azure Load Balancer
-+ Implement Azure Application Gateway
++ Use a template to provision an infrastructure.
++ Configure an Azure Load Balancer.
++ Configure an Azure Application Gateway.
 
 ### You have successfully completed the lab

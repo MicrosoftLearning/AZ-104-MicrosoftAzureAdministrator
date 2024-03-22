@@ -8,28 +8,28 @@
 ## Lab objectives
 In this lab, you will complete the following tasks:
 + Lab 9a - Implement Web Apps
-    + Task 1: Create an Azure web app
-    + Task 2: Create a staging deployment slot
-    + Task 3: Configure web app deployment settings
-    + Task 4: Deploy code to the staging deployment slot
-    + Task 5: Swap the staging slots
-    + Task 6: Configure and test autoscaling of the Azure web app
+   + Task 1: Create and configure an Azure web app.
+   + Task 2: Create and configure a deployment slot.
+   + Task 3: Configure web app deployment settings.
+   + Task 4: Swap deployment slots.
+   + Task 5: Configure and test autoscaling of the Azure web app.
+   
 + Lab 9b - Implement Azure Container Instances
-    + Task 1: Deploy a Docker image by using the Azure Container Instance
-    + Task 2: Review the functionality of the Azure Container Instance
-Lab 9c - Implement Azure Kubernetes Service
-    + Task 1: Register Microsoft.Kubernetes and Microsoft.Kubernetes configuration resource providers.
-    + Task 2: Deploy an Azure Kubernetes Service cluster
-    + Task 3: Deploy pods into the Azure Kubernetes Service cluster
-    + Task 4: Scale containerized workloads in the Azure Kubernetes service cluster
+    + Task 1: Deploy an Azure Container Instance using a Docker image.
+    + Task 2: Test and verify deployment of an Azure Container Instance.
+
++ Lab 9c - Implement Azure Kubernetes Service
+    + Task 1: Create and configure an Azure Container App and environment.
+    + Task 2: Test and verify deployment of the Azure Container App.
+
 
 ## Lab 9a - Architecture diagram
-![image](../media/lab09a.png)
+![Diagram of the tasks.](../media/az104-lab09a-architecture.png)
 
 ## Lab 9b - Architecture diagram
-![image](../media/lab09b.png)
+![Diagram of the tasks.](../media/az104-lab09b-aci-architecture.png)
 
 ## Lab 9c - Architecture diagram
-![image](../media/lab09c.png)
+![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/bb5b591a-9f0a-4749-8d59-a19847b6e0e9) if you want to go through detailed guide prior to launching lab environment.

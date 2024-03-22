@@ -21,7 +21,7 @@ There are no interactive lab simulations for this topic.
 
 ## Architecture diagram
 
-![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
+![Diagram of the tasks.](./media/az104-lab09b-aca-architecture.png)
 
 ## Task 1: Create and configure an Azure Container App and environment
 
