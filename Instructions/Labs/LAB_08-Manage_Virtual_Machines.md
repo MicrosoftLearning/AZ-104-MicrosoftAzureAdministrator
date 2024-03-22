@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-![](../Labs/Images/az104-lab08-vm-architecture)
+![](../Labs/Images/az104-lab08-vm-architecture.png)
 
 ## Exercise 1
 
