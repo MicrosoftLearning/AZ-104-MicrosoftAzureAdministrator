@@ -4,6 +4,7 @@ You were tasked with identifying different options for deploying and configuring
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
+
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
 + Task 2: Manage compute and storage scaling for virtual machines.
 + Task 3: Create and configure Azure Virtual Machine Scale Sets.
@@ -412,67 +413,13 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Verify the **powerState** is **VM Running**.
 
-1. Use **az vm deallocate** to deallocate your virtual machine. Type **Yes** to confirm.
-
-    ```sh
-    az vm deallocate --resource-group az104-rg8 --name myCLIVM
-    ```
-
-1. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
-
-    >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 ### Review
-In this lab, you have completed:
-+ Deployed zone-resilient Azure virtual machines by using the Azure portal and an Azure Resource Manager template.
-+ Configured Azure virtual machines by using virtual machine extensions.
-+ Scaled compute and storage for Azure virtual machines.
-+ Deployed zone-resilient Azure virtual machine scale sets by using the Azure portal.
-+ Configured Azure virtual machine scale sets by using virtual machine extensions.
-+ Scaled compute and storage for Azure virtual machine scale sets.
+In this lab, you have completed the following:
++ Deployed zone-resilient Azure virtual machines by using the Azure portal.
++ Managed compute and storage scaling for virtual machines.
++ Created and configured Azure Virtual Machine Scale Sets.
++ Scaled Azure Virtual Machine Scale Sets.
++ Created a virtual machine using Azure PowerShell (optional 1).
++ Created a virtual machine using the CLI (optional 2).
 
 ### You have successfully completed the lab
