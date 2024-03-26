@@ -5,13 +5,12 @@ You need to evaluate Azure functionality that would provide insight into the per
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
-+ Task 1: Provision the lab environment
-+ Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers
-+ Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
-+ Task 4: Review default monitoring settings of Azure virtual machines
-+ Task 5: Configure Azure virtual machine diagnostic settings
-+ Task 6: Review Azure Monitor functionality
-+ Task 7: Review Azure Log Analytics functionality
++ Task 1: Use a template to provision an infrastructure.
++ Task 2: Create an alert.
++ Task 3: Configure action group notifications.
++ Task 4: Trigger an alert and confirm it is working.
++ Task 5: Configure an alert processing rule.
++ Task 6: Use Azure Monitor log queries.
 
 ## Architecture diagram
 ![image](../media/az104-lab11-architecture.png)
