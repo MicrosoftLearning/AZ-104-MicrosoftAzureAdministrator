@@ -14,6 +14,6 @@ In this lab, you will complete the following tasks:
 + Task 7: Review Azure Log Analytics functionality
 
 ## Architecture diagram
-![image](../media/lab11.png)
+![image](../media/az104-lab11-architecture.png)
 
 Once you understand the lab's content, you can start the Hands-on Lab by clicking the **Launch** button located in the top right corner. This will lead you to the lab environment and guide. You can also preview the full lab guide [here](https://experience.cloudlabs.ai/#/labguidepreview/f5def2c2-66e5-4d52-8354-94bfe1fcc590) if you want to go through detailed guide prior to launching lab environment.
