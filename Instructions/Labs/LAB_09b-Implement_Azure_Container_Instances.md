@@ -25,15 +25,14 @@ There are interactive lab simulations that you might find useful for this topic.
   
 + [Implement Azure Container Instances](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014).  Deploy a Docker image using Azure Container Instances. 
 
+## Architecture diagram
+
+![Diagram of the tasks.](../media/az104-lab09b-aci-architecture.png)
+
 ## Job skills
 
 - Task 1: Deploy an Azure Container Instance using a Docker image.
 - Task 2: Test and verify deployment of an Azure Container Instance.
-
-
-## Architecture diagram
-
-![Diagram of the tasks.](../media/az104-lab09b-aci-architecture.png)
 
 ## Task 1: Deploy an Azure Container Instance using a Docker image
 
