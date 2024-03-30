@@ -22,14 +22,14 @@ Your organization has a web application that runs on a virtual machine in your o
 
 There are no interactive lab simulations for this topic. 
 
+## Architecture diagram
+
+![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
+
 ## Job skills
 
 - Task 1: Create and configure an Azure Container App and environment.
 - Task 2: Test and verify deployment of the Azure Container App.
-
-## Architecture diagram
-
-![Diagram of the tasks.](../media/az104-lab09b-aca-architecture.png)
 
 ## Task 1: Create and configure an Azure Container App and environment
 
