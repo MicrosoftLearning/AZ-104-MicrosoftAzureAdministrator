@@ -115,7 +115,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
 
-1. Replace all occurrences of **10.20.0.0/16** with `10.30.0.0/16`. 
+1. Replace all occurrences of **10.20.0.0** with `10.30.0.0`. 
 
 ### Make changes for the ManufacturingVnet subnets
 
