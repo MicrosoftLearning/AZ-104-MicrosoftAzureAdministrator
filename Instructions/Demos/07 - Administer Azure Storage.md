@@ -79,11 +79,6 @@ In this demonstration, we will work with files shares and snapshots.
 
 1. Create a file share snapshot. Review when to use snapshots and how they are different from backups. As you have time, upload a file, take a snapshot, delete the file, and restore the snapshot.
 
-
-## Storage Tools (optional)
-
-In this demonstration, we will review several common Azure storage tools. 
-
 **Reference**: [Get started with Storage Explorer](https://docs.microsoft.com/azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows)
 
 1. Install the Storage Explorer or use the Storage Browser.
