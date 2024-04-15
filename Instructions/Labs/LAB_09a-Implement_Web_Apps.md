@@ -43,7 +43,7 @@ In this task, you will create an Azure web app.
     | Runtime stack | **PHP 8.2** |
     | Operating system | **Linux** |
     | Region | **<inject key="Region" enableCopy="false"/>** |
-    | Pricing plans | accept the default configuration |
+    | Pricing plans | **Premium VB P1V3 (195 minimum ACU/vCPU, 8 GB memory, 2 vCPU) v** |
 
     ![image](./media/l9-image(3).png)
    
