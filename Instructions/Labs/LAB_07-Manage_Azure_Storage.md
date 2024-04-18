@@ -81,12 +81,9 @@ In this task, you will create and configure an Azure Storage account.
 
 1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
 
-    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
-    + In the **Firewall** section, check the box for **Add your client IP address.**
+    + Change the **public access level** to **Enabled from all network**.
     + Be sure to **Save** your changes. 
 
-     ![image](./media/l1-image4.png)
-   
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
@@ -258,7 +255,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the portal, search for and select **Virtual networks**.
 
-1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
+1. Select **+ Create**. Select your resource group **az104-07-rg1** and give the virtual network a **name**, `vnet1`.
 
 1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
@@ -277,8 +274,6 @@ In this task, you will create and configure Azure Files shares.
 1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses**. 
 
 1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
-
-1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
 1. Be sure to **Save** your changes.
 
