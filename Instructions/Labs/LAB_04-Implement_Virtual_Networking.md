@@ -71,7 +71,6 @@ The organization plans a large amount of growth for core services. In this task,
 
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
-
 	| IPv4 address space | `10.20.0.0/16` (separate the entries)    |
 
 1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
