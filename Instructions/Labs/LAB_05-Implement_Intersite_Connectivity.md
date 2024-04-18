@@ -194,7 +194,8 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. Review your settings and select **Add**.
 
-    ![Screenshot of peering page.](../media/az104-lab05-peering.png)
+![Screenshot of peering page.](../media/az104-lab05-peering.png)
+
  
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
