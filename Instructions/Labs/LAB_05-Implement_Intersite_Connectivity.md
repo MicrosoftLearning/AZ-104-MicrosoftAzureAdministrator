@@ -165,28 +165,28 @@ In this task, you verify that resources in peered virtual networks can communica
 
 In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
 
-1. In the Azure portal, select the `CoreServicesVnet` virtual network.
+1. In the Azure portal, select the `CoreServicesVNet` virtual network.
 
-1. In CoreServicesVnet, under **Settings**, select **Peerings**.
+1. In CoreServicesVNet, under **Settings**, select **Peerings**.
 
-1. On CoreServicesVnet | Peerings, select **+ Add**.
+1. On CoreServicesVNet | Peerings, select **+ Add**.
 
 1. Use the information in the following table to create the peering.
 
 | **Parameter**                                    | **Value**                             |
 | --------------------------------------------- | ------------------------------------- |
 | **This virtual network**                                       |                                       |
-| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
+| Peering link name                             | `CoreServicesVNet-to-ManufacturingVNet` |
 | Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
 | Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
 | Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
 | Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
 | **Remote virtual network**                                   |                                       |
-| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
+| Peering link name                             | `ManufacturingVNet-to-CoreServicesVNet` |
 | Virtual network deployment model              | **Resource manager**                      |
 | I know my resource ID                         | Not selected                          |
 | Subscription                                  | *your subscription*    |
-| Virtual network                               | **ManufacturingVnet**                     |
+| Virtual network                               | **ManufacturingVNet**                     |
 | Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
 | Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
 | Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
@@ -197,9 +197,9 @@ In this task, you create a virtual network peering to enable communications betw
 ![Screenshot of peering page.](../media/az104-lab05-peering.png)
 
  
-1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
+1. In CoreServicesVNet | Peerings, verify that the **CoreServicesVet-to-ManufacturingVNet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
-1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
+1. Switch to the **ManufacturingVNet** and verify the **ManufacturingVNet-to-CoreServicesVNet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
 
 ## Task 5: Use Azure PowerShell to test the connection between virtual machines
@@ -236,7 +236,7 @@ In this task, you retest the connection between the virtual machines in differen
 
 In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
 
-1. Search for select the `CoreServicesVnet`.
+1. Search for select the `CoreServicesVNet`.
 
 1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
 
@@ -274,7 +274,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **CoreServicesVnet** |
+    | Virtual network | **CoreServicesVNet** |
     | Subnet | **Core** |    
 
 >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
