@@ -257,7 +257,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Rule name | `az104-gwrule` |
     | Priority | `10` |
     | Listener name | `az104-listener` |
-    | Frontend IP | **Public** |
+    | Frontend IP | **Public IPv4** |
     | Protocol | **HTTP** |
     | Port | `80` |
     | Listener type | **Basic** |
