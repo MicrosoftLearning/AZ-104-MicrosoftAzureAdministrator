@@ -293,7 +293,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. Be sure to **Save** and check your changes, then select **Next : Tags >**. No changes are needed.
 
-1. Select **Next: Review + create >** and then click **Create**.
+1. Select **Next : Review + create >** and then click **Create**.
 
     > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes. While you wait consider reviewing some of the self-paced training links at the end of this page.
 
