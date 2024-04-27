@@ -271,7 +271,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
-1. In the **Path based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
+1. In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule. 
 
     **Rule - routing to the images backend**
 
