@@ -128,7 +128,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | az104-06-vm0 | **check the box** |
     | az104-06-vm1 | **check the box** |
 
-1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**.
+1. As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
 
 1. Wait for the load balancer to deploy then click **Go to resource**.
 
