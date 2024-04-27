@@ -225,7 +225,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
     >**Note:** The Application Gateway can have both a public and private IP address.
  
-1. Click **Next: Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
+1. Click **Next : Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
