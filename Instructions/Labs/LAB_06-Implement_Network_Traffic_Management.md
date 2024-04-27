@@ -136,7 +136,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. In the **Settings** blade, select **Load balancing rules**.
 
-1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
+1. Select **+ Add**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
 
     | Setting | Value |
     | --- | --- |
