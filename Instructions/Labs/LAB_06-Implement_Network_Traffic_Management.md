@@ -291,7 +291,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Backend settings | **az104-http** |
     | Backend target | `az104-videobe` |
 
-1. Be sure to **Save** and check your changes, then select **Next: Tags >**. No changes are needed.
+1. Be sure to **Save** and check your changes, then select **Next : Tags >**. No changes are needed.
 
 1. Select **Next: Review + create >** and then click **Create**.
 
