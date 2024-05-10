@@ -322,7 +322,21 @@ If you are working with **your own subscription** take a minute to delete the la
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
-  
+
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Compare and contrast the Azure Load Balancer with the Azure Application Gateway.
++ How can I troubleshoot inbound connectivity to an Azure Load Balancer?
++ What are the basic steps for configuring the Azure Application Gateway?
++ Create a table highlighting Azure load balancing solutions. Include these columns: Supported protocols, Private load balancing, Global load balancing, Routing Policies, Supported environments, Connection draining, Session affinity, Host and path based load balancing, TLS offloading, Site acceleration, Security, Caching and compression.
+
+## Learn more with self-paced training
+
++ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
++ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab.
@@ -333,8 +347,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 + The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
-
-## Learn more with self-paced training
-
-+ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
-+ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
