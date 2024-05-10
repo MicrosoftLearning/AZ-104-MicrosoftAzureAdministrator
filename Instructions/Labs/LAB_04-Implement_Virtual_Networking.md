@@ -343,7 +343,23 @@ If you are working with **your own subscription** take a minute to delete the la
 + In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
- 
+
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
++ Share the top 10 best practices when deploying and configuring a virtual network in Azure.
++ How do I use Azure PowerShell and Azure CLI commands to create a virtual network with a public IP address and one subnet. 
++ Explain Azure Network Security Group inbound and outbound rules and how they are used.
++ What is the difference between Azure Network Security Groups and Azure Application Security Groups? Share examples of when to use each of these groups. 
++ Give a step-by-step guide on how to troubleshoot any network issues we face when deploying a network on Azure. Also share the thought process used for every step of the troubleshooting.
+
+## Learn more with self-paced training
+
++ [Introduction to Azure Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). Design and implement core Azure Networking infrastructure such as virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
++ [Design an IP addressing scheme](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/). Identify the private and public IP addressing capabilities of Azure and on-premises virtual networks.
++ [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
++ [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
+  
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -354,11 +370,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
-
-## Learn more with self-paced training
-
-+ [Introduction to Azure Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). Design and implement core Azure Networking infrastructure such as virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
-+ [Design an IP addressing scheme](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/). Identify the private and public IP addressing capabilities of Azure and on-premises virtual networks.
-+ [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
-+ [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
-  
