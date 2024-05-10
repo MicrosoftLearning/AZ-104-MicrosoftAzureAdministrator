@@ -99,7 +99,7 @@ If you are working with **your own subscription** take a minute to delete the la
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
 
 + Summarize the steps to create and configure an Azure Container Instance.
-+ What are the ways I can run a serverless container on Azure.
++ What are the ways I can run a serverless container on Azure?
 
 ## Learn more with self-paced training
 
