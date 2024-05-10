@@ -245,6 +245,18 @@ If you are working with **your own subscription** take a minute to delete the la
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Provide an Azure PowerShell script to create a storage account with a blob container. 
++ Provide a checklist I can use to ensure my Azure storage account is secure.
++ Create a table to compare Azure storage redundancy models.
+
+## Learn more with self-paced training
+
++ [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
++ [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -254,8 +266,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure blob storage allows you to store large amounts of unstructured data on Microsoft's data storage platform. Blob stands for Binary Large Object, which includes objects such as images and multimedia files.
 + Azure file Storage provides shared storage for structured data. The data can be organized in folders.
 + Immutable storage provides the capability to store data in a write once, read many (WORM) state. Immutable storage policies can be time-based or legal-hold.
-
-## Learn more with self-paced training
-
-+ [Optimize your cost with Azure Blob Storage](https://learn.microsoft.com/training/modules/optimize-your-cost-azure-blob-storage/). Learn how to optimize your cost with Azure Blob Storage.
-+ [Control access to Azure Storage with shared access signatures](https://learn.microsoft.com/training/modules/control-access-to-azure-storage-with-sas/). Grant access to data stored in your Azure Storage accounts securely by using shared access signatures.
