@@ -238,6 +238,17 @@ If you are working with **your own subscription** take a minute to delete the la
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
++ What are the Azure PowerShell and CLI commands for adding and deleting resource locks on a resource group?
++ Tabulate the differences between Azure policy and Azure RBAC, include examples.
++ What are the steps to enforce Azure policy and remediate resources which are not compliant?
++ How can I get a report of Azure resources with specific tags?
+
+## Learn more with self-paced training
+
++ [Design an enterprise governance strategy](https://learn.microsoft.com/training/modules/enterprise-governance/). Use RBAC and Azure Policy to limit access to your Azure solutions, and determine which method is right for your security goals.
+  
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -247,9 +258,3 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + The Azure Policy remediation task feature is used to bring resources into compliance based on a definition and assignment. Resources that are non-compliant to a modify or deployIfNotExist definition assignment, can be brought into compliance using a remediation task.
 + You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
 + Azure Policy is pre-deployment security practice. RBAC and resource locks are post-deployment security practice. 
-
-## Learn more with self-paced training
-
-+ [Design an enterprise governance strategy](https://learn.microsoft.com/training/modules/enterprise-governance/). Use RBAC and Azure Policy to limit access to your Azure solutions, and determine which method is right for your security goals.
-  
-
