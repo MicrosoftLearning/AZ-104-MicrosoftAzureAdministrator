@@ -144,14 +144,14 @@ If you are working with **your own subscription** take a minute to delete the la
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
   
-## Key takeaways
 
-Congratulations on completing the lab. Here are some main takeways for this lab:
+## Extend your learning with Copilot
 
-+ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
-+ Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
-+ Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
-+ Group membership can be statically or dynamically assigned.
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
++ What are the Azure PowerShell and CLI commands to create a security group called IT Admins? Provide the official command reference page.  
++ Provide a step-by-step strategy for managing users and groups in Microsoft Entra ID.
++ What are the steps in the Azure portal to bulk create users and groups?
++ Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
 
 
 ## Learn more with self-paced training
@@ -161,4 +161,11 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
 
 
+## Key takeaways
 
+Congratulations on completing the lab. Here are some main takeways for this lab:
+
++ A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
++ Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
++ Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
++ Group membership can be statically or dynamically assigned.
