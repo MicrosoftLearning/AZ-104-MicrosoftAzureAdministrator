@@ -182,7 +182,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. 
 
-1. Notice the **Tier** options. Keep the default **Transaction optimized**.
+1. Notice the **Access tier** options. Keep the default **Transaction optimized**.
    
 1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are disabling backup to simplify the lab configuration.
 
