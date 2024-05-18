@@ -192,7 +192,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Explore Storage Browser and upload a file
 
-1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
+1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
 1. Select **File shares** and verify your **share1** directory is present.
 
