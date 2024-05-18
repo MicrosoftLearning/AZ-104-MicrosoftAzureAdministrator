@@ -60,7 +60,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
-1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
+1. On the **Networking** tab, review the available options, select **Disable public access and use private access**.
 
 1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults.
 
@@ -72,7 +72,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+1. In the **Security + networking** section, select **Networking**. Notice public network access is disabled.
 
     + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
     + In the **Firewall** section, check the box for **Add your client IP address.**
@@ -182,9 +182,9 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. 
 
-1. Notice the **Tier** options. Keep the default **Transaction optimized**.
+1. Notice the **Access tier** options. Keep the default **Transaction optimized**.
    
-1. Move to the **Backup** tab and ensure **Enable Backup** is **not** checked. We are disabling backup to simplify the lab configuration.
+1. Move to the **Backup** tab and ensure **Enable backup** is **not** checked. We are disabling backup to simplify the lab configuration.
 
 1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
@@ -192,7 +192,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Explore Storage Browser and upload a file
 
-1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
+1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
 1. Select **File shares** and verify your **share1** directory is present.
 
