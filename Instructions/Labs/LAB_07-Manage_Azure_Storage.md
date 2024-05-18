@@ -72,7 +72,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+1. In the **Security + networking** section, select **Networking**. Notice public network access is disabled.
 
     + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
     + In the **Firewall** section, check the box for **Add your client IP address.**
