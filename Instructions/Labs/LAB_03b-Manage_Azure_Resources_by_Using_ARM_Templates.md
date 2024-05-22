@@ -139,19 +139,23 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
+1. On the **Getting started** screen select **Mount storage account** and then **I want to create a storage account**.  
 
-    >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
-
+    >**Note:** For this lab, a storage account is required. Provide the required information. 
+    
     | Settings | Values |
     |  -- | -- |
+    | Subscription | *select your subscription* |
     | Resource Group | **az104-rg3** |
+    | Region | *select your region* | 
     | Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
     | File share (Create new) | `fs-cloudshell` |
 
-1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
+1. When completed select **Next**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
 
 1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+
+   >**Note:** If at anytime you are prompted to **Switch to classic cloud shell**, then do so. 
 
 1. Verify your files are available in the Cloud Shell storage. 
 
