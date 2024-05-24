@@ -353,21 +353,26 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ## Task 5: Create a virtual machine using Azure PowerShell (option 1)
 
-1. Select the **Cloud Shell** icon in the top right of the Azure Portal. 
+1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
    ![image](../media/az-104i10.png)
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
+1. On **Getting started** window choose **Mount storage account** then under **Storage account subscription** select your available subscription from the dropdown and click on **Apply**.
+
+1. Within the Mount storage account pane, select **I want to create a storage account** and click **Next**. 
 
     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
 
+1. Specify the following then click on **Create**.
+   
     | Settings | Values |
     |  -- | -- |
     | Resource Group | **az104-08-rg01** |
-    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | File share (Create new) | **none** |
+    | Region         | **<inject key="Region" enableCopy="false"/>** |
+    | Storage account name | **str<inject key="DeploymentID" enableCopy="false" />** |
+    | File share  | **none** |
 
 1. Run the following command to create a virtual machine. When prompted, provide a username and password for the VM. While you wait check out the [New-AzVM](https://learn.microsoft.com/powershell/module/az.compute/new-azvm?view=azps-11.1.0) command reference for all the parameters associated with creating a virtual machine.
 
