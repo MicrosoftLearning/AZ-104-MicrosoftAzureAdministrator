@@ -230,6 +230,8 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
     ![Screenshot of the failure to delete message.](../media/az104-lab02b-failuretodelete.png) 
 
+    >**Note:** You will need to remove the lock if you intend to delete the resource group. 
+    
 ## Cleanup your resources
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
