@@ -49,7 +49,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**. Notice your other choices.
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **Azure virtual machine**. Notice your other choices.
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -76,7 +76,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
-1. Click **Next: Disks >** , specify the following settings (leave others with their default values):
+1. Click **Next : Disks >** , specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -84,7 +84,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
 
-1. Click **Next: Networking >** take the defaults but do not provide a load balancer.
+1. Click **Next : Networking >** take the defaults but do not provide a load balancer.
 
     | Setting | Value |
     | --- | --- |
@@ -92,19 +92,19 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Load balancing options | **None** |
 
 
-1. Click **Next: Management >** and specify the following settings (leave others with their default values):
+1. Click **Next : Management >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Patch orchestration options | **Azure orchestrated** |  
 
-1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
+1. Click **Next : Monitoring >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Disable** |
 
-1. Click **Next: Advanced >**, take the defaults, then click **Review + Create**.
+1. Click **Next : Advanced >**, take the defaults, then click **Review + Create**.
 
 1. After the validation, click **Create**.
 
@@ -194,7 +194,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     ![Screenshot of the create vmss page. ](../media/az104-lab08-create-vmss.png)
 
-1. On the **Spot** tab, accept the defaults and select **Next: Disks >**.
+1. On the **Spot** tab, accept the defaults and select **Next : Disks >**.
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
@@ -283,7 +283,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 ### Scale out rule
 
-1. Select **Custom autoscale**. then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
+1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. And then select **Add a rule**.
 
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%.
 
