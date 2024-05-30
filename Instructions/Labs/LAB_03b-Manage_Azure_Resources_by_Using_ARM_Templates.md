@@ -144,7 +144,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Storage account (Create new) | **str<inject key="Region" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
-1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
+1. Click on Editor, it will ask you to switch to classic cloud shell. click on **Confirm**.
 
 1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
