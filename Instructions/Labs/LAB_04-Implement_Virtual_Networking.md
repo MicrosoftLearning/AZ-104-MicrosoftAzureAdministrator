@@ -233,18 +233,18 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
     ![image](../media/l4i12.png)
 
-1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+1. Select **+ Add**. You add a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
     | Name | **www** |
-    | Type | **A** |
+    | Type | **A - Address record** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
      >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
+1. Select **Add** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
 
    ![image](../media/l4i13.png)
 
