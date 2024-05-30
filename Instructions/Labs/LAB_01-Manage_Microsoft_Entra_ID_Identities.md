@@ -182,7 +182,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     ![](../Labs/Images/grp1.png)  
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+Add expression** and **Save**.
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+ Add expression** and **Save**.
 
     | Setting | Value |
     | --- | --- |
@@ -205,15 +205,13 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Click **Add dynamic query**.
 
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following settings:
+1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+ Add expression** and **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Property | **jobTitle** |
     | Operator | **Equals** |
     | Value | **System Administrator** |
-    
-1. On the **Configure Rules** tab of the **Dynamic membership rules** blade, create a new rule with the following setting by clicking on **+Add expression** and **Save**.
 
 1. Back on the **New Group** blade, click **Create**.
 
@@ -274,7 +272,7 @@ In this task, you will create a new Entra ID tenant.
    
 1. In the Azure portal search and select **Microsoft Entra ID**.
     
-1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings** button in the Azure portal toolbar and, click on **Switch**.
+1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings (1)** button in the Azure portal toolbar and, click on **Switch (2)**.
 
      ![](../Labs/media/lab1-image18.png)
 
@@ -315,7 +313,7 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
     ![](../Labs/media/lab1-image19.png)
 
-1. Navigate back to the **Users - All users** blade, click **+ New user** then select **Invite external user**.
+1. Open **Microsoft Entra ID**, from the left navigation pane, under **Manage** select **Users** blade, click **+ New user** then select **Invite external user**.
 
     ![](../Labs/Images/exuserinv.png)  
     
@@ -337,7 +335,7 @@ In this task, you will create Entra ID guest users and grant them access to reso
     | Department | **IT** |
     | Usage location | **United States** |
 
-1. Click **Review+Invite** and then **Invite**. 
+1. Click **Review + Invite** and then **Invite**. 
 
 1. Back on the **Users - All users** blade, click the entry representing the newly created guest user account.
 
@@ -345,11 +343,13 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="f05516fb-26d1-48f6-a20f-e2f9c0616ec2" />
 
 ### Review
 In this lab, you have completed:
@@ -373,5 +373,13 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/). Compare Microsoft Entra ID to Active Directory DS, learn about Microsoft Entra ID P1 and P2, and explore Microsoft Entra Domain Services for managing domain-joined devices and apps in the cloud.
 + [Create Azure users and groups in Microsoft Entra ID](https://learn.microsoft.com//training/modules/create-users-and-groups-in-azure-active-directory/). Create users in Microsoft Entra ID. Understand different types of groups. Create a group and add members. Manage business-to-business guest accounts.
 + [Allow users to reset their password with Microsoft Entra self-service password reset](https://learn.microsoft.com/training/modules/allow-users-reset-their-password/). Evaluate self-service password reset to allow users in your organization to reset their passwords or unlock their accounts. Set up, configure, and test self-service password reset.
+
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
++ What are the Azure PowerShell and CLI commands to create a security group called IT Admins? Provide the official command reference page.  
++ Provide a step-by-step strategy for managing users and groups in Microsoft Entra ID.
++ What are the steps in the Azure portal to bulk create users and groups?
++ Provide a comparison table of internal and external Microsoft Entra ID user accounts. 
 
 ### You have successfully completed the lab
