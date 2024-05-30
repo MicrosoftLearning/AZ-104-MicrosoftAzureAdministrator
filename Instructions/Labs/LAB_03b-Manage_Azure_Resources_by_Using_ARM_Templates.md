@@ -221,7 +221,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Close and reopen **Cloud Shell** in a **Bash** session.
 
-1. Locate and download the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
+1. Locate the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
 1. **Upload** the bicep file to the Cloud Shell. 
 
