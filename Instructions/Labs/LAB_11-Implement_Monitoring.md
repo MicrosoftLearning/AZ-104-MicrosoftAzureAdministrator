@@ -84,7 +84,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
    ![image](../media/l11i6.png)
 
-1. Select the box for the resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
+1. Select the check box for the **az104-11-rg1** resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
@@ -104,7 +104,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Next: Actions**, and then select **Create action group**.
+1. Continue working on your alert. Select **Next: Actions**, and select **Use action groups** check box and then select **Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -159,7 +159,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. In the portal, search for and select **Virtual machines**.
 
-1. Check the box for the **az104-vm0** virtual machine.
+1. Check the box for the **az104-11-vm0** virtual machine.
 
 1. Select **Delete** from the menu bar.
 
@@ -221,7 +221,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **az104-rg11** |
+    | Resource group | **az104-11-rg11** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
@@ -276,3 +276,16 @@ In this lab, you have completed:
 
 
 ### You have successfully completed the lab
+
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right). Take a few minutes to try these prompts.
+
++ What are the basic configuration steps to be alerted in Azure when a virtual machine is down?
++ How can I be notified when an Azure alert is triggered?
++ Construct an Azure Monitor query to provide virtual machine CPU performance information.
+
+## Learn more with self-paced training
+
++ [Improve incident response with alerting on Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/). Respond to incidents and activities in your infrastructure through alerting capabilities in Azure Monitor.
++ [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/). Monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.
