@@ -131,7 +131,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. On the **You have no storage mounted** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
 
-1. On mount storage account page, select the **I want to create a storage account**. click on Next.
+1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
 1. Provide the below details to create the storage account and click on **Next**.
 
