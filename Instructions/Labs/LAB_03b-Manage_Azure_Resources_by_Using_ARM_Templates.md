@@ -129,7 +129,11 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
+1. On the **You have no storage mounted** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
+
+1. On mount storage account page, select the **I want to create a storage account**. click on Next.
+
+1. Provide the below details to create the storage account and click on **Next**.
 
     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
 
@@ -137,6 +141,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     |  -- | -- |
     | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
+    | Storage account (Create new) | **str<inject key="Region" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
 1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
