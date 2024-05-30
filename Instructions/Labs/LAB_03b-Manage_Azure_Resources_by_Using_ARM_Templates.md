@@ -141,7 +141,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     |  -- | -- |
     | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | Storage account (Create new) | **str<inject key="Region" enableCopy="false" />** |
+    | Region | **<inject key="Region" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
 1. Click on Editor, it will ask you to switch to classic cloud shell. click on **Confirm**.
