@@ -221,6 +221,8 @@ In this task, we will use a different policy definition to remediate any non-com
 
    ![image](./media/l2-image43.png)
 
+   <validation step="7dd291d1-35d1-40bb-857b-8ea685202e58" />
+    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
