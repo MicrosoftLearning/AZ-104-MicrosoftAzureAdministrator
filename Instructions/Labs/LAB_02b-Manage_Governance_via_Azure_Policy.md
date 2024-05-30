@@ -45,7 +45,7 @@ In this lab, you will complete the following tasks:
 ### Task 1: Assign tags via the Azure portal
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource group**, and then select **Resource group** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource group AZ-104XX**, and then select **Resource group** under services.
 
    ![image](./media/l2-image45.png)
 
