@@ -99,6 +99,8 @@ In this task, you will create and configure management groups.
 
       ![image](./media/l2-image11.png)
 
+    > **Note**: you might find the Management group already created, if not please follow the above step to create one with provided details. 
+
 
 ## Task 2: Review and assign a built-in Azure role
 
@@ -174,7 +176,8 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **Review + Create**, and then select **Create**. Select **OK** when **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
 
-    >**Note:** At this point, you have created a custom role and assigned it to the management group.  
+    >**Note:** At this point, you have created a custom role and assigned it to the management group. you might find the custom role already created, if not please follow the above step to create one with provided details.
+ 
 
 ### Task 4: Assign RBAC roles
 
@@ -308,7 +311,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
 
-   >**Note**: If you are unable to delete the **Tenant Root management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **Tenant Root management group** and then delete the group.
+   >**Note**: If you are unable to delete the **management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **management group** and then delete the group make sure you also have the **Owner** permission on the **Tenant Root management group**.
 
 1. If you are unable to delete the management group, please reach out to the support team for assistance.
     
