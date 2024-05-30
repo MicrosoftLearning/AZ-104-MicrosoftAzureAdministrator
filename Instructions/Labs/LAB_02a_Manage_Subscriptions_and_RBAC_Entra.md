@@ -29,10 +29,11 @@ There are some interactive lab simulations that you might find useful for this t
 In this lab, you will complete the following tasks:
 
 + Task 1: Implement management groups.
-+ Task 2: Create a custom RBAC role
-+ Task 3: Assign RBAC roles
-+ Task 3: Create a custom RBAC role.
-+ Task 4: Monitor role assignments with the Activity Log.
++ Task 2: Review and assign a built-in Azure role
++ Task 3: Create a custom RBAC role
++ Task 4: Assign RBAC roles
++ Task 5: Create a custom RBAC role.
++ Task 6: Monitor role assignments with the Activity Log.
 
 
 ## Estimated timing: 60 minutes
@@ -97,8 +98,40 @@ In this task, you will create and configure management groups.
 1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
       ![image](./media/l2-image11.png)
-   
-## Task 2: Create a custom RBAC role
+
+
+## Task 2: Review and assign a built-in Azure role
+
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
+
+1. Select the **az104-mg1** management group.
+
+1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
+
+1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. You will often use *owner*, *contributor*, and *reader*. 
+
+1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
+
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
+
+    >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
+
+1. On the **Members** tab, **Select Members**.
+
+    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+
+1. Search for and select the `helpdesk` group. Click **Select**. 
+
+1. Click **Review + assign** twice to create the role assignment.
+
+1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
+
+    >**Note:** As a best practice always assign roles to groups not individuals. 
+
+    >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
+    
+
+## Task 3: Create a custom RBAC role
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
@@ -143,7 +176,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group.  
 
-### Task 3: Assign RBAC roles
+### Task 4: Assign RBAC roles
 
 In this task, you will create a Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
@@ -221,13 +254,15 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
+   <validation step="3fd36f71-74c5-4bba-8d44-9c8ed81fd0be" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 4: Monitor role assignments with the Activity Log
+## Task 5: Monitor role assignments with the Activity Log
 
 In this task, you view the activity log to determine if anyone has created a new role. 
 
@@ -237,7 +272,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
     ![image](./media/l2-image61.png)
 
-### Task 5: Clean up resources
+### Task 6: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
