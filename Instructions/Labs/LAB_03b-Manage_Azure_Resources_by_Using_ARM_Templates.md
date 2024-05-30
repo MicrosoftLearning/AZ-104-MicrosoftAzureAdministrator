@@ -246,6 +246,8 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
     ```sh
     az disk list --output table
     ```
+
+   <validation step="95c0111f-ab42-4cdd-a5ca-abd36982cc45" />
  
    > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
