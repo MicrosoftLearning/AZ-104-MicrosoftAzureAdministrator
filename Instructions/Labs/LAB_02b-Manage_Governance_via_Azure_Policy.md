@@ -73,7 +73,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![image](./media/l2-image30.png)
    
-1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
+1. On the **Require a tag and its value on resources group** built-in policy definition blade, click **Assign Policy**.
 
     ![image](./media/l2-image31.png)
 
@@ -100,7 +100,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
    
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
-1. Click **Next** and set **Parameters** to the following values:
+1. Click **Next** on **Advanced** leave all the settings default and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -145,12 +145,18 @@ In this task, we will use a different policy definition to remediate any non-com
 1. In the Azure portal, search for and select **Policy**. 
 
    ![image](./media/l2-image28.png)
-   
-1. In the **Authoring** section, click **Assignments**. 
 
 1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
    ![image](./media/l2-image66.png)
+
+1. In the **Authoring** section, click **Definitions**. Take a moment to browse through the list of built-in policy definitions that are available for you to use. List all built-in policies that involve the use of tags by selecting the **Tags** entry (and de-selecting all other entries) in the **Category** drop-down list and click on **Apply**.
+
+1. In search bar enter **Inherit** and click the entry representing the **Inherit a tag from the resource group if missing** built-in policy and review its definition.
+
+   
+1. On the **Inherit a tag from the resource group if missing** built-in policy definition blade, click **Assign Policy**.
+
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
