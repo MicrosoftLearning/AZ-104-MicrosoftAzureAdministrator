@@ -10,8 +10,7 @@ lab:
 
 This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
-
+This lab requires you to have permissions to manage users and groups. Your user account should be assigned atleast a User Adminstrator and a Group Administrator in the tenant where you will be performing this. 
 
 ## Estimated timing: 30 minutes
 
@@ -138,11 +137,11 @@ In this task, you create a group account. Group accounts can include user accoun
    
 ## Cleanup your resources
 
-If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
+Please note that if you’re dealing with a Unified Group, it can be restored within 30 days after deletion. However, security groups cannot be restored after deletion.
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
++ In the Azure portal, Search for and select **Microsoft Entra ID**, click on **Groups**, then **All Groups**. Select the group you want to delete then click on **Delete**.
++ Using Azure PowerShell, `Remove-AzureADGroup -ObjectId "group-object-id"`.
++ Using the CLI, `az ad group delete --group "group-name-or-object-id"`. 
   
 
 ## Extend your learning with Copilot
