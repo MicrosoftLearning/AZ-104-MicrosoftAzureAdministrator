@@ -122,7 +122,7 @@ In this task, you create a group account. Group accounts can include user accoun
 
 1. Select **No owners selected**.
 
-1. In the **Add owners** page, search for and **select** yourself as the owner. Notice you can have more than one owner. 
+1. In the **Add owners** page, search for and **select** yourself (shown in the top right corner) as the owner. Notice you can have more than one owner. 
 
 1. Select **No members selected**.
 
