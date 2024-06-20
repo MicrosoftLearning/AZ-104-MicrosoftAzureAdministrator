@@ -106,7 +106,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
 
-1. In the branch field, enter `master`.
+1. In the branch field, enter `main`.
 
 1. Select **Save**.
 
