@@ -117,8 +117,6 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
-1. Return to the Recovery Services vault blade, select the **Overview** blade.
-
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
 ## Task 3: Configure Azure virtual machine-level backup
