@@ -113,7 +113,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     
     >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
-1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
+1. Select the **Update** link under **Security Settings > Soft Delete and security settings** label.
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
