@@ -240,20 +240,13 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
+1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Management >**.
 
     | Setting | Value |
     | --- | --- |
     | Load balancer name | `vmss-lb` |
 
     >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
-
-1. On the **Scaling** tab, specify the following settings (leave others with their default values) and click **Next : Management >**:
-
-    | Setting | Value |
-    | --- | --- |
-    | Initial instance count | `2` |
-    | Scaling policy | **Manual** |
 
 1. On the **Management** tab, specify the following settings (leave others with their default values):
 
