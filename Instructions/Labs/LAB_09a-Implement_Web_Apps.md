@@ -159,7 +159,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. From the **Overview** | **Add HTTP requests**, select **Create**.
 
-1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
+1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
 
 1. Select **Review + create** and **Create**.
 
