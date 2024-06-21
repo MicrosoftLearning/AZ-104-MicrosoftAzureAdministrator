@@ -124,7 +124,7 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Navigate back to the **Deployment slots** blade, and then select **Swap**.
 
-1. Review the default settings and click **Swap**.
+1. Review the default settings and click **Start Swap**.
 
 1. On the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
 
