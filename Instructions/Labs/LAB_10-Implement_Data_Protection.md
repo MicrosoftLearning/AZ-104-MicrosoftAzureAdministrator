@@ -103,7 +103,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
 
 1. When the deployment is completed, click **Go to Resource**.
 
-1. On the Recovery Services vault blade, in the **Settings** section, click **Properties**.
+1. In the **Settings** section, click **Properties**.
 
 1. Select the **Update** link under **Backup Configuration** label.
 
