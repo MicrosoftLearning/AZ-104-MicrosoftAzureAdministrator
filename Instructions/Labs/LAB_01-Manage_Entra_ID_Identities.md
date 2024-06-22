@@ -49,7 +49,9 @@ In this task, you will create and configure user accounts. User accounts will st
 
     >**Did you know?** A tenant is a specific instance of Microsoft Entra ID containing accounts and groups. Depending on your situation, you can create more tenants and **Switch** between them. 
 
-1. Return to the **Entra ID** page and select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
+
+1. Select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
    
 ### Create a new user
 
