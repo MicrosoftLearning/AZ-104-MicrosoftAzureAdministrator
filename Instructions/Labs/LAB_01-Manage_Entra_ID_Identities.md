@@ -41,6 +41,8 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
+1. To proceed to the portal, select **Cancel** on the **Welcome to Azure** splash screen. 
+
     >**Note:** The Azure portal is used in all the labs. If you are new to the Azure, search for and select `Quickstart Center`. Take a few minutes to watch the **Getting started in the Azure portal** video. Even if you have used the portal before, you will find a few tips and tricks on navigating and customizing the interface.
     
 1. Search for and select `Microsoft Entra ID`. Microsoft Entra ID is Azure's cloud-based identity and access management solution. Take a few minutes to familiarize yourself with some of the features listed in the left pane. 
