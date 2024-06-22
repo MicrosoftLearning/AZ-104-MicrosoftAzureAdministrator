@@ -158,7 +158,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Upload/Download files** icon (top bar) and then select **Upload**.
 
-1. Upload bot the template and parameters files from the **Downloads** directory. 
+1. Upload both the template and parameters files from the **Downloads** directory. 
 
 1. Select the **Editor (curly brackets)** icon and navigate to the template JSON file on the left in the navigation pane.
 
