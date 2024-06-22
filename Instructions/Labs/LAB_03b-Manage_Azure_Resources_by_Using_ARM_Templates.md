@@ -127,7 +127,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Select a deployment and review the content of the **Input** and **Template** blades.
 
-## Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell
+## Task 3: Configure the Cloud Shell and deploy a template with PowerShell 
 
 In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cloud Shell is an interactive, authenticated, browser-accessible terminal for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work, either Bash or PowerShell. In this task, you use PowerShell to deploy a template. 
 
@@ -139,32 +139,28 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **Getting started** screen select **Mount storage account** and then **I want to create a storage account**.  
+1. On the **Getting started** screen select **Mount storage account**, select your **Storage account subscription**, and then select **Apply**.
 
-    >**Note:** For this lab, a storage account is required. Provide the required information. 
+1. Select **I want to create a storage account** and then **Next**. Complete the **Create storage account** information. 
     
     | Settings | Values |
     |  -- | -- |
-    | Subscription | *select your subscription* |
     | Resource Group | **az104-rg3** |
     | Region | *select your region* | 
     | Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
     | File share (Create new) | `fs-cloudshell` |
 
-1. When completed select **Next**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
+1. When completed select **Create**.
 
-1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+    >It will take a couple of minutes to provision the storage.
 
-   >**Note:** If at anytime you are prompted to **Switch to classic cloud shell**, then do so. 
+1. Select **Settings** (top bar) and then **Go to classic version**.
 
-1. Verify your files are available in the Cloud Shell storage. 
+1. Select the **Upload/Download files** icon (top bar) and then select **Upload**.
 
-    ```powershell
-    dir
-    ```
-    >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
-   
-1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
+1. Upload bot the template and parameters files from the **Downloads** directory. 
+
+1. Select the **Editor (curly brackets)** icon and navigate to the template JSON file on the left in the navigation pane.
 
 1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
 
