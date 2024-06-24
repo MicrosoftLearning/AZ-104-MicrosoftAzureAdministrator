@@ -169,38 +169,21 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
-1. On CoreServicesVnet | Peerings, select **+ Add**.
-
-1. Use the information in the following table to create the peering.
+1. On CoreServicesVnet | Peerings, select **+ Add**. If not specified, take the default. 
 
 | **Parameter**                                    | **Value**                             |
-| --------------------------------------------- | ------------------------------------- |
-| **This virtual network**                                       |                                       |
+| --------------------------------------------- | ------------------------------------- |                                
 | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| Allow CoreServicesVnet to access the peered virtual network            | selected (default)                       |
-| Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected                       |
-| Allow gateway in CoreServicesVnet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable CoreServicesVnt to use the peered virtual networks' remote gateway       | Not selected (default)                        |
-| **Remote virtual network**                                   |                                       |
-| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| Virtual network deployment model              | **Resource manager**                      |
-| I know my resource ID                         | Not selected                          |
-| Subscription                                  | *your subscription*    |
-| Virtual network                               | **ManufacturingVnet**                     |
+| Virtual network    | **ManufacturingVM-net (az104-rg5)**  |
 | Allow ManufacturingVnet to access CoreServicesVnet  | selected (default)                       |
 | Allow ManufacturingVnet to receive forwarded traffic from CoreServicesVnet | selected                        |
-| Allow gateway in CoreServicesVnet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable ManufacturingVnet to use CoreServicesVnet's remote gateway       | Not selected (default)                        |
+| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
+| Allow CoreServicesVnet to access the peered virtual network            | selected (default)                       |
+| Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected                       |
 
-1. Review your settings and select **Add**.
-
-![Screenshot of peering page.](../media/az104-lab05-peering.png)
-
- 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
 1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
-
 
 ## Task 5: Use Azure PowerShell to test the connection between virtual machines
 
