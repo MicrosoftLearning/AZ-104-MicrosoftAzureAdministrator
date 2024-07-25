@@ -126,7 +126,7 @@ In this task, you will swap the staging slot with the production slot.
 
    ![image](./media/l9-image14.png)
 
-1. On the **Swap** blade, review the default settings and click **Swap**.
+1. On the **Swap** blade, review the default settings and click **Start Swap**.
 
    >**Note**: Kindly Wait till Swap successfully complete.
 
