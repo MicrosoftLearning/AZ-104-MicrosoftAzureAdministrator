@@ -169,10 +169,10 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     ![image](./media/l9-image18.png)
 
-1. For the **Test URL**, paste your **Default domain** URL which recorded in notepad. Ensure this is properly formatted and begins with **https://** and  select **Review + create** and **Create**.
- 
-    ![image](./media/l9-image19.png)
-   
+1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://**.
+
+1. Select **Review + create** and **Create**.
+
     >**Note:** It may take a couple of minutes to create the test. 
 
 1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
