@@ -103,7 +103,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Manage compute and storage  for virtual machines
+## Task 2: Manage compute and storage scaling for virtual machines
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
@@ -277,7 +277,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
 
-1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
+1. Choose **Availability + Scaling** from the left side menu, then choose **Scaling**.
 
 >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
@@ -413,7 +413,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```sh
     az vm create --name myCLIVM --resource-group az104-08-rg01 --image Win2019Datacenter --admin-username localadmin --generate-ssh-keys
     ```
-
+   >**Note:**give Admin password as **Password.1!!** and Password will be not visible
+   
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
     ```sh
@@ -421,6 +422,20 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```
 
 1. Verify the **powerState** is **VM Running**.
+
+1. Use **az vm deallocate** to deallocate your virtual machine.
+
+    ```sh
+   az vm deallocate --resource-group az104-08-rg01 --name myCLIVM
+    ```
+
+1. Use **az vm show** to ensure the **powerState** is **VM deallocated**.
+
+    ```sh
+    az vm show --name  myCLIVM --resource-group az104-08-rg01 --show-details
+    ```
+
+  >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
 ### Review
 In this lab, you have completed the following:
