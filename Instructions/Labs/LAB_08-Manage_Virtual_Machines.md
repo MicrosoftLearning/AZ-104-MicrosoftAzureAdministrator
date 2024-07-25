@@ -103,7 +103,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Task 2: Manage compute and storage scaling for virtual machines
+## Task 2: Manage compute and storage  for virtual machines
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
@@ -111,7 +111,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
    ![](../Labs/Images/l8i4.png)
 
-    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also known as vertical scaling, up or down.
+    >**Note**: Choose another size if **Standard DS1_v2** is not available. Resizing is also known as vertical , up or down.
 
 1. In the **Settings** area, select **Disks**.
 
@@ -241,20 +241,13 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
+1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done click **Next** and Next again to go to the **Management** tab.
 
     | Setting | Value |
     | --- | --- |
     | Load balancer name | `vmss-lb` |
 
     >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
-
-1. On the **Scaling** tab, specify the following settings (leave others with their default values) and click **Next : Management >**:
-
-    | Setting | Value |
-    | --- | --- |
-    | Initial instance count | `2` |
-    | Scaling policy | **Manual** |
 
 1. On the **Management** tab, specify the following settings (leave others with their default values):
 
