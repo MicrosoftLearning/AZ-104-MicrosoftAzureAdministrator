@@ -106,7 +106,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
     
 ## Task 3: Create a custom RBAC role
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that may not be necessary. Do you have a plan for managing overlapping permissions?
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
