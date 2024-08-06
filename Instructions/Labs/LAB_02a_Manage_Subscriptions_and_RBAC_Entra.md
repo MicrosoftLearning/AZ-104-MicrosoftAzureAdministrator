@@ -164,7 +164,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     ![image](./media/l2-image16.png)
    
-    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. You could also selete and add other capabilities to the new role. 
+    >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
 1. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
 
