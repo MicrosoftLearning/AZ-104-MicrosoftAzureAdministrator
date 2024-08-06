@@ -1,0 +1,12 @@
+[
+    {
+        "Name": "Backup virtual machines",
+        "Language": "English",
+        "Files": [
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LAB_10-Implement_Data_Protection-partner-pulse.md",
+                "Order": 1
+            }
+        ]
+    }
+]
