@@ -117,7 +117,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
     | Setting | Value |
     | --- | --- |
     | Custom role name | `Custom Support Request` |
-    | Description | ``A custom contributor role for support requests.` |
+    | Description | `A custom contributor role for support requests.` |
 
 1. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
 
