@@ -76,7 +76,7 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
-, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
 1. Select the **az104-mg1** management group.
 
@@ -106,7 +106,7 @@ In this task, you will create and configure management groups. Management groups
     
 ## Task 3: Create a custom RBAC role
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not necessary. Do you have a plan for managing overlapping permissions?
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not necessary. Do you have a plan for managing overlapping permissions?
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
