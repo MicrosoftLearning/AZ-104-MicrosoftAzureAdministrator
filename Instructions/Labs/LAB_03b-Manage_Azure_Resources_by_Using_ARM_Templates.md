@@ -133,7 +133,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
-1. Provide the below details to create the storage account and click on **Next**.
+1. Provide the below details to create the storage account and click on **Create**.
 
     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
 
@@ -144,11 +144,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Region | **<inject key="Region" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
-1. Click on Editor, it will ask you to switch to classic cloud shell. click on **Confirm**.
 
 1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
-   ![image](../media/az-104i3.png)
+   ![image](../media/az10498.png)
 
 1. Verify your files are available in the Cloud Shell storage. 
 
