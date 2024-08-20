@@ -25,20 +25,28 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![Image](./Images/cloudshell.png)
 
-1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
-1. If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and click **Show Advanced Settings**. 
-    
-    ![image](../media/advancesetting.png)
-    
-1. Under **Advanced Settings**, you need to select an existing resource group from the **Resource group (1)** dropdown and enter under the **Storage Account (2)** section as **cloudshell<inject key="DeploymentID" enableCopy="false" />**, and under the **File share (3)** section type **none** as shown in the below image.
+1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-1. Click **Create storage (4)**, and wait until the Azure Cloud Shell pane is displayed. 
+    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-    ![image](../media/crtstr.png)
+1. On the **You have no storage mounted** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
 
-1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, in the drop-down menu, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
+1. On mount storage account page, select **I want to create a storage account**. click on Next.
 
-     ![Image](./Images/upload.png)
+1. Provide the below details to create the storage account and click on **Create**.
+
+    >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
+
+    | Settings | Values |
+    |  -- | -- |
+    | Resource Group | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />** |
+    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
+    | Region | **<inject key="Region" enableCopy="false" />** |
+    | File share (Create new) | **none** |
+
+1. In the toolbar of the Cloud Shell pane, click the **Upload/Download files** icon, under the drop-down menu for Manage Files, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
+
+    ![Image](./Images/az10498.png)
 
 1. From the Cloud Shell pane, run the following to use the resource group that will be hosting the lab environment. The first two virtual networks and a pair of virtual machines will be deployed in `[Azure_region_1]`. The third virtual network and the third virtual machine will be deployed in the same resource group but another `[Azure_region_2]`. (Replace the `[Azure_region_1]` and `[Azure_region_2]` placeholder, including the square brackets, with the names of two different Azure regions where you intend to deploy these Azure virtual machines). An example is $location1 = 'eastus'. You can use Get-AzLocation to list all locations.
 
