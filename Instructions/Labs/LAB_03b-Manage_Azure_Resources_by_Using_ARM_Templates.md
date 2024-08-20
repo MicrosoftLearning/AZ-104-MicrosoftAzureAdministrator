@@ -145,7 +145,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | File share (Create new) | **none** |
 
 
-1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+1. Use the **Upload/Download files** option under Manage Files dropdown to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
    ![image](../media/az10498.png)
 
