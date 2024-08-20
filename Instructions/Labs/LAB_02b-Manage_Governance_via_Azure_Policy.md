@@ -45,7 +45,7 @@ In this lab, you will complete the following tasks:
 ### Task 1: Assign tags via the Azure portal
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource group AZ-104XX**, and then select **Resource group** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104XX** from the list.
 
    ![image](./media/l2-image45.png)
 
@@ -73,7 +73,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![image](./media/l2-image30.png)
    
-1. On the **Require a tag and its value on resources group** built-in policy definition blade, click **Assign Policy**.
+1. On the **Require a tag and its value on resources group** built-in policy definition blade, click **Assign policy**.
 
     ![image](./media/l2-image31.png)
 
@@ -88,7 +88,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
    
    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
-1. Configure the **Basics** properties of the assignment by specifying the following settings anc click on **Next**  (leave others with their defaults):
+1. Configure the **Basics** properties of the assignment by specifying the following settings and click on **Next**  (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
@@ -100,7 +100,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
    
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
-1. Click **Next** on **Advanced** leave all the settings default and set **Parameters** to the following values:
+1. Set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -113,7 +113,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: This setting can be used when the policy or initiative includes the **deployIfNotExists** or **Modify** effect.
 
-1. Click **Review + Create** and then click **Create**.
+1. Click **Review + create** and then click **Create**.
 
     >**Note**: Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
@@ -121,7 +121,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
-1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults), click **Review + create** and then click **Create**:
 
@@ -129,11 +129,11 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Storage account name | storage<inject key="DeploymentID" enableCopy="false"/> |
 
-1. Once you create the deployment, you should see the **Validation failed. Required information is missing or not valid ** message.
+1. Once you create the deployment, you should see the **Validation failed. Required information is missing or not valid** message.
 
     ![image](./media/l2-image35.png)
 
-1. Verify whether the error message states that the resource deployment was disallowed by the policy by clicking **Previous** tag tab and select **Policy details** link to review the details.
+1. Verify whether the error message states that the resource deployment was disallowed by the policy by clicking **Previous** tags tab and select **Policy details** link to review the details.
 
    ![image](./media/l2-image36.png)
 
@@ -154,9 +154,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. In search bar enter **Inherit** and click the entry representing the **Inherit a tag from the resource group if missing** built-in policy and review its definition.
 
-   
 1. On the **Inherit a tag from the resource group if missing** built-in policy definition blade, click **Assign Policy**.
-
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
