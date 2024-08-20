@@ -44,7 +44,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     ![image](../media/l11i2.1.png)
     
-1. Select **Review + Create**, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
@@ -80,7 +80,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
    ![image](../media/l11i5.png)
 
-1. Select **Create +** and select **Alert rule**.
+1. Select **+ Create** and select **Alert rule**.
 
    ![image](../media/l11i6.png)
 
@@ -104,7 +104,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Next: Actions**, and select **Use action groups** check box and then select **Create action group**.
+1. Continue working on your alert. Select **Next: Actions >**, and select **Use action groups** check box and then select **+ Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -122,20 +122,20 @@ In this task, if the alert is triggered send an email notification to the operat
 
     ![image](../media/l11i9.png)
 
-1. Select **Next: Notifications** and enter the following values for each setting.
+1. Select **Next: Notifications >** and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK** and select **Review + Create** and subsequently click on **Create**. 
+1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
 
    ![image](../media/l11i10.png)
 
    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
-1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
@@ -165,7 +165,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![image](../media/l11i11.png)
 
-1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. 
+1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. In the **Delete confirmation** pop-up window, click **Delete**.
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -201,9 +201,9 @@ In this task, you create an alert rule to suppress notifications during a mainte
 
    ![image](../media/l11i13.png)
    
-1. Select **Next: Rule settings**, then select **Suppress notifications**.
+1. Select **Next: Rule settings >**, then select **Suppress notifications**.
    
-1. Select **Next: Scheduling**.
+1. Select **Next: Scheduling >**.
    
 1. By default, the rule works all the time, unless you disable it or configure a schedule. You are going to define a rule to suppress notifications during overnight maintenance.
 Enter these settings for the scheduling of the alert processing rule:
@@ -217,11 +217,11 @@ Enter these settings for the scheduling of the alert processing rule:
 
     ![image](../media/l11i15.png)
 
-1. Select **Next: Details** and enter these settings:
+1. Select **Next: Details >** and enter these settings:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **az104-11-rg11** |
+    | Resource group | **az104-11-rg1** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
