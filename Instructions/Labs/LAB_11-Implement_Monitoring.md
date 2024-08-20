@@ -144,11 +144,14 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
+   <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
 
 
 ## Task 4: Trigger an alert and confirm it is working
@@ -183,11 +186,13 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="6a69dc7c-0e66-40e8-a20d-4e24335b885e" />
 
 ## Task 5: Configure an alert processing rule
 
