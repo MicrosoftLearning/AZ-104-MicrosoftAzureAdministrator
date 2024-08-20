@@ -14,7 +14,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
 ![Explore Lab Resources](../media/env.png)
  
@@ -68,11 +68,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click Maybe Later to skip the tour.
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
      ![](../Labs/Images/maybelater.png)   
 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
+1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
 
