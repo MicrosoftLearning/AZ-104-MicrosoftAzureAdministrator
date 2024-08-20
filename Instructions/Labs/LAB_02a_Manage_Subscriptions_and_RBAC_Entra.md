@@ -82,6 +82,8 @@ In this task, you will create and configure management groups.
     | Management group display name | **az104-02-mg1** |
 
     ![image](./media/l2-image7.png)
+
+    > **Note**: You might find the Management group named **az104-02-mg1** has already been created, if not please follow the below step to create one with provided details. 
    
 1. In the list of management groups, click the entry representing the newly created management group.
 
@@ -99,7 +101,7 @@ In this task, you will create and configure management groups.
 
       ![image](./media/l2-image11.png)
 
-    > **Note**: you might find the Management group already created, if not please follow the above step to create one with provided details. 
+    > **Note**: You might find the Management group already created, if not please follow the above step to create one with provided details. 
 
 
 ## Task 2: Review and assign a built-in Azure role
@@ -118,7 +120,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
 
-1. On the **Members** tab, **Select Members**.
+1. On the **Members** tab, select **+ Select members**.
 
     >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
 
@@ -135,7 +137,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 ## Task 3: Create a custom RBAC role
 
-In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. In this task we will create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
+In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab and in the **Create a custom role** box, select **Add**.
 
@@ -174,7 +176,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
    ![image](./media/l2-image18.png)
 
-1. Select **Review + Create**, and then select **Create**. Select **OK** when **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
+1. Select **Review + create**, and then select **Create**. Select **OK** when **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
 
     >**Note:** At this point, you have created a custom role and assigned it to the management group. you might find the custom role already created, if not please follow the above step to create one with provided details.
  
@@ -187,7 +189,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    ![image](./media/l2-image19.png)
   
-1. Create a new user with the following settings (leave others with their defaults) and click on **Review + Create**
+1. Create a new user with the following settings (leave others with their defaults) and click on **Review + create**
 
     | Setting | Value |
     | --- | --- |
@@ -207,17 +209,17 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    ![image](./media/l2-image21.png)
 
-1. Click **Access Control (IAM)**, click **+ Add** and then **Add role assignment**.
+1. Click **Access control (IAM)**, click **+ Add** and then **Add role assignment**.
 
     ![image](./media/l2-image22.png)
 
-   >**Note**: if your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
+   >**Note**: If your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
 1. Search and select **Support Request Contributor (Custom)**. Click **Next**.
 
     ![image](./media/l2-image58.png)
   
-1. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1.onmicrosoft.com**. Click **Next** and then **Review and assign**.
+1. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1**. Click **Select** and then **Review and assign** twice.
 
      ![image](./media/l2-image59.png)
     
@@ -243,7 +245,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    
    ![image](./media/l2-image50.png)
 
-1. Click **+ Create a support request**.
+1. Click **Create a support request**.
 
    ![image](./media/l2-image51.png)
    
@@ -260,10 +262,11 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    <validation step="3fd36f71-74c5-4bba-8d44-9c8ed81fd0be" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. Alternatively, you can navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="3fd36f71-74c5-4bba-8d44-9c8ed81fd0be" />
 
 ## Task 5: Monitor role assignments with the Activity Log
 
@@ -271,7 +274,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
 
-1. Select **Quick Insight** > **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments. . 
+1. Select **Activity Log > Quick Insight** > **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments. . 
 
     ![image](./media/l2-image61.png)
 
@@ -283,7 +286,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
-1. On the **Management groups** blade, select **Access control (IAM)** then under **Roles** tab search for **Support Request Contributor (Custom)** under details select **View** link and select **Assignment** tab > **Remove** and select **yes**.
+1. On the **Management groups** blade choose **az104-02-mg1**, select **Access control (IAM)** then under **Roles** tab search for **Support Request Contributor (Custom)** under details select **View** link and select **Assignment** tab > **Remove** and select **yes**.
 
    ![image](./media/l2-image60.png)
    
