@@ -45,7 +45,7 @@ In this lab, you will complete the following tasks:
 ### Task 1: Assign tags via the Azure portal
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104XX** from the list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104T02** from the list.
 
    ![image](./media/l2-image45.png)
 
@@ -75,16 +75,16 @@ In this task, you will assign the built-in *Require a tag and its value on resou
    
 1. On the **Require a tag and its value on resources group** built-in policy definition blade, click **Assign policy**.
 
-    ![image](./media/l2-image31.png)
+    ![image](./media/lab02-new-2.png)
 
-1. Specify the **Scope** by clicking the ellipsis button and selecting the following values:
+1. Specify the **Scope** by clicking the ellipsis button and selecting the following values and choose **Select** :
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | AZ-104T02 |
 
-   ![image](./media/l2-image32.png)
+   ![image](./media/lab02-new-3.png)
    
    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
@@ -107,7 +107,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Tag Name | **Role** |
     | Tag Value | **Infra** |
 
-   ![image](./media/l2-image34.png)
+   ![image](./media/lab02-new-7.png)
    
 1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
 
@@ -118,8 +118,6 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     >**Note**: Now you will verify that the new policy assignment is in effect by attempting to create another Azure Storage account in the resource group without explicitly adding the required tag. 
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
-
-1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the previous task.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**.
 
@@ -135,7 +133,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
 1. Verify whether the error message states that the resource deployment was disallowed by the policy by clicking **Previous** tags tab and select **Policy details** link to review the details.
 
-   ![image](./media/l2-image36.png)
+   ![image](./media/lab02-new-5.png)
 
     >**Note**: You can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
@@ -146,7 +144,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
    ![image](./media/l2-image28.png)
 
-1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+1. In the list of assignments, right click the ellipsis icon in the row representing the **Require Role tag with Infra value** policy assignment and use the **Delete assignment** menu item to delete the assignment and then select **Yes**.
 
    ![image](./media/l2-image66.png)
 
@@ -156,14 +154,14 @@ In this task, we will use a different policy definition to remediate any non-com
 
 1. On the **Inherit a tag from the resource group if missing** built-in policy definition blade, click **Assign Policy**.
 
-1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
+1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values and choose **Select**:
 
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | AZ-104T02 |
 
-1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing** then click on **Add**.
+1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing** then click on **Add** if not selected in the definition.
 
     ![image](./media/l2-image37.png)
 
@@ -177,7 +175,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Description | **Inherit the Role tag and its Infra value from the Cloud Shell resource group if missing**|
     | Policy enforcement | Enabled |
 
-    ![image](./media/l2-image39.png)
+    ![image](./media/lab02-new-8.png)
 
 1. Click **Next** and set **Parameters** to the following values:
 
@@ -185,7 +183,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | --- | --- |
     | Tag Name | **Role** |
 
-    ![image](./media/l2-image40.png)
+    ![image](./media/lab02-new-9.png)
    
 1. Click **Next** and, on the **Remediation** tab, configure the following settings (leave others with their defaults) and click **Review + Create**.
 
@@ -196,7 +194,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
     >**Note**: This policy definition includes the **Modify** effect.
 
-    ![image](./media/l2-image41.png)
+    ![image](./media/lab02-new-10.png)
   
 1. Click  **Create**.
 
@@ -204,9 +202,7 @@ In this task, we will use a different policy definition to remediate any non-com
     
     >**Note**: It might take between 5 and 15 minutes for the policy to take effect.
 
-1. Navigate back to the blade of the resource group hosting the storage account used for the Cloud Shell home drive, which you identified in the first task.
-
-1. On the resource group blade, click **+ Create** and then search for Storage Account, and click **+Create**. 
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Storage accounts** under services and then click **+ Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to, and specify the following settings (leave others with their defaults) and click **Review + create**:
 
@@ -217,7 +213,7 @@ In this task, we will use a different policy definition to remediate any non-com
     | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** |
     | Redundancy |  **Locally-redundant storage (LRS)** |
 
-    ![image](./media/l2-image42.png)
+    ![image](./media/lab02-new-11.png)
    
 1. Verify that this time the validation passed and click **Create**.
 
@@ -245,13 +241,13 @@ In this task, you configure and test a resource lock. Locks prevent either delet
     | Setting | Value |
     | --- | --- |
     | Lock name | `rg-lock` |
-    | Lock type | **delete** (notice the selection for read-only) |
+    | Lock type | **Delete** (notice the selection for read-only) |
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
    ![image](./media/l2-image62.png)
 
-1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02`. Notice you can copy and paste the resource group name and click on **Delete**. 
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
 
    ![image](./media/l2-image63.png)
    
