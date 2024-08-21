@@ -64,7 +64,7 @@ In this task, you will create and configure management groups.
     
     1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
   
-        ![image](./media/l2-image4.png) 
+        ![image](./media/lab02-new-1.png) 
     
     1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
 
@@ -178,7 +178,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Select **Review + create**, and then select **Create**. Select **OK** when **You have successfully created the custom role "Custom Support Request". It may take the system a few minutes to display your role everywhere** popped up. 
 
-    >**Note:** At this point, you have created a custom role and assigned it to the management group. you might find the custom role already created, if not please follow the above step to create one with provided details.
+    >**Note:** At this point, you have created a custom role and assigned it to the management group. You might find the custom role already created, if not please follow the above step to create one with provided details.
  
 
 ### Task 4: Assign RBAC roles
