@@ -28,7 +28,7 @@ In this task, you will create an Azure web app.
 
    ![image](./media/l9-image1.png)
 
-1. Click **+ Create** and choose **Web App**
+1. Click **+ Create** and choose **+ Web App**
 
    ![image](./media/l9-image2.png)
    
@@ -169,7 +169,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     ![image](./media/l9-image18.png)
 
-1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://**.
+1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add**.
 
 1. Select **Review + create** and **Create**.
 
