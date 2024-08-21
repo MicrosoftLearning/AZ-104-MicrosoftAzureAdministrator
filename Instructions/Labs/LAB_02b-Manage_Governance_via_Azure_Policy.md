@@ -96,7 +96,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group**|
     | Policy enforcement | Enabled |
 
-    ![image](./media/l2-image33.png)
+    ![image](./media/lab02-new-4.png)
    
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
