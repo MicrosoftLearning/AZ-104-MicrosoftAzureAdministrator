@@ -256,9 +256,9 @@ on the **Describe your issue** tab of the **Help + support** blade, type **Servi
 
     ![image](./media/lab02-new-13.png)
     
-1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, type **Service and subscription limits** in the Summary field and select the **Service and subscription limits (quotas)** issue type. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
+1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, **Service and subscription limits (quotas)** as issue type is selected. Note that the subscription you are using in this lab is listed in the **Subscription** drop-down list.
     
-    ![image](./media/l2-image52.png)
+    ![image](./media/lab02-new-14.png)
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
