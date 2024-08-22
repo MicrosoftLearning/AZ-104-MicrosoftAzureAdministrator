@@ -21,16 +21,13 @@ Fundamental knowledge in managing identity and access within a cloud environment
 
 ## Architecture
 
-In this hands-on lab, the architecture flow includes several essential components. You’ll begin by User Management in Entra ID.
+In this hands-on lab, the architecture flow includes several essential components.
 
 1. Creating and Configuring Entra ID Users: Understanding how to create and manage user accounts within Microsoft Entra ID, including setting properties like job title, department, and usage location. The user will also learn how to assign roles and permissions to control access to Azure resources.
-Group Management in Entra ID:
 
 1. Creating Groups with Assigned and Dynamic Membership: Learning how to create security groups within Entra ID, including the difference between assigned membership (manually adding members) and dynamic membership (automatically adding members based on specific criteria). This includes setting up dynamic membership rules that automate the group population based on user attributes like job title.
-Creating and Managing an Entra ID Tenant:
 
 1. Creating a Microsoft Entra ID Tenant: Gaining experience in setting up a new Entra ID tenant, which is essentially a dedicated instance of Azure Active Directory for managing users, groups, and resources. This task also teaches about the initial setup and configuration of a new tenant.
-Managing Guest Users:
 
 1. Inviting and Managing Entra ID Guest Users: Learning how to securely collaborate with external users by inviting them as guest users to your Entra ID tenant. This includes granting them access to specific resources by adding them to relevant groups and understanding how to manage their permissions.
 
