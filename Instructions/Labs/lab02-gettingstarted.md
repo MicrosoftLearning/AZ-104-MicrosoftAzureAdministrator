@@ -70,7 +70,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
-     ![](../Labs/Images/maybelater.png)   
+     ![](./media/gettingstarted-new-2.png)
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
