@@ -17,7 +17,7 @@ By the end of this lab, you will be able to manage and configure Microsoft Entra
 
 ## Pre-requisites
 
-Fundamental knowledge in managing identity and access within a cloud environment using Microsoft Entra ID, a key element of Azure's security and identity management capabilities.
+Fundamental knowledge in managing identity and access within cloud environment using Microsoft Entra ID, a key element of Azure's security and identity management capabilities.
 
 ## Architecture
 
