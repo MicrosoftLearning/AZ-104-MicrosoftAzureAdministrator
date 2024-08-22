@@ -4,11 +4,11 @@
 
 ## Overview
 
-Your organization is building a new lab environment for pre-production testing of apps and services. A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and groups. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles.
+In this hands-on lab, you'll gain practical experience in managing identity and access within a cloud environment using Microsoft Entra ID, a key component of Azure's security and identity management features. You will learn how to create and configure Entra ID users, set up groups with both assigned and dynamic membership, and manage a Microsoft Entra ID tenant. Additionally, you’ll gain expertise in inviting and managing guest users, enabling secure collaboration with external parties. By the end of this lab, you'll be proficient in the essential tasks of provisioning and managing users, groups, and guest access in Microsoft Entra ID, equipping you with the skills to efficiently manage identity and access in your organization’s Azure environment.
 
 ## Objective
 
-By the end of this lab, you will improve your coding workflow by leveraging AI-powered tools. You will:
+By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, groups with assigned and dynamic membership, tenants, and guest users.
 
 - **Create and configure Entra ID users**: The objective of this task is to guide you through the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
 - **Create Entra ID groups with assigned and dynamic membership** : The objective of this task is to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
@@ -17,27 +17,40 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 ## Pre-requisites
 
-Fundamental knowledge of **Visual Studio Code** and popular **programming languages** such as Python, Javascript, C# etc.
+Fundamental knowledge in managing identity and access within a cloud environment using Microsoft Entra ID, a key element of Azure's security and identity management capabilities.
 
 ## Architecture
 
-GitHub Copilot is an AI-powered code completion tool that assists developers by suggesting code snippets and completing code based on the context provided. GitHub Copilot Chat complements this by offering an interactive chat interface where developers can ask questions and receive code suggestions and debugging assistance. Integrated with Visual Studio Code Codespaces, GitHub Copilot benefits from cloud-hosted development environments, ensuring consistency and reliability from anywhere. To enhance web development, Accessibility Insights for Web helps identify and resolve accessibility issues, ensuring inclusive web applications. GitHub Copilot supports various programming languages like Python, JavaScript, and C#, making it a versatile tool for a wide range of coding tasks.
+In this hands-on lab, the architecture flow includes several essential components. You’ll begin by User Management in Entra ID.
+
+1. Creating and Configuring Entra ID Users: Understanding how to create and manage user accounts within Microsoft Entra ID, including setting properties like job title, department, and usage location. The user will also learn how to assign roles and permissions to control access to Azure resources.
+Group Management in Entra ID:
+
+1. Creating Groups with Assigned and Dynamic Membership: Learning how to create security groups within Entra ID, including the difference between assigned membership (manually adding members) and dynamic membership (automatically adding members based on specific criteria). This includes setting up dynamic membership rules that automate the group population based on user attributes like job title.
+Creating and Managing an Entra ID Tenant:
+
+1. Creating a Microsoft Entra ID Tenant: Gaining experience in setting up a new Entra ID tenant, which is essentially a dedicated instance of Azure Active Directory for managing users, groups, and resources. This task also teaches about the initial setup and configuration of a new tenant.
+Managing Guest Users:
+
+1. Inviting and Managing Entra ID Guest Users: Learning how to securely collaborate with external users by inviting them as guest users to your Entra ID tenant. This includes granting them access to specific resources by adding them to relevant groups and understanding how to manage their permissions.
 
 ## Architecture Diagram
 
-   ![](../media/arch02.PNG)
+   ![image](../media/lab1.png)
 
 ## Explanation of Components
 
-1. **GitHub Copilot**: An AI-powered code completion tool that helps developers by suggesting code snippets and completing code based on the context provided. 
+1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
 
-1. **GitHub Copilot Chat**: An interactive chat interface that allows developers to ask questions and receive code suggestions and debugging assistance from GitHub Copilot. 
+2. **Entra ID groups**: Entra ID groups, part of Microsoft Entra ID, are used to manage and organize users in an organization by grouping them together. These groups help simplify the management of user permissions and access to resources. There are two main types of Entra ID groups:
+ - Assigned Membership Groups: Users are manually added or removed from these groups by an administrator. This type of group is useful for static sets of users who need specific access rights.
+ - Dynamic Membership Groups: Membership in these groups is determined automatically based on rules or attributes, such as job title or department. For example, a dynamic group can be configured to automatically include all users with the job title "Cloud Administrator."
 
-1. **Codespaces**: Visual Studio Code Codespaces provides cloud-hosted development environments that are accessible from anywhere, ensuring consistency and reliability.
+3. **Microsoft Entra ID tenant**: A Microsoft Entra ID tenant is a dedicated, trusted instance of Microsoft Entra ID that an organization receives when they sign up for a Microsoft cloud service such as Azure, Microsoft 365, or Dynamics 365. The tenant represents the organization in the Microsoft cloud environment and serves as the top-level container for all users, groups, and resources within that organization.
 
-1. **Accessibility Insights for Web**: A browser extension that helps developers find and fix accessibility issues in web applications. 
+4. **Accessibility Insights for Web**: A browser extension that helps developers find and fix accessibility issues in web applications. 
 
-1. **Programming languages**: They are tools used to write instructions for computers to execute such as Python, Javascript, C# etc.
+5. **Programming languages**: They are tools used to write instructions for computers to execute such as Python, Javascript, C# etc.
 
 # Getting Started with the Lab
  
