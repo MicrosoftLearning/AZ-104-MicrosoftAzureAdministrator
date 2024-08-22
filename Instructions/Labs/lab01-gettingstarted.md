@@ -45,10 +45,6 @@ In this hands-on lab, the architecture flow includes several essential component
 
 3. **Microsoft Entra ID tenant**: A Microsoft Entra ID tenant is a dedicated, trusted instance of Microsoft Entra ID that an organization receives when they sign up for a Microsoft cloud service such as Azure, Microsoft 365, or Dynamics 365. The tenant represents the organization in the Microsoft cloud environment and serves as the top-level container for all users, groups, and resources within that organization.
 
-4. **Accessibility Insights for Web**: A browser extension that helps developers find and fix accessibility issues in web applications. 
-
-5. **Programming languages**: They are tools used to write instructions for computers to execute such as Python, Javascript, C# etc.
-
 # Getting Started with the Lab
  
 Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
