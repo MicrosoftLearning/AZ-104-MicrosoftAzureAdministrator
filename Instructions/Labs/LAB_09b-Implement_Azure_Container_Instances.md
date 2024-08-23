@@ -95,7 +95,13 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Container Instances (ACI) is a service that enables you to deploy containers on the Microsoft Azure public cloud.
 + ACI doesn't require you to provision or manage any underlying infrastructure.
 + ACI supports both Linux containers and Windows containers.
-+ Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived. 
++ Workloads on ACI are usually started and stopped by some kind of process or trigger and are usually short-lived.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure Container Instance.
++ What are the ways I can run a serverless container on Azure?
 
 ## Learn more with self-paced training
 
