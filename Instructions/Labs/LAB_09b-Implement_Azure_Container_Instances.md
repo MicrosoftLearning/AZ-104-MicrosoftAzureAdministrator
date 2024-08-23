@@ -88,6 +88,11 @@ In this task, you will review the deployment of the container instance.
 
    <validation step="bc3f7679-1e22-449c-b128-1561d970a81d" />
 
+### Review
+In this lab, you have completed:
+- Deployed a Docker image by using the Azure Container Instance
+- Reviewed the functionality of the Azure Container Instance
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -106,10 +111,5 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 ## Learn more with self-paced training
 
 + [Run container images in Azure Container Instances](https://learn.microsoft.com/training/modules/create-run-container-images-azure-container-instances/). Learn how Azure Container Instances can help you quickly deploy containers, how to set environment variables, and specify container restart policies.
-
-### Review
-In this lab, you have completed:
-- Deployed a Docker image by using the Azure Container Instance
-- Reviewed the functionality of the Azure Container Instance
 
 ### You have successfully completed the lab
