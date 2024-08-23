@@ -73,7 +73,22 @@ By default, the Azure container app that you create will accept traffic on port 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="a44b06f7-b794-410a-8f4a-149c92269c02" />
-   
+
+### Review
+In this lab, you have completed:
+- Created and configured an Azure Container App and environment.
+- Tested and verified deployment of the Azure Container App.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure Container App.
++ Compare and contrast Azure Container Apps to Azure Kubernetes Service.
+
+## Learn more with self-paced training
+
++ [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -82,7 +97,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Container Apps provides server configuration, container orchestration, and deployment details. 
 + Workloads on ACA are usually long-running processes like a Web App.
 
-## Learn more with self-paced training
+### You have successfully completed the lab
 
-+ [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
+
      
