@@ -190,21 +190,6 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
    <validation step="fce39619-3758-4efe-b6d4-7060319a2f49" />
 
-## Key takeaways
-
-Congratulations on completing the lab. Here are the main takeaways for this lab. 
-
-+ Azure App Services lets you quickly build, deploy, and scale web apps.
-+ App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
-+ Deployment slots allow you to create separate environments for deploying and testing your web app.
-+ You can manually or automatically scale a web app to handle additional demand.
-+ A wide variety of diagnostics and testing tools are available. 
-
-## Learn more with self-paced training
-
-+ [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
-+ [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
-
 ### Review
 In this lab, you have completed:
 + Created an Azure web app
@@ -213,5 +198,26 @@ In this lab, you have completed:
 + Deployed code to the staging deployment slot
 + Swapped the staging slots
 + Configured and tested autoscaling of the Azure web app
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure web app.
++ What are ways I can scale an Azure Web App?
+
+## Learn more with self-paced training
+
++ [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
++ [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure App Services lets you quickly build, deploy, and scale web apps.
++ App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
++ Deployment slots allow you to create separate environments for deploying and testing your web app.
++ You can manually or automatically scale a web app to handle additional demand.
++ A wide variety of diagnostics and testing tools are available.
 
 ### You have successfully completed the lab**
