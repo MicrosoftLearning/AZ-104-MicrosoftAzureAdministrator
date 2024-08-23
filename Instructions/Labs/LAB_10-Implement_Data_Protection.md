@@ -288,6 +288,27 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
    <validation step="3e780a0f-ab1a-48d9-a0a0-996c526c7c12" />
 
+### Review
+In this lab, you have completed:
++ Used a template to provision an infrastructure.
++ Created and configure a Recovery Services vault.
++ Configured Azure virtual machine-level backup.
++ Monitored Azure Backup.
++ Enabled virtual machine replication.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ What products does Azure Backup support?
++ Summarize the steps for backing up and restoring an Azure virtual machine with Azure Backup.
++ How can I use Azure PowerShell or the CLI to check the status of an Azure Backup job.
++ Provide at least five best practices for configuring Azure virtual machine backups.
+
+## Learn more with self-paced training
+
++ [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
++ [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -298,20 +319,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Site Recovery is a disaster recovery solution that provides protection for your virtual machines and applications.
 + Azure Site Recovery replicates your workloads to a secondary site, and in the event of an outage or disaster, you can failover to the secondary site and resume operations with minimal downtime.
 + A Recovery Services vault stores your backup data and minimizes management overhead.
-
-## Learn more with self-paced training
-
-+ [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
-+ [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
-
-
-### Review
-In this lab, you have completed:
-+ Use a template to provision an infrastructure.
-+ Create and configure a Recovery Services vault.
-+ Configure Azure virtual machine-level backup.
-+ Monitor Azure Backup.
-+ Enable virtual machine replication. 
 
 
 ### You have successfully completed the lab
