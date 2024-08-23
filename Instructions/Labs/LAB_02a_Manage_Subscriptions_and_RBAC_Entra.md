@@ -322,14 +322,6 @@ In this task, you view the activity log to determine if anyone has created a new
    >**Note**: If you are unable to delete the **management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **management group** and then delete the group make sure you also have the **Owner** permission on the **Tenant Root management group**.
 
 1. If you are unable to delete the management group, please reach out to the support team for assistance.
-    
-### Review
-In this lab, you have completed:
-- Implement management groups.
-- Create a custom RBAC role
-- Assign RBAC roles
-- Create a custom RBAC role.
-- Monitor role assignments with the Activity Log.
 
 ## Extend your learning with Copilot
 
@@ -354,5 +346,13 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
+### Review
+In this lab, you have completed:
+- Implement management groups.
+- Create a custom RBAC role
+- Assign RBAC roles
+- Create a custom RBAC role.
+- Monitor role assignments with the Activity Log.
 
 ### You have successfully completed the lab
