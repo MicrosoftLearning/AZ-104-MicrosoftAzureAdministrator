@@ -28,7 +28,7 @@ In this task, you will create an Azure web app.
 
    ![image](./media/l9-image1.png)
 
-1. Click **+ Create** and choose **Web App**
+1. Click **+ Create** and choose **+ Web App**
 
    ![image](./media/l9-image2.png)
    
@@ -38,7 +38,7 @@ In this task, you will create an Azure web app.
     | --- | ---|
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | Select **az104-09a-rg1** |
-    | Web app name | any globally unique name |
+    | Web app name | webapp<inject key="DeploymentID" enableCopy="false" /> |
     | Publish | **Code** |
     | Runtime stack | **PHP 8.2** |
     | Operating system | **Linux** |
@@ -64,8 +64,6 @@ In this task, you will create a staging deployment slot.
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
 
-    ![image](./media/l9-image5.png)
-
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
 1. Click **+ Add slot**, and add a new slot with the following settings then click on **Add**. 
@@ -75,7 +73,9 @@ In this task, you will create a staging deployment slot.
     | Name | **staging** |
     | Clone settings from | **Do not clone settings**|
 
-    ![image](./media/l9-image6.png)
+    ![image](./media/lab09-new-1.png)
+
+    ![image](./media/lab09-new-2.png)
 
 1. Once you see **Successfully created slot 'staging'** click on **Close**.
      
@@ -124,7 +124,7 @@ In this task, you will swap the staging slot with the production slot.
 
 1. In the **Deployment** section, click **Deployment slots** and then, click **Swap** toolbar icon.
 
-   ![image](./media/l9-image14.png)
+   ![image](./media/lab09-new-3.png)
 
 1. On the **Swap** blade, review the default settings and click **Start Swap**.
 
@@ -158,7 +158,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. On **Create a load testing resource** blade specify the following:
 
-    + Select **+ Create** and give your load test a **name**.  The name must be unique.
+    + Select **+ Create** and give your load test name as **loadtest<inject key="DeploymentID" enableCopy="false" />**. The name must be unique.
     + Select **Review + create** and then **Create**.
 
      ![image](./media/l9-image17.png)
@@ -169,7 +169,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
     ![image](./media/l9-image18.png)
 
-1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://**.
+1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add**.
 
 1. Select **Review + create** and **Create**.
 
@@ -184,25 +184,11 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 1. Select **Stop** to complete the test run.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. Alternatively, you can navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-## Key takeaways
-
-Congratulations on completing the lab. Here are the main takeaways for this lab. 
-
-+ Azure App Services lets you quickly build, deploy, and scale web apps.
-+ App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
-+ Deployment slots allow you to create separate environments for deploying and testing your web app.
-+ You can manually or automatically scale a web app to handle additional demand.
-+ A wide variety of diagnostics and testing tools are available. 
-
-## Learn more with self-paced training
-
-+ [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
-+ [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
+   <validation step="fce39619-3758-4efe-b6d4-7060319a2f49" />
 
 ### Review
 In this lab, you have completed:
@@ -213,4 +199,25 @@ In this lab, you have completed:
 + Swapped the staging slots
 + Configured and tested autoscaling of the Azure web app
 
-### You have successfully completed the lab**
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure web app.
++ What are ways I can scale an Azure Web App?
+
+## Learn more with self-paced training
+
++ [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
++ [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure App Services lets you quickly build, deploy, and scale web apps.
++ App Service includes support for many developer environments including ASP.NET, Java, PHP, and Python.
++ Deployment slots allow you to create separate environments for deploying and testing your web app.
++ You can manually or automatically scale a web app to handle additional demand.
++ A wide variety of diagnostics and testing tools are available.
+
+### You have successfully completed the lab

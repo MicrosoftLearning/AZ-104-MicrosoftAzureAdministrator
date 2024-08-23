@@ -31,7 +31,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
    ![image](./media/l9-image29.png)
    
-1. From **Container Apps**, select **Create**.
+1. From **Container Apps**, select **+ Create**.
 
 1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container >**
 
@@ -45,7 +45,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
    ![image](./media/l9-image32.png)
     
-1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**. Select the **Review and create**. 
+1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**. Select the **Review + create**. 
 
    ![image](./media/l9-image32.png)
 
@@ -65,14 +65,30 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Verify you receive the **Your Azure Container Apps app is live** message.
    
-   ![image](./media/l9-image31.png)
+   ![image](./media/lab09-new-6.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. Alternatively, you can navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-   
+
+   <validation step="a44b06f7-b794-410a-8f4a-149c92269c02" />
+
+### Review
+In this lab, you have completed:
+- Created and configured an Azure Container App and environment.
+- Tested and verified deployment of the Azure Container App.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Summarize the steps to create and configure an Azure Container App.
++ Compare and contrast Azure Container Apps to Azure Kubernetes Service.
+
+## Learn more with self-paced training
+
++ [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -81,7 +97,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Container Apps provides server configuration, container orchestration, and deployment details. 
 + Workloads on ACA are usually long-running processes like a Web App.
 
-## Learn more with self-paced training
+### You have successfully completed the lab
 
-+ [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
+
      

@@ -56,9 +56,9 @@ In this task, you will deploy two virtual machines that will be used to test dif
     | Subscription  | Your Azure subscription |
     | Resource group| az104-10-rg1  |
     | Region        | **<inject key="Region" enableCopy="false"/>**    |
-    | Password      | Provide a complex password |
+    | Admin Password      | Provide a complex password |
 
-1. Select **Review + Create**, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
@@ -71,7 +71,7 @@ In this task, you will create a recovery services vault.
 
 1. Click **+ Create**.
 
-1. On the **Create Recovery Services vault** blade, specify the following settings and click **Review + Create**.
+1. On the **Create Recovery Services vault** blade, specify the following settings and click **Review + create**.
 
     | Settings | Value |
     | --- | --- |
@@ -190,7 +190,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Search and select your Recovery Services vault.
 
-1. From the left navigation pane,select **Diagnostic Settings** and then select **Add diagnostic setting**.
+1. From the left navigation pane,select **Diagnostic Settings** under monitoring and then select **Add diagnostic setting**.
 
 1. Name the setting `Logs and Metrics to storage`.
 
@@ -238,13 +238,13 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Make sure that you specify a **different** region than the virtual machine.
 
-1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
+1. Click **Review + create**, ensure that the validation passes and then click **Create**.
 
     >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
 1. Search for and select the `az104-10-vm0` virtual machine.
 
-1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
+1. In the **Backup + disaster recovery** blade, select **Disaster recovery**. 
 
 1. On the **Basics** tab, notice the **Target region**.
 
@@ -263,7 +263,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
-1. Select **Review + Start replication** and then **start replication**.
+1. Select **Review + Start replication** and then **Start replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
@@ -288,6 +288,27 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
    <validation step="3e780a0f-ab1a-48d9-a0a0-996c526c7c12" />
 
+### Review
+In this lab, you have completed:
++ Used a template to provision an infrastructure.
++ Created and configure a Recovery Services vault.
++ Configured Azure virtual machine-level backup.
++ Monitored Azure Backup.
++ Enabled virtual machine replication.
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ What products does Azure Backup support?
++ Summarize the steps for backing up and restoring an Azure virtual machine with Azure Backup.
++ How can I use Azure PowerShell or the CLI to check the status of an Azure Backup job.
++ Provide at least five best practices for configuring Azure virtual machine backups.
+
+## Learn more with self-paced training
+
++ [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
++ [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
@@ -298,20 +319,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Site Recovery is a disaster recovery solution that provides protection for your virtual machines and applications.
 + Azure Site Recovery replicates your workloads to a secondary site, and in the event of an outage or disaster, you can failover to the secondary site and resume operations with minimal downtime.
 + A Recovery Services vault stores your backup data and minimizes management overhead.
-
-## Learn more with self-paced training
-
-+ [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
-+ [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
-
-
-### Review
-In this lab, you have completed:
-+ Use a template to provision an infrastructure.
-+ Create and configure a Recovery Services vault.
-+ Configure Azure virtual machine-level backup.
-+ Monitor Azure Backup.
-+ Enable virtual machine replication. 
 
 
 ### You have successfully completed the lab

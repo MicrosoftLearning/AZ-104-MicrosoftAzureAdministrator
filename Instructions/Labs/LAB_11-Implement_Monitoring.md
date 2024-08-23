@@ -44,7 +44,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     ![image](../media/l11i2.1.png)
     
-1. Select **Review + Create**, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
@@ -80,7 +80,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
    ![image](../media/l11i5.png)
 
-1. Select **Create +** and select **Alert rule**.
+1. Select **+ Create** and select **Alert rule**.
 
    ![image](../media/l11i6.png)
 
@@ -104,7 +104,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Next: Actions**, and select **Use action groups** check box and then select **Create action group**.
+1. Continue working on your alert. Select **Next: Actions >**, and select **Use action groups** check box and then select **+ Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -122,20 +122,20 @@ In this task, if the alert is triggered send an email notification to the operat
 
     ![image](../media/l11i9.png)
 
-1. Select **Next: Notifications** and enter the following values for each setting.
+1. Select **Next: Notifications >** and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK** and select **Review + Create** and subsequently click on **Create**. 
+1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
 
    ![image](../media/l11i10.png)
 
    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
-1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
@@ -144,11 +144,14 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
+   <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
 
 
 ## Task 4: Trigger an alert and confirm it is working
@@ -165,7 +168,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![image](../media/l11i11.png)
 
-1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. 
+1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. In the **Delete confirmation** pop-up window, click **Delete**.
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -183,11 +186,13 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="6a69dc7c-0e66-40e8-a20d-4e24335b885e" />
 
 ## Task 5: Configure an alert processing rule
 
@@ -201,9 +206,9 @@ In this task, you create an alert rule to suppress notifications during a mainte
 
    ![image](../media/l11i13.png)
    
-1. Select **Next: Rule settings**, then select **Suppress notifications**.
+1. Select **Next: Rule settings >**, then select **Suppress notifications**.
    
-1. Select **Next: Scheduling**.
+1. Select **Next: Scheduling >**.
    
 1. By default, the rule works all the time, unless you disable it or configure a schedule. You are going to define a rule to suppress notifications during overnight maintenance.
 Enter these settings for the scheduling of the alert processing rule:
@@ -217,11 +222,11 @@ Enter these settings for the scheduling of the alert processing rule:
 
     ![image](../media/l11i15.png)
 
-1. Select **Next: Details** and enter these settings:
+1. Select **Next: Details >** and enter these settings:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **az104-11-rg11** |
+    | Resource group | **az104-11-rg1** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
@@ -274,10 +279,6 @@ In this lab, you have completed:
 - Configured an alert processing rule.
 - Used Azure Monitor log queries.
 
-
-### You have successfully completed the lab
-
-
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right). Take a few minutes to try these prompts.
 
@@ -289,3 +290,15 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 + [Improve incident response with alerting on Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/). Respond to incidents and activities in your infrastructure through alerting capabilities in Azure Monitor.
 + [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/). Monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Alerts help you detect and address issues before users notice there might be a problem with your infrastructure or application.
++ You can alert on any metric or log data source in the Azure Monitor data platform.
++ An alert rule monitors your data and captures a signal that indicates something is happening on the specified resource.
++ An alert is triggered if the conditions of the alert rule are met. Several actions (email, SMS, push, voice) can be triggered.
++ Action groups include individuals that should be notified of an alert.
+
+### You have successfully completed the lab
