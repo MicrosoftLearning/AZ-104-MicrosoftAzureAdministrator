@@ -257,7 +257,15 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
 1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
 
-   ![image](./media/l2-image65.png) 
+   ![image](./media/l2-image65.png)
+
+### Review
+In this lab, you have completed:
+
+- Create and assign tags via the Azure portal.
+- Enforce tagging via an Azure Policy.
+- Apply tagging via an Azure Policy.
+- Configure and test resource locks.
 
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
@@ -279,13 +287,5 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + The Azure Policy remediation task feature is used to bring resources into compliance based on a definition and assignment. Resources that are non-compliant to a modify or deployIfNotExist definition assignment, can be brought into compliance using a remediation task.
 + You can configure a resource lock on a subscription, resource group, or resource. The lock can protect a resource from accidental user deletions and modifications. The lock overrides any user permissions.
 + Azure Policy is pre-deployment security practice. RBAC and resource locks are post-deployment security practice.
-
-### Review
-In this lab, you have completed:
-
-- Create and assign tags via the Azure portal.
-- Enforce tagging via an Azure Policy.
-- Apply tagging via an Azure Policy.
-- Configure and test resource locks.
   
 ### You have successfully completed the lab
