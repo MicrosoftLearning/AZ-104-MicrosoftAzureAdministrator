@@ -238,14 +238,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 In this task, you will create a new Entra ID tenant.
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
-
-   >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:<br>
-    - Try the creation a few times.<br>
-    - Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
-    - Open a new **InPrivate** window and use the Azure Portal and try to create the tenant from there.<br>
-    - Use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
-    - You can try this task later, but creating a tenant isn't required in other labs. 
-
+   
 1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
    
     | Setting | Value |
@@ -262,14 +255,21 @@ In this task, you will create a new Entra ID tenant.
     
     ![](../Labs/Images/crttenant2.png)   
    
-     > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
+   > **Note**: The **Initial domain name** should not be a legitimate name that potentially matches your organization or another. The green checkmark in the **Initial domain name** text box will indicate that the domain name you typed in is valid and unique.
 
 1. On **Review + create (4)** page Click **Create**, enter the captcha and click **Submit**.
 
    ![](../Labs/Images/catche.png)   
 
-   >**Note**: After clicking on Submit, please wait for 2 minutes before proceeding to the next step. You may not receive any notifications during this time then after some time procced with next step.
-   
+    >**Note**: After clicking on Submit, please wait for 2 minutes before proceeding to the next step. You may not receive any notifications during this time then after some time procced with next step.
+
+    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you receive the error **Creation failed. Too many requests, please try later**, do the following:<br>
+    >- Try the creation a few times.<br>
+    >- Check the **Manage tenant** section to ensure the tenant wasn't created in the background. <br>
+    >- Open a new **InPrivate** window and use the Azure Portal and try to create the tenant from there.<br>
+    >- Use the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** to view the steps. <br>
+    >- You can try this task later, but creating a tenant isn't required in other labs. 
+
 1. In the Azure portal search and select **Microsoft Entra ID**.
     
 1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings (1)** button in the Azure portal toolbar and, click on **Switch (2)**.
@@ -327,7 +327,7 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
       ![](../Labs/Images/exuser.png)  
     
- 1. on the **Properties** tab specify the following settings (leave others with their defaults).    
+ 1. On the **Properties** tab specify the following settings (leave others with their defaults).    
    
     | Setting | Value |
     | --- | --- | 
