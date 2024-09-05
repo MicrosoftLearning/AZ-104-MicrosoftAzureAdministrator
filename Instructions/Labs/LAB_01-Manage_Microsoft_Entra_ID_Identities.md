@@ -343,12 +343,12 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
-   <validation step="f05516fb-26d1-48f6-a20f-e2f9c0616ec2" />
+  <validation step="f05516fb-26d1-48f6-a20f-e2f9c0616ec2" />
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   >- If you receive a success message, you can proceed to the next task.
+   >- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   >- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Review
 In this lab, you have completed:
