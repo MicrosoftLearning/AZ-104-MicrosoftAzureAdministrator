@@ -237,7 +237,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 ### Task 3: Create an Microsoft Entra ID tenant
 In this task, you will create a new Entra ID tenant.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**.
+1. In the Azure portal in the main browser window, search for and select **Microsoft Entra ID**.
    
 1. Click **Manage tenant**, and then on the next screen, click **+ Create**, and specify the following setting:
    
