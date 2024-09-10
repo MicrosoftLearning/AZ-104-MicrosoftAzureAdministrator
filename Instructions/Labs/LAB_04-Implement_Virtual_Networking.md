@@ -316,14 +316,16 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Select **+ Virtual network links** and then select **+ Add**. 
+1. Select **Settings** and then **DNS Management**.
+
+1. Select **Virtual network links** and configure the link. 
 
     | Property | Value    |
     |:---------|:---------|
     | Link name | `manufacturing-link` |
     | Virtual network | `ManufacturingVnet` |
 
-1. Select **OK** and wait for the link to create. 
+1. Select **Create** and wait for the link to create. 
 
 1. From the **Overview** blade select **+ Record set**. You would now add a record for each virtual machine that needs private name-resolution support.
 
