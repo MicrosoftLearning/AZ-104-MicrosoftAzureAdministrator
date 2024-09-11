@@ -66,6 +66,8 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
  1. Click **Review + create**, and then **Create**.
 
     >**Note**: Wait until the Web App is created before you proceed to the next task. This should take about a minute.
+    
+    >**Note**: If the deployment fails, change to another region and try again. For example, switch to **East US 2**. 
 
 1. After the deployment, select **Go to resource**.
 
