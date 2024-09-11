@@ -213,8 +213,6 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
-    ![Screenshot of the create app gateway page.](../media/az104-lab06-create-appgw.png)
-
 1. Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
 
     | Setting | Value |
