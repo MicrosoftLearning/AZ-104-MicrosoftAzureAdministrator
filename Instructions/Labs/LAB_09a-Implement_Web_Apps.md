@@ -51,6 +51,8 @@ In this task, you will create an Azure web app.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
+    >**Note**: If the deployment fails, change to another region and try again. For example, switch to **East US 2**. 
+
 1. On the deployment blade, click **Go to resource**.
 
 ### Task 2: Create a staging deployment slot
