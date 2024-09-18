@@ -288,9 +288,9 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Link name | `manufacturing-link` |
     | Virtual network | `ManufacturingVnet` |
 
-1. Select **OK** and wait for the link to create. 
+1. Select **Create** and wait for the link to create. 
 
-1. From the **Overview** blade select **+ Record set**. You would now add a record for each virtual machine that needs private name-resolution support.
+1. From the left navigation pane, under DNS Management click on **Record Set**. Click on **+ Add** to  add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
@@ -298,9 +298,10 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Type | **A** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
-
+   
     >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
-    
+
+   1. Click on **Add**
   
 ### Review
 In this lab, you have completed the following:
