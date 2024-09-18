@@ -301,7 +301,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
    
     >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
 
-   1. Click on **Add**
+1. Click on **Add**
   
 ### Review
 In this lab, you have completed the following:
