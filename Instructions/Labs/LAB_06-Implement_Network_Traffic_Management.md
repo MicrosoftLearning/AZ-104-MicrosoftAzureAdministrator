@@ -356,7 +356,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. Start another browser window and test this URL - `<frontend ip address>/video/` and  verify you are directed to the video server (vm2).
 
-   ![](../Labs/media/az-x1.png)
+   ![](../Labs/media/az-x2.png)
 
    >**Note:** Replace the frontend IP address with the IP address you copied in the previous step.
 
