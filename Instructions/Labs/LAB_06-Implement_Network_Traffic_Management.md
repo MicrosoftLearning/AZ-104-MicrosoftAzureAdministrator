@@ -102,7 +102,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | SKU | **Standard** |
     | Type | **Public** |
     
-1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings
+1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings and click on **Save**
  
     | Setting | Value |
     | --- | --- |
@@ -115,7 +115,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip4** |
-    | Availability zone | **No Zone** and click **Ok** |
+    | Availability zone | Choose **1** and click **Save** |
 
 1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**
 
@@ -148,7 +148,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Floating IP (direct server return) | **Disabled** |
     | Health probe | **Create new** |
     
-1. click **create new** under **Health probe**, on the **Add load balancing rules** blade.
+1. Click **create new** under **Health probe**, on the **Add load balancing rules** blade.
 
     Add a health probe with the following settings:
 
@@ -198,14 +198,15 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
     ![](../Labs/media/l6-image16.png)
 
-1. Add a subnet with the following settings (leave others with their default values) and click **Save**.
+1. Add a subnet with the following settings (leave others with their default values) and click **Add**(4).
 
     | Setting | Value |
     | --- | --- |
-    | Name | **subnet-appgw** |
-    | Subnet address range | **10.60.3.224/27** |
+    | Name | **subnet-appgw** (1)|
+    | Starting address | **10.60.3.224** (2)|
+    | Size | **/27(32 addresses)** (3)|
 
-    ![](../Labs/media/l6-image17.png)
+    ![](../Labs/media/az-x.png)
 
     > **Note**: This subnet will be used by the Azure Application Gateway instances, which you will deploy later in this task. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -249,8 +250,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | **az104-06-appgw5-be1** |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
-    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
+    | Target Type |  Virtual machine and choose **az104-rg6-nic1 (10.60.1.4)** as Target |
+    | Target Type |  Virtual machine and choose **az104-rg6-nic2 (10.60.2.4)** as Target |
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
@@ -260,7 +261,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-imagebe` |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
+    | Target Type | Virtual machine and choose **az104-rg6-nic1 (10.60.1.4)** as Target|
 
 1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -268,7 +269,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-videobe` |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
+    | Target Type | Virtual machine and choose **az104-rg6-nic2 (10.60.2.4)** as Target|
    
 1. Click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**.
 
@@ -333,7 +334,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Backend settings | **az104-06-appgw5-http1** |
     | Backend target | `az104-videobe` |
       
-1. Click **Add** on the **Add Backend setting** blade. and back on the **Configuration** blade.
+1. Click **Add** on the **Add routing rule** blade. and back on the **Configuration** blade.
 
 1. Click **Next: Tags >**, followed by **Next: Review + create >** and then click **Create**.
 
@@ -341,28 +342,28 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-06-appgw5**.
 
+1. In the **Application Gateway** resource, in the **Monitoring** sectionfrom the left navigation pane, select **Backend health**.
+
+1. Ensure the servers in the backend pool display **Healthy**.
+
 1. On the **az104-06-appgw5** Application Gateway blade, note the value of the **Frontend public IP address**.
 
-1. Start another browser window and navigate to the IP address you identified in the previous step.
+1. Start another browser window and test this URL - `<frontend ip address>/image/` and verify you are directed to the image server (vm1).
 
-1. Verify that the browser window displays the message **Hello World from az104-06-vm2** or **Hello World from az104-06-vm3**.
+   ![](../Labs/media/az-x1.png)
 
-   ![image](../media/az-104(9).png)
+   >**Note:** Replace the frontend IP address with the IP address you copied in the previous step.
 
-1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
+1. Start another browser window and test this URL - `<frontend ip address>/video/` and  verify you are directed to the video server (vm2).
 
-1. Verify you are directed to the image server (vm1).
+   ![](../Labs/media/az-x1.png)
 
-1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
+   >**Note:** Replace the frontend IP address with the IP address you copied in the previous step.
 
-1. Verify you are directed to the video server (vm2).
-   
-1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (based on the message displayed on the web page).
+   > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-    > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
+   > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
 
-    > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
-    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
