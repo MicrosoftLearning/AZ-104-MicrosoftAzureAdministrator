@@ -107,7 +107,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. Notice you can disable the policy at any time. 
 
-1. Click **Next** twice and set **Parameters** to the following values:
+1. Click **Next** and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
