@@ -133,15 +133,6 @@ In this task, you create a group account. Group accounts can include user accoun
 
 >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
    
-## Cleanup your resources
-
-If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. Notice this will not remove any Entra ID users or groups you have created. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
-  
-
 ## Extend your learning with Copilot
 
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
