@@ -97,7 +97,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 In this task, you create a group account. Group accounts can include user accounts or devices. These are two basic ways members are assigned to groups: Statically and Dynamically. Static groups require administrators to add and remove members manually.  Dynamic groups update automatically based on the properties of a user account or device. For example, job title. 
 
-1. In the Azure portal, search for and select `Groups`.
+1. In the Azure portal, search for and select `Microsoft Entra ID`. In the **Manage** blade, select **Groups**. 
 
 1. Take a minute to familiarize yourself with the group settings in the left pane.
 
