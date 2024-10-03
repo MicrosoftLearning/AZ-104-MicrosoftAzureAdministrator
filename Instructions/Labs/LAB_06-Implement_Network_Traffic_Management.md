@@ -40,7 +40,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Deploy a custom template`.
+1. Search for and select Deploy a custom template.
 
 1. On the custom deployment page, select **Build your own template in the editor**.
 
