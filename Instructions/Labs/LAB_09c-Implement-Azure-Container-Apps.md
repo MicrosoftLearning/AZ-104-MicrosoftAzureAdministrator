@@ -47,7 +47,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Resource group | `az104-rg9` |
     | Container app name |  `my-app` |
     | Region    | **East US** (Or a region available near you) |
-    | Container Apps Environment | Leave default |
+    | Container Apps Environment | Select **Create new** > Set Environment name to **my-environment** > **Create** |
 
 1. On the **Container** tab, ensure that **Use quickstart image** is enabled and that the quickstart image is set to **Simple hello world container**.
 
