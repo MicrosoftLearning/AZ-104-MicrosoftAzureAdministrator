@@ -60,7 +60,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
     | Runtime stack | **PHP 8.2** |
     | Operating system | **Linux** |
     | Region | **East US** |
-    | Pricing plans | accept the defaults |
+    | Pricing plans | **Premium V3 P1V3** |
     | Zone redundancy | accept the defaults |
 
  1. Click **Review + create**, and then **Create**.
