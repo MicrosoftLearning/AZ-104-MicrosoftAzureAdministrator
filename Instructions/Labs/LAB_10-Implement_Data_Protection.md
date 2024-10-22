@@ -176,7 +176,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **Create**.
 
-1. Use the following information to define the storage account, then and select **Review**.
+1. Use the following information to define the storage account, then and select **Review + create**.
 
     | Settings | Value |
     | --- | --- | 
@@ -185,13 +185,13 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Storage account name  | Provide a globally unique name   |
     | Region                | **East US**   |
 
-1. On the Review tab, select **Create**.
+1. Select **Create**.
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
 1. Search and select your Recovery Services vault.
 
-1. Select **Diagnostic Settings** and then select **Add diagnostic setting**.
+1. In the **Monitoring** blade, select **Diagnostic Settings** and then select **Add diagnostic setting**.
 
 1. Name the setting `Logs and Metrics to storage`.
 
