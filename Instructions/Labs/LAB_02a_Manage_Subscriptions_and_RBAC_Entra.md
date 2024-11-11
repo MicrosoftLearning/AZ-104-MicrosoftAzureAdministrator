@@ -47,11 +47,12 @@ In this lab, you will complete the following tasks:
 ### Task 1: Implement Management Groups
 In this task, you will create and configure management groups.
 
-
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
 
     ![image](./media/l2-image1.png) 
     
+    >**Note:** The Management Group page may take sometime to load.
+
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
     ![image](./media/l2-image2.png)
