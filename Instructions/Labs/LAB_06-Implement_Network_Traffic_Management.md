@@ -338,7 +338,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Key takeaways
 
-Congratulations on completing the lab. Here are the main takeaways for this lab.
+Congratulations on completing the lab. Here are the key points for this lab.
 
 + Azure Load Balancer is an excellent choice for distributing network traffic across multiple virtual machines at the transport layer (OSI layer 4 - TCP and UDP).
 + Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
