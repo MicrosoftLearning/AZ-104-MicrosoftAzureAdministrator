@@ -168,7 +168,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![image](../media/l11i11.png)
 
-1. Check the box for **Apply force delete**. Enter `delete` to confirm and then select **Delete**. In the **Delete confirmation** pop-up window, click **Delete**.
+1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resources to be deleted and select **Delete**. 
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
