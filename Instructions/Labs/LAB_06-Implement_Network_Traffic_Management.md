@@ -326,10 +326,10 @@ If you are working with **your own subscription** take a minute to delete the la
 
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
 
-+ Compare and contrast the Azure Load Balancer with the Azure Application Gateway.
-+ How can I troubleshoot inbound connectivity to an Azure Load Balancer?
-+ What are the basic steps for configuring the Azure Application Gateway?
-+ Create a table highlighting Azure load balancing solutions. Include these columns: Supported protocols, Routing Policies, Session affinity, and TLS offloading.
++ Compare and contrast the Azure Load Balancer with the Azure Application Gateway. Help me decide in which scenarios I should use each produc.t 
++ What tools are available to troubleshoot connections to an Azure Load Balancer? 
++ What are the basic steps for configuring the Azure Application Gateway? Provide a high-level checklist. 
++ Create a table highlighting three Azure load balancing solutions. For each solution show supported protocols, routing policies, session affinity, and TLS offloading.
   
 ## Learn more with self-paced training
 
