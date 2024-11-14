@@ -51,6 +51,8 @@ In this task, you will create a new container instance for the web application.
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
+1. Click **Next: Monitoring >** and uncheck **Enable container instance logs**. 
+
 1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
