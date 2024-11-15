@@ -64,13 +64,13 @@ The organization plans a large amount of growth for core services. In this task,
     ![image](../media/l4i4.png)
    
 1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
-
-  <validation step="3a2d8eeb-5292-4449-9459-ec4e7aca9f8d" />
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
-   >- If you receive a success message, you can proceed to the next task.
-   >- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   >- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+>- If you receive a success message, you can proceed to the next task.
+>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="3a2d8eeb-5292-4449-9459-ec4e7aca9f8d" />
 
 ## Task 2: Create a virtual network and subnets using a template
 
@@ -93,13 +93,13 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 1. Select **Review + create** and then **Create**.
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
-
-   <validation step="1d12c35d-eeac-45a9-97f4-c0c07b7aff9f" />
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
-   >- If you receive a success message, you can proceed to the next task.
-   >- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   >- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+>- If you receive a success message, you can proceed to the next task.
+>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="1d12c35d-eeac-45a9-97f4-c0c07b7aff9f" />
 
 ## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
