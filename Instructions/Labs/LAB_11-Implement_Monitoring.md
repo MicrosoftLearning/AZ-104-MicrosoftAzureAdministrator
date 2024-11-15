@@ -151,7 +151,6 @@ In this task, if the alert is triggered send an email notification to the operat
 
    <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
 
-
 ## Task 4: Trigger an alert and confirm it is working
 
 In this task, you trigger the alert and confirm a notification is sent. 
@@ -183,7 +182,6 @@ In this task, you trigger the alert and confirm a notification is sent.
     >**Note:** It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and then return. 
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
