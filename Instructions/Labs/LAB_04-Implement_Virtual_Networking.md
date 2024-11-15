@@ -30,7 +30,7 @@ The organization plans a large amount of growth for core services. In this task,
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
 	| Subscription       | Choose the default subscription |(1)
-    | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
+        | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
 	| Name               | **az104-04-vnet1** (3)|
 	| Region             |  **<inject key="Region" enableCopy="false" />** (4) |
 
