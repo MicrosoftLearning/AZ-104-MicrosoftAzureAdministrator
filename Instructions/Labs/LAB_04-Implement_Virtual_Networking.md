@@ -196,13 +196,12 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Priority | **4096** |
     | Name | **DenyAnyCustom8080Outbound** |
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
+>- If you receive a success message, you can proceed to the next task.
+>- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+>- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="0dc2eabf-2ff0-4f74-990f-82cb1f0dfb93" />
-   
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:    
-   >- If you receive a success message, you can proceed to the next task.
-   >- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   >- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="0dc2eabf-2ff0-4f74-990f-82cb1f0dfb93" />
 
 ## Task 4: Configure public and private Azure DNS zones
 
