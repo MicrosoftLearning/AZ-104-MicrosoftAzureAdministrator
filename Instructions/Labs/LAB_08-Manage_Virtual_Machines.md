@@ -32,9 +32,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     ![](../Labs/Images/l8i1.png)
 
-   >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
-   
-    
+   >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs 
+    distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
+     
 1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -58,7 +58,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
      ![](../Labs/Images/l8i3.png)
 
-
 1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -80,7 +79,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | --- | --- |
     | Patch orchestration options | **Azure orchestrated** |  
    
-
 1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -157,7 +155,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 ## Azure Virtual Machine Scale Sets Architecture Diagram
 
-![](../Labs/Images/az104-lab08-vmss-architecture.png)
+   ![](../Labs/Images/az104-lab08-vmss-architecture.png)
 
 ## Task 3: Create and configure Azure Virtual Machine Scale Sets
 
@@ -415,7 +413,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```sh
     az vm create --name myCLIVM --resource-group az104-08-rg01 --image Win2019Datacenter --admin-username localadmin --generate-ssh-keys
     ```
-   >**Note:**give Admin password as **Password.1!!** and Password will be not visible
+   >**Note**:**Give Admin password as **Password.1!!** and Password will be not visible
    
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
