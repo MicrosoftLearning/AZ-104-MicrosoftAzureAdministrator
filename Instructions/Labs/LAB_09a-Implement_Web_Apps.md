@@ -186,10 +186,10 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 1. Select **Stop** to complete the test run.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. Alternatively, you can navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+   
    <validation step="fce39619-3758-4efe-b6d4-7060319a2f49" />
 
 ### Review
