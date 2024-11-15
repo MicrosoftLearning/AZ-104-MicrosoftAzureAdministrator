@@ -27,12 +27,12 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Complete the **Basics** tab with the following details:  
 
-	|  **Option**         | **Value**            |
-	| ------------------ | -------------------- |
-	| Subscription       | Choose the default subscription |(1)
-        | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
-	| Name               | **az104-04-vnet1** (3)|
-	| Region             |  **<inject key="Region" enableCopy="false" />** (4) |
+    |  **Option**         | **Value**            |
+    | ------------------ | -------------------- |
+    | Subscription       | Choose the default subscription |(1)
+    | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
+    | Name               | **az104-04-vnet1** (3)|
+    | Region             |  **<inject key="Region" enableCopy="false" />** (4) |
 
      ![image](../media/l4i1.png)
 
@@ -44,16 +44,16 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
-	| **Subnet**             | **Option**           | **Value**              |
-	| ---------------------- | -------------------- | ---------------------- |
-	| SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet` |
-	|                        | Starting address		| `10.20.10.0`          |
-	|						 | Size					| `/24`	|
-	| DatabaseSubnet         | Subnet name          | `DatabaseSubnet`         |
-	|                        | Starting address		| `10.20.20.0`        |
-	|						 | Size					| `/24`	|
+    | **Subnet**             | **Option**           | **Value**              |
+    | ---------------------- | -------------------- | ---------------------- |
+    | SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet` |
+    |                        | Starting address	    | `10.20.10.0`           |
+    |			     | Size		    | `/24`	             |
+    | DatabaseSubnet         | Subnet name          | `DatabaseSubnet`       |
+    |                        | Starting address	    | `10.20.20.0`           |
+    |			     | Size		    | `/24`	             |
 
-	>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
+    >**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
 
 1. Select **Review + create**.
 
@@ -76,7 +76,8 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
-1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
+1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named 
+   **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
 1. In the Azure portal, search for and select **Deploy a custom template**.
 
@@ -88,7 +89,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group.
     
-   ![image](../media/l4i7.png)
+    ![image](../media/l4i7.png)
 
 1. Select **Review + create** and then **Create**.
 
@@ -158,7 +159,8 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. Select **+ Add**.
 
-1. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select **Add**.
+1. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select 
+   **Add**.
 
     | Setting | Value |
     | -- | -- |
