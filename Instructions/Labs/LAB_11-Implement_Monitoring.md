@@ -144,8 +144,6 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Review + create** to validate your input, then select **Create**.
 
-   <validation step="ae54adf6-d387-4188-9258-f8399c34d338" />
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
