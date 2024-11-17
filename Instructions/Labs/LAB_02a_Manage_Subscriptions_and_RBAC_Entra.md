@@ -51,7 +51,7 @@ In this task, you will create and configure management groups.
 
     ![image](./media/l2-image1.png) 
     
-    >**Note:** The Management Group page may take sometime to load.
+    >**Note:** The Management Group page may take sometime to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
 
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
 
