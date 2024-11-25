@@ -274,7 +274,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
-### Scale out rule
+**Scale out rule**
 
 1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. And then select **Add a rule**.
 
@@ -297,7 +297,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Be sure to **Save** your changes.
 
-### Scale in rule
+**Scale in rule**
 
 1. During evenings or weekends, demand may decrease so it is important to create a scale in rule.
 
@@ -314,7 +314,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Be sure to **Save** your changes.
 
-### Set the instance limits
+**Set the instance limits**
 
 1. When your autoscale rules are applied, instance limits make sure that you do not scale out beyond the maximum number of instances or scale in beyond the minimum number of instances.
 
