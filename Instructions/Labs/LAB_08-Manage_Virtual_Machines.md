@@ -203,7 +203,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Setting | Value |
     | --- | --- |
     | Name | `vmss-vnet` |
-    | Address range | `10.82.0.0/20` (change what is there) |
+    | Address range | `10.82.0.0/20` (delete the existing address range) |
     | Subnet name | `subnet0` |
     | Subnet range | `10.82.0.0/24` |
 
@@ -270,9 +270,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
 
-1. Choose **Availability + Scaling** from the left side menu, then choose **Scaling**.
+1. Choose **Availability + Scale** from the left side menu, then choose **Scaling**.
 
->**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
+    >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
 ### Scale out rule
 
@@ -291,7 +291,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Time grain statistic | **Average** |
     | Operation | **Increase percent by** (review other choices) |
     | Cool down (minutes) | **5** |
-    | Percentage | **20** |
+    | Percentage | **50** |
 
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
