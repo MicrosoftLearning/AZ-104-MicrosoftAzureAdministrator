@@ -46,7 +46,9 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
 
-1. Select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+1. Select **Licenses**. From here you can view licenses. Select **Licensed features** to see what is available.
+
+**Note:** Starting September 1st 2024, the Microsoft Entra ID Admin Center and the Microsoft Azure portal no longer support the assignment of licenses through their user interfaces. To manage license assignments for users and groups, administrators are required to use the Microsoft 365 Admin Center.
    
 ### Create a new user
 
