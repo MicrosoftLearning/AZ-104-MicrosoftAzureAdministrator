@@ -46,7 +46,7 @@ In this task, you will create and configure user accounts. User accounts will st
 
 1. Return to the **Entra ID** page by pressing back in the browser or selecting the option in the breadcrumb menu.
 
-1. Select **Licenses**. From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
+1. As you have time, explore other options such as **Licenses** and **Password reset**.
    
 ### Create a new user
 
