@@ -310,7 +310,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Operator | **Less than** |
     | Threshold | **30** |
     | Operation | **decrease percentage by** (review your other choices) |
-    | Percentage | **20** |
+    | Percentage | **50** |
 
 1. Be sure to **Save** your changes.
 
