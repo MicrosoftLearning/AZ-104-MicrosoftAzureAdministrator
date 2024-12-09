@@ -23,9 +23,9 @@ Now that you explored the basic Azure administration capabilities associated wit
 
 In this task, we will create a managed disk in the Azure portal. Managed disks are storage designed to be used with virtual machines. Once the disk is deployed you will export a template that you can use in other deployments.
 
-1. In the search bar in the Azure portal, search for and select **Disks**
+1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Disks**, and then select **Disks** from the results.
 
-   ![image](../media/az-104i0.1.png)
+   ![image](../media/az104-mod3-image29.png)
 
 1. On the Disks page, select **Create**.
 
@@ -76,9 +76,9 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 In this task, you use the downloaded template to deploy a new managed disk. This task outlines how to quicky and easily repeat deployments. 
 
-1. In the Azure portal, search for and select `Deploy a custom template`.
+1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Deploy a custom template**, and then select **Deploy a custom template** from the results.
 
-   ![image](../media/az-104i0.3.png)
+   ![image](../media/az104-mod3-image4.png)
    
 1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates as shown in the drop-down menu. 
 
