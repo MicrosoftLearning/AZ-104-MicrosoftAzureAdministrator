@@ -173,7 +173,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     ![image](../media/az104-mod3-image19.png)
 
-1. Use the **Upload/Download files** option under Manage Files dropdown to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the the template and parameters file from the downloads directory. You will need to upload each file separately one after the another.
 
    ![image](../media/az10498.png)
 
