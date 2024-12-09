@@ -41,7 +41,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Source type | **None** (6)|
     | Size | Click on **chnage size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
-    
+    -------------------------------------------------------------------------------------------------------------------------------------
     ![image](../media/az104-mod3-image1.png)
 
     ![image](../media/az104-mod3-image2.png)
