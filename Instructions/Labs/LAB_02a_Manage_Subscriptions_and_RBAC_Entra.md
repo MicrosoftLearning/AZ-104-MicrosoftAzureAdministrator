@@ -101,38 +101,31 @@ In this task, you will create and configure management groups.
 
       ![image](./media/l2-image11.png)
 
-    > **Note**: You might find the Management group already created, if not please follow the above step to create one with provided details. 
-
-
 ## Task 2: Review and assign a built-in Azure role
 
 In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
 1. Select the **az104-mg1** management group.
 
-1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
+1. Select the **Access control (IAM)** blade (1), and then the **Roles** (2) tab.
+
+    ![image](./media/az1.png)
 
 1. Scroll through the built-in role definitions that are available. **View** a role to get detailed information about the **Permissions**, **JSON**, and **Assignments**. You will often use *owner*, *contributor*, and *reader*. 
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. Select **Next**.
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
 
 1. On the **Members** tab, select **+ Select members**.
 
-    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
-
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the  <inject key="AzureAdUserEmail"></inject> user and click on **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
-
-    >**Note:** As a best practice always assign roles to groups not individuals. 
-
-    >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
+   >**Did you know?** This assignment might not actually grant you any additional privileges. If you already have the Owner role, that role includes all permissions associated with the VM Contributor role.
     
 
 ## Task 3: Create a custom RBAC role
