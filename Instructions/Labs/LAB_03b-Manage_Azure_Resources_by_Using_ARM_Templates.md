@@ -84,9 +84,11 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
 
+     ![image](../media/az104-mod3-image9.png)
+
 1. On the **Edit template** blade, click **Load file** and upload the **template.json** file you downloaded to the local disk.
 
-   ![image](../media/templete.png)
+   ![image](../media/az104-mod3-image10.png)
 
 1. Within the editor pane, make these changes.
 
@@ -101,6 +103,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 1. **Save** your changes.
 
 1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
+
+    ![image](../media/az104-mod3-image12.png)
 
 1. Make this change so it matches the template file.
 
@@ -124,10 +128,14 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 1. Select **Go to resource**. Verify **az104-03b-disk2** was created.
 
 1. On the **Overview** blade, select the resource group, **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**. You should now have two disks.
-   
+
+      ![image](../media/az104-mod3-image13.png)
+
 1. In the **Settings** section, click **Deployments**.
 
-    >**Note:** All deployments details are documented in the resource group. It is a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
+     ![image](../media/az104-mod3-image14.png)
+
+   >**Note:** All deployments details are documented in the resource group. It is a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
 ## Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell
 
@@ -135,15 +143,21 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Cloud Shell** icon in the top right of the Azure Portal. 
 
-   ![image](../media/az-104i10.png)
+   ![image](../media/az104-mod3-image15.png)
 
 1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
+    ![image](../media/az104-mod3-image16.png)
+
+   >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
 1. On the **You have no storage mounted** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
 
+     ![image](../media/az104-mod3-image17.png)
+
 1. On mount storage account page, select **I want to create a storage account**. click on Next.
+
+    ![image](../media/az104-mod3-image18.png)
 
 1. Provide the below details to create the storage account and click on **Create**.
 
@@ -151,11 +165,13 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     | Settings | Values |
     |  -- | -- |
+    | Subscription | Accept default |
     | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
     | Region | **<inject key="Region" enableCopy="false" />** |
+    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
+    ![image](../media/az104-mod3-image19.png)
 
 1. Use the **Upload/Download files** option under Manage Files dropdown to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
@@ -167,12 +183,20 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     dir
     ```
     >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
-   
+
+1. Select the **Editor** 
+
+   ![image](../media/az104-mod3-image21.png)
+
+1. Click on **Confirm** on **Switch to classsic Cloud Shell**
+
+   ![image](../media/az104-mod3-image22.png)
+
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
    ![image](../media/az-104i4.png)
 
-1. Make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
+1. Select **template.json** and make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
 
     ![image](../media/az-104i5.1.png)
 
