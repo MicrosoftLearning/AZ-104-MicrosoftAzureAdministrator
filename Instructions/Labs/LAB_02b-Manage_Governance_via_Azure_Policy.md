@@ -40,8 +40,6 @@ In this lab, you will complete the following tasks:
 
 ![Diagram of the task architecture.](./media/az104-lab02b-architecture.png)
 
-## Exercise 1
-
 ### Task 1: Assign tags via the Azure portal
 In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
 
@@ -167,6 +165,8 @@ In this task, we will use a different policy definition to remediate any non-com
 
     ![image](./media/l2-image38.png)
 
+   >**Note**: You can ignore the above step if the policy definition has appeared automatically.
+
 1. Configure the remaining **Basics** properties of the assignment by specifying the following settings (leave others with their defaults) and click on **Next**.
 
     | Setting | Value |
@@ -216,6 +216,8 @@ In this task, we will use a different policy definition to remediate any non-com
     ![image](./media/lab02-new-11.png)
    
 1. Verify that this time the validation passed and click **Create**.
+
+   >**Note**: If the validation fails, kindly wait for some time as it might take some time for the policy to take effect for the validation to pass through.
 
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
