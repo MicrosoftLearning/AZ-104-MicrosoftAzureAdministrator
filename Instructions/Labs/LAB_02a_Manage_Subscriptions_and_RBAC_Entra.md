@@ -42,9 +42,8 @@ In this lab, you will complete the following tasks:
 
    ![image](../media/lab02a.png)
 
-## Exercise 1
-
 ### Task 1: Implement Management Groups
+
 In this task, you will create and configure management groups.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
@@ -84,7 +83,7 @@ In this task, you will create and configure management groups.
 
     ![image](./media/l2-image7.png)
 
-    > **Note**: You might find the Management group named **az104-02-mg1** has already been created, if not please follow the below step to create one with provided details. 
+    > **Note**: You might find the Management group named **az104-02-mg1** has already been created, if not please follow the above step to create one with provided details. 
    
 1. In the list of management groups, click the entry representing the newly created management group.
 
