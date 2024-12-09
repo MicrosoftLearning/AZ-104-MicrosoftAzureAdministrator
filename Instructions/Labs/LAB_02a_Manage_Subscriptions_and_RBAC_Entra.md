@@ -242,13 +242,13 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
    
 1. In the **InPrivate** browser window, on the **Describe your issue** tab of the **Help + support** blade, type **Service and subscription limits** (1) and select **Go** (2). Select the **Service and subscription limits (quotas)** (3)issue type. Select **Next** (4). Select **Create a support request** under Service and subscription limits (quotas).
 
-    ![image](./media/az2.png)
+    ![image](./media/az2.1.png)
 
     ![image](./media/lab02-new-13.png)
     
 1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, **Service and subscription limits (quotas)** (1) as issue type is selected. Note that the subscription you are using in this lab is listed in the **Subscription** (2) drop-down list.
     
-    ![image](./media/az3.png)
+    ![image](./media/az3.1.png)
 
     >**Note**: The presence of the subscription you are using in this lab in the **Subscription** drop-down list indicates that the account you are using has the permissions required to create the subscription-specific support request.
 
