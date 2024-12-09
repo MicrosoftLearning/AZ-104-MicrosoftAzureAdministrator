@@ -306,7 +306,7 @@ In this task, you will create Entra ID guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. From the left navigation pane in the Entra ID page,select **Overview**.
+1.  Search and select Entra ID page.
 1. Click **Manage tenants**.
 1. Check the box next to the first tenant , then select **Switch**.
 
