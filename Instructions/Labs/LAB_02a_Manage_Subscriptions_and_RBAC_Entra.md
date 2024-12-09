@@ -176,19 +176,19 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 In this task, you will create a Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Microsoft Entra ID**, click on **Users** under the **Manage** section of the left navigation pane, and then click **+ New user** > **Create New User**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**, click on **Users** under the **Manage** section of the left navigation pane. Click **+ New user** > **Create New User**.
 
    ![image](./media/l2-image19.png)
   
-1. Create a new user with the following settings (leave others with their defaults) and click on **Review + create**
+1. Create a new user with the following settings (leave others with their defaults) and click on **Review + create** (6)
 
     | Setting | Value |
     | --- | --- |
-    | User Principal name | **az104-02-aaduser1**|
-    | Display name | **az104-02-aaduser1**|
-    | Auto-generate password | unchecked |
-    | Password | **Provide a secure password** |
-    | Account enabled | **Checked** |
+    | User Principal name | **az104-02-aaduser1** (1)|
+    | Display name | **az104-02-aaduser1** (2)|
+    | Auto-generate password | unchecked (3) |
+    | Password | **Provide a secure password** (4) |
+    | Account enabled | **Checked** (5) |
 
     >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
 
@@ -216,7 +216,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
     
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
-    >**Note**: Rather than typing the user name, you can paste the content of Clipboard.
+    >**Note**: You can copy the username for the newly created user by navigating to the Microsoft Entra ID --> Users section.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the az104-02-aaduser1 user can see all resource groups.
  
@@ -270,7 +270,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
 
-1. Select **Activity Log > Quick Insight** > **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments. . 
+1. Select **Activity Log**  from the left navigation pane and click on **Quick Insights** from the list that appears and select **Role assignment**. The activity log can be filtered for specific operations and review the activites for role assignments.  
 
     ![image](./media/l2-image61.png)
 
@@ -308,7 +308,7 @@ In this task, you view the activity log to determine if anyone has created a new
    
 1. Select **Refresh** to verify that the subscription has successfully moved to the **Tenant Root management group**.
 
-1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
+1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**,click **Ok** in the pop-up that appears.
 
    >**Note**: If you are unable to delete the **management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **management group** and then delete the group make sure you also have the **Owner** permission on the **Tenant Root management group**.
 
