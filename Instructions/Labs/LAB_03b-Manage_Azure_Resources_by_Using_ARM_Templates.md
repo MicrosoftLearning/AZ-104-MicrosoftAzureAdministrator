@@ -171,7 +171,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
 
     ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-03b-rg1-[DID] -TemplateFile template.json -TemplateParameterFile parameters.json
+    New-AzResourceGroupDeployment -ResourceGroupName az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> -TemplateFile template.json -TemplateParameterFile parameters.json
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
@@ -204,7 +204,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
 
    ```sh
-    az deployment group create --resource-group az104-03b-rg1-[DID] --template-file template.json --parameters parameters.json
+    az deployment group create --resource-group az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> --template-file template.json --parameters parameters.json
     ```    
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
@@ -242,7 +242,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
     Replace [DID] with **<inject key="DeploymentID" enableCopy="false" />**
     ```
-    az deployment group create --resource-group az104-03b-rg1-[DID] --template-file azuredeploydisk.bicep
+    az deployment group create --resource-group az104-03b-rg1-<inject key="DeploymentID" enableCopy="false"/> --template-file azuredeploydisk.bicep
     ```
 
 1. Confirm the disk was created.
