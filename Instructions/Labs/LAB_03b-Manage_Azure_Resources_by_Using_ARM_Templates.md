@@ -29,7 +29,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. On the Disks page, select **Create**.
 
-1. On the **Create a managed disk** page, configure the disk and then select **Ok**. 
+1. On the **Create a managed disk** page, configure the disk and then select **Review + create (11)**. 
     
     | Setting | Value |
     | --- | --- |
@@ -39,10 +39,14 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
     | Availability zone | **No infrastructure redundancy required** (5) | 
     | Source type | **None** (6)|
-    | Size | **32 Gib** (7) |
-    | Performance | **Standard HDD** (change size) (8)|
+    | Size | Click on **chnage size (7)** link |
+    | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
+    
+    ![image](../media/az104-mod3-image1.png)
 
-   ![image](../media/az-104i0.2.png)
+    ![image](../media/az104-mod3-image2.png)
+
+    ![image](../media/az104-mod3-image3.png)
 
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
