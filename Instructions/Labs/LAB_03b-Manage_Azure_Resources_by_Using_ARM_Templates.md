@@ -50,7 +50,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
-1. Click **Review + Create** then select **Create**.
+1. Click **Create**.
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
 
@@ -155,7 +155,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
      ![image](../media/az104-mod3-image17.png)
 
-1. On mount storage account page, select **I want to create a storage account**. click on Next.
+1. On mount storage account page, select **I want to create a storage account**. click on **Next**.
 
     ![image](../media/az104-mod3-image18.png)
 
@@ -262,9 +262,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Close and reopen **Cloud Shell** in a **Bash** session.
 
-1. Locate the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
-
-1. Use the **Upload/Download files** option under Manage Files dropdown. Locate and upload Locate the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
+1. Use the **Managed files** option and select **Upload** from the dropdown. Locate and upload Locate the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
    ![image](../media/az10498.png)
 
@@ -279,8 +277,8 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Make the following changes:
 
    - Change the **managedDiskName** value to **az104-03b-disk5** .
-   - Change the **sku name** value to `StandardSSD_LRS`.
    - Change the **diskSizeinGiB** value to **32**.
+   - Change the **sku name** value to `StandardSSD_LRS`.
 
      ![image](../media/az-104i8.png)
 
