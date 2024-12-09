@@ -56,13 +56,21 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. In the **Automation** blade, select **Export template**. 
 
+    ![image](../media/az104-mod3-image8.png)
+
 1. Take a minute to review the **Template** and **Parameters** files.
 
 1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
 
-1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
+    ![image](../media/az104-mod3-image5.png)
 
-   >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
+1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder open the downloaded file and extra on your computer. Notice there are two JSON files (template and parameters). 
+    
+     ![image](../media/az104-mod3-image6.png)
+
+     ![image](../media/az104-mod3-image7.png)
+
+    >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
 ## Task 2: Edit an Azure Resource Manager template and then redeploy the template
 
