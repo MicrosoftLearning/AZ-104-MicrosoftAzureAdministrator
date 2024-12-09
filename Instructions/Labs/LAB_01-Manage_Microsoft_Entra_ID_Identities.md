@@ -77,7 +77,7 @@ In this task, you will create and configure Entra ID users.
     
       >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
-      ![](../Labs/media/lab1-image7.png)
+      ![image](../media/az104-mod3-image30.png)
     
  1. On  the **Properties** tab specify the following settings (leave others with their defaults):  
 
@@ -97,24 +97,21 @@ In this task, you will create and configure Entra ID users.
 
    ![](../Labs/media/lab1-image10.png)
 
-1. Review the options available in the **Manage** section and note that you can identify the Entra ID roles assigned to the user account as well as the user account's permissions to Azure resources.
+1. From the left navigation pane, click **Assigned roles**.
 
-1. In the **Manage** section, click **Assigned roles**.
-
-     ![](../Labs/Images/assignrole.png)
+     ![image](../media/az104-mod3-image31.png)
 
 1.  Then click **+ Add assignment** button and search and select **User administrator** role and click **Add** to assign role to **az104-01a-aaduser1**.
 
     >**Note**: You also have the option of assigning Entra ID roles when provisioning a new user.
 
-     ![](../Labs/media/lab1-image12.png)
+     ![image](../media/az104-mod3-image32.png)
      
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
    
 1. In the **InPrivate** browser window, in the Azure portal, search for and select **Microsoft Entra ID**.
-
       
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
@@ -153,11 +150,13 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Entra ID tenant and, in the **Manage** section, click **Licenses**.
 
-      ![](../Labs/Images/lic.png)    
+      ![image](../media/az104-mod3-image35.png) 
 
 1. Under **Manage** section click on **All products**. Notice the **Microsoft Entra ID P2** is listed and assigned to the odl user.
 
-    >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
+      ![image](../media/az104-mod3-image34.png)
+
+   >**Note**: Microsoft Entra ID P2 are required in order to implement dynamic groups.
     
     >**Note**: From here you can purchase a license, manage the licenses you have, and assign licenses to users and groups. Select **Licensed features** to see what is available.
     
@@ -190,9 +189,11 @@ In this task, you will create Azure Active Directory groups with assigned and dy
     | Operator | **Equals** |
     | Value | **Cloud Administrator** |
 
-   ![](../Labs/Images/addrule.png)    
+   ![image](../media/az104-mod3-image36.png) 
    
 1. Back on the **New Group** blade, click **Create**.
+
+    ![image](../media/az104-mod3-image38.png)
 
 1. Back on the **Groups - All groups** blade of the Entra ID tenant, click the **+ New group** button and create a new group with the following settings:
 
@@ -228,7 +229,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
     ![](../Labs/media/lab1-image17.png)
    
-1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+1. Back on the **Groups - All groups** blade, click the entry representing the **IT Cloud Administrators** group and, select **Members** blade. Verify that the **az104-01a-aaduser1** appears in the list of group members.
+
+     ![image](../media/az104-mod3-image39.png)
 
     >**Note**: You might experience delays with updates of the dynamic membership groups. To expedite the update, navigate to the group blade, display its **Dynamic membership rules** blade, **Edit** the rule listed in the **Rule syntax** textbox by adding whitespace at the end, and **Save** the change.
 
