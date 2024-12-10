@@ -96,12 +96,12 @@ In this task, you will create and configure an Azure Storage account.
 
       ![image](./media/l1-image6.png)
       
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="a2a7470f-6ebd-4f12-a4e5-2b80c67dda29" />
+      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+      
+      <validation step="a2a7470f-6ebd-4f12-a4e5-2b80c67dda29" />
 
 ### Task 2: Create and configure secure blob storage
 
