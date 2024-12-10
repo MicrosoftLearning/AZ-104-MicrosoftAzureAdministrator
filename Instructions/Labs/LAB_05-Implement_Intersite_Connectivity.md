@@ -131,7 +131,7 @@ In this task, you will configure local and global peering between the virtual ne
 
      ![Image](./Images/addpeering.png)
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add** (9):
+1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value|
     | --- | --- |
