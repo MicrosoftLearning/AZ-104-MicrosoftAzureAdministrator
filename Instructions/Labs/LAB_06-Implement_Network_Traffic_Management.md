@@ -144,8 +144,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Backend port | **80** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
-    | TCP reset | **Disabled** |
-    | Floating IP (direct server return) | **Disabled** |
+    | Enable TCP reset | **Disabled** |
+    | Enable Floating IP | **Disabled** |
     | Health probe | **Create new** |
     
 1. Click **create new** under **Health probe**, on the **Add load balancing rules** blade.
@@ -281,7 +281,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Rule name | **az104-06-appgw5-rl1** |
     | Priority | **10** |
     | Listener name | **az104-06-appgw5-rl1l1** |
-    | Frontend IP | **Public** |
+    | Frontend IP | **Public IPv4** |
     | Protocol | **HTTP** |
     | Port | **80** |
     | Listener type | **Basic** |
@@ -372,9 +372,23 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 <validation step="c5b0893d-fb8a-40ab-9566-65332fc9b45e" />
 
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Compare and contrast the Azure Load Balancer with the Azure Application Gateway. Help me decide in which scenarios I should use each product. 
++ What tools are available to troubleshoot connections to an Azure Load Balancer? 
++ What are the basic steps for configuring the Azure Application Gateway? Provide a high-level checklist. 
++ Create a table highlighting three Azure load balancing solutions. For each solution show supported protocols, routing policies, session affinity, and TLS offloading.
+
+## Learn more with self-paced training
+
++ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
++ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
+
 ## Key takeaways
 
-Congratulations on completing the lab. Here are the main takeaways for this lab.
+Congratulations on completing the lab. Here are the key points for this lab.
 
 + Azure Load Balancer is an excellent choice for distributing network traffic across multiple virtual machines at the transport layer (OSI layer 4 - TCP and UDP).
 + Public Load Balancers are used to load balance internet traffic to your VMs. An internal (or private) load balancer is used where private IPs are needed at the frontend only.
@@ -382,11 +396,6 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 + The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
-
-## Learn more with self-paced training
-
-+ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
-+ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
 
 ### Review
 In this lab, you have completed:
