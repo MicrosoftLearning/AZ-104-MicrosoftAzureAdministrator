@@ -144,8 +144,8 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Backend port | **80** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | **4** |
-    | TCP reset | **Disabled** |
-    | Floating IP (direct server return) | **Disabled** |
+    | Enable TCP reset | **Disabled** |
+    | Enable Floating IP | **Disabled** |
     | Health probe | **Create new** |
     
 1. Click **create new** under **Health probe**, on the **Add load balancing rules** blade.
@@ -281,7 +281,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Rule name | **az104-06-appgw5-rl1** |
     | Priority | **10** |
     | Listener name | **az104-06-appgw5-rl1l1** |
-    | Frontend IP | **Public** |
+    | Frontend IP | **Public IPv4** |
     | Protocol | **HTTP** |
     | Port | **80** |
     | Listener type | **Basic** |
