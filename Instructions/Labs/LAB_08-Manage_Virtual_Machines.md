@@ -18,8 +18,6 @@ In this lab, you will complete the following tasks:
 
 ![](../Labs/Images/az104-lab08-vm-architecture.png)
 
-## Exercise 1
-
 ### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal 
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
@@ -255,7 +253,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Boot diagnostics | **Disable** |
 
 1. Click **Next : Health >**.
-3
+
 1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
 1. On the **Advanced** tab, click **Review + create**.
