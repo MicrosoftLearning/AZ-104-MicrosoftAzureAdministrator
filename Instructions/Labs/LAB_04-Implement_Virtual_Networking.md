@@ -83,7 +83,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select **Build your own template in the editor** and then **Load file** in the top navigation pane.
 
-    ![image](../media/az104-1.png)
+    ![image](../media/az101-1.png)
 
 1. Select the **az-104-04template.json** file, then select **Save**.
 
