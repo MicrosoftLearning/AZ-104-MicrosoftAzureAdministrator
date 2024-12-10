@@ -144,9 +144,9 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1** (7)|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
    
-      ![Image](./Images/az-104-3.png)
+   ![Image](./Images/az-104-3.png)
 
-      ![Image](./Images/az-104-5.png)
+   ![Image](./Images/az-104-6.png)
     
       >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
 
