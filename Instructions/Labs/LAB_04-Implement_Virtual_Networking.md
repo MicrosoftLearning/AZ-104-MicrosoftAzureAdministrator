@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 ## Exercise 1: Create and configure a virtual network
 
-## Task 1: Create a virtual network with subnets using the portal
+### Task 1: Create a virtual network with subnets using the portal
 
 The organization plans a large amount of growth for core services. In this task, you create the virtual network and the associated subnets to accommodate the existing resources and planned growth. In this task, you will use the Azure portal. 
 
@@ -65,27 +65,29 @@ The organization plans a large amount of growth for core services. In this task,
    
 1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
    
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+    
+    <validation step="3a2d8eeb-5292-4449-9459-ec4e7aca9f8d" />
 
-<validation step="3a2d8eeb-5292-4449-9459-ec4e7aca9f8d" />
-
-## Task 2: Create a virtual network and subnets using a template
+### Task 2: Create a virtual network and subnets using a template
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
 1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named 
    **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
-1. In the Azure portal, search for and select **Deploy a custom template**.
+1. In the Azure portal, search for and select **Deploy a custom template** resource.
 
-1. Select **Build your own template in the editor** and then **Load file**.
+1. Select **Build your own template in the editor** and then **Load file** in the top navigation pane.
+
+    ![image](../media/az104-1.png)
 
 1. Select the **az-104-04template.json** file, then select **Save**.
 
-1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** fille and subsequently, click on **Save**
+1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** file and subsequently, click on **Save**
 
 1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group.
     
@@ -95,20 +97,20 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
    
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+  
+  <validation step="1d12c35d-eeac-45a9-97f4-c0c07b7aff9f" />
 
-<validation step="1d12c35d-eeac-45a9-97f4-c0c07b7aff9f" />
-
-## Task 3: Create and configure communication between an Application Security Group and a Network Security Group
+### Task 3: Create and configure communication between an Application Security Group and a Network Security Group
 
 In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. The NSG will also have an outbound rule that denies access to the internet. 
 
 ### Create the Application Security Group (ASG)
 
-1. In the Azure portal, search for and select `Application security groups`.
+1. In the Azure portal, search for and select **Application security groups**.
 
 1. Click **Create** and provide the basic information.
 
@@ -125,7 +127,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### Create the Network Security Group and associate it with the ASG subnet
 
-1. In the Azure portal, search for and select `Network security groups`.
+1. In the Azure portal, search for and select **Network security groups**.
 
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
@@ -153,7 +155,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### Configure an inbound security rule to allow ASG traffic
 
-1. Continue working with your NSG. In the **Settings** area, select **Inbound security rules**.
+1. Continue working with your NSG. In the left navigation pane in the **Settings** section, select **Inbound security rules**.
 
 1. Review the default inbound rules. Notice that only other virtual networks and load balancers are allowed access.
 
@@ -173,13 +175,13 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Protocol | **TCP** (7) |
     | Action | **Allow** (8) |
     | Priority | **100** (9) |
-    | Name | `AllowASG` (10) |
+    | Name | **AllowASG** (10) |
 
     ![image](../media/l4i10.png)
  
 ### Configure an outbound NSG rule that denies Internet access
 
-1. After creating your inbound NSG rule, select **Outbound security rules**. 
+1. After creating your inbound NSG rule, select **Outbound security rules** from the left navigation pane. 
 
 1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
 
@@ -205,15 +207,15 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 <validation step="0dc2eabf-2ff0-4f74-990f-82cb1f0dfb93" />
 
-## Task 4: Configure public and private Azure DNS zones
+### Task 4: Configure public and private Azure DNS zones
 
-In this task, you will create and configure public and private DNS zones. 
+In this task, you will create and configure public and private DNS zones resource. 
 
 ### Configure a public DNS zone
 
 You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
 
-1. In the portal, search for and select `DNS zones`.
+1. In the Azure portal, search for and select **DNS zones**.
 
 1. Select **+ Create**.
 
@@ -232,7 +234,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. On the **Overview** blade select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **Overview** blade  select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
 
     ![image](../media/l4i12.png)
 
@@ -241,7 +243,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Property | Value    |
     |:---------|:---------|
     | Name | **www** |
-    | Type | **A - Address record** |
+    | Type | **A - IPv4 Address records** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
@@ -265,7 +267,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
 
-1. In the portal, search for and select `Private dns zones`.
+1. In the portal, search for and select **Private dns zones** resource.
 
 1. Select **+ Create**.
 
@@ -275,7 +277,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Name | `private.contoso.com` (adjust if you had to rename) |
+    | Name | `private.contoso.com` (adjust if you have to rename) |
     | Region | **<inject key="Region" enableCopy="false" />** |
 
 1. Select **Review create** and then **Create**.
@@ -284,12 +286,12 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Under **DNS Management**, select **Virtual network links** from the left navigation pane and then select **+ Add**.
+1. In the left navigation pane under **DNS Management**, select **Virtual network links** from the left navigation pane and then select **+ Add**.
 
     | Property | Value    |
     |:---------|:---------|
-    | Link name | `manufacturing-link` |
-    | Virtual network | `ManufacturingVnet` |
+    | Link name | **manufacturing-link**|
+    | Virtual network |**ManufacturingVnet**|
 
 1. Select **Create** and wait for the link to create. 
 
