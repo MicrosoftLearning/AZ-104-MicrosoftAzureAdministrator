@@ -133,7 +133,6 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add** (9):
 
-
     | Setting | Value|
     | --- | --- |
     | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** (1) |
@@ -145,30 +144,29 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet0_to_az104-05-vnet1** (7)|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
    
-     ![Image](./Images/az-104-3.png)
+      ![Image](./Images/az-104-3.png)
 
-     ![Image](./Images/az-104-5.png)
+      ![Image](./Images/az-104-5.png)
     
-    >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
+      >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
 
-    >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
+      >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
-    >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
+      >**Note**: In case you run into an issue with the Azure portal interface not displaying the virtual networks created in the previous task, you can configure peering by running the following PowerShell commands from Cloud Shell:
 
-    >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+      >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
   
+       ```powershell
+       $rgName = 'az104-05-rg0-Deployment-id'
     
-   ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
-
-   $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
-
-   $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
-
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet0_to_az104-05-vnet1' -VirtualNetwork $vnet0 -RemoteVirtualNetworkId $vnet1.Id
-
-   Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet0' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet0.Id
-   ``` 
+       $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
+    
+       $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
+    
+       Add-AzVirtualNetworkPeering -Name 'az104-05-vnet0_to_az104-05-vnet1' -VirtualNetwork $vnet0 -RemoteVirtualNetworkId $vnet1.Id
+    
+       Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet0' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet0.Id
+       ``` 
 
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
