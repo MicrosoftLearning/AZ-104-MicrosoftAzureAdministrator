@@ -221,7 +221,6 @@ In this task, you will configure local and global peering between the virtual ne
     | Local Peering link name | **az104-05-vnet1_to_az104-05-vnet2** (7)|
     | Local virtual network peering settings | **Ensure only the first three boxes are checked** (8)|
 
-
     >**Note**: You can ignore the warning stating that the vnet does not have a routing gateway.
  
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
@@ -230,18 +229,18 @@ In this task, you will configure local and global peering between the virtual ne
 
     >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
     
-    
-     ```powershell
-     $rgName = 'az104-05-rg0-Deployment-id'
+
+ ```powershell
+ $rgName = 'az104-05-rg0-Deployment-id'
   
-     $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
+ $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
   
-     $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
+ $vnet2 = Get-AzVirtualNetwork -Name 'az104-05-vnet2' -ResourceGroupName $rgname
   
-     Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
+ Add-AzVirtualNetworkPeering -Name 'az104-05-vnet1_to_az104-05-vnet2' -VirtualNetwork $vnet1 -RemoteVirtualNetworkId $vnet2.Id
   
-     Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
-     ``` 
+ Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
+ ``` 
    
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
