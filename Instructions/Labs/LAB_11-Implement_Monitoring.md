@@ -22,11 +22,13 @@ In this lab, you will complete the following tasks:
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. From the Azure portal, search for and select **Deploy a custom template**.
+1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
+
+   ![image](./media/az-104p1.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
-1. On the edit template page, select **Load file**.
+1. On the edit template page, select **Load file** option.
 
 1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\11\az104-11-vm-template.json** file and select **Open**.
 
@@ -52,7 +54,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
-1. In the portal, search for and select **Monitor**.
+1. In the portal, search for and select **Monitor** resource.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -104,7 +106,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Next: Actions >**, and select **Use action groups** check box and then select **+ Create action group**.
+1. Continue working on your alert. Select **Next: Actions >**, and click on **Create Action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -129,9 +131,11 @@ In this task, if the alert is triggered send an email notification to the operat
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
+1. Click on the the **Edit** icon next to the email entry.
 
-   ![image](../media/l11i10.png)
+   ![image](../media/az-104l1.png)
+
+1. In the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
 
    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
@@ -157,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 >**Note:** If you delete the virtual machine before the alert rule deploys, the alert rule might not be triggered. 
 
-1. In the portal, search for and select **Virtual machines**.
+1. In the portal, search for and select **Virtual machines** resource.
 
 1. Check the box for the **az104-11-vm0** virtual machine.
 
@@ -165,7 +169,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![image](../media/l11i11.png)
 
-1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resources to be deleted and select **Delete**. 
+1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resource to be deleted and select **Delete**. 
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -232,7 +236,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-1. In the Azure portal, search for and select `Monitor` blade, click **Logs**.
+1. In the Azure portal, search for and select `Monitor` blade, click **Logs** from the left navigation pane.
 
 1. If necessary close the splash screen. 
 
