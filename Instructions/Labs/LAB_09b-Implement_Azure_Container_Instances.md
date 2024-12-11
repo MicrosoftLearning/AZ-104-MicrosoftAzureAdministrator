@@ -33,7 +33,7 @@ In this task, you will create a new container instance for the web application.
     | Subscription | Leave it as default |
     | Resource group | Select **az104-09b-rg1** |
     | Container name | **az104-9b-c1** |
-    | Region |  |
+    | Region | **<inject key="Region" enableCopy="false" />** |
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
