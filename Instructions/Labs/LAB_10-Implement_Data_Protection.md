@@ -282,7 +282,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     
 1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-10-rsv2**. You may need to **Refresh** the page. 
 
-1. In the **Protected items** section, select **Replicated items**.
+1. From the left navigation pane, in the **Protected items** section, select **Replicated items**.
 
 1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
 
