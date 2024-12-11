@@ -131,7 +131,7 @@ In this task, if the alert is triggered send an email notification to the operat
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Click on the the **Edit** icon next to the email entry.
+1. Click on the **Edit** icon next to the email entry.
 
    ![image](../media/az-104l1.png)
 
