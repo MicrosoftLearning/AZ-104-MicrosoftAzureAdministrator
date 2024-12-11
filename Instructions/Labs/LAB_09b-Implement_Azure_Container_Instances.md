@@ -17,8 +17,6 @@ In this lab, you will complete the following tasks:
 
 ![Diagram of the tasks.](./media/az104-lab09b-aci-architecture.png)
 
-## Exercise 1
-
 ### Task 1: Deploy an Azure Container Instance using a Docker image
 In this task, you will create a new container instance for the web application.
 
@@ -32,28 +30,28 @@ In this task, you will create a new container instance for the web application.
 
     | Setting | Value |
     | ---- | ---- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
+    | Subscription | Leave it as default |
     | Resource group | Select **az104-09b-rg1** |
     | Container name | **az104-9b-c1** |
-    | Region | the name of a region where you can provision Azure container instances |
+    | Region |  |
     | Image Source | **Quickstart images** |
     | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
 
-    ![image](./media/l9-image23.png)
+    ![image](./media/az-104z1.png)
 
-1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values):
+1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and  click on **Next: Monitoring >**:
 
     | Setting | Value |
     | --- | --- |
     | DNS name label | any valid, globally unique DNS hostname |
 
-    ![image](./media/l9-image24.png)
+    ![image](./media/az-104z2.png)
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Click **Next: Monitoring >** and uncheck **Enable container instance logs**. 
+1. Uncheck **Enable container instance logs**. 
 
-1. Click **Next: Advanced >**, review the settings on the **Advanced** tab of the **Create container instance** blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+1. Click **Next: Advanced** review the settings on the Advanced tab of the Create container instance blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
 
