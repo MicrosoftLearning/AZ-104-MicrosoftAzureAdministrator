@@ -31,11 +31,13 @@ In this lab, you will complete the following tasks:
 ### Task 1: Provision the lab environment
 In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
 
-1. In the Azure portal search for and select `Deploy a custom template`.
+1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
+
+   ![image](./media/az-104p1.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
-1. On the edit template page, select **Load file**.
+1. On the edit template page, select **Load file** option  from the top navigation pane.
 
 1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-template.json** file and select **Open**.
 
@@ -43,7 +45,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
 1. **Save** your changes.
 
-1. Select **Edit parameters** and then **Load file**.
+1. Select **Edit parameters** and then select the **Load file** option.
 
 1. Load and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** file.
 
@@ -53,7 +55,7 @@ In this task, you will deploy two virtual machines that will be used to test dif
 
     | Setting       | Value         | 
     | ---           | ---           |
-    | Subscription  | Your Azure subscription |
+    | Subscription  | Leave it as the default subscription |
     | Resource group| az104-10-rg1  |
     | Region        | **<inject key="Region" enableCopy="false"/>**    |
     | Admin Password      | Provide a complex password |
@@ -90,7 +92,7 @@ In this task, you will create a recovery services vault.
 
 1. When the deployment is completed, click **Go to Resource**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, in the **Settings** section, click **Properties**.
+1. On the **az104-10-rsv1** Recovery Services vault blade, in the left navigation pane in the  **Settings** section, click **Properties**.
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
 
@@ -101,6 +103,8 @@ In this task, you will create a recovery services vault.
     >**Note**: This setting can be configured only if there are no existing backup items.
 
 1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
+
+   ![image](./media/az-104p2.png)
 
 1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
@@ -129,10 +133,12 @@ In this task, you will implement Azure virtual-machine level backup.
     | Where is your workload running? | **Azure** |
     | What do you want to backup? | **Virtual machine** |
 
-1. On the **Backup Goal** blade, click **Backup**.
+1. Under **Configure Backup** , click **Backup**.
 
 1. On **Configure backup** in Policy sub type click **Standard** review the options.
-   
+
+   ![image](./media/az-104p3.png)
+
 1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
 1. Define a new backup policy with the following settings (leave others with their default values):
@@ -145,7 +151,11 @@ In this task, you will implement Azure virtual-machine level backup.
     | Timezone | the name of your local time zone |
     | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
-1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
+1. Click **OK** to create the policy.
+  
+1. In the **Virtual Machines** section, select **Add**.
+
+   ![image](./media/az-104p4.png)
 
 1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and, back on the **Backup** blade, click **Enable backup**.
 
@@ -153,13 +163,15 @@ In this task, you will implement Azure virtual-machine level backup.
 
 1. Once deployment finish click on **Go to Resouces**.
    
-1. Navigate back to the **az104-10-rsv1** Recovery Services vault blade, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
+1. From the left navigation pane, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
 1. On the **Backup Items (Azure Virtual Machine)** blade, select the View details link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
-    >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
+    ![image](./media/az-104p5.png)
+
+   >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
 ## Task 4: Monitor Azure Backup
 
@@ -190,7 +202,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. From the left navigation pane,select **Diagnostic Settings** under monitoring and then select **Add diagnostic setting**.
 
-1. Name the setting `Logs and Metrics to storage`.
+1. Name the setting **Logs and Metrics to storage**.
 
 1. Place a checkmark next to the following log and metric categories:
 
@@ -201,9 +213,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     - **Azure Site Recovery Events**
     - **Health**
 
-1. In the Destination details, place a checkmark next to **Archive to a storage account**.
+     ![image](./media/az-104p6.png)
 
-1. In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
+1. In the Destination details, place a checkmark next to **Archive to a storage account**.In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
+
+    ![image](./media/az-104p7.png)
 
 1. Select **Save**.
 
@@ -228,7 +242,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     | Settings | Value |
     | --- | --- |
-    | Subscription | the name of your Azure subscription |
+    | Subscription | Leave it as the default subscription |
     | Resource group |az104-10-rg1     |
     | Vault Name | **az104-10-rsv2**  |
     | Region | **West US 3** |
@@ -239,9 +253,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
 
-1. Search for and select the `az104-10-vm0` virtual machine.
+1. In the Azure portal, search for and select the **Virtual Machine** resource and select the  **az104-10-vm0** virtual machine.
 
-1. In the **Backup + disaster recovery** blade, select **Disaster recovery**. 
+1. From the left navigation pane,in the **Backup + disaster recovery** blade, select **Disaster recovery**. 
 
 1. On the **Basics** tab, notice the **Target region**.
 
@@ -249,12 +263,14 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
 
-1. In **Storage settings** select **Show details**.
+1. In **Storage settings** select **Show details**.Make sure the following details are given: 
 
     | Setting | Value |
     | ---- | ---- |
     | Churn for the vm | **Normal churn**  |
     | Cache storage account | **storage<inject key="DeploymentID" enableCopy="false"/>**  |
+
+     ![image](./media/az-104p8.1.png)
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
