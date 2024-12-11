@@ -19,8 +19,6 @@ In this lab, you will complete the following tasks:
 
 ![Diagram of the tasks.](./media/az104-lab09a-architecture.png)
 
-## Exercise 1
-
 ### Task 1: Create an Azure web app
 In this task, you will create an Azure web app.
 
