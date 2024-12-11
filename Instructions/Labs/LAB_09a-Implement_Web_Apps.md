@@ -30,7 +30,7 @@ In this task, you will create an Azure web app.
 
    ![image](./media/l9-image2.png)
    
-1. On the **Basics** tab , specify the following settings (leave others with their default values):
+1. On the **Basics** tab, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | ---|
@@ -60,9 +60,11 @@ In this task, you will create a staging deployment slot.
 
    ![image](./media/l9-image4.png)
 
+   >**Note**: While navigating to the link if you get an error,kindly try refreshing the browser window.
+ 
    >**Note**: Please copy the URL and save it in Notepad. You may need this link for Task 5.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the web app blade, click **Deployment slots**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots**.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
@@ -91,7 +93,7 @@ In this task, you will create a staging deployment slot.
 
 In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
-1. In the staging slot, select **Deployment Center** and then select **Settings**.
+1. In the staging slot, select **Deployment Center** from the left navigation pane  and then select **Settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
     
@@ -115,7 +117,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
     ![image](./media/l9-image9.png)
    
->**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
+    >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
 ### Task 4: Swap the staging slots
 In this task, you will swap the staging slot with the production slot.
@@ -158,8 +160,10 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. On **Create a load testing resource** blade specify the following:
 
-    + Select **+ Create** and give your load test name as **loadtest<inject key="DeploymentID" enableCopy="false" />**. The name must be unique.
-    + Select **Review + create** and then **Create**.
+    + Select **+ Create**  and leave the subscription (1) and resource group (2) option as default.
+    + Give your load test name as **loadtest<inject key="DeploymentID" enableCopy="false" />** (3). The name must be unique.
+    + Leave the region as default.(4)
+    + Select **Review + create** (5) and then **Create**.
 
      ![image](./media/l9-image17.png)
    
