@@ -8,12 +8,6 @@ demo:
 
 ## Configure Entra ID Identities
 
-This area does not have a formal demonstration. Consider walking through the interactive lab simulation for student Lab 01. 
-
-[Interactive Lab Simulation Lab 01](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)
-
-Alternatively, you could use one of these QuickStarts. 
-
 **Reference**: [Quickstart - Create a group with members and view all groups and members](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-view-azure-portal)
 
 ## Configure User and Group Accounts
