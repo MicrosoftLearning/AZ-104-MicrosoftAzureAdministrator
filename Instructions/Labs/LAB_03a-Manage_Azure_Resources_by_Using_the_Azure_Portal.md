@@ -1,4 +1,4 @@
-# Lab 3a - Manage Azure resources by Using the Azure Portal
+# Lab 3a - Manage Azure resources by Using the Azure Portal-not in use
 
 ## Lab scenario
 You need to explore the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups, including moving resources between resource groups. You also want to explore options for protecting disk resources from being accidentally deleted, while still allowing for modifying their performance characteristics and size.
