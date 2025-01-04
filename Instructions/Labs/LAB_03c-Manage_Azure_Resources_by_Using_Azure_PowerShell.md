@@ -1,4 +1,4 @@
-# Lab 3c - Manage Azure resources by Using Azure PowerShell
+# Lab 3c - Manage Azure resources by Using Azure PowerShell-not in use
 ## Lab scenario
 Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal and Azure Resource Manager templates, you need to carry out the equivalent task by using Azure PowerShell. To avoid installing Azure PowerShell modules, you will leverage the PowerShell environment available in Azure Cloud Shell.
 
