@@ -1,20 +1,8 @@
-# Lab 02b - Manage Governance via Azure Policy
+# Lab 02: Manage Subscriptions,RBAC and Governance
 
-## Lab introduction
+## Overview
 
-In this lab, you learn how to implement your organization’s governance plans. You learn how Azure policies can ensure operational decisions are enforced across the organization. You learn how to use resource tagging to improve reporting. 
-
-## Lab scenario
-
-Your organization's cloud footprint has grown considerably in the last year. During a recent audit, you discovered a substantial number of resources that do not have a defined owner, project, or cost center. In order to improve management of Azure resources in your organization, you decide to implement the following functionality:
-
-- apply resource tags to attach important metadata to Azure resources
-
-- enforce the use of resource tags for new resources by using Azure policy
-
-- update existing resources with resource tags
-
-- use resource locks to protect configured resources
+In this lab, you will implement management groups to organize your Azure subscriptions for centralized governance and access control. You'll create custom RBAC roles to define specific permissions, ensuring users only access needed resources.These roles will be assigned based on job responsibilities to enforce security and compliance. Finally, you'll use the Activity Log to monitor role assignments, track changes, and ensure adherence to access control policies.
 
 ## Interactive lab simulations
 
@@ -34,14 +22,13 @@ In this lab, you will complete the following tasks:
 + Task 3: Apply tagging via an Azure Policy.
 + Task 4: Configure and test resource locks. 
 
-## Estimated timing: 60 minutes
+## Exercise 2: Manage Governance via Azure_Policy
 
-## Architecture diagram
-
-![Diagram of the task architecture.](./media/az104-lab02b-architecture.png)
+In this exercise, you will learn to manage governance via Azure Policy that involves defining and enforcing rules that govern the resources in your Azure environment to ensure compliance with organizational standards.
 
 ### Task 1: Assign tags via the Azure portal
-In this task, you will create and assign a tag to an Azure resource group via the Azure portal.
+
+In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104T02** from the list.
 
@@ -57,7 +44,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
    ![image](./media/l2-image27.png)
    
 ### Task 2: Enforce tagging via an Azure policy
-In this task, you will assign the built-in *Require a tag and its value on resources* policy to the resource group and evaluate the outcome. 
+
+In this task, you will explore how to enforce governance policies by assigning the built-in Require a tag and its value on resources policy to a specific Azure resource group. This policy ensures that all resources created within the resource group are tagged with a predefined key-value pair, promoting consistency and compliance with organizational standards.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Policy**, and then select **Policy** under services.
 
@@ -136,7 +124,8 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     >**Note**: You can find more details about the error, including the name of the role definition **Require Role tag with Infra value**. The deployment failed because the storage account you attempted to create did not have a tag named **Role** with its value set to **Infra**.
 
 ### Task 3: Apply tagging via an Azure policy
-In this task, we will use a different policy definition to remediate any non-compliant resources. 
+
+In this task, you will focus on identifying and remediating non-compliant resources by leveraging a different Azure Policy definition. Non-compliant resources are those that do not meet the criteria defined in your organization's governance policies, such as missing mandatory tags or violating security configurations. 
 
 1. In the Azure portal, search for and select **Policy**. 
 
@@ -232,7 +221,7 @@ In this task, we will use a different policy definition to remediate any non-com
 
 ## Task 4: Configure and test resource locks
 
-In this task, you configure and test a resource lock. Locks prevent either deletions or modifications of a resource. 
+In this task, you will configure and test a resource lock to safeguard critical Azure resources from unintended changes or deletions. Resource locks are a powerful governance feature in Azure.
 
 1. Search for and select your resource group **AZ-104T02**.
    
@@ -262,12 +251,13 @@ In this task, you configure and test a resource lock. Locks prevent either delet
    ![image](./media/l2-image65.png)
 
 ### Review
+
 In this lab, you have completed:
 
-- Create and assign tags via the Azure portal.
-- Enforce tagging via an Azure Policy.
-- Apply tagging via an Azure Policy.
-- Configure and test resource locks.
+- Created and assigned tags to resource groups using the Azure portal.
+- Enforced tagging compliance by assigning an Azure Policy.
+- Applied tagging to resources automatically using Azure Policy.
+- Configured and validated resource locks to prevent accidental changes or deletions.
 
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
