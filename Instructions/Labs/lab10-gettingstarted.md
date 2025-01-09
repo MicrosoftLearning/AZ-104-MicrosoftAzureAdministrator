@@ -1,4 +1,56 @@
-# Getting Started with Your AZ-104: Microsoft Azure Administrator Workshop
+# AZ-104: Microsoft Azure Administrator Workshop
+
+Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
+
+# Lab 10 - Implement Data Protection
+
+### Overall Estimated Duration: 50 minutes
+
+## Overview
+
+In this lab, you learn how to implement data protection in Azure by focusing on backup and disaster recovery solutions. You provision infrastructure by deploying virtual machines, create a Recovery Services vault to manage backup data, and configure Azure virtual machine-level backup using customized policies. You monitor Azure Backup to track job statuses and enable replication for disaster recovery using Azure Site Recovery.
+
+## Objective
+
+In this lab, you will complete tasks related to backing up and recovering Azure virtual machines, as well as configuring disaster recovery using Azure Site Recovery.
+
+1. **Provision Infrastructure**: Deploy virtual machines for testing backup and recovery scenarios.
+
+2. **Create and Configure Recovery Services Vault**: Set up a Recovery Services vault to manage backup and recovery operations for Azure virtual machines. 
+
+3. **Implement Azure Virtual Machine-Level Backup**: Configure backup policies for Azure virtual machines and perform a backup operation.
+
+4. **Enable Virtual Machine Replication for Disaster Recovery**: Set up and enable virtual machine replication using Azure Site Recovery to protect against potential disasters.
+
+## Pre-requisites
+
+Basic understanding of backup and disaster recovery concepts: Awareness of backup policies, data protection strategies, and disaster recovery solutions.
+
+## Architecture
+
+1. **Configuring Azure Backup**: Creating and configuring backup policies to define backup frequency, retention, and recovery options.
+
+2. **Enabling Azure Virtual Machine Backup**: Monitoring the backup status and ensuring that backup jobs are successfully completed.
+
+3. **Restoring Data**: Testing the backup process by initiating a restore operation for Azure VMs, ensuring that data can be recovered from the backup points.
+
+4. **Implementing Disaster Recovery**: Performing a failover operation to test the disaster recovery setup, ensuring business continuity in case of a failure.
+
+## Architecture diagram
+
+![Diagram of the architecture tasks.](./media/az104-lab10-architecture.png)
+
+## Explanation of Components
+
+1. **Azure Recovery Services Vault**: A management entity in Azure that stores recovery data, such as backups and replication data.
+
+2. **Backup Policies**: Define the rules and schedules for automating the backup process.
+
+3. **Azure Site Recovery (ASR)**: A disaster recovery solution that ensures business continuity by replicating workloads across different Azure regions or on-premises to Azure.
+
+4. **Recovery Points**: Snapshots or versions of your data captured during a backup.They act as checkpoints from which you can restore a VM or its data in case of data loss or corruption.
+
+# Getting Started with the Lab
  
 Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
  
@@ -24,6 +76,12 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ![Use the Split Window Feature](../media/split.png)
  
+## Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+
+![Use the Split Window Feature](./media/gs4.png)
+
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
@@ -70,11 +128,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
-     ![](./media/gettingstarted-new-2.png)  
+     ![](./media/gettingstarted-new-2.png)   
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
+
+In this hands-on lab, you'll learn to manage identity and access using Microsoft Entra ID, including creating and configuring users, groups, and tenants, and managing guest users. This will equip you with essential skills to efficiently handle identity and access in Azure.
 
 ## Support Contact
 
@@ -88,3 +148,5 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Now, click on Next from the lower right corner to move on to the next page.
    
 ## Happy Learning!!
+
+
