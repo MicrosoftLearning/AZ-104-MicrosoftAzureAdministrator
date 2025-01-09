@@ -1,5 +1,7 @@
 # AZ-104: Microsoft Azure Administrator Workshop
 
+# Lab 01- Manage Microsoft Entra ID Identities
+
 ### Overall Estimated Duration: 30 minutes
 
 ## Overview
