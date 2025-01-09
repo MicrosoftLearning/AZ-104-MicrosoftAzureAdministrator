@@ -1,6 +1,6 @@
 # Lab 02: Manage Subscriptions,RBAC and Governance
 
-## Overview
+## Lab Overview
 
 In this lab, you will implement management groups to organize your Azure subscriptions for centralized governance and access control. You'll create custom RBAC roles to define specific permissions, ensuring users only access needed resources.These roles will be assigned based on job responsibilities to enforce security and compliance. Finally, you'll use the Activity Log to monitor role assignments, track changes, and ensure adherence to access control policies.
 
