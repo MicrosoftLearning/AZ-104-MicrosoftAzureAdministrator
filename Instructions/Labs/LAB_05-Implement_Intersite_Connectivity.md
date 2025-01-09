@@ -1,6 +1,8 @@
 # Lab 05 - Implement Intersite Connectivity
-## Lab scenario
-Contoso has its data centers in Boston, New York, and Seattle offices connected via mesh wide-area network links, with full connectivity between them. You need to implement a lab environment that will reflect the topology of Contoso's on-premises networks and verify its functionality.
+
+## Lab Overview
+ 
+ In this lab, you will set up and configure a virtual network, create subnets to organize resources, and implement network security through Network Security Groups (NSGs). 
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -9,16 +11,13 @@ In this lab, you will complete the following tasks:
 + Task 3: Configure local and global virtual network peering.
 + Task 4: Test intersite connectivity.
 + Task 5: Create a custom route.
-
-## Estimated timing: 60 minutes
-
-## Architecture diagram
-
- ![image](../media/lab05.png)
  
 ## Exercise 1: Configure local and global virtual network peering
 
+   Configure local and global virtual network peering to enable secure communication between Azure VNets, both within the same region (local) and across different regions (global).
+
 ### Task 1: Provision the lab environment
+
 In this task, you will deploy three virtual machines, each into a separate virtual network, with two of them in the same Azure region and the third one in another Azure region.
    
 1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
@@ -82,9 +81,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. Close the Cloud Shell pane.
 
-
 ## Task 2: Use Network Watcher to test the connection between virtual machines 
-
 
 In this task, you verify that resources in peered virtual networks can communicate with each other. Network Watcher will be used to test the connection. Before continuing, ensure both virtual machines have been deployed and are running. 
 
@@ -109,7 +106,6 @@ In this task, you verify that resources in peered virtual networks can communica
     ![Azure Portal showing Connection Troubleshoot settings.](./Images/az-104-2.png)
 
     >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
-
 
 ### Task 3: Configure local and global virtual network peering
 
@@ -379,14 +375,14 @@ In this task, you want to control network traffic between the perimeter subnet a
      >**Note**: You have created a user-defined route to direct traffic from the DMZ to the new NVA.  
 
 ### Review
-In this lab, you have completed:
-+ Provisioned the lab environment
-+ Use Network Watcher to test the connection between virtual machines
-+ Configured local and global virtual network peering
-+ Tested intersite connectivity
-+ Create a custom route 
 
-### You have successfully completed the lab
+In this lab, you have completed the following:
+
+- Provisioned the lab environment, setting up the necessary resources for the network configuration.
+- Utilized Network Watcher to test and troubleshoot the connection between virtual machines, ensuring proper network communication.
+- Configured both local and global virtual network peering, enabling seamless communication between Azure VNets within the same region (local) and across different regions (global).
+- Tested intersite connectivity to verify that communication is established between virtual networks in different locations.
+- Created a custom route to control network traffic flow, optimizing the routing of data between various subnets and resources.
 
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
@@ -411,3 +407,5 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure.
 + System defined routes are automatically created for each subnet in a virtual network. User-defined routes override or add to the default system routes. 
 + Azure Network Watcher provides a suite of tools to monitor, diagnose, and view metrics and logs for Azure IaaS resources.
+
+### You have successfully completed the lab
