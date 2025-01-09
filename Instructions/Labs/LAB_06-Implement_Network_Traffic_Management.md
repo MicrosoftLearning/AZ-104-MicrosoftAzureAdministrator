@@ -1,11 +1,8 @@
 # Lab 06 - Implement Traffic Management
 
-## Lab introduction
+## Lab Overview
 
-In this lab, you learn how to configure and test a public Load Balancer and an Application Gateway.
-
-## Lab scenario
-You were tasked with testing managing network traffic targeting Azure virtual machines in the hub and spoke network topology, which Contoso is considering implementing in its Azure environment (instead of creating the mesh topology, which you tested in the previous lab). This testing needs to include implementing connectivity between spokes by relying on user defined routes that force traffic to flow via the hub, as well as traffic distribution across virtual machines by using layer 4 and layer 7 load balancers. For this purpose, you intend to use Azure Load Balancer (layer 4) and Azure Application Gateway (layer 7).
+In this lab, you will learn to configure and manage Azure resources, including Virtual Networks, Load Balancers, Virtual Machines, and Network Security Groups, to create a secure and scalable infrastructure.
 
 ## Interactive lab simulations
 
@@ -21,12 +18,9 @@ In this lab, you will complete the following tasks:
 + Task 2: Configure an Azure Load Balancer.
 + Task 3: Configure an Azure Application Gateway.
 
-## Estimated timing: 60 minutes
-
-## Architecture diagram
-![Diagram of the lab tasks.](./media/az104-lab06-lb-architecture.png)
-
 ## Excercise 1: Implement Traffic Management
+
+In this exercise, you will configure and implement Azure Traffic Manager to manage traffic distribution across multiple Azure resources for high availability and performance.
 
 ## Task 1: Use a template to provision an infrastructure
 
@@ -83,6 +77,7 @@ In this task, you will use a template to deploy one virtual network, one network
     >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtual machine.
 
 ### Task 2: Implement Azure Load Balancer
+
 In this task, you will implement an Azure Load Balancer in front of the two Azure virtual machines in the hub virtual network
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
@@ -187,6 +182,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 <validation step="05e14bc6-a387-4fb8-baa1-c4dbacc8ae56" />
 
 ### Task 3: Implement Azure Application Gateway
+
 In this task, you will implement an Azure Application Gateway in front of the two Azure virtual machines in the spoke virtual networks.
 
 1. In the Azure portal, search and select **Virtual networks**.
@@ -372,6 +368,15 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 <validation step="c5b0893d-fb8a-40ab-9566-65332fc9b45e" />
 
+### Review
+
+In this lab, you have completed the following:
+
+- Used an Azure Resource Manager (ARM) template to automate the provisioning of the infrastructure.
+- Configured an Azure Load Balancer to distribute incoming traffic across multiple resources for high availability and reliability.
+- Set up an Azure Application Gateway to enable advanced traffic routing, SSL termination, and web application firewall protection.
+
+
 ## Extend your learning with Copilot
 
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
@@ -396,11 +401,5 @@ Congratulations on completing the lab. Here are the key points for this lab.
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 + The Application Gateway Standard tier offers all the L7 functionality, including load balancing, The WAF tier adds a firewall to check for malicious traffic.
 + An Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
-
-### Review
-In this lab, you have completed:
-+ Use a template to provision an infrastructure.
-+ Configure an Azure Load Balancer.
-+ Configure an Azure Application Gateway.
 
 ### You have successfully completed the lab
