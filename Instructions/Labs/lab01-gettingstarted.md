@@ -10,10 +10,10 @@ In this hands-on lab, you'll gain practical experience in managing identity and 
 
 By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, groups with assigned and dynamic membership, tenants, and guest users.
 
-- **Create and configure Entra ID users**: The objective of this task is to guide you through the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
-- **Create Entra ID groups with assigned and dynamic membership** : The objective of this task is to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
-- **Create a Microsoft Entra ID tenant** : The objective of this task is to guide you through the process of creating a new Microsoft Entra ID (formerly Azure Active Directory) tenant. This involves setting up a separate directory environment that can be used to manage users, groups, and resources independently from other tenants.
-- **Manage Entra ID guest users** : The objective of this task is to manage guest users in Microsoft Entra ID by inviting external users to access resources within your Azure subscription.
+- **Create and configure Entra ID users**: You will learn the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
+- **Create Entra ID groups with assigned and dynamic membership**: You will be able to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
+- **Create a Microsoft Entra ID tenant**: You will get to know the process of creating a new Microsoft Entra ID (formerly Azure Active Directory) tenant. This involves setting up a separate directory environment that can be used to manage users, groups, and resources independently from other tenants.
+- **Manage Entra ID guest users**: You will manage guest users in Microsoft Entra ID by inviting external users to access resources within your Azure subscription.
 
 ## Pre-requisites
 
