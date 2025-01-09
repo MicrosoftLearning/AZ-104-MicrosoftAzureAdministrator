@@ -1,11 +1,8 @@
 # Lab 10 - Implement Data Protection
-## Lab introduction    
+
+## Lab Overview
 
 In this lab, you learn about backup and recovery of Azure virtual machines. You learn to create a Recovery Service vault and a backup policy for Azure virtual machines. You learn about disaster recovery with Azure Site Recovery. 
-
-## Lab scenario
-
-Your organization is evaluating how to backup and restore Azure virtual machines from accidental or malicious data loss. Additionally, the organization wants to explore using Azure Site Recovery for disaster recovery scenarios. 
 
 ## Interactive lab simulation
 
@@ -21,15 +18,13 @@ In this lab, you will complete the following tasks:
 + Task 4: Monitor Azure Backup.
 + Task 5: Enable virtual machine replication.  
 
-## Estimated timing: 50 minutes
-
-## Architecture diagram
-![Diagram of the architecture tasks.](./media/az104-lab10-architecture.png)
-
 ## Excercise 1: Backup virtual machines
 
+In this exercise, you will  learn how to configure and perform backups for Azure virtual machines using the Recovery Services Vault.
+
 ### Task 1: Provision the lab environment
-In this task, you will deploy two virtual machines that will be used to test different backup scenarios.
+
+In this task, you will deploy two virtual machines that will serve as test environments to explore and evaluate various backup scenarios.
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
 
@@ -65,7 +60,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
 ### Task 2: Create a Recovery Services vault
-In this task, you will create a recovery services vault.
+
+In this task, you will create a Recovery Services vault, an essential component for managing and safeguarding your backup and disaster recovery needs.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services.
 
@@ -120,7 +116,8 @@ In this task, you will create a recovery services vault.
 <validation step="4a350ebe-5f23-43de-a6f0-6794d3d9e7cd" />
 
 ### Task 3: Implement Azure virtual machine-level backup
-In this task, you will implement Azure virtual-machine level backup.
+
+In this task, you will implement Azure virtual-machine level backup to ensure data protection and recovery for your virtual machines.
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to the respected resource group in the Azure portal and on the overview page of the resource group click on **Deployments**.
 
@@ -236,6 +233,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 ## Task 5: Enable virtual machine replication
 
+In this task, you will enable replication for a virtual machine to ensure business continuity and disaster recovery. 
+
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Recovery Services vaults**, and then select **Recovery Services vaults** under services. click **+ Create**.
 
 1. On the **Create Recovery Services vault** blade, specify the following settings:
@@ -300,12 +299,14 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 <validation step="3e780a0f-ab1a-48d9-a0a0-996c526c7c12" />
 
 ### Review
-In this lab, you have completed:
-+ Used a template to provision an infrastructure.
-+ Created and configure a Recovery Services vault.
-+ Configured Azure virtual machine-level backup.
-+ Monitored Azure Backup.
-+ Enabled virtual machine replication.
+
+In this lab, you have completed the following:
+
+- Used a template to provision an infrastructure.
+- Created and configure a Recovery Services vault.
+- Configured Azure virtual machine-level backup.
+- Monitored Azure Backup.
+- Enabled virtual machine replication.
 
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
