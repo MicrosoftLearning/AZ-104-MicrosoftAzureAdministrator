@@ -14,10 +14,10 @@ In this hands-on lab, you'll gain practical experience in managing identity and 
 
 By the end of this lab, you will be able to manage and configure Microsoft Entra ID users, groups with assigned and dynamic membership, tenants, and guest users.
 
-- **Create and configure Entra ID users**: You will learn the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
-- **Create Entra ID groups with assigned and dynamic membership**: You will be able to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
-- **Create a Microsoft Entra ID tenant**: You will get to know the process of creating a new Microsoft Entra ID (formerly Azure Active Directory) tenant. This involves setting up a separate directory environment that can be used to manage users, groups, and resources independently from other tenants.
-- **Manage Entra ID guest users**: You will manage guest users in Microsoft Entra ID by inviting external users to access resources within your Azure subscription.
+1. **Create and configure Entra ID users**: You will learn the process of creating and configuring Microsoft Entra ID (formerly Azure Active Directory) users in the Azure portal. This includes setting up user profiles, configuring essential properties like the usage location, assigning roles to users, and ensuring that users have appropriate permissions within the Entra ID environment.
+2. **Create Entra ID groups with assigned and dynamic membership**: You will be able to create and configure Entra ID (Azure Active Directory) groups with both assigned and dynamic membership. This involves setting up groups that automatically include members based on specific attributes (dynamic membership) and groups where members are manually added (assigned membership).
+3. **Create a Microsoft Entra ID tenant**: You will get to know the process of creating a new Microsoft Entra ID (formerly Azure Active Directory) tenant. This involves setting up a separate directory environment that can be used to manage users, groups, and resources independently from other tenants.
+4. **Manage Entra ID guest users**: You will manage guest users in Microsoft Entra ID by inviting external users to access resources within your Azure subscription.
 
 ## Pre-requisites
 
@@ -44,8 +44,9 @@ In this hands-on lab, the architecture flow includes several essential component
 1. **Microsoft Entra ID**: Microsoft Entra ID (formerly Azure Active Directory) is a cloud-based identity and access management service from Microsoft. It helps organizations manage user identities, control access to resources, and ensure secure authentication across various cloud-based and on-premises applications.
 
 2. **Entra ID groups**: Entra ID groups, part of Microsoft Entra ID, are used to manage and organize users in an organization by grouping them together. These groups help simplify the management of user permissions and access to resources. There are two main types of Entra ID groups:
- - Assigned Membership Groups: Users are manually added or removed from these groups by an administrator. This type of group is useful for static sets of users who need specific access rights.
- - Dynamic Membership Groups: Membership in these groups is determined automatically based on rules or attributes, such as job title or department. For example, a dynamic group can be configured to automatically include all users with the job title "Cloud Administrator."
+   - Assigned Membership Groups: Users are manually added or removed from these groups by an administrator. This type of group is useful for static sets of users who need specific access rights.
+   - Dynamic Membership Groups: Membership in these groups is determined automatically based on rules or attributes, such as job title or department. For example, a dynamic group can be configured to automatically include all users with the job title 
+    "Cloud Administrator."
 
 3. **Microsoft Entra ID tenant**: A Microsoft Entra ID tenant is a dedicated, trusted instance of Microsoft Entra ID that an organization receives when they sign up for a Microsoft cloud service such as Azure, Microsoft 365, or Dynamics 365. The tenant represents the organization in the Microsoft cloud environment and serves as the top-level container for all users, groups, and resources within that organization.
 
