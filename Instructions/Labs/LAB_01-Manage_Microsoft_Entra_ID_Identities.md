@@ -1,6 +1,6 @@
 # Lab 01 - Manage Microsoft Entra ID Identities
 
-## Overview
+## Lab Overview
 
 This lab focuses on users and groups as the foundation of an identity solution. You'll work on provisioning users and groups for a pre-production lab environment, incorporating automated group memberships based on job titles to streamline management.
 
