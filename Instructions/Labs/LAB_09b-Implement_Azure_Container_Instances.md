@@ -4,6 +4,14 @@
 
 This lab focuses on deploying and managing Docker containers using Azure Container Instances (ACI). In this lab, you will learn how to deploy a Docker image onto Azure Container Instances, which offers a simple and efficient way to run containers without needing to manage the underlying infrastructure.
 
+## Interactive lab simulations
+
+There are interactive lab simulations that you might find useful for this topic. The simulation lets you to click through a similar scenario at your own pace. There are differences between the interactive simulation and this lab, but many of the core concepts are the same. An Azure subscription is not required.
+
++ [Deploy Azure Container Instances](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%203). Create, configure, and deploy a Docker container with Azure Container Instances.
+  
++ [Implement Azure Container Instances](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2014).  Deploy a Docker image using Azure Container Instances. 
+
 ## Lab objectives
 
 In this lab, you will complete the following tasks:
