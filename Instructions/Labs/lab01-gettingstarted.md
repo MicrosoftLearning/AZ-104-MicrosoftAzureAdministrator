@@ -1,5 +1,7 @@
 # AZ-104: Microsoft Azure Administrator Workshop
 
+Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
+
 # Lab 01- Manage Microsoft Entra ID Identities
 
 ### Overall Estimated Duration: 30 minutes
