@@ -1,19 +1,8 @@
-# Lab 02a - Manage Subscriptions and RBAC
+# Lab 02: Manage Subscriptions,RBAC and Governance
 
-## Lab introduction
+## Overview
 
-In this lab, you learn about role-based access control. You learn how to use permissions and scopes to control what actions identities can and cannot perform. You also learn how to make subscription management easier using management groups. 
-
-## Lab scenario
-
-To simplify management of Azure resources in your organization, you have been tasked with implementing the following functionality:
-
-- Creating a management group that includes all your Azure subscriptions.
-
-- Granting permissions to submit support requests for all subscriptions in the management group. The permissions should be limited only to: 
-
-    - Create and manage virtual machines
-    - Create support request tickets (do not include adding Azure providers)
+In this lab, you will explore role-based access control (RBAC) to manage permissions and scopes, enabling precise control over actions that identities can perform. You will also simplify subscription management by organizing all Azure subscriptions under a management group and configuring permissions to allow virtual machine management and support request submissions.
 
 ## Interactive lab simulations
 
@@ -35,16 +24,13 @@ In this lab, you will complete the following tasks:
 + Task 5: Create a custom RBAC role.
 + Task 6: Monitor role assignments with the Activity Log.
 
+## Exercise 1: Manage Subscriptions and RBAC
 
-## Estimated timing: 60 minutes
-
-## Architecture diagram
-
-   ![image](../media/lab02a.png)
+In this exercise you will learn how to organize Azure subscriptions effectively and implement Role-Based Access Control (RBAC) to manage permissions and actions securely.
 
 ### Task 1: Implement Management Groups
 
-In this task, you will create and configure management groups.
+In this task, you will create and organize management groups to streamline Azure subscription governance. This setup enables efficient policy enforcement and access management across your organization.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
 
@@ -265,7 +251,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
 ## Task 5: Monitor role assignments with the Activity Log
 
-In this task, you view the activity log to determine if anyone has created a new role. 
+In this task, you will review the Azure activity log to check for any actions indicating the creation of a new role. This helps ensure proper tracking and auditing of role-based changes within your Azure environment.
 
 1. In the Azure portal, navigate back to the Management group and and select **az104-02-mg1**. The activity log provides insight into subscription-level events. 
 
@@ -315,11 +301,12 @@ In this task, you view the activity log to determine if anyone has created a new
 
 ### Review
 In this lab, you have completed:
-- Implement management groups.
-- Create a custom RBAC role
-- Assign RBAC roles
-- Create a custom RBAC role.
-- Monitor role assignments with the Activity Log.
+
+- Implemented management groups to organize your Azure subscriptions, allowing centralized governance and better control over policies and access management across your environment.
+- Created a custom RBAC role to define specific permissions, ensuring that users can only access the resources they need, enhancing security and compliance.
+- Assigned RBAC roles to users based on their job responsibilities, allowing them to perform necessary tasks without overstepping access boundaries.
+- Designed and deployed a custom RBAC role to meet your organization's unique security requirements, ensuring that the right level of access is granted to the right users.
+- Used the Activity Log to monitor role assignments and track changes to ensure that access control policies are being followed and that no unauthorized role modifications occur.
 
 ## Extend your learning with Copilot
 
