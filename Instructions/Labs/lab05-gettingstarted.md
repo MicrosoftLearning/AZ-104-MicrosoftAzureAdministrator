@@ -12,7 +12,7 @@ In this lab, you will simulate a network infrastructure for Contoso's data cente
 
 ## Objective
 
-The following objectives outline the key steps to complete this lab exercise on configuring and testing network connectivity in Azure.
+The following objectives outline the key steps to complete this lab exercise on configuring and testing network connectivity in Azure:
 
 1. **Provision a Lab Environment**: Set up three virtual machines in separate virtual networks, with two in the same Azure region and the third in a different region.
 
