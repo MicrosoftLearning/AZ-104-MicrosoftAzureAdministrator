@@ -46,13 +46,13 @@ In this hands-on lab, the architecture flow includes several essential component
 
 ## Explanation of Components
 
-1.**Azure Resource Manager (ARM) Templates**: ARM templates are JSON files used to define the structure of your resources in Azure. They allow for the declarative deployment and management of resources in a repeatable manner.
+1. **Azure Resource Manager (ARM) Templates**: ARM templates are JSON files used to define the structure of your resources in Azure. They allow for the declarative deployment and management of resources in a repeatable manner.
 
-2.**Cloud Shell**: Azure Cloud Shell is an integrated, browser-accessible command-line interface (CLI) that allows you to manage your Azure resources directly from the portal, offering both Bash and PowerShell environments.
+2. **Cloud Shell**: Azure Cloud Shell is an integrated, browser-accessible command-line interface (CLI) that allows you to manage your Azure resources directly from the portal, offering both Bash and PowerShell environments.
 
-3.**Azure PowerShell**: Azure PowerShell is a set of cmdlets used for managing Azure resources through scripts. In this lab, it’s used to deploy ARM templates, making resource management more efficient and automated.
+3. **Azure PowerShell**: Azure PowerShell is a set of cmdlets used for managing Azure resources through scripts. In this lab, it’s used to deploy ARM templates, making resource management more efficient and automated.
 
-4.**Azure Bicep**: Azure Bicep is a domain-specific language that simplifies the authoring of Azure ARM templates. It provides a more concise syntax while maintaining full compatibility with ARM templates for resource deployment.
+4. **Azure Bicep**: Azure Bicep is a domain-specific language that simplifies the authoring of Azure ARM templates. It provides a more concise syntax while maintaining full compatibility with ARM templates for resource deployment.
 
 # Getting Started with the Lab
  
