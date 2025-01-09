@@ -71,6 +71,12 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ![Use the Split Window Feature](../media/split.png)
  
+## Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+
+![Use the Split Window Feature](./media/gs4.png)
+
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
