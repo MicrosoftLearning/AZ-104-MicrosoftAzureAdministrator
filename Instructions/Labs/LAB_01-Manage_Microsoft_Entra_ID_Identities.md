@@ -22,7 +22,9 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 30 minutes
 
-## Exercise 1
+## Exercise 1: Microsoft Entra ID Identities
+
+In this exercise, you will learn how to create and manage Microsoft Entra ID identities. You will explore the process of provisioning users, assigning roles, and configuring essential properties for managing access to cloud resources. This exercise will help you understand the foundational concepts of identity management within the Microsoft Entra ID ecosystem.
 
 ### Task 1: Create and configure Entra ID users
 
