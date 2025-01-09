@@ -1,4 +1,56 @@
-# Getting Started with Your AZ-104: Microsoft Azure Administrator Workshop
+# AZ-104: Microsoft Azure Administrator Workshop
+
+Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience.
+
+# Lab 07 - Manage Azure Storage
+
+### Overall Estimated Duration: 45 minutes
+
+## Overview
+
+In this lab, you will learn to create and configure Azure Storage accounts for both blob and file storage. You will explore how to secure blob containers, set up time-based retention policies, and upload data to storage accounts. Additionally, you will configure Azure File Shares and utilize tools like Storage Browser to manage these shares. Throughout the lab, you will focus on optimizing storage costs by using different access tiers and redundancy options. You will gain hands-on experience in securing access to storage through network configurations, authentication mechanisms, and utilizing Azure's data protection features like network access controls and redundancy models.
+
+## Objective
+
+The following objectives outline the key steps to complete this lab exercise on configuring and testing network connectivity in Azure:
+
+1. **Create and Configure Azure Storage Accounts**: Create and configure storage accounts for both Azure blobs and Azure files, selecting appropriate performance and redundancy options.
+
+2. **Secure Blob Storage and Implement Retention Policies**: Create secure blob containers, configure time-based retention policies, and manage blob uploads to ensure data is stored efficiently and securely.
+
+3. **Configure and Secure Azure File Storage**: create Azure File Shares, configure appropriate tiers, and explore the use of Storage Browser to manage and upload files securely.
+
+4. **Implement Network Access Controls for Storage Accounts**: Configure network access restrictions to secure your storage account, ensuring it is only accessible from designated virtual networks or IP addresses.
+
+## Pre-requisites
+
+Understanding the basics of networking and virtual networks will be necessary when configuring network access restrictions for storage accounts.
+
+## Architecture
+
+In this hands-on lab, the architecture flow includes several essential components.
+
+1. Azure Storage Account Creation and Configuration: Create and configure Azure storage accounts, including selecting the correct redundancy, performance tiers, and network access settings.
+
+2. Blob Storage Management: Create and manage blob containers, set access policies, and implement time-based retention policies to secure and manage data.
+
+3. Azure File Storage Configuration: Create and manage Azure File Shares, exploring how to use Azure File Storage for sharing data across multiple systems and configuring access controls.
+
+4. Network Security for Storage Accounts: Configure network security for storage accounts by limiting access through virtual networks and applying security measures like firewalls and access policies.
+
+## Architecture diagram
+
+  ![Diagram of the tasks.](./media/az104-lab07-architecture.png)
+
+## Explanation of Components
+
+1. **Azure Storage Account**: An Azure Storage Account is a fundamental resource in Azure that stores all your data in various formats (e.g., blobs, files, tables, queues).
+
+2. **Blob Storage**: Azure Blob Storage is designed to store large amounts of unstructured data, such as images, videos, and documents. 
+
+3. **Azure File Storage**: Azure File Storage offers shared storage for structured data, similar to traditional file systems, but hosted in the cloud. 
+
+# Getting Started with the Lab
  
 Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared a seamless environment for you to explore and learn Azure Services. Let's begin by making the most of this experience:
  
@@ -24,6 +76,12 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ![Use the Split Window Feature](../media/split.png)
  
+## Utilizing the Zoom In/Out Feature
+
+To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
+
+![Use the Split Window Feature](./media/gs4.png)
+
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
@@ -70,11 +128,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
     
-     ![](./media/gettingstarted-new-2.png)  
+     ![](./media/gettingstarted-new-2.png)   
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
+
+In this hands-on lab, you'll learn to manage identity and access using Microsoft Entra ID, including creating and configuring users, groups, and tenants, and managing guest users. This will equip you with essential skills to efficiently handle identity and access in Azure.
 
 ## Support Contact
 
@@ -88,3 +148,43 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 1. Now, click on Next from the lower right corner to move on to the next page.
    
 ## Happy Learning!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
