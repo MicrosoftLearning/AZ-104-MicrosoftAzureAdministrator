@@ -1,6 +1,8 @@
 # Lab 08 - Manage Virtual Machines
-## Lab scenario
-You were tasked with identifying different options for deploying and configuring Azure virtual machines. First, you need to determine different compute and storage resiliency and scalability options you can implement when using Azure virtual machines. Next, you need to investigate compute and storage resiliency and scalability options that are available when using Azure virtual machine scale sets. You also want to explore the ability to automatically configure virtual machines and virtual machine scale sets by using the Azure Virtual Machine Custom Script extension.
+
+## Lab Overview
+
+This lab focuses on deploying scalable and high-availability applications in Azure using Virtual Machines (VMs) and Virtual Machine Scale Sets (VMSS).
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -12,11 +14,9 @@ In this lab, you will complete the following tasks:
 + Task 5: Create a virtual machine using Azure PowerShell (optional 1).
 + Task 6: Create a virtual machine using the CLI (optional 2).
 
-## Estimated timing: 50 minutes
+## Exercise 1: Manage Virtual Machines
 
-## Architecture diagram
-
-![](../Labs/Images/az104-lab08-vm-architecture.png)
+In this exercise, you will manage Virtual Machines in Azure to deploy, configure, and maintain scalable and secure cloud-based infrastructure.
 
 ### Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal 
 
@@ -271,7 +271,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 ## Task 4: Scale Azure Virtual Machine Scale Sets
 
-In this task, you scale the virtual machine scale set using a custom scale rule.
+In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a custom scale rule to ensure optimal performance and resource utilization based on specific criteria. A VM Scale Set allows you to manage a group of identical, load-balanced virtual machines that automatically scale in or out depending on the demand.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
 
@@ -436,12 +436,39 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
   >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
 ### Review
+
 In this lab, you have completed the following:
-+ Deployed zone-resilient Azure virtual machines by using the Azure portal.
-+ Managed compute and storage scaling for virtual machines.
-+ Created and configured Azure Virtual Machine Scale Sets.
-+ Scaled Azure Virtual Machine Scale Sets.
-+ Created a virtual machine using Azure PowerShell (optional 1).
-+ Created a virtual machine using the CLI (optional 2).
+
+- Deployed zone-resilient Azure virtual machines using the Azure portal, ensuring high availability across different availability zones.
+- Managed the scaling of compute and storage resources for virtual machines to meet performance and capacity requirements.
+- Created and configured Azure Virtual Machine Scale Sets to automatically manage and scale a group of identical virtual machines based on demand.
+- Scaled Azure Virtual Machine Scale Sets to adjust the number of instances according to changing workload demands, ensuring optimal resource utilization.
+- Created a virtual machine using Azure PowerShell (optional), gaining hands-on experience with automation and scripting for VM provisioning.
+- Created a virtual machine using the Azure CLI (optional), leveraging command-line tools to streamline the VM deployment process.
+
+
+## Extend your learning with Copilot
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ Provide the steps and the Azure CLI commands to create a Linux virtual machine. 
++ Review the ways you can scale virtual machines and improve performance.
++ Describe Azure storage lifecycle management policies and how they can optimize costs.
+
+## Learn more with self-paced training
+
++ [Create a Windows virtual machine in Azure](https://learn.microsoft.com/training/modules/create-windows-virtual-machine-in-azure/). Create a Windows virtual machine using the Azure portal. Connect to a running Windows virtual machine using Remote Desktop
++ [Build a scalable application with Virtual Machine Scale Sets](https://learn.microsoft.com/training/modules/build-app-with-scale-sets/). Enable your application to automatically adjust to changes in load while minimizing costs with Virtual Machine Scale Sets.
++ [Connect to virtual machines through the Azure portal by using Azure Bastion](https://learn.microsoft.com/en-us/training/modules/connect-vm-with-azure-bastion/). Deploy Azure Bastion to securely connect to Azure virtual machines directly within the Azure portal to effectively replace an existing jumpbox solution, monitor remote sessions by using diagnostic logs, and manage remote sessions by disconnecting a user session.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab.
+
++ Azure virtual machines are on-demand, scalable computing resources.
++ Azure virtual machines provide both vertical and horizontal scaling options.
++ Configuring Azure virtual machines includes choosing an operating system, size, storage and networking settings.
++ Azure Virtual Machine Scale Sets let you create and manage a group of load balanced VMs.
++ The virtual machines in a Virtual Machine Scale Set are created from the same image and configuration.
++ In a Virtual Machine Scale Set the number of VM instances can automatically increase or decrease in response to demand or a defined schedule.
 
 ### You have successfully completed the lab
