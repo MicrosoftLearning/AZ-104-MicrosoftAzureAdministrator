@@ -1,21 +1,20 @@
 # Lab 04 - Implement Virtual Networking
-## Lab scenario
-You need to explore Azure virtual networking capabilities. To start, you plan to create a virtual network in Azure that will host a couple of Azure virtual machines. Since you intend to implement network-based segmentation, you will deploy them into different subnets of the virtual network. You also want to make sure that their private and public IP addresses will not change over time. To comply with Contoso security requirements, you need to protect public endpoints of Azure virtual machines accessible from the Internet. Finally, you need to implement DNS name resolution for Azure virtual machines both within the virtual network and from the Internet.
+
+## Lab overview
+
+This lab focuses on applying security best practices while demonstrating advanced Azure networking concepts.You'll create virtual networks and subnets in Azure to establish a secure, scalable networking environment. You'll implement Application Security Groups (ASGs) and Network Security Groups (NSGs) to manage and enforce access controls, and configure both public and private DNS zones for effective name resolution. 
 
 ## Lab objectives
+
 In this lab, you will complete the following tasks:
 - Task 1: Create a virtual network with subnets using the portal.
 - Task 2: Create a virtual network and subnets using a template.
 - Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
 - Task 4: Configure public and private Azure DNS zones
 
-## Estimated timing: 60  minutes
-
-## Architecture diagram
-
-  ![image](../media/az104-lab04-architecture.png)
-
 ## Exercise 1: Create and configure a virtual network
+
+In this exercise, you will create and configure a virtual network to enable secure communication and resource connectivity within Azure.
 
 ### Task 1: Create a virtual network with subnets using the portal
 
@@ -209,7 +208,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 ### Task 4: Configure public and private Azure DNS zones
 
-In this task, you will create and configure public and private DNS zones resource. 
+In this task, you will create and configure public and private DNS zones to enable efficient name resolution for resources in Azure. Public DNS zones will handle domain name resolution accessible over the internet, while private DNS zones will facilitate name resolution within your private virtual network, ensuring seamless communication between internal resources.
 
 ### Configure a public DNS zone
 
@@ -309,13 +308,13 @@ A private DNS zone provides name resolution services within virtual networks. A 
 1. Click on **Add**
   
 ### Review
-In this lab, you have completed the following:
-- Created a virtual network with subnets using the portal.
-- Created a virtual network and subnets using a template.
-- Created and configured communication between an Application Security Group and a Network Security Group.
-- Configured public and private Azure DNS zones
 
-### You have successfully completed the lab
+In this lab, you have completed the following:
+
+- Created a virtual network with subnets using the Azure portal, demonstrating manual configuration.
+- Created a virtual network and subnets using a deployment template, showcasing automation capabilities in Azure.
+- Established and configured secure communication between an Application Security Group (ASG) and a Network Security Group (NSG).
+- Configured both public and private Azure DNS zones to facilitate effective name resolution for resources in Azure.
 
 ## Extend your learning with Copilot
 
@@ -332,3 +331,5 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + [Design an IP addressing scheme](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/). Identify the private and public IP addressing capabilities of Azure and on-premises virtual networks.
 + [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
 + [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
+
+### You have successfully completed the lab
