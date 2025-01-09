@@ -1,27 +1,17 @@
 # Lab 09c - Implement Azure Container Apps
 
-## Lab introduction
+## Lab Overview
 
-In this lab, you learn how to implement and deploy Azure Container Apps.
-
-## Estimated timing: 15 minutes
-
-## Lab scenario
-
-Your organization has a web application that runs on a virtual machine in your on-premises data center. The organization wants to move all applications to the cloud but doesn't want to have a large number of servers to manage. You decide to evaluate Azure Container Apps.
-
-## Interactive lab simulations
-
-There are no interactive lab simulations for this topic. 
+In this lab, you will learn how to implement and deploy Azure Container Apps (ACA), a serverless platform designed for running containerized applications with minimal infrastructure management. ACA abstracts the complexities of setting up and managing the underlying Kubernetes clusters, allowing you to focus purely on deploying and running containers in the cloud.
 
 ## Lab objectives
 
 - Task 1: Create and configure an Azure Container App and environment.
 - Task 2: Test and verify deployment of the Azure Container App.
 
-## Architecture diagram
+## Exercise 3: Implement Azure Container Apps
 
-![Diagram of the tasks.](./media/az104-lab09b-aca-architecture.png)
+In this exercise, you will explore the process of creating and deploying containerized applications using Azure Container Apps (ACA), a fully managed serverless platform
 
 ## Task 1: Create and configure an Azure Container App and environment
 
@@ -73,7 +63,8 @@ By default, the Azure container app that you create will accept traffic on port 
    <validation step="a44b06f7-b794-410a-8f4a-149c92269c02" />
 
 ### Review
-In this lab, you have completed:
+In this lab, you have completed the following:
+
 - Created and configured an Azure Container App and environment.
 - Tested and verified deployment of the Azure Container App.
 
