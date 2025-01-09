@@ -1,12 +1,8 @@
 # Lab 01 - Manage Microsoft Entra ID Identities
 
-## Lab introduction
+## Overview
 
-This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
-
-## Lab scenario
-
-Your organization is building a new lab environment for pre-production testing of apps and services.  A few engineers are being hired to manage the lab environment, including the virtual machines. To allow the engineers to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and groups. To minimize administrative overhead, membership of the groups should be updated automatically based on job titles. 
+This lab focuses on users and groups as the foundation of an identity solution. You'll work on provisioning users and groups for a pre-production lab environment, incorporating automated group memberships based on job titles to streamline management.
 
 ## Interactive lab simulation
 
@@ -26,14 +22,11 @@ In this lab, you will complete the following tasks:
 
 ## Estimated timing: 30 minutes
 
-## Architecture diagram
-
-   ![image](../media/lab1.png)
-   
 ## Exercise 1
 
 ### Task 1: Create and configure Entra ID users
-In this task, you will create and configure Entra ID users.
+
+In this task, you will set up and customize Microsoft Entra ID users by creating user accounts and configuring their properties to align with the organization's identity management requirements.
 
 1. In the Azure portal, search for Microsoft Entra ID (1) and select **Microsoft Entra ID (2)**.
 
@@ -133,7 +126,7 @@ In this task, you will create and configure Entra ID users.
     
      >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain) and record the password. You will need it later in this task.
     
- 1. on **Properties** tab specify the following settings (leave others with their defaults):
+ 1. On **Properties** tab specify the following settings (leave others with their defaults):
     
     | Setting | Value |
     | --- | --- |
@@ -146,7 +139,8 @@ In this task, you will create and configure Entra ID users.
     >**Note**: If the users are already created then you can skip this task and continue further. 
 
 ### Task 2: Create Entra ID groups with assigned and dynamic membership
-In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
+
+In this task, you will create Azure Active Directory groups with assigned and dynamic membership. Assigned groups require manually adding members, while dynamic groups automatically update memberships based on attributes like job titles or departments. This approach ensures efficient and automated group management.
 
 1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Entra ID tenant and, in the **Manage** section, click **Licenses**.
 
@@ -238,7 +232,8 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
 ### Task 3: Create an Microsoft Entra ID tenant
-In this task, you will create a new Entra ID tenant.
+
+In this task, you will create a new Microsoft Entra ID tenant, which serves as a dedicated instance of Microsoft Entra ID for managing your organization's identity and access needs. 
 
 1. In the Azure portal in the main browser window, search for and select **Microsoft Entra ID**.
    
@@ -281,7 +276,7 @@ In this task, you will create a new Entra ID tenant.
 
 ### Task 4: Manage Entra ID, guest users.
 
-In this task, you will create Entra ID guest users and grant them access to resources in an Azure subscription.
+In this task, you will create Entra ID guest users, allowing external users to access resources within your organization's Azure environment. You will configure the necessary permissions and roles to grant these guest users secure access to specific resources in an Azure subscription, enabling collaboration while maintaining control over the environment's security.
 
 1. In the Azure portal displaying the Contoso Lab Entra ID tenant, in the **Manage** section, click **Users**, and then click **+ New user** then select **Create new user**.
 
@@ -353,11 +348,13 @@ In this task, you will create Entra ID guest users and grant them access to reso
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Review
-In this lab, you have completed:
-- Created and configured Entra ID users
-- Created Entra ID groups with assigned and dynamic membership
-- Created a Microsoft Entra ID (AD) tenant
-- Managed Entra ID guest users 
+
+In this lab, you have completed the following tasks:
+
+- Created and configured Entra ID users, including setting up user accounts and configuring essential properties for identity management.
+- Created Entra ID groups with both assigned and dynamic membership, configuring assigned groups for manual membership and dynamic groups for automatic membership based on user attributes.
+- Created a Microsoft Entra ID (AD) tenant, setting up a dedicated instance for managing your organization's identity and access in Azure.
+- Managed Entra ID guest users, allowing external users to access specific resources in an Azure subscription by assigning them appropriate roles and permissions.
 
 ## Key takeaways
 
