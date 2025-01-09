@@ -1,8 +1,9 @@
 # Lab 3 - Manage Azure resources by Using ARM Templates
 
-## Lab scenario
-Now that you explored the basic Azure administration capabilities associated with provisioning resources and organizing them based on resource groups by using the Azure portal, you need to carry out the equivalent task by using Azure Resource Manager templates.
-
+## Lab Overview
+ 
+ In this hands-on lab, you will learn to manage Azure resources using ARM templates, automating resource deployment and management. You'll explore editing, redeploying templates, and deploying resources using Azure PowerShell, CLI, and Bicep. 
+ 
 ## Lab objectives
 
 -  Task 1: Create an Azure Resource Manager template.
@@ -11,13 +12,9 @@ Now that you explored the basic Azure administration capabilities associated wit
 -  Task 4: Deploy a template with the CLI. 
 -  Task 5: Deploy a resource by using Azure Bicep.
 
-## Estimated timing: 60 minutes
-
-## Architecture diagram
-
-![image](../media/az104-lab03-architecture.png)
-
 ## Excercise 1: Manage Azure resources by Using ARM Templates
+
+In this exercise,you will learn to  manage Azure resources using ARM templates which involves defining and deploying infrastructure as code, automating resource provisioning and configuration. 
 
 ### Task 1: Create an Azure Resource Manager template
 
@@ -74,7 +71,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 ## Task 2: Edit an Azure Resource Manager template and then redeploy the template
 
-In this task, you use the downloaded template to deploy a new managed disk. This task outlines how to quicky and easily repeat deployments. 
+In this task, you will utilize the previously downloaded Azure Resource Manager (ARM) template to deploy a new managed disk. The template, which includes the configuration and settings for the disk, allows for rapid and consistent deployment of resources.
 
 1. In Search resources, services, and docs (G+/) box at the top of the portal, enter **Deploy a custom template**, and then select **Deploy a custom template** from the results.
 
@@ -220,6 +217,8 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 ## Task 4: Deploy a template with the CLI 
 
+In this task, you will deploy an Azure Resource Manager (ARM) template using the Command-Line Interface (CLI). The Azure CLI provides a powerful, scriptable interface to interact with Azure resources.
+
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
     ![image](../media/az104-mod3-image24.png)
@@ -305,13 +304,40 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 ### Review
 
-In this lab, you have completed:
+In this lab, you have completed the following:
 
-- Created an Azure Resource Manager template.
-- Edited an Azure Resource Manager template and redeployed the template
-- Configured the Cloud Shell and deployed a template with Azure PowerShell
-- Deployed a template with the CLI
-- Deployed a resource by using Azure Bicep
+- Created an Azure Resource Manager (ARM) template: You initiated the process by creating a template to define the resources, such as managed disks, in your Azure environment.
+- Edited and redeployed an Azure Resource Manager (ARM) template: You modified the initial template to change specific parameters, such as disk names, and redeployed it to replicate resource creation easily.
+- Configured the Cloud Shell and deployed a template using Azure PowerShell: You set up the Azure Cloud Shell, configured it for PowerShell, and deployed a resource template using PowerShell commands.
+- Deployed a template using the Azure Command-Line Interface (CLI): You used the Azure CLI in Cloud Shell to deploy the template, practicing automation through command-line tools.
+- Deployed a resource using Azure Bicep: You utilized Azure Bicep, a declarative language, to deploy resources and modify the template for a more efficient and scalable deployment process.
 
+## Extend your learning with Copilot
+
+Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
+
++ What is the format of the Azure Resource Manager template file? Explain each component with examples. 
++ How do I use an existing Azure Resource Manager template?
++ Compare and contrast Azure Resource Manager templates and Azure Bicep templates. 
+
+
+## Learn more with self-paced training
+
++ [Deploy Azure infrastructure by using JSON ARM templates](https://learn.microsoft.com/training/modules/create-azure-resource-manager-template-vs-code/). Write JSON Azure Resource Manager templates (ARM templates) by using Visual Studio Code to deploy your infrastructure to Azure consistently and reliably.
++ [Review the features and tools for Azure Cloud Shell](https://learn.microsoft.com/training/modules/review-features-tools-for-azure-cloud-shell/). Cloud Shell features and tools. 
++ [Manage Azure resources with Windows PowerShell](https://learn.microsoft.com/training/modules/manage-azure-resources-windows-powershell/). This module explains how to install the necessary modules for cloud services management and use PowerShell commands to perform simple administrative tasks on cloud resources like Azure virtual machines, Azure subscriptions and Azure storage accounts.
++ [Introduction to Bash](https://learn.microsoft.com/training/modules/bash-introduction/). Use Bash to manage IT infrastructure.
++ [Build your first Bicep template](https://learn.microsoft.com/training/modules/build-first-bicep-template/). Define Azure resources within a Bicep template. Improve the consistency and reliability of your deployments, reduce the manual effort required, and scale your deployments across environments. Your template will be flexible and reusable by using parameters, variables, expressions, and modules.
+
+## Key takeaways
+
+Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
++ Azure Resource Manager templates let you deploy, manage, and monitor all the resources for your solution as a group, rather than handling these resources individually.
++ An Azure Resource Manager template is a JavaScript Object Notation (JSON) file that lets you manage your infrastructure declaratively rather than with scripts.
++ Rather than passing parameters as inline values in your template, you can use a separate JSON file that contains the parameter values.
++ Azure Resource Manager templates can be deployed in a variety of ways including the Azure portal, Azure PowerShell, and CLI.
++ Bicep is an alternative to Azure Resource Manager templates. Bicep uses a declarative syntax to deploy Azure resources.
++ Bicep provides concise syntax, reliable type safety, and support for code reuse. Bicep offers a first-class authoring experience for your infrastructure-as-code solutions in Azure.
 
 ### You have successfully completed the lab
