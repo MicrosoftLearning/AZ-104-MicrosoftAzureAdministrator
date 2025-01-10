@@ -169,7 +169,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
 
-1. Select **Stop** to complete the test run.
+1. Select **Stop** to complete the test run. You don't need to wait for the test to complete. 
 
 ## Cleanup your resources
 
