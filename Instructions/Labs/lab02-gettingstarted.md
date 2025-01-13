@@ -36,7 +36,7 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Architecture diagram
 
-   ![image](../media/gs2a.png)
+   ![image](./media/gs2a.png)
 
 ## Explanation of Components
 
