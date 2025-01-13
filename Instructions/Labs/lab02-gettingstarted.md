@@ -56,7 +56,7 @@ Basic understanding of Azure concepts, and familiarity with RBAC, resource taggi
 
 ## Architecture diagram
 
-![Diagram of the task architecture.](./media/az104-lab02b-architecture.png)
+![Diagram of the task architecture.](./media/gs2b.png)
 
 ## Explanation of Components
 
