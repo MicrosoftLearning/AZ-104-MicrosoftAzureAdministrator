@@ -38,7 +38,7 @@ Basic understanding of backup and disaster recovery concepts: Awareness of backu
 
 ## Architecture diagram
 
-![Diagram of the architecture tasks.](./media/az104-lab10-architecture.png)
+![Diagram of the architecture tasks.](./media/gs10.png)
 
 ## Explanation of Components
 
