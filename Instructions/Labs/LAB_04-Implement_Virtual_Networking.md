@@ -175,7 +175,9 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. Click **Review + create** and then after the validation click **Create**.
 
-### Create the Network Security Group and associate it with the ASG subnet
+>**Note:** At this point, you would associate the ASG with virtual machine(s). These machines will be affected by the inbound NSG rule you create in the next task.  
+
+### Create the Network Security Group and associate it with CoreServicesVnet
 
 1. In the Azure portal, search for and select `Network security groups`.
 
