@@ -247,8 +247,8 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | **az104-06-appgw5-be1** |
     | Add backend pool without targets | **No** |
-    | Target Type |  Virtual machine and choose **az104-rg6-nic1 (10.60.1.4)** as Target |
-    | Target Type |  Virtual machine and choose **az104-rg6-nic2 (10.60.2.4)** as Target |
+    | Target Type |  Virtual machine and choose **az104-06-nic1 (10.60.1.4)** as Target |
+    | Target Type |  Virtual machine and choose **az104-06-nic2 (10.60.2.4)** as Target |
 
     > **Note**: The targets represent the private IP addresses of virtual machines in the spoke virtual networks **az104-06-vm2** and **az104-06-vm3**.
 
@@ -258,7 +258,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-imagebe` |
     | Add backend pool without targets | **No** |
-    | Target Type | Virtual machine and choose **az104-rg6-nic1 (10.60.1.4)** as Target|
+    | Target Type | Virtual machine and choose **az104-06-nic1 (10.60.1.4)** as Target|
 
 1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -266,7 +266,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | --- | --- |
     | Name | `az104-videobe` |
     | Add backend pool without targets | **No** |
-    | Target Type | Virtual machine and choose **az104-rg6-nic2 (10.60.2.4)** as Target|
+    | Target Type | Virtual machine and choose **az104-06-nic2 (10.60.2.4)** as Target|
    
 1. Click **Next: Configuration >** and, on the **Configuration** tab of the **Create an application gateway** blade, click **+ Add a routing rule**.
 
