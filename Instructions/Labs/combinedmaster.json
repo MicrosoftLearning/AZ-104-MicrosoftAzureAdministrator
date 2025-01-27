@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/prod/Instructions/Labs/LabIntro2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-104-MicrosoftAzureAdministrator/refs/heads/pax8labs/Instructions/Labs/LabIntro2.md",
         "Order": 1
       },
       {
