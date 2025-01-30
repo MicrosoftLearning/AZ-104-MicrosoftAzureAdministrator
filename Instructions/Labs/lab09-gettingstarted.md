@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab 09 - Implement Web Apps, Container Instances and Container Apps
 
-### Overall Estimated Duration: 65 minutes
+### Overall Estimated Duration: 100 minutes
 
 ## Overview
 
