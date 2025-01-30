@@ -60,7 +60,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator  workshop! We've prepared 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/labguide.png)
+![Access Your VM and Lab Guide](../media/sg1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -70,31 +70,31 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/env.png)
+![Explore Lab Resources](../media/sg2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](../media/split.png)
+![Use the Split Window Feature](../media/sg3.png)
  
 ## Utilizing the Zoom In/Out Feature
 
 To adjust the zoom level for the environment page, click the A↕ : 100% icon located next to the timer in the lab environment.
 
-![Use the Split Window Feature](./media/gs4.png)
+![Use the Split Window Feature](./media/sg4.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../media/resourses.png)
+![Manage Your Virtual Machine](../media/sg5.png)
 
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../Labs/Images/gext.png)
+    ![Manage Your Virtual Machine](../Labs/Images/sg6.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
