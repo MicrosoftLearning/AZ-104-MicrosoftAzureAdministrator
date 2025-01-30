@@ -4,7 +4,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab 05 - Implement Intersite Connectivity
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 45 minutes
 
 ## Overview
 
