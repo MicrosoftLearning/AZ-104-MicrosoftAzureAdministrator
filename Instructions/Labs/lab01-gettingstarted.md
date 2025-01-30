@@ -92,7 +92,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../Labs/Images/gext.png)
+    ![Manage Your Virtual Machine](../Labs/Images/sg6.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 
