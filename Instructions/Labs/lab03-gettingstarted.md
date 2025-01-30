@@ -5,7 +5,7 @@ Welcome to your AZ-104: Microsoft Azure Administrator workshop! We've prepared a
 
 # Lab 3 - Manage Azure resources by Using ARM Templates
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 100 minutes
 
 ## Overview
 
