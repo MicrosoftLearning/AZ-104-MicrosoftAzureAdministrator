@@ -272,7 +272,7 @@ In this task, you will create a new Microsoft Entra ID tenant, which serves as a
     
 1. Select **Manage tenants** to display the blade of the newly created Entra ID tenant and select **settings (1)** button in the Azure portal toolbar and, click on **Switch (2)**.
 
-     ![](../Labs/media/lab1-image18.png)
+     ![](../Labs/media/az-12.png)
 
 ### Task 4: Manage Entra ID, guest users.
 
