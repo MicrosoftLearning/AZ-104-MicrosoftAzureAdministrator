@@ -32,32 +32,24 @@ In this exercise you will learn how to organize Azure subscriptions effectively 
 
 In this task, you will create and organize management groups to streamline Azure subscription governance. This setup enables efficient policy enforcement and access management across your organization.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
+1. On the Azure portal, in **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Microsoft Entra ID**.
+
+   ![image](./media/l2-image3.png) 
+    
+1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
+  
+    ![image](./media/lab02-new-1.png) 
+    
+1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+
+    ![image](./media/l2-image5.png) 
+
+1. On the Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Management groups**, and then select **Management groups** under services.
 
     ![image](./media/l2-image1.png) 
     
     >**Note:** The Management Group page may take sometime to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
-
-1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perform the following sequence of steps:
-
-    ![image](./media/l2-image2.png)
-
-   > **Note**: If you are able to see the management group, you still need to perform the below steps to perform the management group level activities. 
-
-    1. In the Azure portal, search for and select **Microsoft Entra ID**.
-
-        ![image](./media/l2-image3.png) 
-    
-    1.  On the blade displaying properties of your tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
   
-        ![image](./media/lab02-new-1.png) 
-    
-    1.  On the **Properties** blade of your tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
-
-        ![image](./media/l2-image5.png) 
-   
-    1.  Navigate back to the **Management groups** blade, and select **Refresh**.
-
 1. On the **Management groups** blade, click **+ Create**.
 
 1. On **Create a management** group blade specify the following settings and click **Submit**.
