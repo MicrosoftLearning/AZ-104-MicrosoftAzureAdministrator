@@ -67,17 +67,20 @@ In this task, you will create and organize management groups to streamline Azure
 
     ![image](./media/l2-image8.png)
  
-1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
+1. Review the Subscription group if it is coming up under the Management Group.
 
-     ![image](./media/l2-image9.png)
-
-1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
-
-    ![image](./media/l2-image10.png)
-
-1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
-
-      ![image](./media/l2-image11.png)
+   > **Note:** If you dont find the Subscription group, follow the below steps:
+   
+   1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
+   
+         ![image](./media/l2-image9.png)
+   
+    1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
+   
+       ![image](./media/l2-image10.png)
+   
+      1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+       ![image](./media/l2-image11.png)
 
 ## Task 2: Review and assign a built-in Azure role
 
