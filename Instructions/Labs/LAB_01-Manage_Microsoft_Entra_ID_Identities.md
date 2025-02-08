@@ -248,7 +248,7 @@ In this task, you will create a new Microsoft Entra ID tenant, which serves as a
     | Setting | Value |
     | --- | --- |
     | Organization name | **Contoso Lab (1)** |
-    | Initial domain name | any valid DNS name consisting of lower case letters and digits and starting with a letter **(2)** | 
+    | Initial domain name | contosoorg **(2)** | 
     | Country/Region | **United States (3)** |
     
     ![](../Labs/Images/crttenant2.png)   
