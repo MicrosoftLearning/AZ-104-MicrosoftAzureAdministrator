@@ -228,12 +228,18 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    ![image](./media/l2-image51.png)
    
-1. In the **InPrivate** browser window, on the **Describe your issue** tab of the **Help + support** blade, type **Service and subscription limits** (1) and select **Go** (2). Select the **Service and subscription limits (quotas)** (3)issue type. Select **Next** (4). Select **Create a support request** under Service and subscription limits (quotas).
+1. In the **InPrivate** browser window, on the **Describe your issue** tab of the **Help + support** blade, type **Service and subscription limits** (1) and select **Go** (2).
 
-    ![image](./media/az2.1.png)
+    ![image](./media/az1043.png)
 
-    ![image](./media/lab02-new-13.png)
-    
+1. Under the **Which service are you having an issue with?** select the **Service and subscription limits (quotas)** issue type. Select **Next** (4).
+
+    ![image](./media/az1044.png)
+
+1. Select **Create a support request** under Service and subscription limits (quotas).
+
+   ![image](./media/az1045.png)
+
 1. In the **InPrivate** browser window, on the **Problem Description** tab of the **Help + support - New support request** blade, **Service and subscription limits (quotas)** (1) as issue type is selected. Note that the subscription you are using in this lab is listed in the **Subscription** (2) drop-down list.
     
     ![image](./media/az3.1.png)
@@ -262,10 +268,6 @@ In this task, you will review the Azure activity log to check for any actions in
     ![image](./media/l2-image61.png)
 
 ### Task 6: Clean up resources
-
-   >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
-
-   >**Note**: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
 
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
@@ -299,7 +301,6 @@ In this task, you will review the Azure activity log to check for any actions in
 
    >**Note**: If you are unable to delete the **management group**, chances are that the **Azure Subscription** is under the management group. You need to move **Azure Subscription** out of the **management group** and then delete the group make sure you also have the **Owner** permission on the **Tenant Root management group**.
 
-1. If you are unable to delete the management group, please reach out to the support team for assistance.
 
 ### Review
 In this lab, you have completed:
@@ -325,7 +326,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Key takeaways
 
-Congratulations on completing the lab. Here are the main takeaways for this lab. 
+ Here are the main takeaways for this lab: 
 
 + Management groups are used to logically organize subscriptions.
 + The built-in root management group includes all the management groups and subscriptions.
