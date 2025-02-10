@@ -48,24 +48,24 @@ In this task, you will create and organize management groups to streamline Azure
 
     ![image](./media/l2-image1.png) 
     
-    >**Note:** The Management Group page may take sometime to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
+     >**Note:** The Management Group page may take some-time to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
   
 1. In the list of management groups, click the entry representing the **az104-02-mg1** management group.
 
     ![image](./media/az-104.png)
 
- > **Note:** If the management group is not present, kindly follow the below steps:
+   > **Note:** If the management group is not present, kindly follow the below steps:
   
-  1. On the **Management groups** blade, click **+ Create**.
+   1. On the **Management groups** blade, click **+ Create**.
 
-  1. On **Create a management** group blade specify the following settings and click **Submit**.
+   1. On **Create a management** group blade specify the following settings and click **Submit**.
 
-   | Setting | Value |
-   | --- | --- |
-   | Management group ID | **az104-02-mg1** |
-   | Management group display name | **az104-02-mg1** |
+      | Setting | Value |
+      | --- | --- |
+      | Management group ID | **az104-02-mg1** |
+      | Management group display name | **az104-02-mg1** |
 
-   ![image](./media/l2-image7.png)
+      ![image](./media/l2-image7.png)
  
 1. Review the Subscription group if it is coming up under the Management Group.
 
