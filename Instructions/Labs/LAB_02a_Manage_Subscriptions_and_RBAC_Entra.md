@@ -52,7 +52,7 @@ In this task, you will create and organize management groups to streamline Azure
   
 1. In the list of management groups, click the entry representing the **az104-02-mg1** management group.
 
-    ![image](./media/az-104p1.png)
+    ![image](./media/az-104.png)
 
  > **Note:** If the management group is not present, kindly follow the below steps:
   
