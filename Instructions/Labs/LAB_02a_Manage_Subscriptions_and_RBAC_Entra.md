@@ -123,7 +123,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     | Setting | Value |
     | --- | --- |
-    | Custom role name | `Support Request Contributor (Custom)` |
+    | Custom role name | `Support Request Contributor(Custom)` |
     | Description | A custom contributor role for support requests. |
     | Baseline permissions | select **Clone a role**|
     | Role to clone drop-down menu | select **Support Request Contributor** |
@@ -138,7 +138,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
    ![image](./media/l2-image15.png)
 
-1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add** > **Next**. The role should be updated to include this permission as a *NotAction*.
+1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add** and then click  **Next**. The role should be updated to include this permission as a *NotAction*.
 
     ![image](./media/l2-image16.png)
    
@@ -200,7 +200,11 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
     
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
-    >**Note**: You can copy the username for the newly created user by navigating to the Microsoft Entra ID --> Users section.
+   >**Note:** You can open an InPrivate browser window by clicking the **ellipsis** (1) in the top-right corner of the lab VM's browser window and selecting the **New InPrivate Window** option.
+
+     ![image](./media/inpvt.png)
+
+   >**Note**: You can copy the username for the newly created user by navigating to the Microsoft Entra ID --> Users section.
 
 1. In the **InPrivate** browser window, in the Azure portal, search and select **Resource groups** to verify that the az104-02-aaduser1 user can see all resource groups.
  
