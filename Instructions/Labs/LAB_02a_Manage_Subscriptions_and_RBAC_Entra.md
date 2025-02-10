@@ -52,9 +52,9 @@ In this task, you will create and organize management groups to streamline Azure
   
 1. In the list of management groups, click the entry representing the **az104-02-mg1** management group.
 
-    ![image](./media/l2-image8.png)
+    ![image](./media/az-104p1.png)
 
-> **Note:** If the management group is not present, kindly follow the below steps:
+ > **Note:** If the management group is not present, kindly follow the below steps:
   
   1. On the **Management groups** blade, click **+ Create**.
 
@@ -80,7 +80,8 @@ In this task, you will create and organize management groups to streamline Azure
        ![image](./media/l2-image10.png)
    
       1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
-       ![image](./media/l2-image11.png)
+       
+         ![image](./media/l2-image11.png)
 
 ## Task 2: Review and assign a built-in Azure role
 
