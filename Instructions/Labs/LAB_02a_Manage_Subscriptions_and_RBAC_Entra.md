@@ -70,7 +70,7 @@ In this task, you will create and organize management groups to streamline Azure
 1. Review the Subscription group if it is coming up under the Management Group.
 
    ![image](./media/az1042.png)
-
+   
    > **Note:** If you dont find the Subscription group, follow the below steps:
    
    1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
