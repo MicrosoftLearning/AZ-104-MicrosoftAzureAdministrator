@@ -128,17 +128,33 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
      ![](../Labs/Images/asklater.png)
 
-1. First-time users are often prompted to Stay Signed In, if you see any such pop-up, click on No.
+## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
-    
-     ![](./media/gettingstarted-new-2.png)   
+1. At the **"More information required"** prompt, select **Next**.
+
+1. On the **"Keep your account secure"** page, select **Next** twice.
+
+1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+   - Open **Google Play Store** (Android) or **App Store** (iOS).
+   - Search for **Microsoft Authenticator** and tap **Install**.
+   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+1. A **QR code** will be displayed on your computer screen.
+
+1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+1. After scanning, click **Next** to proceed.
+
+1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+       
+1. If prompted to stay signed in, you can click "No."
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
  
     ![Start Your Azure Journey](../media/num.png)
-
-In this hands-on lab, you'll learn to manage identity and access using Microsoft Entra ID, including creating and configuring users, groups, and tenants, and managing guest users. This will equip you with essential skills to efficiently handle identity and access in Azure.
 
 ## Support Contact
 
