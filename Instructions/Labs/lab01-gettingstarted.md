@@ -152,8 +152,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![Start Your Azure Journey](../media/num.png)
 
-In this hands-on lab, you'll learn to manage identity and access using Microsoft Entra ID, including creating and configuring users, groups, and tenants, and managing guest users. This will equip you with essential skills to efficiently handle identity and access in Azure.
-
 ## Support Contact
 
 1. The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
