@@ -50,15 +50,9 @@ In this task, you will create and organize management groups to streamline Azure
     
      >**Note:** The Management Group page may take some-time to load. Please try to refresh the browser in the VM periodically until the Management group page loads.
   
-1. In the list of management groups, click the entry representing the **az104-02-mg1** management group.
+1. On the **Management groups** blade, click **+ Create**.
 
-    ![image](./media/az-104.png)
-
-   > **Note:** If the management group is not present, kindly follow the below steps:
-  
-   1. On the **Management groups** blade, click **+ Create**.
-
-   1. On **Create a management** group blade specify the following settings and click **Submit**.
+1. On **Create a management** group blade specify the following settings and click **Submit**.
 
       | Setting | Value |
       | --- | --- |
@@ -66,25 +60,23 @@ In this task, you will create and organize management groups to streamline Azure
       | Management group display name | **az104-02-mg1** |
 
       ![image](./media/l2-image7.png)
- 
-1. Review the Subscription group if it is coming up under the Management Group.
 
-   ![image](./media/az-1042.png)
+      > **Note:** If you get a message stating that the management group with this name already exists, you can cancel the creation of the management group and proceed further.
    
-   > **Note:** If you dont find the Subscription group, follow the below steps:
+ 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
    
-   1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
+     ![image](./media/l2-image9.png)
    
-         ![image](./media/l2-image9.png)
+      >**Note:** If the subscription group is already present under the Management group you can proceed with the next task.
+
+1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
    
-    1. On the **Add subscription** blade, in the **Subscription** drop-down list, select the subscription you are using in this lab and click **Save**.
+    ![image](./media/l2-image10.png)
    
-       ![image](./media/l2-image10.png)
-   
-      1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
+1. On the **az104-02-mg1 \| Subscriptions** blade, refresh the page and  copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
        
-         ![image](./media/l2-image11.png)
-
+    ![image](./media/l2-image11.png)
+   
 ## Task 2: Review and assign a built-in Azure role
 
 In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
