@@ -48,7 +48,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![Image](./Images/az10498.png)
 
-1.  From the Cloud Shell pane, run the following command to set up the regions for your deployment. Replace <your-first-Azure-region> with the name of the first Azure region where you want to deploy your virtual machines, and <your-second-Azure-region> with a different Azure region for the third virtual machine. For example, you can use $location1 = 'eastus' and $location2 = 'westus'. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
+1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
 
    ```powershell
    $location1 = 'Azure_region_1'
