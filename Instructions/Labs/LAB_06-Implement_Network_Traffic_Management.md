@@ -64,7 +64,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | ---           | ---           |
     | Subscription  | your Azure subscription |
     | Resource group | **az104-06-rg1** |
-    | Password      | Provide a secure password |
+    | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
 
      ![](../Labs/media/l6-image10.png)
    
