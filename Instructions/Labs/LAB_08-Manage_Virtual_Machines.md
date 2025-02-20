@@ -161,7 +161,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next: Spot (15) >**:
 
     | Setting | Value |
     | --- | --- |
@@ -172,34 +172,36 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Availability zone | **Zones 1, 2, 3** (5) |
     | Orchestration mode | **Uniform** (6) |
     | Security type | **Standard** (7) |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** (8) |
-    | Run with Azure Spot discount | **Unchecked** (9) |
-    | Size | **Standard D2s_v3** (10) |
-    | Username | **Student** (11) |
-    | Password | **Provide a secure password** (12)  |
-    | Already have a Windows Server license? | **Unchecked** (13) |
+    | Scaling mode | **Manually update the capacity** (8) |
+    | Instance count | **2** (9) |
+    | Image | **Windows Server 2019 Datacenter - x64 Gen2** (10) |
+    | Size | **Standard D2s_v3** (11) |
+    | Username | **Student** (12) |
+    | Password | **Provide a secure password** (13)  |
+    | Already have a Windows Server license? | **Unchecked** (14) |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
-    ![](../Labs/Images/l8i9.png)
+    ![](../Labs/Images/T3S2-2002.png)
 
-    ![](../Labs/Images/l8i10.png) 
+    ![](../Labs/Images/T3S2.2-2002.png) 
 
 1. On the **Spot** tab, accept the defaults and select **Next: Disks >**.
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK** (6).
+1. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK** (6).
 
     | Setting | Value |
     | --- | --- |
     | Name | **vmss-vnet** (1) |
-    | Resource Group | **az104-08-rg01** (2) |
-    | Address range | `10.82.0.0/20` (delete the existing address range) (3) |
+    | Address range | `10.82.0.0/20` (delete the existing address range) (2) |
+     Click on the **edit** (3) option in the subnet, and provide the below details. Then click on **Save** (5)
     | Subnet name | `subnet0` (4) |
-    | Subnet range | `10.82.0.0/24` (5) |
+    | Subnet range | `10.82.0.0/24` |
+     Click on **Save** (6) on the edit Vnet page. 
 
-    ![](../Labs/Images/l8i11.png) 
+    ![](../Labs/Images/T3S5-2002.png) 
 
 1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
 
@@ -277,9 +279,9 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
 1. Choose **Availability + Scale** from the left side menu, then choose **Scaling**.
 
->**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
+   >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
-### Scale out rule
+ ### Scale-out rule
 
 1. Select **Custom autoscale** (1). then change the **Scale mode** to **Scale based on metric**. And then select **Add rule**.
 
@@ -303,9 +305,9 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     | Cool down (minutes) | **5** (6) |
     | Percentage | **50** (7) |
       
-    ![](../Labs/Images/l8i15.png) 
+    ![](../Labs/Images/T4S4-2002.png) 
 
-1. Be sure to **Save** your changes.
+1. Click on **Add** (8) to save the rule.
 
 ### Scale in rule
 
@@ -317,12 +319,14 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
     | Setting | Value |
     | --- | --- |
-    | Operator | **Less than** |
-    | Threshold | **30** |
-    | Operation | **decrease percentage by** (review your other choices) |
-    | Percentage | **20** |
+    | Operator | **Less than** (1) |
+    | Threshold | **30** (2) |
+    | Operation | **decrease percentage by** (review your other choices) (3) |
+    | Percentage | **20** (4) |
 
-1. Be sure to **Save** your changes.
+1. Click on **Add** (5) to save the rule.
+
+    ![](../Labs/Images/scalein-2002.png) 
 
 ### Set the instance limits
 
@@ -377,6 +381,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
     -Size 'Standard_D2s_v3' ` 
     -Credential (Get-Credential)
     ```
+    >**Note:** When prompted, please provide a Username and Password to create the new VM.
 
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
 
