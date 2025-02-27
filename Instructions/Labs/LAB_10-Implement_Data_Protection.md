@@ -53,7 +53,7 @@ In this task, you will deploy two virtual machines that will serve as test envir
     | Subscription  | Leave it as the default subscription |
     | Resource group| az104-10-rg1  |
     | Region        | **<inject key="Region" enableCopy="false"/>**    |
-    | Admin Password      | Provide a complex password |
+    | Admin Password      | **Password.11!** |
 
 1. Select **Review + create**, then select **Create**.
 
@@ -199,11 +199,13 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
-1. Search and select your Recovery Services vault.
+1. In the Azure portal, locate and select the **Recovery Services vault** that was created in the previous task.
 
 1. From the left navigation pane,select **Diagnostic Settings** under monitoring and then select **Add diagnostic setting**.
 
-1. Name the setting **Logs and Metrics to storage**.
+   ![image](./media/l10-image200.png)
+
+1. Name the setting as **Logs and Metrics to storage**.
 
 1. Place a checkmark next to the following log and metric categories:
 
@@ -216,7 +218,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
      ![image](./media/az-104p6.png)
 
-1. In the Destination details, place a checkmark next to **Archive to a storage account**.In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
+1. In the **Destination details**, place a checkmark next to **Archive to a storage account**. In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
 
     ![image](./media/az-104p7.png)
 
@@ -226,7 +228,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Locate the backup operation for the **az104-10-vm0** virtual machine. 
 
-1. Review the details of the backup job.
+1. Scroll to the right and click **View Details** to review the backup job details.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
