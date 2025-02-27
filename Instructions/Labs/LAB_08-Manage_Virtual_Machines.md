@@ -287,7 +287,7 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
    ![](../Labs/Images/l8i14.png) 
 
-1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 20%.
+1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 50%.
 
     | Setting | Value |
     | --- | --- |
