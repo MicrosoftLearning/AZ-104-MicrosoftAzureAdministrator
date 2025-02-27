@@ -241,7 +241,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 1. After the route table deploys, select **Go to resource**.
 
-1. Select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+1. Select **Routes** and then **+ Add**. Create a route from a future Network Virtual Appliance (NVA) to the CoreServices virtual network. 
 
     | Setting | Value | 
     | --- | --- |
