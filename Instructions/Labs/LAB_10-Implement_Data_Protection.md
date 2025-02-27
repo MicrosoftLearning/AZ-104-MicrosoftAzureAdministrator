@@ -138,6 +138,8 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
 1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
+   ![image](./media/az-104p30.png)
+
 1. Define a new backup policy with the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -149,6 +151,8 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
     | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
 1. Click **OK** to create the policy.
+
+   ![image](./media/az-104p31.png)
   
 1. In the **Virtual Machines** section, select **Add**.
 
@@ -162,7 +166,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
    
 1. From the left navigation pane, in the **Protected items** section, click **Backup items**, and then under Backup Management type select the **Azure virtual machines**  entry.
 
-1. On the **Backup Items (Azure Virtual Machine)** blade, select the View details link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
+1. On the **Backup Items (Azure Virtual Machine)** blade, select the **View details** link for **az104-10-vm0**, and review the values of the Backup Pre-Check and Last Backup Status entries.
 
 1. On the **az104-10-vm0** Backup Item blade, click **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
@@ -183,8 +187,8 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- | 
     | Subscription          | *Your subscription*    |
-    | Resource group        | az104-10-rg1       |
-    | Storage account name  | storage<inject key="DeploymentID" enableCopy="false"/>   |
+    | Resource group        | **az104-10-rg1**       |
+    | Storage account name  | **storage<inject key="DeploymentID" enableCopy="false"/>**   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
