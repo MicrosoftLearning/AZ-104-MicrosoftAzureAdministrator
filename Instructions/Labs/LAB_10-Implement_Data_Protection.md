@@ -237,7 +237,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
    
 <validation step="9516efe5-7bb7-4459-944a-9ca93b16bebc" />
 
-## Task 5: Enable virtual machine replication [READ ONLY]
+## Task 5: Enable virtual machine replication
 
 In this task, you will enable replication for a virtual machine to ensure business continuity and disaster recovery. 
 
