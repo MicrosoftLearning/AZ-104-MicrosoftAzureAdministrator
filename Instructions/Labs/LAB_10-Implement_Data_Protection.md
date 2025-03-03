@@ -279,14 +279,14 @@ In this task, you will enable replication for a virtual machine to ensure busine
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 
-1. For **Automation account** accept the default value and click on **Create**
-
-    ![image](./media/MSC-image426.png)
-   
 1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
 
      ![image](./media/T5S10.png)
 
+1. For **Automation account** accept the default value and click on **Create**
+
+    ![image](./media/MSC-image426.png)
+   
 1. Select **Review + Start replication** and then **Start replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
