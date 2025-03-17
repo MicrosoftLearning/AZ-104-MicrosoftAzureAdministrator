@@ -4,7 +4,7 @@ lab:
     module: 'Administer Network Traffic Management'
 ---
 
-# Lab 06 - Implement Traffic Management
+# Lab 06 - Implement Network Traffic Management
 
 ## Lab introduction
 
