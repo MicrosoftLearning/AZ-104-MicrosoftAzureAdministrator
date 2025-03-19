@@ -1,4 +1,4 @@
-# Lab 06 - Implement Traffic Management
+# Lab 06 - Implement Network Traffic Management
 
 ## Lab Overview
 
