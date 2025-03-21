@@ -1,4 +1,4 @@
-# Lab Scenario Preview - 02 - Administer Governance and Compliance
+# Lab Scenario Preview - Administer Governance and Compliance
 
 ## Lab overview
 In order to improve management of Azure resources in Contoso, you have been tasked with implementing the following functionality:
