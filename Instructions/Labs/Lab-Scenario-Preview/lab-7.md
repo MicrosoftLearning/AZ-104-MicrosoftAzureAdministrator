@@ -1,4 +1,4 @@
-# Lab Scenario Preview - 07 - Manage Azure Storage
+# Lab Scenario Preview - Manage Azure Storage
 
 ## Lab overview
 You need to evaluate the use of Azure storage for storing files residing currently in on-premises data stores. While the majority of these files are not accessed frequently, there are some exceptions. You would like to minimize the cost of storage by placing less frequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files service might be suitable for hosting your on-premises file shares.
