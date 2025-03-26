@@ -142,7 +142,7 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
     >**Note**: Detaching removes the disk from the VM but keeps it in storage for later use.
 
-1. Search for and select `Disks`. From the list of disks, select the **vm1-disk1** object.
+1. Use the search bar located at the top of the Azure portal to search for and select Disks. From the list of disks, select the **vm1-disk1** object.
 
     >**Note:** The **Overview** blade also provides performance and usage information for the disk.
 
@@ -199,7 +199,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
+1. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
