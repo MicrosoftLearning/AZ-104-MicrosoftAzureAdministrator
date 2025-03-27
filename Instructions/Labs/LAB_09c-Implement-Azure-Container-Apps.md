@@ -37,7 +37,7 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
 
 1. From the Azure portal, search for and select `Container Apps`.
 
-1. From **Container Apps**, select **Create**.
+1. Select **+ Create**, from drop-down menu, **Container App**. Notice the other choices. 
 
 1. Use the following information to fill out the details on the **Basics** tab.*.
 
