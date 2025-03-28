@@ -56,31 +56,33 @@ In this task, you will create and configure a storage account. The storage accou
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data in the event of regional availability | Check the box |
 
->**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
+    >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
 1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
-1. On the **Networking** tab, review the available options, select **Disable public access and use private access**.
+1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
 
-1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults.
+1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable versioning for blobs. Accept the defaults.
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
-1. Select **Review**, wait for the validation process to complete, and then click **Create**.
+1. Select **Review + Create**, wait for the validation process to complete, and then click **Create**.
 
 1. Once the storage account is deployed, select **Go to resource**.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + networking** section, select **Networking**. Notice public network access is disabled.
+1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
-    + In the **Firewall** section, check the box for **Add your client IP address.**
-    + Be sure to **Save** your changes. 
+    + Select **Manage** the **Public network access**.
+    + Change the **Public network access** to **Enable**.
+    + Change the **Default action** to **Enable from selected networks**.
+    + In the **IP addresses** section, select **Add your client IP address**.
+    + **Save** your changes.
   
-1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+1. In the **Data management** blade, select **Redundancy**. Notice the information about your primary and secondary data center locations.
 
-1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
+1. In the **Data management** blade, select **Lifecycle management**, and then select **Add a rule**.
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
     
@@ -98,7 +100,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Continue in the Azure portal, working with your storage account.
 
-1. In the **Data storage** section, click **Containers**. 
+1. In the **Data storage** blade, select **Containers**. 
 
 1. Click **+ Container** and **Create** a container with the following settings:
 
@@ -178,7 +180,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Create the file share and upload a file
 
-1. In the Azure portal, navigate back to your storage account, in the **Data storage** section, click **File shares**.
+1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **File shares**.
 
 1. Click **+ File share** and on the **Basics** tab give the file share a name, `share1`. 
 
@@ -220,9 +222,9 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account.
 
-1. In the **Security + networking** section, select the **Networking** blade.
+1. In the **Security + networking** blade, select **Networking**.
 
-1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
+1. Select **Add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
 
 1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
