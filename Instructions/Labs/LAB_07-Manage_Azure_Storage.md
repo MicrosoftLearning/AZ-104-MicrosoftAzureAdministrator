@@ -36,42 +36,54 @@ In this lab, you will complete the following tasks:
 ### Task 1: Create and configure Azure Storage accounts
 In this task, you will create and configure an Azure Storage account.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts**, and then select **Storage accounts** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage accounts (1)**, and then select **Storage accounts (2)** under services.
 
     ![image](./media/l1-image1.png)
 
 1. On **Storage accounts** blade, click **+ Create**.
    
-1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**:
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | the name of an **existing** resource group **az104-07-rg1** |
-    | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | **<inject key="Region" enableCopy="false"/>**  |
-    | Performance | **Standard** |
-    | Redundancy | **Geo-redundant storage (GRS)** |
+    | Subscription | Leave the default one **(1)** |
+    | Resource group | Select **existing** resource group **az104-07-rg1 (2)** |
+    | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" /> (3)** |
+    | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
+    | Performance | **Standard (5)** |
+    | Redundancy | **Geo-redundant storage (GRS) (6)** |
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next: Networking >**.
+     ![image](./media/az104-1.png)
 
-1. On the **Networking** tab of the **Create a storage account** blade, review the available options and select Disable public access and use private access under network access. Click **Next: Data protection >**.
+1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
-1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults. Click **Review + Create** and wait for the validation process to complete. Then click on **Create**.
+1. On the **Networking** tab of the **Create a storage account** blade, review the available options and select **Disable public access and use private access under network access (1)**. Click **Next (2)**.
+
+     ![image](./media/az104-2.png)
+
+1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults then click on **Next**. 
+
+1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults. Click **Review + Create**.
+
+    ![image](./media/az104-3.png)
+
+1. Wait for the validation process to complete. Then click on **Create**.
 
     >**Note**: Wait for the Storage account to be created. This should take about 2 minutes.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Storage account blade, in the **Data management** section, click **Redundancy** and note the secondary location. 
+1. On the Storage account blade, in the **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
 
-1. In the same blade **Redundancy** drop-down list select **Locally redundant storage (LRS)** and save the change. 
+    ![image](./media/az104-5.png)
+
+1. In the same blade **Redundancy (1)** drop-down list select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
 
     ![image](./media/l1-image2.png)
 
-1. In the same blade note that, at this point, the Storage account has the primary location.
+1. In the same blade note that, at this point, the Storage account has the **primary location**.
 
-1. Select **Configuration** blade under **Settings** section of the Storage account, set **Blob access tier (default)** to **Cool**, and save the change.
+1. Select **Configuration (1)** blade under **Settings** section of the Storage account, set **Blob access tier (default)** to **Cool (2)**, and **Save (3)** the change.
 
     ![image](./media/l1-image3.png)
 
@@ -79,20 +91,26 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+1. In the **Security + Networking** section, select **Networking (1)**. Notice **public network access is disabled**.
 
-    + Change the **public access level** to **Enabled from all network**.
-    + Be sure to **Save** your changes. 
+    ![image](./media/az104-7.png)
+
+    + Change the **public access level** to **Enabled from all network (2)**.
+    + Be sure to **Save (3)** your changes. 
+
+      ![image](./media/az104-6.png)    
 
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
 
-1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
+1. In the **Data management** section, select **Lifecycle management (1)**, and then select **+ Add a rule (2)**.
 
-    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
+    ![image](./media/az104-8.png)
+
+    + **Name** the rule `Movetocool` **(1)**. Notice your options for limiting the scope of the rule and then click on **Next (2)**.
   
       ![image](./media/l1-image5.png)
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. Notice you can configure other conditions. Select **Add** when you are done exploring.
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago **(1)** *then* **move to cool storage (2)**. Notice your other choices. Notice you can configure other conditions. Select **Add (3)** when you are done exploring.
 
       ![image](./media/l1-image6.png)
       
@@ -109,18 +127,20 @@ In this task, you will create a blob container and upload a blob into it.
 
 ### Create a blob container and a time-based retention policy
 
-1. On the Storage account blade, in the **Data storage** section, click **Containers**.
+1. On the Storage account blade, in the **Data storage** section, click **Containers (1)**. Click **+ Container (2)**.
 
-1. Click **+ Container** and create a container with the following settings:
+    ![image](./media/az104-9.png)
+
+1. Create a container with the following settings and then click on **Create (3)**.
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-container**  |
-    | Public access level | **Private (no anonymous access)** |
+    | Name | **az104-07-container (1)**  |
+    | Public access level | **Private (no anonymous access) (2)** |
 
-1. Click **Create**.
+     ![image](./media/az104-10.png)
 
-1. On your container, scroll to the ellipsis (...) on the far right, select **Access Policy**.
+1. On your container, scroll to the **ellipsis (...) (1)** on the far right, select **Access Policy (2)**.
 
      ![image](./media/l1-image9.png)
 
@@ -128,45 +148,61 @@ In this task, you will create a blob container and upload a blob into it.
 
     | Setting | Value |
     | --- | --- |
-    | Policy type | **Time-based retention**  |
-    | Set retention period for | `180` days |
-    | Select **Save** |
+    | Policy type | **Time-based retention (1)**  |
+    | Set retention period for | `180` days **(2)** |
+    | Select **Save (3)** |
    
      ![image](./media/l1-image10.png)
 
 ## Manage blob uploads
 
-1. In the list of containers, select **az104-07-container** and click **Upload** within the **Upload blob** pane, click on **Browse for files**.
+1. In the list of containers, select **az104-07-container**.
 
-1. Browse to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-master\Allfiles\Labs\07\\LICENSE** on your lab computer and click **Open**.
+1. Click **Upload (1)** within the **Upload blob** pane, click on **Browse for files (2)**.
 
-1. On the **Upload blob** blade, expand the **Advanced** section and specify the following settings (leave others with their default values):
+    ![image](./media/az104-13.png)
+
+1. Browse to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07` **(1)**, select **LICENSE (2)** on your lab computer and click **Open (3)**.
+
+    ![image](./media/az104-14.png)
+
+1. On the **Upload blob** blade, expand the **Advanced (1)** section and specify the following settings (leave others with their default values) and then click on **Upload (6)**:
 
     | Setting | Value |
     | --- | --- |
-    | Blob type | **Block blob** |
-    | Block size | **4 MB** |
-    | Access tier | **Hot** |
-    | Upload to folder | **licenses** |
+    | Blob type | **Block blob (2)** |
+    | Block size | **4 MB (3)** |
+    | Access tier | **Hot (4)** |
+    | Upload to folder | **licenses (5)** |
 
     ![image](./media/l1-image14.png)
    
     > **Note**: Access tier can be set for individual blobs.
 
-1. Click **Upload**.
-
     > **Note**: Note that the upload automatically created a subfolder named **licenses**.
 
-1. Back on the **az104-07-container** blade, click **licenses** and then click **LICENSE**.
+1. Back on the **az104-07-container** blade, click **licenses**. 
 
-1. On the **licenses/LICENSE** blade, review the available options.
+1. Then click **LICENSE**.
 
-    > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
+1. On the **licenses/LICENSE (1)** blade, review the available options including **Download, Delete, Change tier, and Acquire lease (2)**.
+
+    ![image](./media/az104-16.png)
+
+     > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
      
 
-1. On the **licenses/LICENSE** blade, on the **Overview** tab, click the **Copy to clipboard** button next to the **URL** entry.
+1. On the **licenses/LICENSE (1)** blade, on the **Overview** tab, click the **Copy to clipboard (2)** button next to the **URL** entry.
 
-1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+    ![image](./media/az104-15.png)
+
+1. Open another browser window by using **InPrivate mode** by clicking the **ellipsis** **(1)** in the top-right corner of the lab VM's browser window and selecting the **New InPrivate Window (2)** option.
+
+    ![image](./media/az104-17.png)
+
+1. Navigate to the URL you copied in the previous step.
+
+    ![image](./media/az104-18.png)
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
@@ -174,29 +210,31 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
 
+    ![image](./media/az104-19.png)
+
 ### Configure limited access to the blob storage
 
-1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values):
+1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values) and then click **Generate SAS token and URL (5)**.
 
     | Setting | Value |
     | --- | --- |
-    | Signing key | **Key 1** |
-    | Permissions | **Read** |
-    | Start date | yesterday's date |
-    | Start time | current time |
-    | Expiry date | tomorrow's date |
-    | Expiry time | current time |
-    | Allowed IP addresses | leave blank |
+    | Signing key | **Key 1 (1)** |
+    | Permissions | **Read (2)** |
+    | Start date | yesterday's date **(3)** |
+    | Start time | current time **(3)** |
+    | Expiry date | tomorrow's date **(3)** |
+    | Expiry time | current time **(3)** |
+    | Allowed IP addresses | leave blank **(4)** |
 
-    ![image](./media/l1-image13.png)
-   
-1. Click **Generate SAS token and URL**.
+     ![image](./media/az104-20.png)
 
 1. Click the **Copy to clipboard** button next to the **Blob SAS URL** entry (you need to scroll down).
 
     ![image](./media/l1-image15.png)
 
 1. Open another browser window by using InPrivate mode and navigate to the URL you copied in the previous step.
+
+    ![image](./media/az104-21.png)
 
     > **Note**: You should be able to view the content of the file by downloading it and opening it with Notepad.
 
@@ -214,38 +252,56 @@ In this task, you will create a blob container and upload a blob into it.
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares (1)**. Click **+ File share (2)**.
 
-1. Click **+ File share** and create a file share with the following settings.
+    ![image](./media/az104-22.png)
+
+1. Create a file share with the following settings then click on **Next:Backup> (3)**
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-07-share** |
-    | Tier | **transaction optimized** |
+    | Name | **az104-07-share (1)** |
+    | Tier | **transaction optimized (2)** |
+
+     ![image](./media/az104-24.png)    
 
 1. In the Backup tab, uncheck **Enable backup** option and then click on **Review + Create** > **Create**.
+
+    ![image](./media/az104-25.png)
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 
 ### Explore Storage Browser and upload a file
 
-1. Return to your storage account and select **Storage Browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
+1. Return to your storage account and select **Storage Browser (1)**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your **az104-07-share** directory is present.
+1. Select **File shares (2)** and verify your **az104-07-share (3)** directory is present.
 
-1. Select your **az104-07-share** directory and notice you can **+ Add directory**. This lets you create a folder structure. Provide name **az104-07-folder** and click on **OK**
+    ![image](./media/az104-26.png)
+
+1. Select your **az104-07-share** directory, on the **Browse (1)**, notice you can **+ Add directory (2)**. This lets you create a folder structure. Provide name **az104-07-folder (3)** and click on **OK (4)**
 
     ![image](./media/l1-image12.png)
 
-1. Open file explorer and create text document named **az104-07-file.txt**.
+1. Open file explorer, navigate to **Downloads (1)**, right click on empty space, click on **New (2)** -> **Text document (3)**.
+
+    ![image](./media/az104-27.png)
+
+1. Create text document named **az104-07-file.txt** by naming the file as **az104-07-file**.
+
+    ![image](./media/az104-28.png)
 
 1. Navigate to File share and select **az104-07-share**.
 
-1. Select **Upload**. Browse to a file **az104-07-file.txt**, and then click **Upload**.
+1. Select **Upload**. click on **Browse to a file**.
+
+1. Navigate to **Downloads (1)**, select **az104-07-file.txt (2)** and then click on **Open(3)**.
+
+    ![image](./media/az104-29.png)
+
+1. Then click **Upload**.
 
     >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
-
-1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
     
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -256,33 +312,57 @@ In this task, you will create and configure Azure Files shares.
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select **Virtual networks**.
+1. In the portal, search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
-1. Select **+ Create**. Select your resource group **az104-07-rg1** and give the virtual network a **name**, `vnet1`.
+    ![image](./media/az104-30.png)
 
-1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
+1. Select **+ Create**. 
+
+1. On the create Virtual network page, provide the followinh=g details and then click on **Review + create (5)**.
+
+    - Subscription: Leave the default one **(1)**
+    - Select your resource group **az104-07-rg1 (2)**
+    - Provide the virtual network a **name**, `vnet1` **(3)**
+    - Region: Leave the default **(4)**
+
+      ![image](./media/az104-32.png)
+
+1. Then **Create**.
 
 1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
-1. In the **Settings** section, select the **Subnets** blade.
-    + Select the **default** subnet.
-    + In the **Service endpoints** section choose **Microsoft.Storage** in the **Services** drop-down.
-    + Do not make any other changes.    
-    + Be sure to **Save** your changes. 
+1. In the **Settings** section, select the **Service endpoints** blade, click on **+ Add (2)**.
+
+    ![image](./media/az104-33.png)
+
+1. On the **Add Service Endpoint**, add the following details and then click on **Add (3)**
+
+    + In the Services drop-down select **Microsoft.Storage** **(1)**
+    + In the Subnets drop-down check the **Default** subnet **(2)**   
+
+      ![image](./media/az104-34.png)    
 
 1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />**
 
-1. In the **Security + networking** section, select the **Networking** blade.
+1. In the **Security + networking** section, select the **Networking (1)** blade.
 
-1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses**. 
+1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses (2)**. 
 
-1. Select **add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
+1. Select **+ Add existing virtual network (3)**.
+
+    ![image](./media/az104-36.png)
+
+1. On the **Add network** page,  select **vnet1 (1)** and **default (2)** subnet, select **Add (3)**.
+
+    ![image](./media/az104-37.png)
 
 1. Be sure to **Save** your changes.
 
+    ![image](./media/az104-38.png)
+
     >**Note:** The storage account should now only be accessed from the virtual network you just created. 
 
-1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** and select the **Storage browser** then expand **Blob containers** and select **az104-07-container** and **Refresh** the page.  
+1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />** and select the **Storage browser (1)** then expand **Blob containers** and select **az104-07-container (2)** and **Refresh** the page.  
 
     >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
 
