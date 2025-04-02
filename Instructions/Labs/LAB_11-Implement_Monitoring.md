@@ -93,7 +93,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. Select **Create +** and select **Alert rule**. 
 
-1. Select the box for the resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
+1. Select the box for the subscription, then select **Apply**. This alert will apply to any virtual machines in the subscription. Alternatively, you could just specify one particular machine. 
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
@@ -136,6 +136,8 @@ In this task, if the alert is triggered send an email notification to the operat
 
     >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
+1. Select **Review + Create** and then **Create**.
+   
 1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
 
     | Setting | Value |
@@ -179,7 +181,7 @@ In this task, you create an alert rule to suppress notifications during a mainte
 
 1. Continue in the **Alerts** blade, select **Alert processing rules** and then **+ Create**. 
    
-1. Select your **resource group**, then select **Apply**.
+1. Select your **Subscription**, then select **Apply**.
    
 1. Select **Next: Rule settings**, then select **Suppress notifications**.
    
@@ -211,13 +213,15 @@ Enter these settings for the scheduling of the alert processing rule:
 
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-1. In the Azure portal, search for and select `Monitor` blade, click **Logs**.
+1. In the Azure portal, search for and select `Monitor`, then click **Logs**.
 
-1. If necessary close the splash screen. 
+1. If necessary, close the splash screen. 
 
-1. Select a scope, your **resource group**. Select **Apply**. 
+1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
 
-1. In the **Queries** tab, select **Virtual machines** (left pane). 
+1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
+
+    ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
 1. Review the queries that are available. **Run** (hover over the query) the **Count heartbeats** query.
 
