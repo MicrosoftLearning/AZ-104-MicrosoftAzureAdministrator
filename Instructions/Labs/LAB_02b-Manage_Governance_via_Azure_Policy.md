@@ -65,12 +65,12 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     >**Note:** For each lab in this course you will create a new resource group. This lets you quickly locate and manage your lab resources. 
 
-1. Select **Next: Tags** and create a new tag.
+1. Select **Next** and move to the **Tags** tab. Provide information for a new tag.
 
     | Setting | Value |
     | --- | --- |
-    | Name | `Cost Center` |
-    | Value | `000` |
+    | Name | Cost Center |
+    | Value | 000 |
 
 1. Select **Review + Create**, and then select **Create**.
 
@@ -84,9 +84,9 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![Screenshot of the policy definition.](../media/az104-lab02b-policytags.png)
 
-1. Click the entry representing the **Require a tag and its value on resources** built-in policy. Take a minute to review the definition. 
+1. Search for the **Require a tag and its value on resources** built-in policy. Select the policy and take a minute to review the definition. 
 
-1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign**.
+1. Select **Assign policy**.
 
 1. Specify the **Scope** by clicking the ellipsis button and selecting the following values. Click **Select** when you are done. 
 
@@ -122,7 +122,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     
     >**Note**: It might take between 5 and 10 minutes for the policy to take effect.
 
-1. In the portal, search for and select `Storage Account`, and select **+ Create**. 
+1. In the portal, search for and select `Storage Accounts`, and select **+ Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, complete the configuration.
 
@@ -137,7 +137,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![Screenshot of the disallowed policy error.](../media/az104-lab02b-policyerror.png) 
 
->**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require Cost Center tag with Default value**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
+>**Note**: By clicking the **Raw Error** tab, you can find more details about the error, including the name of the role definition **Require a tag and its value on resources**. The deployment failed because the storage account you attempted to create did not have a tag named **Cost Center** with its value set to **Default**.
 
 ## Task 3: Apply tagging via an Azure policy
 
@@ -147,7 +147,7 @@ In this task, we will use the new policy definition to remediate any non-complia
 
 1. In the **Authoring** section, click **Assignments**. 
 
-1. In the list of assignments, click the ellipsis icon in the row representing the **Require Cost Center tag with Default value** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+1. In the list of assignments, click the ellipsis icon in the row representing the **RRequire a tag and its value on resources** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
