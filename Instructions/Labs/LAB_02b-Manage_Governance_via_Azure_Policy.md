@@ -84,7 +84,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     ![Screenshot of the policy definition.](../media/az104-lab02b-policytags.png)
 
-1. Search for the **Require a tag and its value on resources** built-in policy. Select the policy and take a minute to review the definition. 
+1. Search for the `Require a tag and its value on resources` built-in policy. Select the policy and take a minute to review the definition. 
 
 1. Select **Assign policy**.
 
@@ -101,8 +101,8 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | `Require Cost Center tag with Default value`|
-    | Description | `Require Cost Center tag with default value for all resources in the resource group`|
+    | Assignment name | `Require Cost Center tag and its value on resources |
+    | Description | `Require Cost Center tag and its value on all resources in the resource group`|
     | Policy enforcement | Enabled |
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. Notice you can disable the policy at any time. 
@@ -147,7 +147,7 @@ In this task, we will use the new policy definition to remediate any non-complia
 
 1. In the **Authoring** section, click **Assignments**. 
 
-1. In the list of assignments, click the ellipsis icon in the row representing the **RRequire a tag and its value on resources** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+1. In the list of assignments, click the ellipsis icon in the row representing the **Require a tag and its value on resources** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -189,7 +189,7 @@ In this task, we will use the new policy definition to remediate any non-complia
     
     >**Note**: It might take between 5 and 10 minutes for the policy to take effect.
 
-1. Search for and select `Storage Account`, and click **+ Create**. 
+1. Search for and select `Storage Account` and click **+ Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, verify that you are using the Resource Group that the Policy was applied to and specify the following settings (leave others with their defaults) and click **Review**:
 
