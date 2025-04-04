@@ -44,7 +44,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Disks`. Do not select the **Disks (Classic)** resource.
+1. Search for and select `Disks`. 
    
 1. On the Disks page, select **Create**.
 
