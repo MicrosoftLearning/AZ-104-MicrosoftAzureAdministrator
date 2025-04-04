@@ -146,7 +146,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Select your upload file and review the options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
-1. Copy the file **URL** and paste into a new **Inprivate** browsing window.
+1. Copy the file **URL** (Properties blade) and paste into a new **Inprivate** browsing window.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
