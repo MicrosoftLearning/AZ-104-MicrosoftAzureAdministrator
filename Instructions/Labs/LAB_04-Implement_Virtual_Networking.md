@@ -126,7 +126,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Change all occurrences of **10.20.20.0/24** to `10.30.21.0/24`.
 
-1. Read back through the file and ensure everything looks correct.
+1. Read back through the file and ensure everything looks correct. Use the architecture diagram for resource names and IP addresses. 
 
 1. Be sure to **Save** your changes.
 
@@ -144,11 +144,17 @@ In this task, you create the ManufacturingVnet virtual network and associated su
    
 ### Deploy the custom template
 
-1. In the portal, search for and select **Deploy a custom template**.
+1. In the portal, search for and select `Deploy a custom template`.
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
 1. Select the **templates.json** file with your Manufacturing changes, then select **Save**.
+
+1. Select **Edit template**, and then **Load file**.
+
+1. Select the **parameters.json** file with your Manufacturing changes, then select **Save**.
+
+1. Ensure your resource group, **az104-rg4** is selected. 
 
 1. Select **Review + create** and then **Create**.
 
@@ -275,7 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
-1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+1. Select **+ Record set**. **Add** a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
@@ -286,9 +292,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify **contoso.com** has an A record set named **www**.
+1. Select **OK** and verify your domain has an A record set named **www**.
 
-1. Open a command prompt, and run the following command:
+1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
    ```sh
    nslookup www.contoso.com <name server name>
