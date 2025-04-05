@@ -67,7 +67,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
     >**Note**: Wait until the Web App is created before you proceed to the next task. This should take about a minute.
     
-    >**Note**: If the deployment fails, change to another region and try again. For example, switch to **East US 2**. 
+    >**Note**: If the deployment fails, change to another region and try again. This is due to quotas in different regions.  
 
 1. After the deployment, select **Go to resource**.
 
@@ -79,8 +79,6 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section of the Web App blade, click **Deployment slots**.
 
-    >**Note**: The Web App, at this point, has a single deployment slot labeled **PRODUCTION**.
-
 1. Click **Add slot**, and add a new slot with the following settings:
 
     | Setting | Value |
@@ -88,9 +86,11 @@ In this task, you will create a staging deployment slot. Deployment slots enable
     | Name | `staging` |
     | Clone settings from | **Do not clone settings**|
 
-1. Select **Add**.
+1. Select **Add** to create the slot.
 
-1. Back on the **Deployment slots** blade of the Web App, click the entry representing the newly created staging slot.
+1. Refresh the page to view the Production and Staging slots. 
+
+1. Select the entry representing the newly created staging slot.
 
     >**Note**: This will open the blade displaying the properties of the staging slot.
 
@@ -116,7 +116,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 1. Select the **Default domain** link, and open the URL in a new tab. 
 
-1. Verify that the staging slot displays **Hello World**.
+1. Verify that the staging slot displays **Hello World**. 
 
 >**Note:** The deployment may take a minute. Be sure to **Refresh** the application page.
 
@@ -126,11 +126,13 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Navigate back to the **Deployment slots** blade, and then select **Swap**.
 
-1. Review the default settings and click **Start Swap**.
+1. Review the default settings and click **Start Swap**. Wait for the notification that the swap has finished.
 
-1. On the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
+1. Return to the portal home page. You should have both a the production web app and the staging slot.
 
-1. Verify the production web page displays the **Hello World!** page.
+1. Select the App Service web app and on the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
+
+1. Verify the production web page now displays the **Hello World!** page.
 
     >**Note:** Copy the Default domain **URL** you will need it for load testing in the next task. 
 
@@ -159,15 +161,17 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Wait for the load test to create, and then select **Go to resource**.
 
-1. From the **Overview** | **Add HTTP requests**, select **Create**.
+1. From the **Overview** | **Create by adding HTTP requests**, select **Create**.
 
-1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
+1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**. Select **Add** to save your changes. 
 
 1. Select **Review + create** and **Create**.
 
-    >**Note:** It may take a couple of minutes to create the test. 
+    >**Note:** It may take a couple of minutes to create the test. Watch the notifications.
 
-1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
+1. Navigate to the test (it is listed on the home page). 
+
+1. Refresh and review the live metrics including **Virtual users**, **Response time**, and **Requests/sec**.
 
 1. Select **Stop** to complete the test run. You don't need to wait for the test to complete. 
 
