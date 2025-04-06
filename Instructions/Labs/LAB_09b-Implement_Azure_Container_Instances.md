@@ -65,7 +65,7 @@ In this task, you will create a simple web application using a Docker image. Doc
 
 1. Click **Next: Advanced >**, review the settings without making any changes.
 
- 1. Click **Review + Create**, ensure that the validation passed and then select **Create**.
+1. Click **Review + Create**, ensure that the validation passed and then select **Create**.
 
     >**Note**: Wait for the deployment to complete. This should take 2-3 minutes.
 
@@ -75,7 +75,7 @@ In this task, you will create a simple web application using a Docker image. Doc
 
 In this task, you review the deployment of the container instance. By default, the Azure Container Instance is accessible over port 80. After the instance has been deployed, you can navigate to the container using the DNS name that you provided in the previous task.
 
-1. On the deployment blade, click the **Go to resource** link.
+1. When the deployment completes, select **Go to resource** link.
 
 1. On the **Overview** blade of the container instance, verify that **Status** is reported as **Running**.
 
