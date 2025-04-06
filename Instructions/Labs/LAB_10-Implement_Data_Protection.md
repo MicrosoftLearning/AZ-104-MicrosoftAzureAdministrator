@@ -152,12 +152,14 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
     ![Screenshot of the backup policy page.](../media/az104-lab10-backup-policy.png)
 
-1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
+1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add** (scroll down).
 
 1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and then back on the **Backup** blade, click **Enable backup**.
 
     >**Note**: Wait for the backup to be enabled. This should take approximately 2 minutes.
 
+1. After the deployment, select **Go to resource**.
+   
 1. In the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
 
 1. Select the **View details** link for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
@@ -214,7 +216,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Locate the backup operation for the **az104-10-vm0** virtual machine. 
 
-1. Review the details of the backup job.
+1. **View details** (scroll to the right for the link) of the backup job.
 
 ## Task 5: Enable virtual machine replication
 
@@ -243,20 +245,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the **Basics** tab, notice the **Target region**.
 
-1. Move to the **Advanced settings** tab. Resource selections have been made for you. It is important to review them. 
+1. Select **Next: Advanced settings**. Resource selections have been made for you. 
 
-1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
+1. Scroll down and **Create** the automation account. 
 
-1. In **Storage settings** select **Show details**.
-
-    | Setting | Value |
-    | ---- | ---- |
-    | Churn for the vm | **Normal churn**  |
-    | Cache storage account | **(new) xxx**  |
-
-   >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
-
-1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
+   >**Note:** It is important the settings be populated, or the validation will fail. 
 
 1. Select **Review + Start replication** and then **Enable replication**.
 
