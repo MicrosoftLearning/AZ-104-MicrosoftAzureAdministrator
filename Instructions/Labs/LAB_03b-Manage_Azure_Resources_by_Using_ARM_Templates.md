@@ -227,7 +227,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-    + Change the **managedDiskName** value, line 4, to Disk4.
+    + Change the **managedDiskName** value, line 2, to Disk4.
     + Change the **sku name** value, line 26, to StandardSSD_LRS.
     + Change the **diskSizeinGiB** value; line 7, to 32.
 
