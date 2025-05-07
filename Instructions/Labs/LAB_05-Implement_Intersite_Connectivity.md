@@ -238,16 +238,16 @@ In this task, you will configure local and global peering between the virtual ne
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
    ``` 
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
+   <validation step="af96cff1-7868-4911-818a-f05d61c27835" />
+
+   <validation step="95e62469-f37b-4a8f-a1d2-234f504b4083" />
+
+   <validation step="de362a2a-1236-4b5d-b3c1-ac7daf38aef5" />
    
-   <validation step="7df6e281-5a25-416d-8ad3-7e0c8a9218d9" />
-   
-   <validation step="48e06831-31a7-4601-9840-89661d5d56dd" />
-   
-   <validation step="fb306908-e661-4cac-8769-3eb8b7108271" />
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 
 ### Task 4: Test intersite connectivity
