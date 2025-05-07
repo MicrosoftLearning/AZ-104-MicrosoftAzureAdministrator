@@ -114,12 +114,12 @@ In this task, you will create and configure an Azure Storage account.
 
       ![image](./media/l1-image6.png)
       
-      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-      
-      <validation step="a2a7470f-6ebd-4f12-a4e5-2b80c67dda29" />
+   <validation step="3ca688fb-a039-486a-b051-61de572ea4eb" />
+   
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Task 2: Create and configure secure blob storage
 
@@ -242,12 +242,12 @@ In this task, you will create a blob container and upload a blob into it.
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
     
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="2b043416-12ea-4422-839c-94c157b86047" />
+   <validation step="a496ecfe-9c7a-4646-b2e2-44272cd82651" />
+   
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
@@ -303,12 +303,12 @@ In this task, you will create and configure Azure Files shares.
 
     >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
     
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-<validation step="8aafec5a-5eec-4738-ad84-29137a820ba8" />
+   <validation step="106d497d-0f0a-4fdd-8b6c-51028d285557" />
+   
+  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Restrict network access to the storage account
 

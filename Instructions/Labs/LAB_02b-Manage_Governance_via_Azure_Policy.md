@@ -211,13 +211,13 @@ In this task, you will focus on identifying and remediating non-compliant resour
 1. Once the new storage account is provisioned, click **Go to resource** button and, on the **Overview** blade of the newly created storage account, note that the tag **Role** with the value **Infra** has been automatically assigned to the resource.
 
    ![image](./media/l2-image43.png)
-    
+
+   <validation step="061bae10-923e-490f-8721-18d37b25821a" />
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help
-
-   <validation step="7dd291d1-35d1-40bb-857b-8ea685202e58" />
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 4: Configure and test resource locks
 
