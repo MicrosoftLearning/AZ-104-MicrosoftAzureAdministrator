@@ -24,29 +24,13 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![Image](./Images/cloudshell.png)
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. On the Cloudshell window, click on **Switch to Powershell** and click on **Confirm**.  
 
-    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
-
-1. On the **Getting Started** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
-
-1. On mount storage account page, select **I want to create a storage account**. click on Next.
-
-1. Provide the below details to create the storage account and click on **Create**.
-
-    
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />** |
-    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | **<inject key="Region" enableCopy="false" />** |
-    | File share (Create new) | **none** |
-
-     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
+    ![Image](./Images/switch-to-powershell-0905.png)
 
 1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-    ![Image](./Images/az10498.png)
+    ![Image](./Images/upload-files-incloudshell-0905.png)
 
 1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
 
@@ -55,25 +39,23 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    $location2 = 'Azure_region_2'
 
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-rg2'
    ```
 
    >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
-
-   >**Important**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
    
    >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
-      -location1 $location1 `
-      -location2 $location2
-   ```
+      ```powershell
+      New-AzResourceGroupDeployment `
+         -ResourceGroupName $rgName `
+         -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
+         -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
+         -location1 $location1 `
+         -location2 $location2
+      ```
 
     >**Important**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
     
