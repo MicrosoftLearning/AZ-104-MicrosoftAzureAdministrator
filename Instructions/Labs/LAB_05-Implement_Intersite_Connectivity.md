@@ -24,56 +24,38 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
     ![Image](./Images/cloudshell.png)
 
-1. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
+1. On the Cloudshell window, click on **Switch to Powershell** and click on **Confirm**.  
 
-    >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
-
-1. On the **Getting Started** screen select **Mount Storage Account**, select the storage account subscription from drop down and click on **Apply**
-
-1. On mount storage account page, select **I want to create a storage account**. click on Next.
-
-1. Provide the below details to create the storage account and click on **Create**.
-
-    
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-05-rg0-<inject key="DeploymentID" enableCopy="false" />** |
-    | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
-    | Region | **<inject key="Region" enableCopy="false" />** |
-    | File share (Create new) | **none** |
-
-     >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
+    ![Image](./Images/switch-to-powershell-0905.png)
 
 1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
-    ![Image](./Images/az10498.png)
+    ![Image](./Images/upload-files-incloudshell-0905.png)
 
 1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
 
-   ```powershell
-   $location1 = 'Azure_region_1'
+    ```powershell
+        $location1 = 'Azure_region_1'
 
-   $location2 = 'Azure_region_2'
+        $location2 = 'Azure_region_2'
 
-   $rgName = 'az104-05-rg0-Deployment-id'
-   ```
+        $rgName = 'az104-rg2'
+    ```
 
-   >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
-
-   >**Important**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
+    >**Note**: In order to identify Azure regions, from the PowerShell session in Cloud Shell, run **(Get-AzLocation).Location** command.
    
-   >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
+    >**Note**: If you get a prompt stating **Provided resource group already exists. Are you sure you want to update it?** type N .
 
 1. From the Cloud Shell pane, run the following to create the three virtual networks and deploy virtual machines into them by using the template and parameter files you uploaded:
 
-   ```powershell
-   New-AzResourceGroupDeployment `
-      -ResourceGroupName $rgName `
-      -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
-      -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
-      -location1 $location1 `
-      -location2 $location2
-   ```
+      ```powershell
+      New-AzResourceGroupDeployment `
+         -ResourceGroupName $rgName `
+         -TemplateFile $HOME/az104-05-vnetvm-loop-template.json `
+         -TemplateParameterFile $HOME/az104-05-vnetvm-loop-parameters.json `
+         -location1 $location1 `
+         -location2 $location2
+      ```
 
     >**Important**: You will be prompted to provide an admin password. Enter your own Password or give **Pa55w.rd1234**.
     
@@ -95,7 +77,7 @@ In this task, you verify that resources in peered virtual networks can communica
     | --- | --- |
     | Source type           | **Virtual machine** (1)  |
     | Virtual machine       | **az104-05-vm0**  (2) | 
-    | Destination type      | **Virtual machine** (3)  |
+    | Destination type      | **Select a Virtual machine** (3)  |
     | Virtual machine       | **az104-05-vm1**  (4) | 
     | Preferred IP Version  | **Both**  (5)            | 
     | Protocol              | **TCP**    (6)           |
@@ -103,7 +85,7 @@ In this task, you verify that resources in peered virtual networks can communica
     | Source port           | *Blank*         |
     | Diagnostic tests      | *Defaults*      |
 
-    ![Azure Portal showing Connection Troubleshoot settings.](./Images/az-104-2.png)
+    ![Azure Portal showing Connection Troubleshoot settings.](./Images/L5T2S3-0905.png)
 
     >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected.. 
 
@@ -121,11 +103,11 @@ In this task, you will configure local and global peering between the virtual ne
 
 1. In the list of virtual networks, click **az104-05-vnet0**.
      
-      ![Image](./Images/vnet0.png)
+      ![Image](./Images/L5T3S3-0905.png)
       
 1. On the **az104-05-vnet0** virtual network blade, in the **Settings** section, click **Peerings (1)** and then click **+ Add (2)**.
 
-     ![Image](./Images/addpeering.png)
+     ![Image](./Images/L5T3S4-0905.png)
 
 1. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
@@ -153,7 +135,7 @@ In this task, you will configure local and global peering between the virtual ne
       >**Note**: Replace Deployment-id with **<inject key="DeploymentID" enableCopy="false" />**.
   
     ```powershell
-       $rgName = 'az104-05-rg0-Deployment-id'
+       $rgName = 'az104-rg2'
     
        $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
     
@@ -189,7 +171,7 @@ In this task, you will configure local and global peering between the virtual ne
    
     
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-rg2'
 
    $vnet0 = Get-AzVirtualNetwork -Name 'az104-05-vnet0' -ResourceGroupName $rgname
 
@@ -227,7 +209,7 @@ In this task, you will configure local and global peering between the virtual ne
     
 
    ```powershell
-   $rgName = 'az104-05-rg0-Deployment-id'
+   $rgName = 'az104-rg2'
 
    $vnet1 = Get-AzVirtualNetwork -Name 'az104-05-vnet1' -ResourceGroupName $rgname
 
@@ -238,17 +220,16 @@ In this task, you will configure local and global peering between the virtual ne
    Add-AzVirtualNetworkPeering -Name 'az104-05-vnet2_to_az104-05-vnet1' -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
    ``` 
    
-   <validation step="af96cff1-7868-4911-818a-f05d61c27835" />
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
-   <validation step="95e62469-f37b-4a8f-a1d2-234f504b4083" />
+     <validation step="af96cff1-7868-4911-818a-f05d61c27835" />
 
-   <validation step="de362a2a-1236-4b5d-b3c1-ac7daf38aef5" />
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+     <validation step="95e62469-f37b-4a8f-a1d2-234f504b4083" />
 
+     <validation step="de362a2a-1236-4b5d-b3c1-ac7daf38aef5" />
 
 ### Task 4: Test intersite connectivity
 
@@ -260,13 +241,13 @@ In this task, you will test connectivity between virtual machines on the three v
 
 2. In the list of virtual machines, click **az104-05-vm0**.
 
-      ![Image](./Images/vm0.png)
+      ![Image](./Images/L5T4S2-0905.png)
 
-3. On the **az104-05-vm0** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+3. On the **az104-05-vm0** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
-      ![Image](./Images/connect.png)
+      ![Image](./Images/L5T4S3.1-0905.png)
       
-      ![Image](./Images/downloadfile.png)
+      ![Image](./Images/L5T4S3.2-0905.png)
       
       ![Image](./Images/rdp.png)
 
@@ -304,9 +285,9 @@ In this task, you will test connectivity between virtual machines on the three v
 
 11. In the list of virtual machines, click **az104-05-vm1**.
 
-    ![Image](./Images/vm1.png)
+    ![Image](./Images/L5T4S11-0905.png)
 
-12. On the **az104-05-vm1** blade, click **Connect**, in the drop-down menu, click **RDP**, on the **Connect with RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
+12. On the **az104-05-vm1** blade, click **Connect (1)** and select **Connect (2)** from the dropdown menu. Click **Connect via RDP** blade, click **Download RDP File** and follow the prompts to start the Remote Desktop session.
 
     >**Note**: This step refers to connecting via Remote Desktop from a Windows computer. On a Mac, you can use Remote Desktop Client from the Mac App Store, and on Linux computers, you can use an open source RDP client software.
 
@@ -331,7 +312,8 @@ In this task, you will test connectivity between virtual machines on the three v
 
 In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
 
-1. Back in the Azure portal, navigate to Virtual networks resource and select the **az104-05-vnet0** from the list of virtual networks.
+1. Back in the Azure portal, navigate to Virtual networks resource and select the **az104-05-vnet0** from the list of virtual 
+   networks.
 
 1. Select **Subnets** and then click on **+ Subnet** and click on **Add**
 
@@ -340,20 +322,21 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Name | `perimeter` |
     | Starting address  | `10.50.1.0/24`  |
 
-   
-1. In the Azure portal, search for and select **Route tables** resource, and then select **Review + Create** and subsequently click on **Create**. 
+1. In the Azure portal, search for and select **Route tables** resource, and then select **Review + Create** and subsequently 
+   click on **Create**. 
 
     | Setting | Value | 
     | --- | --- |
     | Subscription | Default Subscription |
-    | Resource group | **az104-05-rg0--<inject key="DeploymentID" enableCopy="false" />**  |
-    | Region | **East US** |
+    | Resource group | **az104-rg2**  |
+    | Region | Select the region of **az104-05-vnet0** virtual newtwork resource. |
     | Name | **az104-05-vm0** |
     | Propagate gateway routes | **No** |
 
 1. After the route table deploys, select **Go to resource**.
 
-1. From the left navigation pane, under **Settings** select **Routes** and then **+ Add**. Create a route from the future NVA to the CoreServices virtual network. 
+1. From the left navigation pane, under **Settings** select **Routes** and then **+ Add**. Create a route from the future NVA  
+   to the CoreServices virtual network. 
 
     | Setting | Value | 
     | --- | --- |
@@ -363,7 +346,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Next hop type | **Virtual appliance** (notice your other choices) |
     | Next hop address | `10.50.1.7` (future NVA) |
 
-1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
+1. Select **Add**. When the route is completed. The last thing to do is associate the route with the subnet.
 
 1. Select **Subnets** from the left navigation pane and then  click on **+ Associate**. Complete the configuration.
 

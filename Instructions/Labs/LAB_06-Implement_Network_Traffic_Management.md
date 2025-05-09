@@ -46,7 +46,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image5.png)
    
-1. Select **Edit parameters** > **load** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** > **Load file** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
 
    ![](../Labs/media/l6-image6.png)
 
@@ -63,7 +63,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-rg2** |
     | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
 
      ![](../Labs/media/l6-image10.png)
@@ -82,7 +82,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
 
-   ![](../Labs/media/l6-image11.png)
+   ![](../Labs/Images/load-balancer-0905.png)
 
 1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
 
@@ -91,7 +91,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | az104-06-rg1 |
+    | Resource group | az104-rg2 |
     | Name | **az104-06-lb4** |
     | Region| **<inject key="Region" enableCopy="false"/>** |
     | SKU | **Standard** |
