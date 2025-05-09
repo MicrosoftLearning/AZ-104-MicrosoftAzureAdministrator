@@ -53,7 +53,7 @@ In this task, you will create and configure an Azure Storage account.
     | Performance | **Standard (5)** |
     | Redundancy | **Geo-redundant storage (GRS) (6)** |
 
-     ![image](./media/L7T1S3.png)
+    ![image](../media/L7T1S3.png)
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
@@ -75,11 +75,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the Storage account blade, in the **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
 
-    ![image](./media/L7T1S10.png)
+    ![image](../media/L7T1S10.png)
 
 1. In the same blade **Redundancy (1)** drop-down list select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
 
-    ![image](./media/L7T1S11.png)
+    ![image](../media/L7T1S11.png)
 
 1. In the same blade note that, at this point, the Storage account has the **primary location**.
 
@@ -159,7 +159,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 1. Click **Upload (1)** within the **Upload blob** pane, click on **Browse for files (2)**.
 
-    ![image](./media/L7T2-2.2S2.png)
+    ![image](../media/L7T2-2.2S2.png)
 
 1. Browse to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07` **(1)**, select **LICENSE (2)** on your lab computer and click **Open (3)**.
 
@@ -326,7 +326,7 @@ In this task, you will create and configure Azure Files shares.
     | Virtual Network name | `vnet1` **(3)** |
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
     
-      ![image](./media/L7T3-2.2S3.png)
+      ![image](../media/L7T3-2.2S3.png)
 
 1. Then **Create**.
 
