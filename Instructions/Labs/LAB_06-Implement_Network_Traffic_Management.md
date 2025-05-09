@@ -132,7 +132,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     
 1. Click **+ Add (4)**, under **IP Configurations** on the **Add backend pool** blade, select all the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
 
-    ![](../Labs/media/L6T2S6.png)
+    ![](../media/L6T2S6.png)
 
 1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 

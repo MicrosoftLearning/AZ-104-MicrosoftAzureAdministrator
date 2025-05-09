@@ -40,14 +40,14 @@ In this task, you will create and configure an Azure Storage account.
 
     ![image](./media/l1-image1.png)
 
-1. On **Storage accounts** blade, click **+ Create**.
+1. On **Storage accounts** blade, click on **+ Create**.
    
 1. On the **Basics** tab of the **Create storage account** blade, specify the following settings (leave others with their default values) then click on **Next (7)**:
 
     | Setting | Value |
     | --- | --- |
     | Subscription | Leave the default one **(1)** |
-    | Resource group | Select **existing** resource group **az104-rg2 (2)** |
+    | Resource group |**az104-rg2 (2)** |
     | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
     | Performance | **Standard (5)** |
@@ -55,15 +55,15 @@ In this task, you will create and configure an Azure Storage account.
 
     ![image](../media/L7T1S3.png)
 
-1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
+1. Click **Next: Advanced >**, on the **Advanced** tab, review the available options, accept the defaults, and click **Next**.
 
-1. On the **Networking** tab of the **Create a storage account** blade, review the available options and select **Disable public access and use private access under network access (1)**. Click **Next (2)**.
+1. On the **Networking** tab, review the available options and select **Disable public access and use private access under network access (1)** and click **Next (2)**.
 
      ![image](./media/az104-2.png)
 
-1. On the **Data protection** tab of the **Create a storage account** blade, review the available options and accept the defaults then click on **Next**. 
+1. On the **Data protection** tab, review the available options and accept the defaults then click on **Next**. 
 
-1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults. Click **Review + Create**.
+1. Review the **Encryption** tab. Notice the additional security options and accept the defaults. Click **Review + Create**.
 
     ![image](./media/az104-3.png)
 
@@ -73,11 +73,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the deployment blade, click **Go to resource** to display the Azure Storage account blade.
 
-1. On the Storage account blade, in the **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
+1. On the Storage account resource page, under **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
 
     ![image](../media/L7T1S10.png)
 
-1. In the same blade **Redundancy (1)** drop-down list select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
+1. In the same blade, click on **Redundancy (1)** drop-down list and select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
 
     ![image](../media/L7T1S11.png)
 
@@ -91,7 +91,7 @@ In this task, you will create and configure an Azure Storage account.
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking (1)**. Notice **public network access is disabled**.
+1. In the **Security + Networking** section, select **Networking (1)** and notice **public network access is disabled**.
 
     ![image](./media/az104-7.png)
 
@@ -99,9 +99,9 @@ In this task, you will create and configure an Azure Storage account.
 
       ![image](./media/az104-6.png)    
 
-1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary data center locations.
+1. In the **Data management** section, view the **Redundancy** blade and notice the information about your primary data center locations.
 
-1. In the **Data management** section, select **Lifecycle management (1)**, and then select **+ Add a rule (2)**.
+1. In the **Data management** section, select **Lifecycle management (1)**, and then click on **+ Add a rule (2)**.
 
     ![image](./media/az104-8.png)
 
@@ -126,7 +126,7 @@ In this task, you will create a blob container and upload a blob into it.
 
 ### 2.1 Create a blob container and a time-based retention policy
 
-1. On the Storage account blade, in the **Data storage** section, click **Containers (1)**. Click **+ Container (2)**.
+1. On the Storage account resource page, under **Data storage** section, click on **Containers (1)**. Click **+ Container (2)**.
 
     ![image](./media/az104-9.png)
 
@@ -143,7 +143,7 @@ In this task, you will create a blob container and upload a blob into it.
 
      ![image](./media/l1-image9.png)
 
-1. On the **Access policy** window under the **Immutable blob storage** area, select **Add policy**.
+1. On the **Access policy** window, under  **Immutable blob storage** select **Add policy**.
 
     | Setting | Value |
     | --- | --- |
@@ -165,7 +165,7 @@ In this task, you will create a blob container and upload a blob into it.
 
     ![image](./media/az104-14.png)
 
-1. On the **Upload blob** blade, expand the **Advanced (1)** section and specify the following settings (leave others with their default values) and then click on **Upload (6)**:
+1. On the **Upload blob** pane, expand the **Advanced (1)** section and specify the following settings (leave others with their default values) and then click on **Upload (6)**:
 
     | Setting | Value |
     | --- | --- |
@@ -180,18 +180,18 @@ In this task, you will create a blob container and upload a blob into it.
 
     > **Note**: Note that the upload automatically created a subfolder named **licenses**.
 
-1. Back on the **az104-07-container** blade, click **licenses**. 
+1. Back on the **az104-07-container** page, click on **licenses**. 
 
 1. Then click **LICENSE**.
 
-1. On the **licenses/LICENSE (1)** blade, review the available options including **Download, Delete, Change tier, and Acquire lease (2)**.
+1. On the **licenses/LICENSE (1)** pane, review the available options including **Download, Delete, Change tier, and Acquire lease (2)**.
 
     ![image](./media/az104-16.png)
 
      > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
      
 
-1. On the **licenses/LICENSE (1)** blade, on the **Overview** tab, click the **Copy to clipboard (2)** button next to the **URL** entry.
+1. On the **licenses/LICENSE (1)** pane, under the **Overview** tab, click the **Copy to clipboard (2)** button next to the **URL** entry.
 
     ![image](./media/az104-15.png)
 
@@ -213,17 +213,17 @@ In this task, you will create a blob container and upload a blob into it.
 
 ### 2.3 Configure limited access to the blob storage
 
-1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values) and then click **Generate SAS token and URL (5)**.
+1. On the **Generate SAS** tab of the **licenses/LICENSE** pane, specify the following settings (leave others with their default values) and then click **Generate SAS token and URL (5)**.
 
     | Setting | Value |
     | --- | --- |
     | Signing key | **Key 1 (1)** |
     | Permissions | **Read (2)** |
-    | Start date | yesterday's date **(3)** |
-    | Start time | current time **(3)** |
-    | Expiry date | tomorrow's date **(3)** |
-    | Expiry time | current time **(3)** |
-    | Allowed IP addresses | leave blank **(4)** |
+    | Start date | **yesterday's date (3)** |
+    | Start time | **current time (3)** |
+    | Expiry date | **tomorrow's date (3)** |
+    | Expiry time | **current time (3)** |
+    | Allowed IP addresses | **leave blank (4)** |
 
      ![image](./media/az104-20.png)
 
@@ -251,7 +251,7 @@ In this task, you will create a blob container and upload a blob into it.
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
 
-1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, in the **Data storage** section, click **File shares (1)**. Click **+ File share (2)**.
+1. In the Azure portal, navigate back to the blade of the storage account you created in the task 2 of this lab and, under **Data storage** section, click **File shares (1)** and then click on **+ File share (2)**.
 
     ![image](./media/az104-22.png)
 
@@ -317,12 +317,12 @@ In this task, you will create and configure Azure Files shares.
 
 1. Select **+ Create**. 
 
-1. On the create Virtual network page, provide the followinh=g details and then click on **Review + create (5)**.
+1. On the create Virtual network page, provide the following details and then click on **Review + create (5)**.
 
     | Setting | Value |
     | --- | --- |
     | Subscription | Leave the default one **(1)** |
-    | Resource group | Select **existing** resource group **az104-rg2 (2)** |
+    | Resource group |**az104-rg2 (2)** |
     | Virtual Network name | `vnet1` **(3)** |
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
     
@@ -345,15 +345,15 @@ In this task, you will create and configure Azure Files shares.
 
 1. Return to your **Storage account** named **strgaz104t07<inject key="DeploymentID" enableCopy="false" />**
 
-1. In the **Security + networking** section, select the **Networking (1)** blade.
+1. In the **Security + Networking** section, select the **Networking (1)** blade.
 
-1. Under **Firewalls and virtual networks** tab, for **Public network access** select **Enabled from selected virtual networks and IP addresses (2)**. 
+1. On **Networking** blade, under **Public network access** select **Enabled from selected virtual networks and IP addresses (2)**. 
 
-1. Select **+ Add existing virtual network (3)**.
+1. On the blade, under **Virtual Networks** select **+ Add existing virtual network (3)**.
 
     ![image](./media/az104-36.png)
 
-1. On the **Add network** page,  select **vnet1 (1)** and **default (2)** subnet, select **Add (3)**.
+1. On the **Add networks** page,  select **vnet1 (1)** and **default (2)** subnet then select **Add (3)**.
 
     ![image](./media/az104-37.png)
 
