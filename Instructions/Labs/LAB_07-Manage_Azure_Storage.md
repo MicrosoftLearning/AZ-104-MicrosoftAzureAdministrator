@@ -47,13 +47,13 @@ In this task, you will create and configure an Azure Storage account.
     | Setting | Value |
     | --- | --- |
     | Subscription | Leave the default one **(1)** |
-    | Resource group | Select **existing** resource group **az104-07-rg1 (2)** |
+    | Resource group | Select **existing** resource group **az104-rg2 (2)** |
     | Storage account name | **strgaz104t07<inject key="DeploymentID" enableCopy="false" /> (3)** |
     | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
     | Performance | **Standard (5)** |
     | Redundancy | **Geo-redundant storage (GRS) (6)** |
 
-     ![image](./media/az104-1.png)
+     ![image](./media/L7T1S3.png)
 
 1. Click **Next: Advanced >**, on the **Advanced** tab of the **Create a storage account** blade, review the available options, accept the defaults, and click **Next**.
 
@@ -75,11 +75,11 @@ In this task, you will create and configure an Azure Storage account.
 
 1. On the Storage account blade, in the **Data management** section, click **Redundancy (1)** and note the secondary location **(2)**. 
 
-    ![image](./media/az104-5.png)
+    ![image](./media/L7T1S10.png)
 
 1. In the same blade **Redundancy (1)** drop-down list select **Locally redundant storage (LRS) (2)** and **Save (3)** the change. 
 
-    ![image](./media/l1-image2.png)
+    ![image](./media/L7T1S11.png)
 
 1. In the same blade note that, at this point, the Storage account has the **primary location**.
 
@@ -95,8 +95,7 @@ In this task, you will create and configure an Azure Storage account.
 
     ![image](./media/az104-7.png)
 
-    + Change the **public access level** to **Enabled from all network (2)**.
-    + Be sure to **Save (3)** your changes. 
+    + Change the **public access level** to **Enabled from all network (2)** and click on **Save (3)** to save your changes. 
 
       ![image](./media/az104-6.png)    
 
@@ -125,7 +124,7 @@ In this task, you will create and configure an Azure Storage account.
 
 In this task, you will create a blob container and upload a blob into it.
 
-### Create a blob container and a time-based retention policy
+### 2.1 Create a blob container and a time-based retention policy
 
 1. On the Storage account blade, in the **Data storage** section, click **Containers (1)**. Click **+ Container (2)**.
 
@@ -154,13 +153,13 @@ In this task, you will create a blob container and upload a blob into it.
    
      ![image](./media/l1-image10.png)
 
-## Manage blob uploads
+## 2.2 Manage blob uploads
 
 1. In the list of containers, select **az104-07-container**.
 
 1. Click **Upload (1)** within the **Upload blob** pane, click on **Browse for files (2)**.
 
-    ![image](./media/az104-13.png)
+    ![image](./media/L7T2-2.2S2.png)
 
 1. Browse to `C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\07` **(1)**, select **LICENSE (2)** on your lab computer and click **Open (3)**.
 
@@ -212,7 +211,7 @@ In this task, you will create a blob container and upload a blob into it.
 
     ![image](./media/az104-19.png)
 
-### Configure limited access to the blob storage
+### 2.3 Configure limited access to the blob storage
 
 1. On the **Generate SAS** tab of the **licenses/LICENSE** blade, specify the following settings (leave others with their default values) and then click **Generate SAS token and URL (5)**.
 
@@ -271,7 +270,7 @@ In this task, you will create and configure Azure Files shares.
 
 1. Click the newly created file share and note the information available on the **az104-07-share** blade.
 
-### Explore Storage Browser and upload a file
+### 3.1 Explore Storage Browser and upload a file
 
 1. Return to your storage account and select **Storage Browser (1)**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
@@ -310,7 +309,7 @@ In this task, you will create and configure Azure Files shares.
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
-### Restrict network access to the storage account
+### 3.2 Restrict network access to the storage account
 
 1. In the portal, search for **Virtual networks (1)** and select **Virtual networks (2)**.
 
@@ -320,12 +319,14 @@ In this task, you will create and configure Azure Files shares.
 
 1. On the create Virtual network page, provide the followinh=g details and then click on **Review + create (5)**.
 
-    - Subscription: Leave the default one **(1)**
-    - Select your resource group **az104-07-rg1 (2)**
-    - Provide the virtual network a **name**, `vnet1` **(3)**
-    - Region: Leave the default **(4)**
-
-      ![image](./media/az104-32.png)
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | Leave the default one **(1)** |
+    | Resource group | Select **existing** resource group **az104-rg2 (2)** |
+    | Virtual Network name | `vnet1` **(3)** |
+    | Region | **<inject key="Region" enableCopy="false"/> (4)**  |
+    
+      ![image](./media/L7T3-2.2S3.png)
 
 1. Then **Create**.
 
