@@ -42,18 +42,18 @@ In this task, you will create an Azure Web App, which is a platform-as-a-service
 
     | Setting | Value |
     | --- | ---|
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | Select **az104-09a-rg1** |
-    | Web app name | webapp<inject key="DeploymentID" enableCopy="false" /> |
-    | Publish | **Code** |
-    | Runtime stack | **PHP 8.2** |
-    | Operating system | **Linux** |
-    | Region | **<inject key="Region" enableCopy="false"/>** |
-    | Pricing plans | **Premium V3 P1V3 (195 minimum ACU/vCPU, 8 GB memory, 2 vCPU) v** |
+    | Subscription | the name of the Azure subscription you are using in this lab (1)|
+    | Resource group | Select **az104-rg2** (2)|
+    | Web app name | webapp<inject key="DeploymentID" enableCopy="false" /> (3) |
+    | Publish | **Code** (4) |
+    | Runtime stack | **PHP 8.2** (5)|
+    | Operating system | **Linux** (6)|
+    | Region | **<inject key="Region" enableCopy="false"/>** (7)|
+    | Pricing plans | **Premium V3 P1V3 (195 minimum ACU/vCPU, 8 GB memory, 2 vCPU) v** (8) |
 
-    ![image](./media/l9-image(3).png)
+    ![image](./media/create-webapp-0905.png)
    
-1. Click **Review + create**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
+1. Click **Review + create (9)**. On the **Review + create** tab of the **Create Web App** blade, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait until the web app is created before you proceed to the next task. This should take about a minute.
 
@@ -73,20 +73,18 @@ In this task, you will create a staging deployment slot in Azure Web Apps, which
  
    >**Note**: Please copy the URL and save it in Notepad. You may need this link for Task 5.
 
-1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots**.
+1. Close the new browser tab and, back in the Azure portal, in the **Deployment** section in the left navigation pane of the web app blade, click **Deployment slots (1)**.
 
     >**Note**: The web app, at this point, has a single deployment slot labeled **PRODUCTION**.
 
-1. Click **+ Add slot**, and add a new slot with the following settings then click on **Add**. 
+1. Click **+ Add slot (2)**, and add a new slot with the following settings then click on **Add (5)**. 
 
     | Setting | Value |
     | --- | ---|
-    | Name | **staging** |
-    | Clone settings from | **Do not clone settings**|
+    | Name | **staging (3)** |
+    | Clone settings from | **Do not clone settings (4)**|
 
-    ![image](./media/lab09-new-1.png)
-
-    ![image](./media/lab09-new-2.png)
+    ![image](./media/deployment-slots-0905.png)
 
 1. Once you see **Successfully created slot 'staging'** click on **Close**.
      
