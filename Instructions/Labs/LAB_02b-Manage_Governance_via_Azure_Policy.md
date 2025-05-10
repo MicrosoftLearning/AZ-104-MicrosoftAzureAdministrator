@@ -146,7 +146,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | AZ-104T02 |
+    | Resource Group | az104-rg2 |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing** then click on **Add** if not selected in the definition.
 
@@ -198,7 +198,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | AZ-104T02 |
+    | Resource Group | az104-rg2 |
     | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** |
     | Redundancy |  **Locally-redundant storage (LRS)** |
 
@@ -223,9 +223,9 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
 In this task, you will configure and test a resource lock to safeguard critical Azure resources from unintended changes or deletions. Resource locks are a powerful governance feature in Azure.
 
-1. Search for and select your resource group **AZ-104T02**.
+1. Search for and select your resource group **az104-rg2**.
    
-1. In the **Settings** blade, select **Locks**.
+1. In the **Settings** blade from the left navigation pane, select **Locks**.
 
 1. Select **+ Add** and complete the resource lock information. When finished select **Ok**. 
 
@@ -236,19 +236,19 @@ In this task, you will configure and test a resource lock to safeguard critical 
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-   ![image](./media/l2-image62.png)
+    ![image](./media/xxx3.png)
 
-1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
 
-   ![image](./media/l2-image63.png)
+    ![image](./media/xxx4.png)
    
 1. You should receive a notification denying the deletion. 
 
-    ![image](./media/l2-image64.png)
+     ![image](./media/xxx5.png)
 
-1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
+1. From the **az104-rg2** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
 
-   ![image](./media/l2-image65.png)
+    ![image](./media/xxx6.png)
 
 ### Review
 
