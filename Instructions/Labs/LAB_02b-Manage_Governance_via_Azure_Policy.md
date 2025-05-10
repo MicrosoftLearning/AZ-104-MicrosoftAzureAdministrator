@@ -202,7 +202,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** |
     | Redundancy |  **Locally-redundant storage (LRS)** |
 
-    ![image](./media/lab02-new-11.png)
+    ![image](./media/xxx7.png)
    
 1. Verify that this time the validation passed and click **Create**.
 
