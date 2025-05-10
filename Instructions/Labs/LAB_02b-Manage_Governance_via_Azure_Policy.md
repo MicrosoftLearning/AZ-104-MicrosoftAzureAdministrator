@@ -30,7 +30,7 @@ In this exercise, you will learn to manage governance via Azure Policy that invo
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104T02** from the list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group az104-rg2** from the list.
 
    ![image](./media/l2-image45.png)
 
