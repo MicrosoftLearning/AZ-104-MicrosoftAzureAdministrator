@@ -150,7 +150,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select the **templates.json** file with your Manufacturing changes, then select **Save**.
 
-1. Select **Edit template**, and then **Load file**.
+1. Select **Edit parameters**, and then **Load file**.
 
 1. Select the **parameters.json** file with your Manufacturing changes, then select **Save**.
 
@@ -281,7 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
-1. Select **+ Record set**. **Add** a virtual network link record for each virtual network that needs private name-resolution support.
+1. Expand **DNS Management** and then select **Record sets** item. Select **+ Add** a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
@@ -324,7 +324,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Select **DNS Management** and then select **Virtual network links**. Configure the link. 
+1. Expand **DNS Management** and then select **Virtual network links**. Configure the link. 
 
     | Property | Value    |
     |:---------|:---------|
@@ -333,7 +333,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Select **Create** and wait for the link to create. 
 
-1. From the **DNS Management** blade select **+ Recordsets**. You would now add a record for each virtual machine that needs private name-resolution support.
+1. Under **DNS Management** select **Recordsets**. Select **+Add** You would now add a record for each virtual machine that needs private name-resolution support then select **Save**.
 
     | Property | Value    |
     |:---------|:---------|
