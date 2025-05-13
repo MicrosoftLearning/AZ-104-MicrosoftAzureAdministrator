@@ -148,7 +148,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
-1. Select the **templates.json** file with your Manufacturing changes, then select **Save**.
+1. Select the **template.json** file with your Manufacturing changes, then select **Save**.
 
 1. Select **Edit template**, and then **Load file**.
 
