@@ -49,7 +49,7 @@ There are several interactive lab simulations that you might find useful for thi
 
 ## Task 1: Assign tags via the Azure portal
 
-In this task, you will create and assign a tag to an Azure resource group via the Azure portal. Tags are a critical component of a governance strategy as outlined by the Microsoft Well-Architected Framework and Cloud Adoption Framework. Tags can allow you to quickly identify resource owners, sunset dates, group contacts, and other name/value pairs that your organization  deems important. For this task, you assign a tag identifying the resource role ('Infra' for 'Infrastructure').
+In this task, you will create and assign a tag to an Azure resource group via the Azure portal. Tags are a critical component of a governance strategy as outlined by the Microsoft Well-Architected Framework and Cloud Adoption Framework. Tags can allow you to quickly identify resource owners, sunset dates, group contacts, and other name/value pairs that your organization  deems important. For this task, you assign a tag identifying the resource Cost Center. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
       
