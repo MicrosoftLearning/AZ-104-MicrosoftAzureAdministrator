@@ -47,14 +47,12 @@ In this task, you will deploy two virtual machines that will serve as test envir
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Leave it as the default subscription |
-    | Resource group| **az104-rg2**  |
+    | Resource group| **az104-rg3**  |
     | Region        | **<inject key="Region" enableCopy="false"/>**    |
     | Admin Password      | **Password.11!** |
 
 1. Select **Review + create**, then select **Create**.
-
      
-      
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
 ### Task 2: Create a Recovery Services vault
@@ -72,15 +70,13 @@ In this task, you will create a Recovery Services vault, an essential component 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | **az104-rg2** |
+    | Resource group | **az104-rg3** |
     | Vault Name | **az104-10-rsv1** |
     | Region | **<inject key="Region" enableCopy="false"/>**  |
-
-     
-      
+ 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-    ![image](../media/L10T2S3.png)
+    ![image](../media/L10T2S31.png)
      
 1. Ensure that the validation has passed, and click **Create**.
 
@@ -187,11 +183,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- | 
     | Subscription          | *Your subscription*    |
-    | Resource group        | **az104-rg2**       |
+    | Resource group        | **az104-rg3**       |
     | Storage account name  | **storagebackup<inject key="DeploymentID" enableCopy="false"/>**   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
 
-    ![image](../media/L10T4S3.png)
+    ![image](../media/L10T4S31.png)
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
 
@@ -250,7 +246,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
     | Settings | Value |
     | --- | --- |
     | Subscription | Leave it as the default subscription |
-    | Resource group |**az104-rg2** |
+    | Resource group |**az104-rg3** |
     | Vault Name | **az104-10-rsv2**  |
     | Region | **West US 3** |
 
