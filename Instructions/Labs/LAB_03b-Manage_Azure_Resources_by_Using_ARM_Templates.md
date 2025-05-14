@@ -179,7 +179,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    ![image](../media/az104-mod3-image21.png)
 
-1. Click on **Confirm** on **Switch to classsic Cloud Shell**
+1. Click on **Confirm** on **Switch to classic Cloud Shell**
 
    ![image](../media/az104-mod3-image22.png)
 
@@ -187,7 +187,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    ![image](../media/az-104i4.png)
 
-1. Select **template.json** and make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
+1. Select **template.json** and make a change. For example, change the disk name to **az104-09b-disk3**. Use **Ctrl +S** to save your changes.
 
     ![image](../media/az-104i5.1.png)
 
