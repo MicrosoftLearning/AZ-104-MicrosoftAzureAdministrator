@@ -34,29 +34,25 @@ In this task, you will deploy two virtual machines that will serve as test envir
 
 1. On the edit template page, select **Load file** option  from the top navigation pane.
 
-1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-template.json** file and select **Open**.
+1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-template.json** file and select **Open**, then click on **Save**.
 
    >**Note:** Take a moment to review the template. We are deploying a virtual network and virtual machine so we can demonstrate backup and recovery. 
 
-1. **Save** your changes.
-
 1. Select **Edit parameters** and then select the **Load file** option.
 
-1. Load and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** file.
-
-1. **Save** your changes.
+1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\10\az104-10-vms-edge-parameters.json** file and select **Open**, then click on **Save**.
 
 1. Use the following information to complete the custom deployment fields, leaving all other fields with their default values:
 
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Leave it as the default subscription |
-    | Resource group| az104-10-rg1  |
+    | Resource group| **az104-rg3**  |
     | Region        | **<inject key="Region" enableCopy="false"/>**    |
     | Admin Password      | **Password.11!** |
 
 1. Select **Review + create**, then select **Create**.
-
+     
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 
 ### Task 2: Create a Recovery Services vault
@@ -69,44 +65,44 @@ In this task, you will create a Recovery Services vault, an essential component 
 
 1. Click **+ Create**.
 
-1. On the **Create Recovery Services vault** blade, specify the following settings and click **Review + create**.
+1. On the **Create Recovery Services vault** page, specify the following settings and click **Review + create**.
 
     | Settings | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | Select resource group **az104-10-rg1** |
+    | Resource group | **az104-rg3** |
     | Vault Name | **az104-10-rsv1** |
     | Region | **<inject key="Region" enableCopy="false"/>**  |
-
+ 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
-    ![image](./media/l10-image6.png)
+    ![image](../media/L10T2S31.png)
      
 1. Ensure that the validation has passed, and click **Create**.
 
-    >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
+     >**Note**: Wait for the deployment to complete. The deployment should take less than 1 minute.
 
 1. When the deployment is completed, click **Go to Resource**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, in the left navigation pane in the  **Settings** section, click **Properties**.
+1. On the **az104-10-rsv1** Recovery Services vault page, in the left navigation pane under the  **Settings** section, click on **Properties**.
 
 1. On the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Backup Configuration** label.
 
     ![image](./media/l10-image7.png)
 
-1. On the **Backup Configuration** blade, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the blade.
+1. On the **Backup Configuration** pane, review the choices for **Storage replication type**. Leave the default setting of **Geo-redundant** in place and close the pane.
 
     >**Note**: This setting can be configured only if there are no existing backup items.
 
-1. Back on the **az104-10-rsv1 - Properties** blade, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
+1. Back on the **az104-10-rsv1 - Properties** pane, click the **Update** link under **Security Settings > Soft Delete and security settings** label.
 
-   ![image](./media/az-104p2.png)
+    ![image](./media/az-104p2.png)
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
+1. On the **Security Settings** pane, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
-1. Return to the Recovery Services vault blade, select the **Overview** blade.
+1. Return to the Recovery Services vault page, select the **Overview** blade.
 
->**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
+  >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
    <validation step="f9e7c7f2-c8ce-4ed4-8894-c735a0046e01" />
    
@@ -121,9 +117,9 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed. You can check that by going to the respected resource group in the Azure portal and on the overview page of the resource group click on **Deployments**.
 
-1. On the **az104-10-rsv1** Recovery Services vault blade, click **Overview**, then click **+ Backup**.
+1. On the **az104-10-rsv1** Recovery Services vault pane, click **Overview**, then click **+ Backup**.
 
-1. On the **Backup Goal** blade, specify the following settings:
+1. On the **Backup Goal** page, specify the following settings:
 
     | Settings | Value |
     | --- | --- |
@@ -132,13 +128,13 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
 1. Under **Configure Backup** , click **Backup**.
 
-1. On **Configure backup** in Policy sub type click **Standard** review the options.
+1. On **Configure backup** page, in Policy sub type click **Standard** and review the options.
 
    ![image](./media/az-104p3.png)
 
-1. On **Configure backup** in **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
+1. On **Configure backup**, under **Backup policy**, review the **DefaultPolicy** settings and select **Create a new policy**.
 
-   ![image](./media/az-104p30.png)
+   ![image](../media/L10T3S5.png)
 
 1. Define a new backup policy with the following settings (leave others with their default values):
 
@@ -152,7 +148,7 @@ In this task, you will implement Azure virtual-machine level backup to ensure da
 
 1. Click **OK** to create the policy.
 
-   ![image](./media/az-104p31.png)
+   ![image](../media/L10T3S6.png)
   
 1. In the **Virtual Machines** section, select **Add**.
 
@@ -187,9 +183,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Settings | Value |
     | --- | --- | 
     | Subscription          | *Your subscription*    |
-    | Resource group        | **az104-10-rg1**       |
-    | Storage account name  | **storage<inject key="DeploymentID" enableCopy="false"/>**   |
+    | Resource group        | **az104-rg3**       |
+    | Storage account name  | **storagebackup<inject key="DeploymentID" enableCopy="false"/>**   |
     | Region                | **<inject key="Region" enableCopy="false"/>**  |
+
+    ![image](../media/L10T4S31.png)
 
 1. On **Data Protection** tab, uncheck the **Enable soft delete for blobs** check box then and select **Review + Create**.
 
@@ -248,7 +246,7 @@ In this task, you will enable replication for a virtual machine to ensure busine
     | Settings | Value |
     | --- | --- |
     | Subscription | Leave it as the default subscription |
-    | Resource group |az104-10-rg1     |
+    | Resource group |**az104-rg3** |
     | Vault Name | **az104-10-rsv2**  |
     | Region | **West US 3** |
 
@@ -273,9 +271,9 @@ In this task, you will enable replication for a virtual machine to ensure busine
     | Setting | Value |
     | ---- | ---- |
     | Churn for the vm | **Normal churn**  |
-    | Cache storage account | **storage<inject key="DeploymentID" enableCopy="false"/>**  |
+    | Cache storage account | **storagebackup<inject key="DeploymentID" enableCopy="false"/>**  |
 
-     ![image](./media/az-104p8.1.png)
+     ![image](../media/L10T5S7.png)
 
    >**Note:** It is important that both of these settings be populated, or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
 

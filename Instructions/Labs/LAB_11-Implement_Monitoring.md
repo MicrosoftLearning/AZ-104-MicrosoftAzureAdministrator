@@ -25,7 +25,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
 
-   ![image](./media/az-104p1.png)
+   ![image](../media/L11T1S1.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
@@ -40,12 +40,12 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription (1) |
-    | Resource group| **az104-11-rg1** (2)|
+    | Resource group| **az104-rg2** (2)|
     | Region        |  **<inject key="Region" enableCopy="false" />** (3) |
     | Admin Username| **Student** (4)|
     | Password      | Provide a complex password  (5)|
 
-    ![image](../media/l11i2.1.png)
+    ![image](../media/L11T1S6.png)
     
 1. Select **Review + create**, then select **Create**.
 
@@ -53,7 +53,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. Review what resources were deployed. There should be one virtual network with one virtual machine.
 
-**Configure Azure Monitor for virtual machines (this will be used in the last task)**
+**1.1 Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
 1. In the portal, search for and select **Monitor** resource.
 
@@ -95,7 +95,7 @@ In this task, you will set up an alert within Azure Monitor to notify you when a
 
 1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Notice the other built-in signals. Select **Apply**
 
-   ![image](../media/l11i8.png)
+   ![image](../media/L11T2S5.png)
 
 1. In the **Alert logic** area (scroll down), review the **Event level** selections. Leave the default of **All selected**.
 
@@ -117,13 +117,13 @@ In this task, you will configure an action group that sends an email notificatio
     |---------|---------|
     | **Project details** |
     | Subscription | your subscription (1) |
-    | Resource group | **az104-11-rg1** (2) |
+    | Resource group | **az104-rg2** (2) |
     | Region | **Global** (default) (3) |
     | **Instance details** |
     | Action group name | `Alert the operations team` (must be unique in the resource group) (4) |
     | Display name | `AlertOpsTeam` (5) |
 
-    ![image](../media/l11i9.png)
+    ![image](../media/L11T3S2.png)
 
 1. Select **Next: Notifications >** and enter the following values for each setting.
 
@@ -132,9 +132,9 @@ In this task, you will configure an action group that sends an email notificatio
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Click on the **Edit** icon next to the email entry.
+1. Click on the **Edit (pencil icon)** icon next to the email entry.
 
-   ![image](../media/az-104l1.png)
+   ![image](../media/L11T3S4.png)
 
 1. In the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
 
@@ -203,9 +203,9 @@ In this task, you will create an alert processing rule designed to suppress or p
 
    ![image](../media/l11i14.png)
    
-1. Select your **resource group**, then select **Apply**.
+1. Select your resource group **az104-rg2**, then select **Apply**.
 
-   ![image](../media/l11i13.png)
+   ![image](../media/L11T5S2.png)
    
 1. Select **Next: Rule settings >**, then select **Suppress notifications**.
    
@@ -221,13 +221,13 @@ Enter these settings for the scheduling of the alert processing rule:
     | End | Enter tomorrow's date at 7 am. |
     | Time zone | Select the local timezone. |
 
-    ![image](../media/l11i15.png)
+    ![image](../media/L11T5S5.png)
 
 1. Select **Next: Details >** and enter these settings:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **az104-11-rg1** |
+    | Resource group | **az104-rg2** |
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
@@ -241,19 +241,23 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 
 1. If necessary close the splash screen. 
 
-1. Select a scope, ****az104-11-rg1****. Select **Apply**. 
+1. Select a scope, ****az104-rg2****. Select **Apply**. 
 
 1. In the **Queries** tab, select **Virtual machines** (left pane).
 
 1. Review the queries that are available. Double-click the **Count heartbeats** query and select **Run**.
 
-    ![image](../media/l11a1.png)
+    ![image](../media/L11T6S5.png)
 
 1. You should receive a heartbeat count for when the virtual machine was running.
 
-    ![image](../media/l11a2.png)
+   ![image](../media/L11T6S6.png)
 
-1. Review the query. This query uses the *heartbeat* table. 
+      > Note: If you see the query is not visible please change the mode from **Simple Mode** to **KQL Mode**.
+
+      ![image](../media/L11T6S6-N.png)
+
+1. Review the query. This query uses the **heartbeat** table. 
 
 1. Replace the query with this one, and then click **Run**. Review the resulting chart. 
 
@@ -264,7 +268,7 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
     | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
     | render timechart
    ```
-    ![image](../media/l11a3.png)
+    ![image](../media/L11T6S8.png)
 
      >**Did you know?**: If you want to practice with other queries, there is a [Log Analytics Demo Environment](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial#open-log-analytics).
     

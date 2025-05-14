@@ -29,11 +29,11 @@ The organization plans a large amount of growth for core services. In this task,
     |  **Option**         | **Value**            |
     | ------------------ | -------------------- |
     | Subscription       | Choose the default subscription |(1)
-    | Resource Group     | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** (2)|
+    | Resource Group     | **az104-rg2** (2)|
     | Name               | **az104-04-vnet1** (3)|
     | Region             |  **<inject key="Region" enableCopy="false" />** (4) |
 
-     ![image](../media/l4i1.png)
+     ![image](../media/L4T1S3.png)
 
 1. Click **Next** and subsequently click on **Next** again to move to the **IP Addresses** tab.
 
@@ -41,7 +41,7 @@ The organization plans a large amount of growth for core services. In this task,
     | --- | --- |
     | IPv4 address space | **10.20.0.0/16** |
 
-1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. Select **+ Add a subnet (1)**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
@@ -56,11 +56,13 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. Select **Review + create**.
 
+     ![image](../media/L4T1S6.png)
+
 1. Verify your configuration passed validation, and then select **Create**.
 
 1. Wait for the virtual network to deploy and then select **Go to resource**.
 
-    ![image](../media/l4i4.png)
+    ![image](../media/L4T1S8.png)
    
 1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
    
@@ -78,6 +80,8 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 1. In your Lab VM, navigate to **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\04** where you will find the template and parameter file named 
    **az-104-04template** and **az-104-04parameters** that will be used for the custom deployment.
 
+     ![image](../media/L4T2S1.png)
+
 1. In the Azure portal, search for and select **Deploy a custom template** resource.
 
 1. Select **Build your own template in the editor** and then **Load file** in the top navigation pane.
@@ -88,11 +92,11 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Click on the **Edit Parameters** section and click on **Load File** to upload the **az-104-04parameters.json** file and subsequently, click on **Save**
 
-1. In the **Basics** tab, select **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** resource group.
+1. In the **Basics** tab, select **az104-rg2** resource group.
     
-    ![image](../media/l4i7.png)
-
 1. Select **Review + create** and then **Create**.
+
+    ![image](../media/L4T2S7.png)
 
 1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
    
@@ -107,7 +111,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 In this task, we create an Application Security Group and a Network Security Group. The NSG will have an inbound security rule that allows traffic from the ASG. The NSG will also have an outbound rule that denies access to the internet. 
 
-### Create the Application Security Group (ASG)
+### **3.1 Create the Application Security Group (ASG)**
 
 1. In the Azure portal, search for and select **Application security groups**.
 
@@ -116,15 +120,15 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Setting | Value |
     | -- | -- |
     | Subscription | *your subscription* (1) |
-    | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**  (2)|
+    | Resource group | **az104-rg2**  (2)|
     | Name | **asg-web** (3) |
     | Region |  **<inject key="Region" enableCopy="false" />** (4)  |
 
-    ![image](../media/l4i8.png)
+1. Click **Review + create (5)** and then after the validation click **Create**.
 
-1. Click **Review + create** and then after the validation click **Create**.
+      ![image](../media/L4T3-3.1S3.png)
 
-### Create the Network Security Group and associate it with the ASG subnet
+### **3.2 Create the Network Security Group and associate it with the ASG subnet**
 
 1. In the Azure portal, search for and select **Network security groups**.
 
@@ -133,71 +137,72 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Setting | Value |
     | -- | -- |
     | Subscription | *your subscription* |
-    | Resource group |  **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**  |
+    | Resource group |  **az104-rg2**  |
     | Name | **myNSGSecure** |
     | Region | **<inject key="Region" enableCopy="false" />**  |
 
 1. Click **Review + create** and then after the validation click **Create**.
 
+      ![image](../media/L4T3-3.2S3.png)
+
 1. After the NSG is deployed, click **Go to resource**.
 
-1. Under **Settings** click **Subnets** and then **Associate**.
+1. Under **Settings (1)** click **Subnets (2)** and then **Associate (3)**. Click **OK** to save the association.
 
     | Setting | Value |
     | -- | -- |
     | Virtual network | **az104-04-vnet1** |
     | Subnet | **SharedServicesSubnet** |
 
-    ![image](../media/l4i9.png)
+      ![image](../media/L4T3-3.2S5i.png)
+      ![image](../media/L4T3-3.2S5ii.png)
 
-1. Click **OK** to save the association.
+### **3.3 Configure an inbound security rule to allow ASG traffic**
 
-### Configure an inbound security rule to allow ASG traffic
-
-1. Continue working with your NSG. In the left navigation pane in the **Settings** section, select **Inbound security rules**.
+1. Continue working with your NSG. In the left navigation pane in the **Settings (1)** section, select **Inbound security rules (2)**.
 
 1. Review the default inbound rules. Notice that only other virtual networks and load balancers are allowed access.
 
-1. Select **+ Add**.
-
-1. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select 
-   **Add**.
+1. Select **+ Add (3)**. On the **Add inbound security rule** blade, use the following information to add an inbound port rule. This rule allows ASG traffic. When you are finished, select **Add (14)**.
 
     | Setting | Value |
     | -- | -- |
-    | Source | **Application security group** (1) |
-    | Source application security groups | **asg-web** (2) |
-    | Source port ranges |  * (3) |
-    | Destination | **Any** (4) |
-    | Service | **Custom** (notice your other choices) (5)|
-    | Destination port ranges | **80,443** (6)|
-    | Protocol | **TCP** (7) |
-    | Action | **Allow** (8) |
-    | Priority | **100** (9) |
-    | Name | **AllowASG** (10) |
+    | Source | **Application security group** (4) |
+    | Source application security groups | **asg-web** (5) |
+    | Source port ranges |  * (6) |
+    | Destination | **Any** (7) |
+    | Service | **Custom** (notice your other choices) (8)|
+    | Destination port ranges | **80,443** (9)|
+    | Protocol | **TCP** (10) |
+    | Action | **Allow** (11) |
+    | Priority | **100** (12) |
+    | Name | **AllowASG** (13) |
 
-    ![image](../media/l4i10.png)
+    ![image](../media/L4T3-3.3S3.png)
  
-### Configure an outbound NSG rule that denies Internet access
+### **3.4 Configure an outbound NSG rule that denies Internet access**
 
-1. After creating your inbound NSG rule, select **Outbound security rules** from the left navigation pane. 
+1. After creating your inbound NSG rule, select **Outbound security rules (1)** from the left navigation pane. 
 
 1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
 
-1. Select **+ Add** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add**.
+1. Select **+ Add (2)** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add (13)**.
 
     | Setting | Value |
     | -- | -- |
-    | Source | **Any** |
-    | Source port ranges |  * |
-    | Destination | **Service tag** |
-    | Destination service tag | **Internet** |
-    | Service | **Custom** |
-    | Destination port ranges | **8080** |
-    | Protocol | **Any** |
-    | Action | **Deny** |
-    | Priority | **4096** |
-    | Name | **DenyAnyCustom8080Outbound** |
+    | Source | **Any** (3) |
+    | Source port ranges |  * (4)|
+    | Destination | **Service tag** (5) |
+    | Destination service tag | **Internet** (6) |
+    | Service | **Custom** (7)|
+    | Destination port ranges | **8080** (8) |
+    | Protocol | **Any** (9) |
+    | Action | **Deny** (10) |
+    | Priority | **4096** (11) |
+    | Name | **DenyAnyCustom8080Outbound** (12) |
+
+      ![image](../media/L4T3-3.4S3i.png)
+      ![image](../media/L4T3-3.4S3ii.png)
 
    <validation step="31f935dd-707f-4141-ad94-e4d565864018" />
    
@@ -210,7 +215,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 In this task, you will create and configure public and private DNS zones to enable efficient name resolution for resources in Azure. Public DNS zones will handle domain name resolution accessible over the internet, while private DNS zones will facilitate name resolution within your private virtual network, ensuring seamless communication between internal resources.
 
-### Configure a public DNS zone
+### **4.1 Configure a public DNS zone**
 
 You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
 
@@ -223,34 +228,34 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription**  (1)|
-    | Resource group |  **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />**(2) |
+    | Resource group |  **az104-rg2**(2) |
     | Name | **contoso<inject key="DeploymentID" enableCopy="false" />.com** (3)|
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
 
-    ![image](../media/l4i11.png)
+1. Select **Review create (5)** and then **Create**.
 
-1. Select **Review create** and then **Create**.
+   ![image](../media/L4T4-4.1S4.png)
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. On the **Overview** blade  select **Recordsets** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **DNS Management (1)** blade  select **Recordsets (2)** and notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
 
-    ![image](../media/l4i12.png)
+    ![image](../media/L4T4-4.1S6.png)
 
-1. Select **+ Add**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+1. Select **+ Add (1)**. You add a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **www** |
-    | Type | **A - IPv4 Address records** |
-    | TTL | **1** |
-    | IP address | **10.1.1.4** |
+    | Name | **www** (2) |
+    | Type | **A - IPv4 Address records** (3)|
+    | TTL | **1** (4) |
+    | IP address | **10.1.1.4** (5) |
 
      >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
 1. Select **Add** and verify **contoso<inject key="DeploymentID" enableCopy="false" />.com** has an A record set named **www**.
 
-   ![image](../media/l4i13.png)
+   ![image](../media/L4T4-4.1S8.png)
 
 1. Open a command prompt, and run the following command:
    In the below code, replace [DID] with **<inject key="DeploymentID" enableCopy="false" />** and [name server name] with the **name server name** you copied in the previous step.
@@ -260,9 +265,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    ```
 1. Verify the host name **www.contoso<inject key="DeploymentID" enableCopy="false" />.com** resolves to the IP address you provided. This confirms name resolution is working correctly.
 
-    ![image](../media/l4i14.png)
+    ![image](../media/L4T4-4.1S10.png)
 
-###  Configure a private DNS zone
+###  **4.2 Configure a private DNS zone**
 
 A private DNS zone provides name resolution services within virtual networks. A private DNS zone is only accessible from the virtual networks that it is linked to and can't be accessed from the internet. 
 
@@ -274,38 +279,46 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
     | Property | Value    |
     |:---------|:---------|
-    | Subscription | **Select your subscription** |
-    | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" />** |
-    | Name | `private.contoso.com` (adjust if you have to rename) |
-    | Region | **<inject key="Region" enableCopy="false" />** |
+    | Subscription | **Select your subscription (1)** |
+    | Resource group | **az104-04-rg1-<inject key="DeploymentID" enableCopy="false" /> (2)** |
+    | Name | `private.contoso.com` (adjust if you have to rename) (3) |
+    | Region | **<inject key="Region" enableCopy="false" />** (4) |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review create (5)** and then **Create**.
+
+    ![image](../media/L4T4-4.2S4.png)
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. In the left navigation pane under **DNS Management**, select **Virtual network links** from the left navigation pane and then select **+ Add**.
+1. In the left navigation pane under **DNS Management (1)**, select **Virtual network links (3)** from the left navigation pane and then select **+ Add (3)**.
 
     | Property | Value    |
     |:---------|:---------|
-    | Link name | **manufacturing-link**|
-    | Virtual network |**ManufacturingVnet**|
+    | Link name | **manufacturing-link (4)**|
+    | Virtual network |**ManufacturingVnet (5)**|
 
-1. Select **Create** and wait for the link to create. 
+1. Select **Create (6)** and wait for the link to create. 
 
-1. From the left navigation pane, under DNS Management click on **Record Set**. Click on **+ Add** to  add a record for each virtual machine that needs private name-resolution support.
+    ![image](../media/L4T4-4.2S8i.png)
+    ![image](../media/L4T4-4.2S8ii.png)
+
+1. From the left navigation pane, under DNS Management click on **Record Set (1)**. Click on **+ Add (2)** to  add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **sensorvm** |
-    | Type | **A** |
-    | TTL | **1** |
-    | IP address | **10.1.1.4** |
+    | Name | **sensorvm** (3) |
+    | Type | **A** (4) |
+    | TTL | **1** (5) |
+    | IP address | **10.1.1.4** (6) |
    
     >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine
 
-1. Click on **Add**
+1. Click on **Add (7)**
+
+    ![image](../media/L4T4-4.2S10i.png)
+    ![image](../media/L4T4-4.2S10ii.png)
   
 ### Review
 

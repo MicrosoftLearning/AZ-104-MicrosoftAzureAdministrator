@@ -30,7 +30,7 @@ In this exercise, you will learn to manage governance via Azure Policy that invo
 
 In this task, you will learn how to create and assign a tag to an Azure resource group through the Azure portal. Tags in Azure are key-value pairs that help in organizing and categorizing resources for better management and reporting.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **Resource group AZ-104T02** from the list.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, search and select **Resource group** under services. Select **az104-rg2** Resource group from the list.
 
    ![image](./media/l2-image45.png)
 
@@ -41,7 +41,7 @@ In this task, you will learn how to create and assign a tag to an Azure resource
     | Name | **Role** |
     | Value | **Infra** |
 
-   ![image](./media/l2-image27.png)
+   ![image](./media/aa1.png)
    
 ### Task 2: Enforce tagging via an Azure policy
 
@@ -146,7 +146,7 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | AZ-104T02 |
+    | Resource Group | az104-rg2 |
 
 1. To specify the **Policy definition**, click the ellipsis button and then search for and select **Inherit a tag from the resource group if missing** then click on **Add** if not selected in the definition.
 
@@ -198,11 +198,11 @@ In this task, you will focus on identifying and remediating non-compliant resour
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | AZ-104T02 |
+    | Resource Group | az104-rg2 |
     | Storage account name |  **storage<inject key="DeploymentID" enableCopy="false"/>** |
     | Redundancy |  **Locally-redundant storage (LRS)** |
 
-    ![image](./media/lab02-new-11.png)
+    ![image](./media/xxx7.png)
    
 1. Verify that this time the validation passed and click **Create**.
 
@@ -223,9 +223,9 @@ In this task, you will focus on identifying and remediating non-compliant resour
 
 In this task, you will configure and test a resource lock to safeguard critical Azure resources from unintended changes or deletions. Resource locks are a powerful governance feature in Azure.
 
-1. Search for and select your resource group **AZ-104T02**.
+1. Search for and select your resource group **az104-rg2**.
    
-1. In the **Settings** blade, select **Locks**.
+1. In the **Settings** blade from the left navigation pane, select **Locks**.
 
 1. Select **+ Add** and complete the resource lock information. When finished select **Ok**. 
 
@@ -236,19 +236,19 @@ In this task, you will configure and test a resource lock to safeguard critical 
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-   ![image](./media/l2-image62.png)
+    ![image](./media/xxx3.png)
 
-1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `AZ-104T02`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name and click on **Delete** twice. 
 
-   ![image](./media/l2-image63.png)
+    ![image](./media/xxx4.png)
    
 1. You should receive a notification denying the deletion. 
 
-    ![image](./media/l2-image64.png)
+     ![image](./media/xxx5.png)
 
-1. From the **AZ-104T02** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
+1. From the **az104-rg2** resource group **Overview** blade, under **Settings** section select **Locks** and Select Locks and proceed to click **Delete** to remove the existing **rg-lock** locks.
 
-   ![image](./media/l2-image65.png)
+    ![image](./media/xxx6.png)
 
 ### Review
 

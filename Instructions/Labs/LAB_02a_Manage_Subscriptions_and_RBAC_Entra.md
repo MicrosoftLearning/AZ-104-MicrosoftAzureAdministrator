@@ -63,9 +63,9 @@ In this task, you will create and organize management groups to streamline Azure
 
       > **Note:** If you get a message stating that the management group with this name already exists, you can cancel the creation of the management group and proceed further.
    
- 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add**.
+ 1. On the **az104-02-mg1** blade, from the left navigation pane click **Subscriptions** and  click **+ Add Subscription**.
    
-     ![image](./media/l2-image9.png)
+     ![image](./media/xxx1.png)
    
       >**Note:** If the subscription group is already present under the Management group you can proceed with the next task.
 
@@ -107,9 +107,9 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 In this task, you will create a custom RBAC role. Custom roles are a core part of implementing the principle of least privilege for an environment. Built-in roles might have too many permissions for your scenario. We will also create a new role and remove permissions that are not be necessary. Do you have a plan for managing overlapping permissions?
 
-1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab and in the **Create a custom role** box, select **Add**.
+1. Continue working on your management group. In the **Access control (IAM)** blade, select **+ Add** and from the dropdown select  **Add custom role** box, select **Add**.
 
-   ![image](./media/l2-image12.png)
+   ![image](./media/xxx2.png)
 
 1. On the Basics tab specify the following configuration and select **Next**. 
 

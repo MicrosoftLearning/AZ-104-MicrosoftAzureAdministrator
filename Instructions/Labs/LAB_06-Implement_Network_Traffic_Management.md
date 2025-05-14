@@ -46,7 +46,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
    ![](../Labs/media/l6-image5.png)
    
-1. Select **Edit parameters** > **Load file** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** > **load** and locate and select **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\06\az104-06-vms-parameters.json** file.
 
    ![](../Labs/media/l6-image6.png)
 
@@ -63,7 +63,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group | **az104-rg2** |
+    | Resource group | **az104-06-rg1** |
     | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
 
      ![](../Labs/media/l6-image10.png)
@@ -82,7 +82,7 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load balancer**, and then select **Load balancers** under services.
 
-   ![](../Labs/Images/load-balancer-0905.png)
+     ![](../Labs/media/l6-image11.png)
 
 1. On **Load balancing | Load Balancer** blade, click on **+ Create**.
 
@@ -91,40 +91,48 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | az104-rg2 |
+    | Resource group | **az104-rg2** |
     | Name | **az104-06-lb4** |
     | Region| **<inject key="Region" enableCopy="false"/>** |
     | SKU | **Standard** |
     | Type | **Public** |
+    | Tier | Leave the default |
+
+      ![](../media/L6T2S3.png)
     
-1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration** , under **Add frontend IP configuration** window add the following settings and click on **Save**
+1.  On the Frontend IP configuration tab click **+ Add frontend IP configuration (1)** , under **Add frontend IP configuration** window add the following settings and click on **Save**
  
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-pip4** |
-    | IP version | **IPv4** |
-    | IP type | **IP address** |
-    | Public IP address | **Create new** |
+    | Name | **az104-06-pip4 (2)** |
+    | IP version | **IPv4 (3)** |
+    | IP type | **IP address (4)** |
+    | Public IP address | **Create new (5)** |
 
+       ![](../media/L6T2S4i.png)
     
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-pip4** |
-    | Availability zone | Choose **1** and click **Save** |
+    | Name | **az104-06-pip4 (6)** |
+    | Availability zone | Choose **1 (7)** and click **Save** |
 
-1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**
+       ![](../media/L6T2S4ii.png)
 
-1. On **Backend pools** tab, and click **+ Add a Backend pools**.
+1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**.
 
-1. Add a backend pool with the following settings (leave others with their default values):
+1. On **Add Backend pools** tab, and add a backend pool with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-06-lb4-be1** |
-    | Virtual network | **az104-06-vnet1** |
-    | Backend Pool Configuration | **NIC** |
+    | Name | **az104-06-lb4-be1 (1)** |
+    | Virtual network | **az104-06-vnet1 (2)** |
+    | Backend Pool Configuration | **NIC (3)** |
+
+     ![](../media/L6T2S5.png)
     
-1. Click **+ Add**, under **IP Configurations** on the **Add backend pool** blade, select all the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
+1. Click **+ Add (4)**, under **IP Configurations** on the **Add backend pool** blade, select all the virtual machines on the **Add IP configurations to backend pool** window and click on **Add** and then click **Save** to save the IP configurations to the backend pool.
+
+    ![](../media/L6T2S6.png)
 
 1. Click **Next: Inbound rules >**, **+ Add a load balancing rule** with the following settings (leave others with their default values):
 
@@ -158,11 +166,15 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Click **Save** and back on the **Add load balancing rules** blade, click **Save**.
 
+     ![](../Labs/media/L6T2S9.png)
+
 1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
 
 1. Wait for the load balancing rule to be created, click **Go to resource** and on the **az104-06-lb4** load balancers blade, in the **Settings** section, click **Frontend IP configuration** and note the value of the **Public IP address**.
+
+    ![](../media/L6T2S11.png)
 
 1. Start another browser window and navigate to the IP address you identified in the previous step.
 
@@ -191,9 +203,9 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the  **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the  **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets (1)**, and then click **+ Subnet (2)**.
 
-    ![](../Labs/media/l6-image16.png)
+    ![](../media/L6T3S3.png)
 
 1. Add a subnet with the following settings (leave others with their default values) and click **Add**(4).
 
@@ -218,7 +230,7 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource group | az104-06-rg1 |
+    | Resource group | **az104-rg2** |
     | Application gateway name | **az104-06-appgw5** |
     | Region | **<inject key="Region" enableCopy="false"/>** |
     | Tier | **Standard V2** |
@@ -239,7 +251,6 @@ In this task, you will implement an Azure Application Gateway in front of the tw
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip5** and click on **Ok** |
-    
 
 1. On **Backends**, click **Add a backend pool** and on the **Add a backend pool** blade, specify the following settings (leave others with their default values) and click on **Add**.
 
@@ -339,9 +350,11 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
 1. In the Azure portal, search and select **Application Gateways** and, on the **Application Gateways** blade, click **az104-06-appgw5**.
 
-1. In the **Application Gateway** resource, in the **Monitoring** sectionfrom the left navigation pane, select **Backend health**.
+1. In the **Application Gateway** resource, in the **Monitoring (1)** sectionfrom the left navigation pane, select **Backend health (2)**.
 
-1. Ensure the servers in the backend pool display **Healthy**.
+1. Ensure the servers in the backend pool display **Healthy (3)**.
+
+    ![](../media/L6T3S22.png)
 
 1. On the **az104-06-appgw5** Application Gateway blade, note the value of the **Frontend public IP address**.
 

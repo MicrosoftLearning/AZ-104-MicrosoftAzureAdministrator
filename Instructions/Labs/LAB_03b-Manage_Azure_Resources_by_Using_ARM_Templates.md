@@ -31,19 +31,19 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Setting | Value |
     | --- | --- |
     | Subscription | *your default subscription* (1) | 
-    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** (2))
-    | Disk name | **az104-03b-disk1** (3) | 
+    | Resource Group | **az104-rg2** (2))
+    | Disk name | **az104-09b-disk1** (3) | 
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
     | Availability zone | **No infrastructure redundancy required** (5) | 
     | Source type | **None** (6)|
-    | Size | Click on **chnage size (7)** link |
+    | Size | Click on **change size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
-    ![image](../media/az104-mod3-image1.png)
+    ![image](../media/aa2.png)
 
     ![image](../media/az104-mod3-image2.png)
 
-    ![image](../media/az104-mod3-image3.png)
+    ![image](../media/aa3.png)
 
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
@@ -51,21 +51,17 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
 
-1. In the **Automation** blade, select **Export template**. 
+1. In the **Automation** blade, select **Export template (1)**. Take a minute to review the **Template** and **Parameters** files.
 
-    ![image](../media/az104-mod3-image8.png)
+1. Click **Download (2)** and save the templates to the local drive. This creates a compressed zipped file. 
 
-1. Take a minute to review the **Template** and **Parameters** files.
-
-1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
-
-    ![image](../media/az104-mod3-image5.png)
+   ![image](../media/L3T1S8.png)
 
 1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder open the downloaded file and extra on your computer. Notice there are two JSON files (template and parameters). 
     
-     ![image](../media/az104-mod3-image6.png)
+     ![image](../media/L3T1S9i.png)
 
-     ![image](../media/az104-mod3-image7.png)
+     ![image](../media/L3T1S9ii.png)
 
     >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
@@ -90,12 +86,10 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 1. Within the editor pane, make these changes.
 
     -  Change **disks_az104_disk1_name** to `disk_name` (two places to change line number 5 and 15)
-
-       ![image](../media/az-104i1.png)
     
-    - Change **az104-03b-disk1** to **az104-03b-disk2** (one place to change line number 6)
+    -  Change **az104-03b-disk1** to **az104-09b-disk2 (3)** (one place to change line number 6)
 
-      ![image](../media/az-104i2.1.png)
+      ![image](../media/L3T2S5.png)
 
 1. **Save** your changes.
 
@@ -116,21 +110,21 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
-    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Resource Group | **az104-rg2** |
     | Region | **<inject key="Region" enableCopy="false" />** |
-    | Disk_name | **az104-03b-disk2**|
+    | Disk_name | **az104-09b-disk2**|
 
 1. Select **Review + Create** and then select **Create**.
 
-1. Select **Go to resource**. Verify **az104-03b-disk2** was created.
+1. Select **Go to resource**. Verify **az104-09b-disk2** was created.
 
-1. On the **Overview** blade, select the resource group, **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />**. You should now have two disks.
+1. On the **Overview** blade, select the resource group, **az104-rg2**. You should now have two disks.
 
-      ![image](../media/az104-mod3-image13.png)
+      ![image](../media/aa4.png)
 
 1. In the **Settings** section, click **Deployments**.
 
-     ![image](../media/az104-mod3-image14.png)
+     ![image](../media/aa5.png)
 
    >**Note:** All deployments details are documented in the resource group. It is a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
@@ -163,12 +157,12 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Settings | Values |
     |  -- | -- |
     | Subscription | Accept default |
-    | Resource Group | **az104-03b-rg1-<inject key="DeploymentID" enableCopy="false" />** |
+    | Resource Group | **az104-rg2** |
     | Region | **<inject key="Region" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
-    ![image](../media/az104-mod3-image19.png)
+    ![image](../media/aa7.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the the template and parameters file from the downloads directory. You will need to upload each file separately one after the another.
 
@@ -185,7 +179,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    ![image](../media/az104-mod3-image21.png)
 
-1. Click on **Confirm** on **Switch to classsic Cloud Shell**
+1. Click on **Confirm** on **Switch to classic Cloud Shell**
 
    ![image](../media/az104-mod3-image22.png)
 
@@ -193,7 +187,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
    ![image](../media/az-104i4.png)
 
-1. Select **template.json** and make a change. For example, change the disk name to **az104-03b-disk3**. Use **Ctrl +S** to save your changes.
+1. Select **template.json** and make a change. For example, change the disk name to **az104-09b-disk3**. Use **Ctrl +S** to save your changes.
 
     ![image](../media/az-104i5.1.png)
 
@@ -221,9 +215,9 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
-    ![image](../media/az104-mod3-image24.png)
+    ![image](../media/L3T4S1.png)
 
-    ![image](../media/az104-mod3-image25.png)
+    ![image](../media/L3T4S1i.png)
 
 1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 
@@ -234,9 +228,9 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
-1. Make a change. For example, change the disk name to **az104-03b-disk4**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-09b-disk4**. Use **Ctrl +S** to save your changes. 
 
-   ![image](../media/az-104i6.1.png)
+    ![image](../media/L3T4S4.png)
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -253,7 +247,7 @@ In this task, you will deploy an Azure Resource Manager (ARM) template using the
      az disk list --output table
      ```
 
-    ![image](../media/az104-mod3-image27.png)
+     ![image](../media/L3T4S7.png)
 
 ## Task 5: Deploy a resource by using Azure Bicep
 
@@ -261,13 +255,13 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Close and reopen **Cloud Shell** in a **Bash** session.
 
+1. Select **Editor (1)** and click **Confirm (2)** on **Switch to classsic Cloud Shell**.
+
+   ![image](../media/L3T5S2.png)
+   
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**. Locate and upload the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
-   ![image](../media/az10498.png)
-
-1. Select **Editor** and click **Confirm** on **Switch to classsic Cloud Shell**.
-
-    ![image](../media/az104-mod3-image28.png)
+    ![image](../media/L3T5S3.png)
 
 1. Select the **Editor** (curly brackets) icon and navigate to azuredeploydisk.bicep file.
 
@@ -275,11 +269,11 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-   - Change the **managedDiskName** value to **az104-03b-disk5** .
+   - Change the **managedDiskName** value to **az104-09b-disk5** .
    - Change the **diskSizeinGiB** value to **32**.
    - Change the **sku name** value to `StandardSSD_LRS`.
 
-     ![image](../media/az-104i8.png)
+     ![image](../media/L3T5S6.png)
 
 1. Use **Ctrl +S** to save your changes.
 
@@ -294,13 +288,8 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
     ```sh
     az disk list --output table
     ```
+     ![image](../media/L3T5S9.png)
 
-   <validation step="20812377-9bdd-4b28-91c7-ff8aed11421f" />
- 
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ### Review
 
