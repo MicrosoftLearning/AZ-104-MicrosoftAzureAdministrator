@@ -102,7 +102,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. In the **Data storage** blade, select **Containers**. 
 
-1. Click **+ Container** and **Create** a container with the following settings:
+1. Click **+ Add container** and **Create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |
