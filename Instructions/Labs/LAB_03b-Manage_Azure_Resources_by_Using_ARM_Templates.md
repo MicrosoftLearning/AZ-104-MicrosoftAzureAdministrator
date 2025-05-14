@@ -31,7 +31,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Setting | Value |
     | --- | --- |
     | Subscription | *your default subscription* (1) | 
-    | Resource Group | **az104-09b-rg1** (2))
+    | Resource Group | **az104-rg2** (2))
     | Disk name | **az104-09b-disk1** (3) | 
     | Region | **<inject key="Region" enableCopy="false" />** (4)|
     | Availability zone | **No infrastructure redundancy required** (5) | 
@@ -39,11 +39,11 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
     | Size | Click on **change size (7)** link |
     | Select a disk size  | Under **Storage type** select **Standard HDD (8)** then select **32 GIB (9)** and click on **OK (10)**. |
     -------------------------------------------------------------------------------------------------------------------------------------
-    ![image](../media/L3T1S3i.png)
+    ![image](../media/aa2.png)
 
     ![image](../media/az104-mod3-image2.png)
 
-    ![image](../media/L3T1S3iii.png)
+    ![image](../media/aa3.png)
 
    >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
@@ -110,7 +110,7 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
     | Setting | Value |
     | --- |--- |
     | Subscription | *your subscription* |
-    | Resource Group | **az104-09b-rg1** |
+    | Resource Group | **az104-rg2** |
     | Region | **<inject key="Region" enableCopy="false" />** |
     | Disk_name | **az104-09b-disk2**|
 
@@ -118,13 +118,13 @@ In this task, you will utilize the previously downloaded Azure Resource Manager 
 
 1. Select **Go to resource**. Verify **az104-09b-disk2** was created.
 
-1. On the **Overview** blade, select the resource group, **az104-09b-rg1**. You should now have two disks.
+1. On the **Overview** blade, select the resource group, **az104-rg2**. You should now have two disks.
 
-      ![image](../media/L3T2S13.png)
+      ![image](../media/aa4.png)
 
 1. In the **Settings** section, click **Deployments**.
 
-     ![image](../media/L3T2S14.png)
+     ![image](../media/aa5.png)
 
    >**Note:** All deployments details are documented in the resource group. It is a good practice to review the first few template-based deployments to ensure success prior to using the templates for large-scale operations.
 
@@ -157,12 +157,12 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     | Settings | Values |
     |  -- | -- |
     | Subscription | Accept default |
-    | Resource Group | **az104-09b-rg1** |
+    | Resource Group | **az104-rg2** |
     | Region | **<inject key="Region" enableCopy="false" />** |
     | Storage account (Create new) | **str<inject key="DeploymentID" enableCopy="false" />** |
     | File share (Create new) | **none** |
 
-    ![image](../media/az104-mod3-image19.png)
+    ![image](../media/aa7.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the the template and parameters file from the downloads directory. You will need to upload each file separately one after the another.
 
