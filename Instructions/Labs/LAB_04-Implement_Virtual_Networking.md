@@ -281,7 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
-1. Expand the **DNS Management** blade and select **+ Record set**. **Add** a virtual network link record for each virtual network that needs private name-resolution support.
+1. Expand the **DNS Management** blade and select **+ Record set**. Add a virtual network link record for each virtual network that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
