@@ -4,7 +4,6 @@
 
 In this lab you learn to create storage accounts for Azure blobs and Azure files. You learn to configure and secure blob containers. You also learn to use Storage Browser to configure and secure Azure file shares. 
 
-
 ## Lab scenario
 
 Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
@@ -16,7 +15,6 @@ There are interactive lab simulations that you might find useful for this topic.
 + [Create blob storage](https://mslearn.cloudguides.com/en-us/guides/AZ-900%20Exam%20Guide%20-%20Azure%20Fundamentals%20Exercise%205). Create a storage account, manage blob storage, and monitor storage activities. 
   
 + [Manage Azure storage](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%2011). Create a storage account and review the configuration. Manage blob storage containers. Configure storage networking. 
-
 
 ## Lab objectives
 In this lab, you will complete the following tasks:
@@ -112,13 +110,13 @@ In this task, you will create and configure an Azure Storage account.
     + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago **(1)** *then* **move to cool storage (2)**. Notice your other choices. Notice you can configure other conditions. Select **Add (3)** when you are done exploring.
 
       ![image](./media/l1-image6.png)
-      
-   <validation step="3ca688fb-a039-486a-b051-61de572ea4eb" />
    
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="3ca688fb-a039-486a-b051-61de572ea4eb" />
 
 ### Task 2: Create and configure secure blob storage
 
@@ -190,7 +188,6 @@ In this task, you will create a blob container and upload a blob into it.
 
      > **Note**: You have the option to download the blob, change its access tier (it is currently set to **Hot**), and acquire a lease, which would change its lease status to **Locked** (it is currently set to **Unlocked**) and protect the blob from being modified or deleted, as well as assign custom metadata (by specifying an arbitrary key and value pairs). You also have the ability to **Edit** the file directly within the Azure portal interface, without downloading it first. You can also create snapshots, as well as generate a SAS token (you will explore this option in the next task).
      
-
 1. On the **licenses/LICENSE (1)** pane, under the **Overview** tab, click the **Copy to clipboard (2)** button next to the **URL** entry.
 
     ![image](./media/az104-15.png)
@@ -207,9 +204,9 @@ In this task, you will create a blob container and upload a blob into it.
 
     > **Note**: This is expected since the container you created has the public access level set to **Private (no anonymous access)**.
 
-1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab.
+1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and switch to the **Generate SAS** tab by clicking the three dots.
 
-    ![image](./media/az104-19.png)
+    ![image](./media/az104-19a.png)
 
 ### 2.3 Configure limited access to the blob storage
 
@@ -240,13 +237,13 @@ In this task, you will create a blob container and upload a blob into it.
     > **Note**: This is expected since now your access is authorized based on the newly generated SAS token.
 
     > **Note**: Save the blob SAS URL. You will need it later in this lab.
-    
-   <validation step="a496ecfe-9c7a-4646-b2e2-44272cd82651" />
    
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="a496ecfe-9c7a-4646-b2e2-44272cd82651" />
 
 ### Task 3: Create and configure an Azure File storage
 In this task, you will create and configure Azure Files shares.
@@ -264,7 +261,7 @@ In this task, you will create and configure Azure Files shares.
 
      ![image](./media/az104-24.png)    
 
-1. In the Backup tab, uncheck **Enable backup** option and then click on **Review + Create** > **Create**.
+1. In the Backup tab, **uncheck** **Enable backup** option and then click on **Review + Create** > **Create**.
 
     ![image](./media/az104-25.png)
 
@@ -301,13 +298,13 @@ In this task, you will create and configure Azure Files shares.
 1. Then click **Upload**.
 
     >**Note**: You can view file shares and manage those shares in the Storage Browser. There are currently no restrictions.
-    
-   <validation step="106d497d-0f0a-4fdd-8b6c-51028d285557" />
    
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="106d497d-0f0a-4fdd-8b6c-51028d285557" />
 
 ### 3.2 Restrict network access to the storage account
 
@@ -389,6 +386,5 @@ In this lab, you have completed:
 - Create and configure a storage account. 
 - Create and configure secure blob storage.
 - Create and configure secure Azure file storage.
-
 
 ### You have successfully completed the lab

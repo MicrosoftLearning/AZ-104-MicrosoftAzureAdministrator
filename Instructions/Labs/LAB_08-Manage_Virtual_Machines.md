@@ -47,7 +47,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Image | **Windows Server 2019 Datacenter - Gen2  (7)**|
     | Run Azure Spot discount | **Unchecked (8)**|
     | Size | **Standard D2s v3 (9)**|
-    | Username | **Student** (10)** |
+    | Username | **Student** **(10)** |
     | Password | **Password.1!! (11)** |
     | Public inbound ports | **None (12)** |
     | Would you like to use an existing Windows Server license? | **Unchecked (13)**|

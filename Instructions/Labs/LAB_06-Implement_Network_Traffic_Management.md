@@ -26,7 +26,7 @@ In this exercise, you will configure and implement Azure Traffic Manager to mana
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template**, and then select **Deploy a custom template** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Deploy a custom template** (1), and then select **Deploy a custom template** (2) under services.
 
     ![](../Labs/media/l6-image1.png)
 
@@ -63,7 +63,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Setting       | Value         |
     | ---           | ---           |
     | Subscription  | your Azure subscription |
-    | Resource group | **az104-06-rg1** |
+    | Resource group | **az104-rg2** |
     | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
 
      ![](../Labs/media/l6-image10.png)
@@ -166,8 +166,6 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 
 1. Click **Save** and back on the **Add load balancing rules** blade, click **Save**.
 
-     ![](../Labs/media/L6T2S9.png)
-
 1. Click **Next: Outbound rules >**, followed by **Next: Tags >**, followed by **Next: Review + create >**. Let validation occur, and then click **Create** to submit your deployment.
 
     > **Note**: Wait for the Azure load balancer to be provisioned. This should take about 2 minutes.
@@ -185,13 +183,13 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
 1. Open another browser window but this time by using InPrivate mode and verify whether the target vm changes (as indicated by the message).
 
     > **Note**: You might need to refresh the browser window or open it again by using InPrivate mode.
-    
-   <validation step="b94d2fc6-027e-443e-ba32-7c75bb12063f" />
    
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="b94d2fc6-027e-443e-ba32-7c75bb12063f" />
 
 ### Task 3: Implement Azure Application Gateway
 
@@ -372,14 +370,14 @@ In this task, you will implement an Azure Application Gateway in front of the tw
 
    > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
-   > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network.
-
-   <validation step="23beda94-3bef-47bb-86cb-820021b79b38" />
+   > **Note**: Targeting virtual machines on multiple virtual networks is not a common configuration, but it is meant to illustrate the point that Application Gateway is capable of targeting virtual machines on multiple virtual networks (as well as endpoints in other Azure regions or even outside of Azure), unlike Azure Load Balancer, which load balances across virtual machines in the same virtual network. 
    
   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+<validation step="23beda94-3bef-47bb-86cb-820021b79b38" />
 
 ### Review
 
