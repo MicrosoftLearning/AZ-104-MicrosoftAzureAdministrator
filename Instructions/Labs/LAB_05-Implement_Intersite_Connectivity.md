@@ -30,6 +30,7 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
 1. In the toolbar of the Cloud Shell pane, click on the **Manage files** dropdown, click **Upload** and upload the files **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-template.json** and **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\05\\az104-05-vnetvm-loop-parameters.json** into the Cloud Shell home directory.
 
+    ![Image](./Images/upload-files-incloudshell-0905a.png)
     ![Image](./Images/upload-files-incloudshell-0905.png)
 
 1.  From the Cloud Shell pane, run the below command to set up the regions for your deployment. Replace **Azure_region_1** with the name of the first Azure region where you want to deploy your virtual machines, and **Azure_region_2** with a different Azure region for the third virtual machine. **For example**, you can use **$location1 = 'eastus'** and **$location2 = 'westus'**. The first two virtual networks and two virtual machines will be deployed in $location1, while the third virtual network and the third virtual machine will be deployed in $location2 within the same resource group. 
@@ -225,11 +226,11 @@ In this task, you will configure local and global peering between the virtual ne
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
-     <validation step="af96cff1-7868-4911-818a-f05d61c27835" />
+<validation step="af96cff1-7868-4911-818a-f05d61c27835" />
 
-     <validation step="95e62469-f37b-4a8f-a1d2-234f504b4083" />
+<validation step="95e62469-f37b-4a8f-a1d2-234f504b4083" />
 
-     <validation step="de362a2a-1236-4b5d-b3c1-ac7daf38aef5" />
+<validation step="de362a2a-1236-4b5d-b3c1-ac7daf38aef5" />
 
 ### Task 4: Test intersite connectivity
 
