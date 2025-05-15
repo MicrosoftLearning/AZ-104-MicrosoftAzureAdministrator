@@ -275,9 +275,7 @@ In this task, you will create and configure Azure Files shares.
 
     ![image](./media/az104-26.png)
 
-1. Select your **az104-07-share** directory, on the **Browse (1)**, notice you can **+ Add directory (2)**. This lets you create a folder structure. Provide name **az104-07-folder (3)** and click on **OK (4)**
-
-    ![image](./media/l1-image12.png)
+1. Select your **az104-07-share** directory, notice you can **+ Add directory** on the top navigation pane in the file share window. This lets you create a folder structure. Provide name **az104-07-folder** and click on **OK**
 
 1. Open file explorer, navigate to **Downloads (1)**, right click on empty space, click on **New (2)** -> **Text document (3)**.
 
