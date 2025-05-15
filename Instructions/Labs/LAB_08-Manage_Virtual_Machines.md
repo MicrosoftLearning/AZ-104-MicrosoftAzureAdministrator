@@ -372,13 +372,12 @@ In this task, you will scale the Virtual Machine (VM) Scale Set in Azure using a
 
     ```powershell
     New-AzVm `
-    -ResourceGroupName 'az104-08-rg01' `
+    -ResourceGroupName 'az104-rg2' `
     -Name 'myPSVM' `
     -Location 'East US' `
     -Image 'Win2019Datacenter' `
     -Zone '1' `
-    -Size 'Standard_D2s_v3' ` 
-    -Credential (Get-Credential)
+    -Size 'Standard_D2s_v3'
     ```
     >**Note:** When prompted, please provide a Username and Password to create the new VM.
 
