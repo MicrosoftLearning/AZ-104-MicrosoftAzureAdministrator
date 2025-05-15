@@ -182,14 +182,20 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
 
    >**Note**: If your custom role is not visible, it can take up to 10 minutes for the custom role to appear after creation.
 
-1. Search and select **Support Request Contributor (Custom)**. Click **Next**.
+1. Search and select **Support Request Contributor (Custom) (1)**. Click **Next (3)**.
 
-    ![image](./media/l2-image58.png)
+    ![image](./media/L2T4S6-1405.png)
   
-1. On the **Members** tab, click **+ Select members** and **select** user account **az104-02-aaduser1**. Click **Select** and then **Review and assign** twice.
+1. On the **Members** tab, click **+ Select members (1)** and Search for **az104-02-aaduser1 (2)** and **select the user account (3)**. Click **Select (4)** and then **Next**.
 
-     ![image](./media/l2-image59.png)
-    
+     ![image](./media/L2T4S7-1405.png)
+
+1. Click on **Next** on the **Conditions** tab.
+
+1. On the **Assignment Type** tab, select **Active (1)** dor the Assignment type and click on **Review + assign (2)** twice. 
+
+     ![image](./media/L2T4S9-1405.png)
+
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password for the user.
 
    >**Note:** You can open an InPrivate browser window by clicking the **ellipsis** (1) in the top-right corner of the lab VM's browser window and selecting the **New InPrivate Window** option.
@@ -202,7 +208,7 @@ In this task, you will create a Microsoft Entra ID user, assign the RBAC role yo
  
     ![image](./media/l2-image45.png)
 
-    ![image](./media/l2-image46.png)
+    ![image](./media/rgs.png)
    
 1. In the **InPrivate** browser window, in the Azure portal, select **All resources** to verify that the az104-02-aaduser1 user cannot see any resources.
 
@@ -279,9 +285,9 @@ In this task, you will review the Azure activity log to check for any actions in
    
 1. In the Azure portal, search and select **Management groups**.
    
-1. On the **Management groups** blade,  select the **ellipsis** icon next to your subscription under the **az104-02-mg1** management group and select **Move** to move the subscription to the **Tenant Root management group**.
+1. On the **Management groups** blade,  select the **ellipsis (1)** icon next to your subscription under the **az104-02-mg1** management group and select **Move (2)** to move the subscription to the **Tenant Root management group**.
 
-    ![image](./media/l2-image55.png)
+    ![image](./media/move-sub-1405.png)
    
     ![image](./media/l2-image56.png)
 

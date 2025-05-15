@@ -59,30 +59,30 @@ In this task, you will explore how to enforce governance policies by assigning t
 
     ![image](./media/l2-image30.png)
    
-1. On the **Require a tag and its value on resources group** built-in policy definition blade, click **Assign policy**.
+1. On the **Require a tag and its value on resources** built-in policy definition blade, click **Assign policy**.
 
     ![image](./media/lab02-new-2.png)
 
-1. Specify the **Scope** by clicking the ellipsis button and selecting the following values and choose **Select** :
+1. Specify the **Scope** by clicking the ellipsis button and selecting the following values and choose **Select (1)** and click on **Save (4)**. On the Do you want to keep the selected items in the dropdown controls? pop up, select **Yes**. 
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you are using in this lab |
-    | Resource Group | AZ-104T02 |
+    | Subscription | the name of the Azure subscription you are using in this lab (2) |
+    | Resource Group | AZ-104 (3) |
 
-   ![image](./media/lab02-new-3.png)
+   ![image](./media/assign-policy-scope-1405.png)
    
    >**Note**: A scope determines the resources or resource groups where the policy assignment takes effect. You could assign policies on the management group, subscription, or resource group level. You also have the option of specifying exclusions, such as individual subscriptions, resource groups, or resources (depending on the assignment scope). 
 
-1. Configure the **Basics** properties of the assignment by specifying the following settings and click on **Next**  (leave others with their defaults):
+1. Configure the **Basics** properties of the assignment by specifying the following settings and click on **Next (4)**  (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | **Require Role tag with Infra value**|
-    | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group**|
-    | Policy enforcement | Enabled |
+    | Assignment name | **Require Role tag with Infra value (1)**|
+    | Description | **Require Role tag with Infra value for all resources in the Cloud Shell resource group (2)**|
+    | Policy enforcement | **Enabled (3)** |
 
-    ![image](./media/lab02-new-4.png)
+    ![image](./media/assign-policy-2-1405.png)
    
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. You can also add an optional **Description**. **Assigned by** is automatically populated based on the user name creating the assignment. 
 
@@ -229,10 +229,10 @@ In this task, you will configure and test a resource lock to safeguard critical 
 
 1. Select **+ Add** and complete the resource lock information. When finished select **Ok**. 
 
-    | Setting | Value |
-    | --- | --- |
-    | Lock name | `rg-lock` |
-    | Lock type | **Delete** (notice the selection for read-only) |
+      | Setting | Value |
+      | --- | --- |
+      | Lock name | `rg-lock` |
+      | Lock type | **Delete** (notice the selection for read-only) |
     
 1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
