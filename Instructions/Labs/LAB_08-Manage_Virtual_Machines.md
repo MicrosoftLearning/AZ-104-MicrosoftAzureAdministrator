@@ -22,7 +22,11 @@ In this exercise, you will manage Virtual Machines in Azure to deploy, configure
 
 In this task, you will deploy two Azure virtual machines into different availability zones by using the Azure portal. Availability zones offer the highest level of uptime SLA for virtual machines at 99.99%. To achieve this SLA, you must deploy at least two virtual machines across different availability zones.
 
-1. In the Azure portal, search and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**. Notice your other choices.
+1. In the Azure portal, search for **Virtual machines (1)** and select **Virtual machines (2)**.
+
+   ![](../Labs/Images/AZ104-1.png)
+
+1. On the **Virtual machines** blade, click **+ Create (1)**, and then select in the drop-down **Azure virtual machine (2)**. Notice your other choices.
 
    ![](../Labs/Images/img1lab8.png)
 
@@ -37,7 +41,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     | Setting | Value |
     | --- | --- |
-    | Subscription | the name of the Azure subscription you will be using in this lab  (1)**|
+    | Subscription | the name of the Azure subscription you will be using in this lab  **(1)**|
     | Resource group | select the existing resource group **az104-rg2 (2)** |
     | Virtual machine name | `az104-vm1` and `az104-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) **(3)**|
     | Region | **<inject key="Region" enableCopy="false" /> (4)** |
@@ -56,34 +60,40 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
      ![](../Labs/Images/l8i3.png)
 
-1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Click **Next: Disks >** and, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values) and then click on **Next: Networking > (4)**: 
 
     | Setting | Value |
     | --- | --- |
-    | OS disk type | **Premium SSD** |
-    | Delete with VM | **checked** (default) |
-    | Enable Ultra Disk compatibility | **Unchecked** |
+    | OS disk type | **Premium SSD (1)** |
+    | Delete with VM | **checked (2)** (default) |
+    | Enable Ultra Disk compatibility | **Unchecked (3)** |
 
-1.  Click **Next: Networking >** take the defaults but do not provide a load balancer.
+    ![](../Labs/Images/az104-6.png)    
 
-    | Setting | Value |
-    | --- | --- |
-    | Delete public IP and NIC when VM is deleted | **Checked** |
-    | Load balancing options | **None** |
-
-1. Click **Next: Management >** and specify the following settings (leave others with their default values):
+1. On the **Networking** tab, provide the following settings and then click on **Next: Management > (3)**:
 
     | Setting | Value |
     | --- | --- |
-    | Patch orchestration options | **Azure orchestrated** |  
+    | Delete public IP and NIC when VM is deleted | **Checked (1)** |
+    | Load balancing options | **None (2)** |
+
+    ![](../Labs/Images/AZ104-3.png)    
+
+1. On the **Management** tab, specify the following settings (leave others with their default values) and then click on **Next: Monitoring > (2)**:
+
+    | Setting | Value |
+    | --- | --- |
+    | Patch orchestration options | **Azure orchestrated (1)** | 
+
+    ![](../Labs/Images/AZ104-4.png)     
    
-1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
+1. On the **Monitoring** tab, specify the following settings (leave others with their default values) and then then click **Review + Create (2)**:
 
     | Setting | Value |
     | --- | --- |
-    | Boot diagnostics | **Disable** |
+    | Boot diagnostics | **Disable (1)** |
 
-1. Click **Next: Advanced >**, take the defaults, then click **Review + Create**.
+    ![](../Labs/Images/AZ104-5.png)
 
 1. After the validation, click **Create**.
 
@@ -93,12 +103,13 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
    >**Note:** Monitor the **Notification** messages.
    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
    <validation step="5059b9da-97ca-432c-af5d-63673672f09f" />
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 2: Manage compute and storage scaling for virtual machines
 
