@@ -17,23 +17,31 @@ In this exercise, you will explore the process of creating and deploying contain
 
 Azure Container Apps take the concept of a managed Kubernetes cluster a step further and manages the cluster environment as well as provides other managed services on top of the cluster. Unlike an Azure Kubernetes cluster, where you must still manage the cluster, an Azure Container Apps instance removes some of the complexity to setting up a Kubernetes cluster.
 
-1. From the Azure portal, search for and select **Container Apps**.
+1. From the Azure portal, search for **Container Apps (1)** and select **Container Apps (2)**.
 
    ![image](./media/l9-image29.png)
    
-1. From **Container Apps**, select **+ Create**.
+1. From **Container Apps**, select **+ Create (1)** drop down and select **+ Web app (2)**.
 
-1. Use the following information to fill out the details on the **Basics** tab and click on **Next: Container >**
+   ![image](../media/az104-40.png)
+
+1. Use the following information to fill out the details on the **Basics** tab.
 
     | Setting | Action |
     |---|---|
-    | Subscription | Select your Azure subscription |
-    | Resource group | az104-09c-rg1 |
-    | Container app name |  az-104-9c-ca |
-    | Region    | **<inject key="Region" enableCopy="false" />** |
-    | Container Apps Environment |  Select **Create new** > Environment name to **my-environment** > **Create** |
+    | Subscription | Select your Azure subscription **(1)** |
+    | Resource group | **az104-rg2 (2)** |
+    | Container app name |  **az-104-9c-ca (3)** |
+    | Region    | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Container Apps Environment |  Select **Create new (5)** |
+
+    ![image](../media/az104-41.png)    
+
+1. Set the Environment name to **my-environment** and then click on **Create**.    
+
+1. Click on **Next: Container >**.
    
-1. On the **Container** tab, ensure that **Use quickstart image** (1) is enabled and that the quickstart image is set to **Simple hello world container** (2). Select the **Review + create** (3). 
+1. On the **Container** tab, ensure that **Use quickstart image** **(1)** is enabled and that the quickstart image is set to **Simple hello world container** **(2)**. Select the **Review + create** **(3)**. 
 
    ![image](./media/az-104z3.png)
 
@@ -47,7 +55,7 @@ By default, the Azure container app that you create will accept traffic on port 
 
 1. Select **Go to resource** to view your new container app.
 
-1. Select the link next to *Application URL* to view your application.
+1. Select the link next to **Application URL** to view your application.
 
    ![image](./media/l9-image30.png)
 

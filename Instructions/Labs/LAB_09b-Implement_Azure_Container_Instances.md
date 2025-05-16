@@ -23,38 +23,40 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a new Azure Container Instance (ACI) for hosting a web application. Azure Container Instances allow you to run containers in the cloud without the need to manage the underlying virtual machines or infrastructure.
 
-1. In the Azure portal, search for locate **Container instances**.
+1. In the Azure portal, search for **Container instances (1)** and **Container instances (2)**.
 
     ![image](./media/l9-image22.png)
    
 1. On the **Container instances** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and Click **Next: Networking >**
+1. On the **Basics** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and Click **Next: Networking > (7)**
 
     | Setting | Value |
     | ---- | ---- |
-    | Subscription | Leave it as default |
-    | Resource group | Select **az104-09b-rg1** |
-    | Container name | **az104-9b-c1** |
-    | Region | **<inject key="Region" enableCopy="false" />** |
-    | Image Source | **Quickstart images** |
-    | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux)** |
+    | Subscription | Leave it as default **(1)** |
+    | Resource group | Select **az104-rg2 (2)** |
+    | Container name | **az104-9b-c1 (3)** |
+    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Image Source | **Quickstart images (5)** |
+    | Image | **mcr.microsoft.com/azuredocs/aci-helloworld:latest (Linux) (6)** |
 
-    ![image](./media/az-104z1.png)
+    ![](../Labs/Images/az104-37.png)
 
-1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and  click on **Next: Monitoring >**:
+1. On the **Networking** tab of the **Create container instance** blade, specify the following settings (leave others with their default values) and  click on **Next: Monitoring > (2)**:
 
     | Setting | Value |
     | --- | --- |
-    | DNS name label | any valid, globally unique DNS hostname |
+    | DNS name label | any valid, globally unique DNS hostname **(1)** |
 
-    ![image](./media/az-104z2.png)
+    ![](../Labs/Images/az104-38.png)
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
-1. Uncheck **Enable container instance logs**. 
+1. Uncheck **Enable container instance logs (1)**. and then click **Review + Create (2)**.
 
-1. Click **Next: Advanced** review the settings on the Advanced tab of the Create container instance blade without making any changes, click **Review + Create**, ensure that the validation passed and click **Create**.
+    ![](../Labs/Images/az104-39.png)
+
+1. Ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the deployment to complete. This should take about 3 minutes.
 

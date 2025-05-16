@@ -174,20 +174,27 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. On **Create a load testing resource** blade specify the following:
 
-    + Leave the subscription (1) and resource group (2) option as default.
+    + Leave the subscription (1)
+    + Select **az104-rg2** (2) resource group
     + Give your load test name as **loadtest<inject key="DeploymentID" enableCopy="false" />** (3). The name must be unique.
     + Leave the region as default.(4)
     + Select **Review + create** (5) and then **Create**.
 
-      ![image](./media/l9-image17.png)
+      ![](../Labs/Images/az104-35.png)
    
 1. Wait for the load test to create, and then select **Go to resource**.
 
-1. From the **Overview**  of Azure load testing blade, under **Add HTTP requests**, select **Create**.
+1. From the **Overview (1)**  of Azure load testing blade, under **Create by Adding HTTP requests**, select **Create (2)**.
 
-    ![image](./media/l9-image18.png)
+    ![](../Labs/Images/az104-31.png)
 
-1. On the **Test plan** tab, click **Add request**. In the **URL field**, paste in your **Default domain** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add**.
+1. Navigate to **Test plan (1)** tab, click **Add request (2)**. 
+
+    ![](../Labs/Images/az104-32.png)
+
+1. In the **URL field**, paste in your **Default domain (1)** URL we had copied in task 2 step number 1. Ensure this is properly formatted and begins with **https://** then click **Add (2)**.
+
+    ![](../Labs/Images/az104-36.png)
 
 1. Select **Review + create** and **Create**.
 
