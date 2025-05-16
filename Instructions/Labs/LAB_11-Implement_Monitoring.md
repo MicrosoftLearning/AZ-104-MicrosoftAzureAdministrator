@@ -23,15 +23,17 @@ This exercise involves setting up Azure Monitor to track the performance and con
 
 In this task, you will deploy a virtual machine (VM) on Azure, which will serve as the test environment for monitoring various Azure resources. 
 
-1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for and select **Deploy a custom template** resource.
+1. In the Azure Portal page, in the **Search resources, services and docs (G+/)** box at the top of the portal search for **Deploy a custom template (1)** and select **Deploy a custom template (2)** resource.
 
-   ![image](../media/L11T1S1.png)
+   ![image](../media/az104-42.png)
 
 1. On the custom deployment page, select **Build you own template in the editor**.
 
 1. On the edit template page, select **Load file** option.
 
-1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\11\az104-11-vm-template.json** file and select **Open**.
+1. Locate and select the **C:\AllFiles\AZ-104-MicrosoftAzureAdministrator-Lab-Files\Allfiles\Labs\11 (1)** then **az104-11-vm-template.json (2)** file and select **Open (3)**.
+
+   ![image](../media/az104-72.png)
 
 1. Select **Save**.
 
@@ -43,7 +45,7 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
     | Resource group| **az104-rg2** (2)|
     | Region        |  **<inject key="Region" enableCopy="false" />** (3) |
     | Admin Username| **Student** (4)|
-    | Password      | Provide a complex password  (5)|
+    | Password      | **Pa55w.rd!!**  (5)|
 
     ![image](../media/L11T1S6.png)
     
@@ -55,7 +57,9 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 **1.1 Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
-1. In the portal, search for and select **Monitor** resource.
+1. In the portal, search for **Monitor (1)** and select **Monitor (2)** resource.
+
+    ![image](../media/az104-73.png)
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -65,9 +69,11 @@ In this task, you will deploy a virtual machine (VM) on Azure, which will serve 
 
 1. Now select **Configure Insights**.
 
-1. Select your virtual machine, and then **Enable** (twice).
+1. Select your virtual machine, expand **az104-rg2 (1)** abd then select **az104-11-vm0 (2)**.
 
-   ![image](../media/l11i3.png)
+    ![image](../media/az104-74.png)
+
+1. Then **Enable** (twice).    
 
    ![image](../media/l11i4.png)
 
@@ -87,15 +93,17 @@ In this task, you will set up an alert within Azure Monitor to notify you when a
 
    ![image](../media/l11i6.png)
 
-1. Select the check box for the **az104-11-rg1** resource group, then select **Apply**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
+1. Select the check box for the **az104-rg2 (1)** resource group, then select **Apply (2)**. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine. 
+
+   ![image](../media/az104-75.png)
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
    ![image](../media/l11i7.png)
 
-1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Notice the other built-in signals. Select **Apply**
+1. Search for and select **Delete Virtual Machine (Virtual Machines) (1)**. Notice the other built-in signals. Select **Apply (2)**
 
-   ![image](../media/L11T2S5.png)
+    ![image](../media/az104-76.png)
 
 1. In the **Alert logic** area (scroll down), review the **Event level** selections. Leave the default of **All selected**.
 
@@ -118,10 +126,10 @@ In this task, you will configure an action group that sends an email notificatio
     | **Project details** |
     | Subscription | your subscription (1) |
     | Resource group | **az104-rg2** (2) |
-    | Region | **Global** (default) (3) |
+    | Region | **Global** (default) |
     | **Instance details** |
-    | Action group name | `Alert the operations team` (must be unique in the resource group) (4) |
-    | Display name | `AlertOpsTeam` (5) |
+    | Action group name | `Alert the operations team` (must be unique in the resource group) (3) |
+    | Display name | `AlertOpsTeam` (4) |
 
     ![image](../media/L11T3S2.png)
 
@@ -136,25 +144,32 @@ In this task, you will configure an action group that sends an email notificatio
 
    ![image](../media/L11T3S4.png)
 
-1. In the **Email** box, enter your email address, and then select **OK** and select **Review + create** and subsequently click on **Create**. 
+1. Select **Email (1)**, in the **Email** box, enter your personal email address **(2)**, and then select **OK (3)**.
+
+    ![image](../media/az104-77.png)
+
+1. Select **Review + create** and subsequently click on **Create**. 
 
    >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
-1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting and then select **Review+create (3)**:
 
     | Setting | Value |
     |---------|---------|
-    | Alert rule name | `VM was deleted` |
-    | Alert rule description | `A VM in your resource group was deleted` |
+    | Alert rule name | `VM was deleted` **(1)** |
+    | Alert rule description | `A VM in your resource group was deleted` **(2)** |
 
-1. Select **Review + create** to validate your input, then select **Create**.
+    ![image](../media/az104-78.png)    
+
+1. Then select **Create**.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="040aee9b-d83d-499f-b9f7-ae44dab39be7" />
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 4: Trigger an alert and confirm it is working
 
@@ -164,19 +179,21 @@ In this task, you will manually trigger the alert by performing an action that m
 
 1. In the portal, search for and select **Virtual machines** resource.
 
-1. Check the box for the **az104-11-vm0** virtual machine.
+1. Search for **az104-11-vm0** and the select **az104-11-vm0** virtual machine.
 
 1. Select **Delete** from the menu bar.
 
-    ![image](../media/l11i11.png)
+    ![image](../media/az104-79.png)
 
-1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resource to be deleted and select **Delete**. 
+1. Check the box for **Apply force delete (1)**. Check the box at the bottom confirming that you want the resource to be deleted **(2)** and select **Delete (3)**.
+
+    ![image](../media/az104-80.png)
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
-1. You should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
+1. Navigate to your email, you should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
 
-   ![image](../media/l11i17.png)
+   ![image](../media/az104-89.png)
    
 1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
@@ -188,12 +205,13 @@ In this task, you will manually trigger the alert by performing an action that m
 
 1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
    <validation step="2874f1f3-4ced-405d-9a87-533958710105" />
-   
-  > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
 ## Task 5: Configure an alert processing rule
 
@@ -212,26 +230,28 @@ In this task, you will create an alert processing rule designed to suppress or p
 1. Select **Next: Scheduling >**.
    
 1. By default, the rule works all the time, unless you disable it or configure a schedule. You are going to define a rule to suppress notifications during overnight maintenance.
-Enter these settings for the scheduling of the alert processing rule:
+Enter these settings for the scheduling of the alert processing rule and elect **Next: Details > (5)**:
 
     | Setting | Value |
     |---------|---------|
-    | Apply the rule | At a specific time |
-    | Start | Enter today's date at 10 pm. |
-    | End | Enter tomorrow's date at 7 am. |
-    | Time zone | Select the local timezone. |
+    | Apply the rule | At a specific time **(1)** |
+    | Start | Enter today's date at 10 pm. **(2)** |
+    | End | Enter tomorrow's date at 7 am. **(3)** |
+    | Time zone | Select the local timezone. **(4)** |
 
-    ![image](../media/L11T5S5.png)
+    ![image](../media/az104-81.png)
 
-1. Select **Next: Details >** and enter these settings:
+1. Enter these settings then select **Review+create (4)**:
 
     | Setting | Value |
     |---------|---------|
-    | Resource group | **az104-rg2** |
-    | Rule name | `Planned Maintenance` |
-    | Description | `Suppress notifications during planned maintenance.` |
+    | Resource group | **az104-rg2 (1)** |
+    | Rule name | `Planned Maintenance` **(2)** |
+    | Description | `Suppress notifications during planned maintenance.` **(3)** |
 
-1. Select **Review + create** to validate your input, then select **Create**.
+    ![image](../media/az104-82.png)    
+
+1. Then select **Create**.
 
 ## Task 6: Use Azure Monitor log queries
 
@@ -239,27 +259,29 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
 
 1. In the Azure portal, search for and select `Monitor` blade, click **Logs** from the left navigation pane.
 
+    ![image](../media/az104-83.png)
+
 1. If necessary close the splash screen. 
 
-1. Select a scope, ****az104-rg2****. Select **Apply**. 
+1. Select a scope, **az104-rg2 (1)**. Select **Apply (2)**. 
 
-1. In the **Queries** tab, select **Virtual machines** (left pane).
+    ![image](../media/az104-84.png)
 
-1. Review the queries that are available. Double-click the **Count heartbeats** query and select **Run**.
+1. Set the mode to **KQL mode**.
 
-    ![image](../media/L11T6S5.png)
+    ![image](../media/az104-85.png)
+
+1. Click on the **Queries (1)** tab, expand **Virtual machines (2)** (left pane). Review the queries that are available. Click the **Count heartbeats (3)** query and select **Run (4)**.
+
+    ![image](../media/az104-86.png)
 
 1. You should receive a heartbeat count for when the virtual machine was running.
 
-   ![image](../media/L11T6S6.png)
-
-      > Note: If you see the query is not visible please change the mode from **Simple Mode** to **KQL Mode**.
-
-      ![image](../media/L11T6S6-N.png)
+    ![image](../media/az104-87.png)
 
 1. Review the query. This query uses the **heartbeat** table. 
 
-1. Replace the query with this one, and then click **Run**. Review the resulting chart. 
+1. Replace the query with this one **(1)**, and then click **Run (2)**. Review the resulting chart. 
 
    ```
     InsightsMetrics
@@ -268,7 +290,7 @@ In this task, you will utilize Azure Monitor to query and analyze the data colle
     | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
     | render timechart
    ```
-    ![image](../media/L11T6S8.png)
+    ![image](../media/az104-88.png)
 
      >**Did you know?**: If you want to practice with other queries, there is a [Log Analytics Demo Environment](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial#open-log-analytics).
     
