@@ -12,7 +12,7 @@ This lab uses an interactive lab simulation. The simulation lets you to click th
 
 + [Manage Entra ID Identities](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201). Create and configure users and assign to groups. Create an Azure tenant and manage guest accounts. 
 
-## Lab objectives
+## Lab objectivess
 In this lab, you will complete the following tasks:
 
 + Task 1: Create and configure Entra ID users
