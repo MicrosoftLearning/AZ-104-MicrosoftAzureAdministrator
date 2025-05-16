@@ -66,9 +66,9 @@ In this task, you will use a template to deploy one virtual network, one network
     | Resource group | **az104-rg2** |
     | Password      | Provide a secure password (Please make sure the password contains uppercase, lowercase letters, digits and a special character and it is at least 8 characters long.)|
 
-     ![](../Labs/media/l6-image10.png)
+    ![](../Labs/media/l6-image10.png)
    
-    >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
+     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
   
 1. Select **Create**.
 
@@ -109,14 +109,14 @@ In this task, you will implement an Azure Load Balancer in front of the two Azur
     | IP type | **IP address (4)** |
     | Public IP address | **Create new (5)** |
 
-       ![](../media/L6T2S4i.png)
+    ![](../media/L6T2S4i.png)
     
     | Setting | Value |
     | --- | --- |
     | Name | **az104-06-pip4 (6)** |
     | Availability zone | Choose **1 (7)** and click **Save** |
 
-       ![](../media/L6T2S4ii.png)
+    ![](../media/L6T2S4ii.png)
 
 1. Back on **Add frontend IP configuration** click on **Add** and click on **Next : Backend pools>**.
 
