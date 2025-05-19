@@ -241,8 +241,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
 
-1. Select **Enable replication**.
-
 1. On the **Basics** tab, notice the **Target region**.
 
 1. Select **Next: Advanced settings**. Resource selections have been made for you. 
