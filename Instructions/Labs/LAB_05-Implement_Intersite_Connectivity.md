@@ -73,7 +73,7 @@ In this task, you create a core services virtual network with a virtual machine.
 
 1. On the **Networking** tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing information.
+1. Use the following information to configure the virtual network, and then select **OK**. If necessary, remove or replace the existing information.
 
     | Setting | Value | 
     | --- | --- |
@@ -118,7 +118,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. On the Networking tab, for Virtual network, select **Create new**.
 
-1. Use the following information to configure the virtual network, and then select **Ok**.  If necessary, remove or replace the existing address range.
+1. Use the following information to configure the virtual network, and then select **OK**.  If necessary, remove or replace the existing address range.
 
     | Setting | Value | 
     | --- | --- |
