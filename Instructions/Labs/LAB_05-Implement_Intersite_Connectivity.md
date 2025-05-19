@@ -169,7 +169,7 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
-1. On CoreServicesVnet | Peerings, select **+ Add**. If not specified, take the default. 
+1. On CoreServicesVnet, under Peerings, select **+ Add**. If not specified, take the default. 
 
     | **Parameter**                                    | **Value**                             |
     | --------------------------------------------- | ------------------------------------- |                                
@@ -183,7 +183,7 @@ In this task, you create a virtual network peering to enable communications betw
 
 4. Click **Add**.
 
-5. In CoreServicesVnet in Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
+5. In CoreServicesVnet, under Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
 6. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
