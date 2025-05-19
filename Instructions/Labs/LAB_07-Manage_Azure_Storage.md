@@ -60,7 +60,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
-1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
+1. On the **Networking** tab, in the **Network access** section, select **Disable public access and use private access**. This will restrict inbound access while allowing outbound access. 
 
 1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable versioning for blobs. Accept the defaults.
 
@@ -74,19 +74,17 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Select **Manage** the **Public network access**.
-    + Change the **Public network access** to **Enable**.
-    + Change the **Default action** to **Enable from selected networks**.
-    + In the **IP addresses** section, select **Add your client IP address**.
-    + **Save** your changes.
+    + Change the **Public network access** to **Enable from selected networks and IP addresses**.
+    + In the **Firewall** section, select the checkbox to **Add your client IP address**.
+    + Save your changes.
   
 1. In the **Data management** blade, select **Redundancy**. Notice the information about your primary and secondary data center locations.
 
 1. In the **Data management** blade, select **Lifecycle management**, and then select **Add a rule**.
 
-    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
+    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule. Click **Next**. 
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
+    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **Move to cool storage**. Notice your other choices. 
     
     + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
@@ -154,7 +152,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 ### Configure limited access to the blob storage
 
-1. Select your uploaded file and then on the **Generate SAS** tab. You can also use the ellipsis (...) to the far right. Specify the following settings (leave others with their default values):
+1. Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
