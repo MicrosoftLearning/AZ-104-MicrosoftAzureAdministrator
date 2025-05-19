@@ -171,15 +171,15 @@ In this task, you create a virtual network peering to enable communications betw
 
 1. On CoreServicesVnet | Peerings, select **+ Add**. If not specified, take the default. 
 
-| **Parameter**                                    | **Value**                             |
-| --------------------------------------------- | ------------------------------------- |                                
-| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| Virtual network    | **ManufacturingVM-net (az104-rg5)**  |
-| Allow ManufacturingVnet to access CoreServicesVnet  | selected (default) |
-| Allow ManufacturingVnet to receive forwarded traffic from CoreServicesVnet | selected  |
-| Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| Allow CoreServicesVnet to access the peered virtual network            | selected (default) |
-| Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected |
+    | **Parameter**                                    | **Value**                             |
+    | --------------------------------------------- | ------------------------------------- |                                
+    | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
+    | Virtual network    | **ManufacturingVM-net (az104-rg5)**  |
+    | Allow ManufacturingVnet to access CoreServicesVnet  | selected (default) |
+    | Allow ManufacturingVnet to receive forwarded traffic from CoreServicesVnet | selected  |
+    | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
+    | Allow CoreServicesVnet to access the peered virtual network            | selected (default) |
+    | Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected |
 
 4. Click **Add**.
 
