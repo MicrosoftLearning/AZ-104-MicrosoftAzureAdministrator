@@ -175,17 +175,17 @@ In this task, you create a virtual network peering to enable communications betw
 | --------------------------------------------- | ------------------------------------- |                                
 | Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
 | Virtual network    | **ManufacturingVM-net (az104-rg5)**  |
-| Allow ManufacturingVnet to access CoreServicesVnet  | selected (default)                       |
-| Allow ManufacturingVnet to receive forwarded traffic from CoreServicesVnet | selected                        |
+| Allow ManufacturingVnet to access CoreServicesVnet  | selected (default) |
+| Allow ManufacturingVnet to receive forwarded traffic from CoreServicesVnet | selected  |
 | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| Allow CoreServicesVnet to access the peered virtual network            | selected (default)                       |
-| Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected                       |
+| Allow CoreServicesVnet to access the peered virtual network            | selected (default) |
+| Allow CoreServicesVnet to receive forwarded traffic from the peered virtual network | selected |
 
-1. Click **Add**.
+4. Click **Add**.
 
-1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
+5. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
-1. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
+6. Switch to the **ManufacturingVnet** and verify the **ManufacturingVnet-to-CoreServicesVnet** peering is listed. Ensure the **Peering status** is **Connected**. You may need to **Refresh** the page. 
 
 ## Task 5: Use Azure PowerShell to test the connection between virtual machines
 
