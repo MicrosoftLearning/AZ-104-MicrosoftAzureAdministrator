@@ -34,7 +34,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Use a template to provision an infrastructure
 
-In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
+In this task, you will use a template to deploy one virtual network, one network security group, and three virtual machines.
 
 1. Download the **\\Allfiles\\Lab06** lab files (template and parameters).
 
@@ -105,7 +105,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Gateway Load Balancer | None |
     | Public IP address | Select **Create new** (use the instructions in the next step) |
 
-1. On the **Add a public IP address** popup, use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**.
+1. On the **Add a public IP address** popup, use the following settings before clicking **Save** twice. When completed click **Next: Backend pools**.
 
     | Setting | Value |
     | --- | --- |
@@ -117,7 +117,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
     >**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**.
+1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **Add** and then **Save**. Click **Next: Inbound rules**.
 
     | Setting | Value |
     | --- | --- |
@@ -189,9 +189,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `subnet-appgw` |
     | Starting address| `10.60.3.224` |
-    | Size | `/27` |
+    | Size | `/27` - Ensure the **starting address** is still **10.63.3.224**|
 
-1. Click **Save**
+1. Click **Add**
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -207,8 +207,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Region | The **same** Azure region that you used in Task 1 |
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
-    | Minimum instance count | `2` |
-    | Availability zone | **1** (default) |
+    | Instance count | `2` |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
@@ -290,7 +289,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Backend settings | **az104-http** |
     | Backend target | `az104-videobe` |
 
-1. Be sure to **Save** and check your changes, then select **Next : Tags >**. No changes are needed.
+1. Be sure to check your changes, then select **Next : Tags >**. No changes are needed.
 
 1. Select **Next : Review + create >** and then click **Create**.
 
