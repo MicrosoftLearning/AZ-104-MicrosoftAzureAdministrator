@@ -231,7 +231,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Subnet address range | `10.0.1.0/24`  |
 
    
-1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
+1. In the Azure portal, search for and select `Route tables`, select **Review + Create**, and then select **Create**. 
 
     | Setting | Value | 
     | --- | --- |
@@ -245,7 +245,7 @@ In this task, you want to control network traffic between the perimeter subnet a
    
 1. Select the resource (not the checkbox) **rt-CoreServices**
 
-1. Expand **Settings** then select **Routes** and then **+ Add**. Create a route from a future Network Virtual Appliance (NVA) to the CoreServices virtual network. 
+1. Expand **Settings** then select **Routes** and then **Add**. Create a route from a future Network Virtual Appliance (NVA) to the CoreServices virtual network. 
 
     | Setting | Value | 
     | --- | --- |
