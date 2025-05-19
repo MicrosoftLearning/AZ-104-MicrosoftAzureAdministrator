@@ -130,6 +130,8 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Return to the portal home page. You should have both a the production web app and the staging slot.
 
+1. Search for `App Services` and select your App Service web app. This returns you to the Production Deployment slot.
+
 1. Select the App Service web app and on the **Overview** blade of the Web App select the **Default domain** link to display the website home page.
 
 1. Verify the production web page now displays the **Hello World!** page.
