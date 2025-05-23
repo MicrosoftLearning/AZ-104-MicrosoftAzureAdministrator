@@ -166,7 +166,7 @@ In this task, we will use the new policy definition to remediate any non-complia
     | Description | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
     | Policy enforcement | Enabled |
 
-1. Click **Next** twice and set **Parameters** to the following values:
+1. Click **Next** and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
