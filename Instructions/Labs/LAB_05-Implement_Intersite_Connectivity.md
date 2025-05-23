@@ -228,10 +228,12 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Name | `perimeter` |
-    | Subnet address range | `10.0.1.0/24`  |
+    | Starting address | `10.0.1.0/24`  |
 
    
-1. In the Azure portal, search for and select `Route tables`, select **Review + Create**, and then select **Create**. 
+1. In the Azure portal, search for and select `Route tables`, select **+ Create**.
+
+1. Enter the following details, select **Review + Create**, and then select **Create**. 
 
     | Setting | Value | 
     | --- | --- |
