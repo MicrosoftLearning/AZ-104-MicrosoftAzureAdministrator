@@ -281,7 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
-1. Expand the **DNS Management** blade and select **+ Record set**.
+1. Expand the **DNS Management** blade and select **Recordsets**. Click **+Add**. 
 
     | Property | Value    |
     |:---------|:---------|
@@ -292,7 +292,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify your domain has an A record set named **www**.
+1. Select **Add** and verify your domain has an A record set named **www**.
 
 1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
