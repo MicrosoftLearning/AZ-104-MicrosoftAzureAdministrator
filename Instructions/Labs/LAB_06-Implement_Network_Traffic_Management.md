@@ -189,7 +189,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `subnet-appgw` |
     | Starting address| `10.60.3.224` |
-    | Size | `/27` - Ensure the **starting address** is still **10.63.3.224**|
+    | Size | `/27` - Ensure the **starting address** is still **10.60.3.224**|
 
 1. Click **Add**
 
