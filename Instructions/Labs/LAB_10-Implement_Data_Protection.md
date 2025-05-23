@@ -204,7 +204,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     - **Addon Azure Backup Alert Data**
     - **Azure Site Recovery Jobs**
     - **Azure Site Recovery Events**
-    - **Health**
 
 1. In the Destination details, place a checkmark next to **Archive to a storage account**.
 
