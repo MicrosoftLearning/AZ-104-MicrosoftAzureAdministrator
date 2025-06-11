@@ -183,8 +183,11 @@
         "count": "[variables('numberOfInstances')]"
       },
       "location": "[resourceGroup().location]",
+      "sku": {
+        "name":"Standard"
+      },
       "properties": {
-        "publicIpAllocationMethod": "Dynamic"
+        "publicIpAllocationMethod": "Static"
       }
     },
     {
