@@ -179,6 +179,8 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select `Network security groups`.
 
+>**Note:** You can also locate this resource using the Azure portal menu (icon top left). Select **Create a resource** and then in the **Networking** blade, select **Network security group**. 
+
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
     | Setting | Value |
@@ -370,3 +372,4 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
