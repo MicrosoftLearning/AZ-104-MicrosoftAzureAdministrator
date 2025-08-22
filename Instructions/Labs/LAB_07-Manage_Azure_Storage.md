@@ -56,7 +56,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
 
-1. On the **Networking** tab, in the **Network access** section, select **Disable public access and use private access**. This will restrict inbound access while allowing outbound access. 
+1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
 
 1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable versioning for blobs. Accept the defaults.
 
@@ -70,8 +70,9 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Change the **Public network access** to **Enable from selected networks and IP addresses**.
-    + In the **Firewall** section, select the checkbox to **Add your client IP address**.
+    + Select **Manage** and change the **Public network access** setting to **Enabled**. 
+    + Change the **Public network access scope** to **Enable from selected networks**.
+    + In the **IPv4 Addresses** section, select **Add your client IPv4 address**.
     + Save your changes.
   
 1. In the **Data management** blade, select **Redundancy**. Notice the information about your primary and secondary data center locations.
@@ -80,7 +81,7 @@ In this task, you will create and configure a storage account. The storage accou
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule. Click **Next**. 
     
-    + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **Move to cool storage**. Notice your other choices. 
+    + On the **Add rule* page, *if* based blobs were last modified more than `30 days` ago *then* **Move to cool storage**. Notice your other choices. 
     
     + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
