@@ -139,9 +139,9 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Confirm you have a new folder, and your file was uploaded. 
 
-1. Select your upload file and review the options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
+1. Select your upload file and review the ellipsis (...) options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
-1. Copy the file **URL** (Properties blade) and paste into a new **Inprivate** browsing window.
+1. Copy the file **URL** (Settings --> Properties blade) and paste into a new **Inprivate** browsing window.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 
@@ -219,9 +219,13 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the **Security + networking** blade, select **Networking**.
 
-1. Select **Add existing virtual network** and select **vnet1** and **default** subnet, select **Add**.
+1. Under **Public network access** select **Manage**. 
 
-1. In the **Firewall** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
+1. Select **Add a virtual network** and then **Add existing network**.
+
+1. Select **vnet1** and **default** subnet, select **Add**.
+
+1. In the **IPv4 Addresses** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
 1. Be sure to **Save** your changes.
 
@@ -229,7 +233,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
-    >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect.
+    >**Note:** You should receive a message *not authorized to perform this operation*. You are not connecting from the virtual network. It may take a couple of minutes for this to take effect. You may still be able to view the file share, but not the files or blobs in the storage account. 
 
 
 ![Screenshot unauthorized access.](../media/az104-lab07-notauthorized.png)
