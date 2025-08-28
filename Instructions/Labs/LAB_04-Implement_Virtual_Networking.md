@@ -241,11 +241,11 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Destination | **Service tag** |
     | Destination service tag | **Internet** |
     | Service | **Custom** |
-    | Destination port ranges | **8080** |
+    | Destination port ranges | `*` |
     | Protocol | **Any** |
     | Action | **Deny** |
     | Priority | **4096** |
-    | Name | **DenyAnyCustom8080Outbound** |
+    | Name | `DenyInternetOutbound` |
 
 
 ## Task 4: Configure public and private Azure DNS zones
@@ -372,4 +372,5 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
 
