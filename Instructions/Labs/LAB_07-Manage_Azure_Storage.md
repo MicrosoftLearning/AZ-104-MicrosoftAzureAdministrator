@@ -81,7 +81,7 @@ In this task, you will create and configure a storage account. The storage accou
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule. Click **Next**. 
     
-    + On the **Add rule* page, *if* based blobs were last modified more than `30 days` ago *then* **Move to cool storage**. Notice your other choices. 
+    + On the **Add rule** page, *if* base blobs were last modified more than `30` days ago *then* **Move to cool storage**. Notice your other choices. 
     
     + Notice you can configure other conditions. Select **Add** when you are done exploring.
 
@@ -201,7 +201,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select **Virtual networks**.
+1. In the portal, search for and select `Virtual networks`.
 
 1. Select **+ Create**. Select your resource group. and give the virtual network a **name**, `vnet1`.
 
