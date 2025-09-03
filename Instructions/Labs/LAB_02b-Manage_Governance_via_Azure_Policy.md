@@ -241,10 +241,6 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + What are the steps to enforce Azure policy and remediate resources which are not compliant?
 + How can I get a report of Azure resources with specific tags?
 
-## Learn more with self-paced training
-
-+ [Design an enterprise governance strategy](https://learn.microsoft.com/training/modules/enterprise-governance/). Use RBAC and Azure Policy to limit access to your Azure solutions, and determine which method is right for your security goals.
-
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
