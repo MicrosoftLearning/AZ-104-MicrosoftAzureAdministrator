@@ -381,7 +381,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
     ```sh
-    az vm show --name  myCLIVM --resource-group az104-rg8 --show-details
+    az vm show --name  myCLIVM --resource-group az104-rg8 --show-details --output table
     ```
 
 1. Verify the **powerState** is **VM Running**.
