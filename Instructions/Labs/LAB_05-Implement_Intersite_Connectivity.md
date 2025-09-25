@@ -213,7 +213,7 @@ In this task, you retest the connection between the virtual machines in differen
 
 ## Task 6: Create a custom route 
 
-In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the core services subnet and all traffic should be routed there. 
+In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there. 
 
 1. Search for select the `CoreServicesVnet`.
 
