@@ -50,7 +50,7 @@ In this task, you will create and configure user accounts. User accounts will st
    
 ### Create a new user
 
-1. Select **Users**, then in the **New user** drop-down select **Create new user**. 
+1. In the **Manage** blade, select **Users**; then in the **New user** drop-down select **Create new user**. 
 
 1. Create a new user with the following settings (leave others with their defaults). On the **Properties** tab notice all the different types of information that can be included in the user account. 
 
@@ -157,3 +157,4 @@ Congratulations on completing the lab. Here are some main takeways for this lab:
 + Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 + Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be statically or dynamically assigned.
+
