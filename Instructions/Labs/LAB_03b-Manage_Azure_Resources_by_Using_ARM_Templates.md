@@ -14,10 +14,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Estimated timing: 50 minutes
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-  
 ## Lab scenario
 
 Your team wants to look at ways to automate and simplify resource deployments. Your organization is looking for ways to reduce administrative overhead, reduce human error and increase consistency.  
