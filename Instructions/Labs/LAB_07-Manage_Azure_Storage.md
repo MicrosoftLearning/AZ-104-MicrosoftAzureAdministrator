@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization is currently storing data in on-premises data stores. Most of these files are not accessed frequently. You would like to minimize the cost of storage by placing infrequently accessed files in lower-priced storage tiers. You also plan to explore different protection mechanisms that Azure Storage offers, including network access, authentication, authorization, and replication. Finally, you want to determine to what extent Azure Files is suitable for hosting your on-premises file shares.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of the tasks.](../media/az104-lab07-architecture.png)
