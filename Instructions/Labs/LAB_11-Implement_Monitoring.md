@@ -18,12 +18,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization has migrated their infrastructure to Azure. It is important that Administrators are notified of any significant infrastructure changes. You plan to examine the capabilities of Azure Monitor, including Log Analytics.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
-
 
 ![Diagram of the architecture tasks](../media/az104-lab11-architecture.png)
 
