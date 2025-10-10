@@ -19,10 +19,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replaced. Your organization wants to avoid new hardware costs by using Azure to host the websites. 
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of the tasks.](../media/az104-lab09a-architecture.png)
