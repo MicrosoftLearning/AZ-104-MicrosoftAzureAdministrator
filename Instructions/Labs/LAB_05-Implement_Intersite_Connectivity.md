@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization segments core IT apps and services (such as DNS and security services) from other parts of the business, including your manufacturing department. However, in some scenarios, apps and services in the core area need to communicate with apps and services in the manufacturing area. In this lab, you configure connectivity between the segmented areas. This is a common scenario for separating production from development or separating one subsidiary from another.  
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Lab 05 architecture diagram](../media/az104-lab05-architecture.png)
