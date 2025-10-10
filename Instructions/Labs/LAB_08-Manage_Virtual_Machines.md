@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Job skills
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
