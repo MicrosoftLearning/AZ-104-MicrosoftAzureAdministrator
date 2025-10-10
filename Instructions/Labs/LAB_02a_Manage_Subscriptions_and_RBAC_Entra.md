@@ -25,11 +25,6 @@ To simplify management of Azure resources in your organization, you have been ta
     - Create and manage virtual machines
     - Create support request tickets (do not include adding Azure providers)
 
-
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of lab tasks.](../media/az104-lab02a-architecture.png)
@@ -173,6 +168,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 
