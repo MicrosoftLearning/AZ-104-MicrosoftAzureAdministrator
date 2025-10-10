@@ -26,10 +26,6 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - use resource locks to protect configured resources
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of the task architecture.](../media/az104-lab02b-architecture.png)
