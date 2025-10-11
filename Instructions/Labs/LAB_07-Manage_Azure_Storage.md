@@ -137,7 +137,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Select your upload file and review the ellipsis (...) options including **Download**, **Delete**, **Change tier**, and **Acquire lease**.
 
-1. Copy the file **URL** (Settings --> Properties blade) and paste into a new **Inprivate** browsing window.
+1. Copy the file **URL** (Settings --> Properties blade) and paste into a new **InPrivate** browsing window.
 
 1. You should be presented with an XML-formatted message stating **ResourceNotFound** or **PublicAccessNotPermitted**.
 

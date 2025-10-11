@@ -120,7 +120,7 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Review the default settings and click **Start Swap**. Wait for the notification that the swap has finished.
 
-1. Return to the portal home page. You should have both a the production web app and the staging slot.
+1. Return to the portal home page. You should have both the production web app and the staging slot.
 
 1. Search for `App Services` and select your App Service web app. This returns you to the Production Deployment slot.
 
