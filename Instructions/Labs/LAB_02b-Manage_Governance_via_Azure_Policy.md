@@ -91,7 +91,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | `Require Cost Center tag and its value on resources |
+    | Assignment name | `Require Cost Center tag and its value on resources` |
     | Description | `Require Cost Center tag and its value on all resources in the resource group`|
     | Policy enforcement | Enabled |
 

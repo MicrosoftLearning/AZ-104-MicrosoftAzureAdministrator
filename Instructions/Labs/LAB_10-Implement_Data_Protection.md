@@ -42,7 +42,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
 1. Search for and select `Deploy a custom template`.
 
-1. On the custom deployment page, select **Build you own template in the editor**.
+1. On the custom deployment page, select **Build your own template in the editor**.
 
 1. On the edit template page, select **Load file**.
 

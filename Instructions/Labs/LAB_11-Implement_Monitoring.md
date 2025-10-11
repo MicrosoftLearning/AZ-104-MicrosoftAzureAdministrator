@@ -41,7 +41,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. From the Azure portal, search for and select `Deploy a custom template`.
 
-1. On the custom deployment page, select **Build you own template in the editor**.
+1. On the custom deployment page, select **Build your own template in the editor**.
 
 1. On the edit template page, select **Load file**.
 
