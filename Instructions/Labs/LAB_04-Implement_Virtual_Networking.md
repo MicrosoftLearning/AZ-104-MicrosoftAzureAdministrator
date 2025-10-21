@@ -265,7 +265,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Name | `contoso.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -308,7 +308,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region |**East US** |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -368,6 +368,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
 
 
 
