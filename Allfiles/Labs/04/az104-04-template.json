@@ -30,7 +30,7 @@
                         "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_ManufacturingVnet_name'), 'SensorSubnet1')]",
                         "properties": {
                             "addressPrefixes": [
-                                "10.30.10.0/24"
+                                "10.30.20.0/24"
                             ],
                             "delegations": [],
                             "privateEndpointNetworkPolicies": "Disabled",
@@ -44,7 +44,7 @@
                         "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworks_ManufacturingVnet_name'), 'SensorSubnet2')]",
                         "properties": {
                             "addressPrefixes": [
-                                "10.30.20.0/24"
+                                "10.30.21.0/24"
                             ],
                             "delegations": [],
                             "privateEndpointNetworkPolicies": "Disabled",
@@ -67,7 +67,7 @@
             ],
             "properties": {
                 "addressPrefixes": [
-                    "10.30.10.0/24"
+                    "10.30.20.0/24"
                 ],
                 "delegations": [],
                 "privateEndpointNetworkPolicies": "Disabled",
@@ -84,7 +84,7 @@
             ],
             "properties": {
                 "addressPrefixes": [
-                    "10.30.20.0/24"
+                    "10.30.21.0/24"
                 ],
                 "delegations": [],
                 "privateEndpointNetworkPolicies": "Disabled",
@@ -94,3 +94,4 @@
         }
     ]
 }
+
