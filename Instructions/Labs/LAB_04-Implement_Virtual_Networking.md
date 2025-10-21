@@ -265,7 +265,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Name | `contoso.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -308,7 +308,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region |**East US** |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
