@@ -37,7 +37,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `App services`.
+1. Search for and select `App Services`.
 
 1. Select **+ Create**, from drop-down menu, **Web App**. Notice the other choices. 
 
