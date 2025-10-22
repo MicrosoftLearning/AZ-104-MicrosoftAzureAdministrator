@@ -46,7 +46,7 @@ In this task, you will create and configure a storage account. The storage accou
     | Region                | **(US) East US**  |
     | Performance           | **Standard** (notice the Premium option) |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
-    | Make read access to data in the event of regional availability | Check the box |
+    | Make read access to data available in the event of regional unavailability. | Check the box |
 
     >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
@@ -58,7 +58,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
-1. Select **Review + Create**, wait for the validation process to complete, and then click **Create**.
+1. Select **Review + create**, wait for the validation process to complete, and then click **Create**.
 
 1. Once the storage account is deployed, select **Go to resource**.
 
@@ -102,7 +102,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. On your container, scroll to the ellipsis (...) on the far right, select **Access Policy**.
+1. On your container, scroll to the ellipsis (...) on the far right, select **Access policy**.
 
 1. In the **Immutable blob storage** area, select **Add policy**.
 
@@ -207,7 +207,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the **Settings** section, select the **Service endpoints** blade.
     + Select **Add**. 
-    + In the **Services** drop-down select **Microsoft.Storage**.
+    + In the **Service** drop-down select **Microsoft.Storage**.
     + In the **Subnets** drop-down check the **Default** subnet.
     + Click **Add** to save your changes.  
 
