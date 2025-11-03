@@ -48,7 +48,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. Review the **Access management for Azure resources** area. Ensure you can manage access to all Azure subscriptions and management groups in the tenant.
    
-1. Search for and select `Management groups`.
+1. Search for and select **Management groups**.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -168,6 +168,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 
