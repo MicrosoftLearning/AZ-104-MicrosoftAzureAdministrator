@@ -54,7 +54,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
     | Security type | **Standard** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
     | Size | **Standard D2s v3** |
     | Username | `localadmin` |
@@ -172,7 +172,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | `localadmin` |
