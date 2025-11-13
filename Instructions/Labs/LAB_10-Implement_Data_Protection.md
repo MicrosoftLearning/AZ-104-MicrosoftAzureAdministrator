@@ -126,7 +126,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Settings | Value |
     | --- | --- |
     | Where is your workload running? | **Azure** (notice your other options) |
-    | What do you want to backup? | **Virtual machine** (notice your other options |
+    | What do you want to backup? | **Virtual machine** (notice your other options)|
 
 1. Select **Backup**.
 
