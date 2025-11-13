@@ -61,7 +61,9 @@ The organization plans a large amount of growth for core services. In this task,
 	| ------------------ | -------------------- |
 	| IPv4 address space | Replace the prepopulated IPv4 address space with `10.20.0.0/16` (separate the entries)  |
 
-1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. Be sure to delete the default subnet - either before or after creating the other subnets.
+1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+
+	>**Note:** Be sure to delete the default subnet - either before or after creating the other subnets.
 
 	| **Subnet**             | **Option**           | **Value**              |
 	| ---------------------- | -------------------- | ---------------------- |
@@ -368,6 +370,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
 
 
 
