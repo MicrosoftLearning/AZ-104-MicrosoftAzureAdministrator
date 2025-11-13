@@ -146,7 +146,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Select **Save**.
 
-1. Select **Diagnose and solve problems** (left pane).
+1. Select **Diagnose and solve problems** (left pane of the web app main page).
 
 1. In the **Load Test your App** box, select **Create Load Test**.
 
