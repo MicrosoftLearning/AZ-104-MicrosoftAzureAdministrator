@@ -51,7 +51,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Region | **(US) East US** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Standard** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** (notice your other choices) |
+    | Image (See all images) | **Windows Server 2019 Datacenter - x64 Gen2** (notice your other choices) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
@@ -98,7 +98,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Region | **(US) East US** |
     | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
