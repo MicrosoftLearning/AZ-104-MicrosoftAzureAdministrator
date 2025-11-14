@@ -198,7 +198,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
      ```sh
-     az disk list --output table
+     az disk list --resource-group az104-rg3 --output table
      ```
    
 ## Task 5: Deploy a resource by using Azure Bicep
