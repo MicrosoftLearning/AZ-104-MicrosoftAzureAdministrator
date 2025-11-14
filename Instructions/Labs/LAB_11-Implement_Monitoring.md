@@ -73,9 +73,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **View** in the **VM Insights** box, and then select **Configure Insights**.
 
-1. Select **Enable** next to your virtual machine, and then **Enable on the Azure Monitor - Insights Onboarding** blade.
+1. Select **Enable** next to your virtual machine.
 
-1. Take the defaults for subscription and data collection rules, then select **Configure**. 
+1. Take the defaults, select **Review + enable**, and then **Enable**.  
 
 1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
@@ -103,7 +103,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Use action groups** then select **Create action group** in the **Select action group** blade.
+1. Continue working on your alert. Move to the **Actions** tab, select **Use action groups** then select **Create action group** in the **Select action group** blade.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
