@@ -234,7 +234,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Confirm the disk was created.
 
     ```sh
-    az disk list --output table
+    az disk list --resource-group az104-rg3 --output table
     ```
 
     >**Note:** You have successfully deployed five managed disks, each in a different way. Nice job!
