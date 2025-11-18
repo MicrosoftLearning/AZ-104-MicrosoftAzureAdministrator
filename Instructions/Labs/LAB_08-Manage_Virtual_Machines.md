@@ -80,11 +80,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Load balancing options | **None** |
 
 
-1. Click **Next : Management >** and specify the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Patch orchestration options | **Azure orchestrated** |  
+1. Click **Next : Management >** and review the settings. Do not make any changes. 
 
 1. Click **Next : Monitoring >** and specify the following settings (leave others with their default values):
 
