@@ -67,7 +67,7 @@ In this task, you will create and configure management groups. Management groups
 
 In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
-    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+    >**Note:** In the following steps, you will assign the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
 
 1. Select the **az104-mg1** management group.
 
