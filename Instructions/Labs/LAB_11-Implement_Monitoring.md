@@ -207,7 +207,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-    >**Note:** It can take 15-30 minutes for data to appear. Concentrate on the method and types of queries, rather than the results. 
+   >**Note:** It is okay if data doesn't appear. Focus on the steps to review monitoring information, including preconfigured and custom log queries. 
 
 1. In the Azure portal, search for and select `Monitor`, then click **Logs**.
 
