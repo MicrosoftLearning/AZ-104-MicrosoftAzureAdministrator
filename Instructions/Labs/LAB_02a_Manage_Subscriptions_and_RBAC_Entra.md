@@ -12,7 +12,7 @@ In this lab, you learn about role-based access control. You learn how to use per
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 20 minutes
 
 ## Lab scenario
 
@@ -168,6 +168,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 
