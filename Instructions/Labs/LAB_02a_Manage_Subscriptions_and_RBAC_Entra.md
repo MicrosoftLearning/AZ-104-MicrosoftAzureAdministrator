@@ -142,9 +142,9 @@ In this task, you view the activity log to determine if anyone has created a new
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
++ In the Azure portal, select the management group, select **Delete** and click on **Yes** to confirm the deletion.
++ Using Azure PowerShell, `Remove-AzManagementGroup -GroupName az104-mg1`.
++ Using the CLI, `az account management-group delete --name az104-mg1`.
   
 ## Extend your learning with Copilot
 
@@ -168,6 +168,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 
