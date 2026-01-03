@@ -12,7 +12,7 @@ In this lab, you learn about role-based access control. You learn how to use per
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 20 minutes
 
 ## Lab scenario
 
@@ -24,11 +24,6 @@ To simplify management of Azure resources in your organization, you have been ta
 
     - Create and manage virtual machines
     - Create support request tickets (do not include adding Azure providers)
-
-
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
 
 ## Architecture diagram
 
@@ -51,9 +46,9 @@ In this task, you will create and configure management groups. Management groups
 
 1. In the **Manage** blade, select **Properties**.
 
-1. Review the **Access management for Azure resources** area. Ensure you can manage access to all Azure subscriptions and management groups in the tenant.
+1. Review the **Access management for Azure resources** area. Notice/read that you can manage access to all Azure subscriptions and management groups in the tenant.
    
-1. Search for and select `Management groups`.
+1. Search for and select **Management groups**.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -72,6 +67,8 @@ In this task, you will create and configure management groups. Management groups
 
 In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
+>**Note:** In the following steps, you will assign the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+
 1. Select the **az104-mg1** management group.
 
 1. Select the **Access control (IAM)** blade, and then the **Roles** tab.
@@ -82,11 +79,9 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
 
-    >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
+    >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources.
 
 1. On the **Members** tab, **Select Members**.
-
-    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
 
 1. Search for and select the `helpdesk` group. Click **Select**. 
 
@@ -147,9 +142,9 @@ In this task, you view the activity log to determine if anyone has created a new
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
++ In the Azure portal, select the management group, select **Delete** and click on **Yes** to confirm the deletion.
++ Using Azure PowerShell, `Remove-AzManagementGroup -GroupName az104-mg1`.
++ Using the CLI, `az account management-group delete --name az104-mg1`.
   
 ## Extend your learning with Copilot
 
@@ -162,7 +157,6 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 ## Learn more with self-paced training
 
 + [Secure your Azure resources with Azure role-based access control (Azure RBAC)](https://learn.microsoft.com/training/modules/secure-azure-resources-with-rbac/). Use Azure RBAC to manage access to resources in Azure.
-+ [Create custom roles for Azure resources with role-based access control (RBAC)](https://learn.microsoft.com/training/modules/create-custom-azure-roles-with-rbac/). Understand the structure of role definitions for access control. Identify the role properties to use that define your custom role permissions. Create an Azure custom role and assign to a user.
 
 ## Key takeaways
 
@@ -174,6 +168,14 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
+
+
+
+
+
+
+
 
 
 

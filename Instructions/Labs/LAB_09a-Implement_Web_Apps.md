@@ -19,10 +19,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization is interested in Azure Web apps for hosting your company websites. The websites are currently hosted in an on-premises data center. The websites are running on Windows servers using the PHP runtime stack. The hardware is nearing end-of-life and will soon need to be replaced. Your organization wants to avoid new hardware costs by using Azure to host the websites. 
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of the tasks.](../media/az104-lab09a-architecture.png)
@@ -41,7 +37,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `App services`.
+1. Search for and select `App Services`.
 
 1. Select **+ Create**, from drop-down menu, **Web App**. Notice the other choices. 
 
@@ -124,7 +120,7 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 1. Review the default settings and click **Start Swap**. Wait for the notification that the swap has finished.
 
-1. Return to the portal home page. You should have both a the production web app and the staging slot.
+1. Return to the portal home page. You should have both the production web app and the staging slot.
 
 1. Search for `App Services` and select your App Service web app. This returns you to the Production Deployment slot.
 
@@ -138,9 +134,9 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases. To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
 
-1. In the **Settings** section, select **Scale out (App Service plan)**.
+1. In the left pane, in the **App Service plan** section, select **Scale out**.
 
-    >**Note:** Ensure you are working on the production slot not the staging slot.  
+    >**Note:** Ensure you are working on the production slot, not the staging slot.  
 
 1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
@@ -150,7 +146,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Select **Save**.
 
-1. Select **Diagnose and solve problems** (left pane).
+1. Select **Diagnose and solve problems** (left pane of the web app main page).
 
 1. In the **Load Test your App** box, select **Create Load Test**.
 

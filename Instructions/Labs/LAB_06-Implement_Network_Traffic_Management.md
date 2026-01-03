@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing an Azure Load Balancer and an Azure Application Gateway. All resources are in the same region.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Job skills
 
 + Task 1: Use a template to provision an infrastructure.
@@ -42,11 +38,11 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Labs\\06\\az104-06-vms-template.json** file and select **Open**.
 
 1. Select **Save**.
 
-1. Select **Edit parameters** and load the **\\Allfiles\\Lab06\\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** and load the **\\Allfiles\\Labs\\06\\az104-06-vms-parameters.json** file.
 
 1. Select **Save**.
 
@@ -60,7 +56,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
 
-1. Select **Review + Create** and then select **Create**.
+1. Select **Review + create** and then select **Create**.
 
     >**Note**: Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
 
@@ -78,7 +74,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values) then click **Next: Frontend IP configuration**:
+1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
 
     | Setting | Value |
     | --- | --- |
@@ -98,10 +94,10 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | --- | --- |
     | Name | `az104-fe` |
     | IP type | IP address |
-    | Gateway Load Balancer | None |
+    | Gateway Load balancer | None |
     | Public IP address | Select **Create new** (use the instructions in the next step) |
 
-1. On the **Add a public IP address** popup, use the following settings before clicking **Save** twice. When completed click **Next: Backend pools**.
+1. On the **Add a public IP address** popup, use the following settings before clicking **Save** twice. When completed click **Next : Backend pools >**.
 
     | Setting | Value |
     | --- | --- |
@@ -113,12 +109,12 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
     >**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **Add** and then **Save**. Click **Next: Inbound rules**.
+1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **Add** and then **Save**. Click **Next : Inbound rules >**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-be` |
-    | Virtual network | **az104-06-vnet1** |
+    | Virtual network | **az104-06-vnet1 (az104-rg6)** |
     | Backend Pool Configuration | **NIC** |
     | Click **Add** to add a virtual machine |  |
     | az104-06-vm0 | **check the box** |
@@ -151,8 +147,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Close the create health probe window | **Save** |
     | Session persistence | **None** |
     | Idle timeout (minutes) | `4` |
-    | TCP reset | **Disabled** |
-    | Floating IP | **Disabled** |
+    | Enable TCP reset | **Disabled** |
+    | Enable Floating IP | **Disabled** |
     | Outbound source network address translation (SNAT) | **Recommended** |
 
 1. Select **Frontend IP configuration** from the Load Balancer page. Copy the public IP address.
@@ -191,7 +187,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
-1. In the Azure portal, search and select `Application gateways` and, on the **Application Gateways** blade, click **+ Create**.
+1. In the Azure portal, search and select `Application gateways` and, on the **Application gateways** blade, click **+ Create**.
 
 1. On the **Basics** tab, specify the following settings (leave others with their default values):
 
@@ -208,7 +204,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
-1. Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
+1. Click **Next : Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
 
     | Setting | Value |
     | --- | --- |
@@ -293,7 +289,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. After the application gateway deploys, search for and select **az104-appgw**.
 
-1. In the **Application Gateway** resource, in the **Monitoring** section, select **Backend health**.
+1. In the **Application gateway** resource, in the **Monitoring** section, select **Backend health**.
 
 1. Ensure both servers in the backend pool display **Healthy**.
 

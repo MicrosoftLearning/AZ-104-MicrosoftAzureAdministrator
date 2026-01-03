@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization wants to explore deploying and configuring Azure virtual machines. First, you implement an Azure virtual machine with manual scaling. Next, you implement a Virtual Machine Scale Set and explore autoscaling.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Job skills
 
 + Task 1: Deploy zone-resilient Azure virtual machines by using the Azure portal.
@@ -58,7 +54,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
     | Security type | **Standard** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (if this is not available select|
     | Azure Spot instance | **unchecked** |
     | Size | **Standard D2s v3** |
     | Username | `localadmin` |
@@ -84,11 +80,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Load balancing options | **None** |
 
 
-1. Click **Next : Management >** and specify the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Patch orchestration options | **Azure orchestrated** |  
+1. Click **Next : Management >** and review the settings. Do not make any changes. 
 
 1. Click **Next : Monitoring >** and specify the following settings (leave others with their default values):
 
@@ -176,7 +168,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | `localadmin` |
@@ -381,7 +373,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 1. Once the command completes, use **az vm show** to verify your machine was created.
 
     ```sh
-    az vm show --name  myCLIVM --resource-group az104-rg8 --show-details
+    az vm show --name  myCLIVM --resource-group az104-rg8 --show-details --output table
     ```
 
 1. Verify the **powerState** is **VM Running**.

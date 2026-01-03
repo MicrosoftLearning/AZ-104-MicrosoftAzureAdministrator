@@ -26,10 +26,6 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 - use resource locks to protect configured resources
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Diagram of the task architecture.](../media/az104-lab02b-architecture.png)
@@ -95,7 +91,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     | Setting | Value |
     | --- | --- |
-    | Assignment name | `Require Cost Center tag and its value on resources |
+    | Assignment name | `Require Cost Center tag and its value on resources` |
     | Description | `Require Cost Center tag and its value on all resources in the resource group`|
     | Policy enforcement | Enabled |
 
@@ -240,10 +236,6 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Tabulate the differences between Azure policy and Azure RBAC, include examples.
 + What are the steps to enforce Azure policy and remediate resources which are not compliant?
 + How can I get a report of Azure resources with specific tags?
-
-## Learn more with self-paced training
-
-+ [Design an enterprise governance strategy](https://learn.microsoft.com/training/modules/enterprise-governance/). Use RBAC and Azure Policy to limit access to your Azure solutions, and determine which method is right for your security goals.
 
 ## Key takeaways
 

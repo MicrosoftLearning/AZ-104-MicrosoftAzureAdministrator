@@ -18,10 +18,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization is evaluating how to backup and restore Azure virtual machines from accidental or malicious data loss. Additionally, the organization wants to explore using Azure Site Recovery for disaster recovery scenarios. 
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Job skills
 
 + Task 1: Use a template to provision an infrastructure.
@@ -46,7 +42,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
 1. Search for and select `Deploy a custom template`.
 
-1. On the custom deployment page, select **Build you own template in the editor**.
+1. On the custom deployment page, select **Build your own template in the editor**.
 
 1. On the edit template page, select **Load file**.
 
@@ -130,7 +126,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Settings | Value |
     | --- | --- |
     | Where is your workload running? | **Azure** (notice your other options) |
-    | What do you want to backup? | **Virtual machine** (notice your other options |
+    | What do you want to backup? | **Virtual machine** (notice your other options)|
 
 1. Select **Backup**.
 

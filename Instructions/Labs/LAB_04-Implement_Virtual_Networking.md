@@ -22,10 +22,6 @@ The **CoreServicesVnet** virtual network has the largest number of resources. A 
 
 The **ManufacturingVnet** virtual network contains systems for the operations of the manufacturing facilities. The organization is anticipating a large number of internal connected devices for their systems to retrieve data from. 
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
 
 ![Network layout](../media/az104-lab04-architecture.png)
@@ -65,7 +61,9 @@ The organization plans a large amount of growth for core services. In this task,
 	| ------------------ | -------------------- |
 	| IPv4 address space | Replace the prepopulated IPv4 address space with `10.20.0.0/16` (separate the entries)  |
 
-1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. Be sure to delete the default subnet - either before or after creating the other subnets.
+1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+
+	>**Note:** Be sure to delete the default subnet - either before or after creating the other subnets.
 
 	| **Subnet**             | **Option**           | **Value**              |
 	| ---------------------- | -------------------- | ---------------------- |
@@ -179,6 +177,8 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. In the Azure portal, search for and select `Network security groups`.
 
+>**Note:** You can also locate this resource using the Azure portal menu (icon top left). Select **Create a resource** and then in the **Networking** blade, select **Network security group**. 
+
 1. Select **+ Create** and provide information on the **Basics** tab. 
 
     | Setting | Value |
@@ -228,7 +228,7 @@ In this task, we create an Application Security Group and a Network Security Gro
 
 1. After creating your inbound NSG rule, select **Outbound security rules**. 
 
-1. Notice the **AllowInternetOutboundRule** rule. Also notice the rule cannot be deleted and the priority is 65001.
+1. Notice the **AllowInternetOutBound** rule. Also notice the rule cannot be deleted and the priority is 65001.
 
 1. Select **+ Add** and then configure an outbound rule that denies access to the internet. When you are finished, select **Add**.
 
@@ -239,11 +239,11 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Destination | **Service tag** |
     | Destination service tag | **Internet** |
     | Service | **Custom** |
-    | Destination port ranges | **8080** |
+    | Destination port ranges | `*` |
     | Protocol | **Any** |
     | Action | **Deny** |
     | Priority | **4096** |
-    | Name | **DenyAnyCustom8080Outbound** |
+    | Name | `DenyInternetOutbound` |
 
 
 ## Task 4: Configure public and private Azure DNS zones
@@ -263,11 +263,11 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az-104-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `contoso.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -306,11 +306,11 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az-104-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region |**East US** |
 
-1. Select **Review create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
@@ -370,3 +370,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 ---
 demo:
     title: 'Demonstration 03: Administer Azure Resources'
-    module: 'Administer Administer Azure Resources'
+    module: 'Administer Azure Resources'
 ---
 # 03 - Administer Azure Resources
 
@@ -77,14 +77,14 @@ In this demonstration, we will explore QuickStart templates.
 
 **Reference**: [Tutorial - Create & deploy template - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
 
-1. Start by browsing to the [Azure Quickstart Templates gallery](https://learn.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-resource-manager). Notice there are JSON and Bicep examples. 
+1. Start by browsing to the [Azure Quickstart Templates gallery](https://learn.microsoft.com/en-us/samples/browse/?expanded=azure&products=azure-resource-manager). Notice there are JSON and Bicep examples. 
 
-1. Ask students if there are any specific templates that are of interest. If not, select a template. For example, the [Deploy a simple Windows VM with tags](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vm-tags/) template.
+1. Ask students if there are any specific templates that are of interest. If not, select a template. For example, the [Deploy a simple Windows VM with tags](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/vm-tags/) template.
 
-1. Discuss how the **Deploy to Azure** button enables you to deploy the template directly through the Azure portal.
+1. Discuss how the **Deploy to Azure** button enables you to deploy the template directly through the Azure portal.
 
 1. **Deploy** the JSON template and discuss how you can edit the template and parameters file. Review the purpose of the files. As you have time, review the syntax. 
 
-1. Return to the code samples gallery, and locate a Bicep template. For example, [Create a Create a Standard Storage Account](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/storage-account-create/). 
+1. Return to the code samples gallery, and locate a Bicep template. For example, [Create a Standard Storage Account](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/storage-account-create/). 
 
 1. **Deploy** the Bicep template and discuss how you can edit the template and parameters file. As you have time, review the syntax. 

@@ -18,12 +18,7 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 Your organization has migrated their infrastructure to Azure. It is important that Administrators are notified of any significant infrastructure changes. You plan to examine the capabilities of Azure Monitor, including Log Analytics.
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-
 ## Architecture diagram
-
 
 ![Diagram of the architecture tasks](../media/az104-lab11-architecture.png)
 
@@ -40,17 +35,17 @@ Your organization has migrated their infrastructure to Azure. It is important th
 
 In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
 
-1. Download the **\\Allfiles\\Lab11\\az104-11-vm-template.json** lab files to your computer.
+1. Download the **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** lab files to your computer.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. From the Azure portal, search for and select `Deploy a custom template`.
 
-1. On the custom deployment page, select **Build you own template in the editor**.
+1. On the custom deployment page, select **Build your own template in the editor**.
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Labs11\\az104-11-vm-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Labs\\11\\az104-11-vm-template.json** file and select **Open**.
 
 1. Select **Save**.
 
@@ -64,7 +59,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
     
-1. Select **Review + Create**, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
@@ -78,9 +73,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **View** in the **VM Insights** box, and then select **Configure Insights**.
 
-1. Select **Enable** next to your virtual machine, and then **Enable on the Azure Monitor - Insights Onboarding** blade.
+1. Select **Enable** next to your virtual machine.
 
-1. Take the defaults for subscription and data collection rules, then select **Configure**. 
+1. Take the defaults, select **Review + enable**, and then **Enable**.  
 
 1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
@@ -108,7 +103,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Select **Use action groups** then select **Create action group** in the **Select action group** blade.
+1. Continue working on your alert. Move to the **Actions** tab, select **Use action groups** then select **Create action group** in the **Select action group** blade.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -135,9 +130,9 @@ In this task, if the alert is triggered send an email notification to the operat
 
     >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
-1. Select **Review + Create** and then **Create**.
+1. Select **Review + create** and then **Create**.
    
-1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
@@ -184,7 +179,7 @@ In this task, you create an alert rule to suppress notifications during a mainte
    
 1. Select **Next: Rule settings**, then select **Suppress notifications**.
    
-1. Select **Next: Scheduling**.
+1. Select **Next: Scheduling >**.
    
 1. By default, the rule works all the time, unless you disable it or configure a schedule. You are going to define a rule to suppress notifications during overnight maintenance.
 Enter these settings for the scheduling of the alert processing rule:
@@ -198,7 +193,7 @@ Enter these settings for the scheduling of the alert processing rule:
 
     ![Screenshot of the scheduling section of an alert processing rule](../media/az104-lab11-alert-processing-rule-schedule.png)
 
-1. Select **Next: Details** and enter these settings:
+1. Select **Next: Details >** and enter these settings:
 
     | Setting | Value |
     |---------|---------|
@@ -211,6 +206,8 @@ Enter these settings for the scheduling of the alert processing rule:
 ## Task 6: Use Azure Monitor log queries
 
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
+
+   >**Note:** It is okay if data doesn't appear. Focus on the steps to review monitoring information, including preconfigured and custom log queries. 
 
 1. In the Azure portal, search for and select `Monitor`, then click **Logs**.
 

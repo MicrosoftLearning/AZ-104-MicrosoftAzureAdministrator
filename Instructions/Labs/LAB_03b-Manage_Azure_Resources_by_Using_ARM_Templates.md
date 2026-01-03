@@ -14,10 +14,6 @@ This lab requires an Azure subscription. Your subscription type may affect the a
 
 ## Estimated timing: 50 minutes
 
-## Interactive lab simulations
-
->**Note**: The lab simulations that were previously provided have been retired.
-  
 ## Lab scenario
 
 Your team wants to look at ways to automate and simplify resource deployments. Your organization is looking for ways to reduce administrative overhead, reduce human error and increase consistency.  
@@ -172,7 +168,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
    ```powershell
-   Get-AzDisk
+   Get-AzDisk | ft
    ```
    
 ## Task 4: Deploy a template with the CLI 
@@ -202,7 +198,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
      ```sh
-     az disk list --output table
+     az disk list --resource-group az104-rg3 --output table
      ```
    
 ## Task 5: Deploy a resource by using Azure Bicep
@@ -238,7 +234,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Confirm the disk was created.
 
     ```sh
-    az disk list --output table
+    az disk list --resource-group az104-rg3 --output table
     ```
 
     >**Note:** You have successfully deployed five managed disks, each in a different way. Nice job!

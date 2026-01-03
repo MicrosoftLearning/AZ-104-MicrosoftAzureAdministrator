@@ -10,7 +10,7 @@ This repository is for instructors teaching Microsoft courses. If you are in cla
 
 ## Security Issue - April 2023
 
-Effective immediately, the Admin password will be removed from the JSON template parameter files. This means students will have to provide a password when the template is deployed. This effects Labs 4, 5, 6, 7, 10 and 11.  The lab instructions will be changed to reflect this change. 
+Effective immediately, the Admin password will be removed from the JSON template parameter files. This means students will have to provide a password when the template is deployed. This affects Labs 4, 5, 6, 7, 10 and 11.  The lab instructions will be changed to reflect this change. 
 
 ## What are we doing?
 
@@ -28,9 +28,9 @@ Effective immediately, the Admin password will be removed from the JSON template
 
 ## How do I contribute?
 
-- Any MCT can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include content and lab code changes as needed.
+- Any MCT can submit a pull request to the code or content in the GitHub repo, Microsoft and the course author will triage and include content and lab code changes as needed.
 
-- You can submit bugs, changes, improvement and ideas.  Find a new Azure feature before we have?  Submit a new demo!
+- You can submit bugs, changes, improvement and ideas.  Found a new Azure feature before we have?  Submit a new demo!
 
 ## What about changes to the student handbook?
 
