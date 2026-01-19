@@ -104,7 +104,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Tag Name | `Cost Center` |
     | Tag Value | `000` |
 
-1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
+1. Click **Next** and review the **Remediation** and **Managed Identity** tabs. Leave the **Create a Managed Identity** checkbox unchecked in the **Managed Identity** tab. 
 
 1. Click **Review + Create** and then click **Create**.
 
