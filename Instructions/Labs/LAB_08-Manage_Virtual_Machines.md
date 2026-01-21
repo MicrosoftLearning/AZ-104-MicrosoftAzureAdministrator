@@ -168,7 +168,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
-    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (some hosters only allow WS 2019)|
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Username | `localadmin` |
