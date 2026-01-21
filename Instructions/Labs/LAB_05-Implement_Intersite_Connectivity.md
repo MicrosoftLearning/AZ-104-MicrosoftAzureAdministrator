@@ -51,7 +51,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Region | **(US) East US** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Standard** |
-    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (notice your other choices) |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (notice your other choices, some hosters only allow WS-2019) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
