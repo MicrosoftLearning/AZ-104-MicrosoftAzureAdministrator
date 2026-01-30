@@ -5,9 +5,23 @@ demo:
 ---
 # 03 - Administer Azure Resources
 
+## Demonstration -- Microsoft Copilot for Azure
+
+In this demonstration, we explore Copilot for Azure.
+
+**Reference**: [Analyze, estimate and optimize cloud costs using Azure Copilot](https://learn.microsoft.com/azure/copilot/analyze-cost-management)
+
+**Reference**: [Generate PowerShell scripts using Azure Copilot](https://learn.microsoft.com/azure/copilot/generate-powershell-scripts)
+
+Or, you can use any other scenario suggested on this page: [Perform tasks](https://learn.microsoft.com/azure/copilot/capabilities#perform-tasks)
+
+1. Access the portal and Copilot window.
+
+1. Use one of the suggested prompts or choose one of your own.
+
 ## Demonstration -- Azure Portal
 
-In this demonstration, we will explore the Azure portal.
+In this demonstration, we explore the Azure portal.
 
 **Reference**: [Manage Azure portal settings and preferences](https://docs.microsoft.com/azure/azure-portal/set-preferences)
 
@@ -33,7 +47,7 @@ In this demonstration, we will explore the Azure portal.
 
 ## Demonstration -- Cloud Shell
 
-In this demonstration, we will experiment with Cloud Shell.
+In this demonstration, we experiment with Cloud Shell.
 
 **Reference**: [Quickstart for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
 
@@ -73,7 +87,7 @@ In this demonstration, we will experiment with Cloud Shell.
 
 ## Demonstration -- QuickStart Templates
 
-In this demonstration, we will explore QuickStart templates.
+In this demonstration, we explore QuickStart templates.
 
 **Reference**: [Tutorial - Create & deploy template - Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell)
 
@@ -88,3 +102,4 @@ In this demonstration, we will explore QuickStart templates.
 1. Return to the code samples gallery, and locate a Bicep template. For example, [Create a Standard Storage Account](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/storage-account-create/). 
 
 1. **Deploy** the Bicep template and discuss how you can edit the template and parameters file. As you have time, review the syntax. 
+
