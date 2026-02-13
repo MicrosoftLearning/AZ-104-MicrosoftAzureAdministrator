@@ -18,7 +18,7 @@ In this demonstration, we will create an alert rule.
 
 1. Search for and select **Monitor** and then **Alerts**.
 
-1. Select a scope for the alert rule. Discuss how You can filter by subscription, resource type, or resource location.
+1. Select a scope for the alert rule. Discuss how you can filter by subscription, resource type, or resource location.
 
 1. Set the conditions for the alert rule. Discuss how signals define what you want to measure. 
 

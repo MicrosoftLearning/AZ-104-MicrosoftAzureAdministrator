@@ -71,7 +71,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 ## Task 2: Edit an Azure Resource Manager template and then redeploy the template
 
-In this task, you use the downloaded template to deploy a new managed disk. This task outlines how to quicky and easily repeat deployments. 
+In this task, you use the downloaded template to deploy a new managed disk. This task outlines how to quickly and easily repeat deployments. 
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
@@ -104,7 +104,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
     | --- |--- |
     | Subscription | *your subscription* |
     | Resource Group | `az104-rg3` |
-    | Region | **(US) East US)** |
+    | Region | **(US) East US** |
     | Disk_name | `az104-disk2` |
 
 1. Select **Review + Create** and then select **Create**.

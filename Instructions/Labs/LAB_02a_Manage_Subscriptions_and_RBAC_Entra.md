@@ -134,7 +134,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
 
-1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
+1. Review the activities for role assignments. The activity log can be filtered for specific operations. 
 
     ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
 

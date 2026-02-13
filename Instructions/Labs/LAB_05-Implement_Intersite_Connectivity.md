@@ -211,7 +211,7 @@ In this task, you retest the connection between the virtual machines in differen
 
 In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there. 
 
-1. Search for select the `CoreServicesVnet`.
+1. Search for and select the `CoreServicesVnet`.
 
 1. Select **Subnets** and then **+ Subnet**. Be sure to select **Add** to save your changes. 
 

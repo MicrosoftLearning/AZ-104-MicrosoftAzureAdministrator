@@ -120,7 +120,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Be sure to **Save** your changes.
 
->**Note:** There is a completed template files in the lab files directory. 
+>**Note:** There are completed template files in the lab files directory. 
 
 ### Make changes to the parameters file
 

@@ -87,7 +87,7 @@ In this demonstration, we will work with files shares and snapshots.
 
 **Reference**: [Copy or move data to Azure Storage by using AzCopy v10](https://docs.microsoft.com/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/files/toc.json)
 
-1. Discuss when to use AzCopy. View  the help, **azcopy /?**.
+1. Discuss when to use AzCopy. View the help, **azcopy /?**.
 
 1. Scroll down the **Samples** section. As you have time, try any of the examples. 
     
