@@ -94,7 +94,7 @@ In this task, you will configure Web App deployment settings. Deployment setting
 
 1. In the staging slot, select **Deployment Center** and then select **Settings**.
 
-    >**Note:** Make sure you are on the staging slot blade (instead than the production slot).
+    >**Note:** Make sure you are on the staging slot blade (instead of the production slot).
     
 1. In the **Source** drop-down list, select **External Git**. Notice the other choices. 
 

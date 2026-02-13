@@ -18,7 +18,7 @@ In this demonstration, we will explore backing up a file share in the Azure port
 
 1. Use the Azure portal.
 
-1. Search for an select **Recovery Services vaults**.
+1. Search for and select **Recovery Services vaults**.
 
 1. Create a **Recovery Services Vault**. Review the requirement that the vault be in the same region as the file share. 
 

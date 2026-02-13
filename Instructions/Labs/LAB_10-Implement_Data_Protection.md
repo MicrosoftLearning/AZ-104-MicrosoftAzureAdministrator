@@ -26,8 +26,6 @@ Your organization is evaluating how to backup and restore Azure virtual machines
 + Task 4: Monitor Azure Backup.
 + Task 5: Enable virtual machine replication. 
 
-## Estimated timing: 40 minutes
-
 ## Architecture diagram
 
 ![Diagram of the architecture tasks.](../media/az104-lab10-architecture.png)
@@ -172,7 +170,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **Create**.
 
-1. Use the following information to define the storage account, then and select **Review + create**.
+1. Use the following information to define the storage account, then select **Review + create**.
 
     | Settings | Value |
     | --- | --- | 

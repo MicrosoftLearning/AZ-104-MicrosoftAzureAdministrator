@@ -151,7 +151,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Key takeaways
 
-Congratulations on completing the lab. Here are some main takeways for this lab:
+Congratulations on completing the lab. Here are some main takeaways for this lab:
 
 + A tenant represents your organization and helps you to manage a specific instance of Microsoft cloud services for your internal and external users.
 + Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
