@@ -154,7 +154,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor (curly brackets)** icon and navigate to the template JSON file on the left in the navigation pane.
 
-1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -168,7 +168,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
    ```powershell
-   Get-AzDisk | ft
+   Get-AzDisk | ft Name,ResourceGroupName,Location,DiskSizeGb,ProvisioningState
    ```
    
 ## Task 4: Deploy a template with the CLI 
@@ -183,7 +183,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -220,10 +220,10 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 1. Make the following changes:
 
     + Change the **managedDiskName** value, line 2, to **az104-disk5**.
-    + Change the **sku name** value, line 26, to **StandardSSD_LRS**.
     + Change the **diskSizeinGiB** value; line 7, to **32**.
+    + Change the **sku name** value, line 26, to **StandardSSD_LRS**.
     
-1. Use **Ctrl + S** to save your changes.
+1. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor.
 
 1. Now, deploy the template.
 
