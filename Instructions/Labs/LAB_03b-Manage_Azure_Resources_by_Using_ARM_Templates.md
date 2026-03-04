@@ -168,7 +168,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
    ```powershell
-   Get-AzDisk | ft Name
+   Get-AzDisk | ft Name,ResourceGroupName,Location,DiskSizeGb,ProvisioningState
    ```
    
 ## Task 4: Deploy a template with the CLI 
