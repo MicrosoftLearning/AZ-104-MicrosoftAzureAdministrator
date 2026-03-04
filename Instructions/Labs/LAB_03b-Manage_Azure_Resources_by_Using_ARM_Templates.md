@@ -183,7 +183,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (curly brackets) icon and navigate to the template JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes. 
+1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
