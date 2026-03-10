@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 04: Implement Virtual Networking'
-    module: 'Implement Virtual Networking'
+  title: 'Lab 04: Implement Virtual Networking'
+  module: Implement Virtual Networking
+  description: This lab is the first of three labs that focuses on virtual networking.
+    In this lab, you learn the basics of virtual networking and subnetting. You learn
+    how to protect your network with network security groups and application security
+    groups. You also learn about DNS zones and records.
+  duration: 50 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab 04 - Implement Virtual Networking
