@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Lab 07: Manage Azure storage'
-    module: 'Administer Azure Storage'
+  title: 'Lab 07: Manage Azure storage'
+  module: Administer Azure Storage
+  description: In this lab you learn to create storage accounts for Azure blobs and
+    Azure files. You learn to configure and secure blob containers. You also learn
+    to use Storage Browser to configure and secure Azure file shares.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Files
+  - Azure Storage
 ---
 
 # Lab 07 - Manage Azure Storage
