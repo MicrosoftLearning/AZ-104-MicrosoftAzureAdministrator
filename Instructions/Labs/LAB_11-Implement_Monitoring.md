@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab 11: Implement Monitoring'
-    module: 'Administer Monitoring'
+  title: 'Lab 11: Implement Monitoring'
+  module: Administer Monitoring
+  description: In this lab, you learn about Azure Monitor. You learn to create an
+    alert and send it to an action group. You trigger and test the alert and check
+    the activity log.
+  duration: 40 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Monitor
 ---
 
 # Lab 11 - Implement Monitoring
