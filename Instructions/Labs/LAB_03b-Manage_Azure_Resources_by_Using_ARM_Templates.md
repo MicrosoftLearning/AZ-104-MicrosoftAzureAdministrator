@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab 03: Manage Azure resources by using Azure Resource Manager Templates'
-    module: 'Administer Azure Resources'
+  title: 'Lab 03: Manage Azure resources by using Azure Resource Manager Templates'
+  module: Administer Azure Resources
+  description: In this lab, you learn how to automate resource deployments. You learn
+    about Azure Resource Manager templates and Bicep templates. You learn about the
+    different ways of deploying the templates.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Resource Manager
 ---
 
 # Lab 03 - Manage Azure resources by using Azure Resource Manager Templates
