@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 02a: Manage Subscriptions and RBAC'
-    module: 'Administer Governance and Compliance'
+  title: 'Lab 02a: Manage Subscriptions and RBAC'
+  module: Administer Governance and Compliance
+  description: In this lab, you learn about role-based access control. You learn how
+    to use permissions and scopes to control what actions identities can and cannot
+    perform. You also learn how to make subscription management easier using management
+    groups.
+  duration: 20 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab 02a - Manage Subscriptions and RBAC
