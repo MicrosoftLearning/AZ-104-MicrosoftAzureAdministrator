@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab 08: Manage Virtual Machines'
-    module: 'Administer Virtual Machines'
+  title: 'Lab 08: Manage Virtual Machines'
+  module: Administer Virtual Machines
+  description: In this lab, you create and compare virtual machines to virtual machine
+    scale sets. You learn how to create, configure and resize a single virtual machine.
+    You learn how to create a virtual machine scale set and configure autoscaling.
+  duration: 5 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab 08 - Manage Virtual Machines
