@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab 05: Implement Intersite Connectivity'
-    module: 'Administer Intersite Connectivity'
+  title: 'Lab 05: Implement Intersite Connectivity'
+  module: Administer Intersite Connectivity
+  description: In this lab you explore communication between virtual networks. You
+    implement virtual network peering and test connections. You will also create a
+    custom route.
+  duration: 50 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab 05 - Implement Intersite Connectivity
