@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Lab 10: Implement Data Protection'
-    module: 'Administer Data Protection'
+  title: 'Lab 10: Implement Data Protection'
+  module: Administer Data Protection
+  description: In this lab, you learn about backup and recovery of Azure virtual machines.
+    You learn to create a Recovery Service vault and a backup policy for Azure virtual
+    machines. You learn about disaster recovery with Azure Site Recovery.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Site Recovery
+  - Azure Virtual Machines
 ---
 
 # Lab 10 - Implement Data Protection
