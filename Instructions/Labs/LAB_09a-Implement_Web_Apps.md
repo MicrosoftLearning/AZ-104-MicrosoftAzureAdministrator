@@ -2,13 +2,14 @@
 lab:
   title: 'Lab 09a: Implement Web Apps'
   module: Administer PaaS Compute Options
-  description: In this lab, you learn about Azure web apps. You learn to configure a web app to display a Hello World application in an external GitHub repository. You learn to create a staging slot and swap with the production slot. You also learn about autoscaling to accommodate demand changes.
+  description: Configure and scale Azure web apps. 
   duration: 20 minutes
-  level: 200
+  level: 300
   islab: true
   primarytopics:
     - Azure
-    - GitHub
+    - Web Apps
+    - Deployment slots
 ---
 
 # Lab 09a - Implement Web Apps
