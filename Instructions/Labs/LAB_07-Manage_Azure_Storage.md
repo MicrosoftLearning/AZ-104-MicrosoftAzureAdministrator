@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 07: Manage Azure storage'
-    module: 'Administer Azure Storage'
+  title: 'Lab 07: Manage Azure storage'
+  module: Administer Azure Storage
+  description: In this task, you will create and configure Azure File shares. You will use Storage Browser to manage the file share.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Storage
 ---
 
 # Lab 07 - Manage Azure Storage
