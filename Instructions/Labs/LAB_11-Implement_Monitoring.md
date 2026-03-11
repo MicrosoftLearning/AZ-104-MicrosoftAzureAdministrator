@@ -2,10 +2,13 @@
 lab:
   title: 'Lab 11: Implement Monitoring'
   module: Administer Monitoring
-  description: In this task, you will deploy a virtual machine that will be used to test monitoring scenarios.
+  description: Configure Azure Monitor alerts and queries. 
   duration: 40 minutes
   level: 300
   islab: true
+  primarytopics:
+  - Azure
+  - Azure Monitor
 ---
 
 # Lab 11 - Implement Monitoring
