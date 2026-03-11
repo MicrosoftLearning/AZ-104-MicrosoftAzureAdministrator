@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 01: Manage Microsoft Entra ID Identities'
-    module: 'Administer Identity'
+  title: 'Lab 01: Manage Microsoft Entra ID Identities'
+  module: Administer Identity
+  description: This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Microsoft Entra
+    - Microsoft Entra ID
 ---
 
 # Lab 01 - Manage Microsoft Entra ID Identities
