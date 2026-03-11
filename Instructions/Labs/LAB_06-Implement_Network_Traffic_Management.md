@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 06: Implement Network Traffic Management'
-    module: 'Administer Network Traffic Management'
+  title: 'Lab 06: Implement Network Traffic Management'
+  module: Administer Network Traffic Management
+  description: Create and configure Azure Load Balancer and Application Gateway.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Load Balancer
+  - Azure Application Gateway
 ---
 
 # Lab 06 - Implement Network Traffic Management

@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 11: Implement Monitoring'
-    module: 'Administer Monitoring'
+  title: 'Lab 11: Implement Monitoring'
+  module: Administer Monitoring
+  description: Configure Azure Monitor alerts and queries. 
+  duration: 40 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Monitor
 ---
 
 # Lab 11 - Implement Monitoring

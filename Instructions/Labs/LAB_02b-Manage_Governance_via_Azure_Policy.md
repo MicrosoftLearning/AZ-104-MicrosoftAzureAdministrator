@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 02b: Manage Governance via Azure Policy'
-    module: 'Administer Governance and Compliance'
+  title: 'Lab 02b: Manage Governance via Azure Policy'
+  module: Administer Governance and Compliance
+  description: Configure Azure policy to use resource tags. 
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Policy
+    - Resource locks
 ---
 
 # Lab 02b - Manage Governance via Azure Policy

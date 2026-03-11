@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 09c: Implement Azure Container Apps'
-    module: 'Administer PaaS Compute Options'
+  title: 'Lab 09c: Implement Azure Container Apps'
+  module: Administer PaaS Compute Options
+  description: Implement and deploy Azure Container Apps.
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Container Apps
 ---
 
 # Lab 09c - Implement Azure Container Apps

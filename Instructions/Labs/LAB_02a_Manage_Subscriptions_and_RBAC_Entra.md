@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 02a: Manage Subscriptions and RBAC'
-    module: 'Administer Governance and Compliance'
+  title: 'Lab 02a: Manage Subscriptions and RBAC'
+  module: Administer Governance and Compliance
+  description: Review and assign Azure roles. 
+  duration: 20 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Roles
 ---
 
 # Lab 02a - Manage Subscriptions and RBAC
@@ -168,6 +175,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 

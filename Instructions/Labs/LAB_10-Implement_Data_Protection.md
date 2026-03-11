@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 10: Implement Data Protection'
-    module: 'Administer Data Protection'
+  title: 'Lab 10: Implement Data Protection'
+  module: Administer Data Protection
+  description: Configure Azure Backup for virtual machines. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual machines
+  - Azure Backup
 ---
 
 # Lab 10 - Implement Data Protection

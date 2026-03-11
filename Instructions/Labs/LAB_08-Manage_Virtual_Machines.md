@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 08: Manage Virtual Machines'
-    module: 'Administer Virtual Machines'
+  title: 'Lab 08: Manage Virtual Machines'
+  module: Administer Virtual Machines
+  description: Create and scale virtual machines and virtual machine scale sets. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual machines
+  - Virtual Machine Scale Sets
 ---
 
 # Lab 08 - Manage Virtual Machines

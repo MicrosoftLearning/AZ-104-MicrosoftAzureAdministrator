@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab 07: Manage Azure storage'
-    module: 'Administer Azure Storage'
+  title: 'Lab 07: Manage Azure storage'
+  module: Administer Azure Storage
+  description: Configure Azure storage accounts, blob storage, and files shares. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure storage
+    - Blob storage
+    - File shares
 ---
 
 # Lab 07 - Manage Azure Storage

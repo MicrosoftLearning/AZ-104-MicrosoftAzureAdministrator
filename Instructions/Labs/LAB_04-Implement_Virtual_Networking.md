@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab 04: Implement Virtual Networking'
-    module: 'Implement Virtual Networking'
+  title: 'Lab 04: Implement Virtual Networking'
+  module: Implement Virtual Networking
+  description: Configure virtual networks, network security groups, and DNS zones. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual networks
+  - Network security groups
+  - Azure DNS
 ---
 
 # Lab 04 - Implement Virtual Networking
@@ -370,6 +379,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
 
 
 

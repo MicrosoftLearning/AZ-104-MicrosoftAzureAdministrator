@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 09a: Implement Web Apps'
-    module: 'Administer PaaS Compute Options'
+  title: 'Lab 09a: Implement Web Apps'
+  module: Administer PaaS Compute Options
+  description: Configure and scale Azure web apps. 
+  duration: 20 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Web Apps
+    - Deployment slots
 ---
 
 # Lab 09a - Implement Web Apps

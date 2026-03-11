@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 03: Manage Azure resources by using Azure Resource Manager Templates'
-    module: 'Administer Azure Resources'
+  title: 'Lab 03: Manage Azure resources by using Azure Resource Manager Templates'
+  module: Administer Azure Resources
+  description: Deploy Azure resources using templates. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Resource Manager
+    - Azure JSON templates
 ---
 
 # Lab 03 - Manage Azure resources by using Azure Resource Manager Templates

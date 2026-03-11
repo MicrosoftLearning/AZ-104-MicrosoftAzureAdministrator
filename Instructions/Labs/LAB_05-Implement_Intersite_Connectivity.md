@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Lab 05: Implement Intersite Connectivity'
-    module: 'Administer Intersite Connectivity'
+  title: 'Lab 05: Implement Intersite Connectivity'
+  module: Administer Intersite Connectivity
+  description: Create and configure virtual networks, routes, and peerings. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual networks
+  - Routing
+  - Peering
+  - Network Watcher
 ---
 
 # Lab 05 - Implement Intersite Connectivity
