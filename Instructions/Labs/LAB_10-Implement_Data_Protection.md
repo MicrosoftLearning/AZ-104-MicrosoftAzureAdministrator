@@ -2,10 +2,14 @@
 lab:
   title: 'Lab 10: Implement Data Protection'
   module: Administer Data Protection
-  description: In this task, you will create a Recovery Services vault. A Recovery Services vault provides storage for the virtual machine data.
-  duration: 5 minutes
+  description: Configure Azure Backup for virtual machines. 
+  duration: 50 minutes
   level: 400
   islab: true
+  primarytopics:
+  - Azure
+  - Virtual machines
+  - Azure Backup
 ---
 
 # Lab 10 - Implement Data Protection
