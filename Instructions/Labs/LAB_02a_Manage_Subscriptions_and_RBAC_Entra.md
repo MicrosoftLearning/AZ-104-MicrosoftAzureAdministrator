@@ -2,13 +2,13 @@
 lab:
   title: 'Lab 02a: Manage Subscriptions and RBAC'
   module: Administer Governance and Compliance
-  description: In this task, you will create and configure management groups. Management groups are used to logically organize and segment subscriptions. They allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the Help Desk will need to create a support request across all subscriptions.
+  description: Review and assign Azure roles. 
   duration: 20 minutes
-  level: 400
+  level: 300
   islab: true
   primarytopics:
     - Azure
-    - Azure Policy
+    - Azure Roles
 ---
 
 # Lab 02a - Manage Subscriptions and RBAC
@@ -175,6 +175,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 
