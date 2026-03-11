@@ -2,14 +2,14 @@
 lab:
   title: 'Lab 01: Manage Microsoft Entra ID Identities'
   module: Administer Identity
-  description: This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution.
+  description: Create and configure user and group accounts. 
   duration: 30 minutes
   level: 300
   islab: true
   primarytopics:
     - Azure
-    - Microsoft Entra
     - Microsoft Entra ID
+    - User accounts
 ---
 
 # Lab 01 - Manage Microsoft Entra ID Identities
@@ -165,4 +165,5 @@ Congratulations on completing the lab. Here are some main takeaways for this lab
 + Microsoft Entra ID has user and guest accounts. Each account has a level of access specific to the scope of work expected to be done.
 + Groups combine together related users or devices. There are two types of groups including Security and Microsoft 365.
 + Group membership can be statically or dynamically assigned.
+
 
