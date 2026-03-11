@@ -2,7 +2,7 @@
 lab:
   title: 'Lab 09b: Implement Azure Container Instances'
   module: Administer PaaS Compute Options
-  description: In this lab, you learn how to implement and deploy Azure Container Instances.
+  description: Implement and deploy Azure Container Instances.
   duration: 15 minutes
   level: 300
   islab: true
