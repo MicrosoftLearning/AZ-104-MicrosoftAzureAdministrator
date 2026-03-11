@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 06: Implement Network Traffic Management'
-    module: 'Administer Network Traffic Management'
+  title: 'Lab 06: Implement Network Traffic Management'
+  module: Administer Network Traffic Management
+  description: In this lab, you learn how to configure and test a public Load Balancer and an Application Gateway.
+  duration: 5 minutes
+  level: 500
+  islab: true
 ---
 
 # Lab 06 - Implement Network Traffic Management
