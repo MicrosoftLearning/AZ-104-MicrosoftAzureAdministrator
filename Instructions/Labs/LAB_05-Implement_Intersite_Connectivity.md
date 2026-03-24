@@ -62,7 +62,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Availability options | No infrastructure redundancy required |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (notice your other choices) |
-    | Size | **Standard_DS2_v3** |
+    | Size | **Standard_D2s_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
@@ -109,7 +109,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
-    | Size | **Standard_DS2_v3** | 
+    | Size | **Standard_D2s_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
