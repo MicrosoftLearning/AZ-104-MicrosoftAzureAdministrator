@@ -193,9 +193,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
-+ [Stage a web app deployment for testing and rollback by using App Service deployment slots](https://learn.microsoft.com/training/modules/stage-deploy-app-service-deployment-slots/). Use deployment slots to streamline deployment and roll back a web app in Azure App Service.
-+ [Scale an App Service web app to efficiently meet demand with App Service scale up and scale out](https://learn.microsoft.com/training/modules/app-service-scale-up-scale-out/). Respond to periods of increased activity by incrementally increasing the resources available and then, to reduce costs, decreasing these resources when activity drops.
-
++ [Host a web application with Azure App Service](https://learn.microsoft.com/en-us/training/modules/host-a-web-app-with-azure-app-service/). Learn how to create a website through the hosted web app platform in Azure App Service.
++ [Configure web app settings](https://learn.microsoft.com/en-us/training/modules/configure-web-app-settings/). Learn how to create and manage application settings, install SSL/TLS certificates to secure web traffic, enable diagnostic logging, create virtual app to directory mappings, and manage app features.
+  
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
