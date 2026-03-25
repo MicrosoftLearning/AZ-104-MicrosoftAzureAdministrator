@@ -245,6 +245,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + What are the steps to enforce Azure policy and remediate resources which are not compliant?
 + How can I get a report of Azure resources with specific tags?
 
+## Learn more with self-paced training
++ [Azure Policy Initiatives](https://learn.microsoft.com/training/modules/sovereignty-policy-initiatives/). In this module, you learn how Azure Policy initiatives can be used to enforce organizational standards, assess compliance at scale, and manage Azure resources effectively.
+
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
