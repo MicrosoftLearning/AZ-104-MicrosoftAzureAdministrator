@@ -267,7 +267,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
-+ [Improve incident response with alerting on Azure](https://learn.microsoft.com/en-us/training/modules/incident-response-with-alerting-on-azure/). Respond to incidents and activities in your infrastructure through alerting capabilities in Azure Monitor.
++ [Configure alerts and responses](https://learn.microsoft.com/training/modules/configure-alerts-responses/). Understand how to configure and manage alerts and responses in order to proactively manage notifications about potential issues before those issues become problems for your users.
 + [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/). Monitor your Azure VMs by using Azure Monitor to collect and analyze VM host and client metrics and logs.
 
 ## Key takeaways
