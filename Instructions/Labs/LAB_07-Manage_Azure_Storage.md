@@ -260,6 +260,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
++ [Guided Project - Azure Files and Azure Blobs](https://learn.microsoft.com/training/modules/guided-project-azure-files-azure-blobs/). Practice storing business data securely by using Azure Blob Storage and Azure Files.
 + [Create an Azure Storage account](https://learn.microsoft.com/training/modules/create-azure-storage-account/). Create an Azure Storage account with the correct options for your business needs.
 + [Manage the Azure Blob storage lifecycle](https://learn.microsoft.com/training/modules/manage-azure-blob-storage-lifecycle). Learn how to manage data availability throughout the Azure Blob storage lifecycle.
 
