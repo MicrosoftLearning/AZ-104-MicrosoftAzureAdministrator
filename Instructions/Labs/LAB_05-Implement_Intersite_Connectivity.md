@@ -264,7 +264,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Virtual network | **CoreServicesVnet (az104-rg5)** |
-    | Subnet | **Core** |    
+    | Subnet | **Perimeter** |    
 
 >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
 
