@@ -375,7 +375,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 1. Run the following command to create a virtual machine. While you wait check out the [az vm create](https://learn.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-create) command reference for all the parameters associated with creating a virtual machine.
 
     ```sh
-    az vm create --name myCLIVM --resource-group az104-rg8 --image Ubuntu2204 --admin-username localadmin --generate-ssh-keys
+    az vm create --name myCLIVM --resource-group az104-rg8 --image Canonical:0001-com-ubuntu-server-jammy:22_04-lts:latest --admin-username localadmin --generate-ssh-keys
     ```
 
 1. Once the command completes, use **az vm show** to verify your machine was created.
