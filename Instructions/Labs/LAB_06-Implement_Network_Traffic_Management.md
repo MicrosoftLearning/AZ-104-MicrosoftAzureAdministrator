@@ -50,6 +50,8 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. Select **Save**.
 
+1. On the Basics tab, you may see a **"New! Deployment Stacks"** informational banner and Copilot chat suggestions in the blade header — dismiss or ignore these and continue.
+
 1. Select **Edit parameters** and load the **\\Allfiles\\Labs\\06\\az104-06-vms-parameters.json** file.
 
 1. Select **Save**.
@@ -80,9 +82,9 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 ![Diagram of the lab tasks.](../media/az104-lab06-lb-architecture.png)
 
-1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
+1. In the Azure portal, search for and select `Load balancers`, then click + Create and select **Standard load balancer** from the dropdown menu. on the **Load balancers** blade, click **+ Create**.
 
-1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
+1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**, to expand the menu, then select the appropriate option:
 
     | Setting | Value |
     | --- | --- |
@@ -127,6 +129,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Click **Add** to add a virtual machine |  |
     | az104-06-vm0 | **check the box** |
     | az104-06-vm1 | **check the box** |
+    
+    > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
 
 1. As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
 
@@ -179,7 +183,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
+1. On the **Virtual networks** blade, in the list of virtual networks, Click **az104-06-vnet1**.
 
 1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
@@ -191,7 +195,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Starting address| `10.60.3.224` |
     | Size | `/27` - Ensure the **starting address** is still **10.60.3.224**|
 
-1. Click **Add**
+1. In the **Private subnet** section, leave **Enable private subnet (no default outbound access)** checked. 
+
+1. Click **Add**, to expand the menu, then select the appropriate option.
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -208,11 +214,13 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Instance count | `2` |
+    |IP address type | **IPv4 only**|
     | HTTP2 | **Disabled** |
+    |FIPS mode 140-2|leave default|
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
-1. Click **Next : Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
+1. Click **Next : Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**,to expand the menu, then select the appropriate option.
 
     | Setting | Value |
     | --- | --- |
@@ -317,7 +325,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete  resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

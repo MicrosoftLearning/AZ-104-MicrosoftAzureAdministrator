@@ -45,13 +45,13 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **Azure virtual machine**. Notice your other choices.
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **Azure virtual machine**. Notice your other choices, A Copilot suggestions bar may appear at the top of the form — you can ignore it and proceed. 
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
     >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
 
-1. On the Basics tab, continue completing the configuration:
+1. On the Basics tab, continue completing the configuration(expand the menu, and select the appropriate option):
 
     | Setting | Value |
     | --- | --- |
@@ -61,6 +61,8 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Region | **East US** |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
+    | Self-selected zone | the default |
+     | Azure-selected zone (Preview) | disabled |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
@@ -69,6 +71,8 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
+    
+    >**NOTE**: If an info banner appears suggesting you swap to Trusted launch security type, dismiss it and keep Standard selected. Leave Enable Hibernation unchecked (it will appear dimmed near the Size field). Continue filling in.
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
@@ -80,15 +84,16 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
 
-1. Click **Next : Networking >** take the defaults but do not provide a load balancer.
+1.  In the **VM disk encryption** section, leave **Encryption at host** at its default (disabled).
+
+1. Click **Next : Networking >** take the defaults but do not provide a load balancer，change **Load balancing options** from **Azure load balancer** to **None**.
 
     | Setting | Value |
     | --- | --- |
     | Delete public IP and NIC when VM is deleted | **Checked** |
     | Load balancing options | **None** |
 
-
-1. Click **Next : Management >** and review the settings. Do not make any changes. 
+1. Click **Next : Management >** and review the settings. Do not make any changes, leave **Metadata Security Protocol** checkboxes and **Microsoft Entra ID** settings at their defaults.
 
 1. Click **Next : Monitoring >** and specify the following settings (leave others with their default values):
 
@@ -100,6 +105,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. After the validation, click **Create**.
 
+1. Once deployment finishes, dismiss any informational coachmarks or suggestions that appear on the deployment page, such as the **Scale out your VM** tooltip or **Cost management** alerts, and continue to the next step.
+
+
     >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
 1. Wait for the deployment to complete, then select **Go to resource**.
@@ -110,9 +118,11 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. On the **az104-vm1** virtual machine, in the **Availability + scale** blade, select **Size**.
+1. On the **az104-vm1** virtual machine, go to **Overview** and click **Stop** to deallocate the VM, then confirm. Once the VM shows as **Stopped (deallocated)**, in the **Availability + scale** blade, select **Size**.
 
 1. Set the virtual machine size to **D2ds_v4** and click **Resize**. When prompted, confirm the change.
+
+1. If **D2ds_v4** is not available in the current region, switch to an available region (such as **eastus2** or **centralus**), then repeat the steps to select **D2ds_v4** and click **Resize**.
 
     >**Note**: Choose another size if **D2ds_v4** is not available. Resizing is also known as vertical scaling, up or down.
 
@@ -164,7 +174,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**(expand the menu, and select the appropriate option):
 
     | Setting | Value |
     | --- | --- |
@@ -191,7 +201,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, select **Edit virtual network** link. Make a few changes. When finished, select **OK**.
+1. On the **Networking** page, select **Edit virtual network** link. Make a few changes(expand the menu, and select the appropriate option). When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
@@ -210,7 +220,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Name | **vmss1-nsg** |
 
-1. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
+1. Click **Add an inbound rule** and add an inbound security rule with the following settings (expand the menu, and select the appropriate option, leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -226,14 +236,14 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
 
-1. In the **Networking** tab, under the **Load balancing** section, specify the following (leave others with their default values).
+1. In the **Networking** tab, under the **Load balancing** section,  confirm that Load balancing options is set to Azure load balancer (selected by default), specify the following (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Management >**.
+1. On the **Create a load balancer** page, in the side pane that opens, set the Load balancer name to vmss-lb. Leave Type, Protocol, and all Rules settings (including Load balancer rule and Inbound NAT rule) at their defaults,Click **Create** when you are done then **Next : Management >**.
 
     | Setting | Value |
     | --- | --- |
@@ -251,7 +261,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
-1. On the **Advanced** tab, click **Review + create**.
+1. On the **Advanced** tab, the portal may also display a Tags tab before Review + create; no changes are needed there.click **Review + create**.
 
 1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 
@@ -269,7 +279,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 **Scale out rule**
 
-1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. And then select **Add a rule**.
+1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. A warning message will appear indicating no scale rules are defined — click the **Add a rule** link within that message.
 
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 50%.
 
@@ -285,6 +295,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Operation | **Increase percent by** (review other choices) |
     | Cool down (minutes) | **5** |
     | Percentage | **50** |
+
+    >**Note**: The default of Operation is "Increase count by",you need to change it to "Increase percent by"
 
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
