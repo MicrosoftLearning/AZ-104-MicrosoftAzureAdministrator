@@ -83,6 +83,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
+1. If a banner appears at the top of the page promoting Deployment Stacks, disregard it. 
+
 1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates as shown in the drop-down menu. 
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
@@ -139,6 +141,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
+1. Once Cloud Shell opens, select **Settings > Go to Classic version**.
+
+1. After switching, select **Settings > Reset user settings**, then confirm to trigger the **Getting Started** wizard.
+
 1. On the **Getting started** screen select **Mount storage account**, select your **Storage account subscription**, and then select **Apply**.
 
 1. Select **I want to create a storage account** and then **Next**. Complete the **Create storage account** information. 
@@ -153,8 +159,6 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. When completed select **Create**.
 
     >It will take a couple of minutes to provision the storage.
-
-1. Select **Settings** (top bar) and then **Go to classic version**.
 
 1. Select the **Upload/Download files** icon (top bar) and then select **Upload**.
 
@@ -182,6 +186,13 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 ## Task 4: Deploy a template with the CLI 
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
+
+1. If you have multiple subscriptions, first ensure the correct subscription context is set by running `az account show` to confirm the active subscription. If it does not match the subscription containing **az104-rg3**, run `az account set --subscription <your-subscription-id>` before proceeding. This is especially important when Cloud Shell is running in ephemeral mode, as switching from PowerShell to Bash may reset the subscription context.
+
+    ```sh
+    az account show
+    az account set --subscription <your-subscription-id>
+    ```
 
 1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 
@@ -251,7 +262,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the confirmation dialog appears stating that deleting the resource group is permanent and cannot be undone, click **Delete** again to complete the deletion.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

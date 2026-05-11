@@ -201,7 +201,13 @@ In this task, you retest the connection between the virtual machines in differen
 
 >**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
 
-1. Switch to the `ManufacturingVM` virtual machine.
+1. Switch to the `CoreServicesVM` virtual machine. In the **Operations** blade, select **Run command**, then select **RunPowerShellScript**. Run the following command to enable the Windows Firewall rule that allows inbound RDP traffic:
+
+    ```Powershell
+    Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    ```
+
+1. Wait for the script to complete, then switch to the `ManufacturingVM` virtual machine.
 
 1. In the **Operations** blade, select the **Run command** blade.
 
@@ -228,10 +234,11 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Name | `perimeter` |
-    | Starting address | `10.0.1.0/24`  |
+    | Starting address | `10.0.1.0`  |
+    | Size | `/24` |
 
    
-1. In the Azure portal, search for and select `Route tables`, select **+ Create**.
+1. In the Azure portal, search for and select `Route tables` to open the **Network foundation | Route tables** page, then select **Create**.
 
 1. Enter the following details, select **Review + create**, and then select **Create**. 
 
@@ -272,7 +279,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the **Delete confirmation** dialog appears stating that deleting the resource group is permanent and cannot be undone, click **Delete** again to complete the deletion.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

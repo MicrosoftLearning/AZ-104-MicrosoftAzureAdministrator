@@ -64,7 +64,7 @@ The organization plans a large amount of growth for core services. In this task,
 	| Name               | `CoreServicesVnet`     |
 	| Region             | (US) **East US**         |
 
-1. Move to the **IP Addresses** tab.
+1. Move to the **Address space** tab.
 
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
@@ -95,7 +95,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
-1. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
+1. On the **ARM template** tab, ensure the **Include parameters** checkbox is selected, then click **Download**. Confirm **template.json** and **parameters.json** are both in your **Downloads** folder.
 
 1. Navigate on the local machine to the **Downloads** folder. 
 
@@ -107,39 +107,30 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
 
-1. Edit the file using the editor of your choice. Many editors have a *change all occurrences* feature. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**. Consult the architecture diagram to verify the details. 
+1. Open a **PowerShell** window. Run the following commands to update **template.json** from the Downloads folder:
 
-### Make changes for the ManufacturingVnet virtual network
+    ```powershell
+    $content = Get-Content "$env:USERPROFILE\Downloads\template.json" -Raw
+    $content = $content -replace 'CoreServicesVnet', 'ManufacturingVnet'
+    $content = $content -replace '10\.20\.0\.0', '10.30.0.0'
+    $content = $content -replace 'SharedServicesSubnet', 'SensorSubnet1'
+    $content = $content -replace '10\.20\.10\.0/24', '10.30.20.0/24'
+    $content = $content -replace 'DatabaseSubnet', 'SensorSubnet2'
+    $content = $content -replace '10\.20\.20\.0/24', '10.30.21.0/24'
+    $content | Set-Content "$env:USERPROFILE\Downloads\template.json"
+    ```
 
-1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
+1. Then run the following commands to update **parameters.json**:
 
-1. Replace all occurrences of **10.20.0.0** with `10.30.0.0`. 
+    ```powershell
+    $content = Get-Content "$env:USERPROFILE\Downloads\parameters.json" -Raw
+    $content = $content -replace 'CoreServicesVnet', 'ManufacturingVnet'
+    $content | Set-Content "$env:USERPROFILE\Downloads\parameters.json"
+    ```
 
-### Make changes for the ManufacturingVnet subnets
-
-1. Change all occurrences of **SharedServicesSubnet** to `SensorSubnet1`.
-
-1. Change all occurrences of **10.20.10.0/24** to `10.30.20.0/24`.
-
-1. Change all occurrences of **DatabaseSubnet** to `SensorSubnet2`.
-
-1. Change all occurrences of **10.20.20.0/24** to `10.30.21.0/24`.
-
-1. Read back through the file and ensure everything looks correct. Use the architecture diagram for resource names and IP addresses. 
-
-1. Be sure to **Save** your changes.
+1. Both files are now saved with the required replacements applied. Read back through the files and ensure everything looks correct. Use the architecture diagram for resource names and IP addresses.
 
 >**Note:** There are completed template files in the lab files directory. 
-
-### Make changes to the parameters file
-
-1. Locate the **parameters.json** file exported in the previous task. It should be in your **Downloads** folder.
-
-1. Edit the file using the editor of your choice.
-
-1. Replace the one occurrence of **CoreServicesVnet** with `ManufacturingVnet`.
-
-1. **Save** your changes.
    
 ### Deploy the custom template
 
@@ -208,6 +199,8 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Virtual network | **CoreServicesVnet (az104-rg4)** |
     | Subnet | **SharedServicesSubnet** |
 
+    >**Note:** Verify that **Virtual network** is set to **CoreServicesVnet (az104-rg4)** and **Subnet** is set to **SharedServicesSubnet** — these fields may already be pre-populated.
+
 1. Click **OK** to save the association.
 
 ### Configure an inbound security rule to allow ASG traffic
@@ -223,11 +216,11 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Setting | Value |
     | -- | -- |
     | Source | **Application security group** |
-    | Source application security groups | **asg-web** |
+    | Source application security groups | **asg-web** (use the filter textbox to locate it; ASGs are grouped by resource group) |
     | Source port ranges |  * |
     | Destination | **Any** |
     | Service | **Custom** (notice your other choices) |
-    | Destination port ranges | **80,443** |
+    | Destination port ranges | clear any default value (such as `8080`) and enter **80,443** |
     | Protocol | **TCP** |
     | Action | **Allow** |
     | Priority | **100** |
@@ -273,7 +266,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az104-rg4** |
-    | Name | `contoso.com` (if reserved adjust the name) |
+    | Name | `contosoxyz104.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
 1. Select **Review + create** and then **Create**.
@@ -288,6 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Name | **www** |
     | Type | **A** |
+    | Alias record set | **No** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
@@ -298,9 +292,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
    ```sh
-   nslookup www.contoso.com <name server name you copied in step 6 above>
+   nslookup www.contosoxyz104.com <name server name you copied in step 6 above>
    ```
-1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name www.contosoxyz104.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
 
@@ -319,6 +313,8 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Name | `private.contoso.com` (adjust if you had to rename) |
     | Region |**East US** |
 
+    >**Note:** The location is automatically set to the resource group location and the private DNS zone resource will be created as **Global**.
+
 1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
@@ -332,7 +328,9 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Link name | `manufacturing-link` |
     | Virtual network | `ManufacturingVnet` |
 
-1. Select **Create** and wait for the link to create. 
+    >**Note:** In the **Configuration** section, leave **Enable auto registration** and **Enable fallback to internet** at their default settings.
+
+1. Select **Create** and wait for the link to create. After the link is created, click **Refresh** to see the new link appear in the grid.
 
 1. From the **DNS Management** blade select **+ Recordsets**. You would now add a record for each virtual machine that needs private name-resolution support.
 
