@@ -160,6 +160,10 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >It will take a couple of minutes to provision the storage.
 
+    >**Note:** Once Cloud Shell opens, if it is running in **Bash**, use the **Shell** dropdown in the toolbar to switch to **PowerShell** and confirm the switch when prompted.
+
+    >**Note:** If you see a warning message stating *Failed to mount the Azure file share. Your cloud drive won't be available. Your Cloud Shell session will be ephemeral*, you can safely disregard it — Cloud Shell will still be fully functional in PowerShell mode.
+
 1. Select the **Upload/Download files** icon (top bar) and then select **Upload**.
 
 1. Upload both the template and parameters files from the **Downloads** directory. 
@@ -187,7 +191,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
-1. If you have multiple subscriptions, first ensure the correct subscription context is set by running `az account show` to confirm the active subscription. If it does not match the subscription containing **az104-rg3**, run `az account set --subscription <your-subscription-id>` before proceeding. This is especially important when Cloud Shell is running in ephemeral mode, as switching from PowerShell to Bash may reset the subscription context.
+1. If you have multiple subscriptions, first ensure the correct subscription context is set by running `az account show` to confirm the active subscription. The default subscription may be set to one that does not contain **az104-rg3** — if so, switch to the correct subscription with `az account set --subscription <your-subscription-id>`, then confirm the change by running `az account show` again. This is especially important when Cloud Shell is running in ephemeral mode, as switching from PowerShell to Bash may reset the subscription context.
 
     ```sh
     az account show
