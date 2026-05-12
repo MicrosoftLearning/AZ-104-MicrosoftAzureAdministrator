@@ -69,9 +69,9 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg-region1` (If necessary, select **Create new**)
-    | Region        | **East US**   |
-    | Username      | **localadmin**   |
+    | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
+    | Region        | **East US** (If deployment fails with a capacity or SKU availability error, retry with **East US 2**. If the error persists, use **Central US**.) |
+    | Username      | **localadmin** |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
@@ -244,7 +244,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Next: Advanced settings**. Resource selections have been made for you. 
 
-1. Scroll down and **Create** the automation account. 
+1. Scroll down and click the option labeled to **Create** the automation account. 
 
    >**Note:** It is important the settings be populated, or the validation will fail. 
 
