@@ -122,8 +122,6 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Set the virtual machine size to **D2ds_v4** and click **Resize**. When prompted, confirm the change.
 
-1. If **D2ds_v4** is not available in the current region, switch to an available region (such as **eastus2** or **centralus**), then repeat the steps to select **D2ds_v4** and click **Resize**.
-
     >**Note**: Choose another size if **D2ds_v4** is not available. Resizing is also known as vertical scaling, up or down.
 
     ![Screenshot of the resize the virtual machine.](../media/az104-lab08-resize-vm.png)
@@ -220,7 +218,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | --- | --- |
     | Name | **vmss1-nsg** |
 
-1. Click **Add an inbound rule** and add an inbound security rule with the following settings (expand the menu, and select the appropriate option, leave others with their default values):
+1. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |

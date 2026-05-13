@@ -43,7 +43,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Storage accounts`, then click **Storage center | Blob Storage** in the results. and then click **+ Create**.
+1. Search for and select `Storage accounts`, then click **Storage center | Blob Storage** in the results, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
@@ -100,9 +100,9 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Continue in the Azure portal, working with your storage account.
 
-1. In the **Data storage** blade, select **Containers**. 
+1. In the **+Data storage** blade, select **Containers**. 
 
-1. Click **Add container** and create a container with the following settings:
+1. Click **+ Add container** and **create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |

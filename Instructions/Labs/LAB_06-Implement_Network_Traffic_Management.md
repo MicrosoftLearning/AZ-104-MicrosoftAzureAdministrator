@@ -50,8 +50,6 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. Select **Save**.
 
-1. On the Basics tab, you may see a **"New! Deployment Stacks"** informational banner and Copilot chat suggestions in the blade header — dismiss or ignore these and continue.
-
 1. Select **Edit parameters** and load the **\\Allfiles\\Labs\\06\\az104-06-vms-parameters.json** file.
 
 1. Select **Save**.
