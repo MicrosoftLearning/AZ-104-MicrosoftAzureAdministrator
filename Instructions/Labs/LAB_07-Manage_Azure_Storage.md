@@ -76,8 +76,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Under Public network access, click Manage to open the Public network access configuration blade. Set **Public network access** to **Enabled**. 
-    + Change the **Public network access scope** to **Enable from selected networks**.
+    + Under Public network access, click Manage to open the Public network access configuration blade. Set **Public network access** to **Enabled**. Set **Public network access scope** to **Enable from selected networks**.
     + In the **Resource settings: Virtual networks,IP Addresses and exceptions** section, Add your client IPv4 address.
     + Save your changes. If an informational banner appears suggesting you associate a network security perimeter, you can disregard it and continue.
   
@@ -187,7 +186,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Create the file share and upload a file
 
-1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **File shares**.
+1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **Classic File shares**.
 
 1. Click **New File share** and on the **Basics** tab give the file share a name, `share1`. 
 
@@ -205,7 +204,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your **share1** directory is present. 
+1. Select **Classic File shares** and verify your **share1** directory is present. 
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
@@ -217,9 +216,9 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select `Virtual networks`.
+1. In the portal, search for and select `Network foundation`.
 
-1. Select **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
+1. Then under `Virtual networks` click **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
 
 1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 

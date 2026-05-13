@@ -62,9 +62,8 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
     | Region | **East US** |
     | Pricing plans | **Premium V3 P1V3** |
     | Zone redundancy | accept the defaults |
-    >**Note**: If deployment fails due to quota, switch region and retry.
 
- 1. Click **Review + create**. and then **Create**.
+ 1. Click **Review + create**, and then **Create**.
 
     >**Note**: Wait until the Web App is created before you proceed to the next task. This should take about a minute.
     
