@@ -162,7 +162,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
    
 1. In the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
 
-1. Select **View details** for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
+1. Select the **View details** link for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
 
     >**Note:** Notice the backup is pending.
     
@@ -249,8 +249,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
    >**Note:** It is important the settings be populated, or the validation will fail. 
 
 1. Select **Review + Start replication** and then **Start replication**.
-
-    >**Note**: If replication fails with an error similar to **storage account does not allow key based authentication**, open the target Recovery Services vault, go to **Identity** and enable **System assigned** managed identity. Then open the ASR cache storage account and grant that vault identity the **Storage Blob Data Contributor** role, and retry replication.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     

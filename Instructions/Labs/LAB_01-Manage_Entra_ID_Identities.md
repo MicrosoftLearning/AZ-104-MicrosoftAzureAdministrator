@@ -70,8 +70,6 @@ In this task, you will create and configure user accounts. User accounts will st
     | Department (Properties tab) | `IT` |
     | Usage location (Properties tab) | **United States** |
 
-    >**Note**: If `az104-user1` already exists in your tenant from a previous run, use a unique user principal name (for example, `az104-user2`) and use that same user in later steps.
-
 1. Once you have finished reviewing, select **Review + create** and then **Create**.
 
 1. Refresh the page and confirm your new user was created. 
@@ -132,8 +130,6 @@ In this task, you create a group account. Group accounts can include user accoun
 1. Select **No members selected**.
 
 1. In the **Add members** pane, search for and **select** the **az104-user1** and the **guest user** you invited. Add both of the users to the group. 
-
-    >**Note**: If you used a different user principal name earlier (for example, `az104-user2`), add that user instead.
 
 1. Select **Create** to deploy the group.
 
