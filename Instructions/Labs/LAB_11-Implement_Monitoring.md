@@ -62,7 +62,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**) |
-    | Region        | **East US** (If you receive a **SkuNotAvailable** error, change to **East US 2**. If the error persists, use **Central US**.) |
+    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
     | Username      | `localadmin` |
     | Password      | Provide a complex password |
     
