@@ -51,7 +51,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     >**Note**: This will deploy two virtual machines in the selected region, one in each zone. You achieve the 99.99% uptime SLA because you have at least two VMs distributed across at least two zones. In the scenario where you might only need one VM, it is a best practice to still deploy the VM to another zone.
 
-1. On the Basics tab, continue completing the configuration(expand the menu, and select the appropriate option):
+1. On the Basics tab, continue completing the configuration:
 
     | Setting | Value |
     | --- | --- |
