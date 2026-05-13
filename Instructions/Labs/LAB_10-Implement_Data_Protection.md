@@ -70,7 +70,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
-    | Region        | **East US** (If deployment fails with a capacity or SKU availability error, retry with **East US 2**. If the error persists, use **Central US**.) |
+    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
     | Username      | **localadmin** |
     | Password      | Provide a complex password |
 
