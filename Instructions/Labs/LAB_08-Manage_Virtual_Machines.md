@@ -174,7 +174,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**(expand the menu, and select the appropriate option):
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
 
     | Setting | Value |
     | --- | --- |
@@ -201,7 +201,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, select **Edit virtual network** link. Make a few changes(expand the menu, and select the appropriate option). When finished, select **OK**.
+1. On the **Networking** page, select **Edit virtual network** link. Make a few changes. When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
