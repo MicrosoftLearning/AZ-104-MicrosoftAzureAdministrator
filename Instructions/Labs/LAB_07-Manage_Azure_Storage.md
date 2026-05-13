@@ -54,7 +54,7 @@ In this task, you will create and configure a storage account. The storage accou
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **(US) East US**  |
     | Performance           | **Standard** (notice the Premium option) |
-    | Preferred storage type | **Blob Storage** |
+    | Preferred storage type | **Azure Blob Storage or Azure Data Lake Storage Gen 2** |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data available in the event of regional unavailability. | Check the box |
 
@@ -128,7 +128,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. In the storage account's left menu, select **Configuration** and set **Allow storage account key access** to **Enabled**, then click **Save**. 
 
-1. Next, navigate to **Access Control (IAM)**, click **Add role assignment**, select the **Storage Blob Data Contributor** role, assign it to your user account, and click **Review + assign**. 
+1. Next, navigate to **Access Control (IAM)**, click **Add role assignment**, select the **Storage Blob Data Contributor** role and **Storage File Data Privileged Contributor** role, assign it to your user account, and click **Review + assign**. 
 
 1. Once access is configured,  select your **data** container and then click **Upload**.
 
