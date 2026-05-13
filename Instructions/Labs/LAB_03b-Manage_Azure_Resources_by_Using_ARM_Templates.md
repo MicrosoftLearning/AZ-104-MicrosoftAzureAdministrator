@@ -83,8 +83,6 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. In the Azure portal, search for and select `Deploy a custom template`.
 
-1. If a banner appears at the top of the page promoting Deployment Stacks, disregard it. 
-
 1. On the **Custom deployment** blade, notice there is the ability to use a **Quickstart template**. There are many built-in templates as shown in the drop-down menu. 
 
 1. Instead of using a Quickstart, select **Build your own template in the editor**.
@@ -141,10 +139,6 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. Once Cloud Shell opens, select **Settings > Go to Classic version**.
-
-1. After switching, select **Settings > Reset user settings**, then confirm to trigger the **Getting Started** wizard.
-
 1. On the **Getting started** screen select **Mount storage account**, select your **Storage account subscription**, and then select **Apply**.
 
 1. Select **I want to create a storage account** and then **Next**. Complete the **Create storage account** information. 
@@ -159,6 +153,8 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. When completed select **Create**.
 
     >It will take a couple of minutes to provision the storage.
+
+1. Select **Settings** (top bar) and then **Go to classic version**.
 
 1. Select the **Upload/Download files** icon (top bar) and then select **Upload**.
 
