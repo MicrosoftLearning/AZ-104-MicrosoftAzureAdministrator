@@ -205,11 +205,11 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **File shares** and verify your **share1** directory is present.
-
-1. If you see an authorization error, select **Switch Azure AD Account** (or change the authentication method to **Microsoft Entra user account**) in the Storage browser toolbar. 
+1. Select **File shares** and verify your **share1** directory is present. 
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
+
+1. If you see an authorization error, select **Switch Azure AD Account** (or change the authentication method to **Microsoft Entra user account**) in the Storage browser toolbar.
 
 1. Select **Upload**. Browse to a file of your choice, and then click **Upload**.
 
@@ -238,7 +238,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Under **Public network access** select **Manage**. 
 
-1. Select **Add a virtual network** and then **Add existing network**.(to expand the menu, then select the appropriate option.)
+1. Select **Add a virtual network** and then **Add existing network**.
 
 1. Select **vnet1** and **default** subnet, select **Add**.
 
