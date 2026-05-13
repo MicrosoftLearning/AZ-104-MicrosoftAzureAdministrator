@@ -114,6 +114,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
 
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.

@@ -63,6 +63,8 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
     >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
 1. Click **Review + Create** then select **Create**.
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 

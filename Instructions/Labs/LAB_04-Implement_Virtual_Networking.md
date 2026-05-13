@@ -64,6 +64,8 @@ The organization plans a large amount of growth for core services. In this task,
 	| Name               | `CoreServicesVnet`     |
 	| Region             | (US) **East US**         |
 
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
 1. Move to the **Address space** tab.
 
 	|  **Option**         | **Value**            |
