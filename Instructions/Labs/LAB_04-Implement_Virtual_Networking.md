@@ -97,7 +97,7 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
-1. On the **ARM template** tab, ensure the **Include parameters** checkbox is selected, then click **Download**. Confirm **template.json** and **parameters.json** are both in your **Downloads** folder.
+1. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
 
 1. Navigate on the local machine to the **Downloads** folder. 
 
