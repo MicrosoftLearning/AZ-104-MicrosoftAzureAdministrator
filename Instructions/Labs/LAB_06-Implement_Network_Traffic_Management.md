@@ -181,7 +181,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, Click **az104-06-vnet1**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
 1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
@@ -323,7 +323,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete  resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
++ In the Azure portal, select the resource group, select **Delete resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

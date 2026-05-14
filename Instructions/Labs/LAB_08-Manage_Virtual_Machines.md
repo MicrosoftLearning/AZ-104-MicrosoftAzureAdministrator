@@ -45,7 +45,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **virtual machine**. Notice your other choices. 
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **virtual machine**. Notice your other choices.
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -106,8 +106,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
 1. After the validation, click **Create**.
 
 1. Once deployment finishes, dismiss any informational coachmarks or suggestions that appear on the deployment page, such as the **Scale out your VM** tooltip or **Cost management** alerts, and continue to the next step.
-
-
     >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
 1. Wait for the deployment to complete, then select **Go to resource**.
@@ -259,7 +257,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
-1. On the **Advanced** tab, the portal may also display a Tags tab before Review + create; no changes are needed there.click **Review + create**.
+1. On the **Advanced** tab, click **Review + create**.
 
 1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 

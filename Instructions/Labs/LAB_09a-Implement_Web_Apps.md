@@ -150,7 +150,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
-1. In the **Maximum burst** field, select **2**.Set **Minimum instances** to 1.
+1. In the **Maximum burst** field, select **2**. Set **Minimum instances** to 1.
 
     ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
 
@@ -177,7 +177,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Refresh and review the live metrics including **Virtual users**, **Response time**, and **Requests/sec**.
 
-1. Select Stop to initiate the stop request, then select Stop again in the confirmation dialog to complete the test run. You don't need to wait for the test to complete. 
+1. Select **Stop** to initiate the stop request, then select **Stop** again in the confirmation dialog to complete the test run. You don't need to wait for the test to complete. 
 
 ## Cleanup your resources
 
