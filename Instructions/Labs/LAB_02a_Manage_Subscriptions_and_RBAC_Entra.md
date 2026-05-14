@@ -88,11 +88,13 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources.
 
-1. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
-
 1. On the **Members** tab, **Select Members**.
 
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the `helpdesk` group. Click **Select**, then click **Next**.
+
+1. On the **Conditions** tab, click **Next**.
+
+1. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
 
 1. Click **Review + assign** twice to create the role assignment.
 
