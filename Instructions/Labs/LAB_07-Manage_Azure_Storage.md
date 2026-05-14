@@ -43,7 +43,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Storage accounts`, then click **Storage center | Blob Storage** in the results, and then click **+ Create**.
+1. Search for and select `Storage accounts`, then click **Storage accounts** in the results, and then click **+ Create**.
 
 1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 

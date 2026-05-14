@@ -45,7 +45,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **virtual machine**. Notice your other choices, A Copilot suggestions bar may appear at the top of the form — you can ignore it and proceed. 
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **virtual machine**. Notice your other choices. 
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -72,7 +72,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
     
-    >**NOTE**: If an info banner appears suggesting you swap to Trusted launch security type, dismiss it and keep Standard selected. Leave Enable Hibernation unchecked (it will appear dimmed near the Size field). Continue filling in.
+    >**NOTE**: If the deployment fails, change to another region and try again. This is due to quotas in different regions.
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
