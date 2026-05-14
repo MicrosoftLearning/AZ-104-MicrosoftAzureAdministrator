@@ -62,9 +62,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**) |
-    | Region        | **East US**   |
+    | Region        | **East US** (if unavailable due to capacity constraints, use **East US 2** or **Central US**) |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
+
+    >**Note:** The Region field is automatically populated based on your resource group's location and may be read-only. If East US is not available or displays capacity errors (SkuNotAvailable), you may need to recreate the resource group in an alternative region such as East US 2 or Central US.
     
 1. Select **Review + create**, then select **Create**.
 
@@ -110,7 +112,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Move to the **Actions** tab, select **Use action groups** then select **Create action group** in the **Select action group** blade.
+1. Continue working on your alert. Move to the **Actions** tab, select **Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -159,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
-1. Select **Delete** from the menu bar.
+1. Select **Delete** from the menu bar dropdown, then choose **Delete** from the dropdown options.
 
 1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
 
@@ -223,7 +225,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
 
-1. In the **Queries** tab, select **Azure Monitor** (left pane). You may need to reopen the blade.
+1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
 
     ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
