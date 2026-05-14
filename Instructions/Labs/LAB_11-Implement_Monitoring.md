@@ -62,11 +62,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**) |
-    | Region        | **East US** (if unavailable due to capacity constraints, use **East US 2** or **Central US**) |
+    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
-
-    >**Note:** The Region field is automatically populated based on your resource group's location and may be read-only. If East US is not available or displays capacity errors (SkuNotAvailable), you may need to recreate the resource group in an alternative region such as East US 2 or Central US.
     
 1. Select **Review + create**, then select **Create**.
 
@@ -75,6 +73,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Review what resources were deployed. There should be one virtual network with one virtual machine.
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
+
+1. In the portal, search for and select **Virtual machines** and select **az104-vm0**. If the VM status shows **Stopped**, select **Start** and wait until the status changes to **Running**.
 
 1. In the portal, search for and select **Monitor**.
 
@@ -161,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
-1. Select **Delete** from the menu bar dropdown, then choose **Delete** from the dropdown options.
+1. Select **Delete** from the menu bar.
 
 1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
 
