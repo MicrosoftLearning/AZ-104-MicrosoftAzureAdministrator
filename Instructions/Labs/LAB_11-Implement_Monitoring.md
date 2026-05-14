@@ -161,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select **Delete** from the menu bar.
 
-1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resources to be deleted and select **Delete**. 
+1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
