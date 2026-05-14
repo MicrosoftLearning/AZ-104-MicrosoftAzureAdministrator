@@ -143,6 +143,7 @@ In this task, if the alert is triggered send an email notification to the operat
 
     | Setting | Value |
     |---------|---------|
+    | Resource group | **az104-rg11** |
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
 
@@ -222,7 +223,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
 
-1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
+1. In the **Queries** tab, select **Azure Monitor** (left pane). You may need to reopen the blade.
 
     ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
@@ -254,7 +255,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, navigate to the **az104-rg11** resource group, select **Delete the resource group**, enter the resource group name to confirm, and then click **Delete**. When the secondary Delete confirmation dialog appears, click **Delete** again to complete the deletion.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
