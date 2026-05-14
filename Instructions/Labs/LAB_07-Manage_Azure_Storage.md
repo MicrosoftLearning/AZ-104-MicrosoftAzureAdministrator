@@ -100,9 +100,9 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. Continue in the Azure portal, working with your storage account.
 
-1. In the **+Data storage** blade, select **Containers**. 
+1. In the **Data storage** blade, select **Containers**. 
 
-1. Click **+ Add container** and **create** a container with the following settings:
+1. Click **+ Add container** and **Create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -204,7 +204,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **Classic File shares** and verify your **share1** directory is present. 
+1. Select **Classic File shares** and verify your **share1** directory is present.
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
