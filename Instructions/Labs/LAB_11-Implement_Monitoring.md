@@ -76,7 +76,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. In the portal, search for and select **Virtual machines** and select **az104-vm0**. If the VM status shows **Stopped**, select **Start** and wait until the status changes to **Running**.
 
-1. In the portal, search for and select **Monitor**.
+1. Search for and select **Monitor**.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -161,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
-1. Select **Delete** from the menu bar.
+1. Select **More commands** from the menu bar, then select **Delete**.
 
 1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
 
