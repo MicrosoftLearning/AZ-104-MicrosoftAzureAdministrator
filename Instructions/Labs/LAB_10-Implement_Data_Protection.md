@@ -70,8 +70,8 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
-    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
-    | Username      | **localadmin** |
+    | Region        | **East US**   |
+    | Username      | **localadmin**   |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
@@ -125,7 +125,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
    >**Note**: Before you start this task, make sure that the deployment you initiated in the first task of this lab has successfully completed.
 
-1. On the Recovery Services vault blade, click **Overview**, then click **Backup**.
+1. On the Recovery Services vault blade, click **Overview**, then click **+ Backup**.
 
 1. On the **Backup Goal** blade, specify the following settings:
 
@@ -244,11 +244,11 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Select **Next: Advanced settings**. Resource selections have been made for you. 
 
-1. Scroll down and click the option labeled to **Create** the automation account. 
+1. Scroll down and **Create** the automation account. 
 
    >**Note:** It is important the settings be populated, or the validation will fail. 
 
-1. Select **Review + Start replication** and then **Start replication**.
+1. Select **Review + Start replication** and then **Enable replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     

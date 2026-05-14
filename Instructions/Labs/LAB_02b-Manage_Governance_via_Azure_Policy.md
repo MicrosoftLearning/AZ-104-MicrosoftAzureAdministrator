@@ -220,13 +220,13 @@ In this task, you configure and test a resource lock. Locks prevent either delet
     | Lock name | `rg-lock` |
     | Lock type | **delete** (notice the selection for read-only) |
     
-1. Navigate to the **az104-rg2** resource group **Overview** blade, and select **Delete resource group**.
+1. Navigate to the resource group **Overview** blade, and select **Delete resource group**.
 
-1. In the **Enter resource group name to confirm deletion** textbox, enter `az104-rg2`. Notice you can copy and paste the resource group name. 
+1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name. 
 
 1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**. When a second Delete confirmation dialog appears, click **Delete** again to confirm.
 
-1. You should receive a notification that the deletion was denied due to the resource lock.  
+1. You should receive a notification denying the deletion. 
 
     ![Screenshot of the failure to delete message.](../media/az104-lab02b-failuretodelete.png) 
 

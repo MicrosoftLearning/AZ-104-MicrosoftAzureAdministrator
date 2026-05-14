@@ -62,11 +62,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**) |
-    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
-    | Username      | `localadmin` |
+    | Region        | **East US**   |
+    | Username      | `localadmin`   |
     | Password      | Provide a complex password |
     
-1. Select **Review + create**. If validation passes, then select **Create**.
+1. Select **Review + create**, then select **Create**.
 
 1. Wait for the deployment to finish, then click **Go to resource group**.
 
@@ -78,11 +78,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
-1. In the left pane of **Monitor**, select **Insights** > **Virtual machines**. On the **Get started** tab, select **Configure Insights**.
+1. Select **View** in the **VM Insights** box, and then select **Configure Insights**.
 
-1. On the **Overview** tab, locate your subscription under the **Not monitored** list and expand it, then expand the resource group row to find your virtual machine. Select **Enable** next to your virtual machine in the list.
+1. Select **Enable** next to your virtual machine.
 
-1. On the **Configure monitor** page, review the **Capabilities** tab showing **OpenTelemetry metrics (preview)** and **Classic Log-based metrics** options. Accept the defaults, then select **Review + enable**, and then **Enable**.   
+1. Take the defaults, select **Review + enable**, and then **Enable**.  
 
 1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
@@ -92,13 +92,13 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 1. Continue on the **Monitor** page , select **Alerts**. 
 
-1. Select **Create**, and then select **Alert rule**.
+1. Select **Create +** and select **Alert rule**. 
 
 1. Select the box for the subscription, then select **Apply**. This alert will apply to any virtual machines in the subscription. Alternatively, you could just specify one particular machine. 
 
 1. Select the **Condition** tab and then select the **See all signals** link.
 
-1. Search for and select **Delete Virtual Machine (Virtual Machines)**, and then select **Apply**. Notice the other built-in signals.
+1. Search for and select **Delete Virtual Machine (Virtual Machines)**. Notice the other built-in signals. Select **Apply**
 
 1. In the **Alert logic** area (scroll down), review the **Event level** selections. Leave the default of **All selected**.
 
@@ -121,7 +121,7 @@ In this task, if the alert is triggered send an email notification to the operat
     | **Project details** |
     | Subscription | your subscription |
     | Resource group | **az104-rg11** |
-    | Region | **Global** |
+    | Region | **Global** (default) |
     | **Instance details** |
     | Action group name | `Alert the operations team` (must be unique in the resource group) |
     | Display name | `AlertOpsTeam` |
@@ -139,14 +139,14 @@ In this task, if the alert is triggered send an email notification to the operat
 
 1. Select **Review + create** and then **Create**.
    
-1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting. If an informational banner appears about the **Observability Agent preview**, you can disregard it.
+1. Once the action group is created move to the **Next: Details >** tab and enter the following values for each setting.
 
     | Setting | Value |
     |---------|---------|
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
 
-1. Select **Review + create**, then select **Create**.
+1. Select **Review + create** to validate your input, then select **Create**.
 
 ## Task 4: Trigger an alert and confirm it is working
 
@@ -158,9 +158,9 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
-1. Select **Delete**. If **Delete** is not shown in the top menu in your portal layout, open the row **...** menu for **az104-vm0** and select **Delete** there.
+1. Select **Delete** from the menu bar.
 
-1. In the text field, type `delete` to confirm, and then click **Delete**. When the secondary confirmation dialog appears, confirm the deletion.
+1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resources to be deleted and select **Delete**. 
 
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
@@ -168,21 +168,21 @@ In this task, you trigger the alert and confirm a notification is sent.
 
     ![Screenshot of alert email.](../media/az104-lab11-alert-email.png)
    
-1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left. If an informational banner appears at the top of the page about the **Observability Agent preview**, you may dismiss or ignore it.
+1. On the Azure portal resource menu, select **Monitor**, and then select **Alerts** in the menu on the left.
 
-1. Verify that three verbose alerts were generated by deleting **vm0**.
+1. You should have three verbose alerts that were generated by deleting **vm0**.
 
-    >**Note:** It can take 15 minutes (or longer) for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and then return. 
+   >**Note:** It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal. If you don't want to wait, continue to the next task and then return. 
 
-1. Select the name of one of the alerts (for example, **VM was deleted**) to view its details. An **Alert details** pane appears that shows more information about the event.
+1. Select the name of one of the alerts (For example, **VM was deleted**). An **Alert details** pane appears that shows more details about the event.
 
 ## Task 5: Configure an alert processing rule
 
 In this task, you create an alert rule to suppress notifications during a maintenance period. 
 
-1. Continue in the **Alerts** blade, select **Alert processing rules** and then **Create**.
+1. Continue in the **Alerts** blade, select **Alert processing rules** and then **+ Create**. 
    
-1. In the **Select a scope** panel, locate your **Subscription** in the list and click the row to select it (a checkbox will appear and activate on selection), then select **Apply**.
+1. Select your **Subscription**, then select **Apply**.
    
 1. Select **Next: Rule settings**, then select **Suppress notifications**.
    
@@ -194,9 +194,9 @@ Enter these settings for the scheduling of the alert processing rule:
     | Setting | Value |
     |---------|---------|
     | Apply the rule | At a specific time |
-    | Start | Enter today at 10 PM |
-    | End | Enter tomorrow at 7 AM |
-    | Time zone | Select the local timezone |
+    | Start | Enter today's date at 10 pm. |
+    | End | Enter tomorrow's date at 7 am. |
+    | Time zone | Select the local timezone. |
 
     ![Screenshot of the scheduling section of an alert processing rule](../media/az104-lab11-alert-processing-rule-schedule.png)
 
@@ -208,7 +208,7 @@ Enter these settings for the scheduling of the alert processing rule:
     | Rule name | `Planned Maintenance` |
     | Description | `Suppress notifications during planned maintenance.` |
 
-1. Select **Review + create**, then select **Create**.
+1. Select **Review + create** to validate your input, then select **Create**.
 
 ## Task 6: Use Azure Monitor log queries
 
@@ -218,21 +218,21 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. In the Azure portal, search for and select `Monitor`, then click **Logs**.
 
-1. If necessary, close the splash screen (for example, **Queries hub** or **Start by selecting a table** onboarding tutorial).
+1. If necessary, close the splash screen. 
 
 1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
 
-1. In the **Queries** tab, search for `heartbeat` or select **Azure Monitor** (left pane). You may need to reopen the blade.
+1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
 
     ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
-1. Review the queries that are available. Hover over and **Run** the **Count heartbeats** query.
+1. Review the queries that are available. **Run** (hover over the query) the **Count heartbeats** query.
 
 1. You should receive a heartbeat count for when the virtual machine was running.
 
 1. On the right side of the screen select the drop down next to **Simple mode**, choose **KQL mode**. Review the query. This query uses the *heartbeat* table.
 
-1. Replace the query with this one, and then click **Run**. Review the resulting timechart. 
+1. Replace the query with this one, and then click **Run**. Review the resulting chart. 
 
    ```
     InsightsMetrics
@@ -254,7 +254,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, navigate to the **az104-rg11** resource group, select **Delete the resource group**, enter the resource group name to confirm, and then click **Delete**. When the secondary Delete confirmation dialog appears, click **Delete** again to complete the deletion.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

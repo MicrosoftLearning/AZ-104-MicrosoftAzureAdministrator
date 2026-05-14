@@ -59,14 +59,14 @@ In this task, you will create and configure management groups. Management groups
 
 1. On the **Management groups** blade, click **+ Create**.
 
-1. Create a management group with the following settings. Select **Submit** when you are done.
+1. Create a management group with the following settings. Select **Submit** when you are done. 
 
     | Setting | Value |
     | --- | --- |
     | Management group ID | `az104-mg1` (must be unique in the directory) |
     | Management group display name | `az104-mg1` |
 
-1. **Refresh** the management group page to confirm the group appears. This may take a minute.
+1. **Refresh** the management group page to ensure your new management group displays. This may take a minute. 
 
    >**Note:** Did you notice the root management group? The root management group is built into the hierarchy to have all management groups and subscriptions fold up to it. This root management group allows for global policies and Azure role assignments to be applied at the directory level. After creating a management group, you would add any subscriptions that should be included in the group. 
 
@@ -84,19 +84,19 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**, then click **Next**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk.
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources.
 
 1. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
 
-1. On the **Members** tab, click **Select members**.
+1. On the **Members** tab, **Select Members**.
 
-1. Search for and select the `helpdesk` group, then click **Select**.
+1. Search for and select the `helpdesk` group. Click **Select**. 
 
-1. Click **Review + assign** twice to finalize the role assignment.
+1. Click **Review + assign** twice to create the role assignment.
 
-1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, verify the `helpdesk` group has the **Virtual Machine Contributor** role.
+1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
@@ -121,11 +121,11 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
     ![Screenshot clone a role.](../media/az104-lab02a-clone-role.png)
 
-1. Select **Next** to move to the **Permissions** tab, and then select **Exclude permissions**.
+1. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
 
 1. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
 
-1. In the list of permissions, check **Other: Registers Support Resource Provider**, and then click **Add**. This adds the permission as a *NotAction*.
+1. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
 
     >**Note:** An Azure resource provider is a set of REST operations that enable functionality for a specific Azure service. We do not want the Help Desk to be able to have this capability, so it is being removed from the cloned role. 
 
