@@ -62,7 +62,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**) |
-    | Region        | **East US**   |
+    | Region        | **East US** (If the deployment fails, change to another region and try again. This is due to quotas in different regions.) |
     | Username      | `localadmin`   |
     | Password      | Provide a complex password |
     
@@ -74,7 +74,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
-1. In the portal, search for and select **Monitor**.
+1. In the portal, search for and select **Virtual machines** and select **az104-vm0**. If the VM status shows **Stopped**, select **Start** and wait until the status changes to **Running**.
+
+1. Search for and select **Monitor**.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -110,7 +112,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Move to the **Actions** tab, select **Use action groups** then select **Create action group** in the **Select action group** blade.
+1. Continue working on your alert. Move to the **Actions** tab. Under **Select actions**, select **Use action groups**, and then select **+ Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -223,7 +225,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
 
-1. In the **Queries** tab, select **Azure Monitor** (left pane). You may need to reopen the blade.
+1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
 
     ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
