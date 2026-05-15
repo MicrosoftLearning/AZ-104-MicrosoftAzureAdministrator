@@ -161,7 +161,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Check the box for the **az104-vm0** virtual machine.
 
-1. Select **More commands** from the menu bar, then select **Delete**.
+1. Select **Delete** from the menu bar.
 
 1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
 
