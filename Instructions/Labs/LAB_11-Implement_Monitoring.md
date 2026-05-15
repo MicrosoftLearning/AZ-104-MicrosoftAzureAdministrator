@@ -112,7 +112,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Move to the **Actions** tab. Under **Select actions**, select **+ Create action group**.
+1. Continue working on your alert. Move to the **Actions** tab. Under **Select actions**, select **Use action groups**, and then select **+ Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
