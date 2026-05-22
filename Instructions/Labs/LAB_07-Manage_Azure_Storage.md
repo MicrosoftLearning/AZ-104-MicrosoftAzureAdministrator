@@ -43,7 +43,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Storage accounts`, then click **Storage accounts** in the results, and then click **+ Create**.
+1. Search for and select `Storage accounts`, select **Storage accounts** in the results, and then click **+ Create**.
    
 1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
@@ -60,7 +60,7 @@ In this task, you will create and configure a storage account. The storage accou
 
     >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. On the **Advanced** and **Security** tab, use the informational icons to learn more about the choices. Take the defaults.
+1. On the **Advanced** and **Security** tabs, use the informational icons to learn more about the choices. Take the defaults.
    
 1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
 
@@ -76,7 +76,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Under Public network access, click Manage to open the Public network access configuration blade.
+    + Under Public network access, click **Manage** to open the Public network access configuration blade.
       
     + Set **Public network access** to **Enabled**. Set **Public network access scope** to **Enable from selected networks**.
       
@@ -116,8 +116,6 @@ In this task, you will create a blob container and upload an image. Blob contain
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
 1. On your container, scroll to the ellipsis (...) on the far right, select **Access policy**.
-
-1. In the **Immutable blob storage** area, select **Add policy**.
 
 1. If a warning appears stating that authorization with Shared Key is disabled for the account, you can disregard it and continue. 
 
@@ -222,7 +220,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select `Network foundation`.
+1. In the portal, search for and select **Network foundation**.
 
 1. Under `Virtual networks` click **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
 
