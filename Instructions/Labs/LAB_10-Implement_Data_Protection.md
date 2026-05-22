@@ -69,7 +69,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg-region1` (If necessary, select **Create new**)
+    | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
     | Region        | **East US**   |
     | Username      | **localadmin**   |
     | Password      | Provide a complex password |
