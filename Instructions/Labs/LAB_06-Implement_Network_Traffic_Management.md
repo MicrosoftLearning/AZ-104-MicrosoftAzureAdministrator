@@ -193,8 +193,6 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Starting address| `10.60.3.224` |
     | Size | `/27` - Ensure the **starting address** is still **10.60.3.224**|
 
-1. Click **Add**.
-
 1. In the **Private subnet** section, leave **Enable private subnet (no default outbound access)** checked. 
 
 1. Click **Add**.
@@ -216,7 +214,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Instance count | `2` |
     | IP address type | **IPv4 only**|
     | HTTP2 | **Disabled** 
-    | FIPS mode 140-2 |leave default|
+    | FIPS mode 140-2 | leave default|
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
