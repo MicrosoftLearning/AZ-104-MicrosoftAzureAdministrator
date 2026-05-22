@@ -84,9 +84,13 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select **Enable** next to your virtual machine.
 
-1. Take the defaults, select **Review + enable**, and then **Enable**.  
+1. Ensure **Open Telemetry Metrics** is **not** checked. 
 
-1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
+1. Select **Review + enable**, and then **Enable**.
+
+1. It will take a few minutes for the virtual machine agent to install and onboard.
+
+1. You can proceed to the next task, but continue to monitor the Notifications. If the on-boarding fails, try to enable it again. 
    
 ## Task 2: Create an alert
 
