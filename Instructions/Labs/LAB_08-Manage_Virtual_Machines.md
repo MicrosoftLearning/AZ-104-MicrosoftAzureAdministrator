@@ -45,7 +45,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **Azure virtual machine**. Notice your other choices.
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **virtual machine**. Notice your other choices.
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -61,6 +61,8 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Region | **East US** |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
+    | Self-selected zone | take the default |
+    | Azure-selected zone (Preview) | disabled |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
@@ -82,13 +84,17 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Click **Next : Networking >** take the defaults but do not provide a load balancer.
 
+1. In the **VM disk encryption** section, leave **Encryption at host** at its default (disabled).
+
+1. Click **Next : Networking >** take the defaults but do not provide a load balancer，change **Load balancing options** from **Azure load balancer** to **None**.
+
     | Setting | Value |
     | --- | --- |
     | Delete public IP and NIC when VM is deleted | **Checked** |
     | Load balancing options | **None** |
 
 
-1. Click **Next : Management >** and review the settings. Do not make any changes. 
+1. Click **Next : Management >** and review the settings. Do not make any changes, leave **Metadata Security Protocol** checkboxes and **Microsoft Entra ID** settings at their defaults.
 
 1. Click **Next : Monitoring >** and specify the following settings (leave others with their default values):
 
@@ -100,6 +106,8 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. After the validation, click **Create**.
 
+1. Once deployment finishes, dismiss any informational coachmarks or suggestions that appear on the deployment page, such as the **Scale out your VM** tooltip or **Cost management** alerts. Continue to the next step.
+
     >**Note:** Notice as the virtual machine deploys the NIC, disk, and public IP address (if configured) are independently created and managed resources.
 
 1. Wait for the deployment to complete, then select **Go to resource**.
@@ -110,7 +118,9 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 In this task, you will scale a virtual machine by adjusting its size to a different SKU. Azure provides flexibility in VM size selection so that you can adjust a VM for periods of time if it needs more (or less) compute and memory allocated. This concept is extended to disks, where you can modify the performance of the disk, or increase the allocated capacity.
 
-1. On the **az104-vm1** virtual machine, in the **Availability + scale** blade, select **Size**.
+1. On the **az104-vm1** virtual machine, go to **Overview** and click **Stop** to deallocate the VM, then confirm.
+
+1. Once the VM shows as **Stopped (deallocated)**, in the **Availability + scale** blade, select **Size**.
 
 1. Set the virtual machine size to **D2ds_v4** and click **Resize**. When prompted, confirm the change.
 
@@ -226,15 +236,15 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
 
-1. In the **Networking** tab, under the **Load balancing** section, specify the following (leave others with their default values).
+1. In the **Networking** tab, under the **Load balancing** section,  confirm that Load balancing options is set to Azure load balancer (selected by default), Specify the following (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Management >**.
-
+1. On the **Create a load balancer** page, in the side pane that opens, set the Load balancer name to `vmss-lb`. Leave Type, Protocol, and all Rules settings (including Load balancer rule and Inbound NAT rule) at their defaults. Click **Create** when you are done then **Next : Management >**.
+   
     | Setting | Value |
     | --- | --- |
     | Load balancer name | `vmss-lb` |
@@ -263,7 +273,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
 
-1. Choose **Availability + Scale** from the left side menu, then choose **Scaling**.
+1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. A warning message will appear indicating no scale rules are defined — click the **Add a rule** link within that message.
 
     >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
@@ -282,7 +292,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Metric threshold to trigger scale action | **70** |
     | Duration (minutes) | **10** |
     | Time grain statistic | **Average** |
-    | Operation | **Increase percent by** (review other choices) |
+    | Operation | **Increase percent by** |
     | Cool down (minutes) | **5** |
     | Percentage | **50** |
 
