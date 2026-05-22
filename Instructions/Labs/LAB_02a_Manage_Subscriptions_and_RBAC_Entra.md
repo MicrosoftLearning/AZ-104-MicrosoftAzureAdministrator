@@ -90,9 +90,13 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, **Select Members**.
 
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the `helpdesk` group. Click **Select**, then click **Next**.
 
-1. Click **Review + assign** twice to create the role assignment.
+1. On the **Conditions** tab, click **Next**.
+
+1. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
+
+1. Click **Review + assign** to create the role assignment.
 
 1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
 
