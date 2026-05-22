@@ -100,10 +100,14 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
-1. In the staging slot, select **Deployment Center** and then select **Settings**.
+1. In the **staging** slot, select **Configuration** then **General settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead of the production slot).
-    
+
+1. Under **SCM Basic Auth Publishing Credentials**, enable the checkbox and select **Apply**. Next, select **Deployment Center** then **Settings**.
+
+1. If an alert banner appears stating "SCM basic authentication is disabled for your app", select **Enable here** and complete the steps to enable it. 
+   
 1. In the **Source** drop-down list, select **External Git**. Notice the other choices. 
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
@@ -148,7 +152,7 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
 
-1. In the **Maximum burst** field, select **2**.
+1. In the **Maximum burst** field, select **2**. Set **Minimum instances** to 1.
 
     ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
 
@@ -175,13 +179,13 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. Refresh and review the live metrics including **Virtual users**, **Response time**, and **Requests/sec**.
 
-1. Select **Stop** to complete the test run. You don't need to wait for the test to complete. 
+1. Select **Stop** to initiate the stop request, then select **Stop** again in the confirmation dialog to complete the test run. You don't need to wait for the test to complete. 
 
 ## Cleanup your resources
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When a second Delete confirmation dialog appears, click **Delete** again to complete the deletion.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
