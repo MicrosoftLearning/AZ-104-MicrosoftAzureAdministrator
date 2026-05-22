@@ -147,6 +147,8 @@ In this task, we will use the new policy definition to remediate any non-complia
 
 1. In the list of assignments, click the ellipsis icon in the row representing the **Require a tag and its value on resources** policy assignment and use the **Delete assignment** menu item to delete the assignment.
 
+1. When prompted with **Do you want to delete the policy assignment?**, select **Yes**.
+
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
     | Setting | Value |
