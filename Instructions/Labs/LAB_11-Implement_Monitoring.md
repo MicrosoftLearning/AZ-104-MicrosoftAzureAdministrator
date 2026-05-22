@@ -74,6 +74,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 **Configure Azure Monitor for virtual machines (this will be used in the last task)**
 
+1. In the portal, search for and select **Virtual machines** and select **az104-vm0**. If the VM status shows **Stopped**, select **Start** and wait until the status changes to **Running**.
+
 1. In the portal, search for and select **Monitor**.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
@@ -115,7 +117,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 
 In this task, if the alert is triggered send an email notification to the operations team. 
 
-1. Continue working on your alert. Move to the **Actions** tab, select **Use action groups** then select **Create action group** in the **Select action group** blade.
+1. Continue working on your alert. Move to the **Actions** tab. Under **Select actions**, select **Use action groups**, and then select **+ Create action group**.
 
     >**Did you know?** You can add up to five action groups to an alert rule. Action groups are executed concurrently, in no specific order. Multiple alert rules can use the same action group. 
 
@@ -148,6 +150,7 @@ In this task, if the alert is triggered send an email notification to the operat
 
     | Setting | Value |
     |---------|---------|
+    | Resource group | **az104-rg11** |
     | Alert rule name | `VM was deleted` |
     | Alert rule description | `A VM in your resource group was deleted` |
 
@@ -165,8 +168,8 @@ In this task, you trigger the alert and confirm a notification is sent.
 
 1. Select **Delete** from the menu bar.
 
-1. Check the box for **Apply force delete**. Check the box at the bottom confirming that you want the resources to be deleted and select **Delete**. 
-
+1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
+   
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
 1. You should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
@@ -259,8 +262,10 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, navigate to the **az104-rg11** resource group, select **Delete the resource group**, enter the resource group name to confirm, and then click **Delete**. When the secondary Delete confirmation dialog appears, click **Delete** again to complete the deletion.
+  
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+  
 + Using the CLI, `az group delete --name resourceGroupName`.
 
 ## Extend your learning with Copilot
