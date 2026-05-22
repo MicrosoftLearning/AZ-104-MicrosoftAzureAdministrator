@@ -61,7 +61,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Region | **East US** |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
-    | Self-selected zone | take the default |
+    | Self-selected zone | (take the default) |
     | Azure-selected zone (Preview) | disabled |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
@@ -81,8 +81,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | OS disk type | **Premium SSD** |
     | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
-
-1. Click **Next : Networking >** take the defaults but do not provide a load balancer.
 
 1. In the **VM disk encryption** section, leave **Encryption at host** at its default (disabled).
 
@@ -236,7 +234,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 1. In the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
 
-1. In the **Networking** tab, under the **Load balancing** section,  confirm that Load balancing options is set to Azure load balancer (selected by default), Specify the following (leave others with their default values).
+1. In the **Networking** tab, under the **Load balancing** section, confirm that Load balancing options is set to Azure load balancer (selected by default), Specify the following (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
@@ -292,7 +290,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Metric threshold to trigger scale action | **70** |
     | Duration (minutes) | **10** |
     | Time grain statistic | **Average** |
-    | Operation | **Increase percent by** |
+    | Operation | **Increase percent by** (change the default) |
     | Cool down (minutes) | **5** |
     | Percentage | **50** |
 
