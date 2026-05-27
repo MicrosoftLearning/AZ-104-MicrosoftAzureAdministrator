@@ -114,6 +114,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
 
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
 1. On the Networking tab, for Virtual network, select **Create new**.
@@ -201,7 +203,13 @@ In this task, you retest the connection between the virtual machines in differen
 
 >**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
 
-1. Switch to the `ManufacturingVM` virtual machine.
+1. Switch to the `CoreServicesVM` virtual machine. In the **Operations** blade, select **Run command**, then select **RunPowerShellScript**. Run the following command to enable the Windows Firewall rule that allows inbound RDP traffic:
+
+    ```Powershell
+    Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    ```
+
+1. Wait for the script to complete, then switch to the `ManufacturingVM` virtual machine.
 
 1. In the **Operations** blade, select the **Run command** blade.
 

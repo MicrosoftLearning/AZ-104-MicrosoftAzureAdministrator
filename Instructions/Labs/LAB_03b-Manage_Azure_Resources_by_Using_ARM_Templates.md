@@ -63,6 +63,8 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
     >**Note:** We are creating a simple managed disk so you can practice with templates. Azure managed disks are block-level storage volumes that are managed by Azure.
 
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
 1. Click **Review + Create** then select **Create**.
 
 1. Monitor the notifications (upper right) and after the deployment select **Go to resource**. 
@@ -182,6 +184,13 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 ## Task 4: Deploy a template with the CLI 
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
+
+1. If you have multiple subscriptions, first ensure the correct subscription context is set by running `az account show` to confirm the active subscription. If it does not match the subscription containing **az104-rg3**, run `az account set --subscription <your-subscription-id>` before proceeding. This is especially important when Cloud Shell is running in ephemeral mode, as switching from PowerShell to Bash may reset the subscription context.
+
+    ```sh
+    az account show
+    az account set --subscription <your-subscription-id>
+    ```
 
 1. Verify your files are available in the Cloud Shell storage. If you completed the previous task your template files should be available. 
 

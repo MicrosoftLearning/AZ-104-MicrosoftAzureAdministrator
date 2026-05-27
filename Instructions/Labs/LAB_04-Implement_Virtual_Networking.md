@@ -64,7 +64,9 @@ The organization plans a large amount of growth for core services. In this task,
 	| Name               | `CoreServicesVnet`     |
 	| Region             | (US) **East US**         |
 
-1. Move to the **IP Addresses** tab.
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
+1. Move to the **Address space** tab.
 
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
@@ -299,9 +301,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
    ```sh
-   nslookup www.contoso.com <name server name you copied in step 6 above>
+   nslookup www.contosoxyz104.com <name server name you copied in step 6 above>
    ```
-1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name www.contosoxyz104.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
 

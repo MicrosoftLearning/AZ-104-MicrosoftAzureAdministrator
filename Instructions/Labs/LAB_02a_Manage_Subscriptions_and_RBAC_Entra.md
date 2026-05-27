@@ -54,7 +54,7 @@ In this task, you will create and configure management groups. Management groups
 1. In the **Manage** blade, select **Properties**.
 
 1. Review the **Access management for Azure resources** area. Notice/read that you can manage access to all Azure subscriptions and management groups in the tenant.
-   
+
 1. Search for and select **Management groups**.
 
 1. On the **Management groups** blade, click **+ Create**.

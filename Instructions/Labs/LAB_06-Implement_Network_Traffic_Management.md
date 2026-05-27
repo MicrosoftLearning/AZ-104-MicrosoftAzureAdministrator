@@ -127,6 +127,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Click **Add** to add a virtual machine |  |
     | az104-06-vm0 | **check the box** |
     | az104-06-vm1 | **check the box** |
+    
+    > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
 
    > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
 

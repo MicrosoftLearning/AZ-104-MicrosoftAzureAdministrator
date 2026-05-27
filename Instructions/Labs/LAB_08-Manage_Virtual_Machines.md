@@ -71,6 +71,8 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
+    
+    >**NOTE**: If the deployment fails, change to another region and try again. This is due to quotas in different regions.
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
@@ -90,7 +92,6 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | --- | --- |
     | Delete public IP and NIC when VM is deleted | **Checked** |
     | Load balancing options | **None** |
-
 
 1. Click **Next : Management >** and review the settings. Do not make any changes, leave **Metadata Security Protocol** checkboxes and **Microsoft Entra ID** settings at their defaults.
 
@@ -277,7 +278,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 **Scale out rule**
 
-1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. And then select **Add a rule**.
+1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. A warning message will appear indicating no scale rules are defined — click the **Add a rule** link within that message.
 
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 50%.
 
@@ -293,6 +294,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Operation | **Increase percent by** (change the default) |
     | Cool down (minutes) | **5** |
     | Percentage | **50** |
+
+    >**Note**: The default of Operation is "Increase count by",you need to change it to "Increase percent by"
 
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
