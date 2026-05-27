@@ -76,7 +76,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. In the portal, search for and select **Virtual machines** and select **az104-vm0**. If the VM status shows **Stopped**, select **Start** and wait until the status changes to **Running**.
 
-1. Search for and select **Monitor**.
+1. In the portal, search for and select **Monitor**.
 
 1. Take a minute to review all the insights, detection, triage, and diagnosis tools that are available.
 
@@ -90,7 +90,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. It will take a few minutes for the virtual machine agent to install and onboard.
 
-1. You can proceed to the next task, but continue to monitor the Notifications. If the on-boarding fails, try to enable it again. 
+1. You can proceed to the next task, but continue to monitor the Notifications. If the on-boarding fails, try to enable it again.
+
    
 ## Task 2: Create an alert
 
@@ -168,7 +169,7 @@ In this task, you trigger the alert and confirm a notification is sent.
 1. Select **Delete** from the menu bar.
 
 1. In the **Delete Resources** pane, type `delete` in the **Enter "delete" to confirm deletion** text field, then select **Delete**. When the secondary **Delete confirmation** dialog appears, select **Delete** again to confirm.
-
+   
 1. In the title bar, select the **Notifications** icon and wait until **vm0** is successfully deleted.
 
 1. You should receive a notification email that reads, **Important notice: Azure Monitor alert VM was deleted was activated...** If not, open your email program and look for an email from azure-noreply@microsoft.com.
@@ -262,7 +263,9 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
 + In the Azure portal, navigate to the **az104-rg11** resource group, select **Delete the resource group**, enter the resource group name to confirm, and then click **Delete**. When the secondary Delete confirmation dialog appears, click **Delete** again to complete the deletion.
+  
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
+  
 + Using the CLI, `az group delete --name resourceGroupName`.
 
 ## Extend your learning with Copilot

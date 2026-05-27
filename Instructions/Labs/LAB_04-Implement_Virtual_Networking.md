@@ -275,7 +275,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az104-rg4** |
-    | Name | `contosoxyz104.com` (if reserved adjust the name) |
+    | Name | `contoso.com` (this name must be unique, contoso.com is reserved so change to something else.) |
     | Region |**East US** (review the informational icon) |
 
 1. Select **Review + create** and then **Create**.

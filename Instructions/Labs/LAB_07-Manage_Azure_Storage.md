@@ -43,8 +43,8 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
-1. Search for and select `Storage accounts`, then click **Storage accounts** in the results, and then click **+ Create**.
-
+1. Search for and select `Storage accounts`, select **Storage accounts** in the results, and then click **+ Create**.
+   
 1. On the **Basics** tab of the **Create a storage account** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
@@ -60,8 +60,8 @@ In this task, you will create and configure a storage account. The storage accou
 
     >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. On the **Advanced** and **Security** tab, use the informational icons to learn more about the choices. Take the defaults. 
-
+1. On the **Advanced** and **Security** tabs, use the informational icons to learn more about the choices. Take the defaults.
+   
 1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
 
 1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable versioning for blobs. Accept the defaults.
@@ -76,8 +76,12 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Security + networking** blade, select **Networking**. Notice **Public network access** is disabled.
 
-    + Under Public network access, click Manage to open the Public network access configuration blade. Set **Public network access** to **Enabled**. Set **Public network access scope** to **Enable from selected networks**.
-    + In the **Resource settings: Virtual networks,IP Addresses and exceptions** section, Add your client IPv4 address.
+    + Under Public network access, click **Manage** to open the Public network access configuration blade.
+      
+    + Set **Public network access** to **Enabled**. Set **Public network access scope** to **Enable from selected networks**.
+      
+    + In the **Resource settings: Virtual networks, IP Addresses and exceptions** section, Add your client IPv4 address.
+      
     + Save your changes. If an informational banner appears suggesting you associate a network security perimeter, you can disregard it and continue.
   
 1. In the **Data management** blade, select **Redundancy**. Notice the information about your primary and secondary data center locations.
@@ -113,9 +117,9 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. On your container, scroll to the ellipsis (...) on the far right, select **Access policy**.
 
-1.  If a warning appears stating that authorization with Shared Key is disabled for the account, you can disregard it and continue. 
+1. If a warning appears stating that authorization with Shared Key is disabled for the account, you can disregard it and continue. 
 
-1. In the **Immutable blob storage** area, select **Add policy**, change the type from **Legal hold** to **Time-based retentio**.
+1. In the **Immutable blob storage** area, select **Add policy**, change the type from **Legal hold** to **Time-based retention**.
 
     | Setting | Value |
     | --- | --- |
@@ -160,7 +164,11 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 ### Configure limited access to the blob storage
 
-1. Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS**, Note the warning banner stating that authorization with Shared Key is disabled for this account — this means the Account key signing option will be unavailable.  specify the following settings (leave others with their default values):
+1. Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS**.
+
+1. Note the warning banner stating that authorization with Shared Key is disabled for this account — this means the Account key signing option will be unavailable.
+  
+1. Specify the following settings (leave others with their default values):Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS** and specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -186,7 +194,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Create the file share and upload a file
 
-1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **Classic File shares**.
+1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **Classic file shares**.
 
 1. Click **New File share** and on the **Basics** tab give the file share a name, `share1`. 
 
@@ -196,7 +204,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Click **Review + create**, and then **Create**. Wait for the file share to deploy.
 
-1. After the file share is created, an informational banner will appear prompting you to enable backup — you can disregard this message and continue. 
+1. After the file share is created, an informational banner will appear prompting you to enable backup — you can disregard this message and continue.
 
     ![Screenshot of the create file share page.](../media/az104-lab07-create-share.png)
 
@@ -204,7 +212,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Return to your storage account and select **Storage browser**. The Azure Storage Browser is a portal tool that lets you quickly view all the storage services under your account.
 
-1. Select **Classic File shares** and verify your **share1** directory is present.
+1. Select **Clasic file shares** and verify your **share1** directory is present.
 
 1. Select your **share1** directory and notice you can **+ Add directory**. This lets you create a folder structure.
 
@@ -216,9 +224,9 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select `Network foundation`.
+1. In the portal, search for and select **Network foundation**.
 
-1. Then under `Virtual networks` click **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
+1. Under `Virtual networks` click **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
 
 1. Take the defaults for other parameters, select **Review + create**, and then **Create**.
 
@@ -227,7 +235,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 1. In the **Settings** section, select the **Service endpoints** blade.
     + Select **Add**. 
     + In the **Service** drop-down select **Microsoft.Storage**.
-    + leave the **Service endpoint policies** dropdown at its default of **0 selected**.
+    + Leave the **Service endpoint policies** dropdown at its default of **0 selected**.
     + In the **Subnets** drop-down check the **Default** subnet.
     + Click **Add** to save your changes.  
 

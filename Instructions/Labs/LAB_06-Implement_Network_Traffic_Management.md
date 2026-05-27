@@ -130,6 +130,8 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     
     > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
 
+   > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
+
 1. As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
 
 1. Wait for the load balancer to deploy then click **Go to resource**.
@@ -212,9 +214,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Instance count | `2` |
-    |IP address type | **IPv4 only**|
-    | HTTP2 | **Disabled** |
-    |FIPS mode 140-2|leave default|
+    | IP address type | **IPv4 only**|
+    | HTTP2 | **Disabled** 
+    | FIPS mode 140-2 | leave default|
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
@@ -323,7 +325,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

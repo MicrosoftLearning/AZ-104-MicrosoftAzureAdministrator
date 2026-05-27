@@ -100,12 +100,14 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
-1. In the staging slot, select **Configuration** then **General settings**. Under **SCM Basic Auth Publishing Credentials**, enable the checkbox and select **Apply**. Next, select **Deployment Center** then **Settings**.
-
-1.  If an alert banner appears stating "SCM basic authentication is disabled for your app", select **Enable here** and complete the steps to enable it. 
+1. In the **staging** slot, select **Configuration** then **General settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead of the production slot).
-    
+
+1. Under **SCM Basic Auth Publishing Credentials**, enable the checkbox and select **Apply**. Next, select **Deployment Center** then **Settings**.
+
+1. If an alert banner appears stating "SCM basic authentication is disabled for your app", select **Enable here** and complete the steps to enable it. 
+   
 1. In the **Source** drop-down list, select **External Git**. Notice the other choices. 
 
 1. In the repository field, enter `https://github.com/Azure-Samples/php-docs-hello-world`
