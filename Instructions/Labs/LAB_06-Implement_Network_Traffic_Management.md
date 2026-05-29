@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 06: Implement Network Traffic Management'
-    module: 'Administer Network Traffic Management'
+  title: 'Lab 06: Implement Network Traffic Management'
+  module: Administer Network Traffic Management
+  description: Create and configure Azure Load Balancer and Application Gateway.
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Load Balancer
+  - Azure Application Gateway
 ---
 
 # Lab 06 - Implement Network Traffic Management
@@ -72,7 +80,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 ![Diagram of the lab tasks.](../media/az104-lab06-lb-architecture.png)
 
-1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
+1. In the Azure portal, search for and select `Load balancers`, then click + Create and select **Standard load balancer** from the dropdown menu. on the **Load balancers** blade, click **+ Create**.
 
 1. Create a load balancer with the following settings (leave others with their default values) then click **Next : Frontend IP configuration**:
 
@@ -119,6 +127,10 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Click **Add** to add a virtual machine |  |
     | az104-06-vm0 | **check the box** |
     | az104-06-vm1 | **check the box** |
+    
+    > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
+
+   > **Note:** When creating the public IP address, verify that the Region matches the region where your VMs are deployed (North Europe). The portal may pre-select a different region such as East US 2 — change it if needed before proceeding.
 
 1. As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
 
@@ -183,7 +195,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Starting address| `10.60.3.224` |
     | Size | `/27` - Ensure the **starting address** is still **10.60.3.224**|
 
-1. Click **Add**
+1. In the **Private subnet** section, leave **Enable private subnet (no default outbound access)** checked. 
+
+1. Click **Add**.
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -200,7 +214,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Instance count | `2` |
-    | HTTP2 | **Disabled** |
+    | IP address type | **IPv4 only**|
+    | HTTP2 | **Disabled** 
+    | FIPS mode 140-2 | leave default|
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
 
@@ -211,7 +227,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Frontend IP address type | **Public** |
     | Public IP address| **Add new** |
     | Name | `az104-gwpip` |
-    | Availability zone | **1** |
+    | Availability zone | **ZoneRedundant** |
 
     >**Note:** The Application Gateway can have both a public and private IP address.
  
@@ -309,7 +325,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the second confirmation dialog appears, click Delete again.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
@@ -324,8 +340,8 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
   
 ## Learn more with self-paced training
 
-+ [Improve application scalability and resiliency by using Azure Load Balancer](https://learn.microsoft.com/training/modules/improve-app-scalability-resiliency-with-load-balancer/). Discuss the different load balancers in Azure and how to choose the right Azure load balancer solution to meet your requirements.
-+ [Load balance your web service traffic with Application Gateway](https://learn.microsoft.com/training/modules/load-balance-web-traffic-with-application-gateway/). Improve application resilience by distributing load across multiple servers and use path-based routing to direct web traffic.
++ [Introduction to Azure Load Balancer](https://learn.microsoft.com/training/modules/intro-to-azure-load-balancer/). This module explains what Azure Load Balancer does, how it works, and when you should choose to use Load Balancer as a solution to meet your organization's needs.
++ [Introduction to Azure Application Gateway](https://learn.microsoft.com/training/modules/intro-to-azure-application-gateway/). This module explains what Azure Application Gateway does, how it works, and when you should choose to use Application Gateway as a solution to meet your organization's needs.
 
 ## Key takeaways
 

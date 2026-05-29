@@ -18,7 +18,7 @@ In this demonstration, we will create an alert rule.
 
 1. Search for and select **Monitor** and then **Alerts**.
 
-1. Select a scope for the alert rule. Discuss how You can filter by subscription, resource type, or resource location.
+1. Select a scope for the alert rule. Discuss how you can filter by subscription, resource type, or resource location.
 
 1. Set the conditions for the alert rule. Discuss how signals define what you want to measure. 
 
@@ -29,6 +29,8 @@ In this demonstration, we will create an alert rule.
 1. Finish configuring your alert and review any alerts which have fired. 
 
 ## Configure Log Analytics
+
+**Reference:** [Tutorial: Use Log Analytics](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-tutorial)
 
 In this demonstration, you will work with the Log Analytics query language.
 
@@ -47,6 +49,7 @@ In this demonstration, you will work with the Log Analytics query language.
 1. Briefly review the KQL syntax. 
 
 1. As you have time, experiment with **Favorites** and **Saved Queries**.
+
 
 
 

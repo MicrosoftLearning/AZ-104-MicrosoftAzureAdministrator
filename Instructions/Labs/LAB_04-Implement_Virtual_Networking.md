@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab 04: Implement Virtual Networking'
-    module: 'Implement Virtual Networking'
+  title: 'Lab 04: Implement Virtual Networking'
+  module: Implement Virtual Networking
+  description: Configure virtual networks, network security groups, and DNS zones. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual networks
+  - Network security groups
+  - Azure DNS
 ---
 
 # Lab 04 - Implement Virtual Networking
@@ -55,7 +64,9 @@ The organization plans a large amount of growth for core services. In this task,
 	| Name               | `CoreServicesVnet`     |
 	| Region             | (US) **East US**         |
 
-1. Move to the **IP Addresses** tab.
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+
+1. Move to the **Address space** tab.
 
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
@@ -86,9 +97,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 1. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
-1. **Download** the template.
+1. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
 
-1. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
+1. Navigate on the local machine to the **Downloads** folder. 
 
 1. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
  
@@ -120,7 +131,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Be sure to **Save** your changes.
 
->**Note:** There is a completed template files in the lab files directory. 
+>**Note:** There are completed template files in the lab files directory. 
 
 ### Make changes to the parameters file
 
@@ -264,14 +275,14 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az104-rg4** |
-    | Name | `contoso.com` (if reserved adjust the name) |
+    | Name | `contoso.com` (this name must be unique, contoso.com is reserved so change to something else.) |
     | Region |**East US** (review the informational icon) |
 
 1. Select **Review + create** and then **Create**.
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step for the nslookup command below.. 
   
 1. Expand the **DNS Management** blade and select **Recordsets**. Click **+Add**. 
 
@@ -279,6 +290,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Name | **www** |
     | Type | **A** |
+    | Alias record set | **No** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
 
@@ -289,9 +301,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
    ```sh
-   nslookup www.contoso.com <name server name>
+   nslookup www.contosoxyz104.com <name server name you copied in step 6 above>
    ```
-1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name www.contosoxyz104.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
 
@@ -356,7 +368,6 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 ## Learn more with self-paced training
 
 + [Introduction to Azure Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). Design and implement core Azure Networking infrastructure such as virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
-+ [Design an IP addressing scheme](https://learn.microsoft.com/training/modules/design-ip-addressing-for-azure/). Identify the private and public IP addressing capabilities of Azure and on-premises virtual networks.
 + [Secure and isolate access to Azure resources by using network security groups and service endpoints](https://learn.microsoft.com/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Network security groups and service endpoints help you secure your virtual machines and Azure services from unauthorized network access.
 + [Host your domain on Azure DNS](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). Create a DNS zone for your domain name. Create DNS records to map the domain to an IP address. Test that the domain name resolves to your web server.
   
@@ -370,6 +381,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
+
+
 
 
 

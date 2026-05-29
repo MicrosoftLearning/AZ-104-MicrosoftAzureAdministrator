@@ -12,7 +12,7 @@ This directory provides instructor demonstrations for the AZ-104 Azure Administr
 
 - Most areas have a demonstration. Take the time to work through each one and decide which to use. Some of the demonstrations are simple show and tell walk-throughs of the Azure portal; others require scripting skills.
 
-- Consider having the students follow along as you do the demonstration or have one of the students' "drive" and coach them through the steps.
+- Consider having the students follow along as you do the demonstration or have one of the students "drive" and coach them through the steps.
 
 - Consider doing the demonstration first and then using the slides to answer questions and ensure everything is covered.
 

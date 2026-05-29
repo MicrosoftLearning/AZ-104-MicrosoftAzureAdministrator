@@ -15,7 +15,7 @@ In this demonstration, you will create virtual networks.
 
 ## Create a virtual network in the portal
 
-1.  Sign in the to the Azure portal and search for **Virtual Networks**.
+1.  Sign in to the Azure portal and search for **Virtual Networks**.
 
 1.  Create a virtual network, explaining the basic settings as you go. Ensure at least one subnet is created. 
 
@@ -43,7 +43,7 @@ In this demonstration, you will explore NSGs and service endpoints.
 
 1. Discuss how the NSG can be associated with subnets or network interfaces.
 
-1. Discuss the purpose inbound and outbound rules.  
+1. Discuss the purpose of inbound and outbound rules.  
 
 1. Review the default inbound and outbound rules. 
 

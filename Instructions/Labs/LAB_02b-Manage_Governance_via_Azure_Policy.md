@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 02b: Manage Governance via Azure Policy'
-    module: 'Administer Governance and Compliance'
+  title: 'Lab 02b: Manage Governance via Azure Policy'
+  module: Administer Governance and Compliance
+  description: Configure Azure policy to use resource tags. 
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Policy
+    - Resource locks
 ---
 
 # Lab 02b - Manage Governance via Azure Policy
@@ -39,7 +47,7 @@ Your organization's cloud footprint has grown considerably in the last year. Dur
 
 ## Task 1: Assign tags via the Azure portal
 
-In this task, you will create and assign a tag to an Azure resource group via the Azure portal. Tags are a critical component of a governance strategy as outlined by the Microsoft Well-Architected Framework and Cloud Adoption Framework. Tags can allow you to quickly identify resource owners, sunset dates, group contacts, and other name/value pairs that your organization  deems important. For this task, you assign a tag identifying the resource Cost Center. 
+In this task, you will create and assign a tag to an Azure resource group via the Azure portal. Tags are a critical component of a governance strategy as outlined by the Microsoft Well-Architected Framework and Cloud Adoption Framework. Tags can allow you to quickly identify resource owners, sunset dates, group contacts, and other name/value pairs that your organization deems important. For this task, you assign a tag identifying the resource Cost Center. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
       
@@ -104,7 +112,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | Tag Name | `Cost Center` |
     | Tag Value | `000` |
 
-1. Click **Next** and review the **Remediation** tab. Leave the **Create a Managed Identity** checkbox unchecked. 
+1. Click **Next** and review the **Remediation** and **Managed Identity** tabs. Leave the **Create a Managed Identity** checkbox unchecked in the **Managed Identity** tab. 
 
 1. Click **Review + Create** and then click **Create**.
 
@@ -138,6 +146,8 @@ In this task, we will use the new policy definition to remediate any non-complia
 1. In the **Authoring** section, click **Assignments**. 
 
 1. In the list of assignments, click the ellipsis icon in the row representing the **Require a tag and its value on resources** policy assignment and use the **Delete assignment** menu item to delete the assignment.
+
+1. When prompted with **Do you want to delete the policy assignment?**, select **Yes**.
 
 1. Click **Assign policy** and specify the **Scope** by clicking the ellipsis button and selecting the following values:
 
@@ -214,7 +224,7 @@ In this task, you configure and test a resource lock. Locks prevent either delet
 
 1. In the **Enter resource group name to confirm deletion** textbox provide the resource group name, `az104-rg2`. Notice you can copy and paste the resource group name. 
 
-1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**.
+1. Notice the warning: Deleting this resource group and its dependent resources is a permanent action and cannot be undone. Select **Delete**. When a second Delete confirmation dialog appears, click **Delete** again to confirm.
 
 1. You should receive a notification denying the deletion. 
 
@@ -236,6 +246,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 + Tabulate the differences between Azure policy and Azure RBAC, include examples.
 + What are the steps to enforce Azure policy and remediate resources which are not compliant?
 + How can I get a report of Azure resources with specific tags?
+
+## Learn more with self-paced training
++ [Azure Policy Initiatives](https://learn.microsoft.com/training/modules/sovereignty-policy-initiatives/). In this module, you learn how Azure Policy initiatives can be used to enforce organizational standards, assess compliance at scale, and manage Azure resources effectively.
 
 ## Key takeaways
 

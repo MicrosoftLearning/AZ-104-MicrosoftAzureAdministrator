@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 02a: Manage Subscriptions and RBAC'
-    module: 'Administer Governance and Compliance'
+  title: 'Lab 02a: Manage Subscriptions and RBAC'
+  module: Administer Governance and Compliance
+  description: Review and assign Azure roles. 
+  duration: 20 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Roles
 ---
 
 # Lab 02a - Manage Subscriptions and RBAC
@@ -47,7 +54,7 @@ In this task, you will create and configure management groups. Management groups
 1. In the **Manage** blade, select **Properties**.
 
 1. Review the **Access management for Azure resources** area. Notice/read that you can manage access to all Azure subscriptions and management groups in the tenant.
-   
+
 1. Search for and select **Management groups**.
 
 1. On the **Management groups** blade, click **+ Create**.
@@ -83,9 +90,13 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, **Select Members**.
 
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the `helpdesk` group. Click **Select**, then click **Next**.
 
-1. Click **Review + assign** twice to create the role assignment.
+1. On the **Conditions** tab, click **Next**.
+
+1. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
+
+1. Click **Review + assign** to create the role assignment.
 
 1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
 
@@ -134,7 +145,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
 
-1. Review the activites for role assignments. The activity log can be filtered for specific operations. 
+1. Review the activities for role assignments. The activity log can be filtered for specific operations. 
 
     ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
 
@@ -168,6 +179,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can create new roles or customize existing roles.
 + Roles are defined in a JSON formatted file and include *Actions*, *NotActions*, and *AssignableScopes*.
 + You can use the Activity Log to monitor role assignments.
+
 
 
 

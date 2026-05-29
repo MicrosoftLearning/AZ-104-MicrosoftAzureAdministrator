@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab 10: Implement Data Protection'
-    module: 'Administer Data Protection'
+  title: 'Lab 10: Implement Data Protection'
+  module: Administer Data Protection
+  description: Configure Azure Backup for virtual machines. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual machines
+  - Azure Backup
 ---
 
 # Lab 10 - Implement Data Protection
@@ -25,8 +33,6 @@ Your organization is evaluating how to backup and restore Azure virtual machines
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
 + Task 5: Enable virtual machine replication. 
-
-## Estimated timing: 40 minutes
 
 ## Architecture diagram
 
@@ -63,7 +69,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Setting       | Value         | 
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
-    | Resource group| `az104-rg-region1` (If necessary, select **Create new**)
+    | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
     | Region        | **East US**   |
     | Username      | **localadmin**   |
     | Password      | Provide a complex password |
@@ -107,9 +113,9 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     
     >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
-1. Select the **Update** link under **Security Settings > Soft Delete and security settings** label.
+1. Select the **Update** link under **Security Settings > Soft Delete Settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
+1. On the **Soft delete Settings** blade, verify that the **Soft delete retention period** is **14** days and close the blade. 
 
 >**Did you know?** Azure has two types of vaults: Recovery Services vaults and Backup vaults. The main difference is the datasources that can be backed up. Learn more about [the differences](https://learn.microsoft.com/answers/questions/405915/what-is-difference-between-recovery-services-vault).
 
@@ -172,7 +178,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. On the Storage accounts page, select **Create**.
 
-1. Use the following information to define the storage account, then and select **Review + create**.
+1. Use the following information to define the storage account, then select **Review + create**.
 
     | Settings | Value |
     | --- | --- | 
@@ -266,6 +272,8 @@ If you are working with **your own subscription** take a minute to delete the la
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
+   >**Note:** To delete an Azure Recovery Services vault, you must first remove all dependencies like protected items, backup servers, and storage accounts, disable security features like soft delete, and then delete the vault itself. An example [PowerShell script](https://learn.microsoft.com/azure/backup/scripts/delete-recovery-services-vault) is available. 
+
 ## Extend your learning with Copilot
 Copilot can assist you in learning how to use the Azure scripting tools. Copilot can also assist in areas not covered in the lab or where you need more information. Open an Edge browser and choose Copilot (top right) or navigate to *copilot.microsoft.com*. Take a few minutes to try these prompts.
 
@@ -276,8 +284,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
++ [Introduction to Azure Backup](https://learn.microsoft.com/training/modules/intro-to-azure-backup/). Describe how the features of Azure Backup work to provide backup solutions for your needs.
 + [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/training/modules/protect-virtual-machines-with-azure-backup/). Use Azure Backup to help protect on-premises servers, virtual machines, SQL Server, Azure file shares, and other workloads.
-+ [Protect your Azure infrastructure with Azure Site Recovery](https://learn.microsoft.com/en-us/training/modules/protect-infrastructure-with-site-recovery/). Provide disaster recovery for your Azure infrastructure by customizing replication, failover, and failback of Azure virtual machines with Azure Site Recovery.
+
 
 ## Key takeaways
 

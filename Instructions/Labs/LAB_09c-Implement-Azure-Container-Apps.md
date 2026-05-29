@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab 09c: Implement Azure Container Apps'
-    module: 'Administer PaaS Compute Options'
+  title: 'Lab 09c: Implement Azure Container Apps'
+  module: Administer PaaS Compute Options
+  description: Implement and deploy Azure Container Apps.
+  duration: 15 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Container Apps
 ---
 
 # Lab 09c - Implement Azure Container Apps
@@ -43,11 +50,13 @@ Azure Container Apps take the concept of a managed Kubernetes cluster a step fur
     | Resource group | `az104-rg9` |
     | Container app name |  `my-app` |
     | Region    | **East US** |
-    | Container Apps Environment | Select **Create new** > Set Environment name to `my-environment` > **Create** |
+    | Container Apps Environment | Select **Create new environment** > Set Environment name to `my-environment` > **Create** |
 
 1. Click **Next: Container** tab and ensure that **Use quickstart image** is checked. You may need to scroll up to view this setting. 
 
-1. Ensure **Quickstart image** is set to **Simple hello world container**. Notice the other choices. 
+1. Ensure **Quickstart image** is set to **Simple hello world container**.
+
+1. Under **Application ingress settings**, configure the ingress options as needed, then click **Next: Tags**.
 
 1. Select the **Review and create** and then **Create**.
 
@@ -63,7 +72,7 @@ By default, the Azure container app that you create will accept traffic on port 
 
     ![Screenshot of the ACA overview page in the portal.](../media/az104-lab09b-aca-overview.png)
 
-1. Verify you receive the **Your Azure Container Apps app is live** message.
+1. Verify you receive the **Your container app is running with a Hello World image** message.
    
 ## Cleanup your resources
 
@@ -81,7 +90,9 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
+
 + [Configure a container app in Azure Container Apps](https://learn.microsoft.com/training/modules/configure-container-app-azure-container-apps/). Examines the features and capabilities of Azure Container Apps, and then focuses on how to create, configure, scale, and manage container apps using Azure Container Apps.
++ [Implement Azure Container Apps](https://learn.microsoft.com/training/modules/implement-azure-container-apps/). Learn how Azure Container Apps can help you deploy and manage microservices and containerized apps on a serverless platform.
 
 
 ## Key takeaways

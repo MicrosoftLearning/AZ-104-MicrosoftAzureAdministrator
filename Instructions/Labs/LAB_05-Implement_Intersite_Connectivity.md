@@ -1,7 +1,17 @@
 ---
 lab:
-    title: 'Lab 05: Implement Intersite Connectivity'
-    module: 'Administer Intersite Connectivity'
+  title: 'Lab 05: Implement Intersite Connectivity'
+  module: Administer Intersite Connectivity
+  description: Create and configure virtual networks, routes, and peerings. 
+  duration: 50 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Virtual networks
+  - Routing
+  - Peering
+  - Network Watcher
 ---
 
 # Lab 05 - Implement Intersite Connectivity
@@ -52,7 +62,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Availability options | No infrastructure redundancy required |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (notice your other choices) |
-    | Size | **Standard_DS2_v3** |
+    | Size | **Standard_D2s_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
@@ -99,10 +109,12 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
-    | Size | **Standard_DS2_v3** | 
+    | Size | **Standard_D2s_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
+
+    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
@@ -191,7 +203,13 @@ In this task, you retest the connection between the virtual machines in differen
 
 >**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
 
-1. Switch to the `ManufacturingVM` virtual machine.
+1. Switch to the `CoreServicesVM` virtual machine. In the **Operations** blade, select **Run command**, then select **RunPowerShellScript**. Run the following command to enable the Windows Firewall rule that allows inbound RDP traffic:
+
+    ```Powershell
+    Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    ```
+
+1. Wait for the script to complete, then switch to the `ManufacturingVM` virtual machine.
 
 1. In the **Operations** blade, select the **Run command** blade.
 
@@ -211,7 +229,7 @@ In this task, you retest the connection between the virtual machines in differen
 
 In this task, you want to control network traffic between the perimeter subnet and the internal core services subnet. A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there. 
 
-1. Search for select the `CoreServicesVnet`.
+1. Search for and select the `CoreServicesVnet`.
 
 1. Select **Subnets** and then **+ Subnet**. Be sure to select **Add** to save your changes. 
 
@@ -254,7 +272,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Setting | Value | 
     | --- | --- |
     | Virtual network | **CoreServicesVnet (az104-rg5)** |
-    | Subnet | **Core** |    
+    | Subnet | **Perimeter** |    
 
 >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
 
@@ -262,7 +280,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the **Delete confirmation** dialog appears stating that deleting the resource group is permanent and cannot be undone, click **Delete** again to complete the deletion.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 
@@ -275,7 +293,7 @@ Copilot can assist you in learning how to use the Azure scripting tools. Copilot
 
 ## Learn more with self-paced training
 
-+ [Distribute your services across Azure virtual networks and integrate them by using virtual network peering](https://learn.microsoft.com/en-us/training/modules/integrate-vnets-with-vnet-peering/). Use virtual network peering to enable communication across virtual networks in a way that's secure and minimally complex.
++ [Introduction to Virtual Networks](https://learn.microsoft.com/training/modules/introduction-to-azure-virtual-networks/). In this module, you learn how to design and implement Azure networking services. You learn about virtual networks, public and private IPs, DNS, virtual network peering, routing, and Azure Virtual NAT.
 + [Manage and control traffic flow in your Azure deployment with routes](https://learn.microsoft.com/training/modules/control-network-traffic-flow-with-routes/). Learn how to control Azure virtual network traffic by implementing custom routes.
 
 

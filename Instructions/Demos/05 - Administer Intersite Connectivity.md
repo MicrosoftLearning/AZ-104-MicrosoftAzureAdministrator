@@ -18,7 +18,7 @@ demo:
 
 1. Under **Settings**, select **Peerings** and **+ Add** a new peering.
 
-1. Configure the peering the second virtual network. Use the information icons to review the different settings. 
+1. Configure the peering of the second virtual network. Use the information icons to review the different settings. 
 
 1. When the peering is complete, review the **Peering status**. 
 
