@@ -141,20 +141,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **Getting started** screen select **Mount storage account**, select your **Storage account subscription**, and then select **Apply**.
+1. Cloud Shell may launch directly into an ephemeral PowerShell session. No storage account configuration is required.
 
-1. Select **I want to create a storage account** and then **Next**. Complete the **Create storage account** information. 
-    
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-rg3** |
-    | Region | *select your region* | 
-    | Storage account (Create new) | *must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only* |
-    | File share (Create new) | `fs-cloudshell` |
-
-1. When completed select **Create**.
-
-    >It will take a couple of minutes to provision the storage.
+    >**Note:** Wait for the PowerShell prompt to appear before proceeding.
 
 1. Select **Settings** (top bar) and then **Go to classic version**.
 
@@ -167,6 +156,15 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
+
+1. If you have multiple subscriptions, first ensure PowerShell is using the correct subscription context. Run the following commands and, if needed, replace `<your-subscription-id>` with the subscription that contains **az104-rg3**.
+
+    ```powershell
+    Get-AzContext
+    Set-AzContext -Subscription <your-subscription-id>
+    ```
+
+    >**Note:** This is especially important when Cloud Shell is running in ephemeral mode, because the active subscription can differ from the Azure portal context.
 
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
@@ -226,9 +224,9 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. Continue working in the **Cloud Shell** in a **Bash** session.
 
-1. Select **Manage files** and then **Upload** the Bicep file to the Cloud Shell. 
+1. Select **Upload/Download files** and then **Upload** the Bicep file to Cloud Shell. 
 
-1. Click **Editor** and when prompted **Confirm** the switch to the Classic Cloud Shell.
+1. Select **Open editor**.
 
 1. Select the **azuredeploydisk.bicep** file 
 

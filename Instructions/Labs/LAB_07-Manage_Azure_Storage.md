@@ -54,7 +54,7 @@ In this task, you will create and configure a storage account. The storage accou
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **(US) East US**  |
     | Performance           | **Standard** (notice the Premium option) |
-    | Preferred storage type | **Azure Blob Storage or Azure Data Lake Storage Gen 2** |
+    | Preferred storage type | **Azure Blob Storage or Azure Data Lake Storage** |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data available in the event of regional unavailability. | Check the box |
 
@@ -196,7 +196,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the Azure portal, navigate back to your storage account, in the **Data storage** blade, click **Classic file shares**.
 
-1. Click **New File share** and on the **Basics** tab give the file share a name, `share1`. 
+1. Click **+ Classic file share** and on the **Basics** tab give the file share a name, `share1`. 
 
 1. Notice the **Access tier** options. Keep the default **Transaction optimized**.
    

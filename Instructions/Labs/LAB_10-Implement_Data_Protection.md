@@ -248,7 +248,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
    >**Note:** It is important the settings be populated, or the validation will fail. 
 
-1. Select **Review + Start replication** and then **Enable replication**.
+1. Select **Review + Start replication** and then **Start replication**.
 
     >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
     
@@ -268,7 +268,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
 
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
++ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**. When the **Delete confirmation** dialog appears stating the action is permanent and cannot be undone, click **Delete** again.
 + Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
 + Using the CLI, `az group delete --name resourceGroupName`.
 

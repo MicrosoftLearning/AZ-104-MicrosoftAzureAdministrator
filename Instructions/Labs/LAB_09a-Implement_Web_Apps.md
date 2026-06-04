@@ -154,6 +154,14 @@ In this task, you will configure autoscaling of Azure Web App. Autoscaling enabl
 
 1. In the **Maximum burst** field, select **2**. Set **Minimum instances** to 1.
 
+1. If you have a staging slot, open **Azure Cloud Shell** and run the following command to set the staging slot minimum elastic instance count to 1 before selecting **Save**:
+
+   ```bash
+   az webapp update --resource-group az104-rg9 --name <your-web-app-name> --slot staging --minimum-elastic-instance-count 1
+   ```
+
+    >**Note:** Replace `<your-web-app-name>` with your app name. After the command succeeds, return to **Scale out** on the production web app and select **Save**.
+
     ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
 
 1. Select **Save**.
