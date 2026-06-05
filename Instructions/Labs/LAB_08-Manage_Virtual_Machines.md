@@ -271,14 +271,14 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
+  
+1. Expand the **Availability + scale** section then select **Scaling**. 
 
 1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. A warning message will appear indicating no scale rules are defined — click the **Add a rule** link within that message.
 
     >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 
 **Scale out rule**
-
-1. Select **Custom autoscale**. Then change the **Scale mode** to **Scale based on metric**. A warning message will appear indicating no scale rules are defined — click the **Add a rule** link within that message.
 
 1. Let's create a rule that automatically increases the number of VM instances. This rule scales out when the average CPU load is greater than 70% over a 10-minute period. When the rule triggers, the number of VM instances is increased by 50%.
 
