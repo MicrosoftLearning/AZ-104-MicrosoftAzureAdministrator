@@ -228,17 +228,22 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 
 1. If necessary, close the splash screen. 
 
-1. If necessary, select a scope, your **Subscription**. Select **Apply**. 
+1. If a scope prompt appears, select your **Subscription** and click **Apply**. If no scope selector is shown, continue with the default scope.
 
-1. In the **Queries** tab, select **Virtual machines** (left pane). You may need to reopen the blade.
+1. On the right side of the query editor, select the drop-down next to **Simple mode** and choose **KQL mode**.
 
     ![Screenshot of the queries tab.](../media/az104-lab11-queries.png)
 
-1. Review the queries that are available. **Run** (hover over the query) the **Count heartbeats** query.
+1. In the query editor, enter the following query and click **Run**.
+
+   ```
+   Heartbeat
+   | summarize Count = count() by Computer
+   ```
 
 1. You should receive a heartbeat count for when the virtual machine was running.
 
-1. On the right side of the screen select the drop down next to **Simple mode**, choose **KQL mode**. Review the query. This query uses the *heartbeat* table.
+1. Optionally, select **Queries hub** on the top toolbar to browse sample queries. If a **Virtual machines** category and **Count heartbeats** are available, run it for comparison.
 
 1. Replace the query with this one, and then click **Run**. Review the resulting chart. 
 
