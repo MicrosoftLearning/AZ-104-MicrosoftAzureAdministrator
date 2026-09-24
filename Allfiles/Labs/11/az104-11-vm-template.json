@@ -236,7 +236,7 @@
       "sku": {
         "name": "[variables('storageAccountType')]"
       },
-      "kind": "Storage",
+      "kind": "StorageV2",
       "properties": {}
     },
     {
