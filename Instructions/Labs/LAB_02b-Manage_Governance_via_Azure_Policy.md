@@ -67,8 +67,8 @@ In this task, you will create and assign a tag to an Azure resource group via th
 
     | Setting | Value |
     | --- | --- |
-    | Name | Cost Center |
-    | Value | 000 |
+    | Name | `Cost Center` |
+    | Value | `000` |
 
 1. Select **Review + Create**, and then select **Create**.
 
@@ -128,6 +128,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     | --- | --- |
     | Resource group | **az104-rg2** |
     | Storage account name | *any globally unique combination of between 3 and 24 lower case letters and digits, starting with a letter* |
+    | Primary service | **Azure Blob Storage or Azure Data Lake Storage** |
 
 1. Select **Review** and then click **Create**.
 
