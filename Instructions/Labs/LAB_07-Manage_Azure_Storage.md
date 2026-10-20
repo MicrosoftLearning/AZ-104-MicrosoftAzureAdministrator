@@ -53,18 +53,20 @@ In this task, you will create and configure a storage account. The storage accou
     | Resource group        | **az104-rg7** (create new) |
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **(US) East US**  |
+    | Primary service       | **Azure Blob Storage or Azure Data Lake Storage** |
     | Performance           | **Standard** (notice the Premium option) |
-    | Preferred storage type | **Azure Blob Storage or Azure Data Lake Storage** |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
     | Make read access to data available in the event of regional unavailability. | Check the box |
 
     >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. On the **Advanced** and **Security** tabs, use the informational icons to learn more about the choices. Take the defaults.
+1. On the **Advanced** tab use the informational icons to learn more about the choices. Take the defaults.
    
-1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access. 
+1. On the **Networking** tab, in the **Public network access** section, select **Disable**. This will restrict inbound access while allowing outbound access.
 
 1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable versioning for blobs. Accept the defaults.
+
+1. On the **Security** tab use the informational icons to learn more about the choices. Take the defaults.
 
 1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
@@ -126,15 +128,15 @@ In this task, you will create a blob container and upload an image. Blob contain
     | Policy type | **Time-based retention**  |
     | Set retention period for | `180` days |
 
-1. Select **Save**.
+1. Select **Save**. Close the **Access policy** blade.
 
 ### Manage blob uploads
 
-1. In the storage account's left menu, under **Settings**, select **Configuration** and set **Allow storage account key access** to **Enabled**, then click **Save**. 
+1. In the storage account's left menu, under **Settings**, select **Configuration** and set **Allow storage account key access** to **Enabled**, then click **Save** (if needed). 
 
-1. Next, navigate to **Access Control (IAM)**, click **Add role assignment**, select the **Storage Blob Data Contributor** role, and assign it to your user account, then click **Review + assign**.
+1. Next, navigate to **Access Control (IAM)**, click **Add** and select **Add role assignment**. Search for and select the **`Storage Blob Data Contributor`** role and assign it to your user account, then click **Review + assign** twice.
 
-1. Next, do the same steps as in the previous step to assign the **Storage File Data Privileged Contributor** role.
+1. Next, do the same steps as in the previous step to assign the **`Storage File Data Privileged Contributor`** role.
 
 1. Once access is configured,  select your **data** container and then click **Upload**.
 
@@ -167,8 +169,6 @@ In this task, you will create a blob container and upload an image. Blob contain
 ### Configure limited access to the blob storage
 
 1. Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS**.
-
-1. Note the warning banner stating that authorization with Shared Key is disabled for this account — this means the Account key signing option will be unavailable.
   
 1. Specify the following settings (leave others with their default values):Browse back to the file that you uploaded and select the ellipsis (…) to the far right, then select **Generate SAS** and specify the following settings (leave others with their default values):
 
@@ -226,7 +226,7 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 ### Restrict network access to the storage account
 
-1. In the portal, search for and select **Network foundation**.
+1. In the portal, search for and select **`Network foundation`**.
 
 1. Under `Virtual networks` click **Create**. On the Basics tab, set **Resource group** as `az104-rg7` and give the virtual network a **name**, `vnet1`.
 
@@ -235,10 +235,10 @@ In this task, you will create and configure Azure File shares. You will use Stor
 1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
 1. In the **Settings** section, select the **Service endpoints** blade.
-    + Select **Add**. 
-    + In the **Service** drop-down select **Microsoft.Storage**.
-    + Leave the **Service endpoint policies** dropdown at its default of **0 selected**.
+    + Select **Add service endpoints**.
     + In the **Subnets** drop-down check the **Default** subnet.
+    + In the **Service** drop-down search for and select **`Microsoft.Storage`**.
+    + Leave the **Service endpoint policies** dropdown at its default of **0 selected**.
     + Click **Add** to save your changes.  
 
 1. Return to your storage account.

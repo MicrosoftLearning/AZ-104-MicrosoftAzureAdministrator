@@ -229,7 +229,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Source port ranges |  * |
     | Destination | **Any** |
     | Service | **Custom** (notice your other choices) |
-    | Destination port ranges | **80,443** |
+    | Destination port ranges | **`80,443`** |
     | Protocol | **TCP** |
     | Action | **Allow** |
     | Priority | **100** |
@@ -253,7 +253,7 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Destination port ranges | `*` |
     | Protocol | **Any** |
     | Action | **Deny** |
-    | Priority | **4096** |
+    | Priority | **`4096`** |
     | Name | `DenyInternetOutbound` |
 
 
@@ -288,11 +288,11 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **www** |
+    | Name | **`www`** |
     | Type | **A** |
     | Alias record set | **No** |
     | TTL | **1** |
-    | IP address | **10.1.1.4** |
+    | IP address | **`10.1.1.4`** |
 
 >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
@@ -341,10 +341,10 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
     | Property | Value    |
     |:---------|:---------|
-    | Name | **sensorvm** |
+    | Name | **`sensorvm`** |
     | Type | **A** |
     | TTL | **1** |
-    | IP address | **10.1.1.4** |
+    | IP address | **`10.1.1.4`** |
 
  >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine.
 

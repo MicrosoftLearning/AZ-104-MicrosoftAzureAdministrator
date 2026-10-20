@@ -44,7 +44,7 @@ In this task, you deploy a virtual machine and the resources required to collect
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Deploy a custom template**.
+1. Search for and select **`Deploy a custom template`**.
 
 1. On the custom deployment page, select **Build your own template in the editor**.
 
@@ -59,7 +59,7 @@ In this task, you deploy a virtual machine and the resources required to collect
    | Setting | Value |
    | --- | --- |
    | Subscription | Your Azure subscription |
-   | Resource group | **az104-rg11**; create it if necessary |
+   | Resource group | **`az104-rg11`**; create it if necessary |
    | Region | **East US** |
    | VM size | Select an available size. Use **Standard_D2s_v5** if available. |
    | Username | `localadmin` |
@@ -146,7 +146,7 @@ In this task, you verify that the Azure Monitor Agent is sending heartbeat and V
 
 In this task, you create an action group that sends an email notification when the alert is triggered.
 
-1. In the Azure portal, search for and select **Monitor**.
+1. In the Azure portal, search for and select **`Monitor`**.
 
 1. Select **Alerts**, and then select **Action groups**.
 

@@ -190,6 +190,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Resource group        | **az104-rg-region1**        |
     | Storage account name  | Provide a globally unique name   |
     | Region                | **East US**   |
+    | Primary service       | **Azure Blob Storage or Azure Data Lake Storage**   |
 
 1. Select **Create**.
 

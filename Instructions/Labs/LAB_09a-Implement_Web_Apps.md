@@ -100,7 +100,7 @@ In this task, you will create a staging deployment slot. Deployment slots enable
 
 In this task, you will configure Web App deployment settings. Deployment settings allow for continuous deployment. This ensures that the app service has the latest version of the application.
 
-1. In the **staging** slot, select **Configuration** then **General settings**.
+1. In the **staging** slot, under **Settings** select **Configuration** then **General settings**.
 
     >**Note:** Make sure you are on the staging slot blade (instead of the production slot).
 

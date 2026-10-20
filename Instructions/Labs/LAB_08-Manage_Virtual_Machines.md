@@ -295,12 +295,12 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Metric namespace | **Virtual Machine Host** |
     | Metric name | **Percentage CPU** (review your other choices) |
     | Operator | **Greater than** |
-    | Metric threshold to trigger scale action | **70** |
+    | Metric threshold to trigger scale action | **`70`** |
     | Duration (minutes) | **10** |
     | Time grain statistic | **Average** |
     | Operation | **Increase percent by** (change the default) |
     | Cool down (minutes) | **5** |
-    | Percentage | **50** |
+    | Percentage | **`50`** |
 
     >**Note**: The default of Operation is "Increase count by",you need to change it to "Increase percent by"
 
@@ -319,9 +319,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Setting | Value |
     | --- | --- |
     | Operator | **Less than** |
-    | Threshold | **30** |
+    | Threshold | **`30`** |
     | Operation | **decrease percentage by** (review your other choices) |
-    | Percentage | **50** |
+    | Percentage | **`50`** |
 
 1. Be sure to **Save** your changes.
 
@@ -333,9 +333,9 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     | Setting | Value |
     | --- | --- |
-    | Minimum | **2** |
-    | Maximum | **10** |
-    | Default | **2** |
+    | Minimum | **`2`** |
+    | Maximum | **`10`** |
+    | Default | **`2`** |
 
 1. Be sure to **Save** your changes
 
@@ -365,6 +365,8 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     > [!NOTE]
     > Use **Standard_D2s_v5** first. If the command fails because the size is unavailable or Azure lacks capacity, rerun it with **Standard_D2s_v6**. If that command fails for the same reason, rerun it with **Standard_D2s_v7**.
 
+1. When prompted use the Username: `localadmin` and **Provide a secure password**
+
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
 
     ```powershell
@@ -375,7 +377,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Verify your new virtual machine is listed and the **Status** is **Running**.
 
-1. Use **Stop-AzVM** to deallocate your virtual machine. Type **Yes** to confirm.
+1. Use **Stop-AzVM** to deallocate your virtual machine. Type **`Y`** to confirm.
 
     ```powershell
     Stop-AzVM `

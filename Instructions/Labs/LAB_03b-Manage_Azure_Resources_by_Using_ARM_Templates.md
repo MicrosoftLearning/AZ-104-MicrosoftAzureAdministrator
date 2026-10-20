@@ -73,7 +73,7 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Take a minute to review the **Template** and **Parameters** files.
 
-1. From the **Template** section, click **Download** and save the template to the local drive. Then switch to the **Parameters** section and do the same. 
+1. From the **Template** tab, click **Download** and save the template to the local drive. Then switch to the **Parameters** tab and do the same. 
 
 1. Use File Explorer to open the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
@@ -104,7 +104,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Make this change so it matches the template file.
 
-    Change **disks_az104_disk1_name** to **disk_name** (one place to change)
+    Change **disks_az104_disk1_name** to **`disk_name`** (one place to change)
 
 1. **Save** your changes. 
 
@@ -141,7 +141,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. Cloud Shell may launch directly into an ephemeral PowerShell session. No storage account configuration is required.
+1. Cloud Shell may launch directly into an ephemeral PowerShell session. No storage account configuration is required. Select your Subscription and then select **Apply**.
 
     >**Note:** Wait for the PowerShell prompt to appear before proceeding.
 
@@ -151,7 +151,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor (pencil)** icon and navigate to the template JSON file on the left in the navigation pane.
 
-1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
+1. Make a change. For example, change the disk name to **`az104-disk3`**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -196,7 +196,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (pencil) icon and navigate to the template JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk4**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
+1. Make a change. For example, change the disk name to **`az104-disk4`**. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -232,9 +232,9 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-    + Change the **managedDiskName** value, line 2, to **az104-disk5**.
-    + Change the **diskSizeinGiB** value; line 7, to **32**.
-    + Change the **sku name** value, line 26, to **StandardSSD_LRS**.
+    + Change the **managedDiskName** value, line 2, to **`az104-disk5`**.
+    + Change the **diskSizeinGiB** value; line 7, to **`32`**.
+    + Change the **sku name** value, line 26, to **`StandardSSD_LRS`**.
     
 1. Use **Ctrl+S** to save your changes, then **Ctrl+Q** to close the editor.
 
