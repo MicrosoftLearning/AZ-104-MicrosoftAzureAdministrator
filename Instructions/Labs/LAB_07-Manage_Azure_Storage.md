@@ -234,12 +234,13 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Wait for the virtual network to deploy, and then select **Go to resource**.
 
-1. In the **Settings** section, select the **Service endpoints** blade.
-    + Select **Add**. 
-    + In the **Service** drop-down select **Microsoft.Storage**.
-    + Leave the **Service endpoint policies** dropdown at its default of **0 selected**.
-    + In the **Subnets** drop-down check the **Default** subnet.
-    + Click **Add** to save your changes.  
+1. In the **Settings** section, select the **Subnets** blade and note that the **default** subnet has no service endpoints configured yet.
+
+    >**Note**: The virtual network **Service endpoints** blade is no longer available in the Azure portal. Service endpoints are configured on the subnet, and the portal enables the **Microsoft.Storage** endpoint for you when you add the subnet to the storage account network rules in the following steps. If the endpoint is not created, enable it from Cloud Shell:
+
+    ```sh
+    az network vnet subnet update --resource-group az104-rg7 --vnet-name vnet1 --name default --service-endpoints Microsoft.Storage
+    ```
 
 1. Return to your storage account.
 
@@ -249,13 +250,19 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. Select **Add a virtual network** and then **Add existing network**.
 
-1. Select **vnet1** and **default** subnet, select **Add**.
+1. Select **vnet1** and the **default** subnet, select **Add**. Adding the subnet to the network rules also enables the **Microsoft.Storage** service endpoint on that subnet.
 
 1. In the **IPv4 Addresses** section, **Delete** your machine IP address. Allowed traffic should only come from the virtual network. 
 
 1. Be sure to **Save** your changes.
 
     >**Note:** The storage account should now only be accessed from the virtual network you just created. 
+
+1. Confirm the service endpoint is on the subnet. From Cloud Shell, the following command returns **Microsoft.Storage**:
+
+    ```sh
+    az network vnet subnet show --resource-group az104-rg7 --vnet-name vnet1 --name default --query serviceEndpoints
+    ```
 
 1. Select the **Storage browser** and **Refresh** the page. Navigate to your file share or blob content.  
 
