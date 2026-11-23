@@ -12,7 +12,7 @@ lab:
     - User accounts
 ---
 
-# Lab 01 - Manage Microsoft Entra ID Identities
+# Lab 101 - Manage Microsoft Entra ID Identities
 
 ## Lab introduction
 
